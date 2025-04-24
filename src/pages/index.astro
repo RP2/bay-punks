@@ -64,14 +64,21 @@ import concerts from "../data/concerts.json";
                 </strong>
                 {" — "}
                 {event.bands.map((band, i) => (
-                  <a
-                    class="hover:underline"
-                    href={band.href}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                  >
-                    {i < event.bands.length - 1 ? band.text + ", " : band.text}
-                  </a>
+                  <span class="inline-flex">
+                    {band.href ? (
+                      <a
+                        class="hover:underline"
+                        href={band.href}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                      >
+                        {band.text}
+                      </a>
+                    ) : (
+                      band.text
+                    )}
+                    {i < event.bands.length - 1 && ","} &nbsp;
+                  </span>
                 ))}
                 {event.extra && (
                   <>
