@@ -1,0 +1,38 @@
+# this workflow scrapes concerts every monday at 12am pacific time (8am utc) and pushes changes to trigger cloudflare pages
+name: scrape and deploy
+
+on:
+  schedule:
+    - cron: "0 8 * * 1" # every monday at 12am pacific (8am utc)
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout your repo
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      # setup node
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # install dependencies
+      - name: install dependencies
+        run: npm ci
+
+      # run the scraper
+      - name: run scraper
+        run: node scripts/scrape-concerts.js
+
+      # commit and push changes if any
+      - name: commit and push
+        run: |
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
+          git add src/data/concerts.json
+          git commit -m "auto: update concerts data $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "no changes to commit"
+          git push

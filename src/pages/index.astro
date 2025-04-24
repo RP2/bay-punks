@@ -1,8 +1,88 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import concerts from "../data/concerts.json";
 ---
 
-<Layout title="" description="">
-  <h1>Hello World</h1>
-  <p>This is a basic Astro project boilerplate.</p>
+<Layout title="Upcoming Concerts" description="bay area punk shows">
+  <h1 class="text-6xl font-bold uppercase">Upcoming Punk Shows</h1>
+  <table class="my-4 w-fit">
+    <tr class="border-b-1 border-gray-900 text-left">
+      <th>Symbol</th>
+      <th class="pl-8">Description</th>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td class="pl-8">recommendable shows</td>
+    </tr>
+    <tr>
+      <td>a/a</td>
+      <td class="pl-8">all ages</td>
+    </tr>
+    <tr>
+      <td>$</td>
+      <td class="pl-8">will probably sell out</td>
+    </tr>
+    <tr>
+      <td>@</td>
+      <td class="pl-8">pit warning</td>
+    </tr>
+    <tr>
+      <td>^</td>
+      <td class="pl-8">under 21 must buy drink tickets</td>
+    </tr>
+    <tr>
+      <td>#</td>
+      <td class="pl-8">no ins/outs</td>
+    </tr>
+  </table>
+  {
+    concerts.weekend && concerts.weekend.length === 0 && (
+      <p>no events found for this weekend.</p>
+    )
+  }
+  {
+    concerts.weekend &&
+      concerts.weekend.map((day) => (
+        <section class="my-2">
+          <h2 class="text-3xl font-bold uppercase">{day.day}</h2>
+          <ul>
+            {day.events.map((event) => (
+              <li>
+                <strong>
+                  {event.venue.href ? (
+                    <a
+                      class="hover:underline"
+                      href={event.venue.href}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      {event.venue.text}
+                    </a>
+                  ) : (
+                    event.venue.text
+                  )}
+                </strong>
+                {" — "}
+                {event.bands.map((band, i) => (
+                  <a
+                    class="hover:underline"
+                    href={band.href}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                    {i < event.bands.length - 1 ? band.text + ", " : band.text}
+                  </a>
+                ))}
+                {event.extra && (
+                  <>
+                    {" — "}
+                    <span>{event.extra}</span>
+                  </>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+  }
 </Layout>
