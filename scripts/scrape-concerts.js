@@ -33,7 +33,7 @@ $("ul > li").each((_, dayLi) => {
     const venue = {
       text: venueText,
       href: venueText
-        ? `https://unduck.link?q=${encodeQuery(venueText)}`
+        ? `https://www.google.com/search?q=${encodeQuery(venueText)}`
         : undefined,
     };
 
