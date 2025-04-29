@@ -1,97 +1,110 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import concerts from "../data/concerts.json";
+import Concerts from "../data/concerts.json";
 import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
+import Key from "../components/Key.astro";
 ---
 
 <Layout title="Upcoming Concerts" description="bay area punk shows">
   <h1 class="text-6xl font-bold uppercase">Upcoming Punk Shows</h1>
-  <table class="my-4 w-fit">
-    <tr class="border-b-1 border-gray-900 text-left">
-      <th>Symbol</th>
-      <th class="pl-8">Description</th>
-    </tr>
-    <tr>
-      <td>*</td>
-      <td class="pl-8">recommendable shows</td>
-    </tr>
-    <tr>
-      <td>a/a</td>
-      <td class="pl-8">all ages</td>
-    </tr>
-    <tr>
-      <td>$</td>
-      <td class="pl-8">will probably sell out</td>
-    </tr>
-    <tr>
-      <td>@</td>
-      <td class="pl-8">pit warning</td>
-    </tr>
-    <tr>
-      <td>^</td>
-      <td class="pl-8">under 21 must buy drink tickets</td>
-    </tr>
-    <tr>
-      <td>#</td>
-      <td class="pl-8">no ins/outs</td>
-    </tr>
-  </table>
-  {
-    concerts.shows && concerts.shows.length === 0 && (
-      <p>no events found for this shows.</p>
-    )
-  }
-  {
-    concerts.shows &&
-      concerts.shows.map((day) => (
-        <section class="my-2">
-          <h2 class="text-3xl font-bold uppercase">{day.day}</h2>
-          <ul>
-            {day.events.map((event) => (
-              <li>
-                <strong>
-                  {event.venue.href ? (
-                    <a
-                      class="hover:underline"
-                      href={event.venue.href}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                    >
-                      {event.venue.text}
-                    </a>
-                  ) : (
-                    event.venue.text
-                  )}
-                </strong>
-                {" — "}
-                {event.bands.map((band, i) => (
-                  <span class="inline-flex">
-                    {band.href ? (
-                      <a
-                        class="hover:underline"
-                        href={band.href}
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                      >
-                        {band.text}
-                      </a>
-                    ) : (
-                      band.text
-                    )}
-                    {i < event.bands.length - 1 && ","} &nbsp;
-                  </span>
-                ))}
-                {event.extra && (
-                  <>
-                    {" — "}
-                    <span>{event.extra}</span>
-                  </>
-                )}
-              </li>
+  <section>
+    <p class="mt-4 text-lg">
+      This website is a simple list of upcoming <strike>punk</strike> shows in the
+      Bay Area. Currently sourcing data from <a
+        class="italic hover:underline"
+        href="http://www.foopee.com/punk/the-list/"
+        target="_blank"
+        rel="nofollow noopener noreferrer">FooPee</a
+      >'s "The List" on the 1<sup>st</sup> of every month.
+    </p>
+    <p>
+      The source code, license, and security information is available in <a
+        class="font-bold hover:underline"
+        href="https://github.com/RP2/bay-punks"
+        target="_blank"
+        title="Bay Area Punks (bay-punks) on GitHub"
+        rel="nofollow noopener noreferrer">this GitHub repository</a
+      >.
+    </p>
+    <p>
+      Made with 🖤 by <a
+        href="https://rileyperalta.com"
+        class="hover:underline"
+        target="_blank">Riley Peralta</a
+      >.
+    </p>
+  </section>
+  <Key />
+  <section id="concerts-container">
+    {
+      Object.entries(Concerts).map(([, days]) => (
+        <div class="mb-8">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {days.map((day) => (
+              <Card day={day} />
             ))}
-          </ul>
-        </section>
+          </div>
+        </div>
       ))
-  }
+    }
+  </section>
   <Footer />
 </Layout>
+
+<script>
+  // remove past days from the dom
+  document.addEventListener("DOMContentLoaded", () => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // normalize to midnight
+
+    // get all cards with a data-day attribute
+    const cards = document.querySelectorAll("[data-day]");
+    cards.forEach((card) => {
+      const day = card.getAttribute("data-day");
+      if (day) {
+        // parse the human-readable date string into a Date object
+        const [_, month, date] = day.split(" ");
+        const monthIndex = [
+          "jan",
+          "feb",
+          "mar",
+          "apr",
+          "may",
+          "jun",
+          "jul",
+          "aug",
+          "sep",
+          "oct",
+          "nov",
+          "dec",
+        ].indexOf(month.toLowerCase());
+        const eventDate = new Date(
+          today.getFullYear(),
+          monthIndex,
+          parseInt(date, 10),
+        );
+
+        // handle year rollover for december to january
+        if (monthIndex === 0 && today.getMonth() === 11) {
+          eventDate.setFullYear(today.getFullYear() + 1);
+        }
+
+        // remove the card if the event date is in the past
+        if (eventDate < today) {
+          card.remove();
+        } else {
+          // otherwise, show the card
+          card.classList.remove("invisible");
+        }
+      }
+    });
+
+    // if no cards remain, show a fallback message
+    const container = document.getElementById("concerts-container");
+    if (container && container.children.length === 0) {
+      container.innerHTML =
+        "<p>no upcoming concerts available, yell at Riley to fix it.</p>";
+    }
+  });
+</script>

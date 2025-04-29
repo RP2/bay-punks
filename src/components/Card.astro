@@ -1,0 +1,67 @@
+---
+interface Props {
+  day: { day: string; events: any[] };
+}
+const { day } = Astro.props;
+---
+
+<card class="card invisible max-w-[75ch]" data-day={day.day}>
+  <h2 class="text-3xl font-bold uppercase">{day.day}</h2>
+  <ul class="list-disc border-t border-gray-900 pl-5">
+    {
+      day.events.map(
+        (event: {
+          venue: { href: string | URL | null | undefined; text: unknown };
+          bands: any[];
+          extra: unknown;
+        }) => (
+          <li>
+            <strong>
+              {event.venue.href ? (
+                <a
+                  class="hover:underline"
+                  href={event.venue.href}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  {event.venue.text}
+                </a>
+              ) : (
+                event.venue.text
+              )}
+            </strong>
+            {" — "}
+            {event.bands.map(
+              (
+                band: { href: string | URL | null | undefined; text: unknown },
+                i: number,
+              ) => (
+                <span class="inline-flex">
+                  {band.href ? (
+                    <a
+                      class="hover:underline"
+                      href={band.href}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      {band.text}
+                    </a>
+                  ) : (
+                    band.text
+                  )}
+                  {i < event.bands.length - 1 && ","} &nbsp;
+                </span>
+              ),
+            )}
+            {event.extra && (
+              <>
+                {" — "}
+                <span>{event.extra}</span>
+              </>
+            )}
+          </li>
+        ),
+      )
+    }
+  </ul>
+</card>
