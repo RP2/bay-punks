@@ -37,13 +37,13 @@ import Footer from "../components/Footer.astro";
     </tr>
   </table>
   {
-    concerts.weekend && concerts.weekend.length === 0 && (
-      <p>no events found for this weekend.</p>
+    concerts.shows && concerts.shows.length === 0 && (
+      <p>no events found for this shows.</p>
     )
   }
   {
-    concerts.weekend &&
-      concerts.weekend.map((day) => (
+    concerts.shows &&
+      concerts.shows.map((day) => (
         <section class="my-2">
           <h2 class="text-3xl font-bold uppercase">{day.day}</h2>
           <ul>

@@ -21,8 +21,8 @@ const pages = await Promise.all(
   Array.from({ length: 31 }, (_, i) => fetchPage(`${baseUrl}${i}.html`)),
 );
 
-// collect events for each day in the weekend
-const weekend = [];
+// collect events for each day
+const shows = [];
 
 // process each page
 pages.forEach(($) => {
@@ -93,14 +93,11 @@ pages.forEach(($) => {
     });
 
     if (dayText && events.length) {
-      weekend.push({ day: dayText, events });
+      shows.push({ day: dayText, events });
     }
   });
 });
 
 // write to json file
-await writeFile(
-  "./src/data/concerts.json",
-  JSON.stringify({ weekend }, null, 2),
-);
+await writeFile("./src/data/concerts.json", JSON.stringify({ shows }, null, 2));
 console.log("all concerts scraped and saved.");
