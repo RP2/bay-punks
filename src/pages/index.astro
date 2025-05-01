@@ -8,8 +8,8 @@ import Key from "../components/Key.astro";
 
 <Layout title="Upcoming Concerts" description="bay area punk shows">
   <h1 class="text-6xl font-bold uppercase">Upcoming Punk Shows</h1>
-  <section>
-    <p class="mt-4 text-lg">
+  <section class="mt-4 flex flex-col gap-2 text-lg sm:gap-0">
+    <p>
       This website is a simple list of upcoming <strike>punk</strike> shows in the
       Bay Area. Currently sourcing data from <a
         class="italic hover:underline"
@@ -23,7 +23,7 @@ import Key from "../components/Key.astro";
         class="font-bold hover:underline"
         href="https://github.com/RP2/bay-punks"
         target="_blank"
-        title="Bay Area Punks (bay-punks) on GitHub"
+        title="Bay Area Punk Shows (bay-punks) on GitHub"
         rel="nofollow noopener noreferrer">this GitHub repository</a
       >.
     </p>
@@ -35,8 +35,14 @@ import Key from "../components/Key.astro";
       >.
     </p>
   </section>
+  <input
+    type="text"
+    id="search"
+    placeholder="Search by date, venue, or artist"
+    class="mt-4 w-full max-w-lg border p-2"
+  />
   <Key />
-  <section id="concerts-container">
+  <section id="concert-list">
     {
       Object.entries(Concerts).map(([, days]) => (
         <div class="mb-8">
@@ -100,11 +106,35 @@ import Key from "../components/Key.astro";
       }
     });
 
+    // filter cards based on search input
+    const searchInput = document.getElementById("search");
+    searchInput!.addEventListener("input", (e) => {
+      const query = (e.target as HTMLInputElement)!.value.toLowerCase();
+
+      cards.forEach((card) => {
+        const date = card.getAttribute("data-day")?.toLowerCase() || "";
+        const venue =
+          card.querySelector(".venue")?.textContent?.toLowerCase() || "";
+        const artists = Array.from(card.querySelectorAll(".artists")).map(
+          (artist) => artist.textContent?.toLowerCase() || "",
+        );
+
+        // check if the query matches the date, venue, or any artist
+        const matches =
+          date.includes(query) ||
+          venue.includes(query) ||
+          artists.some((artist) => artist.includes(query));
+
+        // show or hide the card based on the match
+        (card as HTMLElement).style.display = matches ? "block" : "none";
+      });
+    });
+
     // if no cards remain, show a fallback message
-    const container = document.getElementById("concerts-container");
+    const container = document.getElementById("concert-list");
     if (container && container.children.length === 0) {
       container.innerHTML =
-        "<p>no upcoming concerts available, yell at Riley to fix it.</p>";
+        "<p>No upcoming concerts available, yell at Riley to fix it.</p>";
     }
   });
 </script>
