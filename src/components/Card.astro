@@ -1,11 +1,15 @@
 ---
 interface Props {
-  day: { day: string; events: any[] };
+  day: { day: string; events: any[]; normalizedDate: string };
 }
 const { day } = Astro.props;
 ---
 
-<card class="invisible max-w-[75ch]" data-day={day.day}>
+<card
+  class="invisible max-w-[75ch]"
+  data-day={day.day}
+  data-iso={day.normalizedDate}
+>
   <h2 class="text-3xl font-bold uppercase">{day.day}</h2>
   <ul class="border-accent-foreground list-disc border-t pl-5">
     {

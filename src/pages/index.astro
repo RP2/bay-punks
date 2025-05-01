@@ -111,6 +111,7 @@ import { Input } from "@/components/ui/input";
 
       cards.forEach((card) => {
         const date = card.getAttribute("data-day")?.toLowerCase() || "";
+        const iso = card.getAttribute("data-iso")?.toLowerCase() || "";
         const venue =
           card.querySelector(".venue")?.textContent?.toLowerCase() || "";
         const artists = Array.from(card.querySelectorAll(".artists")).map(
@@ -120,6 +121,7 @@ import { Input } from "@/components/ui/input";
         // check if the query matches the date, venue, or any artist
         const matches =
           date.includes(query) ||
+          iso.includes(query) ||
           venue.includes(query) ||
           artists.some((artist) => artist.includes(query));
 

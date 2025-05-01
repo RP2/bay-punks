@@ -15,6 +15,37 @@ async function fetchPage(url) {
   return load(html);
 }
 
+// helper to normalize date to ISO format
+function normalizeDate(day) {
+  const months = {
+    jan: "01",
+    feb: "02",
+    mar: "03",
+    apr: "04",
+    may: "05",
+    jun: "06",
+    jul: "07",
+    aug: "08",
+    sep: "09",
+    oct: "10",
+    nov: "11",
+    dec: "12",
+  };
+
+  const parts = day.toLowerCase().split(" ");
+  const [_, monthAbbr, dayNumber] = parts;
+  const month = months[monthAbbr];
+  const year = new Date().getFullYear();
+
+  // handle year rollover for december to january
+  const currentMonth = new Date().getMonth() + 1; // months are 0-indexed
+  if (month === "01" && currentMonth === 12) {
+    return `${year + 1}-${month}-${dayNumber.padStart(2, "0")}`;
+  }
+
+  return `${year}-${month}-${dayNumber.padStart(2, "0")}`;
+}
+
 // fetch all pages from by-date.0.html to by-date.30.html
 const baseUrl = "http://www.foopee.com/punk/the-list/by-date.";
 const pages = await Promise.all(
@@ -51,10 +82,7 @@ pages.forEach(($) => {
       const bands = $(eventLi)
         .find('a[href*="by-band"]')
         .map((_, bandEl) => {
-          // get band text and remove any spaces before or after
-          let bandText = $(bandEl).text().replace(/\s+,/g, ",").trim();
-          bandText = bandText.replace(/\s+$/, ""); // remove trailing spaces
-          bandText = bandText.replace(/^\s+/, ""); // remove leading spaces
+          const bandText = $(bandEl).text().trim();
           return {
             text: bandText,
             href: bandText
@@ -93,7 +121,8 @@ pages.forEach(($) => {
     });
 
     if (dayText && events.length) {
-      shows.push({ day: dayText, events });
+      const normalizedDate = normalizeDate(dayText); // normalize the dayText here
+      shows.push({ day: dayText, normalizedDate, events });
     }
   });
 });
