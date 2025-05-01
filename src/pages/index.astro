@@ -4,6 +4,7 @@ import Concerts from "../data/concerts.json";
 import Footer from "../components/Footer.astro";
 import Card from "../components/Card.astro";
 import Key from "../components/Key.astro";
+import { Input } from "@/components/ui/input";
 ---
 
 <Layout title="Upcoming Concerts" description="bay area punk shows">
@@ -35,13 +36,10 @@ import Key from "../components/Key.astro";
       >.
     </p>
   </section>
-  <input
-    type="text"
-    id="search"
-    placeholder="Search by date, venue, or artist"
-    class="mt-4 w-full max-w-lg border p-2"
-  />
-  <Key />
+  <section class="my-4 flex flex-col gap-4 sm:my-8 sm:gap-8">
+    <Key />
+    <Input />
+  </section>
   <section id="concert-list">
     {
       Object.entries(Concerts).map(([, days]) => (

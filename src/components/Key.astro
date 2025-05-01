@@ -1,34 +1,47 @@
 ---
-
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 ---
 
-<table class="my-4 w-fit">
-  <tr class="border-b-2 border-gray-900 text-left [&>*]:px-4">
-    <th>Symbol</th>
-    <th class="pl-8">Description</th>
-  </tr>
-  <tr class="border-b border-gray-400 [&>*]:px-4">
-    <td>*</td>
-    <td class="pl-8">Recommendable shows</td>
-  </tr>
-  <tr class="border-b border-gray-400 [&>*]:px-4">
-    <td>a/a</td>
-    <td class="pl-8">All ages</td>
-  </tr>
-  <tr class="border-b border-gray-400 [&>*]:px-4">
-    <td>$</td>
-    <td class="pl-8">Will probably sell out</td>
-  </tr>
-  <tr class="border-b border-gray-400 [&>*]:px-4">
-    <td>@</td>
-    <td class="pl-8">Pit warning</td>
-  </tr>
-  <tr class="border-b border-gray-400 [&>*]:px-4">
-    <td>^</td>
-    <td class="pl-8">Under 21 must buy drink tickets</td>
-  </tr>
-  <tr class="[&>*]:px-4">
-    <td>#</td>
-    <td class="pl-8">No ins/outs</td>
-  </tr>
-</table>
+<Table>
+  <TableCaption>Shows may have special symbols applied.</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Symbol</TableHead>
+      <TableHead>Description</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>*</TableCell>
+      <TableCell>Recommendable shows</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>a/a</TableCell>
+      <TableCell>All ages</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>$</TableCell>
+      <TableCell>Will probably sell out</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>@</TableCell>
+      <TableCell>Pit warning</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>^</TableCell>
+      <TableCell>Under 21 must buy drink tickets</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>#</TableCell>
+      <TableCell>No ins/outs</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
