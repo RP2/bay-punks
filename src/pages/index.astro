@@ -2,13 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Concerts from "../data/concerts.json";
 import Footer from "../components/Footer.astro";
-import Card from "../components/Card.astro";
+import Card from "../components/Day.astro";
 import Key from "../components/Key.astro";
 import { Input } from "@/components/ui/input";
 ---
 
 <Layout title="Upcoming Concerts" description="bay area punk shows">
-  <h1 class="text-6xl font-bold uppercase">Upcoming Punk Shows</h1>
+  <h1 class="text-5xl font-bold uppercase sm:text-8xl">Upcoming Punk Shows</h1>
   <section class="mt-4 flex flex-col gap-2 text-lg sm:gap-0">
     <p>
       This website is a simple list of upcoming <strike>punk</strike> shows in the
@@ -44,7 +44,7 @@ import { Input } from "@/components/ui/input";
     {
       Object.entries(Concerts).map(([, days]) => (
         <div class="mb-8">
-          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {days.map((day) => (
               <Card day={day} />
             ))}

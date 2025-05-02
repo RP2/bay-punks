@@ -1,0 +1,93 @@
+---
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
+
+interface Props {
+  day: { day: string; events: any[]; normalizedDate: string };
+}
+const { day } = Astro.props;
+---
+
+<Card
+  className="invisible max-w-[75ch]"
+  data-day={day.day}
+  data-iso={day.normalizedDate}
+>
+  <CardHeader>
+    <CardTitle
+      className="border-accent-foreground border-b-2 text-3xl font-bold uppercase"
+      >{day.day}</CardTitle
+    >
+  </CardHeader>
+  <CardContent>
+    <ScrollArea className="max-h-[75vh] overflow-y-scroll" id="scroll-area">
+      <ul class="ml-4 list-disc [&>li]:mt-2">
+        {
+          day.events.map(
+            (event: {
+              venue: { href: string | URL | null | undefined; text: unknown };
+              bands: any[];
+              extra: unknown;
+            }) => (
+              <li>
+                <strong class="venue">
+                  {event.venue.href ? (
+                    <a
+                      class="hover:underline"
+                      href={event.venue.href}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      {event.venue.text}
+                    </a>
+                  ) : (
+                    event.venue.text
+                  )}
+                </strong>
+                {" — "}
+                {event.bands.map(
+                  (
+                    band: {
+                      href: string | URL | null | undefined;
+                      text: unknown;
+                    },
+                    i: number,
+                  ) => (
+                    <span class="artists inline-flex">
+                      {band.href ? (
+                        <a
+                          class="hover:underline"
+                          href={band.href}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                        >
+                          {band.text}
+                        </a>
+                      ) : (
+                        band.text
+                      )}
+                      {i < event.bands.length - 1 && ","} &nbsp;
+                    </span>
+                  ),
+                )}
+                {event.extra && (
+                  <>
+                    {" — "}
+                    <span>{event.extra}</span>
+                  </>
+                )}
+              </li>
+            ),
+          )
+        }
+      </ul>
+    </ScrollArea>
+  </CardContent>
+</Card>

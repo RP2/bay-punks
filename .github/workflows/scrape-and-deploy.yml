@@ -3,7 +3,7 @@ name: scrape and deploy
 
 on:
   schedule:
-    - cron: "0 8 1 * *" # every monday at 12am pacific (8am utc)
+    - cron: "0 8 * * 1" # every monday at 12am pacific (8am utc)
   workflow_dispatch:
 
 jobs:
@@ -30,6 +30,8 @@ jobs:
 
       # commit and push changes if any
       - name: commit and push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git config --local user.name "${{ github.actor }}"
