@@ -27,11 +27,14 @@ jobs:
       # run the scraper
       - name: run scraper
         run: node scripts/scrape-concerts.js
+      # wait for a few seconds to ensure the scraper has completed
+      - name: wait for scraper
+        run: sleep 5
 
       # commit and push changes if any
       - name: commit and push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SECRET_PUNK }}
         run: |
           git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git config --local user.name "${{ github.actor }}"
