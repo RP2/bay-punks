@@ -3,7 +3,7 @@ name: scrape and deploy
 
 on:
   schedule:
-    - cron: "0 8 * * 1" # every monday at 12am pacific (8am utc)
+    - cron: "0 7 * * 1" # every monday at 12am pacific (8am utc)
   workflow_dispatch:
 
 jobs:
