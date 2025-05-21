@@ -1,0 +1,134 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Card } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { CardContent } from "@/components/ui/card";
+import artists from "../../data/artists.json";
+import concerts from "../../data/concerts.json";
+
+// generate all artist pages at build time
+export async function getStaticPaths() {
+  return artists.artists.map((artist) => ({
+    params: { slug: artist.id },
+    props: { artist },
+  }));
+}
+
+// get the artist from props
+const { artist } = Astro.props;
+
+// get all shows for this artist
+const artistShows = concerts.shows.flatMap((show) =>
+  show.events
+    .filter((event) =>
+      event.bands.some(
+        (band) => normalizeText(band.text) === normalizeText(artist.name),
+      ),
+    )
+    .map((event) => ({
+      ...event,
+      date: show.normalizedDate,
+    })),
+);
+
+// helper to normalize text (remove special characters, lowercase)
+function normalizeText(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .trim();
+}
+---
+
+<Layout
+  title={artist.name}
+  description={`Upcoming shows for ${artist.name} in the Bay Area`}
+>
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="mb-4 text-4xl font-bold">{artist.name}</h1>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div>
+        <Card>
+          <CardContent className="p-6">
+            <h2 class="mb-4 text-2xl font-semibold">Artist Info</h2>
+            <dl class="space-y-2">
+              <div>
+                <dt class="text-muted-foreground text-sm font-medium">
+                  Total Shows
+                </dt>
+                <dd class="text-lg">{artist.showCount}</dd>
+              </div>
+              <div>
+                <dt class="text-muted-foreground text-sm font-medium">
+                  First Seen
+                </dt>
+                <dd class="text-lg">
+                  {new Date(artist.firstSeen).toLocaleDateString()}
+                </dd>
+              </div>
+              <div>
+                <dt class="text-muted-foreground text-sm font-medium">
+                  Last Seen
+                </dt>
+                <dd class="text-lg">
+                  {new Date(artist.lastSeen).toLocaleDateString()}
+                </dd>
+              </div>
+              {
+                artist.aliases.length > 1 && (
+                  <div>
+                    <dt class="text-muted-foreground text-sm font-medium">
+                      Also Known As
+                    </dt>
+                    <dd class="text-lg">{artist.aliases.join(", ")}</dd>
+                  </div>
+                )
+              }
+            </dl>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div>
+        <Card>
+          <CardContent className="p-6">
+            <h2 class="mb-4 text-2xl font-semibold">Venues</h2>
+            <ScrollArea className="h-[200px]">
+              <ul class="space-y-2">
+                {artist.venues.map((venue) => <li class="text-lg">{venue}</li>)}
+              </ul>
+            </ScrollArea>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <Card>
+        <CardContent className="p-6">
+          <h2 class="mb-4 text-2xl font-semibold">Upcoming Shows</h2>
+          <ScrollArea className="h-[400px]">
+            <ul class="space-y-4">
+              {
+                artistShows.map((show) => (
+                  <li class="border-b pb-4 last:border-0">
+                    <div class="text-lg font-medium">{show.venue?.text}</div>
+                    <div class="text-muted-foreground text-sm">
+                      {new Date(show.date).toLocaleDateString()}
+                    </div>
+                    {show.extra && (
+                      <div class="text-muted-foreground mt-1 text-sm">
+                        {show.extra}
+                      </div>
+                    )}
+                  </li>
+                ))
+              }
+            </ul>
+          </ScrollArea>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</Layout>

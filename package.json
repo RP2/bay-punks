@@ -8,7 +8,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier . --write",
-    "scrape": "node ./scripts/scrape-concerts.js"
+    "scrape": "node ./scripts/scrape-concerts.js",
+    "process-db": "node ./scripts/process-databases.js",
+    "update": "npm run scrape && npm run process-db"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.7",
