@@ -31,6 +31,12 @@ A special thanks to the FooPee list for inspiration in curating a big list of sh
 
 This project is a work in progress, and I am excited about its potential to connect Bay Area locals with vibrant live music events. Stay tuned for more features and updates!
 
+## Coming Soon
+
+- [ ] Artist pages
+- [ ] Venue pages
+- [ ] Calendar view
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
