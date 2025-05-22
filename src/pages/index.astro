@@ -87,8 +87,9 @@ import { Input } from "@/components/ui/input";
 
         if (parts.length > 1) {
           const fragment = document.createDocumentFragment();
-          parts.forEach((part) => {
-            if (part.toLowerCase() === query.toLowerCase()) {
+          parts.forEach((part, index) => {
+            // when using split with a regex capturing group, matched parts are at odd indices
+            if (index % 2 === 1) {
               const span = document.createElement("span");
               span.className = "bg-yellow-200 dark:bg-yellow-800";
               span.textContent = part;
@@ -116,12 +117,14 @@ import { Input } from "@/components/ui/input";
         nodes.push(node);
       }
 
+      // first pass: replace highlight spans with text nodes
       nodes.forEach((node) => {
         if (node.nodeType === Node.ELEMENT_NODE) {
           const element = node as Element;
           if (
             element.tagName === "SPAN" &&
-            element.classList.contains("bg-yellow-200")
+            (element.classList.contains("bg-yellow-200") ||
+              element.classList.contains("bg-yellow-800"))
           ) {
             const text = element.textContent || "";
             const textNode = document.createTextNode(text);
@@ -129,6 +132,9 @@ import { Input } from "@/components/ui/input";
           }
         }
       });
+
+      // second pass: normalize the dom to merge adjacent text nodes
+      element.normalize();
     }
 
     // get all cards with a data-day attribute
@@ -196,21 +202,21 @@ import { Input } from "@/components/ui/input";
         // show or hide the card based on the match
         (card as HTMLElement).style.display = matches ? "block" : "none";
 
-        // highlight matches if there's a query
-        if (query) {
+        // always restore original content first to remove previous highlighting
+        if (venue) {
+          restoreOriginalContent(venue);
+        }
+        artists.forEach((artist) => {
+          restoreOriginalContent(artist);
+        });
+
+        // then apply highlighting if there's a query
+        if (query && matches) {
           if (venue) {
             highlightText(venue, query);
           }
           artists.forEach((artist) => {
             highlightText(artist, query);
-          });
-        } else {
-          // restore original text if no query
-          if (venue) {
-            restoreOriginalContent(venue);
-          }
-          artists.forEach((artist) => {
-            restoreOriginalContent(artist);
           });
         }
       });
