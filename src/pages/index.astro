@@ -189,6 +189,7 @@ import { Input } from "@/components/ui/input";
         const iso = card.getAttribute("data-iso")?.toLowerCase() || "";
         const venue = card.querySelector(".venue");
         const artists = card.querySelectorAll(".artists");
+        const extra = card.querySelectorAll(".event-extra");
 
         // check if the query matches the date, venue, or any artist
         const matches =
@@ -197,6 +198,9 @@ import { Input } from "@/components/ui/input";
           venue?.textContent?.toLowerCase().includes(query) ||
           Array.from(artists).some((artist) =>
             artist.textContent?.toLowerCase().includes(query),
+          ) ||
+          Array.from(extra).some((ex) =>
+            ex.textContent?.toLowerCase().includes(query),
           );
 
         // show or hide the card based on the match
@@ -209,6 +213,9 @@ import { Input } from "@/components/ui/input";
         artists.forEach((artist) => {
           restoreOriginalContent(artist);
         });
+        extra.forEach((extraElement) => {
+          restoreOriginalContent(extraElement);
+        });
 
         // then apply highlighting if there's a query
         if (query && matches) {
@@ -217,6 +224,9 @@ import { Input } from "@/components/ui/input";
           }
           artists.forEach((artist) => {
             highlightText(artist, query);
+          });
+          extra.forEach((extraElement) => {
+            highlightText(extraElement, query);
           });
         }
       });
