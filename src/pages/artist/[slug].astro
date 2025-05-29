@@ -99,16 +99,6 @@ const artistShows = concerts.shows
               </dd>
             </div>
             {
-              artist.aliases.length > 1 && (
-                <div>
-                  <dt class="text-muted-foreground text-sm font-medium">
-                    Also Known As
-                  </dt>
-                  <dd class="text-lg">{artist.aliases.join(", ")}</dd>
-                </div>
-              )
-            }
-            {
               (artist.spotifyUrl || artist.searchUrl) && (
                 <div>
                   <dt class="text-muted-foreground text-sm font-medium">
