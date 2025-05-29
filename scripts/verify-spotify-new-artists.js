@@ -469,13 +469,7 @@ export async function verifyArtistsInMemory(artists, options = {}) {
 }
 
 // export functions for use by other scripts
-export {
-  isNewArtist,
-  spotifyRequest,
-  getSpotifyToken,
-  verifyArtistOnSpotify,
-  verifyArtistsInMemory,
-};
+export { isNewArtist, spotifyRequest, getSpotifyToken, verifyArtistOnSpotify };
 
 // run as standalone script if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
