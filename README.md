@@ -18,7 +18,7 @@ This project aims to create an easy-to-navigate and search website of upcoming p
 
 ## How to Use
 
-1. Visit the [punk list website](https://punk.rileyperalta.com) (temporary domain) to browse the current list.
+1. Visit the list at [shows.wtf](https://shows.wtf) to browse the current list.
 2. Use the **Shows** tab to view upcoming concerts by date.
 3. Explore the **Artists** tab to discover bands with direct Spotify links when available.
 4. Check the **Venues** tab to find show locations and their event history.
