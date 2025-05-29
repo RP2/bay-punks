@@ -9,7 +9,7 @@ on:
       limit:
         description: "limit recheck to n artists (for testing)"
         required: false
-        default: "100"
+        default: ""
         type: string
       dry_run:
         description: "preview what would be rechecked without making changes"
@@ -59,7 +59,7 @@ jobs:
             if [ -n "${{ github.event.inputs.limit }}" ]; then
               node scripts/verify-spotify-recheck-artists.js --limit ${{ github.event.inputs.limit }}
             else
-              node scripts/verify-spotify-recheck-artists.js --limit 100
+              node scripts/verify-spotify-recheck-artists.js
             fi
           fi
 
