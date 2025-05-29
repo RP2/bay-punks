@@ -1,0 +1,163 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import concerts from "../../data/concerts.json";
+import venues from "../../data/venues.json";
+import artists from "../../data/artists.json";
+
+// generate all day pages at build time
+export async function getStaticPaths() {
+  return concerts.shows.map((show) => ({
+    params: { slug: show.normalizedDate },
+    props: { day: show },
+  }));
+}
+
+// get the day from props
+const { day } = Astro.props;
+
+// helper to normalize text (remove special characters, lowercase)
+function normalizeText(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .trim();
+}
+
+// helper to find venue ID from venue name
+function findVenueId(venueName: string): string | null {
+  const venue = venues.venues.find(
+    (v) => normalizeText(v.name) === normalizeText(venueName),
+  );
+  return venue?.id || null;
+}
+
+// helper to find artist ID from artist name
+function findArtistId(artistName: string): string | null {
+  const artist = artists.artists.find(
+    (a) => normalizeText(a.name) === normalizeText(artistName),
+  );
+  return artist?.id || null;
+}
+
+// helper to format date nicely
+function formatDate(dateStr: string): string {
+  // parse date components to avoid timezone issues
+  const [year, month, day] = dateStr.split("-").map(Number);
+  // create date at noon to avoid any potential timezone edge cases
+  const date = new Date(year, month - 1, day, 12, 0, 0);
+  return date.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "America/Los_Angeles", // explicit Bay Area timezone
+  });
+}
+
+// helper to format day title (without year)
+function formatDayTitle(dateStr: string): string {
+  // parse date components to avoid timezone issues
+  const [year, month, day] = dateStr.split("-").map(Number);
+  // create date at noon to avoid any potential timezone edge cases
+  const date = new Date(year, month - 1, day, 12, 0, 0);
+  return date.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    timeZone: "America/Los_Angeles", // explicit Bay Area timezone
+  });
+}
+
+// helper to get just the year
+function getYear(dateStr: string): string {
+  const [year] = dateStr.split("-").map(Number);
+  return year.toString();
+}
+
+const formattedDayTitle = formatDayTitle(day.normalizedDate);
+const year = getYear(day.normalizedDate);
+---
+
+<Layout
+  title={formattedDayTitle}
+  description={`Punk shows on ${formattedDayTitle} ${year} in the Bay Area`}
+>
+  <div class="container mx-auto px-4 py-8">
+    <div class="mb-8">
+      <a
+        href="/"
+        class="text-muted-foreground hover:text-foreground mb-4 inline-flex items-center text-sm hover:underline"
+      >
+        ← Back to calendar
+      </a>
+      <h1 class="text-4xl font-bold">{formattedDayTitle}</h1>
+      <p class="text-muted-foreground text-lg">{year}</p>
+    </div>
+
+    <div class="space-y-6">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-semibold">
+          Events ({day.events.length})
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        {
+          day.events.map((event) => (
+            <Card>
+              <CardContent className="p-6">
+                <div class="space-y-4">
+                  <div class="flex items-start justify-between">
+                    <h3 class="text-primary text-xl font-semibold">
+                      {(() => {
+                        const venueId = findVenueId(event.venue.text);
+                        return venueId ? (
+                          <a class="hover:underline" href={`/venue/${venueId}`}>
+                            {event.venue.text}
+                          </a>
+                        ) : (
+                          event.venue.text
+                        );
+                      })()}
+                    </h3>
+                  </div>
+
+                  <div>
+                    <h4 class="mb-2 font-medium">Artists</h4>
+                    <div class="flex flex-wrap gap-2">
+                      {event.bands.map((band, index) => {
+                        const artistId = findArtistId(band.text);
+                        return (
+                          <span class="bg-muted text-muted-foreground rounded-md px-2 py-1 text-sm">
+                            {artistId ? (
+                              <a
+                                class="hover:underline"
+                                href={`/artist/${artistId}`}
+                              >
+                                {band.text}
+                              </a>
+                            ) : (
+                              band.text
+                            )}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {event.extra && (
+                    <div>
+                      <h4 class="mb-2 font-medium">Additional Info</h4>
+                      <p class="text-muted-foreground text-sm">{event.extra}</p>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>

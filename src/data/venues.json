@@ -4,9 +4,9 @@
       "id": "independent-sf",
       "name": "Independent, S.F.",
       "searchUrl": "https://www.google.com/search?q=Independent%2C%20S.F.",
-      "firstSeen": "2025-05-17",
+      "firstSeen": "2025-05-27",
       "lastSeen": "2025-12-14",
-      "showCount": 78,
+      "showCount": 74,
       "location": "S.F.",
       "aliases": ["Independent, S.F."]
     },
@@ -14,9 +14,9 @@
       "id": "mountain-winery-saratoga",
       "name": "Mountain Winery, Saratoga",
       "searchUrl": "https://www.google.com/search?q=Mountain%20Winery%2C%20Saratoga",
-      "firstSeen": "2025-05-17",
+      "firstSeen": "2025-05-29",
       "lastSeen": "2025-10-30",
-      "showCount": 78,
+      "showCount": 73,
       "location": "Saratoga",
       "aliases": ["Mountain Winery, Saratoga"]
     },
@@ -24,9 +24,9 @@
       "id": "great-american-music-hall-sf",
       "name": "Great American Music Hall, S.F.",
       "searchUrl": "https://www.google.com/search?q=Great%20American%20Music%20Hall%2C%20S.F.",
-      "firstSeen": "2025-05-17",
+      "firstSeen": "2025-05-31",
       "lastSeen": "2025-11-30",
-      "showCount": 61,
+      "showCount": 57,
       "location": "S.F.",
       "aliases": ["Great American Music Hall, S.F."]
     },
@@ -34,91 +34,71 @@
       "id": "bottom-of-the-hill-sf",
       "name": "Bottom of the Hill, S.F.",
       "searchUrl": "https://www.google.com/search?q=Bottom%20of%20the%20Hill%2C%20S.F.",
-      "firstSeen": "2025-05-17",
+      "firstSeen": "2025-05-28",
       "lastSeen": "2025-11-19",
-      "showCount": 60,
+      "showCount": 52,
       "location": "S.F.",
       "aliases": ["Bottom of the Hill, S.F."]
-    },
-    {
-      "id": "chapel-sf",
-      "name": "Chapel, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Chapel%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-11-16",
-      "showCount": 51,
-      "location": "S.F.",
-      "aliases": ["Chapel, S.F."]
     },
     {
       "id": "ivy-room-albany",
       "name": "Ivy Room, Albany",
       "searchUrl": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany",
-      "firstSeen": "2025-05-18",
-      "lastSeen": "2025-09-06",
-      "showCount": 48,
+      "firstSeen": "2025-05-28",
+      "lastSeen": "2025-10-07",
+      "showCount": 50,
       "location": "Albany",
       "aliases": ["Ivy Room, Albany"]
     },
     {
-      "id": "august-hall-sf",
-      "name": "August Hall, S.F.",
-      "searchUrl": "https://www.google.com/search?q=August%20Hall%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-12-10",
-      "showCount": 40,
+      "id": "chapel-sf",
+      "name": "Chapel, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Chapel%2C%20S.F.",
+      "firstSeen": "2025-05-27",
+      "lastSeen": "2025-11-16",
+      "showCount": 45,
       "location": "S.F.",
-      "aliases": ["August Hall, S.F."]
+      "aliases": ["Chapel, S.F."]
     },
     {
       "id": "fox-theater-oakland",
       "name": "Fox Theater, Oakland",
       "searchUrl": "https://www.google.com/search?q=Fox%20Theater%2C%20Oakland",
-      "firstSeen": "2025-05-17",
+      "firstSeen": "2025-06-07",
       "lastSeen": "2025-11-25",
-      "showCount": 40,
+      "showCount": 42,
       "location": "Oakland",
       "aliases": ["Fox Theater, Oakland"]
-    },
-    {
-      "id": "uptown-theater-napa",
-      "name": "Uptown Theater, Napa",
-      "searchUrl": "https://www.google.com/search?q=Uptown%20Theater%2C%20Napa",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-12-07",
-      "showCount": 40,
-      "location": "Napa",
-      "aliases": ["Uptown Theater, Napa"]
     },
     {
       "id": "regency-ballroom-sf",
       "name": "Regency Ballroom, S.F.",
       "searchUrl": "https://www.google.com/search?q=Regency%20Ballroom%2C%20S.F.",
-      "firstSeen": "2025-05-19",
+      "firstSeen": "2025-05-30",
       "lastSeen": "2025-11-20",
-      "showCount": 40,
+      "showCount": 39,
       "location": "S.F.",
       "aliases": ["Regency Ballroom, S.F."]
     },
     {
-      "id": "hopmonk-tavern-novato",
-      "name": "Hopmonk Tavern, Novato",
-      "searchUrl": "https://www.google.com/search?q=Hopmonk%20Tavern%2C%20Novato",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-09-12",
-      "showCount": 39,
-      "location": "Novato",
-      "aliases": ["Hopmonk Tavern, Novato"]
+      "id": "uptown-theater-napa",
+      "name": "Uptown Theater, Napa",
+      "searchUrl": "https://www.google.com/search?q=Uptown%20Theater%2C%20Napa",
+      "firstSeen": "2025-05-29",
+      "lastSeen": "2025-12-07",
+      "showCount": 34,
+      "location": "Napa",
+      "aliases": ["Uptown Theater, Napa"]
     },
     {
-      "id": "924-gilman-street-berkeley",
-      "name": "924 Gilman Street, Berkeley",
-      "searchUrl": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-08-01",
+      "id": "august-hall-sf",
+      "name": "August Hall, S.F.",
+      "searchUrl": "https://www.google.com/search?q=August%20Hall%2C%20S.F.",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-12-10",
       "showCount": 34,
-      "location": "Berkeley",
-      "aliases": ["924 Gilman Street, Berkeley"]
+      "location": "S.F.",
+      "aliases": ["August Hall, S.F."]
     },
     {
       "id": "greek-theater-uc-berkeley-campus",
@@ -131,32 +111,62 @@
       "aliases": ["Greek Theater, UC Berkeley Campus"]
     },
     {
+      "id": "rickshaw-stop-sf",
+      "name": "Rickshaw Stop, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F.",
+      "firstSeen": "2025-05-29",
+      "lastSeen": "2025-11-01",
+      "showCount": 33,
+      "location": "S.F.",
+      "aliases": ["Rickshaw Stop, S.F."]
+    },
+    {
+      "id": "hopmonk-tavern-novato",
+      "name": "Hopmonk Tavern, Novato",
+      "searchUrl": "https://www.google.com/search?q=Hopmonk%20Tavern%2C%20Novato",
+      "firstSeen": "2025-05-31",
+      "lastSeen": "2025-09-12",
+      "showCount": 31,
+      "location": "Novato",
+      "aliases": ["Hopmonk Tavern, Novato"]
+    },
+    {
       "id": "warfield-sf",
       "name": "Warfield, S.F.",
       "searchUrl": "https://www.google.com/search?q=Warfield%2C%20S.F.",
-      "firstSeen": "2025-05-17",
+      "firstSeen": "2025-05-31",
       "lastSeen": "2025-11-21",
-      "showCount": 33,
+      "showCount": 29,
       "location": "S.F.",
       "aliases": ["Warfield, S.F."]
     },
     {
-      "id": "rickshaw-stop-sf",
-      "name": "Rickshaw Stop, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-11-01",
-      "showCount": 32,
+      "id": "924-gilman-street-berkeley",
+      "name": "924 Gilman Street, Berkeley",
+      "searchUrl": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley",
+      "firstSeen": "2025-05-27",
+      "lastSeen": "2025-08-01",
+      "showCount": 27,
+      "location": "Berkeley",
+      "aliases": ["924 Gilman Street, Berkeley"]
+    },
+    {
+      "id": "masonic-sf",
+      "name": "Masonic, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Masonic%2C%20S.F.",
+      "firstSeen": "2025-05-27",
+      "lastSeen": "2025-11-13",
+      "showCount": 27,
       "location": "S.F.",
-      "aliases": ["Rickshaw Stop, S.F."]
+      "aliases": ["Masonic, S.F."]
     },
     {
       "id": "thee-stork-club-oakland",
       "name": "Thee Stork Club, Oakland",
       "searchUrl": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland",
-      "firstSeen": "2025-05-17",
+      "firstSeen": "2025-05-27",
       "lastSeen": "2025-09-14",
-      "showCount": 32,
+      "showCount": 26,
       "location": "Oakland",
       "aliases": ["Thee Stork Club, Oakland"]
     },
@@ -164,29 +174,29 @@
       "id": "fillmore-sf",
       "name": "Fillmore, S.F.",
       "searchUrl": "https://www.google.com/search?q=Fillmore%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-12-10",
-      "showCount": 30,
+      "firstSeen": "2025-09-06",
+      "lastSeen": "2025-12-19",
+      "showCount": 26,
       "location": "S.F.",
       "aliases": ["Fillmore, S.F."]
     },
     {
-      "id": "masonic-sf",
-      "name": "Masonic, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Masonic%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-11-13",
-      "showCount": 28,
+      "id": "kilowatt-sf",
+      "name": "Kilowatt, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Kilowatt%2C%20S.F.",
+      "firstSeen": "2025-05-28",
+      "lastSeen": "2025-09-17",
+      "showCount": 23,
       "location": "S.F.",
-      "aliases": ["Masonic, S.F."]
+      "aliases": ["Kilowatt, S.F."]
     },
     {
       "id": "blue-note-napa",
       "name": "Blue Note, Napa",
       "searchUrl": "https://www.google.com/search?q=Blue%20Note%2C%20Napa",
-      "firstSeen": "2025-05-17",
+      "firstSeen": "2025-05-30",
       "lastSeen": "2025-09-19",
-      "showCount": 24,
+      "showCount": 22,
       "location": "Napa",
       "aliases": ["Blue Note, Napa"]
     },
@@ -194,21 +204,11 @@
       "id": "cornerstone-berkeley",
       "name": "Cornerstone, Berkeley",
       "searchUrl": "https://www.google.com/search?q=Cornerstone%2C%20Berkeley",
-      "firstSeen": "2025-05-17",
+      "firstSeen": "2025-05-27",
       "lastSeen": "2025-11-02",
-      "showCount": 23,
+      "showCount": 19,
       "location": "Berkeley",
       "aliases": ["Cornerstone, Berkeley"]
-    },
-    {
-      "id": "kilowatt-sf",
-      "name": "Kilowatt, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Kilowatt%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-09-17",
-      "showCount": 20,
-      "location": "S.F.",
-      "aliases": ["Kilowatt, S.F."]
     },
     {
       "id": "meritage-resort-napa",
@@ -221,24 +221,24 @@
       "aliases": ["Meritage Resort, Napa"]
     },
     {
-      "id": "knockout-sf",
-      "name": "Knockout, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Knockout%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-06-15",
-      "showCount": 16,
-      "location": "S.F.",
-      "aliases": ["Knockout, S.F."]
+      "id": "shoreline-amphitheater-mountain-view",
+      "name": "Shoreline Amphitheater, Mountain View",
+      "searchUrl": "https://www.google.com/search?q=Shoreline%20Amphitheater%2C%20Mountain%20View",
+      "firstSeen": "2025-06-07",
+      "lastSeen": "2025-10-19",
+      "showCount": 17,
+      "location": "Mountain View",
+      "aliases": ["Shoreline Amphitheater, Mountain View"]
     },
     {
-      "id": "uc-theater-berkeley",
-      "name": "UC Theater, Berkeley",
-      "searchUrl": "https://www.google.com/search?q=UC%20Theater%2C%20Berkeley",
-      "firstSeen": "2025-05-19",
-      "lastSeen": "2025-12-02",
+      "id": "elis-mile-high-club-oakland",
+      "name": "Eli's Mile High Club, Oakland",
+      "searchUrl": "https://www.google.com/search?q=Eli's%20Mile%20High%20Club%2C%20Oakland",
+      "firstSeen": "2025-05-31",
+      "lastSeen": "2025-07-18",
       "showCount": 16,
-      "location": "Berkeley",
-      "aliases": ["UC Theater, Berkeley"]
+      "location": "Oakland",
+      "aliases": ["Eli's Mile High Club, Oakland"]
     },
     {
       "id": "alameda-county-fair-pleasanton",
@@ -251,74 +251,64 @@
       "aliases": ["Alameda County Fair, Pleasanton"]
     },
     {
-      "id": "catalyst-atrium-santa-cruz",
-      "name": "Catalyst Atrium, Santa Cruz",
-      "searchUrl": "https://www.google.com/search?q=Catalyst%20Atrium%2C%20Santa%20Cruz",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-10-22",
-      "showCount": 15,
-      "location": "Santa Cruz",
-      "aliases": ["Catalyst Atrium, Santa Cruz"]
-    },
-    {
-      "id": "catalyst-santa-cruz",
-      "name": "Catalyst, Santa Cruz",
-      "searchUrl": "https://www.google.com/search?q=Catalyst%2C%20Santa%20Cruz",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-10-02",
+      "id": "uc-theater-berkeley",
+      "name": "UC Theater, Berkeley",
+      "searchUrl": "https://www.google.com/search?q=UC%20Theater%2C%20Berkeley",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-12-02",
       "showCount": 14,
-      "location": "Santa Cruz",
-      "aliases": ["Catalyst, Santa Cruz"]
-    },
-    {
-      "id": "ritz-san-jose",
-      "name": "Ritz, San Jose",
-      "searchUrl": "https://www.google.com/search?q=Ritz%2C%20San%20Jose",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-10-24",
-      "showCount": 14,
-      "location": "San Jose",
-      "aliases": ["Ritz, San Jose"]
+      "location": "Berkeley",
+      "aliases": ["UC Theater, Berkeley"]
     },
     {
       "id": "moes-alley-santa-cruz",
       "name": "Moe's Alley, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Moe's%20Alley%2C%20Santa%20Cruz",
-      "firstSeen": "2025-05-18",
+      "firstSeen": "2025-05-29",
       "lastSeen": "2025-12-13",
-      "showCount": 14,
+      "showCount": 12,
       "location": "Santa Cruz",
       "aliases": ["Moe's Alley, Santa Cruz"]
     },
     {
-      "id": "black-cat-sf",
-      "name": "Black Cat, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Black%20Cat%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-06-08",
-      "showCount": 13,
-      "location": "S.F.",
-      "aliases": ["Black Cat, S.F."]
+      "id": "catalyst-santa-cruz",
+      "name": "Catalyst, Santa Cruz",
+      "searchUrl": "https://www.google.com/search?q=Catalyst%2C%20Santa%20Cruz",
+      "firstSeen": "2025-06-05",
+      "lastSeen": "2025-10-02",
+      "showCount": 12,
+      "location": "Santa Cruz",
+      "aliases": ["Catalyst, Santa Cruz"]
     },
     {
-      "id": "brick-and-mortar-sf",
-      "name": "Brick and Mortar, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Brick%20and%20Mortar%2C%20S.F.",
-      "firstSeen": "2025-05-19",
-      "lastSeen": "2025-08-17",
-      "showCount": 13,
-      "location": "S.F.",
-      "aliases": ["Brick and Mortar, S.F."]
+      "id": "catalyst-atrium-santa-cruz",
+      "name": "Catalyst Atrium, Santa Cruz",
+      "searchUrl": "https://www.google.com/search?q=Catalyst%20Atrium%2C%20Santa%20Cruz",
+      "firstSeen": "2025-06-06",
+      "lastSeen": "2025-10-22",
+      "showCount": 12,
+      "location": "Santa Cruz",
+      "aliases": ["Catalyst Atrium, Santa Cruz"]
     },
     {
       "id": "oreillys-sf",
       "name": "O'Reilly's, S.F.",
       "searchUrl": "https://www.google.com/search?q=O'Reilly's%2C%20S.F.",
-      "firstSeen": "2025-05-23",
+      "firstSeen": "2025-06-06",
       "lastSeen": "2025-08-23",
-      "showCount": 13,
+      "showCount": 12,
       "location": "S.F.",
       "aliases": ["O'Reilly's, S.F."]
+    },
+    {
+      "id": "ritz-san-jose",
+      "name": "Ritz, San Jose",
+      "searchUrl": "https://www.google.com/search?q=Ritz%2C%20San%20Jose",
+      "firstSeen": "2025-06-06",
+      "lastSeen": "2025-10-24",
+      "showCount": 12,
+      "location": "San Jose",
+      "aliases": ["Ritz, San Jose"]
     },
     {
       "id": "warriors-stadium-sf",
@@ -331,24 +321,14 @@
       "aliases": ["Warriors Stadium, S.F.", "Warrior's Stadium, S.F."]
     },
     {
-      "id": "bimbos-365-club-sf",
-      "name": "Bimbo's 365 Club, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Bimbo's%20365%20Club%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-10-28",
+      "id": "brick-and-mortar-sf",
+      "name": "Brick and Mortar, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Brick%20and%20Mortar%2C%20S.F.",
+      "firstSeen": "2025-05-31",
+      "lastSeen": "2025-08-17",
       "showCount": 11,
       "location": "S.F.",
-      "aliases": ["Bimbo's 365 Club, S.F."]
-    },
-    {
-      "id": "downtown-barbecue-santa-rosa",
-      "name": "Downtown Barbecue, Santa Rosa",
-      "searchUrl": "https://www.google.com/search?q=Downtown%20Barbecue%2C%20Santa%20Rosa",
-      "firstSeen": "2025-05-21",
-      "lastSeen": "2025-07-30",
-      "showCount": 11,
-      "location": "Santa Rosa",
-      "aliases": ["Downtown Barbecue, Santa Rosa"]
+      "aliases": ["Brick and Mortar, S.F."]
     },
     {
       "id": "stern-grove-19th-avenue",
@@ -361,6 +341,46 @@
       "aliases": ["Stern Grove, 19th Avenue"]
     },
     {
+      "id": "knockout-sf",
+      "name": "Knockout, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Knockout%2C%20S.F.",
+      "firstSeen": "2025-05-27",
+      "lastSeen": "2025-07-17",
+      "showCount": 10,
+      "location": "S.F.",
+      "aliases": ["Knockout, S.F."]
+    },
+    {
+      "id": "downtown-barbecue-santa-rosa",
+      "name": "Downtown Barbecue, Santa Rosa",
+      "searchUrl": "https://www.google.com/search?q=Downtown%20Barbecue%2C%20Santa%20Rosa",
+      "firstSeen": "2025-05-28",
+      "lastSeen": "2025-07-30",
+      "showCount": 10,
+      "location": "Santa Rosa",
+      "aliases": ["Downtown Barbecue, Santa Rosa"]
+    },
+    {
+      "id": "stay-gold-deli-oakland",
+      "name": "Stay Gold Deli, Oakland",
+      "searchUrl": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland",
+      "firstSeen": "2025-05-31",
+      "lastSeen": "2025-08-03",
+      "showCount": 10,
+      "location": "Oakland",
+      "aliases": ["Stay Gold Deli, Oakland"]
+    },
+    {
+      "id": "bimbos-365-club-sf",
+      "name": "Bimbo's 365 Club, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Bimbo's%20365%20Club%2C%20S.F.",
+      "firstSeen": "2025-06-03",
+      "lastSeen": "2025-10-28",
+      "showCount": 9,
+      "location": "S.F.",
+      "aliases": ["Bimbo's 365 Club, S.F."]
+    },
+    {
       "id": "jack-kerouac-alley-sf",
       "name": "Jack Kerouac Alley, S.F.",
       "searchUrl": "https://www.google.com/search?q=Jack%20Kerouac%20Alley%2C%20S.F.",
@@ -371,50 +391,20 @@
       "aliases": ["Jack Kerouac Alley, S.F."]
     },
     {
-      "id": "freight-berkeley",
-      "name": "Freight, Berkeley",
-      "searchUrl": "https://www.google.com/search?q=Freight%2C%20Berkeley",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-06-18",
+      "id": "pavilion-concord",
+      "name": "Pavilion, Concord",
+      "searchUrl": "https://www.google.com/search?q=Pavilion%2C%20Concord",
+      "firstSeen": "2025-06-13",
+      "lastSeen": "2025-09-05",
       "showCount": 8,
-      "location": "Berkeley",
-      "aliases": ["Freight, Berkeley"]
-    },
-    {
-      "id": "guild-theater-memlo-park",
-      "name": "Guild Theater, Memlo Park",
-      "searchUrl": "https://www.google.com/search?q=Guild%20Theater%2C%20Memlo%20Park",
-      "firstSeen": "2025-05-18",
-      "lastSeen": "2025-11-07",
-      "showCount": 8,
-      "location": "Memlo Park",
-      "aliases": ["Guild Theater, Memlo Park"]
-    },
-    {
-      "id": "little-hill-lounge-el-cerrito",
-      "name": "Little Hill Lounge, El Cerrito",
-      "searchUrl": "https://www.google.com/search?q=Little%20Hill%20Lounge%2C%20El%20Cerrito",
-      "firstSeen": "2025-05-18",
-      "lastSeen": "2025-05-31",
-      "showCount": 8,
-      "location": "El Cerrito",
-      "aliases": ["Little Hill Lounge, El Cerrito"]
-    },
-    {
-      "id": "neck-of-the-woods-sf",
-      "name": "Neck of the Woods, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Neck%20of%20the%20Woods%2C%20S.F.",
-      "firstSeen": "2025-05-24",
-      "lastSeen": "2025-08-15",
-      "showCount": 8,
-      "location": "S.F.",
-      "aliases": ["Neck of the Woods, S.F.", "Neck Of The Woods, S.F."]
+      "location": "Concord",
+      "aliases": ["Pavilion, Concord"]
     },
     {
       "id": "shark-tank-san-jose",
       "name": "Shark Tank, San Jose",
       "searchUrl": "https://www.google.com/search?q=Shark%20Tank%2C%20San%20Jose",
-      "firstSeen": "2025-05-24",
+      "firstSeen": "2025-06-20",
       "lastSeen": "2025-11-16",
       "showCount": 8,
       "location": "San Jose",
@@ -431,44 +421,14 @@
       "aliases": ["Arena, Oakland"]
     },
     {
-      "id": "phoenix-theater-petaluma",
-      "name": "Phoenix Theater, Petaluma",
-      "searchUrl": "https://www.google.com/search?q=Phoenix%20Theater%2C%20Petaluma",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-09-28",
-      "showCount": 7,
-      "location": "Petaluma",
-      "aliases": ["Phoenix Theater, Petaluma"]
-    },
-    {
-      "id": "cafe-du-nord-sf",
-      "name": "Cafe Du Nord, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Cafe%20Du%20Nord%2C%20S.F.",
-      "firstSeen": "2025-05-18",
-      "lastSeen": "2025-09-05",
+      "id": "neck-of-the-woods-sf",
+      "name": "Neck Of The Woods, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Neck%20Of%20The%20Woods%2C%20S.F.",
+      "firstSeen": "2025-05-28",
+      "lastSeen": "2025-08-15",
       "showCount": 7,
       "location": "S.F.",
-      "aliases": ["Cafe Du Nord, S.F."]
-    },
-    {
-      "id": "civic-auditorium-sf",
-      "name": "Civic Auditorium, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Civic%20Auditorium%2C%20S.F.",
-      "firstSeen": "2025-05-21",
-      "lastSeen": "2025-10-07",
-      "showCount": 7,
-      "location": "S.F.",
-      "aliases": ["Civic Auditorium, S.F."]
-    },
-    {
-      "id": "pavilion-concord",
-      "name": "Pavilion, Concord",
-      "searchUrl": "https://www.google.com/search?q=Pavilion%2C%20Concord",
-      "firstSeen": "2025-06-13",
-      "lastSeen": "2025-08-29",
-      "showCount": 7,
-      "location": "Concord",
-      "aliases": ["Pavilion, Concord"]
+      "aliases": ["Neck Of The Woods, S.F."]
     },
     {
       "id": "davies-symphony-hall-sf",
@@ -481,34 +441,24 @@
       "aliases": ["Davies Symphony Hall, S.F."]
     },
     {
-      "id": "shoreline-amphitheater-mountain-view",
-      "name": "Shoreline Amphitheater, Mountain View",
-      "searchUrl": "https://www.google.com/search?q=Shoreline%20Amphitheater%2C%20Mountain%20View",
-      "firstSeen": "2025-07-15",
-      "lastSeen": "2025-10-14",
-      "showCount": 7,
-      "location": "Mountain View",
-      "aliases": ["Shoreline Amphitheater, Mountain View"]
+      "id": "dna-lounge-sf",
+      "name": "DNA Lounge, S.F.",
+      "searchUrl": "https://www.google.com/search?q=DNA%20Lounge%2C%20S.F.",
+      "firstSeen": "2025-05-27",
+      "lastSeen": "2025-06-18",
+      "showCount": 6,
+      "location": "S.F.",
+      "aliases": ["DNA Lounge, S.F."]
     },
     {
-      "id": "blue-lagoon-santa-cruz",
-      "name": "Blue Lagoon, Santa Cruz",
-      "searchUrl": "https://www.google.com/search?q=Blue%20Lagoon%2C%20Santa%20Cruz",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-07-19",
+      "id": "black-cat-sf",
+      "name": "Black Cat, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Black%20Cat%2C%20S.F.",
+      "firstSeen": "2025-05-28",
+      "lastSeen": "2025-06-08",
       "showCount": 6,
-      "location": "Santa Cruz",
-      "aliases": ["Blue Lagoon, Santa Cruz"]
-    },
-    {
-      "id": "caravan-lounge-san-jose",
-      "name": "Caravan Lounge, San Jose",
-      "searchUrl": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-31",
-      "showCount": 6,
-      "location": "San Jose",
-      "aliases": ["Caravan Lounge, San Jose"]
+      "location": "S.F.",
+      "aliases": ["Black Cat, S.F."]
     },
     {
       "id": "rio-theater-santa-cruz",
@@ -521,34 +471,14 @@
       "aliases": ["Rio Theater, Santa Cruz"]
     },
     {
-      "id": "palace-of-fine-arts-sf",
-      "name": "Palace of Fine Arts, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Palace%20of%20Fine%20Arts%2C%20S.F.",
-      "firstSeen": "2025-06-05",
-      "lastSeen": "2025-11-29",
-      "showCount": 6,
-      "location": "S.F.",
-      "aliases": ["Palace of Fine Arts, S.F."]
-    },
-    {
-      "id": "stay-gold-deli-oakland",
-      "name": "Stay Gold Deli, Oakland",
-      "searchUrl": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland",
-      "firstSeen": "2025-05-18",
-      "lastSeen": "2025-06-14",
+      "id": "streetlight-records-santa-cruz",
+      "name": "Streetlight Records, Santa Cruz",
+      "searchUrl": "https://www.google.com/search?q=Streetlight%20Records%2C%20Santa%20Cruz",
+      "firstSeen": "2025-05-28",
+      "lastSeen": "2025-06-30",
       "showCount": 5,
-      "location": "Oakland",
-      "aliases": ["Stay Gold Deli, Oakland"]
-    },
-    {
-      "id": "hopmonk-sebastopol",
-      "name": "Hopmonk, Sebastopol",
-      "searchUrl": "https://www.google.com/search?q=Hopmonk%2C%20Sebastopol",
-      "firstSeen": "2025-05-20",
-      "lastSeen": "2025-07-11",
-      "showCount": 5,
-      "location": "Sebastopol",
-      "aliases": ["Hopmonk, Sebastopol"]
+      "location": "Santa Cruz",
+      "aliases": ["Streetlight Records, Santa Cruz"]
     },
     {
       "id": "eagle-sf",
@@ -561,6 +491,26 @@
       "aliases": ["Eagle, S.F."]
     },
     {
+      "id": "phoenix-theater-petaluma",
+      "name": "Phoenix Theater, Petaluma",
+      "searchUrl": "https://www.google.com/search?q=Phoenix%20Theater%2C%20Petaluma",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-09-28",
+      "showCount": 5,
+      "location": "Petaluma",
+      "aliases": ["Phoenix Theater, Petaluma"]
+    },
+    {
+      "id": "freight-berkeley",
+      "name": "Freight, Berkeley",
+      "searchUrl": "https://www.google.com/search?q=Freight%2C%20Berkeley",
+      "firstSeen": "2025-06-05",
+      "lastSeen": "2025-06-18",
+      "showCount": 5,
+      "location": "Berkeley",
+      "aliases": ["Freight, Berkeley"]
+    },
+    {
       "id": "san-jose-civic-center-san-jose",
       "name": "San Jose Civic Center, San Jose",
       "searchUrl": "https://www.google.com/search?q=San%20Jose%20Civic%20Center%2C%20San%20Jose",
@@ -571,64 +521,44 @@
       "aliases": ["San Jose Civic Center, San Jose"]
     },
     {
-      "id": "pt-san-pablo-harbor-1900-stenmark-dr-richmond",
-      "name": "Pt. San Pablo Harbor, 1900 Stenmark Dr., Richmond",
-      "searchUrl": "https://www.google.com/search?q=Pt.%20San%20Pablo%20Harbor%2C%201900%20Stenmark%20Dr.%2C%20Richmond",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-07-19",
-      "showCount": 4,
-      "location": "1900 Stenmark Dr.",
-      "aliases": ["Pt. San Pablo Harbor, 1900 Stenmark Dr., Richmond"]
-    },
-    {
-      "id": "vets-hall-santa-cruz",
-      "name": "Vets Hall, Santa Cruz",
-      "searchUrl": "https://www.google.com/search?q=Vets%20Hall%2C%20Santa%20Cruz",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-06-21",
-      "showCount": 4,
-      "location": "Santa Cruz",
-      "aliases": ["Vets Hall, Santa Cruz"]
-    },
-    {
-      "id": "dna-lounge-sf",
-      "name": "DNA Lounge, S.F.",
-      "searchUrl": "https://www.google.com/search?q=DNA%20Lounge%2C%20S.F.",
-      "firstSeen": "2025-05-18",
-      "lastSeen": "2025-06-14",
-      "showCount": 4,
+      "id": "civic-auditorium-sf",
+      "name": "Civic Auditorium, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Civic%20Auditorium%2C%20S.F.",
+      "firstSeen": "2025-06-10",
+      "lastSeen": "2025-10-07",
+      "showCount": 5,
       "location": "S.F.",
-      "aliases": ["DNA Lounge, S.F."]
+      "aliases": ["Civic Auditorium, S.F."]
     },
     {
-      "id": "tannery-bend-beerworks-1500-1st-street-napa",
-      "name": "Tannery Bend Beerworks. 1500 1st Street, Napa",
-      "searchUrl": "https://www.google.com/search?q=Tannery%20Bend%20Beerworks.%201500%201st%20Street%2C%20Napa",
-      "firstSeen": "2025-05-22",
-      "lastSeen": "2025-05-25",
-      "showCount": 4,
-      "location": "Napa",
-      "aliases": ["Tannery Bend Beerworks. 1500 1st Street, Napa"]
-    },
-    {
-      "id": "sweetwater-music-hall-mill-valley",
-      "name": "Sweetwater Music Hall, Mill Valley",
-      "searchUrl": "https://www.google.com/search?q=Sweetwater%20Music%20Hall%2C%20Mill%20Valley",
-      "firstSeen": "2025-05-23",
-      "lastSeen": "2025-07-11",
-      "showCount": 4,
-      "location": "Mill Valley",
-      "aliases": ["Sweetwater Music Hall, Mill Valley"]
-    },
-    {
-      "id": "thee-parkside-sf",
-      "name": "Thee Parkside, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Thee%20Parkside%2C%20S.F.",
-      "firstSeen": "2025-05-24",
-      "lastSeen": "2025-07-20",
-      "showCount": 4,
+      "id": "cafe-du-nord-sf",
+      "name": "Cafe Du Nord, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Cafe%20Du%20Nord%2C%20S.F.",
+      "firstSeen": "2025-07-08",
+      "lastSeen": "2025-10-14",
+      "showCount": 5,
       "location": "S.F.",
-      "aliases": ["Thee Parkside, S.F."]
+      "aliases": ["Cafe Du Nord, S.F."]
+    },
+    {
+      "id": "palace-of-fine-arts-sf",
+      "name": "Palace of Fine Arts, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Palace%20of%20Fine%20Arts%2C%20S.F.",
+      "firstSeen": "2025-07-12",
+      "lastSeen": "2025-11-29",
+      "showCount": 5,
+      "location": "S.F.",
+      "aliases": ["Palace of Fine Arts, S.F."]
+    },
+    {
+      "id": "little-hill-lounge-el-cerrito",
+      "name": "Little Hill Lounge, El Cerrito",
+      "searchUrl": "https://www.google.com/search?q=Little%20Hill%20Lounge%2C%20El%20Cerrito",
+      "firstSeen": "2025-05-27",
+      "lastSeen": "2025-05-31",
+      "showCount": 4,
+      "location": "El Cerrito",
+      "aliases": ["Little Hill Lounge, El Cerrito"]
     },
     {
       "id": "giants-ballpark-sf",
@@ -641,71 +571,41 @@
       "aliases": ["Giant's Ballpark, S.F.", "Giants Ballpark, S.F."]
     },
     {
-      "id": "paramount-theater-oakland",
-      "name": "Paramount Theater, Oakland",
-      "searchUrl": "https://www.google.com/search?q=Paramount%20Theater%2C%20Oakland",
-      "firstSeen": "2025-06-24",
-      "lastSeen": "2025-11-30",
+      "id": "frost-amphitheater-stanford-campus-palo-alto",
+      "name": "Frost Amphitheater, Stanford Campus, Palo Alto",
+      "searchUrl": "https://www.google.com/search?q=Frost%20Amphitheater%2C%20Stanford%20Campus%2C%20Palo%20Alto",
+      "firstSeen": "2025-06-29",
+      "lastSeen": "2025-08-17",
       "showCount": 4,
-      "location": "Oakland",
-      "aliases": ["Paramount Theater, Oakland"]
+      "location": "Stanford Campus",
+      "aliases": ["Frost Amphitheater, Stanford Campus, Palo Alto"]
     },
     {
-      "id": "4-star-theater-sf",
-      "name": "4 Star Theater, S.F.",
-      "searchUrl": "https://www.google.com/search?q=4%20Star%20Theater%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-06-25",
+      "id": "sweetwater-music-hall-mill-valley",
+      "name": "Sweetwater Music Hall, Mill Valley",
+      "searchUrl": "https://www.google.com/search?q=Sweetwater%20Music%20Hall%2C%20Mill%20Valley",
+      "firstSeen": "2025-05-28",
+      "lastSeen": "2025-07-11",
       "showCount": 3,
-      "location": "S.F.",
-      "aliases": ["4 Star Theater, S.F."]
+      "location": "Mill Valley",
+      "aliases": ["Sweetwater Music Hall, Mill Valley"]
     },
     {
-      "id": "thrillhouse-records-sf",
-      "name": "Thrillhouse Records, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Thrillhouse%20Records%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-06-07",
+      "id": "guild-theater-memlo-park",
+      "name": "Guild Theater, Memlo Park",
+      "searchUrl": "https://www.google.com/search?q=Guild%20Theater%2C%20Memlo%20Park",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-11-07",
       "showCount": 3,
-      "location": "S.F.",
-      "aliases": ["Thrillhouse Records, S.F."]
-    },
-    {
-      "id": "el-rio-sf",
-      "name": "El Rio, S.F.",
-      "searchUrl": "https://www.google.com/search?q=El%20Rio%2C%20S.F.",
-      "firstSeen": "2025-05-22",
-      "lastSeen": "2025-06-05",
-      "showCount": 3,
-      "location": "S.F.",
-      "aliases": ["El Rio, S.F."]
-    },
-    {
-      "id": "jam-cellars-ballroom-napa",
-      "name": "Jam Cellars Ballroom, Napa",
-      "searchUrl": "https://www.google.com/search?q=Jam%20Cellars%20Ballroom%2C%20Napa",
-      "firstSeen": "2025-05-22",
-      "lastSeen": "2025-05-24",
-      "showCount": 3,
-      "location": "Napa",
-      "aliases": ["Jam Cellars Ballroom, Napa"]
-    },
-    {
-      "id": "bottlerock-napa-valley",
-      "name": "Bottlerock, Napa Valley",
-      "searchUrl": "https://www.google.com/search?q=Bottlerock%2C%20Napa%20Valley",
-      "firstSeen": "2025-05-23",
-      "lastSeen": "2025-05-25",
-      "showCount": 3,
-      "location": "Napa Valley",
-      "aliases": ["Bottlerock, Napa Valley"]
+      "location": "Memlo Park",
+      "aliases": ["Guild Theater, Memlo Park"]
     },
     {
       "id": "new-parish-oakland",
       "name": "New Parish, Oakland",
       "searchUrl": "https://www.google.com/search?q=New%20Parish%2C%20Oakland",
-      "firstSeen": "2025-05-23",
-      "lastSeen": "2025-06-06",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-06-19",
       "showCount": 3,
       "location": "Oakland",
       "aliases": ["New Parish, Oakland"]
@@ -721,6 +621,56 @@
       "aliases": ["Phoenix Theatear, Petaluma"]
     },
     {
+      "id": "pt-san-pablo-harbor-1900-stenmark-dr-richmond",
+      "name": "Pt. San Pablo Harbor, 1900 Stenmark Dr., Richmond",
+      "searchUrl": "https://www.google.com/search?q=Pt.%20San%20Pablo%20Harbor%2C%201900%20Stenmark%20Dr.%2C%20Richmond",
+      "firstSeen": "2025-05-31",
+      "lastSeen": "2025-07-19",
+      "showCount": 3,
+      "location": "1900 Stenmark Dr.",
+      "aliases": ["Pt. San Pablo Harbor, 1900 Stenmark Dr., Richmond"]
+    },
+    {
+      "id": "thee-parkside-sf",
+      "name": "Thee Parkside, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Thee%20Parkside%2C%20S.F.",
+      "firstSeen": "2025-05-31",
+      "lastSeen": "2025-07-20",
+      "showCount": 3,
+      "location": "S.F.",
+      "aliases": ["Thee Parkside, S.F."]
+    },
+    {
+      "id": "thrillhouse-records-sf",
+      "name": "Thrillhouse Records, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Thrillhouse%20Records%2C%20S.F.",
+      "firstSeen": "2025-05-31",
+      "lastSeen": "2025-06-15",
+      "showCount": 3,
+      "location": "S.F.",
+      "aliases": ["Thrillhouse Records, S.F."]
+    },
+    {
+      "id": "blue-lagoon-santa-cruz",
+      "name": "Blue Lagoon, Santa Cruz",
+      "searchUrl": "https://www.google.com/search?q=Blue%20Lagoon%2C%20Santa%20Cruz",
+      "firstSeen": "2025-06-14",
+      "lastSeen": "2025-07-19",
+      "showCount": 3,
+      "location": "Santa Cruz",
+      "aliases": ["Blue Lagoon, Santa Cruz"]
+    },
+    {
+      "id": "empress-theater-vallejo",
+      "name": "Empress Theater, Vallejo",
+      "searchUrl": "https://www.google.com/search?q=Empress%20Theater%2C%20Vallejo",
+      "firstSeen": "2025-06-15",
+      "lastSeen": "2025-09-27",
+      "showCount": 3,
+      "location": "Vallejo",
+      "aliases": ["Empress Theater, Vallejo"]
+    },
+    {
       "id": "49s-stadium-santa-clara",
       "name": "49's Stadium, Santa Clara",
       "searchUrl": "https://www.google.com/search?q=49's%20Stadium%2C%20Santa%20Clara",
@@ -731,14 +681,24 @@
       "aliases": ["49's Stadium, Santa Clara"]
     },
     {
-      "id": "frost-amphitheater-stanford-campus-palo-alto",
-      "name": "Frost Amphitheater, Stanford Campus, Palo Alto",
-      "searchUrl": "https://www.google.com/search?q=Frost%20Amphitheater%2C%20Stanford%20Campus%2C%20Palo%20Alto",
-      "firstSeen": "2025-06-29",
-      "lastSeen": "2025-08-17",
+      "id": "paramount-theater-oakland",
+      "name": "Paramount Theater, Oakland",
+      "searchUrl": "https://www.google.com/search?q=Paramount%20Theater%2C%20Oakland",
+      "firstSeen": "2025-06-24",
+      "lastSeen": "2025-11-08",
       "showCount": 3,
-      "location": "Stanford Campus",
-      "aliases": ["Frost Amphitheater, Stanford Campus, Palo Alto"]
+      "location": "Oakland",
+      "aliases": ["Paramount Theater, Oakland"]
+    },
+    {
+      "id": "hopmonk-sebastopol",
+      "name": "Hopmonk, Sebastopol",
+      "searchUrl": "https://www.google.com/search?q=Hopmonk%2C%20Sebastopol",
+      "firstSeen": "2025-06-27",
+      "lastSeen": "2025-07-11",
+      "showCount": 3,
+      "location": "Sebastopol",
+      "aliases": ["Hopmonk, Sebastopol"]
     },
     {
       "id": "forest-meadows-amphitheater-890-belle-avenue-san-rafael",
@@ -791,127 +751,24 @@
       "aliases": ["Cow Palace, Daily City"]
     },
     {
-      "id": "elis-mile-high-club-oakland",
-      "name": "Eli's Mile High Club, Oakland",
-      "searchUrl": "https://www.google.com/search?q=Eli's%20Mile%20High%20Club%2C%20Oakland",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-23",
-      "showCount": 2,
-      "location": "Oakland",
-      "aliases": ["Eli's Mile High Club, Oakland"]
-    },
-    {
-      "id": "jury-room-santa-cruz",
-      "name": "Jury Room, Santa Cruz",
-      "searchUrl": "https://www.google.com/search?q=Jury%20Room%2C%20Santa%20Cruz",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-06-14",
-      "showCount": 2,
-      "location": "Santa Cruz",
-      "aliases": ["Jury Room, Santa Cruz"]
-    },
-    {
-      "id": "oakland-secret-gallery-oakland",
-      "name": "Oakland Secret Gallery, Oakland",
-      "searchUrl": "https://www.google.com/search?q=Oakland%20Secret%20Gallery%2C%20Oakland",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-24",
-      "showCount": 2,
-      "location": "Oakland",
-      "aliases": ["Oakland Secret Gallery, Oakland"]
-    },
-    {
-      "id": "rockys-beach-berkeley-waterfront",
-      "name": "Rocky's Beach, Berkeley Waterfront",
-      "searchUrl": "https://www.google.com/search?q=Rocky's%20Beach%2C%20Berkeley%20Waterfront",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-06-07",
-      "showCount": 2,
-      "location": "Berkeley Waterfront",
-      "aliases": ["Rocky's Beach, Berkeley Waterfront"]
-    },
-    {
-      "id": "edinburh-castle-sf",
-      "name": "Edinburh Castle, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Edinburh%20Castle%2C%20S.F.",
-      "firstSeen": "2025-05-18",
-      "lastSeen": "2025-05-18",
-      "showCount": 2,
-      "location": "S.F.",
-      "aliases": ["Edinburh Castle, S.F."]
-    },
-    {
-      "id": "rickshaw-stop",
-      "name": "Rickshaw Stop,",
-      "searchUrl": "https://www.google.com/search?q=Rickshaw%20Stop%2C",
-      "firstSeen": "2025-05-18",
-      "lastSeen": "2025-05-28",
-      "showCount": 2,
-      "location": "",
-      "aliases": ["Rickshaw Stop,"]
-    },
-    {
       "id": "subrosa-santa-cruz",
       "name": "Subrosa, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Subrosa%2C%20Santa%20Cruz",
-      "firstSeen": "2025-05-18",
-      "lastSeen": "2025-05-27",
+      "firstSeen": "2025-05-27",
+      "lastSeen": "2025-06-21",
       "showCount": 2,
       "location": "Santa Cruz",
       "aliases": ["Subrosa, Santa Cruz"]
     },
     {
-      "id": "toots-tavern-crockett",
-      "name": "Toot's Tavern, Crockett",
-      "searchUrl": "https://www.google.com/search?q=Toot's%20Tavern%2C%20Crockett",
-      "firstSeen": "2025-05-23",
-      "lastSeen": "2025-07-05",
+      "id": "caravan-lounge-san-jose",
+      "name": "Caravan Lounge, San Jose",
+      "searchUrl": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-05-31",
       "showCount": 2,
-      "location": "Crockett",
-      "aliases": ["Toot's Tavern, Crockett"]
-    },
-    {
-      "id": "yoshis-okland",
-      "name": "Yoshi's, Okland",
-      "searchUrl": "https://www.google.com/search?q=Yoshi's%2C%20Okland",
-      "firstSeen": "2025-05-23",
-      "lastSeen": "2025-05-24",
-      "showCount": 2,
-      "location": "Okland",
-      "aliases": ["Yoshi's, Okland"]
-    },
-    {
-      "id": "arlene-francis-center-santa-rosa",
-      "name": "Arlene Francis Center, Santa Rosa",
-      "searchUrl": "https://www.google.com/search?q=Arlene%20Francis%20Center%2C%20Santa%20Rosa",
-      "firstSeen": "2025-05-24",
-      "lastSeen": "2025-07-18",
-      "showCount": 2,
-      "location": "Santa Rosa",
-      "aliases": ["Arlene Francis Center, Santa Rosa"]
-    },
-    {
-      "id": "thee-stork-club-sf",
-      "name": "Thee Stork Club, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20S.F.",
-      "firstSeen": "2025-05-25",
-      "lastSeen": "2025-06-13",
-      "showCount": 2,
-      "location": "S.F.",
-      "aliases": ["Thee Stork Club, S.F."]
-    },
-    {
-      "id": "victory-stables-2328-san-pablo-ave-oakland",
-      "name": "Victory Stables, 2328 San Pablo Ave, Oakland",
-      "searchUrl": "https://www.google.com/search?q=Victory%20Stables%2C%202328%20San%20Pablo%20Ave%2C%20Oakland",
-      "firstSeen": "2025-05-25",
-      "lastSeen": "2025-06-21",
-      "showCount": 2,
-      "location": "2328 San Pablo Ave",
-      "aliases": [
-        "Victory Stables, 2328 San Pablo Ave, Oakland",
-        "Victory Stables 2328 San Pablo Ave, Oakland"
-      ]
+      "location": "San Jose",
+      "aliases": ["Caravan Lounge, San Jose"]
     },
     {
       "id": "crepe-place-santa-cruz",
@@ -922,6 +779,26 @@
       "showCount": 2,
       "location": "Santa Cruz",
       "aliases": ["Crepe Place, Santa Cruz"]
+    },
+    {
+      "id": "el-rio-sf",
+      "name": "El Rio, S.F.",
+      "searchUrl": "https://www.google.com/search?q=El%20Rio%2C%20S.F.",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-06-05",
+      "showCount": 2,
+      "location": "S.F.",
+      "aliases": ["El Rio, S.F."]
+    },
+    {
+      "id": "tamarack-oakland",
+      "name": "Tamarack, Oakland",
+      "searchUrl": "https://www.google.com/search?q=Tamarack%2C%20Oakland",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-06-19",
+      "showCount": 2,
+      "location": "Oakland",
+      "aliases": ["Tamarack, Oakland"]
     },
     {
       "id": "la-onda-festival-napa",
@@ -954,16 +831,6 @@
       "aliases": ["Stanford Stadium, Stanford Campus, Palo Alto"]
     },
     {
-      "id": "streetlight-records-santa-cruz",
-      "name": "Streetlight Records, Santa Cruz",
-      "searchUrl": "https://www.google.com/search?q=Streetlight%20Records%2C%20Santa%20Cruz",
-      "firstSeen": "2025-06-01",
-      "lastSeen": "2025-06-08",
-      "showCount": 2,
-      "location": "Santa Cruz",
-      "aliases": ["Streetlight Records, Santa Cruz"]
-    },
-    {
       "id": "crybaby-oakland",
       "name": "Crybaby, Oakland",
       "searchUrl": "https://www.google.com/search?q=Crybaby%2C%20Oakland",
@@ -994,6 +861,16 @@
       "aliases": ["Palace of Fine Arts, 3301 Lyon Street, S.F."]
     },
     {
+      "id": "peacock-lounge-sf",
+      "name": "Peacock Lounge, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Peacock%20Lounge%2C%20S.F.",
+      "firstSeen": "2025-06-07",
+      "lastSeen": "2025-06-12",
+      "showCount": 2,
+      "location": "S.F.",
+      "aliases": ["Peacock Lounge, S.F."]
+    },
+    {
       "id": "redwood-stage-downtown-festival-novato",
       "name": "Redwood Stage, Downtown Festival, Novato",
       "searchUrl": "https://www.google.com/search?q=Redwood%20Stage%2C%20Downtown%20Festival%2C%20Novato",
@@ -1002,6 +879,16 @@
       "showCount": 2,
       "location": "Downtown Festival",
       "aliases": ["Redwood Stage, Downtown Festival, Novato"]
+    },
+    {
+      "id": "3rd-and-army-skatepark-sf",
+      "name": "3rd and Army Skatepark, S.F.",
+      "searchUrl": "https://www.google.com/search?q=3rd%20and%20Army%20Skatepark%2C%20S.F.",
+      "firstSeen": "2025-06-13",
+      "lastSeen": "2025-06-21",
+      "showCount": 2,
+      "location": "S.F.",
+      "aliases": ["3rd and Army Skatepark, S.F."]
     },
     {
       "id": "winters-tavern-pacific-beach",
@@ -1024,6 +911,16 @@
       "aliases": ["Pitt's Pub, 4207 Judah Street, S.F."]
     },
     {
+      "id": "120-5th-street-santa-rosa",
+      "name": "120 5th Street, Santa Rosa",
+      "searchUrl": "https://www.google.com/search?q=120%205th%20Street%2C%20Santa%20Rosa",
+      "firstSeen": "2025-06-20",
+      "lastSeen": "2025-07-27",
+      "showCount": 2,
+      "location": "Santa Rosa",
+      "aliases": ["120 5th Street, Santa Rosa"]
+    },
+    {
       "id": "presidio-theater-99-moraga-avenue-sf",
       "name": "Presidio Theater, 99 Moraga Avenue, S.F.",
       "searchUrl": "https://www.google.com/search?q=Presidio%20Theater%2C%2099%20Moraga%20Avenue%2C%20S.F.",
@@ -1032,6 +929,16 @@
       "showCount": 2,
       "location": "99 Moraga Avenue",
       "aliases": ["Presidio Theater, 99 Moraga Avenue, S.F."]
+    },
+    {
+      "id": "4-star-theater-sf",
+      "name": "4 Star Theater, S.F.",
+      "searchUrl": "https://www.google.com/search?q=4%20Star%20Theater%2C%20S.F.",
+      "firstSeen": "2025-06-22",
+      "lastSeen": "2025-06-25",
+      "showCount": 2,
+      "location": "S.F.",
+      "aliases": ["4 Star Theater, S.F."]
     },
     {
       "id": "yoshis-oakland",
@@ -1084,264 +991,14 @@
       "aliases": ["Mystic Theater, Petaluma"]
     },
     {
-      "id": "adobe-books-3130-24th-street-sf",
-      "name": "Adobe Books, 3130 24th Street, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Adobe%20Books%2C%203130%2024th%20Street%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-17",
+      "id": "rite-spot-2099-folsom-street-sf",
+      "name": "Rite Spot, 2099 Folsom Street, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Rite%20Spot%2C%202099%20Folsom%20Street%2C%20S.F.",
+      "firstSeen": "2025-05-27",
+      "lastSeen": "2025-05-27",
       "showCount": 1,
-      "location": "3130 24th Street",
-      "aliases": ["Adobe Books, 3130 24th Street, S.F."]
-    },
-    {
-      "id": "amoeba-music-sf",
-      "name": "Amoeba Music, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Amoeba%20Music%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-17",
-      "showCount": 1,
-      "location": "S.F.",
-      "aliases": ["Amoeba Music, S.F."]
-    },
-    {
-      "id": "civic-center-plaza-sf",
-      "name": "Civic Center Plaza, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Civic%20Center%20Plaza%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-17",
-      "showCount": 1,
-      "location": "S.F.",
-      "aliases": ["Civic Center Plaza, S.F."]
-    },
-    {
-      "id": "edinburgh-castle-sf",
-      "name": "Edinburgh Castle, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Edinburgh%20Castle%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-17",
-      "showCount": 1,
-      "location": "S.F.",
-      "aliases": ["Edinburgh Castle, S.F."]
-    },
-    {
-      "id": "el-infierno-cantina-120-fifth-street-santa-rosa",
-      "name": "El Infierno Cantina, 120 Fifth Street, Santa Rosa",
-      "searchUrl": "https://www.google.com/search?q=El%20Infierno%20Cantina%2C%20120%20Fifth%20Street%2C%20Santa%20Rosa",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-17",
-      "showCount": 1,
-      "location": "120 Fifth Street",
-      "aliases": ["El Infierno Cantina, 120 Fifth Street, Santa Rosa"]
-    },
-    {
-      "id": "first-lutheran-church-600-homer-avenue-palo-alto",
-      "name": "First Lutheran Church, 600 Homer Avenue, Palo Alto",
-      "searchUrl": "https://www.google.com/search?q=First%20Lutheran%20Church%2C%20600%20Homer%20Avenue%2C%20Palo%20Alto",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-17",
-      "showCount": 1,
-      "location": "600 Homer Avenue",
-      "aliases": ["First Lutheran Church, 600 Homer Avenue, Palo Alto"]
-    },
-    {
-      "id": "makeout-room-sf",
-      "name": "Makeout Room, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Makeout%20Room%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-17",
-      "showCount": 1,
-      "location": "S.F.",
-      "aliases": ["Makeout Room, S.F."]
-    },
-    {
-      "id": "victory-stables-oakland",
-      "name": "Victory Stables, Oakland",
-      "searchUrl": "https://www.google.com/search?q=Victory%20Stables%2C%20Oakland",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-17",
-      "showCount": 1,
-      "location": "Oakland",
-      "aliases": ["Victory Stables, Oakland"]
-    },
-    {
-      "id": "yerba-buena-gardens-750-howard-st-sf",
-      "name": "Yerba Buena Gardens, 750 Howard St., S.F.",
-      "searchUrl": "https://www.google.com/search?q=Yerba%20Buena%20Gardens%2C%20750%20Howard%20St.%2C%20S.F.",
-      "firstSeen": "2025-05-17",
-      "lastSeen": "2025-05-17",
-      "showCount": 1,
-      "location": "750 Howard St.",
-      "aliases": ["Yerba Buena Gardens, 750 Howard St., S.F."]
-    },
-    {
-      "id": "herbst-theater-sf",
-      "name": "Herbst Theater, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Herbst%20Theater%2C%20S.F.",
-      "firstSeen": "2025-05-18",
-      "lastSeen": "2025-05-18",
-      "showCount": 1,
-      "location": "S.F.",
-      "aliases": ["Herbst Theater, S.F."]
-    },
-    {
-      "id": "phoenix-hotel-601-eddy-street-sf",
-      "name": "Phoenix Hotel, 601 Eddy Street, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Phoenix%20Hotel%2C%20601%20Eddy%20Street%2C%20S.F.",
-      "firstSeen": "2025-05-18",
-      "lastSeen": "2025-05-18",
-      "showCount": 1,
-      "location": "601 Eddy Street",
-      "aliases": ["Phoenix Hotel, 601 Eddy Street, S.F."]
-    },
-    {
-      "id": "paviliion-concord",
-      "name": "Paviliion, Concord",
-      "searchUrl": "https://www.google.com/search?q=Paviliion%2C%20Concord",
-      "firstSeen": "2025-05-20",
-      "lastSeen": "2025-05-20",
-      "showCount": 1,
-      "location": "Concord",
-      "aliases": ["Paviliion, Concord"]
-    },
-    {
-      "id": "catalyst-catalyst-santa-cruz",
-      "name": "Catalyst Catalyst, Santa Cruz",
-      "searchUrl": "https://www.google.com/search?q=Catalyst%20Catalyst%2C%20Santa%20Cruz",
-      "firstSeen": "2025-05-22",
-      "lastSeen": "2025-05-22",
-      "showCount": 1,
-      "location": "Santa Cruz",
-      "aliases": ["Catalyst Catalyst, Santa Cruz"]
-    },
-    {
-      "id": "chan-natioinal-queer-arts-center-170-valencia-street-sf",
-      "name": "Chan Natioinal Queer Arts Center, 170 Valencia Street, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Chan%20Natioinal%20Queer%20Arts%20Center%2C%20170%20Valencia%20Street%2C%20S.F.",
-      "firstSeen": "2025-05-22",
-      "lastSeen": "2025-05-22",
-      "showCount": 1,
-      "location": "170 Valencia Street",
-      "aliases": ["Chan Natioinal Queer Arts Center, 170 Valencia Street, S.F."]
-    },
-    {
-      "id": "dead-end-vintage-3370-19th-street-sf",
-      "name": "Dead End Vintage, 3370 19th Street, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Dead%20End%20Vintage%2C%203370%2019th%20Street%2C%20S.F.",
-      "firstSeen": "2025-05-22",
-      "lastSeen": "2025-05-22",
-      "showCount": 1,
-      "location": "3370 19th Street",
-      "aliases": ["Dead End Vintage, 3370 19th Street, S.F."]
-    },
-    {
-      "id": "gray-area",
-      "name": "Gray Area",
-      "searchUrl": "https://www.google.com/search?q=Gray%20Area",
-      "firstSeen": "2025-05-23",
-      "lastSeen": "2025-05-23",
-      "showCount": 1,
-      "location": null,
-      "aliases": ["Gray Area"]
-    },
-    {
-      "id": "space-lounge-1707-telegraph-avenue-oakland",
-      "name": "Space Lounge, 1707 Telegraph Avenue, Oakland",
-      "searchUrl": "https://www.google.com/search?q=Space%20Lounge%2C%201707%20Telegraph%20Avenue%2C%20Oakland",
-      "firstSeen": "2025-05-23",
-      "lastSeen": "2025-05-23",
-      "showCount": 1,
-      "location": "1707 Telegraph Avenue",
-      "aliases": ["Space Lounge, 1707 Telegraph Avenue, Oakland"]
-    },
-    {
-      "id": "bal-theater-san-leandro",
-      "name": "Bal Theater, San Leandro",
-      "searchUrl": "https://www.google.com/search?q=Bal%20Theater%2C%20San%20Leandro",
-      "firstSeen": "2025-05-24",
-      "lastSeen": "2025-05-24",
-      "showCount": 1,
-      "location": "San Leandro",
-      "aliases": ["Bal Theater, San Leandro"]
-    },
-    {
-      "id": "dna-lounge-upstairs-sf",
-      "name": "DNA Lounge Upstairs, S.F.",
-      "searchUrl": "https://www.google.com/search?q=DNA%20Lounge%20Upstairs%2C%20S.F.",
-      "firstSeen": "2025-05-24",
-      "lastSeen": "2025-05-24",
-      "showCount": 1,
-      "location": "S.F.",
-      "aliases": ["DNA Lounge Upstairs, S.F."]
-    },
-    {
-      "id": "hotel-utah-saloon-sf",
-      "name": "Hotel Utah Saloon, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Hotel%20Utah%20Saloon%2C%20S.F.",
-      "firstSeen": "2025-05-24",
-      "lastSeen": "2025-05-24",
-      "showCount": 1,
-      "location": "S.F.",
-      "aliases": ["Hotel Utah Saloon, S.F."]
-    },
-    {
-      "id": "revolution-cafe-1608-7th-street-oakland",
-      "name": "Revolution Cafe, 1608 7th Street, Oakland",
-      "searchUrl": "https://www.google.com/search?q=Revolution%20Cafe%2C%201608%207th%20Street%2C%20Oakland",
-      "firstSeen": "2025-05-24",
-      "lastSeen": "2025-05-24",
-      "showCount": 1,
-      "location": "1608 7th Street",
-      "aliases": ["Revolution Cafe, 1608 7th Street, Oakland"]
-    },
-    {
-      "id": "starry-plough-berkeley",
-      "name": "Starry Plough, Berkeley",
-      "searchUrl": "https://www.google.com/search?q=Starry%20Plough%2C%20Berkeley",
-      "firstSeen": "2025-05-24",
-      "lastSeen": "2025-05-24",
-      "showCount": 1,
-      "location": "Berkeley",
-      "aliases": ["Starry Plough, Berkeley"]
-    },
-    {
-      "id": "up-the-creek-2042-mt-diablo-blvd-walnut-creek",
-      "name": "Up the Creek, 2042 Mt. Diablo Blvd., Walnut Creek",
-      "searchUrl": "https://www.google.com/search?q=Up%20the%20Creek%2C%202042%20Mt.%20Diablo%20Blvd.%2C%20Walnut%20Creek",
-      "firstSeen": "2025-05-24",
-      "lastSeen": "2025-05-24",
-      "showCount": 1,
-      "location": "2042 Mt. Diablo Blvd.",
-      "aliases": ["Up the Creek, 2042 Mt. Diablo Blvd., Walnut Creek"]
-    },
-    {
-      "id": "victory-stables-2328-san-pablo-avenue-oakland",
-      "name": "Victory Stables, 2328 San Pablo Avenue, Oakland",
-      "searchUrl": "https://www.google.com/search?q=Victory%20Stables%2C%202328%20San%20Pablo%20Avenue%2C%20Oakland",
-      "firstSeen": "2025-05-24",
-      "lastSeen": "2025-05-24",
-      "showCount": 1,
-      "location": "2328 San Pablo Avenue",
-      "aliases": ["Victory Stables, 2328 San Pablo Avenue, Oakland"]
-    },
-    {
-      "id": "stud-399-9th-street-at-harrison-sf",
-      "name": "Stud, 399 9th Street at Harrison, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Stud%2C%20399%209th%20Street%20at%20Harrison%2C%20S.F.",
-      "firstSeen": "2025-05-25",
-      "lastSeen": "2025-05-25",
-      "showCount": 1,
-      "location": "399 9th Street at Harrison",
-      "aliases": ["Stud, 399 9th Street at Harrison, S.F."]
-    },
-    {
-      "id": "lagunitas-brewery-1280-north-mcdowell-boulevard-petaluma",
-      "name": "Lagunitas Brewery, 1280 North McDowell Boulevard, Petaluma",
-      "searchUrl": "https://www.google.com/search?q=Lagunitas%20Brewery%2C%201280%20North%20McDowell%20Boulevard%2C%20Petaluma",
-      "firstSeen": "2025-05-26",
-      "lastSeen": "2025-05-26",
-      "showCount": 1,
-      "location": "1280 North McDowell Boulevard",
-      "aliases": ["Lagunitas Brewery, 1280 North McDowell Boulevard, Petaluma"]
+      "location": "2099 Folsom Street",
+      "aliases": ["Rite Spot, 2099 Folsom Street, S.F."]
     },
     {
       "id": "giants-ball-park-sf",
@@ -1352,6 +1009,16 @@
       "showCount": 1,
       "location": "S.F.",
       "aliases": ["Giant's Ball Park, S.F."]
+    },
+    {
+      "id": "rickshaw-stop",
+      "name": "Rickshaw Stop,",
+      "searchUrl": "https://www.google.com/search?q=Rickshaw%20Stop%2C",
+      "firstSeen": "2025-05-28",
+      "lastSeen": "2025-05-28",
+      "showCount": 1,
+      "location": "",
+      "aliases": ["Rickshaw Stop,"]
     },
     {
       "id": "auditorium-403-civic-center-plaza-richmond",
@@ -1374,6 +1041,36 @@
       "aliases": ["Great Amerian Music Hall, S.F."]
     },
     {
+      "id": "240-front-street-sf",
+      "name": "240 Front Street, S.F.",
+      "searchUrl": "https://www.google.com/search?q=240%20Front%20Street%2C%20S.F.",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-05-30",
+      "showCount": 1,
+      "location": "S.F.",
+      "aliases": ["240 Front Street, S.F."]
+    },
+    {
+      "id": "almost-famous-wine-2271-s-vasco-rd-livermore",
+      "name": "Almost Famous Wine, 2271 S Vasco Rd, Livermore",
+      "searchUrl": "https://www.google.com/search?q=Almost%20Famous%20Wine%2C%202271%20S%20Vasco%20Rd%2C%20Livermore",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-05-30",
+      "showCount": 1,
+      "location": "2271 S Vasco Rd",
+      "aliases": ["Almost Famous Wine, 2271 S Vasco Rd, Livermore"]
+    },
+    {
+      "id": "beauty-supply-shop-above-tay-ho-344-12th-street-oakland",
+      "name": "Beauty Supply Shop Above Tay Ho, 344 12th Street, Oakland",
+      "searchUrl": "https://www.google.com/search?q=Beauty%20Supply%20Shop%20Above%20Tay%20Ho%2C%20344%2012th%20Street%2C%20Oakland",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-05-30",
+      "showCount": 1,
+      "location": "344 12th Street",
+      "aliases": ["Beauty Supply Shop Above Tay Ho, 344 12th Street, Oakland"]
+    },
+    {
       "id": "berkeley-art-house-2905-shattack-avenue-berkeley",
       "name": "Berkeley Art House, 2905 Shattack Avenue, Berkeley",
       "searchUrl": "https://www.google.com/search?q=Berkeley%20Art%20House%2C%202905%20Shattack%20Avenue%2C%20Berkeley",
@@ -1384,6 +1081,16 @@
       "aliases": ["Berkeley Art House, 2905 Shattack Avenue, Berkeley"]
     },
     {
+      "id": "revolution-cafe-1670-7th-st-west-oakland",
+      "name": "Revolution Cafe, 1670 7th St. West Oakland",
+      "searchUrl": "https://www.google.com/search?q=Revolution%20Cafe%2C%201670%207th%20St.%20West%20Oakland",
+      "firstSeen": "2025-05-30",
+      "lastSeen": "2025-05-30",
+      "showCount": 1,
+      "location": "1670 7th St. West Oakland",
+      "aliases": ["Revolution Cafe, 1670 7th St. West Oakland"]
+    },
+    {
       "id": "calvin-simmons-theater-henry-j-kaiser-center-oakland",
       "name": "Calvin Simmons Theater, Henry J. Kaiser Center, Oakland",
       "searchUrl": "https://www.google.com/search?q=Calvin%20Simmons%20Theater%2C%20Henry%20J.%20Kaiser%20Center%2C%20Oakland",
@@ -1392,6 +1099,16 @@
       "showCount": 1,
       "location": "Henry J. Kaiser Center",
       "aliases": ["Calvin Simmons Theater, Henry J. Kaiser Center, Oakland"]
+    },
+    {
+      "id": "edinburgh-castle-sf",
+      "name": "Edinburgh Castle, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Edinburgh%20Castle%2C%20S.F.",
+      "firstSeen": "2025-05-31",
+      "lastSeen": "2025-05-31",
+      "showCount": 1,
+      "location": "S.F.",
+      "aliases": ["Edinburgh Castle, S.F."]
     },
     {
       "id": "golden-kitchen-restaurant-925-o-farrell-street-sf",
@@ -1414,6 +1131,16 @@
       "aliases": ["Grace Cathedral, 1100 California Street, S.F."]
     },
     {
+      "id": "high-voltage-1824-w-san-carlos-street-san-jose",
+      "name": "High Voltage, 1824 W. San Carlos Street, San Jose",
+      "searchUrl": "https://www.google.com/search?q=High%20Voltage%2C%201824%20W.%20San%20Carlos%20Street%2C%20San%20Jose",
+      "firstSeen": "2025-05-31",
+      "lastSeen": "2025-05-31",
+      "showCount": 1,
+      "location": "1824 W. San Carlos Street",
+      "aliases": ["High Voltage, 1824 W. San Carlos Street, San Jose"]
+    },
+    {
       "id": "hopmonk-tavern-sebastopol",
       "name": "Hopmonk Tavern, Sebastopol",
       "searchUrl": "https://www.google.com/search?q=Hopmonk%20Tavern%2C%20Sebastopol",
@@ -1422,6 +1149,16 @@
       "showCount": 1,
       "location": "Sebastopol",
       "aliases": ["Hopmonk Tavern, Sebastopol"]
+    },
+    {
+      "id": "lane-splitter-pizza-2645-san-pablo-avenue-emeryville",
+      "name": "Lane Splitter Pizza, 2645 San Pablo Avenue, Emeryville",
+      "searchUrl": "https://www.google.com/search?q=Lane%20Splitter%20Pizza%2C%202645%20San%20Pablo%20Avenue%2C%20Emeryville",
+      "firstSeen": "2025-05-31",
+      "lastSeen": "2025-05-31",
+      "showCount": 1,
+      "location": "2645 San Pablo Avenue",
+      "aliases": ["Lane Splitter Pizza, 2645 San Pablo Avenue, Emeryville"]
     },
     {
       "id": "vets-hall-846-front-street-santa-cruz",
@@ -1464,6 +1201,36 @@
       "aliases": ["Yesterday's Numbers, 2054 Powell Street, S.F."]
     },
     {
+      "id": "a-house-show-225-potero-avenue-sf",
+      "name": "a House Show, 225 Potero Avenue, S.F.",
+      "searchUrl": "https://www.google.com/search?q=a%20House%20Show%2C%20225%20Potero%20Avenue%2C%20S.F.",
+      "firstSeen": "2025-06-05",
+      "lastSeen": "2025-06-05",
+      "showCount": 1,
+      "location": "225 Potero Avenue",
+      "aliases": ["a House Show, 225 Potero Avenue, S.F."]
+    },
+    {
+      "id": "somewhere-fremont",
+      "name": "Somewhere, Fremont",
+      "searchUrl": "https://www.google.com/search?q=Somewhere%2C%20Fremont",
+      "firstSeen": "2025-06-06",
+      "lastSeen": "2025-06-06",
+      "showCount": 1,
+      "location": "Fremont",
+      "aliases": ["Somewhere, Fremont"]
+    },
+    {
+      "id": "studio-fallout-50-a-bannam-place-sf",
+      "name": "Studio Fallout, 50-A Bannam Place, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Studio%20Fallout%2C%2050-A%20Bannam%20Place%2C%20S.F.",
+      "firstSeen": "2025-06-06",
+      "lastSeen": "2025-06-06",
+      "showCount": 1,
+      "location": "50-A Bannam Place",
+      "aliases": ["Studio Fallout, 50-A Bannam Place, S.F."]
+    },
+    {
       "id": "420-lounge-at-barbary-coast-952-mission-street-sf",
       "name": "420 Lounge at Barbary Coast, 952 Mission Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=420%20Lounge%20at%20Barbary%20Coast%2C%20952%20Mission%20Street%2C%20S.F.",
@@ -1482,6 +1249,16 @@
       "showCount": 1,
       "location": "S.F.",
       "aliases": ["Hotel Utah, S.F."]
+    },
+    {
+      "id": "rockys-beach-berkeley-waterfront",
+      "name": "Rocky's Beach, Berkeley Waterfront",
+      "searchUrl": "https://www.google.com/search?q=Rocky's%20Beach%2C%20Berkeley%20Waterfront",
+      "firstSeen": "2025-06-07",
+      "lastSeen": "2025-06-07",
+      "showCount": 1,
+      "location": "Berkeley Waterfront",
+      "aliases": ["Rocky's Beach, Berkeley Waterfront"]
     },
     {
       "id": "shop-63-maxwell-court-santa-rosa",
@@ -1504,6 +1281,16 @@
       "aliases": ["Crybaby"]
     },
     {
+      "id": "great-star-theater-636-jackson-street-sf",
+      "name": "Great Star Theater, 636 Jackson Street, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Great%20Star%20Theater%2C%20636%20Jackson%20Street%2C%20S.F.",
+      "firstSeen": "2025-06-11",
+      "lastSeen": "2025-06-11",
+      "showCount": 1,
+      "location": "636 Jackson Street",
+      "aliases": ["Great Star Theater, 636 Jackson Street, S.F."]
+    },
+    {
       "id": "blue-ridge-kitchen-6770-mckinley-state-st-sebastopol",
       "name": "Blue Ridge Kitchen, 6770 McKinley State St., Sebastopol",
       "searchUrl": "https://www.google.com/search?q=Blue%20Ridge%20Kitchen%2C%206770%20McKinley%20State%20St.%2C%20Sebastopol",
@@ -1524,14 +1311,14 @@
       "aliases": ["Brick"]
     },
     {
-      "id": "peacock-lounge-sf",
-      "name": "Peacock Lounge, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Peacock%20Lounge%2C%20S.F.",
-      "firstSeen": "2025-06-12",
-      "lastSeen": "2025-06-12",
+      "id": "44-race-street-san-jose",
+      "name": "44 Race Street, San Jose",
+      "searchUrl": "https://www.google.com/search?q=44%20Race%20Street%2C%20San%20Jose",
+      "firstSeen": "2025-06-13",
+      "lastSeen": "2025-06-13",
       "showCount": 1,
-      "location": "S.F.",
-      "aliases": ["Peacock Lounge, S.F."]
+      "location": "San Jose",
+      "aliases": ["44 Race Street, San Jose"]
     },
     {
       "id": "alameda-brewing-1716-park-street-alamea",
@@ -1542,6 +1329,26 @@
       "showCount": 1,
       "location": "1716 Park Street",
       "aliases": ["Alameda Brewing, 1716 Park Street, Alamea"]
+    },
+    {
+      "id": "santo-recording-studios-2565-west-street-oakland",
+      "name": "Santo Recording Studios, 2565 West Street, Oakland",
+      "searchUrl": "https://www.google.com/search?q=Santo%20Recording%20Studios%2C%202565%20West%20Street%2C%20Oakland",
+      "firstSeen": "2025-06-13",
+      "lastSeen": "2025-06-13",
+      "showCount": 1,
+      "location": "2565 West Street",
+      "aliases": ["Santo Recording Studios, 2565 West Street, Oakland"]
+    },
+    {
+      "id": "thee-stork-club-sf",
+      "name": "Thee Stork Club, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20S.F.",
+      "firstSeen": "2025-06-13",
+      "lastSeen": "2025-06-13",
+      "showCount": 1,
+      "location": "S.F.",
+      "aliases": ["Thee Stork Club, S.F."]
     },
     {
       "id": "alex-thomas-plaza-300-s-state-street-ukiah",
@@ -1584,6 +1391,16 @@
       "aliases": ["Felton Music Hall, 6275 Hwy 9, Felton"]
     },
     {
+      "id": "jury-room-santa-cruz",
+      "name": "Jury Room, Santa Cruz",
+      "searchUrl": "https://www.google.com/search?q=Jury%20Room%2C%20Santa%20Cruz",
+      "firstSeen": "2025-06-14",
+      "lastSeen": "2025-06-14",
+      "showCount": 1,
+      "location": "Santa Cruz",
+      "aliases": ["Jury Room, Santa Cruz"]
+    },
+    {
       "id": "guild-theater-949-el-camino-real-menlo-park",
       "name": "Guild Theater, 949 El Camino Real, Menlo Park",
       "searchUrl": "https://www.google.com/search?q=Guild%20Theater%2C%20949%20El%20Camino%20Real%2C%20Menlo%20Park",
@@ -1592,6 +1409,16 @@
       "showCount": 1,
       "location": "949 El Camino Real",
       "aliases": ["Guild Theater, 949 El Camino Real, Menlo Park"]
+    },
+    {
+      "id": "arlene-francis-center-99-6th-street-santa-rosa",
+      "name": "Arlene Francis Center, 99 6th Street, Santa Rosa",
+      "searchUrl": "https://www.google.com/search?q=Arlene%20Francis%20Center%2C%2099%206th%20Street%2C%20Santa%20Rosa",
+      "firstSeen": "2025-06-19",
+      "lastSeen": "2025-06-19",
+      "showCount": 1,
+      "location": "99 6th Street",
+      "aliases": ["Arlene Francis Center, 99 6th Street, Santa Rosa"]
     },
     {
       "id": "caravan-98-almaden-san-jose",
@@ -1624,16 +1451,6 @@
       "aliases": ["Toxic Beach, Bay End of 24th Street, S.F."]
     },
     {
-      "id": "3rd-and-army-skatepark-sf",
-      "name": "3rd and Army Skatepark, S.F.",
-      "searchUrl": "https://www.google.com/search?q=3rd%20and%20Army%20Skatepark%2C%20S.F.",
-      "firstSeen": "2025-06-21",
-      "lastSeen": "2025-06-21",
-      "showCount": 1,
-      "location": "S.F.",
-      "aliases": ["3rd and Army Skatepark, S.F."]
-    },
-    {
       "id": "peri-park-16-park-road-fairfield",
       "name": "Peri Park, 16 Park Road, Fairfield",
       "searchUrl": "https://www.google.com/search?q=Peri%20Park%2C%2016%20Park%20Road%2C%20Fairfield",
@@ -1654,6 +1471,36 @@
       "aliases": ["Pussy Palace, Oakland"]
     },
     {
+      "id": "vets-hall-santa-cruz",
+      "name": "Vets Hall, Santa Cruz",
+      "searchUrl": "https://www.google.com/search?q=Vets%20Hall%2C%20Santa%20Cruz",
+      "firstSeen": "2025-06-21",
+      "lastSeen": "2025-06-21",
+      "showCount": 1,
+      "location": "Santa Cruz",
+      "aliases": ["Vets Hall, Santa Cruz"]
+    },
+    {
+      "id": "victory-stables-2328-san-pablo-ave-oakland",
+      "name": "Victory Stables 2328 San Pablo Ave, Oakland",
+      "searchUrl": "https://www.google.com/search?q=Victory%20Stables%202328%20San%20Pablo%20Ave%2C%20Oakland",
+      "firstSeen": "2025-06-21",
+      "lastSeen": "2025-06-21",
+      "showCount": 1,
+      "location": "Oakland",
+      "aliases": ["Victory Stables 2328 San Pablo Ave, Oakland"]
+    },
+    {
+      "id": "thee-parkside",
+      "name": "Thee Parkside,",
+      "searchUrl": "https://www.google.com/search?q=Thee%20Parkside%2C",
+      "firstSeen": "2025-06-26",
+      "lastSeen": "2025-06-26",
+      "showCount": 1,
+      "location": "",
+      "aliases": ["Thee Parkside,"]
+    },
+    {
       "id": "1st-congregational-church-1229-court-st-martinez",
       "name": "1st Congregational Church, 1229 Court St, Martinez",
       "searchUrl": "https://www.google.com/search?q=1st%20Congregational%20Church%2C%201229%20Court%20St%2C%20Martinez",
@@ -1662,6 +1509,16 @@
       "showCount": 1,
       "location": "1229 Court St",
       "aliases": ["1st Congregational Church, 1229 Court St, Martinez"]
+    },
+    {
+      "id": "prop-shop-518-11th-street-richmond",
+      "name": "Prop Shop 518 11th Street, Richmond",
+      "searchUrl": "https://www.google.com/search?q=Prop%20Shop%20518%2011th%20Street%2C%20Richmond",
+      "firstSeen": "2025-06-28",
+      "lastSeen": "2025-06-28",
+      "showCount": 1,
+      "location": "Richmond",
+      "aliases": ["Prop Shop 518 11th Street, Richmond"]
     },
     {
       "id": "rudys-cant-fail-cafe-4081-holis-street-emeryville",
@@ -1694,6 +1551,16 @@
       "aliases": ["Music City Hotel, S.F."]
     },
     {
+      "id": "toots-tavern-crockett",
+      "name": "Toot's Tavern, Crockett",
+      "searchUrl": "https://www.google.com/search?q=Toot's%20Tavern%2C%20Crockett",
+      "firstSeen": "2025-07-05",
+      "lastSeen": "2025-07-05",
+      "showCount": 1,
+      "location": "Crockett",
+      "aliases": ["Toot's Tavern, Crockett"]
+    },
+    {
       "id": "hopmonk-novato",
       "name": "Hopmonk, Novato",
       "searchUrl": "https://www.google.com/search?q=Hopmonk%2C%20Novato",
@@ -1702,6 +1569,16 @@
       "showCount": 1,
       "location": "Novato",
       "aliases": ["Hopmonk, Novato"]
+    },
+    {
+      "id": "arlene-francis-center-santa-rosa",
+      "name": "Arlene Francis Center, Santa Rosa",
+      "searchUrl": "https://www.google.com/search?q=Arlene%20Francis%20Center%2C%20Santa%20Rosa",
+      "firstSeen": "2025-07-18",
+      "lastSeen": "2025-07-18",
+      "showCount": 1,
+      "location": "Santa Rosa",
+      "aliases": ["Arlene Francis Center, Santa Rosa"]
     },
     {
       "id": "vinnies-bar-2045-mount-diablo-street-concord",
@@ -1764,6 +1641,16 @@
       "aliases": ["Fairgrounds, 175 Fairgrounds Dr., Petaluma"]
     },
     {
+      "id": "midway-sf",
+      "name": "Midway, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Midway%2C%20S.F.",
+      "firstSeen": "2025-07-26",
+      "lastSeen": "2025-07-26",
+      "showCount": 1,
+      "location": "S.F.",
+      "aliases": ["Midway, S.F."]
+    },
+    {
       "id": "9th-and-folsom-sf",
       "name": "9th and Folsom, S.F.",
       "searchUrl": "https://www.google.com/search?q=9th%20and%20Folsom%2C%20S.F.",
@@ -1814,6 +1701,16 @@
       "aliases": ["O Reilly's Pub, 1840 Haight Street, S.F."]
     },
     {
+      "id": "victory-stables-2328-san-pablo-avenue-oakland",
+      "name": "Victory Stables, 2328 San Pablo Avenue, Oakland",
+      "searchUrl": "https://www.google.com/search?q=Victory%20Stables%2C%202328%20San%20Pablo%20Avenue%2C%20Oakland",
+      "firstSeen": "2025-08-16",
+      "lastSeen": "2025-08-16",
+      "showCount": 1,
+      "location": "2328 San Pablo Avenue",
+      "aliases": ["Victory Stables, 2328 San Pablo Avenue, Oakland"]
+    },
+    {
       "id": "green-music-center-1801-e-cotati-avenue-rohnert-park",
       "name": "Green Music Center, 1801 E Cotati Avenue, Rohnert Park",
       "searchUrl": "https://www.google.com/search?q=Green%20Music%20Center%2C%201801%20E%20Cotati%20Avenue%2C%20Rohnert%20Park",
@@ -1822,6 +1719,16 @@
       "showCount": 1,
       "location": "1801 E Cotati Avenue",
       "aliases": ["Green Music Center, 1801 E Cotati Avenue, Rohnert Park"]
+    },
+    {
+      "id": "pavilion-concord-sf",
+      "name": "Pavilion, Concord, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Pavilion%2C%20Concord%2C%20S.F.",
+      "firstSeen": "2025-08-22",
+      "lastSeen": "2025-08-22",
+      "showCount": 1,
+      "location": "Concord",
+      "aliases": ["Pavilion, Concord, S.F."]
     },
     {
       "id": "weill-hall",
@@ -1854,6 +1761,16 @@
       "aliases": ["Brix Brewing, 2400 Mandela, Oakland"]
     },
     {
+      "id": "shorelie-amphitheater-mountain-view",
+      "name": "Shorelie Amphitheater, Mountain View",
+      "searchUrl": "https://www.google.com/search?q=Shorelie%20Amphitheater%2C%20Mountain%20View",
+      "firstSeen": "2025-08-31",
+      "lastSeen": "2025-08-31",
+      "showCount": 1,
+      "location": "Mountain View",
+      "aliases": ["Shorelie Amphitheater, Mountain View"]
+    },
+    {
       "id": "ceremony-oakland",
       "name": "Ceremony, Oakland",
       "searchUrl": "https://www.google.com/search?q=Ceremony%2C%20Oakland",
@@ -1862,6 +1779,16 @@
       "showCount": 1,
       "location": "Oakland",
       "aliases": ["Ceremony, Oakland"]
+    },
+    {
+      "id": "fox-theater-okland",
+      "name": "Fox Theater, Okland",
+      "searchUrl": "https://www.google.com/search?q=Fox%20Theater%2C%20Okland",
+      "firstSeen": "2025-09-18",
+      "lastSeen": "2025-09-18",
+      "showCount": 1,
+      "location": "Okland",
+      "aliases": ["Fox Theater, Okland"]
     },
     {
       "id": "wariors-stadium-sf",
@@ -1964,6 +1891,6 @@
       "aliases": ["Moe's Ally, Santa Cruz"]
     }
   ],
-  "total": 196,
-  "lastUpdated": "2025-05-21T17:30:50.403Z"
+  "total": 189,
+  "lastUpdated": "2025-05-29T06:05:44.095Z"
 }

@@ -7,87 +7,192 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import venues from "../data/venues.json";
 
 interface Props {
   day: { day: string; events: any[]; normalizedDate: string };
 }
 const { day } = Astro.props;
+
+// helper to normalize text (remove special characters, lowercase)
+function normalizeText(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .trim();
+}
+
+// helper to find venue ID from venue name
+function findVenueId(venueName: string): string | null {
+  const venue = venues.venues.find(
+    (v) => normalizeText(v.name) === normalizeText(venueName),
+  );
+  return venue?.id || null;
+}
+
+// helper to format day string with full month and day names
+function formatDayWithFullMonth(dayString: string): string {
+  const monthMap: { [key: string]: string } = {
+    jan: "January",
+    feb: "February",
+    mar: "March",
+    apr: "April",
+    may: "May",
+    jun: "June",
+    jul: "July",
+    aug: "August",
+    sep: "September",
+    oct: "October",
+    nov: "November",
+    dec: "December",
+  };
+
+  const dayMap: { [key: string]: string } = {
+    sun: "Sunday",
+    mon: "Monday",
+    tue: "Tuesday",
+    wed: "Wednesday",
+    thu: "Thursday",
+    fri: "Friday",
+    sat: "Saturday",
+  };
+
+  const parts = dayString.split(" ");
+  if (parts.length >= 3) {
+    const dayOfWeek = parts[0].toLowerCase();
+    const month = parts[1].toLowerCase();
+    const date = parts[2];
+    const fullDayOfWeek = dayMap[dayOfWeek] || parts[0];
+    const fullMonth = monthMap[month] || parts[1];
+    return `${fullDayOfWeek} ${fullMonth} ${date}`;
+  }
+  return dayString;
+}
+
+const formattedDay = formatDayWithFullMonth(day.day);
 ---
 
 <Card
-  className="invisible max-w-[75ch]"
+  className="event-item invisible"
   data-day={day.day}
   data-iso={day.normalizedDate}
 >
-  <CardHeader>
-    <CardTitle
-      className="border-accent-foreground border-b-2 text-3xl font-bold uppercase"
-      >{day.day}</CardTitle
-    >
-  </CardHeader>
-  <CardContent>
-    <ScrollArea className="max-h-[75vh] overflow-y-scroll" id="scroll-area">
-      <ul class="ml-4 list-disc [&>li]:mt-2">
-        {
-          day.events.map(
-            (event: {
-              venue: { href: string | URL | null | undefined; text: unknown };
-              bands: any[];
-              extra: unknown;
-            }) => (
-              <li>
-                <strong class="venue">
-                  {event.venue.href ? (
-                    <a
-                      class="hover:underline"
-                      href={event.venue.href}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                    >
-                      {event.venue.text}
-                    </a>
-                  ) : (
-                    event.venue.text
-                  )}
-                </strong>
-                {" — "}
-                {event.bands.map(
-                  (
-                    band: {
-                      href: string | URL | null | undefined;
-                      text: unknown;
-                    },
-                    i: number,
-                  ) => (
-                    <span class="artists inline-flex">
-                      {band.href ? (
-                        <a
-                          class="hover:underline"
-                          href={band.href}
-                          target="_blank"
-                          rel="noopener noreferrer nofollow"
-                        >
-                          {band.text}
+  <CardContent className="p-4">
+    <div class="flex flex-col gap-2">
+      <div class="flex items-start justify-between">
+        <a
+          href={`/day/${day.normalizedDate}`}
+          class="text-primary text-lg font-semibold hover:underline"
+        >
+          {formattedDay}
+        </a>
+        <span class="text-muted-foreground text-xs">
+          {day.events.length} events
+        </span>
+      </div>
+
+      <div class="space-y-3">
+        <ul
+          class="events-list space-y-2 overflow-hidden transition-all duration-300"
+          style="max-height: 180px;"
+        >
+          {
+            day.events.map(
+              (
+                event: {
+                  venue: {
+                    href: string | URL | null | undefined;
+                    text: unknown;
+                  };
+                  bands: any[];
+                  extra: unknown;
+                },
+                index: number,
+              ) => (
+                <li
+                  class={`event-item text-sm ${index >= 3 ? "overflow-event" : ""}`}
+                >
+                  <div class="venue font-medium">
+                    {(() => {
+                      const venueId = findVenueId(event.venue.text as string);
+                      return venueId ? (
+                        <a class="hover:underline" href={`/venue/${venueId}`}>
+                          {event.venue.text}
                         </a>
                       ) : (
-                        band.text
-                      )}
-                      {i < event.bands.length - 1 && ","} &nbsp;
-                    </span>
-                  ),
-                )}
-                {event.extra && (
-                  <>
-                    {" — "}
-                    <span class="event-extra">{event.extra}</span>
-                  </>
-                )}
-              </li>
-            ),
+                        event.venue.text
+                      );
+                    })()}
+                  </div>
+                  <div class="text-muted-foreground artists text-xs">
+                    {index < 3
+                      ? event.bands
+                          .slice(0, 3)
+                          .map((band) => band.text)
+                          .join(", ") +
+                        (event.bands.length > 3
+                          ? ` +${event.bands.length - 3} more`
+                          : "")
+                      : event.bands.map((band) => band.text).join(", ")}
+                  </div>
+                  {event.extra && (
+                    <div class="text-muted-foreground event-extra text-xs">
+                      {event.extra}
+                    </div>
+                  )}
+                </li>
+              ),
+            )
+          }
+        </ul>
+
+        {
+          day.events.length > 3 && (
+            <button
+              class="expand-toggle text-muted-foreground hover:text-foreground text-xs hover:underline"
+              data-expanded="false"
+            >
+              +{day.events.length - 3} more events
+            </button>
           )
         }
-      </ul>
-    </ScrollArea>
+      </div>
+    </div>
   </CardContent>
 </Card>
+
+<script>
+  // expand/collapse functionality for event cards
+  document.addEventListener("DOMContentLoaded", () => {
+    const expandButtons = document.querySelectorAll(".expand-toggle");
+
+    expandButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const card = button.closest(".event-item");
+        const eventsList = card?.querySelector(".events-list");
+        const isExpanded = button.getAttribute("data-expanded") === "true";
+
+        if (isExpanded) {
+          // collapse: set max height to show only first 3 events
+          if (eventsList) {
+            (eventsList as HTMLElement).style.maxHeight = "180px";
+          }
+          button.setAttribute("data-expanded", "false");
+          const totalEvents =
+            card?.querySelectorAll("li.event-item").length || 0;
+          button.textContent = `+${totalEvents - 3} more events`;
+        } else {
+          // expand: remove max height to show all events
+          if (eventsList) {
+            (eventsList as HTMLElement).style.maxHeight = "none";
+          }
+          button.setAttribute("data-expanded", "true");
+          button.textContent = "Show less";
+        }
+      });
+    });
+  });
+</script>

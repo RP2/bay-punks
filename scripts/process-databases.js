@@ -1,5 +1,4 @@
 import { readFile, writeFile } from "fs/promises";
-import path from "path";
 
 // helper to normalize text (remove special characters, lowercase)
 function normalizeText(text) {

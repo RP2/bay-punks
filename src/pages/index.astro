@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Concerts from "../data/concerts.json";
-import Footer from "../components/Footer.astro";
 import Card from "../components/Day.astro";
 import Key from "../components/Key.astro";
+import ArtistList from "../components/ArtistList.astro";
+import VenueList from "../components/VenueList.astro";
+import { TabsWrapper } from "../components/TabsWrapper";
 import { Input } from "@/components/ui/input";
 ---
 
@@ -38,26 +40,61 @@ import { Input } from "@/components/ui/input";
   </section>
   <section class="my-4 flex flex-col gap-4 sm:my-8 sm:gap-8">
     <Key />
-    <Input />
-  </section>
-  <section id="concert-list">
-    {
-      Object.entries(Concerts).map(([, days]) => (
-        <div class="mb-8">
-          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-            {days.map((day) => (
-              <Card day={day} />
-            ))}
+
+    <!-- tabs wrapper with shadcn tabs -->
+    <div class="w-full">
+      <TabsWrapper
+        eventsContent=""
+        artistsContent=""
+        venuesContent=""
+        client:load
+      />
+
+      <!-- events content (hidden by default, shown when events tab is active) -->
+      <div id="events-content" class="tab-content" data-tab="events">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-bold">
+              Events ({Object.values(Concerts).flat().length})
+            </h2>
+          </div>
+
+          <div class="mb-4">
+            <Input
+              id="search"
+              placeholder="Search for shows, artists, venues..."
+              className="w-full"
+            />
+          </div>
+
+          <div
+            id="concert-list"
+            class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+          >
+            {
+              Object.entries(Concerts).flatMap(([, days]) =>
+                days.map((day) => <Card day={day} />),
+              )
+            }
           </div>
         </div>
-      ))
-    }
+      </div>
+
+      <!-- artists content (hidden by default, shown when artists tab is active) -->
+      <div id="artists-content" class="tab-content hidden" data-tab="artists">
+        <ArtistList />
+      </div>
+
+      <!-- venues content (hidden by default, shown when venues tab is active) -->
+      <div id="venues-content" class="tab-content hidden" data-tab="venues">
+        <VenueList />
+      </div>
+    </div>
   </section>
-  <Footer />
 </Layout>
 
 <script>
-  // remove past days from the dom
+  // remove past days from the dom and setup search functionality
   document.addEventListener("DOMContentLoaded", () => {
     const today = new Date();
     today.setHours(0, 0, 0, 0); // normalize to midnight
@@ -179,64 +216,68 @@ import { Input } from "@/components/ui/input";
       }
     });
 
-    // filter cards based on search input
+    // filter cards based on search input (for events tab)
     const searchInput = document.getElementById("search");
-    searchInput!.addEventListener("input", (e) => {
-      const query = (e.target as HTMLInputElement)!.value.toLowerCase();
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        const query = (e.target as HTMLInputElement)!.value.toLowerCase();
 
-      cards.forEach((card) => {
-        const date = card.getAttribute("data-day")?.toLowerCase() || "";
-        const iso = card.getAttribute("data-iso")?.toLowerCase() || "";
-        const venue = card.querySelector(".venue");
-        const artists = card.querySelectorAll(".artists");
-        const extra = card.querySelectorAll(".event-extra");
+        cards.forEach((card) => {
+          const date = card.getAttribute("data-day")?.toLowerCase() || "";
+          const iso = card.getAttribute("data-iso")?.toLowerCase() || "";
+          const venues = card.querySelectorAll(".venue");
+          const artists = card.querySelectorAll(".artists");
+          const extra = card.querySelectorAll(".event-extra");
 
-        // check if the query matches the date, venue, or any artist
-        const matches =
-          date.includes(query) ||
-          iso.includes(query) ||
-          venue?.textContent?.toLowerCase().includes(query) ||
-          Array.from(artists).some((artist) =>
-            artist.textContent?.toLowerCase().includes(query),
-          ) ||
-          Array.from(extra).some((ex) =>
-            ex.textContent?.toLowerCase().includes(query),
-          );
+          // check if the query matches the date, venue, or any artist
+          const matches =
+            date.includes(query) ||
+            iso.includes(query) ||
+            Array.from(venues).some((venue) =>
+              venue.textContent?.toLowerCase().includes(query),
+            ) ||
+            Array.from(artists).some((artist) =>
+              artist.textContent?.toLowerCase().includes(query),
+            ) ||
+            Array.from(extra).some((ex) =>
+              ex.textContent?.toLowerCase().includes(query),
+            );
 
-        // show or hide the card based on the match
-        (card as HTMLElement).style.display = matches ? "block" : "none";
+          // show or hide the card based on the match
+          (card as HTMLElement).style.display = matches ? "block" : "none";
 
-        // always restore original content first to remove previous highlighting
-        if (venue) {
-          restoreOriginalContent(venue);
-        }
-        artists.forEach((artist) => {
-          restoreOriginalContent(artist);
-        });
-        extra.forEach((extraElement) => {
-          restoreOriginalContent(extraElement);
-        });
-
-        // then apply highlighting if there's a query
-        if (query && matches) {
-          if (venue) {
-            highlightText(venue, query);
-          }
+          // always restore original content first to remove previous highlighting
+          venues.forEach((venue) => {
+            restoreOriginalContent(venue);
+          });
           artists.forEach((artist) => {
-            highlightText(artist, query);
+            restoreOriginalContent(artist);
           });
           extra.forEach((extraElement) => {
-            highlightText(extraElement, query);
+            restoreOriginalContent(extraElement);
           });
-        }
+
+          // then apply highlighting if there's a query
+          if (query && matches) {
+            venues.forEach((venue) => {
+              highlightText(venue, query);
+            });
+            artists.forEach((artist) => {
+              highlightText(artist, query);
+            });
+            extra.forEach((extraElement) => {
+              highlightText(extraElement, query);
+            });
+          }
+        });
       });
-    });
+    }
 
     // if no cards remain, show a fallback message
     const container = document.getElementById("concert-list");
     if (container && container.children.length === 0) {
       container.innerHTML =
-        "<p>No upcoming concerts available, yell at Riley to fix it.</p>";
+        "<p class='col-span-full text-center text-muted-foreground'>No upcoming concerts available, yell at Riley to fix it.</p>";
     }
   });
 </script>

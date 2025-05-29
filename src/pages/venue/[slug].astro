@@ -1,0 +1,305 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import venues from "../../data/venues.json";
+import concerts from "../../data/concerts.json";
+
+// generate all venue pages at build time
+export async function getStaticPaths() {
+  return venues.venues.map((venue) => ({
+    params: { slug: venue.id },
+    props: { venue },
+  }));
+}
+
+// get the venue from props
+const { venue } = Astro.props;
+
+// get all shows for this venue
+const venueShows = concerts.shows.flatMap((show) =>
+  show.events
+    .filter(
+      (event) => normalizeText(event.venue.text) === normalizeText(venue.name),
+    )
+    .map((event) => ({
+      ...event,
+      date: show.normalizedDate,
+      humanDate: show.day,
+    })),
+);
+
+// helper to normalize text (remove special characters, lowercase)
+function normalizeText(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .trim();
+}
+
+// sort shows by date (upcoming first)
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const upcomingShows = venueShows
+  .filter((show) => new Date(show.date) >= today)
+  .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+const pastShows = venueShows
+  .filter((show) => new Date(show.date) < today)
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 10); // limit to last 10 shows
+---
+
+<Layout
+  title={venue.name}
+  description={`Show history and upcoming events at ${venue.name} in the Bay Area`}
+>
+  <div class="container mx-auto max-w-4xl px-4 py-8">
+    <div class="mb-8">
+      <a
+        href="/"
+        class="text-muted-foreground hover:text-foreground mb-4 inline-flex items-center text-sm hover:underline"
+      >
+        ← Back to calendar
+      </a>
+      <h1 class="text-4xl font-bold uppercase md:text-5xl">
+        {venue.name}
+      </h1>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <!-- venue info -->
+      <Card>
+        <CardHeader>
+          <CardTitle>Venue Info</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <dl class="space-y-4">
+            <div>
+              <dt class="text-muted-foreground text-sm font-medium">
+                Location
+              </dt>
+              <dd class="text-lg">{venue.location || "Bay Area"}</dd>
+            </div>
+            <div>
+              <dt class="text-muted-foreground text-sm font-medium">
+                Total Shows
+              </dt>
+              <dd class="text-lg">{venue.showCount}</dd>
+            </div>
+            <div>
+              <dt class="text-muted-foreground text-sm font-medium">
+                First Seen
+              </dt>
+              <dd class="text-lg">
+                {new Date(venue.firstSeen).toLocaleDateString()}
+              </dd>
+            </div>
+            <div>
+              <dt class="text-muted-foreground text-sm font-medium">
+                Last Seen
+              </dt>
+              <dd class="text-lg">
+                {new Date(venue.lastSeen).toLocaleDateString()}
+              </dd>
+            </div>
+            {
+              venue.searchUrl && (
+                <div>
+                  <dt class="text-muted-foreground text-sm font-medium">
+                    Search
+                  </dt>
+                  <dd class="text-lg">
+                    <a
+                      href={venue.searchUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-2 text-blue-600 transition-colors hover:text-blue-700 hover:underline"
+                    >
+                      <svg
+                        class="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                      </svg>
+                      Google
+                    </a>
+                  </dd>
+                </div>
+              )
+            }
+          </dl>
+        </CardContent>
+      </Card>
+
+      <!-- recent shows -->
+      <Card>
+        <CardHeader>
+          <CardTitle>Recent Shows</CardTitle>
+        </CardHeader>
+        <CardContent>
+          {
+            pastShows.length > 0 ? (
+              <div class="space-y-4">
+                <ul
+                  class="recent-shows-list space-y-4 overflow-hidden transition-all duration-300"
+                  style="max-height: 160px;"
+                >
+                  {pastShows.map((show, index) => (
+                    <li
+                      data-key={index}
+                      class={`border-border border-b pb-4 last:border-b-0 ${index >= 2 ? "overflow-show" : ""}`}
+                    >
+                      <div class="flex flex-col gap-1">
+                        <div class="text-muted-foreground text-sm font-semibold">
+                          <a
+                            href={`/day/${show.date}`}
+                            class="hover:text-foreground transition-colors hover:underline"
+                          >
+                            {show.humanDate}
+                          </a>
+                        </div>
+                        <div class="flex flex-wrap gap-1">
+                          {show.bands.map((band, i) => (
+                            <span data-key={i} class="inline-flex">
+                              {band.href ? (
+                                <a
+                                  class="text-primary hover:underline"
+                                  href={band.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer nofollow"
+                                >
+                                  {band.text}
+                                </a>
+                              ) : (
+                                <span>{band.text}</span>
+                              )}
+                              {i < show.bands.length - 1 && (
+                                <span class="text-muted-foreground">, </span>
+                              )}
+                            </span>
+                          ))}
+                        </div>
+                        {show.extra && (
+                          <div class="text-muted-foreground text-sm">
+                            {show.extra}
+                          </div>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+                {pastShows.length > 2 && (
+                  <button
+                    class="expand-recent-toggle text-muted-foreground hover:text-foreground text-xs hover:underline"
+                    data-expanded="false"
+                  >
+                    +{pastShows.length - 2} more shows
+                  </button>
+                )}
+              </div>
+            ) : (
+              <p class="text-muted-foreground">No recent shows found.</p>
+            )
+          }
+        </CardContent>
+      </Card>
+    </div>
+
+    <!-- upcoming shows section -->
+    <Card className="mt-8">
+      <CardHeader>
+        <CardTitle>Upcoming Shows ({upcomingShows.length})</CardTitle>
+      </CardHeader>
+      <CardContent>
+        {
+          upcomingShows.length > 0 ? (
+            <ScrollArea className="max-h-[60vh] overflow-y-scroll">
+              <ul class="space-y-4">
+                {upcomingShows.map((show, index) => (
+                  <li
+                    data-key={index}
+                    class="border-border border-b pb-4 last:border-b-0"
+                  >
+                    <div class="flex flex-col gap-1">
+                      <div class="text-muted-foreground text-sm font-semibold">
+                        <a
+                          href={`/day/${show.date}`}
+                          class="hover:text-foreground transition-colors hover:underline"
+                        >
+                          {show.humanDate}
+                        </a>
+                      </div>
+                      <div class="flex flex-wrap gap-1">
+                        {show.bands.map((band, i) => (
+                          <span data-key={i} class="inline-flex">
+                            <a
+                              class="text-primary hover:underline"
+                              href={`/artist/${band.text
+                                .toLowerCase()
+                                .replace(/[^a-z0-9\s]/g, "")
+                                .replace(/\s+/g, "-")}`}
+                            >
+                              {band.text}
+                            </a>
+                            {i < show.bands.length - 1 && (
+                              <span class="text-muted-foreground">, </span>
+                            )}
+                          </span>
+                        ))}
+                      </div>
+                      {show.extra && (
+                        <div class="text-muted-foreground text-sm">
+                          {show.extra}
+                        </div>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </ScrollArea>
+          ) : (
+            <p class="text-muted-foreground">No upcoming shows scheduled.</p>
+          )
+        }
+      </CardContent>
+    </Card>
+  </div>
+</Layout>
+
+<script>
+  // expand/collapse functionality for recent shows
+  document.addEventListener("DOMContentLoaded", () => {
+    const expandButtons = document.querySelectorAll(".expand-recent-toggle");
+
+    expandButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const card = button.closest("div");
+        const showsList = card?.querySelector(".recent-shows-list");
+        const isExpanded = button.getAttribute("data-expanded") === "true";
+
+        if (isExpanded) {
+          // collapse: set max height to show only first 2 shows
+          if (showsList) {
+            (showsList as HTMLElement).style.maxHeight = "160px";
+          }
+          button.setAttribute("data-expanded", "false");
+          const totalShows = card?.querySelectorAll("li").length || 0;
+          button.textContent = `+${totalShows - 2} more shows`;
+        } else {
+          // expand: remove max height to show all shows
+          if (showsList) {
+            (showsList as HTMLElement).style.maxHeight = "none";
+          }
+          button.setAttribute("data-expanded", "true");
+          button.textContent = "Show less";
+        }
+      });
+    });
+  });
+</script>

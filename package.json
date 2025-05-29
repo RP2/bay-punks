@@ -10,7 +10,7 @@
     "format": "prettier . --write",
     "scrape": "node ./scripts/scrape-concerts.js",
     "process-db": "node ./scripts/process-databases.js",
-    "update": "npm run scrape && npm run process-db"
+    "prepare": "npm run scrape && npm run process-db && prettier . --write"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.7",
@@ -19,6 +19,7 @@
     "@radix-ui/react-dropdown-menu": "^2.1.12",
     "@radix-ui/react-scroll-area": "^1.2.6",
     "@radix-ui/react-slot": "^1.2.0",
+    "@radix-ui/react-tabs": "^1.1.12",
     "@tailwindcss/vite": "^4.0.17",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.3",

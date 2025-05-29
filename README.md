@@ -41,11 +41,13 @@ This project is a work in progress, and I am excited about its potential to conn
 
 All commands are run from the root of the project, from a terminal:
 
-| Command           | Action                                       |
-| :---------------- | :------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:4321`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-| `npm run format`  | Use Prettier to format all files             |
-| `npm run scrape`  | Run the script to scrape concert data        |
+| Command              | Action                                                       |
+| :------------------- | :----------------------------------------------------------- |
+| `npm install`        | Installs dependencies                                        |
+| `npm run dev`        | Starts local dev server at `localhost:4321`                  |
+| `npm run build`      | Build your production site to `./dist/`                      |
+| `npm run preview`    | Preview your build locally, before deploying                 |
+| `npm run format`     | Use Prettier to format all files                             |
+| `npm run scrape`     | Run the script to scrape concert data                        |
+| `npm run process-db` | Run the process-database script                              |
+| `npm run prepare`    | Runs the scrape, adds data to the db, then formats all files |

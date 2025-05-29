@@ -5,6 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { CardContent } from "@/components/ui/card";
 import artists from "../../data/artists.json";
 import concerts from "../../data/concerts.json";
+import venues from "../../data/venues.json";
 
 // generate all artist pages at build time
 export async function getStaticPaths() {
@@ -17,20 +18,6 @@ export async function getStaticPaths() {
 // get the artist from props
 const { artist } = Astro.props;
 
-// get all shows for this artist
-const artistShows = concerts.shows.flatMap((show) =>
-  show.events
-    .filter((event) =>
-      event.bands.some(
-        (band) => normalizeText(band.text) === normalizeText(artist.name),
-      ),
-    )
-    .map((event) => ({
-      ...event,
-      date: show.normalizedDate,
-    })),
-);
-
 // helper to normalize text (remove special characters, lowercase)
 function normalizeText(text: string): string {
   return text
@@ -38,6 +25,35 @@ function normalizeText(text: string): string {
     .replace(/[^a-z0-9\s]/g, "")
     .trim();
 }
+
+// helper to find venue ID from venue name
+function findVenueId(venueName: string): string | null {
+  const venue = venues.venues.find(
+    (v) => normalizeText(v.name) === normalizeText(venueName),
+  );
+  return venue?.id || null;
+}
+
+// get all shows for this artist (upcoming only)
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const artistShows = concerts.shows
+  .flatMap((show) =>
+    show.events
+      .filter((event) =>
+        event.bands.some(
+          (band) => normalizeText(band.text) === normalizeText(artist.name),
+        ),
+      )
+      .map((event) => ({
+        ...event,
+        date: show.normalizedDate,
+        humanDate: show.day,
+      })),
+  )
+  .filter((show) => new Date(show.date) >= today)
+  .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 ---
 
 <Layout
@@ -45,90 +61,163 @@ function normalizeText(text: string): string {
   description={`Upcoming shows for ${artist.name} in the Bay Area`}
 >
   <div class="container mx-auto px-4 py-8">
-    <h1 class="mb-4 text-4xl font-bold">{artist.name}</h1>
-
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      <div>
-        <Card>
-          <CardContent className="p-6">
-            <h2 class="mb-4 text-2xl font-semibold">Artist Info</h2>
-            <dl class="space-y-2">
-              <div>
-                <dt class="text-muted-foreground text-sm font-medium">
-                  Total Shows
-                </dt>
-                <dd class="text-lg">{artist.showCount}</dd>
-              </div>
-              <div>
-                <dt class="text-muted-foreground text-sm font-medium">
-                  First Seen
-                </dt>
-                <dd class="text-lg">
-                  {new Date(artist.firstSeen).toLocaleDateString()}
-                </dd>
-              </div>
-              <div>
-                <dt class="text-muted-foreground text-sm font-medium">
-                  Last Seen
-                </dt>
-                <dd class="text-lg">
-                  {new Date(artist.lastSeen).toLocaleDateString()}
-                </dd>
-              </div>
-              {
-                artist.aliases.length > 1 && (
-                  <div>
-                    <dt class="text-muted-foreground text-sm font-medium">
-                      Also Known As
-                    </dt>
-                    <dd class="text-lg">{artist.aliases.join(", ")}</dd>
-                  </div>
-                )
-              }
-            </dl>
-          </CardContent>
-        </Card>
-      </div>
-
-      <div>
-        <Card>
-          <CardContent className="p-6">
-            <h2 class="mb-4 text-2xl font-semibold">Venues</h2>
-            <ScrollArea className="h-[200px]">
-              <ul class="space-y-2">
-                {artist.venues.map((venue) => <li class="text-lg">{venue}</li>)}
-              </ul>
-            </ScrollArea>
-          </CardContent>
-        </Card>
-      </div>
+    <div class="mb-8">
+      <a
+        href="/"
+        class="text-muted-foreground hover:text-foreground mb-4 inline-flex items-center text-sm hover:underline"
+      >
+        ← Back to calendar
+      </a>
+      <h1 class="text-4xl font-bold">{artist.name}</h1>
     </div>
 
-    <div class="mt-8">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
       <Card>
         <CardContent className="p-6">
-          <h2 class="mb-4 text-2xl font-semibold">Upcoming Shows</h2>
-          <ScrollArea className="h-[400px]">
-            <ul class="space-y-4">
-              {
-                artistShows.map((show) => (
-                  <li class="border-b pb-4 last:border-0">
-                    <div class="text-lg font-medium">{show.venue?.text}</div>
-                    <div class="text-muted-foreground text-sm">
-                      {new Date(show.date).toLocaleDateString()}
-                    </div>
-                    {show.extra && (
-                      <div class="text-muted-foreground mt-1 text-sm">
-                        {show.extra}
-                      </div>
+          <h2 class="mb-4 text-2xl font-semibold">Artist Info</h2>
+          <dl class="space-y-2">
+            <div>
+              <dt class="text-muted-foreground text-sm font-medium">
+                Total Shows
+              </dt>
+              <dd class="text-lg">{artist.showCount}</dd>
+            </div>
+            <div>
+              <dt class="text-muted-foreground text-sm font-medium">
+                First Seen
+              </dt>
+              <dd class="text-lg">
+                {new Date(artist.firstSeen).toLocaleDateString()}
+              </dd>
+            </div>
+            <div>
+              <dt class="text-muted-foreground text-sm font-medium">
+                Last Seen
+              </dt>
+              <dd class="text-lg">
+                {new Date(artist.lastSeen).toLocaleDateString()}
+              </dd>
+            </div>
+            {
+              artist.aliases.length > 1 && (
+                <div>
+                  <dt class="text-muted-foreground text-sm font-medium">
+                    Also Known As
+                  </dt>
+                  <dd class="text-lg">{artist.aliases.join(", ")}</dd>
+                </div>
+              )
+            }
+            {
+              artist.searchUrl && (
+                <div>
+                  <dt class="text-muted-foreground text-sm font-medium">
+                    Listen
+                  </dt>
+                  <dd class="text-lg">
+                    <a
+                      href={artist.searchUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-2 text-green-600 transition-colors hover:text-green-700 hover:underline"
+                    >
+                      <svg
+                        class="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
+                      </svg>
+                      Spotify
+                    </a>
+                  </dd>
+                </div>
+              )
+            }
+          </dl>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardContent className="p-6">
+          <h2 class="mb-4 text-2xl font-semibold">Venues</h2>
+          <ul class="space-y-2">
+            {
+              artist.venues.map((venue) => {
+                const venueId = findVenueId(venue);
+                return (
+                  <li class="text-lg">
+                    {venueId ? (
+                      <a
+                        href={`/venue/${venueId}`}
+                        class="text-primary hover:underline"
+                      >
+                        {venue}
+                      </a>
+                    ) : (
+                      venue
                     )}
                   </li>
-                ))
-              }
-            </ul>
-          </ScrollArea>
+                );
+              })
+            }
+          </ul>
         </CardContent>
       </Card>
     </div>
+
+    <Card className="mt-8">
+      <CardContent className="p-6">
+        <h2 class="mb-4 text-2xl font-semibold">Upcoming Shows</h2>
+        <ScrollArea className="h-[400px]">
+          {
+            artistShows.length > 0 ? (
+              <ul class="space-y-4">
+                {artistShows.map((show) => {
+                  const venueId = findVenueId(show.venue?.text || "");
+                  return (
+                    <li class="border-b pb-4 last:border-0">
+                      <div class="flex items-start justify-between">
+                        <div class="flex-1">
+                          <div class="text-lg font-medium">
+                            {venueId ? (
+                              <a
+                                href={`/venue/${venueId}`}
+                                class="text-primary hover:underline"
+                              >
+                                {show.venue?.text}
+                              </a>
+                            ) : (
+                              show.venue?.text
+                            )}
+                          </div>
+                          <div class="text-muted-foreground text-sm">
+                            <a
+                              href={`/day/${show.date}`}
+                              class="text-primary hover:underline"
+                            >
+                              {show.humanDate}
+                            </a>
+                          </div>
+                          {show.extra && (
+                            <div class="text-muted-foreground mt-1 text-sm">
+                              {show.extra}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              <div class="text-muted-foreground py-8 text-center">
+                No upcoming shows scheduled
+              </div>
+            )
+          }
+        </ScrollArea>
+      </CardContent>
+    </Card>
   </div>
 </Layout>

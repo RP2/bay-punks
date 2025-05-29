@@ -8,6 +8,18 @@ function encodeQuery(str) {
   return encodeURIComponent(str.replace(/\s+/g, " ").trim());
 }
 
+// helper to clean artist names by removing all parenthetical text
+function cleanArtistName(name) {
+  return name
+    .replace(/\s*\([^)]*\)\s*/g, "") // remove all text in parentheses
+    .trim();
+}
+
+// helper to check if an artist should be excluded (e.g., comedians)
+function shouldExcludeArtist(name) {
+  return /\(comedian\)/i.test(name);
+}
+
 // helper to fetch and parse a single page
 async function fetchPage(url) {
   const res = await fetch(url);
@@ -47,16 +59,27 @@ function normalizeDate(day) {
 }
 
 // fetch all pages from by-date.0.html to by-date.30.html
+console.log("starting to fetch pages...");
 const baseUrl = "http://www.foopee.com/punk/the-list/by-date.";
-const pages = await Promise.all(
-  Array.from({ length: 31 }, (_, i) => fetchPage(`${baseUrl}${i}.html`)),
-);
+const pagePromises = Array.from({ length: 31 }, (_, i) => {
+  const url = `${baseUrl}${i}.html`;
+  console.log(`fetching page ${i}: ${url}`);
+  return fetchPage(url);
+});
+const pages = await Promise.all(pagePromises);
+console.log(`successfully fetched ${pages.length} pages`);
 
 // collect events for each day
 const shows = [];
+let totalEvents = 0;
+let excludedComedians = 0;
+
+console.log("processing pages and extracting events...");
 
 // process each page
-pages.forEach(($) => {
+pages.forEach(($, pageIndex) => {
+  console.log(`processing page ${pageIndex}...`);
+  let pageEvents = 0;
   // select the main ul containing days
   $("ul > li").each((_, dayLi) => {
     // get the day (e.g., "wed apr 23")
@@ -82,7 +105,16 @@ pages.forEach(($) => {
       const bands = $(eventLi)
         .find('a[href*="by-band"]')
         .map((_, bandEl) => {
-          const bandText = $(bandEl).text().trim();
+          const rawBandText = $(bandEl).text().trim();
+
+          // skip comedians entirely
+          if (shouldExcludeArtist(rawBandText)) {
+            excludedComedians++;
+            console.log(`excluded comedian: ${rawBandText}`);
+            return null;
+          }
+
+          const bandText = cleanArtistName(rawBandText); // clean the artist name
           return {
             text: bandText,
             href: bandText
@@ -90,7 +122,8 @@ pages.forEach(($) => {
               : undefined,
           };
         })
-        .get();
+        .get()
+        .filter((band) => band !== null && band.text); // filter out null entries and empty band names
 
       // get extra info (text not in links)
       let extra = $(eventLi)
@@ -117,6 +150,8 @@ pages.forEach(($) => {
 
       if (venue.text && bands.length) {
         events.push({ venue, bands, extra });
+        pageEvents++;
+        totalEvents++;
       }
     });
 
@@ -125,8 +160,15 @@ pages.forEach(($) => {
       shows.push({ day: dayText, normalizedDate, events });
     }
   });
+  console.log(`page ${pageIndex} processed: ${pageEvents} events found`);
 });
 
 // write to json file
+console.log(`\nprocessing complete:`);
+console.log(`- total events found: ${totalEvents}`);
+console.log(`- comedians excluded: ${excludedComedians}`);
+console.log(`- days with events: ${shows.length}`);
+console.log("writing to concerts.json...");
+
 await writeFile("./src/data/concerts.json", JSON.stringify({ shows }, null, 2));
-console.log("all concerts scraped and saved.");
+console.log("all concerts scraped and saved successfully!");

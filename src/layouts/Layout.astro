@@ -1,4 +1,5 @@
 ---
+import Footer from "@/components/Footer.astro";
 import "../styles/global.css";
 import { ModeToggle } from "@/components/ModeToggle";
 
@@ -53,5 +54,6 @@ const { title, description } = Astro.props;
       </aside>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

@@ -1,0 +1,152 @@
+---
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Input } from "@/components/ui/input";
+import venues from "../data/venues.json";
+import concerts from "../data/concerts.json";
+
+// sort venues alphabetically
+const sortedVenues = [...venues.venues].sort((a, b) => {
+  return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
+});
+
+// get next show date for each venue
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+function getNextShowForVenue(venueName: string) {
+  const upcomingShows = concerts.shows
+    .flatMap((show) =>
+      show.events
+        .filter(
+          (event) =>
+            normalizeText(event.venue.text) === normalizeText(venueName),
+        )
+        .map((event) => ({
+          ...event,
+          date: show.normalizedDate,
+          humanDate: show.day,
+        })),
+    )
+    .filter((show) => new Date(show.date) >= today)
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+  return upcomingShows[0] || null;
+}
+
+function normalizeText(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .trim();
+}
+---
+
+<div class="space-y-4">
+  <div class="flex items-center justify-between">
+    <h2 class="text-2xl font-bold">Venues ({sortedVenues.length})</h2>
+  </div>
+
+  <div class="mb-4">
+    <Input
+      id="venue-search"
+      placeholder="Search venues..."
+      className="w-full"
+    />
+  </div>
+  <div
+    id="venue-list"
+    class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+  >
+    {
+      sortedVenues.map((venue) => {
+        const nextShow = getNextShowForVenue(venue.name);
+        return (
+          <Card
+            className="venue-item"
+            data-venue-name={venue.name.toLowerCase()}
+            data-venue-location={venue.location?.toLowerCase() || ""}
+          >
+            <CardContent className="p-4">
+              <div class="flex flex-col gap-2">
+                <div class="flex items-start justify-between">
+                  <a
+                    href={`/venue/${venue.id}`}
+                    class="text-primary font-semibold hover:underline"
+                  >
+                    {venue.name}
+                  </a>
+                  <span class="text-muted-foreground text-xs">
+                    {venue.showCount} shows
+                  </span>
+                </div>
+
+                {venue.location && (
+                  <div class="text-muted-foreground text-sm">
+                    📍 {venue.location}
+                  </div>
+                )}
+
+                {nextShow && (
+                  <div class="text-sm">
+                    <div class="text-muted-foreground">Next show:</div>
+                    <div class="font-medium">
+                      <a
+                        href={`/day/${nextShow.date}`}
+                        class="text-primary hover:underline"
+                      >
+                        {nextShow.humanDate}
+                      </a>
+                    </div>
+                    <div class="text-muted-foreground text-xs">
+                      {nextShow.bands
+                        .slice(0, 2)
+                        .map((band) => band.text)
+                        .join(", ")}
+                      {nextShow.bands.length > 2 &&
+                        ` +${nextShow.bands.length - 2} more`}
+                    </div>
+                  </div>
+                )}
+
+                {!nextShow && (
+                  <div class="text-muted-foreground text-sm">
+                    No upcoming shows
+                  </div>
+                )}
+
+                <div class="text-muted-foreground text-xs">
+                  Last seen: {new Date(venue.lastSeen).toLocaleDateString()}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        );
+      })
+    }
+  </div>
+</div>
+
+<script>
+  // venue search functionality
+  document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById(
+      "venue-search",
+    ) as HTMLInputElement;
+    const venueItems = document.querySelectorAll(".venue-item");
+
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        const query = (e.target as HTMLInputElement).value.toLowerCase();
+
+        venueItems.forEach((item) => {
+          const venueName = item.getAttribute("data-venue-name") || "";
+          const venueLocation = item.getAttribute("data-venue-location") || "";
+          const matches =
+            venueName.includes(query) || venueLocation.includes(query);
+          (item as HTMLElement).style.display = matches ? "block" : "none";
+        });
+      });
+    }
+  });
+</script>

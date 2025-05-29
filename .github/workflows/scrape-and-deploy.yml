@@ -24,12 +24,13 @@ jobs:
       - name: install dependencies
         run: npm ci
 
-      # run the scraper
+      # run the scraper and wait for completion
       - name: run scraper
         run: node scripts/scrape-concerts.js
-      # wait for a few seconds to ensure the scraper has completed
-      - name: wait for scraper
-        run: sleep 5
+
+      # process databases from scraped data
+      - name: process databases
+        run: node scripts/process-databases.js
 
       # commit and push changes if any
       - name: commit and push
@@ -38,6 +39,6 @@ jobs:
         run: |
           git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git config --local user.name "${{ github.actor }}"
-          git add src/data/concerts.json
-          git commit -m "auto: update concerts data $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "no changes to commit"
+          git add src/data/
+          git commit -m "auto: update concerts data and processed databases $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "no changes to commit"
           git push
