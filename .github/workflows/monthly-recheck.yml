@@ -1,0 +1,159 @@
+# monthly spotify recheck workflow - rechecks previously unverified artists
+name: monthly spotify recheck
+
+on:
+  schedule:
+    - cron: "0 9 1 * *" # first day of each month at 2am pacific (9am utc)
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "limit recheck to n artists (for testing)"
+        required: false
+        default: "100"
+        type: string
+      dry_run:
+        description: "preview what would be rechecked without making changes"
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      # checkout your repo
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      # setup node
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # install dependencies
+      - name: install dependencies
+        run: npm ci
+
+      # backup current data for comparison
+      - name: backup current data
+        run: |
+          cp src/data/artists.json src/data/artists.json.backup
+
+      # run spotify recheck for previously unverified artists
+      - name: recheck spotify artists
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
+            echo "🏃 running dry run - no changes will be saved..."
+            if [ -n "${{ github.event.inputs.limit }}" ]; then
+              node scripts/verify-spotify-recheck-artists.js --limit ${{ github.event.inputs.limit }} --dry-run
+            else
+              node scripts/verify-spotify-recheck-artists.js --dry-run
+            fi
+          else
+            echo "🔄 rechecking previously unverified artists..."
+            if [ -n "${{ github.event.inputs.limit }}" ]; then
+              node scripts/verify-spotify-recheck-artists.js --limit ${{ github.event.inputs.limit }}
+            else
+              node scripts/verify-spotify-recheck-artists.js --limit 100
+            fi
+          fi
+
+      # analyze recheck results
+      - name: analyze results
+        id: analyze
+        run: |
+          if [ -f "src/data/artists.json.backup" ] && [ "${{ github.event.inputs.dry_run }}" != "true" ]; then
+            # count verified artists before and after
+            OLD_VERIFIED=$(node -e "
+              const data = JSON.parse(require('fs').readFileSync('src/data/artists.json.backup', 'utf8'));
+              console.log(data.artists.filter(a => a.spotifyVerified).length);
+            " 2>/dev/null || echo "0")
+            
+            NEW_VERIFIED=$(node -e "
+              const data = JSON.parse(require('fs').readFileSync('src/data/artists.json', 'utf8'));
+              console.log(data.artists.filter(a => a.spotifyVerified).length);
+            " 2>/dev/null || echo "0")
+            
+            NEWLY_VERIFIED=$((NEW_VERIFIED - OLD_VERIFIED))
+            
+            echo "old_verified=$OLD_VERIFIED" >> $GITHUB_OUTPUT
+            echo "new_verified=$NEW_VERIFIED" >> $GITHUB_OUTPUT
+            echo "newly_verified=$NEWLY_VERIFIED" >> $GITHUB_OUTPUT
+            
+            if [ $NEWLY_VERIFIED -gt 0 ]; then
+              echo "✨ newly verified $NEWLY_VERIFIED artists"
+            else
+              echo "ℹ️ no new verifications found"
+            fi
+          else
+            echo "newly_verified=0" >> $GITHUB_OUTPUT
+            if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
+              echo "🏃 dry run completed"
+            fi
+          fi
+
+      # cleanup backup files
+      - name: cleanup
+        run: |
+          rm -f src/data/*.backup
+
+      # check for any changes to commit
+      - name: check for changes
+        id: changes
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "🏃 dry run - no changes to commit"
+          elif git diff --quiet src/data/; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ no changes to commit"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "📝 changes detected in data files"
+          fi
+
+      # commit and push changes if any
+      - name: commit and push
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.SECRET_PUNK }}
+        run: |
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
+
+          # create detailed commit message
+          COMMIT_MSG="auto: monthly spotify recheck $(date -u '+%Y-%m-%d %H:%M UTC')"
+
+          if [ "${{ steps.analyze.outputs.newly_verified }}" -gt 0 ]; then
+            COMMIT_MSG="$COMMIT_MSG - verified ${{ steps.analyze.outputs.newly_verified }} additional artists"
+          fi
+
+          git add src/data/
+          git commit -m "$COMMIT_MSG"
+          git push
+
+      # summary output
+      - name: workflow summary
+        run: |
+          echo "## 🔄 monthly recheck summary" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
+            echo "- **mode**: dry run (no changes saved)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **spotify recheck**: completed" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ "${{ steps.analyze.outputs.newly_verified }}" != "" ]; then
+            echo "- **newly verified artists**: ${{ steps.analyze.outputs.newly_verified }}" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ "${{ steps.changes.outputs.has_changes }}" == "true" ]; then
+            echo "- **deployment**: triggered via git push" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **deployment**: skipped (no changes)" >> $GITHUB_STEP_SUMMARY
+          fi

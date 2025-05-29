@@ -5,9 +5,67 @@ import { Input } from "@/components/ui/input";
 import venues from "../data/venues.json";
 import concerts from "../data/concerts.json";
 
-// sort venues alphabetically
+// helper to get the best display name for a venue
+function getBestVenueName(venue: any): string {
+  // if the canonical name is very short (likely normalized), prefer a longer alias
+  if (venue.name.length < 10 && venue.aliases && venue.aliases.length > 0) {
+    // find the longest alias that contains location info (commas, addresses, etc.)
+    const detailedAliases = venue.aliases.filter(
+      (alias: string) =>
+        alias.includes(",") ||
+        alias.includes("Street") ||
+        alias.includes("Ave") ||
+        alias.includes("Blvd"),
+    );
+
+    if (detailedAliases.length > 0) {
+      // return the longest detailed alias
+      return detailedAliases.reduce((longest: string, current: string) =>
+        current.length > longest.length ? current : longest,
+      );
+    }
+
+    // otherwise return the longest alias
+    return venue.aliases.reduce((longest: string, current: string) =>
+      current.length > longest.length ? current : longest,
+    );
+  }
+
+  return venue.name;
+}
+
+// helper to extract location info from venue data
+function getLocationInfo(venue: any): string | null {
+  // use the pre-processed displayLocation from the database processing
+  if (venue.displayLocation) {
+    // expand city abbreviations for display
+    return venue.displayLocation
+      .replace(/\bS\.F\.?\b/gi, "San Francisco")
+      .replace(/\bSF\b/gi, "San Francisco")
+      .replace(/\bOakland\b/gi, "Oakland")
+      .replace(/\bBerkeley\b/gi, "Berkeley")
+      .replace(/\bSan Jose\b/gi, "San Jose")
+      .replace(/\bMountain View\b/gi, "Mountain View")
+      .replace(/\bPalo Alto\b/gi, "Palo Alto")
+      .replace(/\bSanta Cruz\b/gi, "Santa Cruz")
+      .replace(/\bSanta Rosa\b/gi, "Santa Rosa");
+  }
+
+  // fallback to the old location field if displayLocation is not available
+  if (venue.location) {
+    return venue.location
+      .replace(/\bS\.F\.?\b/gi, "San Francisco")
+      .replace(/\bSF\b/gi, "San Francisco");
+  }
+
+  return null;
+}
+
+// sort venues alphabetically by display name
 const sortedVenues = [...venues.venues].sort((a, b) => {
-  return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
+  const nameA = getBestVenueName(a);
+  const nameB = getBestVenueName(b);
+  return nameA.localeCompare(nameB, undefined, { sensitivity: "base" });
 });
 
 // get next show date for each venue
@@ -61,11 +119,14 @@ function normalizeText(text: string): string {
     {
       sortedVenues.map((venue) => {
         const nextShow = getNextShowForVenue(venue.name);
+        const displayName = getBestVenueName(venue);
+        const locationInfo = getLocationInfo(venue);
+
         return (
           <Card
             className="venue-item"
-            data-venue-name={venue.name.toLowerCase()}
-            data-venue-location={venue.location?.toLowerCase() || ""}
+            data-venue-name={displayName.toLowerCase()}
+            data-venue-location={locationInfo?.toLowerCase() || ""}
           >
             <CardContent className="p-4">
               <div class="flex flex-col gap-2">
@@ -74,16 +135,16 @@ function normalizeText(text: string): string {
                     href={`/venue/${venue.id}`}
                     class="text-primary font-semibold hover:underline"
                   >
-                    {venue.name}
+                    {displayName}
                   </a>
                   <span class="text-muted-foreground text-xs">
                     {venue.showCount} shows
                   </span>
                 </div>
 
-                {venue.location && (
+                {locationInfo && (
                   <div class="text-muted-foreground text-sm">
-                    📍 {venue.location}
+                    📍 {locationInfo}
                   </div>
                 )}
 
@@ -142,8 +203,16 @@ function normalizeText(text: string): string {
         venueItems.forEach((item) => {
           const venueName = item.getAttribute("data-venue-name") || "";
           const venueLocation = item.getAttribute("data-venue-location") || "";
+
+          // also search in all aliases for better matching
+          const venueElement = item.querySelector('a[href^="/venue/"]');
+          const displayText = venueElement?.textContent?.toLowerCase() || "";
+
           const matches =
-            venueName.includes(query) || venueLocation.includes(query);
+            venueName.includes(query) ||
+            venueLocation.includes(query) ||
+            displayText.includes(query);
+
           (item as HTMLElement).style.display = matches ? "block" : "none";
         });
       });

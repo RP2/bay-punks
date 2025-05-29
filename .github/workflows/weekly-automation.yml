@@ -1,0 +1,132 @@
+# weekly automation: scrape concerts, process data, and verify new artists
+name: weekly automation
+
+on:
+  schedule:
+    - cron: "0 7 * * 1" # every monday at 12am pacific (8am utc)
+  workflow_dispatch:
+    inputs:
+      force_spotify:
+        description: "force spotify revalidation of all artists"
+        required: false
+        default: false
+        type: boolean
+      max_artists:
+        description: "limit spotify validation to n artists (for testing)"
+        required: false
+        default: ""
+        type: string
+
+jobs:
+  weekly_automation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      # checkout your repo
+      - name: checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # need previous commit to detect changes
+
+      # setup node
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # install dependencies
+      - name: install dependencies
+        run: npm ci
+
+      # backup current data for comparison
+      - name: backup current data
+        run: |
+          cp src/data/artists.json src/data/artists.json.backup || echo "no existing artists file"
+          cp src/data/concerts.json src/data/concerts.json.backup || echo "no existing concerts file"
+          cp src/data/venues.json src/data/venues.json.backup || echo "no existing venues file"
+
+      # run automated weekly process (scrape + process + verify new artists)
+      - name: run weekly automation
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+        run: |
+          echo "🚀 running automated weekly process..."
+          node scripts/automate-weekly.js
+
+      # detect changes for commit message
+      - name: detect changes
+        id: detect_changes
+        run: |
+          if [ -f "src/data/artists.json.backup" ]; then
+            # count artists before and after
+            OLD_COUNT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('src/data/artists.json.backup', 'utf8')).artists.length)" 2>/dev/null || echo "0")
+            NEW_COUNT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('src/data/artists.json', 'utf8')).artists.length)" 2>/dev/null || echo "0")
+            NEW_ARTISTS=$((NEW_COUNT - OLD_COUNT))
+            
+            echo "old_count=$OLD_COUNT" >> $GITHUB_OUTPUT
+            echo "new_count=$NEW_COUNT" >> $GITHUB_OUTPUT
+            echo "new_artists=$NEW_ARTISTS" >> $GITHUB_OUTPUT
+            
+            if [ $NEW_ARTISTS -gt 0 ]; then
+              echo "✨ detected $NEW_ARTISTS new artists"
+            else
+              echo "ℹ️ no new artists detected"
+            fi
+          else
+            echo "new_artists=unknown" >> $GITHUB_OUTPUT
+            echo "🆕 first run"
+          fi
+
+      # cleanup backup files
+      - name: cleanup
+        run: |
+          rm -f src/data/*.backup
+
+      # check for any changes to commit
+      - name: check for changes
+        id: changes
+        run: |
+          if git diff --quiet src/data/; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ no changes to commit"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "📝 changes detected in data files"
+          fi
+
+      # commit and push changes if any
+      - name: commit and push
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.SECRET_PUNK }}
+        run: |
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
+
+          # create detailed commit message
+          COMMIT_MSG="auto: weekly update $(date -u '+%Y-%m-%d %H:%M UTC')"
+
+          if [ "${{ steps.detect_changes.outputs.new_artists }}" != "unknown" ] && [ "${{ steps.detect_changes.outputs.new_artists }}" -gt 0 ]; then
+            COMMIT_MSG="$COMMIT_MSG - added ${{ steps.detect_changes.outputs.new_artists }} new artists"
+          fi
+
+          git add src/data/
+          git commit -m "$COMMIT_MSG"
+          git push
+
+      # summary output
+      - name: workflow summary
+        run: |
+          echo "## 🎸 weekly automation summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **automation**: completed successfully" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ steps.detect_changes.outputs.new_artists }}" != "unknown" ]; then
+            echo "- **new artists detected**: ${{ steps.detect_changes.outputs.new_artists }}" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ "${{ steps.changes.outputs.has_changes }}" == "true" ]; then
+            echo "- **deployment**: triggered via git push" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **deployment**: skipped (no changes)" >> $GITHUB_STEP_SUMMARY
+          fi

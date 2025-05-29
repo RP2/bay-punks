@@ -10,7 +10,14 @@
     "format": "prettier . --write",
     "scrape": "node ./scripts/scrape-concerts.js",
     "process-db": "node ./scripts/process-databases.js",
-    "prepare": "npm run scrape && npm run process-db && prettier . --write"
+    "verify-spotify": "node ./scripts/verify-spotify-artists.js",
+    "verify-spotify-test": "node ./scripts/verify-spotify-artists.js --limit 10",
+    "verify-spotify-new-artists": "node ./scripts/verify-spotify-new-artists.js",
+    "verify-spotify-recheck-artists": "node ./scripts/verify-spotify-recheck-artists.js",
+    "automate-weekly": "node ./scripts/automate-weekly.js",
+    "automate": "node ./scripts/automate-weekly.js",
+    "prepare": "npm run scrape && npm run process-db && prettier . --write",
+    "maintenance": "npm run automate-weekly"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.7",
