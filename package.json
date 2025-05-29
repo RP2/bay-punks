@@ -16,7 +16,8 @@
     "verify-spotify-recheck-artists": "node ./scripts/verify-spotify-recheck-artists.js",
     "automate-weekly": "node ./scripts/automate-weekly.js",
     "automate": "node ./scripts/automate-weekly.js",
-    "prepare": "npm run scrape && npm run process-db && prettier . --write",
+    "prepare": "prettier . --write",
+    "setup-data": "npm run scrape && npm run process-db && prettier . --write",
     "maintenance": "npm run automate-weekly"
   },
   "dependencies": {
