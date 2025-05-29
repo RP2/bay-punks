@@ -71,7 +71,7 @@ Runs on the 1st of each month at 2AM Pacific Time:
   - `limit`: Set maximum artists to recheck (default: 100)
   - `dry_run`: Preview without making changes
 
-- **Run locally**: `npm run automate-weekly` or `npm run verify-spotify-recheck-artists`
+- **Run locally**: `npm run maintenance` or `npm run verify-spotify-recheck-artists`
 
 ### 📊 **Smart Optimizations**
 
@@ -122,6 +122,5 @@ All commands are run from the root of the project, from a terminal:
 | `npm run verify-spotify`                 | Validate all artists against Spotify API                            |
 | `npm run verify-spotify-new-artists`     | Validate only new artists (never checked before)                    |
 | `npm run verify-spotify-recheck-artists` | Recheck previously unverified artists                               |
-| `npm run automate-weekly`                | Weekly maintenance pipeline (scrape → process → verify new artists) |
-| `npm run maintenance`                    | Alias for automate-weekly                                           |
+| `npm run maintenance`                    | Weekly maintenance pipeline (scrape → process → verify new artists) |
 | `npm run prepare`                        | Runs scrape, process-db, formats files (full data pipeline)         |

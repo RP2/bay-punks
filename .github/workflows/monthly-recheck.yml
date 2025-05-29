@@ -117,6 +117,11 @@ jobs:
             echo "📝 changes detected in data files"
           fi
 
+      # format code before committing
+      - name: format code
+        if: steps.changes.outputs.has_changes == 'true'
+        run: npm run format
+
       # commit and push changes if any
       - name: commit and push
         if: steps.changes.outputs.has_changes == 'true'

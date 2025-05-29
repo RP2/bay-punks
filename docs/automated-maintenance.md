@@ -15,7 +15,7 @@ Runs every Monday at 12AM Pacific Time (7AM UTC).
 
 ### 1. 🚀 **Streamlined Processing**
 
-- Runs the integrated `automate-weekly.js` script
+- Runs individual scripts in sequence for better transparency
 - Scrapes new concert data from configured sources
 - Processes data with duplicate detection and merging
 - Automatically verifies new artists on Spotify (in-memory)
@@ -73,7 +73,7 @@ For local testing and development, you can use these npm scripts:
 
 ```bash
 # Run the complete weekly automation locally
-npm run automate-weekly
+npm run maintenance
 
 # Individual components
 npm run scrape                          # scrape concert data only

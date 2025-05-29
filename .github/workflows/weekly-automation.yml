@@ -45,14 +45,42 @@ jobs:
           cp src/data/concerts.json src/data/concerts.json.backup || echo "no existing concerts file"
           cp src/data/venues.json src/data/venues.json.backup || echo "no existing venues file"
 
-      # run automated weekly process (scrape + process + verify new artists)
-      - name: run weekly automation
+      # run weekly automation: scrape → process → verify new artists
+      - name: scrape concert data
+        run: |
+          echo "📡 scraping new concert data..."
+          node scripts/scrape-concerts.js
+
+      - name: process databases and verify new artists
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
         run: |
-          echo "🚀 running automated weekly process..."
-          node scripts/automate-weekly.js
+          echo "🔄 processing databases with spotify verification..."
+          node scripts/process-databases.js
+
+      # verify any remaining new artists that weren't caught by process-databases
+      - name: verify new artists on spotify
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+        run: |
+          echo "🎵 verifying new artists on spotify..."
+          node scripts/verify-spotify-new-artists.js
+
+      # additional spotify verification if force_spotify is enabled
+      - name: force spotify revalidation
+        if: github.event.inputs.force_spotify == 'true'
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+        run: |
+          echo "🔄 force revalidating all artists on spotify..."
+          if [ -n "${{ github.event.inputs.max_artists }}" ]; then
+            node scripts/verify-spotify-artists.js --limit ${{ github.event.inputs.max_artists }}
+          else
+            node scripts/verify-spotify-artists.js
+          fi
 
       # detect changes for commit message
       - name: detect changes
@@ -94,6 +122,11 @@ jobs:
             echo "has_changes=true" >> $GITHUB_OUTPUT
             echo "📝 changes detected in data files"
           fi
+
+      # format code before committing
+      - name: format code
+        if: steps.changes.outputs.has_changes == 'true'
+        run: npm run format
 
       # commit and push changes if any
       - name: commit and push
