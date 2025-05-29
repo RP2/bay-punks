@@ -18,7 +18,7 @@ This project aims to create an easy-to-navigate and search website of upcoming p
 
 ## How to Use
 
-1. Visit the list at [shows.wtf](https://shows.wtf) to browse the current list.
+1. Visit the list at [shows.wtf](https://shows.wtf) to browse by calendar, artist, and venue.
 2. Use the **Shows** tab to view upcoming concerts by date.
 3. Explore the **Artists** tab to discover bands with direct Spotify links when available.
 4. Check the **Venues** tab to find show locations and their event history.
@@ -100,11 +100,14 @@ This project is a work in progress, and I am excited about its potential to conn
 - [x] Artist pages with Spotify integration
 - [x] Venue pages with show history
 - [x] Tabbed navigation (Shows/Artists/Venues)
+- [x] Unique search per tab
 - [x] Automated Spotify artist verification
 - [x] Calendar view
-- [ ] Show filtering and search
+- [ ] Show filtering
+- [ ] Artist genre filters
 - [ ] Mobile app
 - [ ] User favorites and notifications
+- [ ] Add to calendar functionality
 
 ## 🧞 Commands
 
