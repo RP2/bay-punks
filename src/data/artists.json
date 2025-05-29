@@ -33,11 +33,14 @@
       "id": "da-pupz",
       "name": "Da Pupz",
       "searchUrl": "https://open.spotify.com/search/Da%20Pupz",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Da%20Pupz",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:16.350Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Da Pupz",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:52.592Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-08-31",
@@ -329,11 +332,21 @@
       "id": "freak-accident",
       "name": "Freak Accident",
       "searchUrl": "https://open.spotify.com/search/Freak%20Accident",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/6PcD8EENMDK9SSdClEd6Zc",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:17.761Z",
-        "notFound": true
+        "id": "6PcD8EENMDK9SSdClEd6Zc",
+        "name": "Freak Accident Fire",
+        "followers": 56,
+        "popularity": 0,
+        "genres": [],
+        "verified": false,
+        "searchQuery": "Freak Accident",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:52.968Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-06-15",
@@ -457,11 +470,14 @@
       "id": "black-white-and-red-all-over",
       "name": "Black White And Red All Over",
       "searchUrl": "https://open.spotify.com/search/Black%20White%20And%20Red%20All%20Over",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Black%20White%20And%20Red%20All%20Over",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:17.766Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Black White And Red All Over",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:53.310Z"
       },
       "firstSeen": "2025-06-05",
       "lastSeen": "2025-06-21",
@@ -946,11 +962,14 @@
       "id": "james-mcmurty",
       "name": "James McMurty",
       "searchUrl": "https://open.spotify.com/search/James%20McMurty",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/James%20McMurty",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:20.715Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "James McMurty",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:53.629Z"
       },
       "firstSeen": "2025-06-12",
       "lastSeen": "2025-06-14",
@@ -1214,11 +1233,14 @@
       "id": "stu-allen",
       "name": "Stu Allen",
       "searchUrl": "https://open.spotify.com/search/Stu%20Allen",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Stu%20Allen",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:22.136Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Stu Allen",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:54.043Z"
       },
       "firstSeen": "2025-07-18",
       "lastSeen": "2025-07-20",
@@ -1605,11 +1627,21 @@
       "id": "vaxxines",
       "name": "Vaxxines",
       "searchUrl": "https://open.spotify.com/search/Vaxxines",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/4HQ6RvPuOqyMyJ3uHSSEh2",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:24.983Z",
-        "notFound": true
+        "id": "4HQ6RvPuOqyMyJ3uHSSEh2",
+        "name": "The Vaxxines",
+        "followers": 324,
+        "popularity": 1,
+        "genres": [],
+        "verified": false,
+        "searchQuery": "Vaxxines",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:54.406Z"
       },
       "firstSeen": "2025-05-29",
       "lastSeen": "2025-06-14",
@@ -1655,11 +1687,14 @@
       "id": "zinorbita",
       "name": "Zinorbita",
       "searchUrl": "https://open.spotify.com/search/Zinorbita",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Zinorbita",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:25.000Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Zinorbita",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:54.869Z"
       },
       "firstSeen": "2025-05-29",
       "lastSeen": "2025-06-29",
@@ -1707,11 +1742,21 @@
       "id": "moenia",
       "name": "Moenia",
       "searchUrl": "https://open.spotify.com/search/Moenia",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/2tUsuRVBMEhoIUjT9C3Tt5",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:24.946Z",
-        "notFound": true
+        "id": "2tUsuRVBMEhoIUjT9C3Tt5",
+        "name": "Mauritius Moenia",
+        "followers": 200,
+        "popularity": 0,
+        "genres": [],
+        "verified": false,
+        "searchQuery": "Moenia",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:55.171Z"
       },
       "firstSeen": "2025-05-29",
       "lastSeen": "2025-06-29",
@@ -1782,11 +1827,23 @@
       "id": "fell-swoop",
       "name": "Fell Swoop",
       "searchUrl": "https://open.spotify.com/search/Fell%20Swoop",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/6wPpWyt16OS81w6TeXPRCj",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:24.987Z",
-        "notFound": true
+        "id": "6wPpWyt16OS81w6TeXPRCj",
+        "name": "The Fell Swoop",
+        "followers": 462,
+        "popularity": 4,
+        "genres": [
+          "retro soul"
+        ],
+        "verified": false,
+        "searchQuery": "Fell Swoop",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:55.514Z"
       },
       "firstSeen": "2025-05-29",
       "lastSeen": "2025-05-30",
@@ -1829,11 +1886,14 @@
       "id": "george-jr-and-the-911s",
       "name": "George Jr. And The 9/11s",
       "searchUrl": "https://open.spotify.com/search/George%20Jr.%20And%20The%209%2F11s",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/George%20Jr.%20And%20The%209%2F11s",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:24.994Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "George Jr. And The 9/11s",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:55.946Z"
       },
       "firstSeen": "2025-05-29",
       "lastSeen": "2025-05-31",
@@ -1930,11 +1990,14 @@
       "id": "55-castles",
       "name": "55 Castles",
       "searchUrl": "https://open.spotify.com/search/55%20Castles",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/55%20Castles",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:26.344Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "55 Castles",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:57.390Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-07-07",
@@ -2030,11 +2093,14 @@
       "id": "mad-alchemy-liwuid-light-show",
       "name": "Mad Alchemy Liwuid Light Show",
       "searchUrl": "https://open.spotify.com/search/Mad%20Alchemy%20Liwuid%20Light%20Show",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Mad%20Alchemy%20Liwuid%20Light%20Show",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:26.328Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Mad Alchemy Liwuid Light Show",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:57.738Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-05-31",
@@ -2128,11 +2194,14 @@
       "id": "jackie-clemintine",
       "name": "Jackie Clemintine",
       "searchUrl": "https://open.spotify.com/search/Jackie%20Clemintine",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Jackie%20Clemintine",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:27.822Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Jackie Clemintine",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:58.140Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-07-10",
@@ -2205,11 +2274,14 @@
       "id": "emil-king",
       "name": "Emil King",
       "searchUrl": "https://open.spotify.com/search/Emil%20King",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Emil%20King",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:27.924Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Emil King",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:58.509Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-06-01",
@@ -2255,11 +2327,14 @@
       "id": "stuck-here",
       "name": "Stuck Here",
       "searchUrl": "https://open.spotify.com/search/Stuck%20Here",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Stuck%20Here",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:27.875Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Stuck Here",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:58.911Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-06-21",
@@ -2417,11 +2492,14 @@
       "id": "somebunny-else",
       "name": "Somebunny Else",
       "searchUrl": "https://open.spotify.com/search/Somebunny%20Else",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Somebunny%20Else",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:29.298Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Somebunny Else",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:59.231Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-08-23",
@@ -2592,11 +2670,14 @@
       "id": "atomic-bomb-auction",
       "name": "Atomic Bomb Auction",
       "searchUrl": "https://open.spotify.com/search/Atomic%20Bomb%20Auction",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Atomic%20Bomb%20Auction",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:29.255Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Atomic Bomb Auction",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:41:59.606Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-07-28",
@@ -2695,11 +2776,14 @@
       "id": "manos-di-fierro",
       "name": "Manos Di Fierro",
       "searchUrl": "https://open.spotify.com/search/Manos%20Di%20Fierro",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Manos%20Di%20Fierro",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:30.699Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Manos Di Fierro",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:00.006Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-08-16",
@@ -2928,11 +3012,21 @@
       "id": "glass-cavern",
       "name": "Glass Cavern",
       "searchUrl": "https://open.spotify.com/search/Glass%20Cavern",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/36pmWkGI6xXs6u4Yiqebh3",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:32.141Z",
-        "notFound": true
+        "id": "36pmWkGI6xXs6u4Yiqebh3",
+        "name": "Glass Caverns",
+        "followers": 67,
+        "popularity": 0,
+        "genres": [],
+        "verified": false,
+        "searchQuery": "Glass Cavern",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:00.396Z"
       },
       "firstSeen": "2025-06-04",
       "lastSeen": "2025-06-26",
@@ -3058,11 +3152,25 @@
       "id": "cultural-warefare",
       "name": "Cultural Warefare",
       "searchUrl": "https://open.spotify.com/search/Cultural%20Warefare",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/1ltMjK1yxdJdUBi1TrM6mU",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:32.104Z",
-        "notFound": true
+        "id": "1ltMjK1yxdJdUBi1TrM6mU",
+        "name": "Cultura",
+        "followers": 1477,
+        "popularity": 27,
+        "genres": [
+          "jazz beats",
+          "lo-fi",
+          "lo-fi house"
+        ],
+        "verified": false,
+        "searchQuery": "Cultural Warefare",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:00.726Z"
       },
       "firstSeen": "2025-06-05",
       "lastSeen": "2025-06-14",
@@ -3183,11 +3291,21 @@
       "id": "rat-fuck",
       "name": "Rat Fuck",
       "searchUrl": "https://open.spotify.com/search/Rat%20Fuck",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/7frdTWeAEhqR62yQbRjAGX",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:33.467Z",
-        "notFound": true
+        "id": "7frdTWeAEhqR62yQbRjAGX",
+        "name": "Standard Rat Fuck",
+        "followers": 32,
+        "popularity": 0,
+        "genres": [],
+        "verified": false,
+        "searchQuery": "Rat Fuck",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:02.165Z"
       },
       "firstSeen": "2025-06-05",
       "lastSeen": "2025-06-20",
@@ -3258,11 +3376,14 @@
       "id": "lady-may-and-the-working-days",
       "name": "Lady May And The Working Days",
       "searchUrl": "https://open.spotify.com/search/Lady%20May%20And%20The%20Working%20Days",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Lady%20May%20And%20The%20Working%20Days",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:33.495Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Lady May And The Working Days",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:02.574Z"
       },
       "firstSeen": "2025-06-06",
       "lastSeen": "2025-06-29",
@@ -3731,11 +3852,14 @@
       "id": "blackwulf",
       "name": "Blackwulf",
       "searchUrl": "https://open.spotify.com/search/Blackwulf",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Blackwulf",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:36.330Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Blackwulf",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:02.953Z"
       },
       "firstSeen": "2025-06-10",
       "lastSeen": "2025-08-31",
@@ -3908,11 +4032,14 @@
       "id": "utra-bomb",
       "name": "Utra Bomb",
       "searchUrl": "https://open.spotify.com/search/Utra%20Bomb",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Utra%20Bomb",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:37.771Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Utra Bomb",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:03.317Z"
       },
       "firstSeen": "2025-06-12",
       "lastSeen": "2025-06-13",
@@ -4060,11 +4187,14 @@
       "id": "welcome-straberry",
       "name": "Welcome Straberry",
       "searchUrl": "https://open.spotify.com/search/Welcome%20Straberry",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Welcome%20Straberry",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:37.755Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Welcome Straberry",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:03.662Z"
       },
       "firstSeen": "2025-06-13",
       "lastSeen": "2025-08-15",
@@ -4134,11 +4264,14 @@
       "id": "trans-pecos-department-of-dust-wire",
       "name": "Trans-Pecos Department Of Dust & Wire",
       "searchUrl": "https://open.spotify.com/search/Trans-Pecos%20Department%20Of%20Dust%20%26%20Wire",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Trans-Pecos%20Department%20Of%20Dust%20%26%20Wire",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:37.691Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Trans-Pecos Department Of Dust & Wire",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:04.008Z"
       },
       "firstSeen": "2025-06-13",
       "lastSeen": "2025-09-28",
@@ -5104,11 +5237,23 @@
       "id": "sunset-taxi-service",
       "name": "Sunset Taxi Service",
       "searchUrl": "https://open.spotify.com/search/Sunset%20Taxi%20Service",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/0W2BSNBblzlWTk4bD2A9uR",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:43.308Z",
-        "notFound": true
+        "id": "0W2BSNBblzlWTk4bD2A9uR",
+        "name": "泰葉",
+        "followers": 62224,
+        "popularity": 54,
+        "genres": [
+          "city pop"
+        ],
+        "verified": false,
+        "searchQuery": "Sunset Taxi Service",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:04.437Z"
       },
       "firstSeen": "2025-06-19",
       "lastSeen": "2025-07-17",
@@ -5393,11 +5538,14 @@
       "id": "placeholer",
       "name": "Placeholer",
       "searchUrl": "https://open.spotify.com/search/Placeholer",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Placeholer",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:44.756Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Placeholer",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:04.852Z"
       },
       "firstSeen": "2025-06-20",
       "lastSeen": "2025-07-27",
@@ -5772,11 +5920,21 @@
       "id": "dj-evie-stokes",
       "name": "dj Evie Stokes",
       "searchUrl": "https://open.spotify.com/search/dj%20Evie%20Stokes",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/1VqVb0UDTfy8FPc92VSF6L",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:47.506Z",
-        "notFound": true
+        "id": "1VqVb0UDTfy8FPc92VSF6L",
+        "name": "Evie",
+        "followers": 800,
+        "popularity": 16,
+        "genres": [],
+        "verified": false,
+        "searchQuery": "dj Evie Stokes",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:05.208Z"
       },
       "firstSeen": "2025-06-29",
       "lastSeen": "2025-07-13",
@@ -6368,11 +6526,23 @@
       "id": "host-john-waters",
       "name": "host John Waters",
       "searchUrl": "https://open.spotify.com/search/host%20John%20Waters",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/0PFALpK0smaQpKCW5j0nkM",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:50.316Z",
-        "notFound": true
+        "id": "0PFALpK0smaQpKCW5j0nkM",
+        "name": "John Waters",
+        "followers": 1288,
+        "popularity": 2,
+        "genres": [
+          "spoken word"
+        ],
+        "verified": false,
+        "searchQuery": "host John Waters",
+        "searchResults": 7,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:05.610Z"
       },
       "firstSeen": "2025-07-19",
       "lastSeen": "2025-07-20",
@@ -6445,11 +6615,14 @@
       "id": "brit-floyd",
       "name": "Brit Floyd",
       "searchUrl": "https://open.spotify.com/search/Brit%20Floyd",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Brit%20Floyd",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:50.359Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Brit Floyd",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:06.914Z"
       },
       "firstSeen": "2025-07-19",
       "lastSeen": "2025-07-20",
@@ -6466,11 +6639,20 @@
       "id": "marias",
       "name": "Marias",
       "searchUrl": "https://open.spotify.com/search/Marias",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/2umUxbJB8jfZJx8TF5v2bB",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:50.415Z",
-        "notFound": true
+        "id": "2umUxbJB8jfZJx8TF5v2bB",
+        "name": "Marias",
+        "followers": 0,
+        "popularity": 2,
+        "genres": [],
+        "verified": true,
+        "searchQuery": "Marias",
+        "searchResults": 10,
+        "matchType": "exact",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:07.236Z"
       },
       "firstSeen": "2025-07-20",
       "lastSeen": "2025-07-21",
@@ -6702,11 +6884,14 @@
       "id": "michinekit",
       "name": "Michinekit",
       "searchUrl": "https://open.spotify.com/search/Michinekit",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Michinekit",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:51.793Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Michinekit",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:07.575Z"
       },
       "firstSeen": "2025-07-27",
       "lastSeen": "2025-07-28",
@@ -6994,11 +7179,14 @@
       "id": "you-should-be-dancing",
       "name": "You Should Be Dancing",
       "searchUrl": "https://open.spotify.com/search/You%20Should%20Be%20Dancing",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/You%20Should%20Be%20Dancing",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:53.412Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "You Should Be Dancing",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:07.867Z"
       },
       "firstSeen": "2025-08-02",
       "lastSeen": "2025-10-19",
@@ -7930,11 +8118,21 @@
       "id": "tainted-love",
       "name": "Tainted Love",
       "searchUrl": "https://open.spotify.com/search/Tainted%20Love",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/1f7E8I1GQLekVFtNhlLatE",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:59.135Z",
-        "notFound": true
+        "id": "1f7E8I1GQLekVFtNhlLatE",
+        "name": "The Tainted Love",
+        "followers": 419,
+        "popularity": 3,
+        "genres": [],
+        "verified": false,
+        "searchQuery": "Tainted Love",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:08.201Z"
       },
       "firstSeen": "2025-09-05",
       "lastSeen": "2025-09-06",
@@ -7950,11 +8148,14 @@
       "id": "mustache-harbor",
       "name": "Mustache Harbor",
       "searchUrl": "https://open.spotify.com/search/Mustache%20Harbor",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Mustache%20Harbor",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:01:59.026Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Mustache Harbor",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:08.472Z"
       },
       "firstSeen": "2025-09-05",
       "lastSeen": "2025-09-06",
@@ -8530,11 +8731,14 @@
       "id": "nilufer-yanya",
       "name": "Nilufer Yanya",
       "searchUrl": "https://open.spotify.com/search/Nilufer%20Yanya",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Nilufer%20Yanya",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:02.062Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Nilufer Yanya",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:08.833Z"
       },
       "firstSeen": "2025-09-23",
       "lastSeen": "2025-09-24",
@@ -8685,11 +8889,14 @@
       "id": "bumpin-ugies",
       "name": "Bumpin Ugies",
       "searchUrl": "https://open.spotify.com/search/Bumpin%20Ugies",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Bumpin%20Ugies",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:03.465Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Bumpin Ugies",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:09.218Z"
       },
       "firstSeen": "2025-10-01",
       "lastSeen": "2025-10-02",
@@ -9574,11 +9781,14 @@
       "id": "joe-warner-trio",
       "name": "Joe Warner Trio",
       "searchUrl": "https://open.spotify.com/search/Joe%20Warner%20Trio",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Joe%20Warner%20Trio",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:07.705Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Joe Warner Trio",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:09.626Z"
       },
       "firstSeen": "2025-05-28",
       "lastSeen": "2025-05-28",
@@ -9714,11 +9924,14 @@
       "id": "a-case-of-the-willys",
       "name": "A Case of The Willys",
       "searchUrl": "https://open.spotify.com/search/A%20Case%20of%20The%20Willys",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/A%20Case%20of%20The%20Willys",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:07.690Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "A Case of The Willys",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:09.994Z"
       },
       "firstSeen": "2025-05-28",
       "lastSeen": "2025-05-28",
@@ -9861,11 +10074,14 @@
       "id": "robby-d-and-the-efgs",
       "name": "Robby D And The EFG's",
       "searchUrl": "https://open.spotify.com/search/Robby%20D%20And%20The%20EFG's",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Robby%20D%20And%20The%20EFG's",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:09.119Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Robby D And The EFG's",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:11.382Z"
       },
       "firstSeen": "2025-05-28",
       "lastSeen": "2025-05-28",
@@ -9881,11 +10097,14 @@
       "id": "artifical-go",
       "name": "Artifical Go",
       "searchUrl": "https://open.spotify.com/search/Artifical%20Go",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Artifical%20Go",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:09.266Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Artifical Go",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:11.798Z"
       },
       "firstSeen": "2025-05-28",
       "lastSeen": "2025-05-28",
@@ -9901,11 +10120,14 @@
       "id": "las-agender",
       "name": "LA's Agender",
       "searchUrl": "https://open.spotify.com/search/LA's%20Agender",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/LA's%20Agender",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:09.052Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "LA's Agender",
+        "searchResults": 0,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:12.114Z"
       },
       "firstSeen": "2025-05-28",
       "lastSeen": "2025-05-28",
@@ -10792,11 +11014,14 @@
       "id": "myraids",
       "name": "Myraids",
       "searchUrl": "https://open.spotify.com/search/Myraids",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Myraids",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:14.837Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Myraids",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:12.506Z"
       },
       "firstSeen": "2025-05-29",
       "lastSeen": "2025-05-29",
@@ -10860,11 +11085,14 @@
       "id": "stew-homans-band",
       "name": "Stew Homans Band",
       "searchUrl": "https://open.spotify.com/search/Stew%20Homans%20Band",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Stew%20Homans%20Band",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:14.844Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Stew Homans Band",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:12.908Z"
       },
       "firstSeen": "2025-05-29",
       "lastSeen": "2025-05-29",
@@ -10904,11 +11132,14 @@
       "id": "saquaro",
       "name": "Saquaro",
       "searchUrl": "https://open.spotify.com/search/Saquaro",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Saquaro",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:14.902Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Saquaro",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:13.261Z"
       },
       "firstSeen": "2025-05-29",
       "lastSeen": "2025-05-29",
@@ -11074,11 +11305,14 @@
       "id": "leather-pet",
       "name": "Leather Pet",
       "searchUrl": "https://open.spotify.com/search/Leather%20Pet",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Leather%20Pet",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:16.274Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Leather Pet",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:13.641Z"
       },
       "firstSeen": "2025-05-29",
       "lastSeen": "2025-05-29",
@@ -11094,11 +11328,14 @@
       "id": "piff-the-magic-dragons-all-star-vegas",
       "name": "Piff The Magic Dragon's All-Star Vegas",
       "searchUrl": "https://open.spotify.com/search/Piff%20The%20Magic%20Dragon's%20All-Star%20Vegas",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Piff%20The%20Magic%20Dragon's%20All-Star%20Vegas",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:16.190Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Piff The Magic Dragon's All-Star Vegas",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:14.033Z"
       },
       "firstSeen": "2025-05-29",
       "lastSeen": "2025-05-29",
@@ -11140,11 +11377,14 @@
       "id": "mc-broke-ass-stuart",
       "name": "mc Broke-Ass Stuart",
       "searchUrl": "https://open.spotify.com/search/mc%20Broke-Ass%20Stuart",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/mc%20Broke-Ass%20Stuart",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:16.153Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "mc Broke-Ass Stuart",
+        "searchResults": 0,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:14.294Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-05-30",
@@ -11267,11 +11507,14 @@
       "id": "founders-day",
       "name": "Founders Day",
       "searchUrl": "https://open.spotify.com/search/Founders%20Day",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Founders%20Day",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:17.648Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Founders Day",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:14.639Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-05-30",
@@ -11472,11 +11715,14 @@
       "id": "strings-heart",
       "name": "Strings & Heart",
       "searchUrl": "https://open.spotify.com/search/Strings%20%26%20Heart",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Strings%20%26%20Heart",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:19.073Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Strings & Heart",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:15.950Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-05-30",
@@ -11492,11 +11738,21 @@
       "id": "wisly",
       "name": "Wisly",
       "searchUrl": "https://open.spotify.com/search/Wisly",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/3KW2hwWko8SZl2TaZSnxZ2",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:19.069Z",
-        "notFound": true
+        "id": "3KW2hwWko8SZl2TaZSnxZ2",
+        "name": "Wisly Famous Beatz",
+        "followers": 2,
+        "popularity": 0,
+        "genres": [],
+        "verified": false,
+        "searchQuery": "Wisly",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:16.248Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-05-30",
@@ -11713,11 +11969,14 @@
       "id": "sam-chase-and-the-untraditional",
       "name": "Sam Chase And The Untraditional",
       "searchUrl": "https://open.spotify.com/search/Sam%20Chase%20And%20The%20Untraditional",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Sam%20Chase%20And%20The%20Untraditional",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:20.444Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Sam Chase And The Untraditional",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:16.607Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-05-30",
@@ -11911,11 +12170,14 @@
       "id": "dragged-into-sunlignt",
       "name": "Dragged Into Sunlignt",
       "searchUrl": "https://open.spotify.com/search/Dragged%20Into%20Sunlignt",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Dragged%20Into%20Sunlignt",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:20.508Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Dragged Into Sunlignt",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:16.959Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-05-30",
@@ -12062,11 +12324,14 @@
       "id": "dj-royksopp",
       "name": "dj Royksopp",
       "searchUrl": "https://open.spotify.com/search/dj%20Royksopp",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/dj%20Royksopp",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:21.890Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "dj Royksopp",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:17.412Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-05-30",
@@ -12082,11 +12347,14 @@
       "id": "first-day-back",
       "name": "First Day Back",
       "searchUrl": "https://open.spotify.com/search/First%20Day%20Back",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/First%20Day%20Back",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:21.976Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "First Day Back",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:17.790Z"
       },
       "firstSeen": "2025-05-30",
       "lastSeen": "2025-05-30",
@@ -12537,11 +12805,14 @@
       "id": "humma-kevala",
       "name": "Humma Kevala",
       "searchUrl": "https://open.spotify.com/search/Humma%20Kevala",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Humma%20Kevala",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:24.749Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Humma Kevala",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:18.196Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -12681,11 +12952,14 @@
       "id": "sally-becker",
       "name": "Sally Becker",
       "searchUrl": "https://open.spotify.com/search/Sally%20Becker",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Sally%20Becker",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:24.777Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Sally Becker",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:18.609Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -12799,11 +13073,14 @@
       "id": "larraji",
       "name": "Larraji",
       "searchUrl": "https://open.spotify.com/search/Larraji",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Larraji",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:26.210Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Larraji",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:18.988Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -12927,11 +13204,14 @@
       "id": "two-days-till-silence",
       "name": "Two Days Till Silence",
       "searchUrl": "https://open.spotify.com/search/Two%20Days%20Till%20Silence",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Two%20Days%20Till%20Silence",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:26.158Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Two Days Till Silence",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:19.383Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -13104,11 +13384,25 @@
       "id": "memphis-murder-men",
       "name": "Memphis Murder Men",
       "searchUrl": "https://open.spotify.com/search/Memphis%20Murder%20Men",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/7zfV6szQEXMotWifGt8TEe",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:27.617Z",
-        "notFound": true
+        "id": "7zfV6szQEXMotWifGt8TEe",
+        "name": "The Memphis Murder Men",
+        "followers": 338,
+        "popularity": 2,
+        "genres": [
+          "horror punk",
+          "deathrock",
+          "psychobilly"
+        ],
+        "verified": false,
+        "searchQuery": "Memphis Murder Men",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:20.761Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -13150,11 +13444,14 @@
       "id": "la-onda-stage-marco-antonio-solis",
       "name": "La Onda Stage:  Marco Antonio Solis",
       "searchUrl": "https://open.spotify.com/search/La%20Onda%20Stage%3A%20Marco%20Antonio%20Solis",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/La%20Onda%20Stage%3A%20%20Marco%20Antonio%20Solis",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:27.568Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "La Onda Stage:  Marco Antonio Solis",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:21.098Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -13408,11 +13705,14 @@
       "id": "second-stage-banda-ms",
       "name": "Second Stage: Banda MS",
       "searchUrl": "https://open.spotify.com/search/Second%20Stage%3A%20Banda%20MS",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Second%20Stage%3A%20Banda%20MS",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:28.966Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Second Stage: Banda MS",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:21.455Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -13548,11 +13848,25 @@
       "id": "low-aptos",
       "name": "Low Aptos",
       "searchUrl": "https://open.spotify.com/search/Low%20Aptos",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/0wz0jO9anccPzH04N7FLBH",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:30.598Z",
-        "notFound": true
+        "id": "0wz0jO9anccPzH04N7FLBH",
+        "name": "Low",
+        "followers": 281735,
+        "popularity": 48,
+        "genres": [
+          "slowcore",
+          "dream pop",
+          "post-rock"
+        ],
+        "verified": false,
+        "searchQuery": "Low Aptos",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:21.850Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -13596,11 +13910,14 @@
       "id": "thrashley",
       "name": "Thrashley",
       "searchUrl": "https://open.spotify.com/search/Thrashley",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Thrashley",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:30.432Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Thrashley",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:22.198Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -13616,11 +13933,24 @@
       "id": "extra-primo-good-band",
       "name": "Extra Primo Good Band",
       "searchUrl": "https://open.spotify.com/search/Extra%20Primo%20Good%20Band",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/0i8FZkF6ZVtjAMGr7e8rCy",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:30.314Z",
-        "notFound": true
+        "id": "0i8FZkF6ZVtjAMGr7e8rCy",
+        "name": "Primo",
+        "followers": 1557,
+        "popularity": 23,
+        "genres": [
+          "horrorcore",
+          "southern hip hop"
+        ],
+        "verified": false,
+        "searchQuery": "Extra Primo Good Band",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:22.562Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -13910,11 +14240,14 @@
       "id": "emo-nite",
       "name": "Emo Nite",
       "searchUrl": "https://open.spotify.com/search/Emo%20Nite",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Emo%20Nite",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:31.948Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Emo Nite",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:22.891Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -13930,11 +14263,14 @@
       "id": "tanited-ink",
       "name": "Tanited Ink",
       "searchUrl": "https://open.spotify.com/search/Tanited%20Ink",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Tanited%20Ink",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:31.933Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Tanited Ink",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:23.322Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -13974,11 +14310,14 @@
       "id": "bone-thistle",
       "name": "Bone Thistle",
       "searchUrl": "https://open.spotify.com/search/Bone%20Thistle",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Bone%20Thistle",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:33.404Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Bone Thistle",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:23.667Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -13994,11 +14333,14 @@
       "id": "maintecen",
       "name": "Maintecen",
       "searchUrl": "https://open.spotify.com/search/Maintecen",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Maintecen",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:33.485Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Maintecen",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:24.090Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -14120,11 +14462,14 @@
       "id": "troubs",
       "name": "Troubs",
       "searchUrl": "https://open.spotify.com/search/Troubs",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Troubs",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:33.398Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Troubs",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:25.464Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -14188,11 +14533,14 @@
       "id": "super-normal-girl-400",
       "name": "Super Normal Girl 400",
       "searchUrl": "https://open.spotify.com/search/Super%20Normal%20Girl%20400",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Super%20Normal%20Girl%20400",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:34.863Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Super Normal Girl 400",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:25.882Z"
       },
       "firstSeen": "2025-05-31",
       "lastSeen": "2025-05-31",
@@ -14455,11 +14803,14 @@
       "id": "richmond-rainbow-pride",
       "name": "Richmond Rainbow Pride",
       "searchUrl": "https://open.spotify.com/search/Richmond%20Rainbow%20Pride",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Richmond%20Rainbow%20Pride",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:36.338Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Richmond Rainbow Pride",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:26.329Z"
       },
       "firstSeen": "2025-06-01",
       "lastSeen": "2025-06-01",
@@ -14602,11 +14953,14 @@
       "id": "riff-mama",
       "name": "Riff Mama",
       "searchUrl": "https://open.spotify.com/search/Riff%20Mama",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Riff%20Mama",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:36.296Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Riff Mama",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:26.677Z"
       },
       "firstSeen": "2025-06-01",
       "lastSeen": "2025-06-01",
@@ -14833,11 +15187,21 @@
       "id": "eden-munoz",
       "name": "Eden Munoz",
       "searchUrl": "https://open.spotify.com/search/Eden%20Munoz",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/1t20wYnTiAT0Bs7H1hv9Wt",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:37.689Z",
-        "notFound": true
+        "id": "1t20wYnTiAT0Bs7H1hv9Wt",
+        "name": "EDEN",
+        "followers": 998457,
+        "popularity": 59,
+        "genres": [],
+        "verified": false,
+        "searchQuery": "Eden Munoz",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:27.044Z"
       },
       "firstSeen": "2025-06-01",
       "lastSeen": "2025-06-01",
@@ -15014,11 +15378,14 @@
       "id": "los-dela-4",
       "name": "Los Dela 4",
       "searchUrl": "https://open.spotify.com/search/Los%20Dela%204",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Los%20Dela%204",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:39.129Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Los Dela 4",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:27.375Z"
       },
       "firstSeen": "2025-06-01",
       "lastSeen": "2025-06-01",
@@ -15294,11 +15661,14 @@
       "id": "fogline",
       "name": "Fogline",
       "searchUrl": "https://open.spotify.com/search/Fogline",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Fogline",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:40.587Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Fogline",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:27.761Z"
       },
       "firstSeen": "2025-06-01",
       "lastSeen": "2025-06-01",
@@ -15314,11 +15684,14 @@
       "id": "marge-turner-and-the-outback-blue-band",
       "name": "Marge Turner And The Outback Blue Band",
       "searchUrl": "https://open.spotify.com/search/Marge%20Turner%20And%20The%20Outback%20Blue%20Band",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Marge%20Turner%20And%20The%20Outback%20Blue%20Band",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:40.652Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Marge Turner And The Outback Blue Band",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:28.102Z"
       },
       "firstSeen": "2025-06-02",
       "lastSeen": "2025-06-02",
@@ -15384,11 +15757,14 @@
       "id": "billy-batts-and-the-made-men",
       "name": "Billy Batts And The Made Men",
       "searchUrl": "https://open.spotify.com/search/Billy%20Batts%20And%20The%20Made%20Men",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Billy%20Batts%20And%20The%20Made%20Men",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:40.578Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Billy Batts And The Made Men",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:28.523Z"
       },
       "firstSeen": "2025-06-02",
       "lastSeen": "2025-06-02",
@@ -15431,11 +15807,14 @@
       "id": "space-on-bass",
       "name": "Space On Bass",
       "searchUrl": "https://open.spotify.com/search/Space%20On%20Bass",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Space%20On%20Bass",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:40.636Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Space On Bass",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:28.874Z"
       },
       "firstSeen": "2025-06-03",
       "lastSeen": "2025-06-03",
@@ -15451,11 +15830,14 @@
       "id": "ear-clap",
       "name": "Ear Clap",
       "searchUrl": "https://open.spotify.com/search/Ear%20Clap",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Ear%20Clap",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:41.975Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Ear Clap",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:30.224Z"
       },
       "firstSeen": "2025-06-03",
       "lastSeen": "2025-06-03",
@@ -15495,11 +15877,14 @@
       "id": "sun-of-jupiter",
       "name": "Sun Of Jupiter",
       "searchUrl": "https://open.spotify.com/search/Sun%20Of%20Jupiter",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Sun%20Of%20Jupiter",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:41.972Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Sun Of Jupiter",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:30.659Z"
       },
       "firstSeen": "2025-06-03",
       "lastSeen": "2025-06-03",
@@ -15515,11 +15900,14 @@
       "id": "neoriffs",
       "name": "Neoriffs",
       "searchUrl": "https://open.spotify.com/search/Neoriffs",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Neoriffs",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:42.046Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Neoriffs",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:31.043Z"
       },
       "firstSeen": "2025-06-03",
       "lastSeen": "2025-06-03",
@@ -15876,11 +16264,14 @@
       "id": "minuus-5",
       "name": "Minuus 5",
       "searchUrl": "https://open.spotify.com/search/Minuus%205",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Minuus%205",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:43.376Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Minuus 5",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:31.457Z"
       },
       "firstSeen": "2025-06-04",
       "lastSeen": "2025-06-04",
@@ -15923,11 +16314,14 @@
       "id": "blues-defenders",
       "name": "Blues Defenders",
       "searchUrl": "https://open.spotify.com/search/Blues%20Defenders",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Blues%20Defenders",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:43.368Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Blues Defenders",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:31.851Z"
       },
       "firstSeen": "2025-06-04",
       "lastSeen": "2025-06-04",
@@ -15991,11 +16385,14 @@
       "id": "cardboard-coffin",
       "name": "Cardboard Coffin",
       "searchUrl": "https://open.spotify.com/search/Cardboard%20Coffin",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Cardboard%20Coffin",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:44.837Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Cardboard Coffin",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:32.200Z"
       },
       "firstSeen": "2025-06-04",
       "lastSeen": "2025-06-04",
@@ -16390,11 +16787,14 @@
       "id": "zack-rodell",
       "name": "Zack Rodell",
       "searchUrl": "https://open.spotify.com/search/Zack%20Rodell",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Zack%20Rodell",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:46.190Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Zack Rodell",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:32.540Z"
       },
       "firstSeen": "2025-06-05",
       "lastSeen": "2025-06-05",
@@ -16438,11 +16838,21 @@
       "id": "war-troll",
       "name": "War Troll",
       "searchUrl": "https://open.spotify.com/search/War%20Troll",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/3ICyfoySNDZqtBVmaBT84I",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:47.657Z",
-        "notFound": true
+        "id": "3ICyfoySNDZqtBVmaBT84I",
+        "name": "War",
+        "followers": 499118,
+        "popularity": 62,
+        "genres": [],
+        "verified": false,
+        "searchQuery": "War Troll",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:32.935Z"
       },
       "firstSeen": "2025-06-05",
       "lastSeen": "2025-06-05",
@@ -16644,11 +17054,14 @@
       "id": "military-genus",
       "name": "Military Genus",
       "searchUrl": "https://open.spotify.com/search/Military%20Genus",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Military%20Genus",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:47.645Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Military Genus",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:33.312Z"
       },
       "firstSeen": "2025-06-05",
       "lastSeen": "2025-06-05",
@@ -16664,11 +17077,14 @@
       "id": "circuit-split",
       "name": "Circuit Split",
       "searchUrl": "https://open.spotify.com/search/Circuit%20Split",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Circuit%20Split",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:47.613Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Circuit Split",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:33.706Z"
       },
       "firstSeen": "2025-06-05",
       "lastSeen": "2025-06-05",
@@ -16943,11 +17359,14 @@
       "id": "yours-for-ever-yours",
       "name": "Yours For Ever Yours",
       "searchUrl": "https://open.spotify.com/search/Yours%20For%20Ever%20Yours",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Yours%20For%20Ever%20Yours",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:50.465Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Yours For Ever Yours",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:35.179Z"
       },
       "firstSeen": "2025-06-05",
       "lastSeen": "2025-06-05",
@@ -16963,11 +17382,14 @@
       "id": "igotmytopsurgeyatdares",
       "name": "Igotmytopsurgeyatdares",
       "searchUrl": "https://open.spotify.com/search/Igotmytopsurgeyatdares",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Igotmytopsurgeyatdares",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:50.371Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Igotmytopsurgeyatdares",
+        "searchResults": 1,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:35.492Z"
       },
       "firstSeen": "2025-06-05",
       "lastSeen": "2025-06-05",
@@ -17007,11 +17429,14 @@
       "id": "us-air-guitar-championships",
       "name": "US Air Guitar Championships",
       "searchUrl": "https://open.spotify.com/search/US%20Air%20Guitar%20Championships",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/US%20Air%20Guitar%20Championships",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:50.354Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "US Air Guitar Championships",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:35.847Z"
       },
       "firstSeen": "2025-06-06",
       "lastSeen": "2025-06-06",
@@ -17701,11 +18126,14 @@
       "id": "dj-tiedye-trippin",
       "name": "dj Tiedye Trippin",
       "searchUrl": "https://open.spotify.com/search/dj%20Tiedye%20Trippin",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/dj%20Tiedye%20Trippin",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:54.879Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "dj Tiedye Trippin",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:36.242Z"
       },
       "firstSeen": "2025-06-06",
       "lastSeen": "2025-06-06",
@@ -17747,11 +18175,21 @@
       "id": "sissy-fit",
       "name": "Sissy Fit",
       "searchUrl": "https://open.spotify.com/search/Sissy%20Fit",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/4Rgle3oPivsxq5Z5HrqCBj",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:54.984Z",
-        "notFound": true
+        "id": "4Rgle3oPivsxq5Z5HrqCBj",
+        "name": "Sissy Fitt",
+        "followers": 4,
+        "popularity": 0,
+        "genres": [],
+        "verified": false,
+        "searchQuery": "Sissy Fit",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:36.596Z"
       },
       "firstSeen": "2025-06-06",
       "lastSeen": "2025-06-06",
@@ -17815,11 +18253,14 @@
       "id": "winston-smith-solo-exhibition",
       "name": "Winston Smith Solo Exhibition",
       "searchUrl": "https://open.spotify.com/search/Winston%20Smith%20Solo%20Exhibition",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Winston%20Smith%20Solo%20Exhibition",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:54.824Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Winston Smith Solo Exhibition",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:36.942Z"
       },
       "firstSeen": "2025-06-06",
       "lastSeen": "2025-06-06",
@@ -17861,11 +18302,14 @@
       "id": "sound-ones",
       "name": "Sound Ones",
       "searchUrl": "https://open.spotify.com/search/Sound%20Ones",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Sound%20Ones",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:54.954Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Sound Ones",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:37.284Z"
       },
       "firstSeen": "2025-06-07",
       "lastSeen": "2025-06-07",
@@ -18353,11 +18797,14 @@
       "id": "mark-pauline",
       "name": "Mark Pauline",
       "searchUrl": "https://open.spotify.com/search/Mark%20Pauline",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Mark%20Pauline",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:57.770Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Mark Pauline",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:37.628Z"
       },
       "firstSeen": "2025-06-07",
       "lastSeen": "2025-06-07",
@@ -18373,11 +18820,14 @@
       "id": "tina-blaine",
       "name": "Tina Blaine",
       "searchUrl": "https://open.spotify.com/search/Tina%20Blaine",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Tina%20Blaine",
       "spotifyVerified": false,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:57.718Z",
-        "notFound": true
+        "notFound": true,
+        "searchQuery": "Tina Blaine",
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:37.970Z"
       },
       "firstSeen": "2025-06-07",
       "lastSeen": "2025-06-07",
@@ -18393,11 +18843,24 @@
       "id": "cindy-cohn",
       "name": "Cindy Cohn",
       "searchUrl": "https://open.spotify.com/search/Cindy%20Cohn",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/4uTHiWdOkO9h0fCktdDbrF",
+      "spotifyVerified": true,
       "spotifyData": {
-        "verifiedAt": "2025-05-29T17:02:57.804Z",
-        "notFound": true
+        "id": "4uTHiWdOkO9h0fCktdDbrF",
+        "name": "陳予新",
+        "followers": 752,
+        "popularity": 6,
+        "genres": [
+          "mandopop",
+          "taiwanese pop"
+        ],
+        "verified": false,
+        "searchQuery": "Cindy Cohn",
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-05-29T18:42:38.332Z"
       },
       "firstSeen": "2025-06-07",
       "lastSeen": "2025-06-07",
@@ -66103,13 +66566,13 @@
     }
   ],
   "total": 2595,
-  "lastUpdated": "2025-05-29T18:40:25.922Z",
+  "lastUpdated": "2025-05-29T18:41:46.131Z",
   "spotifyVerification": {
     "lastVerified": "2025-05-29T17:07:31.661Z",
     "totalProcessed": 2595,
     "totalVerified": 2318,
     "totalFailed": 277,
-    "lastProcessed": "2025-05-29T18:40:25.923Z",
+    "lastProcessed": "2025-05-29T18:41:46.132Z",
     "stats": {
       "totalArtists": 2595,
       "spotifyVerified": 2318,
