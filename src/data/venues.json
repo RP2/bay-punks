@@ -11,7 +11,10 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["independent", "Independent, S.F."]
+      "aliases": [
+        "independent",
+        "Independent, S.F."
+      ]
     },
     {
       "id": "mountain-winery-saratoga",
@@ -24,7 +27,9 @@
       "address": null,
       "city": "Saratoga",
       "displayLocation": "Saratoga",
-      "aliases": ["Mountain Winery, Saratoga"]
+      "aliases": [
+        "Mountain Winery, Saratoga"
+      ]
     },
     {
       "id": "great-amerian-music-hall-sf",
@@ -53,7 +58,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Bottom of the Hill, S.F."]
+      "aliases": [
+        "Bottom of the Hill, S.F."
+      ]
     },
     {
       "id": "ivy-room-albany",
@@ -66,7 +73,9 @@
       "address": null,
       "city": "Albany",
       "displayLocation": "Albany",
-      "aliases": ["Ivy Room, Albany"]
+      "aliases": [
+        "Ivy Room, Albany"
+      ]
     },
     {
       "id": "fox-theater",
@@ -79,7 +88,10 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["fox theater", "Fox Theater, Oakland"]
+      "aliases": [
+        "fox theater",
+        "Fox Theater, Oakland"
+      ]
     },
     {
       "id": "chapel",
@@ -92,7 +104,10 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["chapel", "Chapel, S.F."]
+      "aliases": [
+        "chapel",
+        "Chapel, S.F."
+      ]
     },
     {
       "id": "regency-ballroom-sf",
@@ -105,7 +120,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Regency Ballroom, S.F."]
+      "aliases": [
+        "Regency Ballroom, S.F."
+      ]
     },
     {
       "id": "uptown-theater-napa",
@@ -118,7 +135,9 @@
       "address": null,
       "city": "Napa",
       "displayLocation": "Napa",
-      "aliases": ["Uptown Theater, Napa"]
+      "aliases": [
+        "Uptown Theater, Napa"
+      ]
     },
     {
       "id": "august-hall-sf",
@@ -131,7 +150,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["August Hall, S.F."]
+      "aliases": [
+        "August Hall, S.F."
+      ]
     },
     {
       "id": "greek-theater-uc-berkeley-campus",
@@ -144,7 +165,9 @@
       "address": null,
       "city": "UC Berkeley Campus",
       "displayLocation": "UC Berkeley Campus",
-      "aliases": ["Greek Theater, UC Berkeley Campus"]
+      "aliases": [
+        "Greek Theater, UC Berkeley Campus"
+      ]
     },
     {
       "id": "rickshaw-stop-sf",
@@ -157,7 +180,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Rickshaw Stop, S.F."]
+      "aliases": [
+        "Rickshaw Stop, S.F."
+      ]
     },
     {
       "id": "hopmonk-tavern-novato",
@@ -170,7 +195,9 @@
       "address": null,
       "city": "Novato",
       "displayLocation": "Novato",
-      "aliases": ["Hopmonk Tavern, Novato"]
+      "aliases": [
+        "Hopmonk Tavern, Novato"
+      ]
     },
     {
       "id": "warfield",
@@ -183,7 +210,10 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["warfield", "Warfield, S.F."]
+      "aliases": [
+        "warfield",
+        "Warfield, S.F."
+      ]
     },
     {
       "id": "masonic-sf",
@@ -196,7 +226,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Masonic, S.F."]
+      "aliases": [
+        "Masonic, S.F."
+      ]
     },
     {
       "id": "924-gilman-street-berkeley",
@@ -209,7 +241,9 @@
       "address": "924 Gilman Street",
       "city": "Berkeley",
       "displayLocation": "924 Gilman Street, Berkeley",
-      "aliases": ["924 Gilman Street, Berkeley"]
+      "aliases": [
+        "924 Gilman Street, Berkeley"
+      ]
     },
     {
       "id": "fillmore",
@@ -222,7 +256,10 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["fillmore", "Fillmore, S.F."]
+      "aliases": [
+        "fillmore",
+        "Fillmore, S.F."
+      ]
     },
     {
       "id": "thee-stork-club-oakland",
@@ -235,7 +272,9 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["Thee Stork Club, Oakland"]
+      "aliases": [
+        "Thee Stork Club, Oakland"
+      ]
     },
     {
       "id": "kilowatt-sf",
@@ -248,7 +287,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Kilowatt, S.F."]
+      "aliases": [
+        "Kilowatt, S.F."
+      ]
     },
     {
       "id": "blue-note-napa",
@@ -261,7 +302,9 @@
       "address": null,
       "city": "Napa",
       "displayLocation": "Napa",
-      "aliases": ["Blue Note, Napa"]
+      "aliases": [
+        "Blue Note, Napa"
+      ]
     },
     {
       "id": "shoreline-amphitheater-mountain-view",
@@ -291,7 +334,10 @@
       "address": null,
       "city": "Berkeley",
       "displayLocation": "Berkeley",
-      "aliases": ["cornerstone", "Cornerstone, Berkeley"]
+      "aliases": [
+        "cornerstone",
+        "Cornerstone, Berkeley"
+      ]
     },
     {
       "id": "meritage-resort-napa",
@@ -304,7 +350,9 @@
       "address": null,
       "city": "Napa",
       "displayLocation": "Napa",
-      "aliases": ["Meritage Resort, Napa"]
+      "aliases": [
+        "Meritage Resort, Napa"
+      ]
     },
     {
       "id": "elis-mile-high-club-oakland",
@@ -317,7 +365,9 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["Eli's Mile High Club, Oakland"]
+      "aliases": [
+        "Eli's Mile High Club, Oakland"
+      ]
     },
     {
       "id": "alameda-county-fair-pleasanton",
@@ -330,7 +380,9 @@
       "address": null,
       "city": "Pleasanton",
       "displayLocation": "Pleasanton",
-      "aliases": ["Alameda County Fair, Pleasanton"]
+      "aliases": [
+        "Alameda County Fair, Pleasanton"
+      ]
     },
     {
       "id": "catalyst-atrium-santa-cruz",
@@ -343,7 +395,10 @@
       "address": null,
       "city": "Santa Cruz",
       "displayLocation": "Santa Cruz",
-      "aliases": ["Catalyst Atrium, Santa Cruz", "Catalst Atrium, Santa Cruz"]
+      "aliases": [
+        "Catalyst Atrium, Santa Cruz",
+        "Catalst Atrium, Santa Cruz"
+      ]
     },
     {
       "id": "uc-theater",
@@ -356,7 +411,10 @@
       "address": null,
       "city": "Berkeley",
       "displayLocation": "Berkeley",
-      "aliases": ["uc theater", "UC Theater, Berkeley"]
+      "aliases": [
+        "uc theater",
+        "UC Theater, Berkeley"
+      ]
     },
     {
       "id": "moes-alley-santa-cruz",
@@ -369,7 +427,10 @@
       "address": null,
       "city": "Santa Cruz",
       "displayLocation": "Santa Cruz",
-      "aliases": ["Moe's Alley, Santa Cruz", "Moe's Ally, Santa Cruz"]
+      "aliases": [
+        "Moe's Alley, Santa Cruz",
+        "Moe's Ally, Santa Cruz"
+      ]
     },
     {
       "id": "warriors-stadium-sf",
@@ -399,7 +460,9 @@
       "address": null,
       "city": "Santa Cruz",
       "displayLocation": "Santa Cruz",
-      "aliases": ["Catalyst, Santa Cruz"]
+      "aliases": [
+        "Catalyst, Santa Cruz"
+      ]
     },
     {
       "id": "oreillys-sf",
@@ -412,7 +475,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["O'Reilly's, S.F."]
+      "aliases": [
+        "O'Reilly's, S.F."
+      ]
     },
     {
       "id": "ritz-san-jose",
@@ -425,7 +490,9 @@
       "address": null,
       "city": "San Jose",
       "displayLocation": "San Jose",
-      "aliases": ["Ritz, San Jose"]
+      "aliases": [
+        "Ritz, San Jose"
+      ]
     },
     {
       "id": "brick-and-mortar-sf",
@@ -438,7 +505,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Brick and Mortar, S.F."]
+      "aliases": [
+        "Brick and Mortar, S.F."
+      ]
     },
     {
       "id": "stern-grove-19th-avenue",
@@ -451,7 +520,9 @@
       "address": null,
       "city": "19th Avenue",
       "displayLocation": "19th Avenue",
-      "aliases": ["Stern Grove, 19th Avenue"]
+      "aliases": [
+        "Stern Grove, 19th Avenue"
+      ]
     },
     {
       "id": "downtown-barbecue-santa-rosa",
@@ -464,7 +535,9 @@
       "address": null,
       "city": "Santa Rosa",
       "displayLocation": "Santa Rosa",
-      "aliases": ["Downtown Barbecue, Santa Rosa"]
+      "aliases": [
+        "Downtown Barbecue, Santa Rosa"
+      ]
     },
     {
       "id": "stay-gold-deli-oakland",
@@ -477,7 +550,9 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["Stay Gold Deli, Oakland"]
+      "aliases": [
+        "Stay Gold Deli, Oakland"
+      ]
     },
     {
       "id": "knockout-sf",
@@ -490,7 +565,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Knockout, S.F."]
+      "aliases": [
+        "Knockout, S.F."
+      ]
     },
     {
       "id": "bimbos-365-club-sf",
@@ -503,7 +580,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Bimbo's 365 Club, S.F."]
+      "aliases": [
+        "Bimbo's 365 Club, S.F."
+      ]
     },
     {
       "id": "jack-kerouac-alley-sf",
@@ -516,7 +595,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Jack Kerouac Alley, S.F."]
+      "aliases": [
+        "Jack Kerouac Alley, S.F."
+      ]
     },
     {
       "id": "phoenix-theater-petaluma",
@@ -529,7 +610,10 @@
       "address": null,
       "city": "Petaluma",
       "displayLocation": "Petaluma",
-      "aliases": ["Phoenix Theater, Petaluma", "Phoenix Theatear, Petaluma"]
+      "aliases": [
+        "Phoenix Theater, Petaluma",
+        "Phoenix Theatear, Petaluma"
+      ]
     },
     {
       "id": "pavilion-concord",
@@ -542,7 +626,9 @@
       "address": null,
       "city": "Concord",
       "displayLocation": "Concord",
-      "aliases": ["Pavilion, Concord"]
+      "aliases": [
+        "Pavilion, Concord"
+      ]
     },
     {
       "id": "shark-tank-san-jose",
@@ -555,7 +641,9 @@
       "address": null,
       "city": "San Jose",
       "displayLocation": "San Jose",
-      "aliases": ["Shark Tank, San Jose"]
+      "aliases": [
+        "Shark Tank, San Jose"
+      ]
     },
     {
       "id": "arena-oakland",
@@ -568,7 +656,9 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["Arena, Oakland"]
+      "aliases": [
+        "Arena, Oakland"
+      ]
     },
     {
       "id": "neck-of-the-woods-sf",
@@ -581,7 +671,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Neck Of The Woods, S.F."]
+      "aliases": [
+        "Neck Of The Woods, S.F."
+      ]
     },
     {
       "id": "davies-symphony-hall-sf",
@@ -594,7 +686,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Davies Symphony Hall, S.F."]
+      "aliases": [
+        "Davies Symphony Hall, S.F."
+      ]
     },
     {
       "id": "black-cat-sf",
@@ -607,7 +701,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Black Cat, S.F."]
+      "aliases": [
+        "Black Cat, S.F."
+      ]
     },
     {
       "id": "dna-lounge-sf",
@@ -620,7 +716,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["DNA Lounge, S.F."]
+      "aliases": [
+        "DNA Lounge, S.F."
+      ]
     },
     {
       "id": "rio-theater-santa-cruz",
@@ -633,7 +731,9 @@
       "address": null,
       "city": "Santa Cruz",
       "displayLocation": "Santa Cruz",
-      "aliases": ["Rio Theater, Santa Cruz"]
+      "aliases": [
+        "Rio Theater, Santa Cruz"
+      ]
     },
     {
       "id": "civic-auditorium-sf",
@@ -646,7 +746,10 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Civic Auditorium, S.F.", "Civic Audtorium, S.F."]
+      "aliases": [
+        "Civic Auditorium, S.F.",
+        "Civic Audtorium, S.F."
+      ]
     },
     {
       "id": "49s-stadium-santa-clara",
@@ -659,7 +762,10 @@
       "address": null,
       "city": "Santa Clara",
       "displayLocation": "Santa Clara",
-      "aliases": ["49's Stadium, Santa Clara", "49er's Stadium, Santa Clara"]
+      "aliases": [
+        "49's Stadium, Santa Clara",
+        "49er's Stadium, Santa Clara"
+      ]
     },
     {
       "id": "giants-ball-park-sf",
@@ -689,7 +795,9 @@
       "address": null,
       "city": "Santa Cruz",
       "displayLocation": "Santa Cruz",
-      "aliases": ["Streetlight Records, Santa Cruz"]
+      "aliases": [
+        "Streetlight Records, Santa Cruz"
+      ]
     },
     {
       "id": "eagle-sf",
@@ -702,7 +810,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Eagle, S.F."]
+      "aliases": [
+        "Eagle, S.F."
+      ]
     },
     {
       "id": "freight-berkeley",
@@ -715,7 +825,9 @@
       "address": null,
       "city": "Berkeley",
       "displayLocation": "Berkeley",
-      "aliases": ["Freight, Berkeley"]
+      "aliases": [
+        "Freight, Berkeley"
+      ]
     },
     {
       "id": "san-jose-civic-center-san-jose",
@@ -728,7 +840,9 @@
       "address": null,
       "city": "San Jose",
       "displayLocation": "San Jose",
-      "aliases": ["San Jose Civic Center, San Jose"]
+      "aliases": [
+        "San Jose Civic Center, San Jose"
+      ]
     },
     {
       "id": "cafe-du-nord-sf",
@@ -741,7 +855,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Cafe Du Nord, S.F."]
+      "aliases": [
+        "Cafe Du Nord, S.F."
+      ]
     },
     {
       "id": "palace-of-fine-arts-sf",
@@ -754,7 +870,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Palace of Fine Arts, S.F."]
+      "aliases": [
+        "Palace of Fine Arts, S.F."
+      ]
     },
     {
       "id": "yoshis-oakland",
@@ -767,7 +885,9 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["Yoshi's, Oakland"]
+      "aliases": [
+        "Yoshi's, Oakland"
+      ]
     },
     {
       "id": "frost-amphitheater-stanford-campus-palo-alto",
@@ -780,7 +900,9 @@
       "address": "Stanford Campus",
       "city": "Palo Alto",
       "displayLocation": "Stanford Campus, Palo Alto",
-      "aliases": ["Frost Amphitheater, Stanford Campus, Palo Alto"]
+      "aliases": [
+        "Frost Amphitheater, Stanford Campus, Palo Alto"
+      ]
     },
     {
       "id": "little-hill-lounge-el-cerrito",
@@ -793,7 +915,9 @@
       "address": null,
       "city": "El Cerrito",
       "displayLocation": "El Cerrito",
-      "aliases": ["Little Hill Lounge, El Cerrito"]
+      "aliases": [
+        "Little Hill Lounge, El Cerrito"
+      ]
     },
     {
       "id": "sweetwater-music-hall-mill-valley",
@@ -806,7 +930,9 @@
       "address": null,
       "city": "Mill Valley",
       "displayLocation": "Mill Valley",
-      "aliases": ["Sweetwater Music Hall, Mill Valley"]
+      "aliases": [
+        "Sweetwater Music Hall, Mill Valley"
+      ]
     },
     {
       "id": "guild-theater-memlo-park",
@@ -819,7 +945,9 @@
       "address": null,
       "city": "Memlo Park",
       "displayLocation": "Memlo Park",
-      "aliases": ["Guild Theater, Memlo Park"]
+      "aliases": [
+        "Guild Theater, Memlo Park"
+      ]
     },
     {
       "id": "new-parish-oakland",
@@ -832,7 +960,9 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["New Parish, Oakland"]
+      "aliases": [
+        "New Parish, Oakland"
+      ]
     },
     {
       "id": "pt-san-pablo-harbor-1900-stenmark-dr-richmond",
@@ -845,7 +975,9 @@
       "address": "1900 Stenmark Dr.",
       "city": "Richmond",
       "displayLocation": "1900 Stenmark Dr., Richmond",
-      "aliases": ["Pt. San Pablo Harbor, 1900 Stenmark Dr., Richmond"]
+      "aliases": [
+        "Pt. San Pablo Harbor, 1900 Stenmark Dr., Richmond"
+      ]
     },
     {
       "id": "thee-parkside-sf",
@@ -858,7 +990,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Thee Parkside, S.F."]
+      "aliases": [
+        "Thee Parkside, S.F."
+      ]
     },
     {
       "id": "thrillhouse-records-sf",
@@ -871,7 +1005,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Thrillhouse Records, S.F."]
+      "aliases": [
+        "Thrillhouse Records, S.F."
+      ]
     },
     {
       "id": "blue-lagoon-santa-cruz",
@@ -884,7 +1020,9 @@
       "address": null,
       "city": "Santa Cruz",
       "displayLocation": "Santa Cruz",
-      "aliases": ["Blue Lagoon, Santa Cruz"]
+      "aliases": [
+        "Blue Lagoon, Santa Cruz"
+      ]
     },
     {
       "id": "empress-theater-vallejo",
@@ -897,7 +1035,9 @@
       "address": null,
       "city": "Vallejo",
       "displayLocation": "Vallejo",
-      "aliases": ["Empress Theater, Vallejo"]
+      "aliases": [
+        "Empress Theater, Vallejo"
+      ]
     },
     {
       "id": "paramount-theater-oakland",
@@ -910,7 +1050,9 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["Paramount Theater, Oakland"]
+      "aliases": [
+        "Paramount Theater, Oakland"
+      ]
     },
     {
       "id": "hopmonk-sebastopol",
@@ -923,7 +1065,9 @@
       "address": null,
       "city": "Sebastopol",
       "displayLocation": "Sebastopol",
-      "aliases": ["Hopmonk, Sebastopol"]
+      "aliases": [
+        "Hopmonk, Sebastopol"
+      ]
     },
     {
       "id": "forest-meadows-amphitheater-890-belle-avenue-san-rafael",
@@ -936,7 +1080,9 @@
       "address": "890 Belle Avenue",
       "city": "San Rafael",
       "displayLocation": "890 Belle Avenue, San Rafael",
-      "aliases": ["Forest Meadows Amphitheater, 890 Belle Avenue, San Rafael"]
+      "aliases": [
+        "Forest Meadows Amphitheater, 890 Belle Avenue, San Rafael"
+      ]
     },
     {
       "id": "golden-gate-park-sf",
@@ -949,7 +1095,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Golden Gate Park, S.F."]
+      "aliases": [
+        "Golden Gate Park, S.F."
+      ]
     },
     {
       "id": "outside-lands-golden-gate-park-sf",
@@ -962,7 +1110,9 @@
       "address": "Golden Gate Park",
       "city": "S.F.",
       "displayLocation": "Golden Gate Park, S.F.",
-      "aliases": ["Outside Lands, Golden Gate Park, S.F."]
+      "aliases": [
+        "Outside Lands, Golden Gate Park, S.F."
+      ]
     },
     {
       "id": "cow-palace-daily-city",
@@ -975,7 +1125,9 @@
       "address": null,
       "city": "Daily City",
       "displayLocation": "Daily City",
-      "aliases": ["Cow Palace, Daily City"]
+      "aliases": [
+        "Cow Palace, Daily City"
+      ]
     },
     {
       "id": "auditorium-403-civic-center-plaza-richmond",
@@ -1004,7 +1156,9 @@
       "address": null,
       "city": "San Jose",
       "displayLocation": "San Jose",
-      "aliases": ["Caravan Lounge, San Jose"]
+      "aliases": [
+        "Caravan Lounge, San Jose"
+      ]
     },
     {
       "id": "crepe-place-santa-cruz",
@@ -1017,7 +1171,9 @@
       "address": null,
       "city": "Santa Cruz",
       "displayLocation": "Santa Cruz",
-      "aliases": ["Crepe Place, Santa Cruz"]
+      "aliases": [
+        "Crepe Place, Santa Cruz"
+      ]
     },
     {
       "id": "el-rio-sf",
@@ -1030,7 +1186,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["El Rio, S.F."]
+      "aliases": [
+        "El Rio, S.F."
+      ]
     },
     {
       "id": "tamarack-oakland",
@@ -1043,7 +1201,9 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["Tamarack, Oakland"]
+      "aliases": [
+        "Tamarack, Oakland"
+      ]
     },
     {
       "id": "winters-tavern-pacifica",
@@ -1056,7 +1216,9 @@
       "address": null,
       "city": "Pacifica",
       "displayLocation": "Pacifica",
-      "aliases": ["Winters Tavern, Pacifica"]
+      "aliases": [
+        "Winters Tavern, Pacifica"
+      ]
     },
     {
       "id": "la-onda-festival-napa",
@@ -1069,7 +1231,9 @@
       "address": null,
       "city": "Napa",
       "displayLocation": "Napa",
-      "aliases": ["La Onda Festival, Napa"]
+      "aliases": [
+        "La Onda Festival, Napa"
+      ]
     },
     {
       "id": "monte-rio-amphitheater-9925-main-street-mounte-rio",
@@ -1082,7 +1246,9 @@
       "address": "9925 Main Street",
       "city": "Mounte Rio",
       "displayLocation": "9925 Main Street, Mounte Rio",
-      "aliases": ["Monte Rio Amphitheater, 9925 Main Street, Mounte Rio"]
+      "aliases": [
+        "Monte Rio Amphitheater, 9925 Main Street, Mounte Rio"
+      ]
     },
     {
       "id": "stanford-stadium-stanford-campus-palo-alto",
@@ -1095,7 +1261,9 @@
       "address": "Stanford Campus",
       "city": "Palo Alto",
       "displayLocation": "Stanford Campus, Palo Alto",
-      "aliases": ["Stanford Stadium, Stanford Campus, Palo Alto"]
+      "aliases": [
+        "Stanford Stadium, Stanford Campus, Palo Alto"
+      ]
     },
     {
       "id": "crybaby-oakland",
@@ -1108,7 +1276,9 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["Crybaby, Oakland"]
+      "aliases": [
+        "Crybaby, Oakland"
+      ]
     },
     {
       "id": "indpendent-sf",
@@ -1121,7 +1291,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Indpendent, S.F."]
+      "aliases": [
+        "Indpendent, S.F."
+      ]
     },
     {
       "id": "palace-of-fine-arts-3301-lyon-street-sf",
@@ -1134,7 +1306,9 @@
       "address": "3301 Lyon Street",
       "city": "S.F.",
       "displayLocation": "3301 Lyon Street, S.F.",
-      "aliases": ["Palace of Fine Arts, 3301 Lyon Street, S.F."]
+      "aliases": [
+        "Palace of Fine Arts, 3301 Lyon Street, S.F."
+      ]
     },
     {
       "id": "peacock-lounge-sf",
@@ -1147,7 +1321,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Peacock Lounge, S.F."]
+      "aliases": [
+        "Peacock Lounge, S.F."
+      ]
     },
     {
       "id": "redwood-stage-downtown-festival-novato",
@@ -1160,7 +1336,9 @@
       "address": "Downtown Festival",
       "city": "Novato",
       "displayLocation": "Downtown Festival, Novato",
-      "aliases": ["Redwood Stage, Downtown Festival, Novato"]
+      "aliases": [
+        "Redwood Stage, Downtown Festival, Novato"
+      ]
     },
     {
       "id": "3rd-and-army-skatepark-sf",
@@ -1173,7 +1351,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["3rd and Army Skatepark, S.F."]
+      "aliases": [
+        "3rd and Army Skatepark, S.F."
+      ]
     },
     {
       "id": "winters-tavern-pacific-beach",
@@ -1186,7 +1366,9 @@
       "address": null,
       "city": "Pacific Beach",
       "displayLocation": "Pacific Beach",
-      "aliases": ["Winters Tavern, Pacific Beach"]
+      "aliases": [
+        "Winters Tavern, Pacific Beach"
+      ]
     },
     {
       "id": "pitts-pub-4207-judah-street-sf",
@@ -1199,7 +1381,9 @@
       "address": "4207 Judah Street",
       "city": "S.F.",
       "displayLocation": "4207 Judah Street, S.F.",
-      "aliases": ["Pitt's Pub, 4207 Judah Street, S.F."]
+      "aliases": [
+        "Pitt's Pub, 4207 Judah Street, S.F."
+      ]
     },
     {
       "id": "120-5th-street-santa-rosa",
@@ -1212,7 +1396,9 @@
       "address": null,
       "city": "Santa Rosa",
       "displayLocation": "Santa Rosa",
-      "aliases": ["120 5th Street, Santa Rosa"]
+      "aliases": [
+        "120 5th Street, Santa Rosa"
+      ]
     },
     {
       "id": "presidio-theater-99-moraga-avenue-sf",
@@ -1225,7 +1411,9 @@
       "address": "99 Moraga Avenue",
       "city": "S.F.",
       "displayLocation": "99 Moraga Avenue, S.F.",
-      "aliases": ["Presidio Theater, 99 Moraga Avenue, S.F."]
+      "aliases": [
+        "Presidio Theater, 99 Moraga Avenue, S.F."
+      ]
     },
     {
       "id": "victory-stables-2328-san-pablo-ave-oakland",
@@ -1254,7 +1442,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["4 Star Theater, S.F."]
+      "aliases": [
+        "4 Star Theater, S.F."
+      ]
     },
     {
       "id": "mosswood-park-amphitheater-3612-webster-st-oakland",
@@ -1283,7 +1473,9 @@
       "address": null,
       "city": "UC Berkeley",
       "displayLocation": "UC Berkeley",
-      "aliases": ["Greek Theater, UC Berkeley"]
+      "aliases": [
+        "Greek Theater, UC Berkeley"
+      ]
     },
     {
       "id": "gundlach-bundschu-winery-sonoma",
@@ -1296,7 +1488,9 @@
       "address": null,
       "city": "Sonoma",
       "displayLocation": "Sonoma",
-      "aliases": ["Gundlach Bundschu Winery, Sonoma"]
+      "aliases": [
+        "Gundlach Bundschu Winery, Sonoma"
+      ]
     },
     {
       "id": "portola-music-festival-pier-80-sf",
@@ -1309,7 +1503,9 @@
       "address": "Pier 80",
       "city": "S.F.",
       "displayLocation": "Pier 80, S.F.",
-      "aliases": ["Portola Music Festival, Pier 80, S.F."]
+      "aliases": [
+        "Portola Music Festival, Pier 80, S.F."
+      ]
     },
     {
       "id": "mystic-theater-petaluma",
@@ -1322,7 +1518,9 @@
       "address": null,
       "city": "Petaluma",
       "displayLocation": "Petaluma",
-      "aliases": ["Mystic Theater, Petaluma"]
+      "aliases": [
+        "Mystic Theater, Petaluma"
+      ]
     },
     {
       "id": "rickshaw-stop",
@@ -1335,7 +1533,9 @@
       "address": null,
       "city": "",
       "displayLocation": "",
-      "aliases": ["Rickshaw Stop,"]
+      "aliases": [
+        "Rickshaw Stop,"
+      ]
     },
     {
       "id": "longboard-margarita-bar-pacifica",
@@ -1348,7 +1548,9 @@
       "address": null,
       "city": "Pacifica",
       "displayLocation": "Pacifica",
-      "aliases": ["Longboard Margarita Bar, Pacifica"]
+      "aliases": [
+        "Longboard Margarita Bar, Pacifica"
+      ]
     },
     {
       "id": "240-front-street-sf",
@@ -1361,7 +1563,9 @@
       "address": "240 Front Street",
       "city": "S.F.",
       "displayLocation": "240 Front Street, S.F.",
-      "aliases": ["240 Front Street, S.F."]
+      "aliases": [
+        "240 Front Street, S.F."
+      ]
     },
     {
       "id": "almost-famous-wine-2271-s-vasco-rd-livermore",
@@ -1374,7 +1578,9 @@
       "address": "2271 S Vasco Rd",
       "city": "Livermore",
       "displayLocation": "2271 S Vasco Rd, Livermore",
-      "aliases": ["Almost Famous Wine, 2271 S Vasco Rd, Livermore"]
+      "aliases": [
+        "Almost Famous Wine, 2271 S Vasco Rd, Livermore"
+      ]
     },
     {
       "id": "beauty-supply-shop-above-tay-ho-344-12th-street-oakland",
@@ -1387,7 +1593,9 @@
       "address": "344 12th Street",
       "city": "Oakland",
       "displayLocation": "344 12th Street, Oakland",
-      "aliases": ["Beauty Supply Shop Above Tay Ho, 344 12th Street, Oakland"]
+      "aliases": [
+        "Beauty Supply Shop Above Tay Ho, 344 12th Street, Oakland"
+      ]
     },
     {
       "id": "berkeley-art-house-2905-shattack-avenue-berkeley",
@@ -1400,7 +1608,9 @@
       "address": "2905 Shattack Avenue",
       "city": "Berkeley",
       "displayLocation": "2905 Shattack Avenue, Berkeley",
-      "aliases": ["Berkeley Art House, 2905 Shattack Avenue, Berkeley"]
+      "aliases": [
+        "Berkeley Art House, 2905 Shattack Avenue, Berkeley"
+      ]
     },
     {
       "id": "revolution-cafe-1670-7th-st-west-oakland",
@@ -1413,7 +1623,9 @@
       "address": null,
       "city": "1670 7th St. West Oakland",
       "displayLocation": "1670 7th St. West Oakland",
-      "aliases": ["Revolution Cafe, 1670 7th St. West Oakland"]
+      "aliases": [
+        "Revolution Cafe, 1670 7th St. West Oakland"
+      ]
     },
     {
       "id": "calvin-simmons-theater-henry-j-kaiser-center-oakland",
@@ -1426,7 +1638,9 @@
       "address": "Henry J. Kaiser Center",
       "city": "Oakland",
       "displayLocation": "Henry J. Kaiser Center, Oakland",
-      "aliases": ["Calvin Simmons Theater, Henry J. Kaiser Center, Oakland"]
+      "aliases": [
+        "Calvin Simmons Theater, Henry J. Kaiser Center, Oakland"
+      ]
     },
     {
       "id": "edinburgh-castle-sf",
@@ -1439,7 +1653,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Edinburgh Castle, S.F."]
+      "aliases": [
+        "Edinburgh Castle, S.F."
+      ]
     },
     {
       "id": "golden-kitchen-restaurant-925-o-farrell-street-sf",
@@ -1452,7 +1668,9 @@
       "address": "925 O' Farrell Street",
       "city": "S.F.",
       "displayLocation": "925 O' Farrell Street, S.F.",
-      "aliases": ["Golden Kitchen Restaurant, 925 O' Farrell Street, S.F."]
+      "aliases": [
+        "Golden Kitchen Restaurant, 925 O' Farrell Street, S.F."
+      ]
     },
     {
       "id": "grace-cathedral-1100-california-street-sf",
@@ -1465,7 +1683,9 @@
       "address": "1100 California Street",
       "city": "S.F.",
       "displayLocation": "1100 California Street, S.F.",
-      "aliases": ["Grace Cathedral, 1100 California Street, S.F."]
+      "aliases": [
+        "Grace Cathedral, 1100 California Street, S.F."
+      ]
     },
     {
       "id": "high-voltage-1824-w-san-carlos-street-san-jose",
@@ -1478,7 +1698,9 @@
       "address": "1824 W. San Carlos Street",
       "city": "San Jose",
       "displayLocation": "1824 W. San Carlos Street, San Jose",
-      "aliases": ["High Voltage, 1824 W. San Carlos Street, San Jose"]
+      "aliases": [
+        "High Voltage, 1824 W. San Carlos Street, San Jose"
+      ]
     },
     {
       "id": "hopmonk-tavern-sebastopol",
@@ -1491,7 +1713,9 @@
       "address": null,
       "city": "Sebastopol",
       "displayLocation": "Sebastopol",
-      "aliases": ["Hopmonk Tavern, Sebastopol"]
+      "aliases": [
+        "Hopmonk Tavern, Sebastopol"
+      ]
     },
     {
       "id": "lane-splitter-pizza-2645-san-pablo-avenue-emeryville",
@@ -1504,7 +1728,9 @@
       "address": "2645 San Pablo Avenue",
       "city": "Emeryville",
       "displayLocation": "2645 San Pablo Avenue, Emeryville",
-      "aliases": ["Lane Splitter Pizza, 2645 San Pablo Avenue, Emeryville"]
+      "aliases": [
+        "Lane Splitter Pizza, 2645 San Pablo Avenue, Emeryville"
+      ]
     },
     {
       "id": "vets-hall-846-front-street-santa-cruz",
@@ -1517,7 +1743,9 @@
       "address": "846 Front Street",
       "city": "Santa Cruz",
       "displayLocation": "846 Front Street, Santa Cruz",
-      "aliases": ["Vet's Hall, 846 Front Street, Santa Cruz"]
+      "aliases": [
+        "Vet's Hall, 846 Front Street, Santa Cruz"
+      ]
     },
     {
       "id": "civic-center-440-civic-center-plaza-richmnd",
@@ -1530,7 +1758,9 @@
       "address": "440 Civic Center Plaza",
       "city": "Richmnd",
       "displayLocation": "440 Civic Center Plaza, Richmnd",
-      "aliases": ["Civic Center, 440 Civic Center Plaza, Richmnd"]
+      "aliases": [
+        "Civic Center, 440 Civic Center Plaza, Richmnd"
+      ]
     },
     {
       "id": "lucca-beer-garden-439-first-street-benicia",
@@ -1543,7 +1773,9 @@
       "address": "439 First Street",
       "city": "Benicia",
       "displayLocation": "439 First Street, Benicia",
-      "aliases": ["Lucca Beer Garden, 439 First Street, Benicia"]
+      "aliases": [
+        "Lucca Beer Garden, 439 First Street, Benicia"
+      ]
     },
     {
       "id": "yesterdays-numbers-2054-powell-street-sf",
@@ -1556,7 +1788,9 @@
       "address": "2054 Powell Street",
       "city": "S.F.",
       "displayLocation": "2054 Powell Street, S.F.",
-      "aliases": ["Yesterday's Numbers, 2054 Powell Street, S.F."]
+      "aliases": [
+        "Yesterday's Numbers, 2054 Powell Street, S.F."
+      ]
     },
     {
       "id": "2nd-street-and-howard-street-sf",
@@ -1569,7 +1803,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["2nd Street and Howard Street, S.F."]
+      "aliases": [
+        "2nd Street and Howard Street, S.F."
+      ]
     },
     {
       "id": "boom-boom-room-sf",
@@ -1582,7 +1818,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Boom Boom Room, S.F."]
+      "aliases": [
+        "Boom Boom Room, S.F."
+      ]
     },
     {
       "id": "a-house-show-225-potero-avenue-sf",
@@ -1595,7 +1833,9 @@
       "address": "225 Potero Avenue",
       "city": "S.F.",
       "displayLocation": "225 Potero Avenue, S.F.",
-      "aliases": ["a House Show, 225 Potero Avenue, S.F."]
+      "aliases": [
+        "a House Show, 225 Potero Avenue, S.F."
+      ]
     },
     {
       "id": "lane-splitter-pizza-emeryville",
@@ -1608,7 +1848,9 @@
       "address": null,
       "city": "Emeryville",
       "displayLocation": "Emeryville",
-      "aliases": ["Lane Splitter Pizza, Emeryville"]
+      "aliases": [
+        "Lane Splitter Pizza, Emeryville"
+      ]
     },
     {
       "id": "somewhere-fremont",
@@ -1621,7 +1863,9 @@
       "address": null,
       "city": "Fremont",
       "displayLocation": "Fremont",
-      "aliases": ["Somewhere, Fremont"]
+      "aliases": [
+        "Somewhere, Fremont"
+      ]
     },
     {
       "id": "studio-fallout-50-a-bannam-place-sf",
@@ -1634,7 +1878,9 @@
       "address": "50-A Bannam Place",
       "city": "S.F.",
       "displayLocation": "50-A Bannam Place, S.F.",
-      "aliases": ["Studio Fallout, 50-A Bannam Place, S.F."]
+      "aliases": [
+        "Studio Fallout, 50-A Bannam Place, S.F."
+      ]
     },
     {
       "id": "420-lounge-at-barbary-coast-952-mission-street-sf",
@@ -1647,7 +1893,9 @@
       "address": "952 Mission Street",
       "city": "S.F.",
       "displayLocation": "952 Mission Street, S.F.",
-      "aliases": ["420 Lounge at Barbary Coast, 952 Mission Street, S.F."]
+      "aliases": [
+        "420 Lounge at Barbary Coast, 952 Mission Street, S.F."
+      ]
     },
     {
       "id": "big-easy-128-american-alley-petaluma",
@@ -1660,7 +1908,9 @@
       "address": "128 American Alley",
       "city": "Petaluma",
       "displayLocation": "128 American Alley, Petaluma",
-      "aliases": ["Big Easy, 128 American Alley, Petaluma"]
+      "aliases": [
+        "Big Easy, 128 American Alley, Petaluma"
+      ]
     },
     {
       "id": "gray-area-sf",
@@ -1673,7 +1923,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Gray Area, S.F."]
+      "aliases": [
+        "Gray Area, S.F."
+      ]
     },
     {
       "id": "hotel-utah-sf",
@@ -1686,7 +1938,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Hotel Utah, S.F."]
+      "aliases": [
+        "Hotel Utah, S.F."
+      ]
     },
     {
       "id": "rockys-beach-berkeley-waterfront",
@@ -1699,7 +1953,9 @@
       "address": null,
       "city": "Berkeley Waterfront",
       "displayLocation": "Berkeley Waterfront",
-      "aliases": ["Rocky's Beach, Berkeley Waterfront"]
+      "aliases": [
+        "Rocky's Beach, Berkeley Waterfront"
+      ]
     },
     {
       "id": "shop-63-maxwell-court-santa-rosa",
@@ -1712,7 +1968,9 @@
       "address": "63 Maxwell Court",
       "city": "Santa Rosa",
       "displayLocation": "63 Maxwell Court, Santa Rosa",
-      "aliases": ["Shop, 63 Maxwell Court, Santa Rosa"]
+      "aliases": [
+        "Shop, 63 Maxwell Court, Santa Rosa"
+      ]
     },
     {
       "id": "crybaby",
@@ -1725,7 +1983,9 @@
       "address": null,
       "city": null,
       "displayLocation": null,
-      "aliases": ["Crybaby"]
+      "aliases": [
+        "Crybaby"
+      ]
     },
     {
       "id": "great-star-theater-636-jackson-street-sf",
@@ -1738,7 +1998,9 @@
       "address": "636 Jackson Street",
       "city": "S.F.",
       "displayLocation": "636 Jackson Street, S.F.",
-      "aliases": ["Great Star Theater, 636 Jackson Street, S.F."]
+      "aliases": [
+        "Great Star Theater, 636 Jackson Street, S.F."
+      ]
     },
     {
       "id": "blue-ridge-kitchen-6770-mckinley-state-st-sebastopol",
@@ -1751,7 +2013,9 @@
       "address": "6770 McKinley State St.",
       "city": "Sebastopol",
       "displayLocation": "6770 McKinley State St., Sebastopol",
-      "aliases": ["Blue Ridge Kitchen, 6770 McKinley State St., Sebastopol"]
+      "aliases": [
+        "Blue Ridge Kitchen, 6770 McKinley State St., Sebastopol"
+      ]
     },
     {
       "id": "brick",
@@ -1764,7 +2028,9 @@
       "address": null,
       "city": null,
       "displayLocation": null,
-      "aliases": ["Brick"]
+      "aliases": [
+        "Brick"
+      ]
     },
     {
       "id": "44-race-street-san-jose",
@@ -1777,7 +2043,9 @@
       "address": "44 Race Street",
       "city": "San Jose",
       "displayLocation": "44 Race Street, San Jose",
-      "aliases": ["44 Race Street, San Jose"]
+      "aliases": [
+        "44 Race Street, San Jose"
+      ]
     },
     {
       "id": "alameda-brewing-1716-park-street-alamea",
@@ -1790,7 +2058,9 @@
       "address": "1716 Park Street",
       "city": "Alamea",
       "displayLocation": "1716 Park Street, Alamea",
-      "aliases": ["Alameda Brewing, 1716 Park Street, Alamea"]
+      "aliases": [
+        "Alameda Brewing, 1716 Park Street, Alamea"
+      ]
     },
     {
       "id": "santo-recording-studios-2565-west-street-oakland",
@@ -1803,7 +2073,9 @@
       "address": "2565 West Street",
       "city": "Oakland",
       "displayLocation": "2565 West Street, Oakland",
-      "aliases": ["Santo Recording Studios, 2565 West Street, Oakland"]
+      "aliases": [
+        "Santo Recording Studios, 2565 West Street, Oakland"
+      ]
     },
     {
       "id": "thee-stork-club-sf",
@@ -1816,7 +2088,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Thee Stork Club, S.F."]
+      "aliases": [
+        "Thee Stork Club, S.F."
+      ]
     },
     {
       "id": "alex-thomas-plaza-300-s-state-street-ukiah",
@@ -1829,7 +2103,9 @@
       "address": "300 S State Street",
       "city": "Ukiah",
       "displayLocation": "300 S State Street, Ukiah",
-      "aliases": ["Alex Thomas Plaza, 300 S State Street, Ukiah"]
+      "aliases": [
+        "Alex Thomas Plaza, 300 S State Street, Ukiah"
+      ]
     },
     {
       "id": "arlene-francis-center-99-sixth-st-santa-rosa",
@@ -1842,7 +2118,9 @@
       "address": "99 Sixth St.",
       "city": "Santa Rosa",
       "displayLocation": "99 Sixth St., Santa Rosa",
-      "aliases": ["Arlene Francis Center, 99 Sixth St., Santa Rosa"]
+      "aliases": [
+        "Arlene Francis Center, 99 Sixth St., Santa Rosa"
+      ]
     },
     {
       "id": "embarcadero-plaza-sf",
@@ -1855,7 +2133,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Embarcadero Plaza, S.F."]
+      "aliases": [
+        "Embarcadero Plaza, S.F."
+      ]
     },
     {
       "id": "felton-music-hall-6275-hwy-9-felton",
@@ -1868,7 +2148,9 @@
       "address": "6275 Hwy 9",
       "city": "Felton",
       "displayLocation": "6275 Hwy 9, Felton",
-      "aliases": ["Felton Music Hall, 6275 Hwy 9, Felton"]
+      "aliases": [
+        "Felton Music Hall, 6275 Hwy 9, Felton"
+      ]
     },
     {
       "id": "jury-room-santa-cruz",
@@ -1881,7 +2163,9 @@
       "address": null,
       "city": "Santa Cruz",
       "displayLocation": "Santa Cruz",
-      "aliases": ["Jury Room, Santa Cruz"]
+      "aliases": [
+        "Jury Room, Santa Cruz"
+      ]
     },
     {
       "id": "guild-theater-949-el-camino-real-menlo-park",
@@ -1894,7 +2178,9 @@
       "address": "949 El Camino Real",
       "city": "Menlo Park",
       "displayLocation": "949 El Camino Real, Menlo Park",
-      "aliases": ["Guild Theater, 949 El Camino Real, Menlo Park"]
+      "aliases": [
+        "Guild Theater, 949 El Camino Real, Menlo Park"
+      ]
     },
     {
       "id": "arlene-francis-center-99-6th-street-santa-rosa",
@@ -1907,7 +2193,9 @@
       "address": "99 6th Street",
       "city": "Santa Rosa",
       "displayLocation": "99 6th Street, Santa Rosa",
-      "aliases": ["Arlene Francis Center, 99 6th Street, Santa Rosa"]
+      "aliases": [
+        "Arlene Francis Center, 99 6th Street, Santa Rosa"
+      ]
     },
     {
       "id": "caravan-98-almaden-san-jose",
@@ -1920,7 +2208,9 @@
       "address": null,
       "city": "San Jose",
       "displayLocation": "San Jose",
-      "aliases": ["Caravan 98 Almaden, San Jose"]
+      "aliases": [
+        "Caravan 98 Almaden, San Jose"
+      ]
     },
     {
       "id": "open-gallery-38-s-2nd-street-san-jose",
@@ -1933,7 +2223,9 @@
       "address": null,
       "city": "San Jose",
       "displayLocation": "San Jose",
-      "aliases": ["Open Gallery 38 S. 2nd Street, San Jose"]
+      "aliases": [
+        "Open Gallery 38 S. 2nd Street, San Jose"
+      ]
     },
     {
       "id": "toxic-beach-bay-end-of-24th-street-sf",
@@ -1946,7 +2238,9 @@
       "address": "Bay End of 24th Street",
       "city": "S.F.",
       "displayLocation": "Bay End of 24th Street, S.F.",
-      "aliases": ["Toxic Beach, Bay End of 24th Street, S.F."]
+      "aliases": [
+        "Toxic Beach, Bay End of 24th Street, S.F."
+      ]
     },
     {
       "id": "peri-park-16-park-road-fairfield",
@@ -1959,7 +2253,9 @@
       "address": "16 Park Road",
       "city": "Fairfield",
       "displayLocation": "16 Park Road, Fairfield",
-      "aliases": ["Peri Park, 16 Park Road, Fairfield"]
+      "aliases": [
+        "Peri Park, 16 Park Road, Fairfield"
+      ]
     },
     {
       "id": "pussy-palace-oakland",
@@ -1972,7 +2268,9 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["Pussy Palace, Oakland"]
+      "aliases": [
+        "Pussy Palace, Oakland"
+      ]
     },
     {
       "id": "subrosa-santa-cruz",
@@ -1985,7 +2283,9 @@
       "address": null,
       "city": "Santa Cruz",
       "displayLocation": "Santa Cruz",
-      "aliases": ["Subrosa, Santa Cruz"]
+      "aliases": [
+        "Subrosa, Santa Cruz"
+      ]
     },
     {
       "id": "vets-hall-santa-cruz",
@@ -1998,7 +2298,9 @@
       "address": null,
       "city": "Santa Cruz",
       "displayLocation": "Santa Cruz",
-      "aliases": ["Vets Hall, Santa Cruz"]
+      "aliases": [
+        "Vets Hall, Santa Cruz"
+      ]
     },
     {
       "id": "thee-parkside",
@@ -2011,7 +2313,9 @@
       "address": null,
       "city": "",
       "displayLocation": "",
-      "aliases": ["Thee Parkside,"]
+      "aliases": [
+        "Thee Parkside,"
+      ]
     },
     {
       "id": "1st-congregational-church-1229-court-st-martinez",
@@ -2024,7 +2328,9 @@
       "address": "1229 Court St",
       "city": "Martinez",
       "displayLocation": "1229 Court St, Martinez",
-      "aliases": ["1st Congregational Church, 1229 Court St, Martinez"]
+      "aliases": [
+        "1st Congregational Church, 1229 Court St, Martinez"
+      ]
     },
     {
       "id": "prop-shop-518-11th-street-richmond",
@@ -2037,7 +2343,9 @@
       "address": null,
       "city": "Richmond",
       "displayLocation": "Richmond",
-      "aliases": ["Prop Shop 518 11th Street, Richmond"]
+      "aliases": [
+        "Prop Shop 518 11th Street, Richmond"
+      ]
     },
     {
       "id": "rudys-cant-fail-cafe-4081-holis-street-emeryville",
@@ -2050,7 +2358,9 @@
       "address": "4081 Holis Street",
       "city": "Emeryville",
       "displayLocation": "4081 Holis Street, Emeryville",
-      "aliases": ["Rudy's Can't Fail Cafe, 4081 Holis Street, Emeryville"]
+      "aliases": [
+        "Rudy's Can't Fail Cafe, 4081 Holis Street, Emeryville"
+      ]
     },
     {
       "id": "music-city-hotel-sf",
@@ -2063,7 +2373,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Music City Hotel, S.F."]
+      "aliases": [
+        "Music City Hotel, S.F."
+      ]
     },
     {
       "id": "toots-tavern-crockett",
@@ -2076,7 +2388,9 @@
       "address": null,
       "city": "Crockett",
       "displayLocation": "Crockett",
-      "aliases": ["Toot's Tavern, Crockett"]
+      "aliases": [
+        "Toot's Tavern, Crockett"
+      ]
     },
     {
       "id": "hopmonk-novato",
@@ -2089,7 +2403,9 @@
       "address": null,
       "city": "Novato",
       "displayLocation": "Novato",
-      "aliases": ["Hopmonk, Novato"]
+      "aliases": [
+        "Hopmonk, Novato"
+      ]
     },
     {
       "id": "arlene-francis-center-santa-rosa",
@@ -2102,7 +2418,9 @@
       "address": null,
       "city": "Santa Rosa",
       "displayLocation": "Santa Rosa",
-      "aliases": ["Arlene Francis Center, Santa Rosa"]
+      "aliases": [
+        "Arlene Francis Center, Santa Rosa"
+      ]
     },
     {
       "id": "vinnies-bar-2045-mount-diablo-street-concord",
@@ -2115,7 +2433,9 @@
       "address": "2045 Mount Diablo Street",
       "city": "Concord",
       "displayLocation": "2045 Mount Diablo Street, Concord",
-      "aliases": ["Vinnie's Bar, 2045 Mount Diablo Street, Concord"]
+      "aliases": [
+        "Vinnie's Bar, 2045 Mount Diablo Street, Concord"
+      ]
     },
     {
       "id": "greek-theater-uc-campus-berkeley",
@@ -2128,7 +2448,9 @@
       "address": "UC Campus",
       "city": "Berkeley",
       "displayLocation": "UC Campus, Berkeley",
-      "aliases": ["Greek Theater, UC Campus, Berkeley"]
+      "aliases": [
+        "Greek Theater, UC Campus, Berkeley"
+      ]
     },
     {
       "id": "faction-brewing-alameda",
@@ -2141,7 +2463,9 @@
       "address": null,
       "city": "Alameda",
       "displayLocation": "Alameda",
-      "aliases": ["Faction Brewing, Alameda"]
+      "aliases": [
+        "Faction Brewing, Alameda"
+      ]
     },
     {
       "id": "fairgrounds-175-fairgrounds-dr-petaluma",
@@ -2154,7 +2478,9 @@
       "address": "175 Fairgrounds Dr.",
       "city": "Petaluma",
       "displayLocation": "175 Fairgrounds Dr., Petaluma",
-      "aliases": ["Fairgrounds, 175 Fairgrounds Dr., Petaluma"]
+      "aliases": [
+        "Fairgrounds, 175 Fairgrounds Dr., Petaluma"
+      ]
     },
     {
       "id": "midway-sf",
@@ -2167,7 +2493,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Midway, S.F."]
+      "aliases": [
+        "Midway, S.F."
+      ]
     },
     {
       "id": "9th-and-folsom-sf",
@@ -2180,7 +2508,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["9th and Folsom, S.F."]
+      "aliases": [
+        "9th and Folsom, S.F."
+      ]
     },
     {
       "id": "krsh-3565-standish-avenue-santa-rosa",
@@ -2193,7 +2523,9 @@
       "address": "3565 Standish Avenue",
       "city": "Santa Rosa",
       "displayLocation": "3565 Standish Avenue, Santa Rosa",
-      "aliases": ["KRSH, 3565 Standish Avenue, Santa Rosa"]
+      "aliases": [
+        "KRSH, 3565 Standish Avenue, Santa Rosa"
+      ]
     },
     {
       "id": "quarry-amphitheater-1156-high-street-santa-cruz",
@@ -2206,7 +2538,9 @@
       "address": "1156 High Street",
       "city": "Santa Cruz",
       "displayLocation": "1156 High Street, Santa Cruz",
-      "aliases": ["Quarry Amphitheater, 1156 High Street, Santa Cruz"]
+      "aliases": [
+        "Quarry Amphitheater, 1156 High Street, Santa Cruz"
+      ]
     },
     {
       "id": "stern-grove-sf",
@@ -2219,7 +2553,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["Stern Grove, S.F."]
+      "aliases": [
+        "Stern Grove, S.F."
+      ]
     },
     {
       "id": "polo-field-golden-gate-park-sf",
@@ -2232,7 +2568,9 @@
       "address": "Golden Gate Park",
       "city": "S.F.",
       "displayLocation": "Golden Gate Park, S.F.",
-      "aliases": ["Polo Field, Golden Gate Park, S.F."]
+      "aliases": [
+        "Polo Field, Golden Gate Park, S.F."
+      ]
     },
     {
       "id": "o-reillys-pub-1840-haight-street-sf",
@@ -2245,7 +2583,9 @@
       "address": "1840 Haight Street",
       "city": "S.F.",
       "displayLocation": "1840 Haight Street, S.F.",
-      "aliases": ["O Reilly's Pub, 1840 Haight Street, S.F."]
+      "aliases": [
+        "O Reilly's Pub, 1840 Haight Street, S.F."
+      ]
     },
     {
       "id": "green-music-center-1801-e-cotati-avenue-rohnert-park",
@@ -2258,7 +2598,9 @@
       "address": "1801 E Cotati Avenue",
       "city": "Rohnert Park",
       "displayLocation": "1801 E Cotati Avenue, Rohnert Park",
-      "aliases": ["Green Music Center, 1801 E Cotati Avenue, Rohnert Park"]
+      "aliases": [
+        "Green Music Center, 1801 E Cotati Avenue, Rohnert Park"
+      ]
     },
     {
       "id": "pavilion-concord-sf",
@@ -2271,7 +2613,9 @@
       "address": "Concord",
       "city": "S.F.",
       "displayLocation": "Concord, S.F.",
-      "aliases": ["Pavilion, Concord, S.F."]
+      "aliases": [
+        "Pavilion, Concord, S.F."
+      ]
     },
     {
       "id": "weill-hall",
@@ -2284,7 +2628,9 @@
       "address": null,
       "city": null,
       "displayLocation": null,
-      "aliases": ["Weill Hall"]
+      "aliases": [
+        "Weill Hall"
+      ]
     },
     {
       "id": "brix-brewing-2400-mandela-oakland",
@@ -2297,7 +2643,9 @@
       "address": "2400 Mandela",
       "city": "Oakland",
       "displayLocation": "2400 Mandela, Oakland",
-      "aliases": ["Brix Brewing, 2400 Mandela, Oakland"]
+      "aliases": [
+        "Brix Brewing, 2400 Mandela, Oakland"
+      ]
     },
     {
       "id": "ceremony-oakland",
@@ -2310,7 +2658,9 @@
       "address": null,
       "city": "Oakland",
       "displayLocation": "Oakland",
-      "aliases": ["Ceremony, Oakland"]
+      "aliases": [
+        "Ceremony, Oakland"
+      ]
     },
     {
       "id": "fox-theater-okland",
@@ -2323,7 +2673,9 @@
       "address": null,
       "city": "Okland",
       "displayLocation": "Okland",
-      "aliases": ["Fox Theater, Okland"]
+      "aliases": [
+        "Fox Theater, Okland"
+      ]
     },
     {
       "id": "golden-gate-theater-1-taylor-street-sf",
@@ -2336,7 +2688,9 @@
       "address": "1 Taylor Street",
       "city": "S.F.",
       "displayLocation": "1 Taylor Street, S.F.",
-      "aliases": ["Golden Gate Theater, 1 Taylor Street, S.F."]
+      "aliases": [
+        "Golden Gate Theater, 1 Taylor Street, S.F."
+      ]
     },
     {
       "id": "thee-stork-club-albany",
@@ -2349,7 +2703,9 @@
       "address": null,
       "city": "Albany",
       "displayLocation": "Albany",
-      "aliases": ["Thee Stork Club, Albany"]
+      "aliases": [
+        "Thee Stork Club, Albany"
+      ]
     },
     {
       "id": "frost-amphitheater-stanford-campus",
@@ -2362,7 +2718,9 @@
       "address": null,
       "city": "Stanford Campus",
       "displayLocation": "Stanford Campus",
-      "aliases": ["Frost Amphitheater, Stanford Campus"]
+      "aliases": [
+        "Frost Amphitheater, Stanford Campus"
+      ]
     },
     {
       "id": "mountain-winery-saratoga-8pm",
@@ -2375,7 +2733,9 @@
       "address": null,
       "city": "Saratoga 8pm",
       "displayLocation": "Saratoga 8pm",
-      "aliases": ["Mountain Winery, Saratoga 8pm"]
+      "aliases": [
+        "Mountain Winery, Saratoga 8pm"
+      ]
     },
     {
       "id": "north-beach-sf",
@@ -2388,7 +2748,9 @@
       "address": null,
       "city": "S.F.",
       "displayLocation": "S.F.",
-      "aliases": ["North Beach, S.F."]
+      "aliases": [
+        "North Beach, S.F."
+      ]
     },
     {
       "id": "san-jose-civic-135-san-carlos-st-san-jose",
@@ -2401,9 +2763,11 @@
       "address": "135 San Carlos St.",
       "city": "San Jose",
       "displayLocation": "135 San Carlos St., San Jose",
-      "aliases": ["San Jose Civic, 135 San Carlos St., San Jose"]
+      "aliases": [
+        "San Jose Civic, 135 San Carlos St., San Jose"
+      ]
     }
   ],
   "total": 183,
-  "lastUpdated": "2025-05-29T18:41:46.144Z"
+  "lastUpdated": "2025-05-29T20:00:46.038Z"
 }

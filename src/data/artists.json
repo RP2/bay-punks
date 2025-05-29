@@ -66566,18 +66566,18 @@
     }
   ],
   "total": 2595,
-  "lastUpdated": "2025-05-29T18:41:46.131Z",
+  "lastUpdated": "2025-05-29T20:00:46.026Z",
   "spotifyVerification": {
     "lastVerified": "2025-05-29T17:07:31.661Z",
     "totalProcessed": 2595,
     "totalVerified": 2318,
     "totalFailed": 277,
-    "lastProcessed": "2025-05-29T18:41:46.132Z",
+    "lastProcessed": "2025-05-29T20:00:46.027Z",
     "stats": {
       "totalArtists": 2595,
-      "spotifyVerified": 2318,
-      "spotifyUrls": 2318,
-      "notFound": 277,
+      "spotifyVerified": 2338,
+      "spotifyUrls": 2418,
+      "notFound": 257,
       "unverified": 0
     }
   }
