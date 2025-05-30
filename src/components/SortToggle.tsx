@@ -52,7 +52,7 @@ export function SortToggle({
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className={`min-w-[140px] justify-between ${className}`}
+          className={`min-h-[44px] min-w-[140px] touch-manipulation justify-between ${className}`}
         >
           <div className="flex items-center gap-2">
             <ArrowUpDown className="h-4 w-4" />

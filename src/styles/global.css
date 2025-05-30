@@ -124,4 +124,22 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* mobile touch optimizations for dropdown menus */
+  [data-slot="dropdown-menu-trigger"] {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  [data-slot="dropdown-menu-item"],
+  [data-slot="dropdown-menu-checkbox-item"],
+  [data-slot="dropdown-menu-radio-item"],
+  [data-slot="dropdown-menu-sub-trigger"] {
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
 }
