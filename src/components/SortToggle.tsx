@@ -53,10 +53,6 @@ export function SortToggle({
         <Button
           variant="outline"
           className={`min-h-[44px] min-w-[140px] touch-manipulation justify-between ${className}`}
-          onTouchStart={(e) => {
-            // ensure touch events are captured
-            e.currentTarget.focus();
-          }}
         >
           <div className="flex items-center gap-2">
             <ArrowUpDown className="h-4 w-4" />

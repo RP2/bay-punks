@@ -31,9 +31,6 @@ function DropdownMenuTrigger({
     <DropdownMenuPrimitive.Trigger
       data-slot="dropdown-menu-trigger"
       className="touch-manipulation hover:cursor-pointer"
-      tabIndex={0}
-      role="button"
-      aria-haspopup="menu"
       {...props}
     />
   );
