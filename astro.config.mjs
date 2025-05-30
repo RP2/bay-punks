@@ -11,5 +11,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://bay-punks.rileyperalta.com",
+  trailingSlash: "always",
   integrations: [sitemap(), react()],
 });
