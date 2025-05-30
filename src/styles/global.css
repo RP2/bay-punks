@@ -123,6 +123,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* prevent zoom on double tap on mobile */
+    touch-action: manipulation;
   }
 
   /* mobile touch optimizations for dropdown menus */
@@ -133,6 +135,9 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    /* ensure touch events work properly */
+    touch-action: manipulation;
+    pointer-events: auto;
   }
 
   [data-slot="dropdown-menu-item"],
@@ -141,5 +146,20 @@
   [data-slot="dropdown-menu-sub-trigger"] {
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
+    touch-action: manipulation;
+    pointer-events: auto;
+  }
+
+  /* radix ui dropdown specific fixes for mobile */
+  [data-radix-dropdown-menu-trigger] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  [data-radix-dropdown-menu-content] {
+    /* ensure dropdown content is properly positioned on mobile */
+    will-change: transform, opacity;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }

@@ -10,7 +10,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://bay-punks.rileyperalta.com",
+  site: "https://shows.wtf",
   trailingSlash: "always",
   integrations: [sitemap(), react()],
 });

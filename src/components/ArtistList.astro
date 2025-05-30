@@ -106,7 +106,7 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
     class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
   >
     <h2 class="text-2xl font-bold">Artists ({initialSortedArtists.length})</h2>
-    <ArtistSortToggle client:load />
+    <ArtistSortToggle client:idle />
   </div>
 
   <div class="mb-4">
