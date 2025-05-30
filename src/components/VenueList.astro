@@ -1,7 +1,7 @@
 ---
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
+import { VenueSortToggle } from "./SortToggle";
 import venues from "../data/venues.json";
 import concerts from "../data/concerts.json";
 
@@ -61,18 +61,57 @@ function getLocationInfo(venue: any): string | null {
   return null;
 }
 
-// sort venues alphabetically by display name
-const sortedVenues = [...venues.venues].sort((a, b) => {
-  const nameA = getBestVenueName(a);
-  const nameB = getBestVenueName(b);
-  return nameA.localeCompare(nameB, undefined, { sensitivity: "base" });
-});
+// sorting functions for different sort orders
+function sortVenues(venueList: any[], sortKey: string) {
+  const venuesCopy = [...venueList];
 
-// get next show date for each venue
-const today = new Date();
-today.setHours(0, 0, 0, 0);
+  switch (sortKey) {
+    case "alphabetical":
+      return venuesCopy.sort((a, b) => {
+        const nameA = getBestVenueName(a);
+        const nameB = getBestVenueName(b);
+        return nameA.localeCompare(nameB, undefined, { sensitivity: "base" });
+      });
+
+    case "reverse-alphabetical":
+      return venuesCopy.sort((a, b) => {
+        const nameA = getBestVenueName(a);
+        const nameB = getBestVenueName(b);
+        return nameB.localeCompare(nameA, undefined, { sensitivity: "base" });
+      });
+
+    case "show-count":
+      return venuesCopy.sort((a, b) => (b.showCount || 0) - (a.showCount || 0));
+
+    case "next-show":
+      return venuesCopy.sort((a, b) => {
+        const nextShowA = getNextShowForVenue(a.name);
+        const nextShowB = getNextShowForVenue(b.name);
+
+        // venues with no upcoming shows go to the end
+        if (!nextShowA && !nextShowB) return 0;
+        if (!nextShowA) return 1;
+        if (!nextShowB) return -1;
+
+        // sort by date
+        return (
+          new Date(nextShowA.date).getTime() -
+          new Date(nextShowB.date).getTime()
+        );
+      });
+
+    default:
+      return venuesCopy;
+  }
+}
+
+// default to next-show sort (soonest shows first)
+const initialSortedVenues = sortVenues(venues.venues, "next-show");
 
 function getNextShowForVenue(venueName: string) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
   const upcomingShows = concerts.shows
     .flatMap((show) =>
       show.events
@@ -86,7 +125,12 @@ function getNextShowForVenue(venueName: string) {
           humanDate: show.day,
         })),
     )
-    .filter((show) => new Date(show.date) >= today)
+    .filter((show) => {
+      // create date from YYYY-MM-DD format, ensuring we compare properly
+      const [year, month, day] = show.date.split("-").map(Number);
+      const showDate = new Date(year, month - 1, day); // month is 0-indexed
+      return showDate >= today;
+    })
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
   return upcomingShows[0] || null;
@@ -98,11 +142,25 @@ function normalizeText(text: string): string {
     .replace(/[^a-z0-9\s]/g, "")
     .trim();
 }
+
+// prepare venue data for client-side use
+const venueDataForClient = initialSortedVenues.map((venue) => ({
+  id: venue.id,
+  name: venue.name,
+  displayName: getBestVenueName(venue),
+  locationInfo: getLocationInfo(venue),
+  showCount: venue.showCount,
+  lastSeen: venue.lastSeen,
+  nextShow: getNextShowForVenue(venue.name),
+}));
 ---
 
 <div class="space-y-4">
-  <div class="flex items-center justify-between">
-    <h2 class="text-2xl font-bold">Venues ({sortedVenues.length})</h2>
+  <div
+    class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+  >
+    <h2 class="text-2xl font-bold">Venues ({initialSortedVenues.length})</h2>
+    <VenueSortToggle client:load />
   </div>
 
   <div class="mb-4">
@@ -117,7 +175,7 @@ function normalizeText(text: string): string {
     class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
   >
     {
-      sortedVenues.map((venue) => {
+      initialSortedVenues.map((venue) => {
         const nextShow = getNextShowForVenue(venue.name);
         const displayName = getBestVenueName(venue);
         const locationInfo = getLocationInfo(venue);
@@ -188,17 +246,173 @@ function normalizeText(text: string): string {
   </div>
 </div>
 
+<script define:vars={{ venueDataForClient }}>
+  // pass venue data to client-side script
+  window.venuesData = venueDataForClient;
+</script>
+
 <script>
   // venue search functionality
+  declare global {
+    interface Window {
+      venuesData: any[];
+      handleVenueSortChange?: (sortKey: string) => void;
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById(
       "venue-search",
     ) as HTMLInputElement;
-    const venueItems = document.querySelectorAll(".venue-item");
+    const venueList = document.getElementById("venue-list");
 
+    // initialize venue data
+    const venuesData = window.venuesData || [];
+
+    // sort venues function
+    function sortVenues(venueList: any[], sortKey: string) {
+      const venuesCopy = [...venueList];
+
+      switch (sortKey) {
+        case "alphabetical":
+          return venuesCopy.sort((a, b) => {
+            const nameA = a.displayName;
+            const nameB = b.displayName;
+            return nameA.localeCompare(nameB, undefined, {
+              sensitivity: "base",
+            });
+          });
+
+        case "reverse-alphabetical":
+          return venuesCopy.sort((a, b) => {
+            const nameA = a.displayName;
+            const nameB = b.displayName;
+            return nameB.localeCompare(nameA, undefined, {
+              sensitivity: "base",
+            });
+          });
+
+        case "show-count":
+          return venuesCopy.sort(
+            (a, b) => (b.showCount || 0) - (a.showCount || 0),
+          );
+
+        case "next-show":
+          return venuesCopy.sort((a, b) => {
+            // venues with no upcoming shows go to the end
+            if (!a.nextShow && !b.nextShow) return 0;
+            if (!a.nextShow) return 1;
+            if (!b.nextShow) return -1;
+
+            // sort by date
+            return (
+              new Date(a.nextShow.date).getTime() -
+              new Date(b.nextShow.date).getTime()
+            );
+          });
+
+        default:
+          return venuesCopy;
+      }
+    }
+
+    // render venues function
+    function renderVenues(venues: any[]) {
+      if (!venueList) return;
+
+      venueList.innerHTML = venues
+        .map(
+          (venue) => `
+        <div class="bg-card text-card-foreground flex flex-col gap-2 rounded-xl border py-6 shadow-sm venue-item" data-venue-name="${venue.displayName.toLowerCase()}" data-venue-location="${venue.locationInfo?.toLowerCase() || ""}" data-slot="card">
+          <div class="px-4 sm:px-6 p-4" data-slot="card-content">
+              <div class="flex flex-col gap-2">
+                <div class="flex items-start justify-between">
+                  <a href="/venue/${venue.id}" class="text-primary font-semibold hover:underline">
+                    ${venue.displayName}
+                  </a>
+                  <span class="text-muted-foreground text-xs">
+                    ${venue.showCount} shows
+                  </span>
+                </div>
+
+                ${
+                  venue.locationInfo
+                    ? `
+                  <div class="text-muted-foreground text-sm">
+                    📍 ${venue.locationInfo}
+                  </div>
+                `
+                    : ""
+                }
+
+                ${
+                  venue.nextShow
+                    ? `
+                  <div class="text-sm">
+                    <div class="text-muted-foreground">Next show:</div>
+                    <div class="font-medium">
+                      <a href="/day/${venue.nextShow.date}" class="text-primary hover:underline">
+                        ${venue.nextShow.humanDate}
+                      </a>
+                    </div>
+                    <div class="text-muted-foreground text-xs">
+                      ${venue.nextShow.bands
+                        .slice(0, 2)
+                        .map((band: any) => band.text)
+                        .join(", ")}
+                      ${venue.nextShow.bands.length > 2 ? ` +${venue.nextShow.bands.length - 2} more` : ""}
+                    </div>
+                  </div>
+                `
+                    : `
+                  <div class="text-muted-foreground text-sm">
+                    No upcoming shows
+                  </div>
+                `
+                }
+
+                <div class="text-muted-foreground text-xs">
+                  Last seen: ${new Date(venue.lastSeen).toLocaleDateString()}
+                </div>
+              </div>
+            </div>
+        </div>
+      `,
+        )
+        .join("");
+    }
+
+    // handle sort change
+    window.handleVenueSortChange = (sortKey: string) => {
+      const sortedVenues = sortVenues(venuesData, sortKey);
+      renderVenues(sortedVenues);
+
+      // reapply search filter if there's a search query
+      if (searchInput && searchInput.value) {
+        const query = searchInput.value.toLowerCase();
+        const venueItems = document.querySelectorAll(".venue-item");
+
+        venueItems.forEach((item) => {
+          const venueName = item.getAttribute("data-venue-name") || "";
+          const venueLocation = item.getAttribute("data-venue-location") || "";
+          const venueElement = item.querySelector('a[href^="/venue/"]');
+          const displayText = venueElement?.textContent?.toLowerCase() || "";
+
+          const matches =
+            venueName.includes(query) ||
+            venueLocation.includes(query) ||
+            displayText.includes(query);
+
+          (item as HTMLElement).style.display = matches ? "block" : "none";
+        });
+      }
+    };
+
+    // search functionality
     if (searchInput) {
       searchInput.addEventListener("input", (e) => {
         const query = (e.target as HTMLInputElement).value.toLowerCase();
+        const venueItems = document.querySelectorAll(".venue-item");
 
         venueItems.forEach((item) => {
           const venueName = item.getAttribute("data-venue-name") || "";

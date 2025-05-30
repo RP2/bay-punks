@@ -1,22 +1,14 @@
 ---
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { ArtistSortToggle } from "./SortToggle";
 import artists from "../data/artists.json";
 import concerts from "../data/concerts.json";
 
-// sort artists by show count (most shows first), then alphabetically
-const sortedArtists = [...artists.artists].sort((a, b) => {
-  if (a.showCount !== b.showCount) {
-    return b.showCount - a.showCount;
-  }
-  return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
-});
-
-// get next show date for each artist
-const today = new Date();
-today.setHours(0, 0, 0, 0);
-
 function getNextShowForArtist(artistName: string) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
   const upcomingShows = concerts.shows
     .flatMap((show) =>
       show.events
@@ -31,7 +23,12 @@ function getNextShowForArtist(artistName: string) {
           humanDate: show.day,
         })),
     )
-    .filter((show) => new Date(show.date) >= today)
+    .filter((show) => {
+      // create date from YYYY-MM-DD format, ensuring we compare properly
+      const [year, month, day] = show.date.split("-").map(Number);
+      const showDate = new Date(year, month - 1, day); // month is 0-indexed
+      return showDate >= today;
+    })
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
   return upcomingShows[0] || null;
@@ -43,11 +40,73 @@ function normalizeText(text: string): string {
     .replace(/[^a-z0-9\s]/g, "")
     .trim();
 }
+
+// sorting functions for different sort orders
+function sortArtists(artistList: any[], sortKey: string) {
+  const artistsCopy = [...artistList];
+
+  switch (sortKey) {
+    case "alphabetical":
+      return artistsCopy.sort((a, b) => {
+        return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
+      });
+
+    case "reverse-alphabetical":
+      return artistsCopy.sort((a, b) => {
+        return b.name.localeCompare(a.name, undefined, { sensitivity: "base" });
+      });
+
+    case "show-count":
+      return artistsCopy.sort((a, b) => {
+        if (a.showCount !== b.showCount) {
+          return b.showCount - a.showCount;
+        }
+        return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
+      });
+
+    case "next-show":
+      return artistsCopy.sort((a, b) => {
+        const nextShowA = getNextShowForArtist(a.name);
+        const nextShowB = getNextShowForArtist(b.name);
+
+        // artists with no upcoming shows go to the end
+        if (!nextShowA && !nextShowB) return 0;
+        if (!nextShowA) return 1;
+        if (!nextShowB) return -1;
+
+        // sort by date
+        return (
+          new Date(nextShowA.date).getTime() -
+          new Date(nextShowB.date).getTime()
+        );
+      });
+
+    default:
+      return artistsCopy;
+  }
+}
+
+// default to next-show sort (soonest shows first)
+const initialSortedArtists = sortArtists(artists.artists, "next-show");
+
+// prepare artist data for client-side use
+const artistDataForClient = initialSortedArtists.map((artist) => ({
+  id: artist.id,
+  name: artist.name,
+  showCount: artist.showCount,
+  lastSeen: artist.lastSeen,
+  spotifyUrl: artist.spotifyUrl,
+  searchUrl: artist.searchUrl,
+  nextShow: getNextShowForArtist(artist.name),
+}));
 ---
 
 <div class="space-y-4">
-  <div class="flex items-center justify-between">
-    <h2 class="text-2xl font-bold">Artists ({sortedArtists.length})</h2>
+  <div
+    class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+  >
+    <h2 class="text-2xl font-bold">Artists ({initialSortedArtists.length})</h2>
+    <ArtistSortToggle client:load />
   </div>
 
   <div class="mb-4">
@@ -62,11 +121,11 @@ function normalizeText(text: string): string {
     class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
   >
     {
-      sortedArtists.map((artist) => {
+      initialSortedArtists.map((artist) => {
         const nextShow = getNextShowForArtist(artist.name);
         return (
           <Card
-            className="artist-item"
+            className="artist-item h-full"
             data-artist-name={artist.name.toLowerCase()}
           >
             <CardContent className="p-4">
@@ -142,17 +201,172 @@ function normalizeText(text: string): string {
   </div>
 </div>
 
+<script define:vars={{ artistDataForClient }}>
+  // pass artist data to client-side script
+  window.artistsData = artistDataForClient;
+</script>
+
 <script>
-  // artist search functionality
+  // artist search and sort functionality
+  declare global {
+    interface Window {
+      artistsData: any[];
+      handleArtistSortChange?: (sortKey: string) => void;
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById(
       "artist-search",
     ) as HTMLInputElement;
-    const artistItems = document.querySelectorAll(".artist-item");
+    const artistList = document.getElementById("artist-list");
 
+    // initialize artist data
+    const artistsData = window.artistsData || [];
+
+    // sort artists function
+    function sortArtists(artistList: any[], sortKey: string) {
+      const artistsCopy = [...artistList];
+
+      switch (sortKey) {
+        case "alphabetical":
+          return artistsCopy.sort((a, b) => {
+            return a.name.localeCompare(b.name, undefined, {
+              sensitivity: "base",
+            });
+          });
+
+        case "reverse-alphabetical":
+          return artistsCopy.sort((a, b) => {
+            return b.name.localeCompare(a.name, undefined, {
+              sensitivity: "base",
+            });
+          });
+
+        case "show-count":
+          return artistsCopy.sort((a, b) => {
+            if (a.showCount !== b.showCount) {
+              return b.showCount - a.showCount;
+            }
+            return a.name.localeCompare(b.name, undefined, {
+              sensitivity: "base",
+            });
+          });
+
+        case "next-show":
+          return artistsCopy.sort((a, b) => {
+            // artists with no upcoming shows go to the end
+            if (!a.nextShow && !b.nextShow) return 0;
+            if (!a.nextShow) return 1;
+            if (!b.nextShow) return -1;
+
+            // sort by date
+            return (
+              new Date(a.nextShow.date).getTime() -
+              new Date(b.nextShow.date).getTime()
+            );
+          });
+
+        default:
+          return artistsCopy;
+      }
+    }
+
+    // render artists function
+    function renderArtists(artists: any[]) {
+      if (!artistList) return;
+
+      artistList.innerHTML = artists
+        .map(
+          (artist) => `
+        <div class="bg-card text-card-foreground flex flex-col gap-2 rounded-xl border py-6 shadow-sm artist-item h-full" data-artist-name="${artist.name.toLowerCase()}" data-slot="card">
+          <div class="px-4 sm:px-6 p-4" data-slot="card-content">
+              <div class="flex flex-col gap-2">
+                <div class="flex items-start justify-between">
+                  <a href="/artist/${artist.id}" class="text-primary font-semibold hover:underline">
+                    ${artist.name}
+                  </a>
+                  <span class="text-muted-foreground text-xs">
+                    ${artist.showCount} shows
+                  </span>
+                </div>
+
+                ${
+                  artist.nextShow
+                    ? `
+                  <div class="text-sm">
+                    <div class="text-muted-foreground">Next show:</div>
+                    <div class="font-medium">
+                      <a href="/day/${artist.nextShow.date}" class="text-primary hover:underline">
+                        ${artist.nextShow.humanDate}
+                      </a>
+                    </div>
+                    <div class="text-muted-foreground text-xs">
+                      ${artist.nextShow.venue.text}
+                    </div>
+                  </div>
+                `
+                    : `
+                  <div class="text-muted-foreground text-sm">
+                    No upcoming shows
+                  </div>
+                `
+                }
+
+                <div class="mt-2 flex items-center justify-between">
+                  <div class="text-muted-foreground text-xs">
+                    Last seen: ${new Date(artist.lastSeen).toLocaleDateString()}
+                  </div>
+                  ${
+                    artist.spotifyUrl || artist.searchUrl
+                      ? `
+                    <a
+                      href="${artist.spotifyUrl || artist.searchUrl}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1 text-xs text-green-600 transition-colors hover:text-green-700 hover:underline"
+                      title="${artist.spotifyUrl ? "Listen on Spotify" : "Search on Spotify"}"
+                    >
+                      <svg class="h-3 w-3" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
+                      </svg>
+                      ${artist.spotifyUrl ? "Spotify" : "Search"}
+                    </a>
+                  `
+                      : ""
+                  }
+                </div>
+              </div>
+            </div>
+        </div>
+      `,
+        )
+        .join("");
+    }
+
+    // handle sort change
+    window.handleArtistSortChange = (sortKey: string) => {
+      const sortedArtists = sortArtists(artistsData, sortKey);
+      renderArtists(sortedArtists);
+
+      // reapply search filter if there's a search query
+      if (searchInput && searchInput.value) {
+        const query = searchInput.value.toLowerCase();
+        const artistItems = document.querySelectorAll(".artist-item");
+
+        artistItems.forEach((item) => {
+          const artistName = item.getAttribute("data-artist-name") || "";
+          const matches = artistName.includes(query);
+          (item as HTMLElement).style.display = matches ? "block" : "none";
+        });
+      }
+    };
+
+    // search functionality
     if (searchInput) {
       searchInput.addEventListener("input", (e) => {
         const query = (e.target as HTMLInputElement).value.toLowerCase();
+        const artistItems = document.querySelectorAll(".artist-item");
 
         artistItems.forEach((item) => {
           const artistName = item.getAttribute("data-artist-name") || "";
