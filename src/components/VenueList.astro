@@ -190,7 +190,7 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
               <div class="flex flex-col gap-2">
                 <div class="flex items-start justify-between">
                   <a
-                    href={`/venue/${venue.id}`}
+                    href={`/venue/${venue.id}/`}
                     class="text-primary font-semibold hover:underline"
                   >
                     {displayName}
@@ -211,7 +211,7 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
                     <div class="text-muted-foreground">Next show:</div>
                     <div class="font-medium">
                       <a
-                        href={`/day/${nextShow.date}`}
+                        href={`/day/${nextShow.date}/`}
                         class="text-primary hover:underline"
                       >
                         {nextShow.humanDate}
@@ -327,7 +327,7 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
           <div class="px-4 sm:px-6 p-4" data-slot="card-content">
               <div class="flex flex-col gap-2">
                 <div class="flex items-start justify-between">
-                  <a href="/venue/${venue.id}" class="text-primary font-semibold hover:underline">
+                  <a href="/venue/${venue.id}/" class="text-primary font-semibold hover:underline">
                     ${venue.displayName}
                   </a>
                   <span class="text-muted-foreground text-xs">
@@ -351,7 +351,7 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
                   <div class="text-sm">
                     <div class="text-muted-foreground">Next show:</div>
                     <div class="font-medium">
-                      <a href="/day/${venue.nextShow.date}" class="text-primary hover:underline">
+                      <a href="/day/${venue.nextShow.date}/" class="text-primary hover:underline">
                         ${venue.nextShow.humanDate}
                       </a>
                     </div>

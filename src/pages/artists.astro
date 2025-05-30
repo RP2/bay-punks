@@ -11,7 +11,7 @@ const artistList = artists.artists.sort((a, b) => a.name.localeCompare(b.name));
     {
       artistList.map((artist) => (
         <li>
-          <a href={`/artist/${artist.id}`}>{artist.name}</a>
+          <a href={`/artist/${artist.id}/`}>{artist.name}</a>
         </li>
       ))
     }

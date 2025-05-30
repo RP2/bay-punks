@@ -139,7 +139,7 @@ const artistShows = concerts.shows
                   <li class="text-lg">
                     {venueId ? (
                       <a
-                        href={`/venue/${venueId}`}
+                        href={`/venue/${venueId}/`}
                         class="text-primary hover:underline"
                       >
                         {venue}
@@ -172,7 +172,7 @@ const artistShows = concerts.shows
                           <div class="text-lg font-medium">
                             {venueId ? (
                               <a
-                                href={`/venue/${venueId}`}
+                                href={`/venue/${venueId}/`}
                                 class="text-primary hover:underline"
                               >
                                 {show.venue?.text}
@@ -183,7 +183,7 @@ const artistShows = concerts.shows
                           </div>
                           <div class="text-muted-foreground text-sm">
                             <a
-                              href={`/day/${show.date}`}
+                              href={`/day/${show.date}/`}
                               class="text-primary hover:underline"
                             >
                               {show.humanDate}

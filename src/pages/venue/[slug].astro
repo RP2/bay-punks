@@ -155,7 +155,7 @@ const pastShows = venueShows
                       <div class="flex flex-col gap-1">
                         <div class="text-muted-foreground text-sm font-semibold">
                           <a
-                            href={`/day/${show.date}`}
+                            href={`/day/${show.date}/`}
                             class="hover:text-foreground transition-colors hover:underline"
                           >
                             {show.humanDate}
@@ -226,7 +226,7 @@ const pastShows = venueShows
                     <div class="flex flex-col gap-1">
                       <div class="text-muted-foreground text-sm font-semibold">
                         <a
-                          href={`/day/${show.date}`}
+                          href={`/day/${show.date}/`}
                           class="hover:text-foreground transition-colors hover:underline"
                         >
                           {show.humanDate}
@@ -235,12 +235,13 @@ const pastShows = venueShows
                       <div class="flex flex-wrap gap-1">
                         {show.bands.map((band, i) => (
                           <span data-key={i} class="inline-flex">
+                            {" "}
                             <a
                               class="text-primary hover:underline"
                               href={`/artist/${band.text
                                 .toLowerCase()
                                 .replace(/[^a-z0-9\s]/g, "")
-                                .replace(/\s+/g, "-")}`}
+                                .replace(/\s+/g, "-")}/`}
                             >
                               {band.text}
                             </a>

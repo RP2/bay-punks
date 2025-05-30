@@ -113,7 +113,10 @@ const year = getYear(day.normalizedDate);
                       {(() => {
                         const venueId = findVenueId(event.venue.text);
                         return venueId ? (
-                          <a class="hover:underline" href={`/venue/${venueId}`}>
+                          <a
+                            class="hover:underline"
+                            href={`/venue/${venueId}/`}
+                          >
                             {event.venue.text}
                           </a>
                         ) : (
@@ -133,7 +136,7 @@ const year = getYear(day.normalizedDate);
                             {artistId ? (
                               <a
                                 class="hover:underline"
-                                href={`/artist/${artistId}`}
+                                href={`/artist/${artistId}/`}
                               >
                                 {band.text}
                               </a>
