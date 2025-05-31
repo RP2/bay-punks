@@ -2,6 +2,39 @@
 
 This feature verifies artists against the Spotify Web API to provide direct artist profile links instead of search links.
 
+## ⚠️ **Important Accuracy Notice**
+
+**Spotify verification is automated and not 100% accurate.** The verification process has several limitations:
+
+### **Potential Issues:**
+
+- **Name similarity matches**: Artists with similar names may be incorrectly linked
+- **Common band names**: Generic names like "The Band" or "Sunset" may match wrong artists
+- **Spelling variations**: Minor differences in spelling may cause mismatches
+- **Multiple artists**: Popular names may link to the wrong artist of the same name
+- **Local vs. famous artists**: Local bands may be matched to famous artists with similar names
+
+### **Data Integrity:**
+
+- **Original names preserved**: The `originalScrapedName` field always contains the source data
+- **Match type tracking**: Exact vs. partial matches are recorded in `spotifyData.matchType`
+- **Verification timestamps**: All verifications include `verifiedAt` or `nameUpdateDate` timestamps
+- **Manual verification**: Users should verify critical information independently
+
+### **Quality Indicators:**
+
+- **Exact matches** (`matchType: "exact"`) are more reliable than partial matches
+- **High follower counts** and **popularity scores** increase confidence
+- **Genre alignment** with expected music style can help validate matches
+
+### **Contributing Corrections:**
+
+Found incorrect artist data? You can help improve accuracy by:
+
+- **Opening an issue**: Report incorrect Spotify links or artist information on [GitHub Issues](https://github.com/RP2/bay-punks/issues)
+- **Submitting corrections**: Edit the `artists.json` file directly and submit a [pull request](https://github.com/RP2/bay-punks/pulls)
+- **Providing context**: Include details about why the current match is incorrect and what the correct information should be
+
 ## Setup
 
 1. **Create a Spotify App:**

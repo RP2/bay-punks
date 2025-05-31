@@ -31,21 +31,11 @@ await loadEnvFile();
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 
-// configuration for recheck (more lenient since it's manual)
-const RATE_LIMIT_DELAY = 100; // ms between individual requests
-const BATCH_DELAY = 1000; // ms between batches
-const BATCH_SIZE = 10; // artists per batch
+// configuration for name updates (optimized for spotify's rate limits)
+const RATE_LIMIT_DELAY = 100; // ms between individual requests (~10 req/sec, well under 100/min limit)
+const BATCH_DELAY = 500; // ms between batches (reduced since individual delays handle rate limiting)
+const BATCH_SIZE = 10; // artists per batch (increased for better efficiency)
 const MAX_RETRIES = 3;
-
-// helper to check if artist needs rechecking (previously failed verification)
-function needsRechecking(artist) {
-  return (
-    !artist.spotifyVerified &&
-    (artist.spotifyData?.notFound === true ||
-      artist.spotifyData?.error ||
-      (artist.spotifyUrl && artist.spotifyUrl.includes("/search/")))
-  );
-}
 
 // helper to make spotify api requests with retry logic
 async function spotifyRequest(endpoint, token, retries = 0) {
@@ -166,8 +156,13 @@ async function getSpotifyToken() {
   });
 }
 
-// verify a single artist on spotify
-async function verifyArtistOnSpotify(artistName, token) {
+// search for artist and get official name
+//
+// ⚠️  ACCURACY NOTICE: This automated verification is not 100% accurate.
+// The system may occasionally match artists with similar names incorrectly.
+// Original scraped names are preserved in originalScrapedName field.
+// Users should verify critical information independently when needed.
+async function getOfficialArtistName(artistName, token) {
   try {
     const query = encodeURIComponent(artistName);
     const endpoint = `/v1/search?q=${query}&type=artist&limit=10`;
@@ -184,7 +179,7 @@ async function verifyArtistOnSpotify(artistName, token) {
       if (exactMatch) {
         return {
           found: true,
-          spotifyUrl: exactMatch.external_urls.spotify,
+          officialName: exactMatch.name,
           spotifyData: {
             id: exactMatch.id,
             name: exactMatch.name,
@@ -193,10 +188,9 @@ async function verifyArtistOnSpotify(artistName, token) {
             genres: exactMatch.genres,
             verified: true,
             searchQuery: artistName,
-            searchResults: response.artists.items.length,
             matchType: "exact",
-            rechecked: true,
-            recheckDate: new Date().toISOString(),
+            nameUpdated: true,
+            nameUpdateDate: new Date().toISOString(),
           },
         };
       }
@@ -219,7 +213,7 @@ async function verifyArtistOnSpotify(artistName, token) {
         const bestMatch = closeMatches[0];
         return {
           found: true,
-          spotifyUrl: bestMatch.external_urls.spotify,
+          officialName: bestMatch.name,
           spotifyData: {
             id: bestMatch.id,
             name: bestMatch.name,
@@ -228,39 +222,33 @@ async function verifyArtistOnSpotify(artistName, token) {
             genres: bestMatch.genres,
             verified: false, // not an exact match
             searchQuery: artistName,
-            searchResults: response.artists.items.length,
             matchType: "partial",
             confidence: "medium",
-            rechecked: true,
-            recheckDate: new Date().toISOString(),
+            nameUpdated: true,
+            nameUpdateDate: new Date().toISOString(),
           },
         };
       }
     }
 
-    // no matches found (again)
+    // no matches found
     return {
       found: false,
-      spotifyUrl: `https://open.spotify.com/search/${encodeURIComponent(artistName)}`,
+      officialName: artistName, // keep original name
       spotifyData: {
         notFound: true,
         searchQuery: artistName,
         searchResults: response.artists?.items?.length || 0,
-        rechecked: true,
-        recheckDate: new Date().toISOString(),
+        nameChecked: true,
+        nameCheckDate: new Date().toISOString(),
       },
     };
   } catch (error) {
-    console.error(`error verifying ${artistName}:`, error.message);
+    console.error(`error checking name for ${artistName}:`, error.message);
     return {
       found: false,
-      spotifyUrl: `https://open.spotify.com/search/${encodeURIComponent(artistName)}`,
-      spotifyData: {
-        error: error.message,
-        searchQuery: artistName,
-        rechecked: true,
-        recheckDate: new Date().toISOString(),
-      },
+      officialName: artistName, // keep original name on error
+      error: error.message,
     };
   }
 }
@@ -269,9 +257,40 @@ function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-// main function to recheck artists that previously failed verification
-export async function recheckArtists(options = {}) {
-  const { limit, verbose = true, includeErrors = true } = options;
+// helper function to save artists data
+async function saveArtistsData(artists, verbose = true) {
+  try {
+    await writeFile(
+      "src/data/artists.json",
+      JSON.stringify(artists, null, 2),
+      "utf-8",
+    );
+    if (verbose) console.log("💾 saved changes to artists.json");
+  } catch (error) {
+    console.error("❌ failed to save artists data:", error.message);
+    throw error;
+  }
+}
+
+// check if artist already has verified spotify name
+function hasVerifiedSpotifyName(artist) {
+  return (
+    artist.spotifyVerified === true &&
+    artist.spotifyData?.verified === true &&
+    artist.spotifyData?.nameUpdated === true &&
+    artist.spotifyData?.nameUpdateDate
+  );
+}
+
+// main function to update all artist names
+export async function updateAllArtistNames(options = {}) {
+  const {
+    limit,
+    verbose = true,
+    dryRun = false,
+    skipVerified = true,
+    saveFrequency = 10,
+  } = options;
 
   if (!CLIENT_ID || !CLIENT_SECRET) {
     throw new Error(
@@ -284,43 +303,51 @@ export async function recheckArtists(options = {}) {
     const artistsData = await readFile("src/data/artists.json", "utf-8");
     const artists = JSON.parse(artistsData);
 
-    // filter to artists that need rechecking
-    let artistsToRecheck = artists.artists.filter(needsRechecking);
+    // get all artists, filtering out verified ones if requested
+    let artistsToProcess = artists.artists;
 
-    // optionally exclude artists with errors (only recheck "not found" artists)
-    if (!includeErrors) {
-      artistsToRecheck = artistsToRecheck.filter(
-        (artist) => !artist.spotifyData?.error,
+    if (skipVerified) {
+      const originalCount = artistsToProcess.length;
+      artistsToProcess = artistsToProcess.filter(
+        (artist) => !hasVerifiedSpotifyName(artist),
       );
-    }
-
-    if (artistsToRecheck.length === 0) {
-      if (verbose) console.log("✅ no artists need rechecking");
-      return;
-    }
-
-    const artistsToProcess = limit
-      ? artistsToRecheck.slice(0, limit)
-      : artistsToRecheck;
-
-    if (verbose) {
-      console.log(`🔄 rechecking ${artistsToProcess.length} artists`);
-      if (limit && artistsToRecheck.length > limit) {
+      const skippedCount = originalCount - artistsToProcess.length;
+      if (verbose && skippedCount > 0) {
         console.log(
-          `   (limited from ${artistsToRecheck.length} total artists needing recheck)`,
+          `⏭️  skipping ${skippedCount} artists with verified spotify names`,
         );
       }
-      console.log(`   including error cases: ${includeErrors ? "yes" : "no"}`);
+    }
+
+    if (limit) {
+      artistsToProcess = artistsToProcess.slice(0, limit);
+    }
+
+    if (verbose) {
+      console.log(`🔄 checking names for ${artistsToProcess.length} artists`);
+      if (limit && artists.artists.length > limit) {
+        console.log(
+          `   (limited from ${artists.artists.length} total artists)`,
+        );
+      }
+      if (dryRun) {
+        console.log("   🧪 dry run mode - no changes will be saved");
+      }
+      if (skipVerified) {
+        console.log("   ✅ skipping artists with verified spotify names");
+      }
     }
 
     // get spotify access token
     const token = await getSpotifyToken();
     if (verbose) console.log("🔑 obtained spotify access token");
 
-    let recheckedCount = 0;
-    let nowFoundCount = 0;
-    let stillNotFoundCount = 0;
+    let checkedCount = 0;
+    let updatedCount = 0;
+    let notFoundCount = 0;
     let errorCount = 0;
+    let unchangedCount = 0;
+    let needsSave = false;
 
     // process artists in batches to avoid rate limiting
     for (let i = 0; i < artistsToProcess.length; i += BATCH_SIZE) {
@@ -330,45 +357,86 @@ export async function recheckArtists(options = {}) {
         try {
           if (verbose) {
             console.log(
-              `🔍 rechecking ${artist.name} (${recheckedCount + 1}/${artistsToProcess.length})`,
+              `🔍 checking ${artist.name} (${checkedCount + 1}/${artistsToProcess.length})`,
             );
           }
 
-          const result = await verifyArtistOnSpotify(artist.name, token);
+          const result = await getOfficialArtistName(artist.name, token);
 
           if (result.found) {
-            // store the original name before updating
             const originalName = artist.name;
+            const nameChanged = originalName !== result.officialName;
 
-            // update artist name to the official spotify name
-            artist.name = result.spotifyData.name;
-            artist.spotifyUrl = result.spotifyUrl;
-            artist.spotifyVerified = result.found;
-            artist.spotifyData = {
-              ...result.spotifyData,
-              originalScrapedName: originalName, // keep track of original scraped name
-            };
+            if (nameChanged) {
+              if (!dryRun) {
+                // store the original name before updating
+                artist.name = result.officialName;
 
-            nowFoundCount++;
-            const nameChanged = originalName !== result.spotifyData.name;
-            const changeIndicator = nameChanged ? " (name updated)" : "";
-            if (verbose)
-              console.log(
-                `  ✅ now found: ${result.spotifyData.name}${changeIndicator}`,
-              );
+                // update or merge spotify data
+                artist.spotifyData = {
+                  ...artist.spotifyData,
+                  ...result.spotifyData,
+                  originalScrapedName:
+                    artist.spotifyData?.originalScrapedName || originalName,
+                };
+
+                // update verification status if we found an exact match
+                if (result.spotifyData.verified) {
+                  artist.spotifyVerified = true;
+                }
+
+                needsSave = true;
+              }
+
+              updatedCount++;
+              if (verbose) {
+                const dryRunPrefix = dryRun ? "[DRY RUN] " : "";
+                console.log(
+                  `  ✅ ${dryRunPrefix}name updated: "${originalName}" → "${result.officialName}"`,
+                );
+              }
+            } else {
+              unchangedCount++;
+              if (verbose) console.log(`  ✓ name unchanged: ${artist.name}`);
+
+              // still update spotify data to mark as checked
+              if (!dryRun && result.spotifyData) {
+                artist.spotifyData = {
+                  ...artist.spotifyData,
+                  ...result.spotifyData,
+                };
+                needsSave = true;
+              }
+            }
           } else {
-            // update artist data for not found
-            artist.spotifyUrl = result.spotifyUrl;
-            artist.spotifyVerified = result.found;
-            artist.spotifyData = result.spotifyData;
-            stillNotFoundCount++;
-            if (verbose) console.log(`  ❌ still not found`);
+            notFoundCount++;
+            if (verbose) console.log(`  ❌ not found: ${artist.name}`);
+
+            if (!dryRun && result.spotifyData) {
+              // update spotify data to record that we checked
+              artist.spotifyData = {
+                ...artist.spotifyData,
+                ...result.spotifyData,
+              };
+              needsSave = true;
+            }
           }
 
-          recheckedCount++;
+          checkedCount++;
+
+          // save progress periodically to prevent data loss
+          if (!dryRun && needsSave && checkedCount % saveFrequency === 0) {
+            try {
+              await saveArtistsData(artists, verbose);
+              needsSave = false;
+            } catch (saveError) {
+              console.error("⚠️  failed to save progress, continuing...");
+            }
+          }
+
           await delay(RATE_LIMIT_DELAY);
         } catch (error) {
-          console.error(`❌ error rechecking ${artist.name}:`, error.message);
+          console.error(`❌ error checking ${artist.name}:`, error.message);
           errorCount++;
         }
       }
@@ -381,44 +449,37 @@ export async function recheckArtists(options = {}) {
       }
     }
 
-    // save updated data
-    await writeFile(
-      "src/data/artists.json",
-      JSON.stringify(artists, null, 2),
-      "utf-8",
-    );
+    // save any remaining changes
+    if (!dryRun && needsSave) {
+      await saveArtistsData(artists, verbose);
+    }
 
     if (verbose) {
-      console.log("\n📊 recheck complete:");
-      console.log(`   rechecked: ${recheckedCount} artists`);
-      console.log(
-        `   now found: ${nowFoundCount} (${Math.round((nowFoundCount / recheckedCount) * 100)}%)`,
-      );
-      console.log(`   still not found: ${stillNotFoundCount}`);
+      console.log("\n📊 name update complete:");
+      console.log(`   checked: ${checkedCount} artists`);
+      console.log(`   updated: ${updatedCount} names`);
+      console.log(`   unchanged: ${unchangedCount} names`);
+      console.log(`   not found: ${notFoundCount}`);
       if (errorCount > 0) {
         console.log(`   errors: ${errorCount}`);
+      }
+      if (dryRun) {
+        console.log("\n💡 run without --dry-run to apply changes");
       }
     }
 
     return {
-      rechecked: recheckedCount,
-      nowFound: nowFoundCount,
-      stillNotFound: stillNotFoundCount,
+      checked: checkedCount,
+      updated: updatedCount,
+      unchanged: unchangedCount,
+      notFound: notFoundCount,
       errors: errorCount,
     };
   } catch (error) {
-    console.error("❌ recheck failed:", error.message);
+    console.error("❌ name update failed:", error.message);
     throw error;
   }
 }
-
-// export functions for use by other scripts
-export {
-  needsRechecking,
-  spotifyRequest,
-  getSpotifyToken,
-  verifyArtistOnSpotify,
-};
 
 // run as standalone script if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
@@ -431,32 +492,47 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       case "--limit":
         options.limit = parseInt(process.argv[++i], 10);
         break;
-      case "--no-errors":
-        options.includeErrors = false;
+      case "--dry-run":
+        options.dryRun = true;
         break;
       case "--quiet":
         options.verbose = false;
         break;
+      case "--skip-verified":
+        options.skipVerified = true;
+        break;
+      case "--no-skip-verified":
+        options.skipVerified = false;
+        break;
+      case "--save-frequency":
+        options.saveFrequency = parseInt(process.argv[++i], 10);
+        break;
       case "--help":
         console.log(`
-spotify artist recheck tool
+spotify artist name updater
 
-usage: node scripts/verify-spotify-recheck-artists.js [options]
+usage: node scripts/verify-spotify-update-all-names.js [options]
 
 options:
-  --limit N     only process N artists
-  --no-errors   skip artists with previous errors (only recheck "not found")
-  --quiet       minimal output
-  --help        show this help
+  --limit N           only process N artists
+  --dry-run           show what would be changed without saving
+  --quiet             minimal output
+  --skip-verified     skip artists with verified spotify names (default)
+  --no-skip-verified  check all artists, even verified ones
+  --save-frequency N  save progress every N artists (default: 10)
+  --help              show this help
 
 examples:
-  node scripts/verify-spotify-recheck-artists.js                  # recheck all failed artists
-  node scripts/verify-spotify-recheck-artists.js --limit 50       # recheck max 50 artists
-  node scripts/verify-spotify-recheck-artists.js --no-errors      # skip error cases
+  node scripts/verify-spotify-update-all-names.js                     # update all artist names
+  node scripts/verify-spotify-update-all-names.js --limit 50          # check first 50 artists
+  node scripts/verify-spotify-update-all-names.js --dry-run           # preview changes
+  node scripts/verify-spotify-update-all-names.js --dry-run --limit 10 # preview first 10
+  node scripts/verify-spotify-update-all-names.js --no-skip-verified  # recheck all artists
+  node scripts/verify-spotify-update-all-names.js --save-frequency 5  # save every 5 artists
         `);
         process.exit(0);
     }
   }
 
-  recheckArtists(options).catch(console.error);
+  updateAllArtistNames(options).catch(console.error);
 }

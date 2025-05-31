@@ -317,15 +317,31 @@ export async function verifyNewArtists(options = {}) {
 
           const result = await verifyArtistOnSpotify(artist.name, token);
 
-          // update artist data
-          artist.spotifyUrl = result.spotifyUrl;
-          artist.spotifyVerified = result.found;
-          artist.spotifyData = result.spotifyData;
-
           if (result.found) {
+            // store the original name before updating
+            const originalName = artist.name;
+
+            // update artist name to the official spotify name
+            artist.name = result.spotifyData.name;
+            artist.spotifyUrl = result.spotifyUrl;
+            artist.spotifyVerified = result.found;
+            artist.spotifyData = {
+              ...result.spotifyData,
+              originalScrapedName: originalName, // keep track of original scraped name
+            };
+
             foundCount++;
-            if (verbose) console.log(`  ✅ found: ${result.spotifyData.name}`);
+            const nameChanged = originalName !== result.spotifyData.name;
+            const changeIndicator = nameChanged ? " (name updated)" : "";
+            if (verbose)
+              console.log(
+                `  ✅ found: ${result.spotifyData.name}${changeIndicator}`,
+              );
           } else {
+            // update artist data for not found
+            artist.spotifyUrl = result.spotifyUrl;
+            artist.spotifyVerified = result.found;
+            artist.spotifyData = result.spotifyData;
             if (verbose) console.log(`  ❌ not found`);
           }
 
@@ -410,7 +426,9 @@ export async function verifyArtistsInMemory(artists, options = {}) {
 
         const result = {
           id: artist.id,
-          name: artist.name,
+          name: verificationResult.found
+            ? verificationResult.spotifyData.name
+            : artist.name, // use spotify name if found
           spotifyUrl: verificationResult.found
             ? verificationResult.spotifyUrl
             : null,
@@ -419,6 +437,7 @@ export async function verifyArtistsInMemory(artists, options = {}) {
             ? {
                 ...verificationResult.spotifyData,
                 verifiedAt: new Date().toISOString(),
+                originalScrapedName: artist.name, // keep track of original scraped name
               }
             : {
                 notFound: true,
@@ -431,8 +450,11 @@ export async function verifyArtistsInMemory(artists, options = {}) {
 
         if (verbose) {
           if (verificationResult.found) {
+            const nameChanged =
+              artist.name !== verificationResult.spotifyData.name;
+            const changeIndicator = nameChanged ? " (name updated)" : "";
             console.log(
-              `   ✅ ${artist.name} -> ${verificationResult.spotifyData.name}`,
+              `   ✅ ${artist.name} -> ${verificationResult.spotifyData.name}${changeIndicator}`,
             );
           } else {
             console.log(`   ❌ ${artist.name} (not found)`);

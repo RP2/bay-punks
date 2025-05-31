@@ -403,6 +403,11 @@ async function verifyArtistsIncremental(options = {}) {
             );
 
             if (spotifyData) {
+              // store the original name before updating
+              const originalName = originalArtist.name;
+
+              // update artist name to the official spotify name
+              originalArtist.name = spotifyData.name;
               originalArtist.spotifyUrl = spotifyData.spotifyUrl;
               originalArtist.spotifyVerified = true;
               originalArtist.spotifyData = {
@@ -412,14 +417,17 @@ async function verifyArtistsIncremental(options = {}) {
                 genres: spotifyData.genres,
                 matchType: spotifyData.matchType,
                 verifiedAt: new Date().toISOString(),
+                originalScrapedName: originalName, // keep track of original scraped name
               };
 
               verified++;
               if (verbose) {
                 const matchIcon =
                   spotifyData.matchType === "exact" ? "🎯" : "🔍";
+                const nameChanged = originalName !== spotifyData.name;
+                const changeIndicator = nameChanged ? " (name updated)" : "";
                 console.log(
-                  `  ${matchIcon} [${globalIndex + 1}/${totalToProcess}] ${originalArtist.name} → ${spotifyData.name}`,
+                  `  ${matchIcon} [${globalIndex + 1}/${totalToProcess}] ${originalName} → ${spotifyData.name}${changeIndicator}`,
                 );
               }
             } else {
