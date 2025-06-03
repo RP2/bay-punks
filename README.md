@@ -1,6 +1,8 @@
 # Bay Area Live Shows
 
-A simple & accessible list of upcoming music concerts in the Bay Area inspired by the classic FooPee punk l## Contributing
+A simple & accessible list of upcoming music concerts in the Bay Area inspired by the classic FooPee punk list.
+
+## Contributing
 
 I welcome contributions from the community! Here's how you can help:
 
