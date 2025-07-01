@@ -510,7 +510,7 @@
         "searchQuery": "Mustache Harbor",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:56.432Z"
+        "recheckDate": "2025-07-01T09:18:37.104Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-09-06",
@@ -673,7 +673,7 @@
         "searchQuery": "Trans-Pecos Department Of Dust & Wire",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:53.917Z"
+        "recheckDate": "2025-07-01T09:18:37.473Z"
       },
       "firstSeen": "2025-07-05",
       "lastSeen": "2025-09-28",
@@ -812,7 +812,7 @@
         "searchQuery": "Somebunny Else",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:51.472Z"
+        "recheckDate": "2025-07-01T09:18:37.847Z"
       },
       "firstSeen": "2025-07-11",
       "lastSeen": "2025-08-23",
@@ -944,7 +944,7 @@
         "searchQuery": "Stu Allen",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:47.868Z"
+        "recheckDate": "2025-07-01T09:18:38.220Z"
       },
       "firstSeen": "2025-07-18",
       "lastSeen": "2025-07-20",
@@ -1655,7 +1655,7 @@
         "searchQuery": "Nuisance In Public",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:45.458Z"
+        "recheckDate": "2025-07-01T09:18:38.539Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-07-12",
@@ -1900,12 +1900,14 @@
       "id": "dantuta",
       "name": "Dantuta",
       "searchUrl": "https://open.spotify.com/search/Dantuta",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Dantuta",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Dantuta",
-        "verifiedAt": "2025-06-16T07:26:54.359Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:38.903Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-08-31",
@@ -2028,12 +2030,14 @@
       "id": "sincerly-yours",
       "name": "Sincerly Yours",
       "searchUrl": "https://open.spotify.com/search/Sincerly%20Yours",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Sincerly%20Yours",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Sincerly Yours",
-        "verifiedAt": "2025-06-23T07:26:51.752Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:39.305Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-07-06",
@@ -2164,7 +2168,7 @@
         "searchQuery": "Da Pupz",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:46.952Z"
+        "recheckDate": "2025-07-01T09:18:39.679Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-08-31",
@@ -2479,7 +2483,7 @@
         "searchQuery": "55 Castles",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:48.931Z"
+        "recheckDate": "2025-07-01T09:18:40.052Z"
       },
       "firstSeen": "2025-06-29",
       "lastSeen": "2025-07-07",
@@ -2953,12 +2957,14 @@
       "id": "bone-thistle",
       "name": "Bone Thistle",
       "searchUrl": "https://open.spotify.com/search/Bone%20Thistle",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Bone%20Thistle",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Bone Thistle",
-        "verifiedAt": "2025-06-30T07:27:05.325Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:40.456Z"
       },
       "firstSeen": "2025-07-06",
       "lastSeen": "2025-08-10",
@@ -2970,12 +2976,14 @@
       "id": "teenage-jesus-and-the-jerks",
       "name": "Teenage Jesus And The Jerks",
       "searchUrl": "https://open.spotify.com/search/Teenage%20Jesus%20And%20The%20Jerks",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Teenage%20Jesus%20And%20The%20Jerks",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Teenage Jesus And The Jerks",
-        "verifiedAt": "2025-06-30T07:27:05.804Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:41.850Z"
       },
       "firstSeen": "2025-07-08",
       "lastSeen": "2025-07-09",
@@ -3094,7 +3102,7 @@
         "searchQuery": "Sympathy Flowers",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:33.252Z"
+        "recheckDate": "2025-07-01T09:18:42.273Z"
       },
       "firstSeen": "2025-07-09",
       "lastSeen": "2025-07-19",
@@ -3190,7 +3198,7 @@
         "searchQuery": "Richard Haig",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:50.076Z"
+        "recheckDate": "2025-07-01T09:18:42.640Z"
       },
       "firstSeen": "2025-07-10",
       "lastSeen": "2025-09-04",
@@ -3433,12 +3441,14 @@
       "id": "bullship-detector",
       "name": "Bullship Detector",
       "searchUrl": "https://open.spotify.com/search/Bullship%20Detector",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Bullship%20Detector",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Bullship Detector",
-        "verifiedAt": "2025-06-23T07:26:59.281Z"
+        "searchResults": 3,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:42.968Z"
       },
       "firstSeen": "2025-07-11",
       "lastSeen": "2025-10-18",
@@ -3578,12 +3588,14 @@
       "id": "big-blue-soul-revue",
       "name": "Big Blue Soul Revue",
       "searchUrl": "https://open.spotify.com/search/Big%20Blue%20Soul%20Revue",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Big%20Blue%20Soul%20Revue",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Big Blue Soul Revue",
-        "verifiedAt": "2025-06-30T07:27:09.925Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:43.333Z"
       },
       "firstSeen": "2025-07-13",
       "lastSeen": "2025-08-08",
@@ -3824,14 +3836,24 @@
     },
     {
       "id": "lo-fi-legs",
-      "name": "Lo-Fi Legs",
+      "name": "Lofi Legs",
       "searchUrl": "https://open.spotify.com/search/Lo-Fi%20Legs",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/2D7kfjhkgz3y3LBheDXtFu",
+      "spotifyVerified": true,
       "spotifyData": {
-        "notFound": true,
+        "id": "2D7kfjhkgz3y3LBheDXtFu",
+        "name": "Lofi Legs",
+        "followers": 1461,
+        "popularity": 9,
+        "genres": ["bedroom pop"],
+        "verified": false,
         "searchQuery": "Lo-Fi Legs",
-        "verifiedAt": "2025-06-30T07:27:13.260Z"
+        "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:43.659Z",
+        "originalScrapedName": "Lo-Fi Legs"
       },
       "firstSeen": "2025-07-16",
       "lastSeen": "2025-08-02",
@@ -4638,7 +4660,7 @@
         "searchQuery": "Brit Floyd",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:55.569Z"
+        "recheckDate": "2025-07-01T09:18:44.013Z"
       },
       "firstSeen": "2025-07-19",
       "lastSeen": "2025-07-20",
@@ -5238,7 +5260,7 @@
         "searchQuery": "Michinekit",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:55.878Z"
+        "recheckDate": "2025-07-01T09:18:44.336Z"
       },
       "firstSeen": "2025-07-27",
       "lastSeen": "2025-07-28",
@@ -5336,7 +5358,7 @@
         "searchQuery": "Ultra Sounds",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:10.832Z"
+        "recheckDate": "2025-07-01T09:18:44.729Z"
       },
       "firstSeen": "2025-07-27",
       "lastSeen": "2025-08-23",
@@ -5836,7 +5858,7 @@
         "searchQuery": "You Should Be Dancing",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:56.153Z"
+        "recheckDate": "2025-07-01T09:18:45.102Z"
       },
       "firstSeen": "2025-08-02",
       "lastSeen": "2025-10-19",
@@ -6012,12 +6034,14 @@
       "id": "mormon-mincers",
       "name": "Mormon Mincers",
       "searchUrl": "https://open.spotify.com/search/Mormon%20Mincers",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Mormon%20Mincers",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Mormon Mincers",
-        "verifiedAt": "2025-06-23T07:27:03.024Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:46.429Z"
       },
       "firstSeen": "2025-08-05",
       "lastSeen": "2025-08-16",
@@ -6832,7 +6856,7 @@
         "searchQuery": "dj Lady Ryan",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:07.049Z"
+        "recheckDate": "2025-07-01T09:18:46.729Z"
       },
       "firstSeen": "2025-08-10",
       "lastSeen": "2025-09-26",
@@ -7589,12 +7613,14 @@
       "id": "dj-lizzy-al-toque",
       "name": "dj Lizzy Al Toque",
       "searchUrl": "https://open.spotify.com/search/dj%20Lizzy%20Al%20Toque",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/dj%20Lizzy%20Al%20Toque",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "dj Lizzy Al Toque",
-        "verifiedAt": "2025-06-30T07:27:21.688Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:47.092Z"
       },
       "firstSeen": "2025-08-28",
       "lastSeen": "2025-09-18",
@@ -7739,12 +7765,14 @@
       "id": "orcutt-shelley-miller-trio",
       "name": "Orcutt Shelley Miller Trio",
       "searchUrl": "https://open.spotify.com/search/Orcutt%20Shelley%20Miller%20Trio",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Orcutt%20Shelley%20Miller%20Trio",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Orcutt Shelley Miller Trio",
-        "verifiedAt": "2025-06-16T07:27:02.376Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:47.520Z"
       },
       "firstSeen": "2025-09-05",
       "lastSeen": "2025-09-06",
@@ -7806,12 +7834,14 @@
       "id": "dead-river-rebles",
       "name": "Dead River Rebles",
       "searchUrl": "https://open.spotify.com/search/Dead%20River%20Rebles",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Dead%20River%20Rebles",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Dead River Rebles",
-        "verifiedAt": "2025-06-30T07:27:22.110Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:47.874Z"
       },
       "firstSeen": "2025-09-11",
       "lastSeen": "2025-10-11",
@@ -8457,7 +8487,7 @@
         "searchQuery": "Nilufer Yanya",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:56.682Z"
+        "recheckDate": "2025-07-01T09:18:48.165Z"
       },
       "firstSeen": "2025-09-23",
       "lastSeen": "2025-09-24",
@@ -8830,7 +8860,7 @@
         "searchQuery": "Bumpin Ugies",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:57.008Z"
+        "recheckDate": "2025-07-01T09:18:48.481Z"
       },
       "firstSeen": "2025-10-01",
       "lastSeen": "2025-10-02",
@@ -9668,12 +9698,14 @@
       "id": "magik-magik-orchestra",
       "name": "Magik Magik Orchestra",
       "searchUrl": "https://open.spotify.com/search/Magik%20Magik%20Orchestra",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Magik%20Magik%20Orchestra",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Magik Magik Orchestra",
-        "verifiedAt": "2025-06-23T07:27:09.047Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:48.828Z"
       },
       "firstSeen": "2025-11-05",
       "lastSeen": "2025-11-06",
@@ -9913,12 +9945,14 @@
       "id": "sigur-ros-with-worldless-music-orchestra",
       "name": "Sigur Ros with Worldless Music Orchestra",
       "searchUrl": "https://open.spotify.com/search/Sigur%20Ros%20with%20Worldless%20Music%20Orchestra",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Sigur%20Ros%20with%20Worldless%20Music%20Orchestra",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Sigur Ros with Worldless Music Orchestra",
-        "verifiedAt": "2025-06-09T07:26:24.881Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:49.169Z"
       },
       "firstSeen": "2025-11-16",
       "lastSeen": "2025-11-17",
@@ -10515,12 +10549,14 @@
       "id": "kevin-moan-and-the-howling",
       "name": "Kevin Moan And The Howling",
       "searchUrl": "https://open.spotify.com/search/Kevin%20Moan%20And%20The%20Howling",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Kevin%20Moan%20And%20The%20Howling",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Kevin Moan And The Howling",
-        "verifiedAt": "2025-06-30T07:27:31.495Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:49.495Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -10615,7 +10651,7 @@
         "searchQuery": "Slagathor",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:36.312Z"
+        "recheckDate": "2025-07-01T09:18:50.881Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -10786,7 +10822,7 @@
         "searchQuery": "Midnight Dumpster Fire",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:45.840Z"
+        "recheckDate": "2025-07-01T09:18:51.316Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -10879,7 +10915,8 @@
         "notFound": true,
         "searchQuery": "External Control",
         "searchResults": 10,
-        "lastChecked": "2025-06-30T07:27:36.830Z"
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:51.696Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -11223,7 +11260,8 @@
         "notFound": true,
         "searchQuery": "Mermaid & The Crashers",
         "searchResults": 10,
-        "lastChecked": "2025-06-30T07:27:44.853Z"
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:52.144Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -11391,7 +11429,7 @@
         "searchQuery": "Gods Weapons",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:46.170Z"
+        "recheckDate": "2025-07-01T09:18:52.505Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -11775,7 +11813,7 @@
         "searchQuery": "Thirty Aut Sicks",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:46.474Z"
+        "recheckDate": "2025-07-01T09:18:52.880Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -12078,7 +12116,8 @@
         "notFound": true,
         "searchQuery": "CANCELLED:  Vermidax",
         "searchResults": 10,
-        "lastChecked": "2025-06-30T07:27:53.570Z"
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:53.198Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -12364,7 +12403,8 @@
         "notFound": true,
         "searchQuery": "Super Normal Girl",
         "searchResults": 10,
-        "lastChecked": "2025-06-30T07:27:58.787Z"
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:53.596Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -12557,7 +12597,7 @@
         "searchQuery": "Ironfront",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:46.826Z"
+        "recheckDate": "2025-07-01T09:18:53.961Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -12728,7 +12768,8 @@
         "notFound": true,
         "searchQuery": "Louisiana Time Travelers",
         "searchResults": 10,
-        "lastChecked": "2025-06-30T07:28:02.536Z"
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:54.353Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -12971,7 +13012,7 @@
         "searchQuery": "Dierks Bently",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:48.121Z"
+        "recheckDate": "2025-07-01T09:18:55.728Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -13066,7 +13107,7 @@
         "searchQuery": "Black White And Red All Over",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:47.279Z"
+        "recheckDate": "2025-07-01T09:18:56.140Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -13188,7 +13229,8 @@
         "notFound": true,
         "searchQuery": "Electric Funeral, Cosmic Egg",
         "searchResults": 10,
-        "lastChecked": "2025-06-30T07:28:09.627Z"
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:56.511Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -13232,7 +13274,7 @@
         "searchQuery": "Vomit Dust",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:48.425Z"
+        "recheckDate": "2025-07-01T09:18:56.910Z"
       },
       "firstSeen": "2025-06-28",
       "lastSeen": "2025-06-28",
@@ -13568,14 +13610,14 @@
       "id": "zinorbital",
       "name": "Zinorbital",
       "searchUrl": "https://open.spotify.com/search/Zinorbital",
-      "spotifyUrl": "https://open.spotify.com/search/Zinorbita",
+      "spotifyUrl": "https://open.spotify.com/search/Zinorbital",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
-        "searchQuery": "Zinorbita",
-        "searchResults": 10,
+        "searchQuery": "Zinorbital",
+        "searchResults": 3,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:48.228Z"
+        "recheckDate": "2025-07-01T09:18:57.251Z"
       },
       "firstSeen": "2025-06-29",
       "lastSeen": "2025-06-29",
@@ -13858,7 +13900,7 @@
         "searchQuery": "host Rafael Casal",
         "searchResults": 0,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:48.714Z"
+        "recheckDate": "2025-07-01T09:18:57.532Z"
       },
       "firstSeen": "2025-06-29",
       "lastSeen": "2025-06-29",
@@ -13902,7 +13944,7 @@
         "searchQuery": "Lady May And The Working Days",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:52.485Z"
+        "recheckDate": "2025-07-01T09:18:57.910Z"
       },
       "firstSeen": "2025-06-29",
       "lastSeen": "2025-06-29",
@@ -13920,7 +13962,8 @@
         "notFound": true,
         "searchQuery": "Dany Allen",
         "searchResults": 10,
-        "lastChecked": "2025-06-30T07:28:14.737Z"
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:58.275Z"
       },
       "firstSeen": "2025-06-29",
       "lastSeen": "2025-06-29",
@@ -15612,7 +15655,7 @@
         "searchQuery": "frieworks",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:49.006Z"
+        "recheckDate": "2025-07-01T09:18:58.656Z"
       },
       "firstSeen": "2025-07-04",
       "lastSeen": "2025-07-04",
@@ -16064,12 +16107,14 @@
       "id": "malibu-barbabe",
       "name": "Malibu Barbabe",
       "searchUrl": "https://open.spotify.com/search/Malibu%20Barbabe",
-      "spotifyUrl": null,
+      "spotifyUrl": "https://open.spotify.com/search/Malibu%20Barbabe",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Malibu Barbabe",
-        "verifiedAt": "2025-06-09T07:26:05.411Z"
+        "searchResults": 10,
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:18:58.968Z"
       },
       "firstSeen": "2025-07-05",
       "lastSeen": "2025-07-05",
@@ -16660,7 +16705,7 @@
         "searchQuery": "SF Symphony",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:49.345Z"
+        "recheckDate": "2025-07-01T09:19:00.313Z"
       },
       "firstSeen": "2025-07-06",
       "lastSeen": "2025-07-06",
@@ -17324,14 +17369,21 @@
       "id": "jackie-clementine",
       "name": "Jackie Clementine",
       "searchUrl": "https://open.spotify.com/search/Jackie%20Clementine",
-      "spotifyUrl": "https://open.spotify.com/search/Jackie%20Clemintine",
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/1vXxfzKfE3pTdhpcHXwQdm",
+      "spotifyVerified": true,
       "spotifyData": {
-        "notFound": true,
-        "searchQuery": "Jackie Clemintine",
+        "id": "1vXxfzKfE3pTdhpcHXwQdm",
+        "name": "Jackie Clementine",
+        "followers": 23,
+        "popularity": 0,
+        "genres": [],
+        "verified": true,
+        "searchQuery": "Jackie Clementine",
         "searchResults": 10,
+        "matchType": "exact",
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:49.600Z"
+        "recheckDate": "2025-07-01T09:19:00.692Z",
+        "originalScrapedName": "Jackie Clementine"
       },
       "firstSeen": "2025-07-10",
       "lastSeen": "2025-07-10",
@@ -17672,7 +17724,7 @@
         "searchQuery": "Jay And The Americans",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:50.394Z"
+        "recheckDate": "2025-07-01T09:19:01.083Z"
       },
       "firstSeen": "2025-07-10",
       "lastSeen": "2025-07-10",
@@ -19108,7 +19160,7 @@
         "searchQuery": "Acustic Alchemy",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:50.726Z"
+        "recheckDate": "2025-07-01T09:19:01.604Z"
       },
       "firstSeen": "2025-07-12",
       "lastSeen": "2025-07-12",
@@ -19508,7 +19560,7 @@
         "searchQuery": "Class of '77",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:51.062Z"
+        "recheckDate": "2025-07-01T09:19:02.002Z"
       },
       "firstSeen": "2025-07-12",
       "lastSeen": "2025-07-12",
@@ -19552,7 +19604,7 @@
         "searchQuery": "Wilson Gil And the Willful Shinners)",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:52.424Z"
+        "recheckDate": "2025-07-01T09:19:02.402Z"
       },
       "firstSeen": "2025-07-12",
       "lastSeen": "2025-07-12",
@@ -19812,7 +19864,7 @@
         "searchQuery": "Nikki Perez",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:52.735Z"
+        "recheckDate": "2025-07-01T09:19:02.833Z"
       },
       "firstSeen": "2025-07-12",
       "lastSeen": "2025-07-12",
@@ -21242,7 +21294,7 @@
         "searchQuery": "Derek Zanitti",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:53.052Z"
+        "recheckDate": "2025-07-01T09:19:03.166Z"
       },
       "firstSeen": "2025-07-17",
       "lastSeen": "2025-07-17",
@@ -21261,7 +21313,7 @@
         "searchQuery": "Half Cafe",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:53.435Z"
+        "recheckDate": "2025-07-01T09:19:03.638Z"
       },
       "firstSeen": "2025-07-17",
       "lastSeen": "2025-07-17",
@@ -21670,7 +21722,7 @@
         "searchQuery": "Allah-Lahs",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:54.084Z"
+        "recheckDate": "2025-07-01T09:19:04.011Z"
       },
       "firstSeen": "2025-07-17",
       "lastSeen": "2025-07-17",
@@ -22169,7 +22221,7 @@
         "searchQuery": "Scott Padden",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:54.426Z"
+        "recheckDate": "2025-07-01T09:19:05.356Z"
       },
       "firstSeen": "2025-07-18",
       "lastSeen": "2025-07-18",
@@ -22281,14 +22333,14 @@
       "id": "film-screening-hung-up-on-a-dream",
       "name": "film screening \"Hung Up On A Dream\"",
       "searchUrl": "https://open.spotify.com/search/film%20screening%20%22Hung%20Up%20On%20A%20Dream%22",
-      "spotifyUrl": "https://open.spotify.com/search/film%20screening%20%22Hung%20Up%20On%20A%20Dream)",
+      "spotifyUrl": "https://open.spotify.com/search/film%20screening%20%22Hung%20Up%20On%20A%20Dream%22",
       "spotifyVerified": false,
       "spotifyData": {
         "notFound": true,
-        "searchQuery": "film screening \"Hung Up On A Dream)",
+        "searchQuery": "film screening \"Hung Up On A Dream\"",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:54.764Z"
+        "recheckDate": "2025-07-01T09:19:05.697Z"
       },
       "firstSeen": "2025-07-18",
       "lastSeen": "2025-07-18",
@@ -22485,7 +22537,7 @@
         "searchQuery": "Gary Mullen & The Works",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:55.116Z"
+        "recheckDate": "2025-07-01T09:19:06.066Z"
       },
       "firstSeen": "2025-07-18",
       "lastSeen": "2025-07-18",
@@ -22647,7 +22699,7 @@
         "searchQuery": "dj Chris Owen",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:55.451Z"
+        "recheckDate": "2025-07-01T09:19:06.456Z"
       },
       "firstSeen": "2025-07-18",
       "lastSeen": "2025-07-18",
@@ -22871,7 +22923,7 @@
         "searchQuery": "Old Merva",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:56.774Z"
+        "recheckDate": "2025-07-01T09:19:06.842Z"
       },
       "firstSeen": "2025-07-19",
       "lastSeen": "2025-07-19",
@@ -23016,7 +23068,7 @@
         "searchQuery": "Brian Rashap",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:57.118Z"
+        "recheckDate": "2025-07-01T09:19:07.233Z"
       },
       "firstSeen": "2025-07-19",
       "lastSeen": "2025-07-19",
@@ -23815,16 +23867,24 @@
     },
     {
       "id": "matthew-heckler",
-      "name": "Matthew Heckler",
+      "name": "Heckler",
       "searchUrl": "https://open.spotify.com/search/Matthew%20Heckler",
-      "spotifyUrl": "https://open.spotify.com/search/Matthew%20Heckler",
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/4IQNH5QTscpQAXjLN3N8jG",
+      "spotifyVerified": true,
       "spotifyData": {
-        "notFound": true,
+        "id": "4IQNH5QTscpQAXjLN3N8jG",
+        "name": "Heckler",
+        "followers": 456,
+        "popularity": 10,
+        "genres": [],
+        "verified": false,
         "searchQuery": "Matthew Heckler",
         "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:57.452Z"
+        "recheckDate": "2025-07-01T09:19:07.634Z",
+        "originalScrapedName": "Matthew Heckler"
       },
       "firstSeen": "2025-07-20",
       "lastSeen": "2025-07-20",
@@ -23944,7 +24004,7 @@
         "searchQuery": "Danny Luehring",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:57.782Z"
+        "recheckDate": "2025-07-01T09:19:08.004Z"
       },
       "firstSeen": "2025-07-20",
       "lastSeen": "2025-07-20",
@@ -24088,7 +24148,7 @@
         "searchQuery": "Joe Rutt",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:58.145Z"
+        "recheckDate": "2025-07-01T09:19:08.415Z"
       },
       "firstSeen": "2025-07-20",
       "lastSeen": "2025-07-20",
@@ -24717,7 +24777,7 @@
         "searchQuery": "Chronic Traumatic Encephalopathy",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:58.503Z"
+        "recheckDate": "2025-07-01T09:19:08.757Z"
       },
       "firstSeen": "2025-07-20",
       "lastSeen": "2025-07-20",
@@ -24802,16 +24862,24 @@
     },
     {
       "id": "dj-christie-bubbles",
-      "name": "dj Christie Bubbles",
+      "name": "Bubbles",
       "searchUrl": "https://open.spotify.com/search/dj%20Christie%20Bubbles",
-      "spotifyUrl": "https://open.spotify.com/search/dj%20Christie%20Bubbles",
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/0Gi4vBtNzZwrYtOw05G2HA",
+      "spotifyVerified": true,
       "spotifyData": {
-        "notFound": true,
+        "id": "0Gi4vBtNzZwrYtOw05G2HA",
+        "name": "Bubbles",
+        "followers": 45,
+        "popularity": 35,
+        "genres": [],
+        "verified": false,
         "searchQuery": "dj Christie Bubbles",
         "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:58.876Z"
+        "recheckDate": "2025-07-01T09:19:10.105Z",
+        "originalScrapedName": "dj Christie Bubbles"
       },
       "firstSeen": "2025-07-20",
       "lastSeen": "2025-07-20",
@@ -25099,7 +25167,7 @@
         "searchQuery": "Oakland Rising",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:59.209Z"
+        "recheckDate": "2025-07-01T09:19:10.479Z"
       },
       "firstSeen": "2025-07-21",
       "lastSeen": "2025-07-21",
@@ -25907,7 +25975,7 @@
         "searchQuery": "Micky And The Motorcars",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:15:59.752Z"
+        "recheckDate": "2025-07-01T09:19:11.036Z"
       },
       "firstSeen": "2025-07-24",
       "lastSeen": "2025-07-24",
@@ -26635,7 +26703,7 @@
         "searchQuery": "Emily Nightengale",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:00.036Z"
+        "recheckDate": "2025-07-01T09:19:11.376Z"
       },
       "firstSeen": "2025-07-25",
       "lastSeen": "2025-07-25",
@@ -26654,7 +26722,7 @@
         "searchQuery": "Ava Stubblefield",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:01.424Z"
+        "recheckDate": "2025-07-01T09:19:11.685Z"
       },
       "firstSeen": "2025-07-25",
       "lastSeen": "2025-07-25",
@@ -26853,7 +26921,7 @@
         "searchQuery": "dj Three6Sashia",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:02.561Z"
+        "recheckDate": "2025-07-01T09:19:12.003Z"
       },
       "firstSeen": "2025-07-25",
       "lastSeen": "2025-07-25",
@@ -27618,7 +27686,7 @@
         "searchQuery": "Erica Ambrin & The Eclectic Soul Project",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:02.887Z"
+        "recheckDate": "2025-07-01T09:19:12.382Z"
       },
       "firstSeen": "2025-07-26",
       "lastSeen": "2025-07-26",
@@ -27655,12 +27723,21 @@
       "id": "hunka-hunka-hula-revue",
       "name": "Hunka Hunka Hula Revue",
       "searchUrl": "https://open.spotify.com/search/Hunka%20Hunka%20Hula%20Revue",
-      "spotifyUrl": null,
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/30y6OS79vVubGbF11U814e",
+      "spotifyVerified": true,
       "spotifyData": {
-        "notFound": true,
-        "searchQuery": "Hunka Hunka Hula Review",
-        "verifiedAt": "2025-06-02T07:25:43.948Z"
+        "id": "30y6OS79vVubGbF11U814e",
+        "name": "Hunka Hunka Hula Revue",
+        "followers": 33,
+        "popularity": 0,
+        "genres": [],
+        "verified": true,
+        "searchQuery": "Hunka Hunka Hula Revue",
+        "searchResults": 6,
+        "matchType": "exact",
+        "rechecked": true,
+        "recheckDate": "2025-07-01T09:19:12.750Z",
+        "originalScrapedName": "Hunka Hunka Hula Revue"
       },
       "firstSeen": "2025-07-26",
       "lastSeen": "2025-07-26",
@@ -27839,7 +27916,7 @@
         "searchQuery": "US Air Guitar National Finals",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:03.218Z"
+        "recheckDate": "2025-07-01T09:19:13.108Z"
       },
       "firstSeen": "2025-07-26",
       "lastSeen": "2025-07-26",
@@ -28808,16 +28885,23 @@
     },
     {
       "id": "placeholder",
-      "name": "Placeholder",
+      "name": "placeholder",
       "searchUrl": "https://open.spotify.com/search/Placeholder",
-      "spotifyUrl": "https://open.spotify.com/search/Placeholer",
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/6zdi9sYFdYlynnXrp0iqgi",
+      "spotifyVerified": true,
       "spotifyData": {
-        "notFound": true,
-        "searchQuery": "Placeholer",
+        "id": "6zdi9sYFdYlynnXrp0iqgi",
+        "name": "placeholder",
+        "followers": 320,
+        "popularity": 7,
+        "genres": ["slowcore"],
+        "verified": true,
+        "searchQuery": "Placeholder",
         "searchResults": 10,
+        "matchType": "exact",
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:54.244Z"
+        "recheckDate": "2025-07-01T09:19:13.497Z",
+        "originalScrapedName": "Placeholder"
       },
       "firstSeen": "2025-07-27",
       "lastSeen": "2025-07-27",
@@ -28836,7 +28920,7 @@
         "searchQuery": "Smashed Teeth",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:03.584Z"
+        "recheckDate": "2025-07-01T09:19:14.839Z"
       },
       "firstSeen": "2025-07-27",
       "lastSeen": "2025-07-27",
@@ -29260,16 +29344,24 @@
     },
     {
       "id": "atomic-bomb-audition",
-      "name": "Atomic Bomb Audition",
+      "name": "The Atomic Bomb Audition",
       "searchUrl": "https://open.spotify.com/search/Atomic%20Bomb%20Audition",
-      "spotifyUrl": "https://open.spotify.com/search/Atomic%20Bomb%20Auction",
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/6Fuhtq7vvxtv6qCpZIRFnV",
+      "spotifyVerified": true,
       "spotifyData": {
-        "notFound": true,
-        "searchQuery": "Atomic Bomb Auction",
+        "id": "6Fuhtq7vvxtv6qCpZIRFnV",
+        "name": "The Atomic Bomb Audition",
+        "followers": 114,
+        "popularity": 0,
+        "genres": ["sludge metal", "avant-garde", "progressive metal"],
+        "verified": false,
+        "searchQuery": "Atomic Bomb Audition",
         "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:51.785Z"
+        "recheckDate": "2025-07-01T09:19:15.208Z",
+        "originalScrapedName": "Atomic Bomb Audition"
       },
       "firstSeen": "2025-07-28",
       "lastSeen": "2025-07-28",
@@ -30006,7 +30098,7 @@
         "searchQuery": "Kevin Russell & His So Called Friends",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:03.926Z"
+        "recheckDate": "2025-07-01T09:19:15.521Z"
       },
       "firstSeen": "2025-07-30",
       "lastSeen": "2025-07-30",
@@ -30481,9 +30573,9 @@
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Jane Wickline & Liva Pierce",
-        "searchResults": 6,
+        "searchResults": 4,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:04.237Z"
+        "recheckDate": "2025-07-01T09:19:15.856Z"
       },
       "firstSeen": "2025-07-31",
       "lastSeen": "2025-07-31",
@@ -30689,7 +30781,7 @@
         "searchQuery": "Meranda Lambert",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:04.569Z"
+        "recheckDate": "2025-07-01T09:19:16.247Z"
       },
       "firstSeen": "2025-08-01",
       "lastSeen": "2025-08-01",
@@ -33236,7 +33328,7 @@
         "searchQuery": "Steely Dead",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:05.816Z"
+        "recheckDate": "2025-07-01T09:19:16.591Z"
       },
       "firstSeen": "2025-08-06",
       "lastSeen": "2025-08-06",
@@ -34874,14 +34966,21 @@
       "id": "girl-math",
       "name": "Girl Math",
       "searchUrl": "https://open.spotify.com/search/Girl%20Math",
-      "spotifyUrl": "https://open.spotify.com/search/Girl%20Math",
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/5ME3kZ92gTA4IcXDauJmz5",
+      "spotifyVerified": true,
       "spotifyData": {
-        "notFound": true,
+        "id": "5ME3kZ92gTA4IcXDauJmz5",
+        "name": "Girl Math",
+        "followers": 184,
+        "popularity": 20,
+        "genres": [],
+        "verified": true,
         "searchQuery": "Girl Math",
         "searchResults": 10,
+        "matchType": "exact",
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:06.386Z"
+        "recheckDate": "2025-07-01T09:19:16.966Z",
+        "originalScrapedName": "Girl Math"
       },
       "firstSeen": "2025-08-09",
       "lastSeen": "2025-08-09",
@@ -35205,7 +35304,7 @@
         "searchQuery": "Infinite Jess",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:06.728Z"
+        "recheckDate": "2025-07-01T09:19:17.328Z"
       },
       "firstSeen": "2025-08-09",
       "lastSeen": "2025-08-09",
@@ -36767,7 +36866,7 @@
         "searchQuery": "Budryl Guy",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:07.382Z"
+        "recheckDate": "2025-07-01T09:19:17.711Z"
       },
       "firstSeen": "2025-08-12",
       "lastSeen": "2025-08-12",
@@ -37388,7 +37487,7 @@
         "searchQuery": "Jesus \"Aquaje\" Ramos & The Buena Vista Orchestra",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:07.714Z"
+        "recheckDate": "2025-07-01T09:19:18.103Z"
       },
       "firstSeen": "2025-08-15",
       "lastSeen": "2025-08-15",
@@ -37724,14 +37823,21 @@
       "id": "welcome-strawberry",
       "name": "Welcome Strawberry",
       "searchUrl": "https://open.spotify.com/search/Welcome%20Strawberry",
-      "spotifyUrl": "https://open.spotify.com/search/Welcome%20Straberry",
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/2b99AIXH9YLykApkwr5Cdm",
+      "spotifyVerified": true,
       "spotifyData": {
-        "notFound": true,
-        "searchQuery": "Welcome Straberry",
+        "id": "2b99AIXH9YLykApkwr5Cdm",
+        "name": "Welcome Strawberry",
+        "followers": 741,
+        "popularity": 11,
+        "genres": ["shoegaze", "dream pop"],
+        "verified": true,
+        "searchQuery": "Welcome Strawberry",
         "searchResults": 10,
+        "matchType": "exact",
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:53.577Z"
+        "recheckDate": "2025-07-01T09:19:19.475Z",
+        "originalScrapedName": "Welcome Strawberry"
       },
       "firstSeen": "2025-08-15",
       "lastSeen": "2025-08-15",
@@ -37750,7 +37856,7 @@
         "searchQuery": "Pleaure Routine",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:08.075Z"
+        "recheckDate": "2025-07-01T09:19:19.820Z"
       },
       "firstSeen": "2025-08-15",
       "lastSeen": "2025-08-15",
@@ -38137,7 +38243,7 @@
         "searchQuery": "Sixlegs",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:08.762Z"
+        "recheckDate": "2025-07-01T09:19:20.183Z"
       },
       "firstSeen": "2025-08-16",
       "lastSeen": "2025-08-16",
@@ -38884,7 +38990,7 @@
         "searchQuery": "9 Million",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:10.108Z"
+        "recheckDate": "2025-07-01T09:19:20.552Z"
       },
       "firstSeen": "2025-08-18",
       "lastSeen": "2025-08-18",
@@ -39320,9 +39426,9 @@
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Genteman Surfer",
-        "searchResults": 2,
+        "searchResults": 3,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:10.484Z"
+        "recheckDate": "2025-07-01T09:19:20.910Z"
       },
       "firstSeen": "2025-08-21",
       "lastSeen": "2025-08-21",
@@ -40669,7 +40775,7 @@
         "searchQuery": "Sharps Removed",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:11.177Z"
+        "recheckDate": "2025-07-01T09:19:21.231Z"
       },
       "firstSeen": "2025-08-27",
       "lastSeen": "2025-08-27",
@@ -42124,7 +42230,7 @@
         "searchQuery": "Blackwulf",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:14:52.834Z"
+        "recheckDate": "2025-07-01T09:19:21.620Z"
       },
       "firstSeen": "2025-08-31",
       "lastSeen": "2025-08-31",
@@ -43047,7 +43153,7 @@
         "searchQuery": "X Ambasadors",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:11.533Z"
+        "recheckDate": "2025-07-01T09:19:21.963Z"
       },
       "firstSeen": "2025-09-06",
       "lastSeen": "2025-09-06",
@@ -43180,7 +43286,7 @@
         "searchQuery": "Chlaira And The Cobas",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:12.380Z"
+        "recheckDate": "2025-07-01T09:19:22.435Z"
       },
       "firstSeen": "2025-09-06",
       "lastSeen": "2025-09-06",
@@ -44218,7 +44324,7 @@
         "searchQuery": "Year 001",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:13.005Z"
+        "recheckDate": "2025-07-01T09:19:22.841Z"
       },
       "firstSeen": "2025-09-11",
       "lastSeen": "2025-09-11",
@@ -44644,7 +44750,7 @@
         "searchQuery": "Bomba Estereo",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:13.271Z"
+        "recheckDate": "2025-07-01T09:19:24.183Z"
       },
       "firstSeen": "2025-09-12",
       "lastSeen": "2025-09-12",
@@ -44739,7 +44845,7 @@
         "searchQuery": "Englis Teacher",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:14.578Z"
+        "recheckDate": "2025-07-01T09:19:24.569Z"
       },
       "firstSeen": "2025-09-12",
       "lastSeen": "2025-09-12",
@@ -46060,7 +46166,7 @@
         "searchQuery": "Evolution Of The Revolution",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:14.931Z"
+        "recheckDate": "2025-07-01T09:19:24.872Z"
       },
       "firstSeen": "2025-09-17",
       "lastSeen": "2025-09-17",
@@ -46882,7 +46988,7 @@
         "searchQuery": "LCD Sound System",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:15.221Z"
+        "recheckDate": "2025-07-01T09:19:25.256Z"
       },
       "firstSeen": "2025-09-20",
       "lastSeen": "2025-09-20",
@@ -48432,7 +48538,7 @@
         "searchQuery": "2Manydjs b2b Erol Alkan",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:15.593Z"
+        "recheckDate": "2025-07-01T09:19:25.575Z"
       },
       "firstSeen": "2025-09-21",
       "lastSeen": "2025-09-21",
@@ -51947,7 +52053,7 @@
         "searchQuery": "Durand Joens & The Indications",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:15.985Z"
+        "recheckDate": "2025-07-01T09:19:25.950Z"
       },
       "firstSeen": "2025-10-07",
       "lastSeen": "2025-10-07",
@@ -52791,7 +52897,7 @@
         "searchQuery": "Penny & Sparrow",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:16.336Z"
+        "recheckDate": "2025-07-01T09:19:26.255Z"
       },
       "firstSeen": "2025-10-11",
       "lastSeen": "2025-10-11",
@@ -53248,7 +53354,7 @@
         "searchQuery": "San Francisco Italian Heritage Parade",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:16.648Z"
+        "recheckDate": "2025-07-01T09:19:26.617Z"
       },
       "firstSeen": "2025-10-12",
       "lastSeen": "2025-10-12",
@@ -54958,16 +55064,24 @@
     },
     {
       "id": "overdose-damore",
-      "name": "Overdose D'Amore",
+      "name": "ジミー",
       "searchUrl": "https://open.spotify.com/search/Overdose%20D'Amore",
-      "spotifyUrl": "https://open.spotify.com/search/Overdose%20D'Amore",
-      "spotifyVerified": false,
+      "spotifyUrl": "https://open.spotify.com/artist/4ABfGQhx7kTXCFbxvlLtlO",
+      "spotifyVerified": true,
       "spotifyData": {
-        "notFound": true,
+        "id": "4ABfGQhx7kTXCFbxvlLtlO",
+        "name": "ジミー",
+        "followers": 21077,
+        "popularity": 46,
+        "genres": ["anime"],
+        "verified": false,
         "searchQuery": "Overdose D'Amore",
         "searchResults": 10,
+        "matchType": "partial",
+        "confidence": "medium",
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:16.982Z"
+        "recheckDate": "2025-07-01T09:19:27.008Z",
+        "originalScrapedName": "Overdose D'Amore"
       },
       "firstSeen": "2025-10-18",
       "lastSeen": "2025-10-18",
@@ -56249,7 +56363,7 @@
         "searchQuery": "Last Podcast On The Left: JK Ultra",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:17.664Z"
+        "recheckDate": "2025-07-01T09:19:27.350Z"
       },
       "firstSeen": "2025-10-25",
       "lastSeen": "2025-10-25",
@@ -57155,9 +57269,9 @@
       "spotifyData": {
         "notFound": true,
         "searchQuery": "Genevia Jacuzzi",
-        "searchResults": 7,
+        "searchResults": 8,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:19.236Z"
+        "recheckDate": "2025-07-01T09:19:28.753Z"
       },
       "firstSeen": "2025-10-31",
       "lastSeen": "2025-10-31",
@@ -58882,7 +58996,7 @@
         "searchQuery": "Eye Of Aouila",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:19.533Z"
+        "recheckDate": "2025-07-01T09:19:29.116Z"
       },
       "firstSeen": "2025-11-13",
       "lastSeen": "2025-11-13",
@@ -59128,7 +59242,7 @@
         "searchQuery": "Buffalo Trafic Jam",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:19.858Z"
+        "recheckDate": "2025-07-01T09:19:29.452Z"
       },
       "firstSeen": "2025-11-14",
       "lastSeen": "2025-11-14",
@@ -59402,7 +59516,7 @@
         "searchQuery": "screening of \"Star Trek II: The Wrath of Khan\"",
         "searchResults": 10,
         "rechecked": true,
-        "recheckDate": "2025-06-01T09:16:20.201Z"
+        "recheckDate": "2025-07-01T09:19:29.813Z"
       },
       "firstSeen": "2025-11-16",
       "lastSeen": "2025-11-16",
