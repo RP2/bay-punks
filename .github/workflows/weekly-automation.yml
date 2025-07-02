@@ -82,6 +82,18 @@ jobs:
             node scripts/verify-spotify-artists.js
           fi
 
+      # run consolidated cleanup to ensure no non-artist entries remain
+      - name: run consolidated database cleanup
+        run: |
+          echo "🧹 running consolidated database cleanup..."
+          node scripts/consolidated-cleanup.js
+
+      # verify databases are clean before proceeding
+      - name: verify database cleanliness
+        run: |
+          echo "🔍 verifying databases are clean..."
+          node scripts/verify-databases-clean.js
+
       # detect changes for commit message
       - name: detect changes
         id: detect_changes
@@ -153,6 +165,7 @@ jobs:
         run: |
           echo "## 🎸 weekly automation summary" >> $GITHUB_STEP_SUMMARY
           echo "- **automation**: completed successfully" >> $GITHUB_STEP_SUMMARY
+          echo "- **data quality**: verified clean (no non-artist entries)" >> $GITHUB_STEP_SUMMARY
 
           if [ "${{ steps.detect_changes.outputs.new_artists }}" != "unknown" ]; then
             echo "- **new artists detected**: ${{ steps.detect_changes.outputs.new_artists }}" >> $GITHUB_STEP_SUMMARY
@@ -163,3 +176,10 @@ jobs:
           else
             echo "- **deployment**: skipped (no changes)" >> $GITHUB_STEP_SUMMARY
           fi
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🛡️ data protection layers active:" >> $GITHUB_STEP_SUMMARY
+          echo "1. **scraping filter** - prevents non-artists during collection" >> $GITHUB_STEP_SUMMARY
+          echo "2. **processing filter** - filters during database building" >> $GITHUB_STEP_SUMMARY  
+          echo "3. **consolidated cleanup** - removes any remaining non-artist entries" >> $GITHUB_STEP_SUMMARY
+          echo "4. **verification check** - confirms databases are clean" >> $GITHUB_STEP_SUMMARY

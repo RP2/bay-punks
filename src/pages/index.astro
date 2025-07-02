@@ -79,7 +79,9 @@ import { Input } from "@/components/ui/input";
           >
             {
               Object.entries(Concerts).flatMap(([, days]) =>
-                days.map((day) => <Card day={day} />),
+                Array.isArray(days)
+                  ? days.map((day) => <Card day={day} />)
+                  : [],
               )
             }
           </div>

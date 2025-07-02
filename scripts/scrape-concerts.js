@@ -15,9 +15,59 @@ function cleanArtistName(name) {
     .trim();
 }
 
-// helper to check if an artist should be excluded (e.g., comedians)
+// helper to check if an artist should be excluded
 function shouldExcludeArtist(name) {
-  return /\(comedian\)/i.test(name);
+  // exclude comedians
+  if (/\(comedian\)/i.test(name)) {
+    return true;
+  }
+
+  // exclude venue administrative entries
+  const normalized = name.toLowerCase().trim();
+  const nonArtistTerms = [
+    "membership meeting",
+    "member meeting",
+    "members meeting",
+    "private event",
+    "private party",
+    "closed",
+    "doors",
+    "soundcheck",
+    "cleanup",
+    "setup",
+    "teardown",
+    "break",
+    "intermission",
+    "tbd",
+    "tba",
+    "to be announced",
+    "to be determined",
+    "venue meeting",
+    "staff meeting",
+    "volunteer meeting",
+    "board meeting",
+  ];
+
+  // check exact matches for non-artist terms
+  if (nonArtistTerms.includes(normalized)) {
+    return true;
+  }
+
+  // check for cancelled/postponed patterns at the beginning
+  const cancelledPatterns = [
+    /^cancelled:/i,
+    /^canceled:/i,
+    /^probably cancelled:/i,
+    /^postponed:/i,
+    /^moved:/i,
+    /^rescheduled:/i,
+  ];
+
+  if (cancelledPatterns.some((pattern) => pattern.test(name))) {
+    return true;
+  }
+
+  return false;
 }
 
 // helper to fetch and parse a single page

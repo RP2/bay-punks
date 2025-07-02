@@ -314,6 +314,70 @@ function mergeVenueData(existing, newData) {
   };
 }
 
+// non-artist filtering - list of entries that are not actual artists
+const NON_ARTIST_FILTERS = [
+  "membership meeting",
+  "member meeting",
+  "members meeting",
+  "private event",
+  "private party",
+  "closed",
+  "doors",
+  "soundcheck",
+  "cleanup",
+  "setup",
+  "teardown",
+  "break",
+  "intermission",
+  "tbd",
+  "tba",
+  "to be announced",
+  "to be determined",
+  "venue meeting",
+  "staff meeting",
+  "volunteer meeting",
+  "board meeting",
+];
+
+const CANCELLED_PATTERNS = [
+  /^cancelled:/i,
+  /^canceled:/i,
+  /^probably cancelled:/i,
+  /^postponed:/i,
+  /^moved:/i,
+  /^rescheduled:/i,
+];
+
+// check if an artist name matches non-artist filters
+function isNonArtist(artistName) {
+  const normalized = artistName.toLowerCase().trim();
+
+  // check exact matches for non-artist terms
+  if (NON_ARTIST_FILTERS.includes(normalized)) {
+    return true;
+  }
+
+  // check for cancelled/postponed patterns at the beginning
+  if (CANCELLED_PATTERNS.some((pattern) => pattern.test(artistName))) {
+    return true;
+  }
+
+  return false;
+}
+
+// check if an entry is venue-specific administrative content
+function isVenueAdministrative(artist, venues = null) {
+  const venueList = venues || (artist.venues ? artist.venues : []);
+  if (venueList.length === 1) {
+    const venueName = venueList[0].toLowerCase();
+    const artistName = (artist.name || artist).toLowerCase();
+    if (venueName.includes("924 gilman") && artistName.includes("meeting")) {
+      return true;
+    }
+  }
+  return false;
+}
+
 async function processDatabases() {
   // load spelling corrections first
   await loadSpellingCorrections();
@@ -498,6 +562,14 @@ async function processDatabases() {
       // process artists
       event.bands.forEach((band) => {
         if (band.text) {
+          // filter out non-artist entries
+          if (
+            isNonArtist(band.text) ||
+            isVenueAdministrative(band.text, [event.venue?.text])
+          ) {
+            return; // skip processing this band
+          }
+
           const normalizedBand = normalizeText(band.text);
           const matchResult = findFuzzyMatch(
             artists,

@@ -584,10 +584,6 @@
           },
           "bands": [
             {
-              "text": "CANCELLED:  Vermidax",
-              "href": "https://open.spotify.com/search/CANCELLED%3A%20Vermidax"
-            },
-            {
               "text": "Dantuta",
               "href": "https://open.spotify.com/search/Dantuta"
             },
@@ -1267,10 +1263,6 @@
             "href": "https://www.google.com/search?q=Kilowatt%2C"
           },
           "bands": [
-            {
-              "text": "CANCELLED:  Radio Revolt",
-              "href": "https://open.spotify.com/search/CANCELLED%3A%20Radio%20Revolt"
-            },
             {
               "text": "Blunt Force Karma",
               "href": "https://open.spotify.com/search/Blunt%20Force%20Karma"
@@ -2136,19 +2128,6 @@
       "day": "Sat Jul 5",
       "normalizedDate": "2025-07-05",
       "events": [
-        {
-          "venue": {
-            "text": "924 Gilman Street, Berkeley",
-            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "Membership Meeting",
-              "href": "https://open.spotify.com/search/Membership%20Meeting"
-            }
-          ],
-          "extra": "a/a 5pm til 6pm"
-        },
         {
           "venue": {
             "text": "924 Gilman Street, Berkeley",
@@ -5937,19 +5916,6 @@
       "day": "Sat Jul 19",
       "normalizedDate": "2025-07-19",
       "events": [
-        {
-          "venue": {
-            "text": "924 Gilman Street, Berkeley",
-            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "Membership Meeting",
-              "href": "https://open.spotify.com/search/Membership%20Meeting"
-            }
-          ],
-          "extra": "a/a 5pm"
-        },
         {
           "venue": {
             "text": "924 Gilman Street, Berkeley",
@@ -10283,19 +10249,6 @@
           },
           "bands": [
             {
-              "text": "Membership Meeting",
-              "href": "https://open.spotify.com/search/Membership%20Meeting"
-            }
-          ],
-          "extra": "a/a 5pm til 6pm"
-        },
-        {
-          "venue": {
-            "text": "924 Gilman Street, Berkeley",
-            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
-          },
-          "bands": [
-            {
               "text": "Death By Stereo",
               "href": "https://open.spotify.com/search/Death%20By%20Stereo"
             },
@@ -13214,10 +13167,6 @@
           },
           "bands": [
             {
-              "text": "CANCELLED: Vulvodynia",
-              "href": "https://open.spotify.com/search/CANCELLED%3A%20Vulvodynia"
-            },
-            {
               "text": "Last Ten Seconds Of Life",
               "href": "https://open.spotify.com/search/Last%20Ten%20Seconds%20Of%20Life"
             },
@@ -13373,19 +13322,6 @@
       "day": "Sat Aug 16",
       "normalizedDate": "2025-08-16",
       "events": [
-        {
-          "venue": {
-            "text": "924 Gilman Street, Berkeley",
-            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "Membership Meeting",
-              "href": "https://open.spotify.com/search/Membership%20Meeting"
-            }
-          ],
-          "extra": "a/a 5pm til 6pm"
-        },
         {
           "venue": {
             "text": "Catalyst, Santa Cruz",
@@ -13903,19 +13839,6 @@
         },
         {
           "venue": {
-            "text": "Mountain Winery,",
-            "href": "https://www.google.com/search?q=Mountain%20Winery%2C"
-          },
-          "bands": [
-            {
-              "text": "PROBABLY CANCELLED:  The Beach Boys",
-              "href": "https://open.spotify.com/search/PROBABLY%20CANCELLED%3A%20The%20Beach%20Boys"
-            }
-          ],
-          "extra": "Saratoga"
-        },
-        {
-          "venue": {
             "text": "Stern Grove, 19th Avenue",
             "href": "https://www.google.com/search?q=Stern%20Grove%2C%2019th%20Avenue"
           },
@@ -14415,19 +14338,6 @@
             }
           ],
           "extra": "21+ $10 8pm"
-        },
-        {
-          "venue": {
-            "text": "Blue Note,",
-            "href": "https://www.google.com/search?q=Blue%20Note%2C"
-          },
-          "bands": [
-            {
-              "text": "PROBABLY CANCELLED: The Beach Boys",
-              "href": "https://open.spotify.com/search/PROBABLY%20CANCELLED%3A%20The%20Beach%20Boys"
-            }
-          ],
-          "extra": "Napa"
         },
         {
           "venue": {
@@ -28277,5 +28187,54 @@
         }
       ]
     }
-  ]
+  ],
+  "lastUpdated": "2025-07-02T21:11:18.104Z",
+  "filtering": {
+    "lastConsolidatedCleanup": "2025-07-02T21:06:32.507Z",
+    "bandsRemovedCount": 0,
+    "removedBands": []
+  },
+  "cleanup": {
+    "lastEmptyEventCleanup": "2025-07-02T21:11:18.104Z",
+    "removedEmptyEvents": 6,
+    "removedEmptyShows": 0,
+    "removedEntries": [
+      {
+        "date": "2025-07-05",
+        "venue": "924 Gilman Street, Berkeley",
+        "extra": "a/a 5pm til 6pm",
+        "reason": "no bands after filtering"
+      },
+      {
+        "date": "2025-07-19",
+        "venue": "924 Gilman Street, Berkeley",
+        "extra": "a/a 5pm",
+        "reason": "no bands after filtering"
+      },
+      {
+        "date": "2025-08-02",
+        "venue": "924 Gilman Street, Berkeley",
+        "extra": "a/a 5pm til 6pm",
+        "reason": "no bands after filtering"
+      },
+      {
+        "date": "2025-08-16",
+        "venue": "924 Gilman Street, Berkeley",
+        "extra": "a/a 5pm til 6pm",
+        "reason": "no bands after filtering"
+      },
+      {
+        "date": "2025-08-17",
+        "venue": "Mountain Winery,",
+        "extra": "Saratoga",
+        "reason": "no bands after filtering"
+      },
+      {
+        "date": "2025-08-22",
+        "venue": "Blue Note,",
+        "extra": "Napa",
+        "reason": "no bands after filtering"
+      }
+    ]
+  }
 }

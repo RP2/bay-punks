@@ -97,6 +97,20 @@ jobs:
             fi
           fi
 
+      # run consolidated cleanup after recheck
+      - name: run consolidated database cleanup
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          echo "🧹 running consolidated database cleanup..."
+          node scripts/consolidated-cleanup.js
+
+      # verify databases are clean
+      - name: verify database cleanliness
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          echo "🔍 verifying databases are clean..."
+          node scripts/verify-databases-clean.js
+
       # cleanup backup files
       - name: cleanup
         run: |

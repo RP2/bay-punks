@@ -139,3 +139,19 @@ The script handles:
 - Malformed API responses
 
 Failed verifications are marked in the data for future retry attempts.
+
+## Recent Improvements: ✅ COMPLETED (July 2025)
+
+### 🎵 **Spotify Verification Optimization**
+
+- **Relaxed validation thresholds** for better local artist detection
+- **Popularity threshold**: 10 → 1 (more inclusive for small artists)
+- **Followers threshold**: 500 → 50 (allows emerging artists)
+- **Success rate improved to 85.1%** (2,477/2,909 artists verified)
+- **More local artists"** now properly verified and linked
+
+### 📁 **Scripts Streamlined**
+
+- Moved redundant scripts to `scripts/backup/` folder
+- Only essential automation scripts remain active
+- Full documentation preserved for backup scripts

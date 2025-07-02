@@ -38,6 +38,70 @@ const BATCH_SIZE = 5; // smaller batches for ci
 const MAX_RETRIES = 3;
 const DEFAULT_CI_LIMIT = 50; // default limit for ci runs to avoid timeouts
 
+// non-artist filtering - list of entries that are not actual artists
+const NON_ARTIST_FILTERS = [
+  "membership meeting",
+  "member meeting",
+  "members meeting",
+  "private event",
+  "private party",
+  "closed",
+  "doors",
+  "soundcheck",
+  "cleanup",
+  "setup",
+  "teardown",
+  "break",
+  "intermission",
+  "tbd",
+  "tba",
+  "to be announced",
+  "to be determined",
+  "venue meeting",
+  "staff meeting",
+  "volunteer meeting",
+  "board meeting",
+];
+
+const CANCELLED_PATTERNS = [
+  /^cancelled:/i,
+  /^canceled:/i,
+  /^probably cancelled:/i,
+  /^postponed:/i,
+  /^moved:/i,
+  /^rescheduled:/i,
+];
+
+// check if an artist name matches non-artist filters
+function isNonArtist(artistName) {
+  const normalized = artistName.toLowerCase().trim();
+
+  // check exact matches for non-artist terms
+  if (NON_ARTIST_FILTERS.includes(normalized)) {
+    return true;
+  }
+
+  // check for cancelled/postponed patterns at the beginning
+  if (CANCELLED_PATTERNS.some((pattern) => pattern.test(artistName))) {
+    return true;
+  }
+
+  return false;
+}
+
+// check if an entry is venue-specific administrative content
+function isVenueAdministrative(artist, venues = null) {
+  const venueList = venues || (artist.venues ? artist.venues : []);
+  if (venueList.length === 1) {
+    const venueName = venueList[0].toLowerCase();
+    const artistName = (artist.name || artist).toLowerCase();
+    if (venueName.includes("924 gilman") && artistName.includes("meeting")) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // helper to check if artist is newly added (no previous verification attempt)
 function isNewArtist(artist) {
   return (
@@ -279,7 +343,19 @@ export async function verifyNewArtists(options = {}) {
     const artists = JSON.parse(artistsData);
 
     // filter to only new artists (no previous verification attempt)
-    const newArtists = artists.artists.filter(isNewArtist);
+    const newArtists = artists.artists.filter((artist) => {
+      // first check if it's a new artist
+      if (!isNewArtist(artist)) {
+        return false;
+      }
+
+      // then filter out non-artist entries
+      if (isNonArtist(artist.name) || isVenueAdministrative(artist)) {
+        return false;
+      }
+
+      return true;
+    });
 
     if (newArtists.length === 0) {
       if (verbose) console.log("✅ no new artists to verify");

@@ -45,7 +45,9 @@ function hasValidSpotifyUrl(artist) {
       artist.spotifyUrl !== null &&
       !artist.spotifyUrl.includes("/search/") &&
       artist.spotifyUrl.startsWith("https://open.spotify.com/artist/")) ||
-    (artist.spotifyData && artist.spotifyData.notFound === true) // also skip artists we know aren't on spotify
+    (artist.spotifyData &&
+      (artist.spotifyData.notFound === true ||
+        artist.spotifyData.noGoodMatch === true))
   );
 }
 
@@ -212,7 +214,7 @@ async function verifyArtistOnSpotify(artistName, token) {
       }
     }
 
-    // try partial matches with reasonable thresholds
+    // try partial matches with strict thresholds
     for (const artist of response.artists.items) {
       const normalizedArtist = artist.name
         .toLowerCase()
@@ -220,14 +222,36 @@ async function verifyArtistOnSpotify(artistName, token) {
         .replace(/\s+/g, " ")
         .trim();
 
-      // check if one contains the other (but not single character matches)
+      // check if one contains the other with stricter requirements
       const isSubstring =
         (normalizedArtist.includes(normalizedSearch) ||
           normalizedSearch.includes(normalizedArtist)) &&
-        normalizedSearch.length > 1 &&
-        normalizedArtist.length > 1;
+        normalizedSearch.length > 3 &&
+        normalizedArtist.length > 3;
 
-      if (isSubstring && artist.popularity > 5 && artist.followers.total > 50) {
+      // calculate similarity ratio to ensure names are close enough
+      const longerLength = Math.max(
+        normalizedSearch.length,
+        normalizedArtist.length,
+      );
+      const shorterLength = Math.min(
+        normalizedSearch.length,
+        normalizedArtist.length,
+      );
+      const similarityRatio = shorterLength / longerLength;
+
+      // only match if:
+      // 1. one name contains the other
+      // 2. names are reasonably similar in length (at least 60% similarity)
+      // 3. artist has decent popularity/followers
+      // 4. the difference in length isn't too dramatic
+      if (
+        isSubstring &&
+        similarityRatio >= 0.6 &&
+        artist.popularity > 10 &&
+        artist.followers.total > 500 &&
+        Math.abs(normalizedSearch.length - normalizedArtist.length) <= 10
+      ) {
         return {
           name: artist.name,
           spotifyUrl: artist.external_urls.spotify,
@@ -290,9 +314,19 @@ async function verifyArtistsIncremental(options = {}) {
 
     if (onlyUnverified && !forceRecheck) {
       // skip artists that already have spotify verification or valid spotify url
-      artistsToProcess = artistsData.artists.filter(
-        (artist) => !hasValidSpotifyUrl(artist),
-      );
+      artistsToProcess = artistsData.artists.filter((artist) => {
+        // first check if they need verification
+        if (hasValidSpotifyUrl(artist)) {
+          return false;
+        }
+
+        // then filter out non-artist entries
+        if (isNonArtist(artist.name) || isVenueAdministrative(artist)) {
+          return false;
+        }
+
+        return true;
+      });
       if (verbose) {
         const alreadyVerified =
           artistsData.artists.length - artistsToProcess.length;
@@ -431,15 +465,21 @@ async function verifyArtistsIncremental(options = {}) {
                 );
               }
             } else {
+              // no good spotify match found, use search url instead
+              const originalName = originalArtist.name;
+              const searchQuery = encodeURIComponent(originalName);
+              originalArtist.spotifyUrl = `https://open.spotify.com/search/${searchQuery}`;
               originalArtist.spotifyVerified = false;
               originalArtist.spotifyData = {
                 verifiedAt: new Date().toISOString(),
-                notFound: true,
+                noGoodMatch: true,
+                originalScrapedName: originalName,
+                fallbackToSearch: true,
               };
               failed++;
               if (verbose)
                 console.log(
-                  `  ❌ [${globalIndex + 1}/${totalToProcess}] ${originalArtist.name} (not found)`,
+                  `  🔍 [${globalIndex + 1}/${totalToProcess}] ${originalArtist.name} (no good match, using search)`,
                 );
             }
           } catch (error) {
@@ -507,6 +547,70 @@ async function verifyArtistsIncremental(options = {}) {
   } catch (error) {
     console.error("💥 verification failed:", error.message);
   }
+}
+
+// non-artist filtering - list of entries that are not actual artists
+const NON_ARTIST_FILTERS = [
+  "membership meeting",
+  "member meeting",
+  "members meeting",
+  "private event",
+  "private party",
+  "closed",
+  "doors",
+  "soundcheck",
+  "cleanup",
+  "setup",
+  "teardown",
+  "break",
+  "intermission",
+  "tbd",
+  "tba",
+  "to be announced",
+  "to be determined",
+  "venue meeting",
+  "staff meeting",
+  "volunteer meeting",
+  "board meeting",
+];
+
+const CANCELLED_PATTERNS = [
+  /^cancelled:/i,
+  /^canceled:/i,
+  /^probably cancelled:/i,
+  /^postponed:/i,
+  /^moved:/i,
+  /^rescheduled:/i,
+];
+
+// check if an artist name matches non-artist filters
+function isNonArtist(artistName) {
+  const normalized = artistName.toLowerCase().trim();
+
+  // check exact matches for non-artist terms
+  if (NON_ARTIST_FILTERS.includes(normalized)) {
+    return true;
+  }
+
+  // check for cancelled/postponed patterns at the beginning
+  if (CANCELLED_PATTERNS.some((pattern) => pattern.test(artistName))) {
+    return true;
+  }
+
+  return false;
+}
+
+// check if an entry is venue-specific administrative content
+function isVenueAdministrative(artist, venues = null) {
+  const venueList = venues || (artist.venues ? artist.venues : []);
+  if (venueList.length === 1) {
+    const venueName = venueList[0].toLowerCase();
+    const artistName = (artist.name || artist).toLowerCase();
+    if (venueName.includes("924 gilman") && artistName.includes("meeting")) {
+      return true;
+    }
+  }
+  return false;
 }
 
 // cli interface
