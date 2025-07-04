@@ -36,7 +36,12 @@ function findVenueId(venueName: string): string | null {
 
 // get all shows for this artist (upcoming only)
 const today = new Date();
-today.setHours(0, 0, 0, 0);
+const todayISOString =
+  today.getFullYear() +
+  "-" +
+  String(today.getMonth() + 1).padStart(2, "0") +
+  "-" +
+  String(today.getDate()).padStart(2, "0");
 
 const artistShows = concerts.shows
   .flatMap((show) =>
@@ -52,8 +57,8 @@ const artistShows = concerts.shows
         humanDate: show.day,
       })),
   )
-  .filter((show) => new Date(show.date) >= today)
-  .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  .filter((show) => show.date >= todayISOString)
+  .sort((a, b) => a.date.localeCompare(b.date));
 ---
 
 <Layout

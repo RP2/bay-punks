@@ -1,17 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useEffect, useState } from "react";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-interface TabsWrapperProps {
-  eventsContent: string;
-  artistsContent: string;
-  venuesContent: string;
-}
-
-export function TabsWrapper({
-  eventsContent,
-  artistsContent,
-  venuesContent,
-}: TabsWrapperProps) {
+export function TabsWrapper() {
   const [activeTab, setActiveTab] = useState("events");
 
   useEffect(() => {

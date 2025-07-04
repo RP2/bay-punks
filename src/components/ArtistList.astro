@@ -140,7 +140,8 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
                     {artist.name}
                   </a>
                   <span class="text-muted-foreground text-xs">
-                    {artist.showCount} shows
+                    {artist.showCount}{" "}
+                    {artist.showCount === 1 ? "show" : "shows"}
                   </span>
                 </div>
 
@@ -289,7 +290,7 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
                     ${artist.name}
                   </a>
                   <span class="text-muted-foreground text-xs">
-                    ${artist.showCount} shows
+                    ${artist.showCount} ${artist.showCount === 1 ? "show" : "shows"}
                   </span>
                 </div>
 

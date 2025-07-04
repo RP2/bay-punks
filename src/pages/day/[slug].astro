@@ -5,12 +5,22 @@ import concerts from "../../data/concerts.json";
 import venues from "../../data/venues.json";
 import artists from "../../data/artists.json";
 
-// generate all day pages at build time
+// generate all day pages at build time (only for today and future dates)
 export async function getStaticPaths() {
-  return concerts.shows.map((show) => ({
-    params: { slug: show.normalizedDate },
-    props: { day: show },
-  }));
+  const today = new Date();
+  const todayISOString =
+    today.getFullYear() +
+    "-" +
+    String(today.getMonth() + 1).padStart(2, "0") +
+    "-" +
+    String(today.getDate()).padStart(2, "0");
+
+  return concerts.shows
+    .filter((show) => show.normalizedDate >= todayISOString)
+    .map((show) => ({
+      params: { slug: show.normalizedDate },
+      props: { day: show },
+    }));
 }
 
 // get the day from props

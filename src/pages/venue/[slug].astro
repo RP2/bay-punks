@@ -39,15 +39,20 @@ function normalizeText(text: string): string {
 
 // sort shows by date (upcoming first)
 const today = new Date();
-today.setHours(0, 0, 0, 0);
+const todayISOString =
+  today.getFullYear() +
+  "-" +
+  String(today.getMonth() + 1).padStart(2, "0") +
+  "-" +
+  String(today.getDate()).padStart(2, "0");
 
 const upcomingShows = venueShows
-  .filter((show) => new Date(show.date) >= today)
-  .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  .filter((show) => show.date >= todayISOString)
+  .sort((a, b) => a.date.localeCompare(b.date));
 
 const pastShows = venueShows
-  .filter((show) => new Date(show.date) < today)
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .filter((show) => show.date < todayISOString)
+  .sort((a, b) => b.date.localeCompare(a.date))
   .slice(0, 10); // limit to last 10 shows
 ---
 
@@ -145,7 +150,7 @@ const pastShows = venueShows
               <div class="space-y-4">
                 <ul
                   class="recent-shows-list space-y-4 overflow-hidden transition-all duration-300"
-                  style="max-height: 200px;"
+                  style="max-height: 250px;"
                 >
                   {pastShows.map((show, index) => (
                     <li
@@ -287,7 +292,7 @@ const pastShows = venueShows
         if (isExpanded) {
           // collapse: set max height to show only first 2 shows
           if (showsList) {
-            (showsList as HTMLElement).style.maxHeight = "160px";
+            (showsList as HTMLElement).style.maxHeight = "250px";
           }
           button.setAttribute("data-expanded", "false");
           const totalShows = card?.querySelectorAll("li").length || 0;

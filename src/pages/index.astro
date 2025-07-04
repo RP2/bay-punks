@@ -10,8 +10,8 @@ import { Input } from "@/components/ui/input";
 ---
 
 <Layout
-  title="Upcoming Concerts"
-  description="bay area live music concerts, artists, and venues"
+  title="Bay Punks - Upcoming Live Music Shows in the Bay Area"
+  description="Discover upcoming punk, rock, and live music concerts in the San Francisco Bay Area. Find your next favorite artists, venues, and shows updated weekly from FooPee's The List."
 >
   <h1 class="text-5xl font-bold uppercase sm:text-8xl">Upcoming Shows</h1>
   <p class="text-muted-foreground text-sm">
@@ -49,12 +49,7 @@ import { Input } from "@/components/ui/input";
 
     <!-- tabs wrapper with shadcn tabs -->
     <div class="w-full">
-      <TabsWrapper
-        eventsContent=""
-        artistsContent=""
-        venuesContent=""
-        client:load
-      />
+      <TabsWrapper client:load />
 
       <!-- events content (hidden by default, shown when events tab is active) -->
       <div id="events-content" class="tab-content" data-tab="events">
@@ -104,8 +99,14 @@ import { Input } from "@/components/ui/input";
 <script>
   // remove past days from the dom and setup search functionality
   document.addEventListener("DOMContentLoaded", () => {
+    // get today's date in local timezone, normalized to start of day
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // normalize to midnight
+    const todayISOString =
+      today.getFullYear() +
+      "-" +
+      String(today.getMonth() + 1).padStart(2, "0") +
+      "-" +
+      String(today.getDate()).padStart(2, "0");
 
     // function to highlight matched text
     function highlightText(element: Element, query: string) {
@@ -184,38 +185,12 @@ import { Input } from "@/components/ui/input";
 
     // get all cards with a data-day attribute
     const cards = document.querySelectorAll("[data-day]");
+
     cards.forEach((card) => {
-      const day = card.getAttribute("data-day");
-      if (day) {
-        // parse the human-readable date string into a Date object
-        const [_, month, date] = day.split(" ");
-        const monthIndex = [
-          "jan",
-          "feb",
-          "mar",
-          "apr",
-          "may",
-          "jun",
-          "jul",
-          "aug",
-          "sep",
-          "oct",
-          "nov",
-          "dec",
-        ].indexOf(month.toLowerCase());
-        const eventDate = new Date(
-          today.getFullYear(),
-          monthIndex,
-          parseInt(date, 10),
-        );
-
-        // handle year rollover for december to january
-        if (monthIndex === 0 && today.getMonth() === 11) {
-          eventDate.setFullYear(today.getFullYear() + 1);
-        }
-
-        // remove the card if the event date is in the past
-        if (eventDate < today) {
+      const isoDate = card.getAttribute("data-iso");
+      if (isoDate) {
+        // remove the card if the event date is before today (string comparison works for ISO dates)
+        if (isoDate < todayISOString) {
           card.remove();
         } else {
           // otherwise, show the card
@@ -230,7 +205,10 @@ import { Input } from "@/components/ui/input";
       searchInput.addEventListener("input", (e) => {
         const query = (e.target as HTMLInputElement)!.value.toLowerCase();
 
-        cards.forEach((card) => {
+        // re-query cards each time to get only remaining cards in DOM
+        const remainingCards = document.querySelectorAll("[data-day]");
+
+        remainingCards.forEach((card) => {
           const date = card.getAttribute("data-day")?.toLowerCase() || "";
           const iso = card.getAttribute("data-iso")?.toLowerCase() || "";
           const venues = card.querySelectorAll(".venue");
@@ -283,7 +261,8 @@ import { Input } from "@/components/ui/input";
 
     // if no cards remain, show a fallback message
     const container = document.getElementById("concert-list");
-    if (container && container.children.length === 0) {
+    const remainingCards = document.querySelectorAll("[data-day]");
+    if (container && remainingCards.length === 0) {
       container.innerHTML =
         "<p class='col-span-full text-center text-muted-foreground'>No upcoming concerts available, yell at Riley to fix it.</p>";
     }
