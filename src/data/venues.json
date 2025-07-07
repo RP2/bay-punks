@@ -1229,19 +1229,6 @@
       "aliases": ["cornerstone", "Cornerstone, Berkeley"]
     },
     {
-      "id": "924-gilman-berkeley",
-      "name": "924 Gilman, Berkeley",
-      "searchUrl": "https://www.google.com/search?q=924%20Gilman%2C%20Berkeley",
-      "firstSeen": "2025-07-06",
-      "lastSeen": "2025-07-06",
-      "showCount": 1,
-      "location": "Berkeley",
-      "address": null,
-      "city": "Berkeley",
-      "displayLocation": "Berkeley",
-      "aliases": ["924 Gilman, Berkeley"]
-    },
-    {
       "id": "alameda-county-fair-pleasanton",
       "name": "Alameda County Fair, Pleasanton",
       "searchUrl": "https://www.google.com/search?q=Alameda%20County%20Fair%2C%20Pleasanton",
@@ -1253,19 +1240,6 @@
       "city": "Pleasanton",
       "displayLocation": "Pleasanton",
       "aliases": ["Alameda County Fair, Pleasanton"]
-    },
-    {
-      "id": "farmers-market-37th-avenue-at-pacheco-and-ortega-sf",
-      "name": "Farmers Market, 37th Avenue at Pacheco and Ortega, S.F.",
-      "searchUrl": "https://www.google.com/search?q=Farmers%20Market%2C%2037th%20Avenue%20at%20Pacheco%20and%20Ortega%2C%20S.F.",
-      "firstSeen": "2025-07-06",
-      "lastSeen": "2025-07-06",
-      "showCount": 1,
-      "location": "37th Avenue at Pacheco and Ortega",
-      "address": "37th Avenue at Pacheco and Ortega",
-      "city": "S.F.",
-      "displayLocation": "37th Avenue at Pacheco and Ortega, S.F.",
-      "aliases": ["Farmers Market, 37th Avenue at Pacheco and Ortega, S.F."]
     },
     {
       "id": "kilowatt",
@@ -2245,6 +2219,60 @@
       "aliases": ["First Church of the Buzzard, Oakland"]
     },
     {
+      "id": "4th-corner-speakeasy-431-georgia-st-vallejo",
+      "name": "4th Corner Speakeasy, 431 Georgia St., Vallejo",
+      "searchUrl": "https://www.google.com/search?q=4th%20Corner%20Speakeasy%2C%20431%20Georgia%20St.%2C%20Vallejo",
+      "firstSeen": "2025-07-11",
+      "lastSeen": "2025-07-11",
+      "showCount": 1,
+      "location": "431 Georgia St.",
+      "address": "431 Georgia St.",
+      "city": "Vallejo",
+      "displayLocation": "431 Georgia St., Vallejo",
+      "aliases": ["4th Corner Speakeasy, 431 Georgia St., Vallejo"]
+    },
+    {
+      "id": "danny-murrys-irish-pub-1680-washington-avenue-san-leandro",
+      "name": "Danny Murry's Irish Pub, 1680 Washington Avenue, San Leandro",
+      "searchUrl": "https://www.google.com/search?q=Danny%20Murry's%20Irish%20Pub%2C%201680%20Washington%20Avenue%2C%20San%20Leandro",
+      "firstSeen": "2025-07-12",
+      "lastSeen": "2025-07-12",
+      "showCount": 1,
+      "location": "1680 Washington Avenue",
+      "address": "1680 Washington Avenue",
+      "city": "San Leandro",
+      "displayLocation": "1680 Washington Avenue, San Leandro",
+      "aliases": [
+        "Danny Murry's Irish Pub, 1680 Washington Avenue, San Leandro"
+      ]
+    },
+    {
+      "id": "924-gilman-berkeley",
+      "name": "924 Gilman, Berkeley",
+      "searchUrl": "https://www.google.com/search?q=924%20Gilman%2C%20Berkeley",
+      "firstSeen": null,
+      "lastSeen": null,
+      "showCount": 0,
+      "location": "Berkeley",
+      "address": null,
+      "city": "Berkeley",
+      "displayLocation": "Berkeley",
+      "aliases": ["924 Gilman, Berkeley"]
+    },
+    {
+      "id": "farmers-market-37th-avenue-at-pacheco-and-ortega-sf",
+      "name": "Farmers Market, 37th Avenue at Pacheco and Ortega, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Farmers%20Market%2C%2037th%20Avenue%20at%20Pacheco%20and%20Ortega%2C%20S.F.",
+      "firstSeen": null,
+      "lastSeen": null,
+      "showCount": 0,
+      "location": "37th Avenue at Pacheco and Ortega",
+      "address": "37th Avenue at Pacheco and Ortega",
+      "city": "S.F.",
+      "displayLocation": "37th Avenue at Pacheco and Ortega, S.F.",
+      "aliases": ["Farmers Market, 37th Avenue at Pacheco and Ortega, S.F."]
+    },
+    {
       "id": "independent",
       "name": "independent",
       "searchUrl": "https://www.google.com/search?q=Independent%2C%20S.F.",
@@ -2288,6 +2316,6 @@
       "aliases": ["fox theater", "Fox Theater, Oakland"]
     }
   ],
-  "total": 175,
-  "lastUpdated": "2025-07-07T19:17:50.590Z"
+  "total": 177,
+  "lastUpdated": "2025-07-07T20:38:34.608Z"
 }

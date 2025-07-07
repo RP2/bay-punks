@@ -30,6 +30,9 @@ function shouldExcludeArtist(name) {
     "members meeting",
     "private event",
     "private party",
+    "birthday party",
+    "birthday bash",
+    "birthday celebration",
     "closed",
     "doors",
     "soundcheck",
@@ -64,6 +67,19 @@ function shouldExcludeArtist(name) {
   ];
 
   if (cancelledPatterns.some((pattern) => pattern.test(name))) {
+    return true;
+  }
+
+  // check for birthday celebration patterns
+  const birthdayPatterns = [
+    /birthday bash/i,
+    /birthday celebration/i,
+    /birthday party/i,
+    /'s.*birthday/i, // matches "Someone's 60th Birthday", "Carmela's Birthday", etc.
+    /\d+(?:st|nd|rd|th)\s+birthday/i, // matches "60th Birthday", "21st Birthday", etc.
+  ];
+
+  if (birthdayPatterns.some((pattern) => pattern.test(name))) {
     return true;
   }
 
