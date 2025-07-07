@@ -6,17 +6,17 @@ The data pipeline has been streamlined into a clean, efficient process with comp
 
 ## Data Flow
 
-```
+```mermaid
 🕷️  scrape-concerts.js
-     ↓
+    ↓
 📄  src/data/raw.json (raw scraped data)
-     ↓
+    ↓
 🔄  process-databases.js (unified processing + filtering + cleanup)
-     ↓
+    ↓
 📄  src/data/artists.json + src/data/venues.json (clean databases)
-     ↓
+    ↓
 🎵  spotify-verify.js (optional verification)
-     ↓
+    ↓
 📄  Enhanced artists.json with Spotify data
 ```
 

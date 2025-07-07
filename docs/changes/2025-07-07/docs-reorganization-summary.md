@@ -6,7 +6,7 @@ Reorganized the `/docs` folder to separate actual documentation from implementat
 
 ### 📁 New Structure
 
-```
+```mermaid
 docs/
 ├── README.md                          # Documentation index
 ├── automated-maintenance.md           # Workflow documentation

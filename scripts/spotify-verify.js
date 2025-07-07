@@ -179,10 +179,10 @@ async function verifyArtistOnSpotify(artistName, token) {
         const normalizedArtist = normalizeForComparison(artistName);
         const normalizedSpotify = normalizeForComparison(artist.name);
 
-        // Exact match conditions (more flexible)
+        // exact match conditions (more flexible)
         return (
           normalizedArtist === normalizedSpotify ||
-          // Also check if one is just "The" + the other
+          // also check if one is just "The" + the other
           normalizeForComparison(`the ${artistName}`) === normalizedSpotify ||
           normalizedArtist === normalizeForComparison(`the ${artist.name}`)
         );
@@ -206,14 +206,6 @@ async function verifyArtistOnSpotify(artistName, token) {
           },
         };
       }
-
-      // DISABLED: Partial matching disabled due to too many false positives
-      // Even with strict criteria, substring matching creates bad matches like:
-      // "Tina!!!" -> "Bibi und Tina" (both contain "Tina")
-      // "Heroes Mission" -> "MISSIO" (substring similarity)
-      //
-      // For now, we only use exact matching to ensure high quality results.
-      // Future: Could implement more sophisticated matching (edit distance, word overlap, etc.)
     }
 
     // no matches found
@@ -440,8 +432,6 @@ async function spotifyVerify(options = {}) {
         break;
       case "partial":
         // Re-evaluate artists that were previously verified with partial/medium confidence
-        // to see if they should be upgraded to exact or downgraded to not found
-        // with the current stricter matching logic
         artistsToProcess = artistsData.artists.filter((artist) => {
           return (
             artist.spotifyVerified &&
