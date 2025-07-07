@@ -6,7 +6,7 @@ The data pipeline has been streamlined into a clean, efficient process with comp
 
 ## Data Flow
 
-```mermaid
+```text
 🕷️  scrape-concerts.js
     ↓
 📄  src/data/raw.json (raw scraped data)
