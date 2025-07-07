@@ -13,9 +13,7 @@
     "verify-spotify": "node ./scripts/spotify-verify.js",
     "verify-spotify-new": "node ./scripts/spotify-verify.js --new",
     "verify-spotify-failed": "node ./scripts/spotify-verify.js --failed",
-    "verify-spotify-partial": "node ./scripts/spotify-verify.js --partial",
-    "setup-data": "npm run scrape && npm run process-db && prettier . --write",
-    "maintenance": "npm run scrape && npm run process-db && npm run verify-spotify-new"
+    "verify-spotify-partial": "node ./scripts/spotify-verify.js --partial"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
