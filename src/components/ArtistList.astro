@@ -168,10 +168,7 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
                   </div>
                 )}
 
-                <div class="mt-2 flex items-center justify-between">
-                  <div class="text-muted-foreground text-xs">
-                    Last seen: {new Date(artist.lastSeen).toLocaleDateString()}
-                  </div>
+                <div class="mt-2 flex items-center justify-end">
                   {(artist.spotifyUrl || artist.searchUrl) && (
                     <a
                       href={artist.spotifyUrl || artist.searchUrl}
@@ -316,10 +313,7 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
                 `
                 }
 
-                <div class="mt-2 flex items-center justify-between">
-                  <div class="text-muted-foreground text-xs">
-                    Last seen: ${new Date(artist.lastSeen).toLocaleDateString()}
-                  </div>
+                <div class="mt-2 flex items-center justify-end">
                   ${
                     artist.spotifyUrl || artist.searchUrl
                       ? `

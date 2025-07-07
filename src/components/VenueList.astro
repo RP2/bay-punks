@@ -150,7 +150,6 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
   displayName: getBestVenueName(venue),
   locationInfo: getLocationInfo(venue),
   showCount: venue.showCount,
-  lastSeen: venue.lastSeen,
   nextShow: getNextShowForVenue(venue.name),
 }));
 ---
@@ -235,10 +234,6 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
                     No upcoming shows
                   </div>
                 )}
-
-                <div class="text-muted-foreground text-xs">
-                  Last seen: {new Date(venue.lastSeen).toLocaleDateString()}
-                </div>
               </div>
             </CardContent>
           </Card>
@@ -372,10 +367,6 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
                   </div>
                 `
                 }
-
-                <div class="text-muted-foreground text-xs">
-                  Last seen: ${new Date(venue.lastSeen).toLocaleDateString()}
-                </div>
               </div>
             </div>
         </div>
