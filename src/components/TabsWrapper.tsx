@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function TabsWrapper() {
-  const [activeTab, setActiveTab] = useState("events");
+  const [activeTab, setActiveTab] = useState("days");
 
   useEffect(() => {
     // handle tab content visibility
@@ -35,7 +35,7 @@ export function TabsWrapper() {
     <div className="w-full">
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="mb-6 grid w-full grid-cols-3">
-          <TabsTrigger value="events" className="text-sm sm:text-base">
+          <TabsTrigger value="days" className="text-sm sm:text-base">
             Calendar
           </TabsTrigger>
           <TabsTrigger value="artists" className="text-sm sm:text-base">

@@ -51,12 +51,12 @@ import { Input } from "@/components/ui/input";
     <div class="w-full">
       <TabsWrapper client:load />
 
-      <!-- events content (hidden by default, shown when events tab is active) -->
-      <div id="events-content" class="tab-content" data-tab="events">
+      <!-- days content (hidden by default, shown when days tab is active) -->
+      <div id="days-content" class="tab-content" data-tab="days">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <h2 class="text-2xl font-bold">
-              Events ({Object.values(Concerts).flat().length})
+              Days ({Object.values(Concerts).flat().length})
             </h2>
           </div>
 
