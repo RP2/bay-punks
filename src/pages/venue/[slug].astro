@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import venues from "../../data/venues.json";
-import concerts from "../../data/concerts.json";
+import concerts from "../../data/raw.json";
 
 // generate all venue pages at build time
 export async function getStaticPaths() {
@@ -92,22 +92,6 @@ const pastShows = venueShows
                 Total Shows
               </dt>
               <dd class="text-lg">{venue.showCount}</dd>
-            </div>
-            <div>
-              <dt class="text-muted-foreground text-sm font-medium">
-                First Seen
-              </dt>
-              <dd class="text-lg">
-                {new Date(venue.firstSeen).toLocaleDateString()}
-              </dd>
-            </div>
-            <div>
-              <dt class="text-muted-foreground text-sm font-medium">
-                Last Seen
-              </dt>
-              <dd class="text-lg">
-                {new Date(venue.lastSeen).toLocaleDateString()}
-              </dd>
             </div>
             {
               venue.searchUrl && (

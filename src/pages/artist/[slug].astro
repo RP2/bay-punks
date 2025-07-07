@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { CardContent } from "@/components/ui/card";
 import artists from "../../data/artists.json";
-import concerts from "../../data/concerts.json";
+import concerts from "../../data/raw.json";
 import venues from "../../data/venues.json";
 
 // generate all artist pages at build time
@@ -86,22 +86,6 @@ const artistShows = concerts.shows
                 Total Shows
               </dt>
               <dd class="text-lg">{artist.showCount}</dd>
-            </div>
-            <div>
-              <dt class="text-muted-foreground text-sm font-medium">
-                First Seen
-              </dt>
-              <dd class="text-lg">
-                {new Date(artist.firstSeen).toLocaleDateString()}
-              </dd>
-            </div>
-            <div>
-              <dt class="text-muted-foreground text-sm font-medium">
-                Last Seen
-              </dt>
-              <dd class="text-lg">
-                {new Date(artist.lastSeen).toLocaleDateString()}
-              </dd>
             </div>
             {
               (artist.spotifyUrl || artist.searchUrl) && (

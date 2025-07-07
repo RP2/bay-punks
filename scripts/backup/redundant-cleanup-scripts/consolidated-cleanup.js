@@ -2,15 +2,21 @@ import { readFile, writeFile } from "fs/promises";
 
 // comprehensive list of entries that are not actual artists
 const NON_ARTIST_FILTERS = [
-  // venue administrative entries - exact matches only
+  // meetings and administrative
   "membership meeting",
   "member meeting",
   "members meeting",
+  "venue meeting",
+  "staff meeting",
+  "volunteer meeting",
+  "board meeting",
 
-  // common non-artist entries that might appear on venue calendars
+  // private events
   "private event",
   "private party",
   "closed",
+
+  // venue operations
   "doors",
   "soundcheck",
   "cleanup",
@@ -19,17 +25,75 @@ const NON_ARTIST_FILTERS = [
   "break",
   "intermission",
 
-  // generic terms
+  // placeholder entries
   "tbd",
   "tba",
   "to be announced",
   "to be determined",
 
-  // venue operations
-  "venue meeting",
-  "staff meeting",
-  "volunteer meeting",
-  "board meeting",
+  // movie screenings and film events
+  "screening",
+  "film screening",
+  "movie screening",
+  "documentary screening",
+  "film",
+  "movie",
+  "documentary",
+  "cinema",
+
+  // other events and activities
+  "workshop",
+  "talk",
+  "lecture",
+  "discussion",
+  "fundraiser",
+  "benefit",
+  "memorial",
+  "tribute",
+  "open mic",
+  "karaoke",
+  "trivia",
+  "trivia night",
+  "comedy",
+  "comedy show",
+  "stand-up",
+  "standup",
+  "poetry",
+  "poetry reading",
+  "book reading",
+  "art opening",
+  "art show",
+  "gallery opening",
+  "exhibition",
+  "book launch",
+  "author reading",
+  "panel discussion",
+  "q&a",
+  "meet and greet",
+  "signing",
+  "dj set", // might be borderline, but often not a band name
+];
+
+// patterns for non-artist entries (more flexible matching)
+const NON_ARTIST_PATTERNS = [
+  /^screening\s+of\s+/i, // "screening of [movie]"
+  /\s+screening$/i, // "[movie] screening"
+  /^film\s+screening/i, // "film screening [title]"
+  /^movie\s+screening/i, // "movie screening [title]"
+  /^film:\s+/i, // "film: [title]"
+  /^movie:\s+/i, // "movie: [title]"
+  /^documentary:\s+/i, // "documentary: [title]"
+  /\s+presents\s+/i, // "[venue] presents [event]"
+  /\s+featuring\s+/i, // might be event description
+  /^benefit\s+for\s+/i, // "benefit for [cause]"
+  /^memorial\s+for\s+/i, // "memorial for [person]"
+  /^tribute\s+to\s+/i, // "tribute to [person]"
+  /^fundraiser\s+for\s+/i, // "fundraiser for [cause]"
+  /open\s+mic(\s+night)?$/i, // "open mic" or "open mic night"
+  /comedy\s+(show|night)$/i, // "comedy show" or "comedy night"
+  /trivia\s+night$/i, // "trivia night"
+  /^dj\s+night$/i, // "dj night"
+  /^karaoke$/i, // "karaoke" as standalone
 ];
 
 // patterns that indicate cancelled/postponed shows (not band names)
@@ -53,6 +117,21 @@ function isNonArtist(artistName) {
 
   // check for cancelled/postponed patterns at the beginning
   if (CANCELLED_PATTERNS.some((pattern) => pattern.test(artistName))) {
+    return true;
+  }
+
+  // check for non-artist patterns (movie screenings, events, etc.)
+  if (NON_ARTIST_PATTERNS.some((pattern) => pattern.test(artistName))) {
+    return true;
+  }
+
+  // filter out very long names that are likely event descriptions
+  if (artistName.length > 100) {
+    return true;
+  }
+
+  // filter out entries that are obviously announcements (multiple sentences)
+  if (artistName.includes(". ") && artistName.split(". ").length > 2) {
     return true;
   }
 

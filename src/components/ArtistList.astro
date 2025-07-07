@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ArtistSortToggle } from "./SortToggle";
 import artists from "../data/artists.json";
-import concerts from "../data/concerts.json";
+import concerts from "../data/raw.json";
 
 function getNextShowForArtist(artistName: string) {
   const today = new Date();

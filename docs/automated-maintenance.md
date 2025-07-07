@@ -15,10 +15,9 @@ Runs every Monday at 12AM Pacific Time (7AM UTC).
 
 ### 1. 🚀 **Streamlined Processing**
 
-- Runs individual scripts in sequence for better transparency
-- Scrapes new concert data from configured sources
-- Processes data with duplicate detection and merging
-- Automatically verifies new artists on Spotify (in-memory)
+- Scrapes new concert data from configured sources to `raw.json`
+- Processes data with `process-databases.js` (includes all filtering and cleanup)
+- Automatically verifies new artists on Spotify using `spotify-verify.js`
 - Preserves existing Spotify verification data
 
 ### 2. 📊 **Smart Statistics**
@@ -26,6 +25,7 @@ Runs every Monday at 12AM Pacific Time (7AM UTC).
 - Tracks new artists added
 - Shows Spotify verification progress
 - Provides comprehensive logging
+- Reports filtering efficiency
 
 ### 3. 📝 **Automated Commits**
 
@@ -39,10 +39,9 @@ Runs on the 1st of each month at 2AM Pacific Time (9AM UTC).
 
 ### 1. 🔄 **Intelligent Rechecking**
 
-- Identifies artists that should be rechecked:
-  - Previously marked as "not found"
-  - Artists with no verification data
-  - Artists with old verification data (30+ days)
+- Identifies artists that should be rechecked using `spotify-verify.js --failed`
+- Targets artists previously marked as "not found"
+- Artists with no verification data or old verification data (30+ days)
 - Uses conservative limits (100 artists by default)
 
 ### 2. 🎵 **Targeted Validation**
@@ -50,6 +49,7 @@ Runs on the 1st of each month at 2AM Pacific Time (9AM UTC).
 - Only processes artists that need rechecking
 - Avoids re-verifying already confirmed artists
 - Updates verification timestamps
+- Never changes artist names (preserves scraped names)
 
 ## Manual Controls
 
@@ -77,13 +77,13 @@ npm run maintenance
 
 # Individual components
 npm run scrape                          # scrape concert data only
-npm run process-db                      # process databases only
-npm run verify-spotify-new-artists      # verify new artists only
-npm run verify-spotify-recheck-artists  # recheck previously unverified artists
+npm run process-db                      # process databases only (includes cleanup)
+npm run verify-spotify-new              # verify new artists only
+npm run verify-spotify-failed           # recheck previously failed artists
 
 # Testing with limits
-node scripts/verify-spotify-new-artists.js --limit 10
-node scripts/verify-spotify-recheck-artists.js --limit 5 --dry-run
+node scripts/spotify-verify.js --new --limit 10
+node scripts/spotify-verify.js --failed --limit 5 --dry-run
 ```
 
 ## Environment Variables
@@ -117,6 +117,31 @@ The scripts will:
 2. Fall back to process environment variables (GitHub Actions)
 3. Provide clear error messages if credentials are missing
 4. Skip Spotify verification gracefully if credentials are unavailable
+
+## Recent Improvements: ✅ COMPLETED (July 2025)
+
+### 🧹 **Data Quality Enhancement (July 7, 2025)**
+
+- **False positive cleanup**: All bad partial matches removed from data
+- **Exact matching only**: Disabled partial matching to prevent false Spotify links
+- **Conservative verification**: Only creates high-confidence exact matches
+- **Smart backup system**: Backup files only remain if scripts fail (for debugging)
+- **Data integrity**: Zero tolerance for incorrect artist-to-Spotify mappings
+
+### 🛡️ **Enhanced Safety & Performance**
+
+- **Graceful shutdown**: Ctrl+C handling saves progress before exit
+- **Incremental saves**: Progress saved after each batch to prevent data loss
+- **Backup cleanup**: Successful runs remove backup files automatically
+- **Name preservation**: Scripts never modify original scraped artist names
+- **Error resilience**: Robust error handling with detailed logging
+
+### 📁 **Script Organization**
+
+- **Streamlined workflow**: Only essential scripts remain active
+- **Backup folder**: One-time and redundant scripts moved to `scripts/backup/`
+- **Unified verification**: Single `spotify-verify.js` handles all verification modes
+- **Clean automation**: Simplified GitHub Actions workflow
 
 ## API Optimization Features
 
@@ -193,7 +218,7 @@ For detailed debugging, run locally:
 
 ```bash
 # Enable verbose output
-node scripts/verify-spotify-new-artists.js --limit 5
+node scripts/spotify-verify.js --new --limit 5
 
 # Check for processing issues
 node scripts/process-databases.js

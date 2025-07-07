@@ -26,9 +26,9 @@ A simple & accessible calendar of upcoming live music concerts in the San Franci
 The site automatically updates every Monday with fresh concert data:
 
 1. **Scrapes** concert listings from trusted sources (FooPee's "The List")
-2. **Processes** and deduplicates venue and artist information
-3. **Verifies** new artists against Spotify's database
-4. **Filters** out non-music events and invalid entries
+2. **Processes** and deduplicates venue and artist information with comprehensive filtering
+3. **Verifies** new artists against Spotify's database (preserving original names)
+4. **Filters** out non-music events, meetings, and administrative entries
 5. **Deploys** updated site with new shows
 
 ## Contributing
@@ -66,15 +66,25 @@ npm run format
 
 For detailed information about the project's automation and scripts:
 
+### Core Documentation
+
+- **[Documentation Overview](docs/README.md)**: Navigation guide to all documentation
+- **[Simplified Pipeline](docs/simplified-pipeline.md)**: Data flow architecture overview
+- **[Database Management](docs/database-management.md)**: Data processing and script usage
 - **[Automated Maintenance](docs/automated-maintenance.md)**: GitHub Actions workflows and scheduling
+
+### Features & Policies
+
 - **[Spotify Verification](docs/spotify-verification.md)**: Artist verification process and accuracy
+- **[Conservative Name Policy](docs/conservative-name-policy.md)**: Artist name handling and deduplication rules
+- **[Non-Artist Protection](docs/non-artist-protection.md)**: Filtering system to prevent non-music entries
 
 ## Spotify Integration
 
 The site features intelligent Spotify integration with **85%+ verification rate**:
 
 - ✅ **Automatic verification** of artists against Spotify's database
-- 🏷️ **Name standardization** to official Spotify capitalization
+- 🏷️ **Name preservation** - always keeps original venue listings
 - 🔗 **Direct profile links** for verified artists
 - 🔍 **Search fallbacks** for unverified artists
 - 📊 **Verification tracking** to avoid reprocessing

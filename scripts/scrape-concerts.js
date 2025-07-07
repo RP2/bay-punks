@@ -218,7 +218,7 @@ console.log(`\nprocessing complete:`);
 console.log(`- total events found: ${totalEvents}`);
 console.log(`- comedians excluded: ${excludedComedians}`);
 console.log(`- days with events: ${shows.length}`);
-console.log("writing to concerts.json...");
+console.log("writing to raw.json...");
 
-await writeFile("./src/data/concerts.json", JSON.stringify({ shows }, null, 2));
+await writeFile("./src/data/raw.json", JSON.stringify({ shows }, null, 2));
 console.log("all concerts scraped and saved successfully!");

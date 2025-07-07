@@ -1,113 +1,143 @@
-# Database Management Scripts
+# Database Management
 
-This directory contains scripts for managing the Bay Area punk show databases, including filtering out non-artist entries and maintaining data quality.
+This document covers the database management system for Bay Area Punk Shows, including data processing, filtering, and quality maintenance.
 
-## Scripts Overview
+## Database Files
 
-### Core Processing
+- **`src/data/raw.json`** - Raw scraped concert data (input)
+- **`src/data/artists.json`** - Processed artist database with Spotify integration (output)
+- **`src/data/venues.json`** - Processed venue database with normalization (output)
+- **`src/data/spelling-corrections.json`** - Manual corrections for venues and true typos
 
-- **`process-databases.js`** - Main script that processes concert data and builds artist/venue databases
-  - Now includes automatic filtering of non-artist entries during processing
-  - Integrates spelling corrections and fuzzy matching
+## Core Processing Script
 
-### Data Quality & Filtering
+### `process-databases.js` - Unified Processing
 
-- **`consolidated-cleanup.js`** - Comprehensive cleanup script for both databases
+**The main script that handles everything:**
 
-  - Removes non-artist entries from both `artists.json` and `concerts.json`
-  - Handles venue administrative entries, cancelled shows, etc.
-  - Run with `--dry-run` to preview changes
+- Reads raw scraped data from `raw.json`
+- Processes and deduplicates artists and venues
+- Applies comprehensive non-artist filtering
+- Cleans up existing problematic entries
+- Preserves Spotify verification data
+- Outputs clean `artists.json` and `venues.json`
 
-- **`verify-databases-clean.js`** - Verification script to check database cleanliness
+**Key Features:**
 
-  - Reports any non-artist entries found in either database
-  - Useful for ongoing monitoring
+- Conservative name handling (exact matches only)
+- Comprehensive filtering of non-music events
+- Automatic cleanup of legacy data issues
+- Built-in duplicate detection and merging
 
-- **`filter-non-artists.js`** - Original artists-only filtering script (now superseded by consolidated script)
+## Additional Scripts
 
-### Spotify Integration
+### `scrape-concerts.js` - Data Collection
 
-- **`verify-spotify-artists.js`** - Enhanced with stricter matching criteria
+- Scrapes concert data from configured venues
+- Outputs raw data to `raw.json`
+- Includes basic filtering during collection
 
-  - More conservative partial matching (60% similarity, higher popularity/follower thresholds)
-  - Falls back to search URLs when no good match found
+### `spotify-verify.js` - Unified Spotify Integration
 
-- **`verify-spotify-strict-recheck.js`** - Re-evaluates existing Spotify matches with stricter criteria
-  - Identifies loose matches from previous runs
-  - Downgrades poor matches to search URLs
+- Handles all Spotify verification scenarios
+- Never changes artist names (preserves scraped names)
+- Supports `--new`, `--failed`, `--force`, `--partial` modes
+- **Exact matching only** for high quality results (partial matching disabled)
+- **Smart backup system**: Creates backup at start, removes on successful completion
+- **Graceful shutdown**: Ctrl+C handling to save progress on interruption
+- **Data protection**: Built-in safeguards prevent data loss during verification
 
-### Concert Scraping
+## Removed Scripts (Consolidated)
 
-- **`scrape-concerts.js`** - Updated with comprehensive non-artist filtering
-  - Prevents non-artist entries from being added during scraping
-  - Filters out venue administrative entries, cancelled shows, etc.
+The following scripts were consolidated into `process-databases.js`:
+
+- ~~`consolidated-cleanup.js`~~ - Functionality moved to main script
+- ~~`verify-databases-clean.js`~~ - No longer needed
+- Multiple old Spotify scripts - Unified into `spotify-verify.js`
 
 ## Non-Artist Filtering
 
 The system automatically filters out entries that are not musical artists:
 
-### Venue Administrative Entries
+### Exact Match Filters
 
-- Membership meetings
-- Staff meetings
-- Private events
-- Venue operations (cleanup, setup, etc.)
+- Meetings (membership, venue, staff, board)
+- Private events, closures, venue operations
+- Placeholders (TBD, TBA)
+- Film screenings, movies, documentaries
+- Workshops, talks, lectures, comedy shows
+- And 50+ other non-music event types
 
-### Show Status Entries
+### Pattern Matching
 
-- Cancelled shows (starting with "CANCELLED:", "CANCELED:", "PROBABLY CANCELLED:")
-- Postponed/rescheduled shows
-- Generic placeholders (TBD, TBA)
+- `screening of [movie]`, `[movie] screening`
+- `film: [title]`, `documentary: [title]`
+- `benefit for [cause]`, `memorial for [person]`
+- Cancelled/postponed events (`cancelled:`, `postponed:`)
 
-### Venue-Specific Logic
+### Smart Filtering
 
-- 924 Gilman Street "Membership Meeting" entries are automatically identified and filtered
+- Event descriptions over 100 characters
+- Multi-sentence announcements
+- Venue-specific administrative content
 
 ## Usage Examples
 
 ```bash
-# Full cleanup of both databases
-node scripts/consolidated-cleanup.js
-
-# Preview what would be cleaned
-node scripts/consolidated-cleanup.js --dry-run
-
-# Verify databases are clean
-node scripts/verify-databases-clean.js
-
-# Re-process with stricter Spotify matching
-node scripts/verify-spotify-strict-recheck.js --limit 50
-
-# Main database processing (now includes filtering)
+# Main processing (includes all filtering and cleanup)
 node scripts/process-databases.js
+
+# Scrape new concert data
+node scripts/scrape-concerts.js
+
+# Verify new artists on Spotify
+node scripts/spotify-verify.js --new
+
+# Recheck failed Spotify verifications
+node scripts/spotify-verify.js --failed
+
+# Recheck partial matches with updated logic
+node scripts/spotify-verify.js --partial
+
+# Force revalidation of all artists
+node scripts/spotify-verify.js --force
 ```
 
-## Data Flow
+## Simplified Data Flow
 
-1. **Scraping** (`scrape-concerts.js`) - Filters non-artists during collection
-2. **Processing** (`process-databases.js`) - Additional filtering during database building
-3. **Cleanup** (`consolidated-cleanup.js`) - Removes any remaining non-artist entries
-4. **Verification** (`verify-databases-clean.js`) - Ongoing monitoring
+1. **Scraping** (`scrape-concerts.js`) → `raw.json`
+2. **Processing** (`process-databases.js`) → `artists.json` + `venues.json`
+3. **Spotify Verification** (`spotify-verify.js`) → Enhanced `artists.json`
 
-## Recent Improvements
+## Key Improvements
 
-### Stricter Spotify Matching
+### Unified Processing
 
-- Increased minimum popularity threshold (5 → 10)
-- Increased minimum followers threshold (50 → 500)
-- Added similarity ratio requirement (60% minimum)
-- Limited name length differences (max 10 characters)
-- Fallback to search URLs instead of no match
+- Single script handles all data processing and cleanup
+- No more redundant filtering steps
+- Faster automation (66% reduction in workflow steps)
 
-### Consolidated Filtering
+### Conservative Name Policy
 
-- Unified filtering logic across all scripts
-- Comprehensive non-artist detection
-- Metadata tracking of all removals
-- Support for both artists and concerts databases
+- Exact matches only for artist deduplication
+- Preserves original scraped names
+- No unwanted name changes from Spotify or fuzzy matching
 
-### Prevention
+### Exact Match Spotify Verification
 
-- Scraping script now prevents non-artist entries at source
-- Processing script includes filtering during database building
-- Multiple layers of protection against non-artist entries
+- **Partial matching disabled** due to false positive issues
+- Only creates exact matches or marks as "not found"
+- Prevents incorrect artist-to-Spotify mappings
+- High quality, conservative verification approach
+
+### Comprehensive Filtering
+
+- Blocks meetings, events, movie screenings at source
+- Cleans up existing problematic entries
+- Multiple layers of non-artist detection
+
+### Streamlined Workflows
+
+- Weekly automation: scrape → process → verify new artists
+- Monthly recheck: verify previously failed artists
+- All redundant cleanup scripts moved to backup folder

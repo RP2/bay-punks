@@ -32,6 +32,18 @@ function normalizeText(text) {
     .trim();
 }
 
+// helper to normalize text with flexible "the" handling for artist matching
+function normalizeForMatching(text) {
+  let normalized = normalizeText(text);
+
+  // remove "the" prefix for flexible matching (both "The Band" and "Band" match)
+  if (normalized.startsWith("the ")) {
+    normalized = normalized.substring(4);
+  }
+
+  return normalized;
+}
+
 // helper to create a unique slug
 function createSlug(text) {
   return text
@@ -40,23 +52,6 @@ function createSlug(text) {
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
     .trim();
-}
-
-// helper to generate search URLs (fallback)
-function generateSearchUrl(searchTerm) {
-  const encodedTerm = encodeURIComponent(searchTerm);
-  return `https://www.google.com/search?q=${encodedTerm}`;
-}
-
-// helper to find similar entries with fuzzy matching
-function findSimilarEntry(map, normalizedText) {
-  for (const [key, value] of map.entries()) {
-    const normalizedKey = normalizeText(value.name);
-    if (normalizedKey === normalizedText) {
-      return key;
-    }
-  }
-  return null;
 }
 
 // helper to calculate levenshtein distance for fuzzy matching
@@ -84,123 +79,125 @@ function levenshteinDistance(str1, str2) {
   return matrix[str2.length][str1.length];
 }
 
-// helper to apply spelling corrections
+// helper to restore proper artist names from scraped data
+// this helps fix any existing data where names were previously changed incorrectly
+function getPreferredArtistName(scrapedName, existingName, aliases = []) {
+  // ALWAYS prefer the scraped name (what's actually being promoted/listed)
+  // the scraped name is what the venue/promoter is using, so it's the most accurate
+
+  // only use existing name if scraped name is clearly incomplete or truncated
+  if (existingName && scrapedName.length < 3) {
+    return existingName;
+  }
+
+  // otherwise, always use the scraped name
+  return scrapedName;
+}
+
+// apply spelling corrections (conservative approach)
 function applySpellingCorrection(text, type = "artist") {
   const normalized = normalizeText(text);
   const corrections =
     type === "artist" ? SPELLING_CORRECTIONS : VENUE_CORRECTIONS;
 
-  // check for exact spelling correction
+  // only check for exact spelling correction matches (be very conservative)
   if (corrections[normalized]) {
     return corrections[normalized];
   }
 
-  // check for partial matches (e.g., "the nin" -> "nine inch nails")
-  for (const [misspelling, correction] of Object.entries(corrections)) {
-    if (normalized.includes(misspelling) || misspelling.includes(normalized)) {
-      // calculate similarity to see if it's a likely match
-      const distance = levenshteinDistance(normalized, misspelling);
-      const maxLength = Math.max(normalized.length, misspelling.length);
-      const similarity = 1 - distance / maxLength;
-
-      if (similarity >= 0.8) {
-        return correction;
-      }
-    }
-  }
-
-  // return original text if no correction found (not normalized)
+  // return original text if no exact correction found
   return text;
 }
 
-// helper to find the canonical (correctly spelled) version of an artist
-function findCanonicalArtist(map, normalizedText) {
-  // first apply spelling corrections
-  const correctedText = applySpellingCorrection(normalizedText, "artist");
+// helper to find matches for duplicate detection
+function findFuzzyMatch(map, normalizedText, type = "artist") {
+  // for artists: only exact matches with flexible "The" handling
+  // for venues: fuzzy matching with high threshold (0.9)
 
-  // if correction was applied, look for the canonical version
-  if (correctedText !== normalizedText) {
+  if (type === "artist") {
+    const normalizedForMatching = normalizeForMatching(normalizedText);
+
     for (const [key, value] of map.entries()) {
       const normalizedKey = normalizeText(value.name);
-      if (normalizedKey === correctedText) {
-        return { key, isSpellingCorrection: true, canonicalName: value.name };
+      const normalizedKeyForMatching = normalizeForMatching(value.name);
+
+      // exact match after normalization (case-insensitive, no punctuation)
+      if (normalizedKey === normalizedText) {
+        return { key, isSpellingCorrection: false };
+      }
+
+      // flexible "the" matching - "The Band" matches "Band" and vice versa
+      if (
+        normalizedKeyForMatching === normalizedForMatching &&
+        normalizedKeyForMatching !== normalizedKey
+      ) {
+        return { key, isSpellingCorrection: false };
       }
     }
+
+    // no match found for artists (only exact matches allowed)
+    return null;
   }
 
-  return null;
-}
+  // for venues, we can still do some fuzzy matching but with a high threshold
+  if (type === "venue") {
+    let bestMatch = null;
+    let bestScore = 0;
 
-// helper to find the canonical (correctly spelled) version of a venue
-function findCanonicalVenue(map, normalizedText) {
-  // first apply spelling corrections
-  const correctedText = applySpellingCorrection(normalizedText, "venue");
-
-  // if correction was applied, look for the canonical version
-  if (correctedText !== normalizedText) {
     for (const [key, value] of map.entries()) {
       const normalizedKey = normalizeText(value.name);
-      if (normalizedKey === correctedText) {
-        return { key, isSpellingCorrection: true, canonicalName: value.name };
+
+      if (normalizedKey !== normalizedText) {
+        const distance = levenshteinDistance(normalizedKey, normalizedText);
+        const maxLength = Math.max(normalizedKey.length, normalizedText.length);
+        const similarity = 1 - distance / maxLength;
+
+        if (similarity >= 0.9 && similarity > bestScore) {
+          bestScore = similarity;
+          bestMatch = key;
+        }
       }
     }
+
+    return bestMatch ? { key: bestMatch, isSpellingCorrection: false } : null;
   }
 
+  // no match found for artists (only exact matches allowed)
   return null;
-}
-
-// helper to find fuzzy matches for duplicate detection
-function findFuzzyMatch(
-  map,
-  normalizedText,
-  threshold = 0.85,
-  type = "artist",
-) {
-  let bestMatch = null;
-  let bestScore = 0;
-
-  // first check for spelling corrections
-  const canonicalMatch =
-    type === "artist"
-      ? findCanonicalArtist(map, normalizedText)
-      : findCanonicalVenue(map, normalizedText);
-
-  if (canonicalMatch) {
-    return {
-      key: canonicalMatch.key,
-      isSpellingCorrection: true,
-      canonicalName: canonicalMatch.canonicalName,
-    };
-  }
-
-  for (const [key, value] of map.entries()) {
-    const normalizedKey = normalizeText(value.name);
-
-    // exact match
-    if (normalizedKey === normalizedText) {
-      return { key, isSpellingCorrection: false };
-    }
-
-    // fuzzy match using similarity ratio
-    const distance = levenshteinDistance(normalizedKey, normalizedText);
-    const maxLength = Math.max(normalizedKey.length, normalizedText.length);
-    const similarity = 1 - distance / maxLength;
-
-    if (similarity >= threshold && similarity > bestScore) {
-      bestScore = similarity;
-      bestMatch = key;
-    }
-  }
-
-  return bestMatch ? { key: bestMatch, isSpellingCorrection: false } : null;
 }
 
 // helper to merge artist data when combining duplicates
 function mergeArtistData(existing, newData) {
+  // handle case where existing artist has no current shows (from pre-population)
+  const existingShowCount = existing.showCount || 0;
+  const newShowCount = newData.showCount || 0;
+
+  // calculate date ranges, handling null values from pre-population
+  let firstSeen = newData.firstSeen;
+  let lastSeen = newData.lastSeen;
+
+  if (existing.firstSeen && existing.lastSeen) {
+    firstSeen =
+      existing.firstSeen < newData.firstSeen
+        ? existing.firstSeen
+        : newData.firstSeen;
+    lastSeen =
+      existing.lastSeen > newData.lastSeen
+        ? existing.lastSeen
+        : newData.lastSeen;
+  }
+
+  // use preferred name logic that prioritizes scraped names
+  let finalName = getPreferredArtistName(
+    newData.name,
+    existing.name,
+    Array.from(existing.aliases || []),
+  );
+
   return {
     ...existing,
-    // keep the most recent name if different
-    name: existing.name,
+    // use the more conservative name selection logic
+    name: finalName,
     // merge search urls (keep existing if present)
     searchUrl: existing.searchUrl || newData.searchUrl,
     // preserve spotify data (never overwrite with null/false values)
@@ -209,16 +206,10 @@ function mergeArtistData(existing, newData) {
       existing.spotifyVerified || newData.spotifyVerified || false,
     spotifyData: existing.spotifyData || newData.spotifyData || null,
     // update date ranges
-    firstSeen:
-      existing.firstSeen < newData.firstSeen
-        ? existing.firstSeen
-        : newData.firstSeen,
-    lastSeen:
-      existing.lastSeen > newData.lastSeen
-        ? existing.lastSeen
-        : newData.lastSeen,
+    firstSeen: firstSeen,
+    lastSeen: lastSeen,
     // combine counts
-    showCount: existing.showCount + newData.showCount,
+    showCount: existingShowCount + newShowCount,
     // merge venues and aliases
     venues: new Set([...existing.venues, ...newData.venues]),
     aliases: new Set([...existing.aliases, ...newData.aliases]),
@@ -287,6 +278,25 @@ function parseVenueLocation(venueName) {
 
 // helper to merge venue data when combining duplicates
 function mergeVenueData(existing, newData) {
+  // handle case where existing venue has no current shows (from pre-population)
+  const existingShowCount = existing.showCount || 0;
+  const newShowCount = newData.showCount || 0;
+
+  // calculate date ranges, handling null values from pre-population
+  let firstSeen = newData.firstSeen;
+  let lastSeen = newData.lastSeen;
+
+  if (existing.firstSeen && existing.lastSeen) {
+    firstSeen =
+      existing.firstSeen < newData.firstSeen
+        ? existing.firstSeen
+        : newData.firstSeen;
+    lastSeen =
+      existing.lastSeen > newData.lastSeen
+        ? existing.lastSeen
+        : newData.lastSeen;
+  }
+
   return {
     ...existing,
     // keep the most recent name if different
@@ -294,16 +304,10 @@ function mergeVenueData(existing, newData) {
     // merge search urls (keep existing if present)
     searchUrl: existing.searchUrl || newData.searchUrl,
     // update date ranges
-    firstSeen:
-      existing.firstSeen < newData.firstSeen
-        ? existing.firstSeen
-        : newData.firstSeen,
-    lastSeen:
-      existing.lastSeen > newData.lastSeen
-        ? existing.lastSeen
-        : newData.lastSeen,
+    firstSeen: firstSeen,
+    lastSeen: lastSeen,
     // combine counts
-    showCount: existing.showCount + newData.showCount,
+    showCount: existingShowCount + newShowCount,
     // merge location fields (prefer non-null values)
     location: existing.location || newData.location,
     address: existing.address || newData.address,
@@ -316,12 +320,21 @@ function mergeVenueData(existing, newData) {
 
 // non-artist filtering - list of entries that are not actual artists
 const NON_ARTIST_FILTERS = [
+  // meetings and administrative
   "membership meeting",
   "member meeting",
   "members meeting",
+  "venue meeting",
+  "staff meeting",
+  "volunteer meeting",
+  "board meeting",
+
+  // private events
   "private event",
   "private party",
   "closed",
+
+  // venue operations
   "doors",
   "soundcheck",
   "cleanup",
@@ -329,14 +342,76 @@ const NON_ARTIST_FILTERS = [
   "teardown",
   "break",
   "intermission",
+
+  // placeholder entries
   "tbd",
   "tba",
   "to be announced",
   "to be determined",
-  "venue meeting",
-  "staff meeting",
-  "volunteer meeting",
-  "board meeting",
+
+  // movie screenings and film events
+  "screening",
+  "film screening",
+  "movie screening",
+  "documentary screening",
+  "film",
+  "movie",
+  "documentary",
+  "cinema",
+
+  // other events and activities
+  "workshop",
+  "talk",
+  "lecture",
+  "discussion",
+  "fundraiser",
+  "benefit",
+  "memorial",
+  "tribute",
+  "open mic",
+  "karaoke",
+  "trivia",
+  "trivia night",
+  "comedy",
+  "comedy show",
+  "stand-up",
+  "standup",
+  "poetry",
+  "poetry reading",
+  "book reading",
+  "art opening",
+  "art show",
+  "gallery opening",
+  "exhibition",
+  "book launch",
+  "author reading",
+  "panel discussion",
+  "q&a",
+  "meet and greet",
+  "signing",
+  "dj set", // might be borderline, but often not a band name
+];
+
+// patterns for non-artist entries (more flexible matching)
+const NON_ARTIST_PATTERNS = [
+  /^screening\s+of\s+/i, // "screening of [movie]"
+  /\s+screening$/i, // "[movie] screening"
+  /^film\s+screening/i, // "film screening [title]"
+  /^movie\s+screening/i, // "movie screening [title]"
+  /^film:\s+/i, // "film: [title]"
+  /^movie:\s+/i, // "movie: [title]"
+  /^documentary:\s+/i, // "documentary: [title]"
+  /\s+presents\s+/i, // "[venue] presents [event]"
+  /\s+featuring\s+/i, // might be event description
+  /^benefit\s+for\s+/i, // "benefit for [cause]"
+  /^memorial\s+for\s+/i, // "memorial for [person]"
+  /^tribute\s+to\s+/i, // "tribute to [person]"
+  /^fundraiser\s+for\s+/i, // "fundraiser for [cause]"
+  /open\s+mic(\s+night)?$/i, // "open mic" or "open mic night"
+  /comedy\s+(show|night)$/i, // "comedy show" or "comedy night"
+  /trivia\s+night$/i, // "trivia night"
+  /^dj\s+night$/i, // "dj night"
+  /^karaoke$/i, // "karaoke" as standalone
 ];
 
 const CANCELLED_PATTERNS = [
@@ -362,6 +437,21 @@ function isNonArtist(artistName) {
     return true;
   }
 
+  // check for non-artist patterns (movie screenings, events, etc.)
+  if (NON_ARTIST_PATTERNS.some((pattern) => pattern.test(artistName))) {
+    return true;
+  }
+
+  // filter out very long names that are likely event descriptions
+  if (artistName.length > 100) {
+    return true;
+  }
+
+  // filter out entries that are obviously announcements (multiple sentences)
+  if (artistName.includes(". ") && artistName.split(". ").length > 2) {
+    return true;
+  }
+
   return false;
 }
 
@@ -382,9 +472,9 @@ async function processDatabases() {
   // load spelling corrections first
   await loadSpellingCorrections();
 
-  // read the concerts data
+  // read the raw scraped data
   const concertsData = JSON.parse(
-    await readFile("./src/data/concerts.json", "utf-8"),
+    await readFile("./src/data/raw.json", "utf-8"),
   );
 
   // load existing artists data to preserve spotify verification info
@@ -398,6 +488,24 @@ async function processDatabases() {
     );
   } catch (error) {
     console.log("no existing artists data found, starting fresh");
+  }
+
+  // clean up existing artists data - remove non-artist entries
+  const originalCount = existingArtistsData.artists.length;
+  existingArtistsData.artists = existingArtistsData.artists.filter((artist) => {
+    if (isNonArtist(artist.name)) {
+      console.log(
+        `Removing non-artist entry from existing data: "${artist.name}"`,
+      );
+      return false;
+    }
+    return true;
+  });
+
+  if (originalCount !== existingArtistsData.artists.length) {
+    console.log(
+      `Cleaned up ${originalCount - existingArtistsData.artists.length} non-artist entries from existing data`,
+    );
   }
 
   // create lookup map for existing artists by normalized name
@@ -447,9 +555,40 @@ async function processDatabases() {
     }
   });
 
-  // initialize our databases
+  // initialize our databases with existing data
   const artists = new Map();
   const venues = new Map();
+
+  // pre-populate artists map with existing artists to prevent data loss
+  existingArtistsData.artists.forEach((artist) => {
+    const artistKey = artist.id || createSlug(artist.name);
+    artists.set(artistKey, {
+      ...artist,
+      venues: new Set(artist.venues || []),
+      aliases: new Set(artist.aliases || []),
+      // reset these to be recalculated from current data
+      showCount: 0,
+      firstSeen: null,
+      lastSeen: null,
+    });
+  });
+
+  // pre-populate venues map with existing venues to prevent data loss
+  existingVenuesData.venues.forEach((venue) => {
+    const venueKey = venue.id || createSlug(venue.name);
+    venues.set(venueKey, {
+      ...venue,
+      aliases: new Set(venue.aliases || []),
+      // reset these to be recalculated from current data
+      showCount: 0,
+      firstSeen: null,
+      lastSeen: null,
+    });
+  });
+
+  console.log(
+    `pre-populated with ${artists.size} existing artists and ${venues.size} existing venues`,
+  );
 
   let duplicatesFound = 0;
   let spellingCorrectionsFound = 0;
@@ -460,12 +599,7 @@ async function processDatabases() {
       // process venue
       if (event.venue?.text) {
         const normalizedVenue = normalizeText(event.venue.text);
-        const matchResult = findFuzzyMatch(
-          venues,
-          normalizedVenue,
-          0.9,
-          "venue",
-        );
+        const matchResult = findFuzzyMatch(venues, normalizedVenue, "venue");
 
         if (matchResult) {
           const existingVenueKey =
@@ -562,7 +696,7 @@ async function processDatabases() {
       // process artists
       event.bands.forEach((band) => {
         if (band.text) {
-          // filter out non-artist entries
+          // filter out non-artist entries (meetings, events, movie screenings, etc.)
           if (
             isNonArtist(band.text) ||
             isVenueAdministrative(band.text, [event.venue?.text])
@@ -571,36 +705,32 @@ async function processDatabases() {
           }
 
           const normalizedBand = normalizeText(band.text);
-          const matchResult = findFuzzyMatch(
-            artists,
-            normalizedBand,
-            0.85,
-            "artist",
-          );
+          const matchResult = findFuzzyMatch(artists, normalizedBand, "artist");
 
           if (matchResult) {
             const existingArtistKey =
               typeof matchResult === "string" ? matchResult : matchResult.key;
             const isSpellingCorrection =
               matchResult.isSpellingCorrection || false;
-            const canonicalName = matchResult.canonicalName;
 
             // merge with existing artist
             const existing = artists.get(existingArtistKey);
 
-            // when merging due to spelling correction, use canonical name as primary
-            const primaryName = isSpellingCorrection
-              ? canonicalName || existing.name
-              : existing.name;
+            // ALWAYS use the scraped name - it's what's actually being promoted
+            const preferredName = getPreferredArtistName(
+              band.text,
+              existing.name,
+              Array.from(existing.aliases || []),
+            );
 
             // check if we need to preserve spotify data from previous runs
-            const normalizedPrimaryName = normalizeText(primaryName);
+            const normalizedPreferredName = normalizeText(preferredName);
             const existingSpotifyData = existingArtistsByName.get(
-              normalizedPrimaryName,
+              normalizedPreferredName,
             );
 
             const newArtistData = {
-              name: primaryName,
+              name: preferredName, // use the scraped name (most accurate)
               searchUrl: band.href,
               // preserve any spotify data from previous database
               spotifyUrl: existingSpotifyData?.spotifyUrl || null,
@@ -615,21 +745,20 @@ async function processDatabases() {
 
             const merged = mergeArtistData(existing, newArtistData);
 
-            // add the current name as an alias if different from primary
-            if (band.text !== primaryName) {
+            // add the current name as an alias if different from final name
+            if (band.text !== merged.name) {
               merged.aliases.add(band.text);
+              console.log(
+                `merged duplicate artist: "${band.text}" -> using preferred "${merged.name}"`,
+              );
+              duplicatesFound++;
+            }
 
-              if (isSpellingCorrection) {
-                console.log(
-                  `corrected spelling: "${band.text}" -> "${canonicalName || existing.name}"`,
-                );
-                spellingCorrectionsFound++;
-              } else {
-                console.log(
-                  `merged duplicate artist: "${band.text}" -> "${existing.name}"`,
-                );
-                duplicatesFound++;
-              }
+            // log if we updated the name from previous data
+            if (preferredName !== existing.name) {
+              console.log(
+                `  🔧 updated to current name: "${existing.name}" -> "${preferredName}"`,
+              );
             }
 
             // log spotify data preservation
@@ -639,42 +768,19 @@ async function processDatabases() {
                 existingSpotifyData.spotifyVerified)
             ) {
               console.log(
-                `  🔒 preserving spotify data for merged artist "${primaryName}"`,
+                `  🔒 preserving spotify data for merged artist "${preferredName}"`,
               );
             }
 
             artists.set(existingArtistKey, merged);
           } else {
-            // check if this is a new artist that needs spelling correction
-            const correctedArtistName = applySpellingCorrection(
-              band.text,
-              "artist",
-            );
-            const useCorrection = correctedArtistName !== band.text;
-            const finalArtistName = useCorrection
-              ? correctedArtistName
-              : band.text;
-
-            if (useCorrection) {
-              console.log(
-                `applying spelling correction to new artist: "${band.text}" -> "${finalArtistName}"`,
-              );
-              spellingCorrectionsFound++;
-            }
-
-            // create new artist entry
-            const artistSlug = createSlug(finalArtistName);
-            const aliases = new Set([finalArtistName]);
-
-            // add original misspelling as alias if different
-            if (useCorrection && band.text !== finalArtistName) {
-              aliases.add(band.text);
-            }
+            // create new artist entry using exactly what was scraped
+            const artistSlug = createSlug(band.text);
+            const aliases = new Set([band.text]);
 
             // check if this artist exists in our previous data (by name or alias)
-            const normalizedFinalName = normalizeText(finalArtistName);
-            const existingArtist =
-              existingArtistsByName.get(normalizedFinalName);
+            const normalizedName = normalizeText(band.text);
+            const existingArtist = existingArtistsByName.get(normalizedName);
 
             // preserve spotify verification data if available
             const spotifyData = existingArtist
@@ -693,14 +799,12 @@ async function processDatabases() {
               existingArtist &&
               (existingArtist.spotifyUrl || existingArtist.spotifyVerified)
             ) {
-              console.log(
-                `  🔒 preserving spotify data for "${finalArtistName}"`,
-              );
+              console.log(`  🔒 preserving spotify data for "${band.text}"`);
             }
 
             artists.set(artistSlug, {
               id: artistSlug,
-              name: finalArtistName,
+              name: band.text,
               searchUrl: band.href,
               ...spotifyData,
               firstSeen: show.normalizedDate,
@@ -732,60 +836,11 @@ async function processDatabases() {
   artistsArray.sort((a, b) => b.showCount - a.showCount);
   venuesArray.sort((a, b) => b.showCount - a.showCount);
 
-  // preserve existing metadata
+  // preserve existing metadata but remove automatic spotify verification
+  // spotify verification is now handled separately by spotify-verify.js
   const existingMetadata = existingArtistsData.spotifyVerification || {};
 
-  // automatically verify new artists if spotify credentials are available (in-memory only)
-  let newArtistVerificationStats = null;
-  try {
-    const { verifyArtistsInMemory } = await import(
-      "./verify-spotify-new-artists.js"
-    );
-
-    // find new artists that need verification
-    const newArtists = artistsArray.filter(
-      (artist) => !artist.spotifyVerified && !artist.spotifyData?.notFound,
-    );
-
-    if (newArtists.length > 0) {
-      console.log(
-        `\n🎵 verifying ${Math.min(50, newArtists.length)} new artists on spotify...`,
-      );
-
-      // verify artists in-memory without touching files
-      const verificationResults = await verifyArtistsInMemory(
-        newArtists.slice(0, 50), // limit to 50 for automated runs
-        { verbose: true },
-      );
-
-      // apply verification results directly to our in-memory data
-      verificationResults.forEach((result) => {
-        const artist = artistsArray.find((a) => a.id === result.id);
-        if (artist) {
-          artist.spotifyUrl = result.spotifyUrl;
-          artist.spotifyVerified = result.spotifyVerified;
-          artist.spotifyData = result.spotifyData;
-        }
-      });
-
-      newArtistVerificationStats = {
-        verified: verificationResults.length,
-        found: verificationResults.filter((r) => r.spotifyVerified).length,
-        errors: 0, // todo: track errors if needed
-      };
-
-      console.log(
-        `✅ automatically verified ${newArtistVerificationStats.verified} new artists`,
-      );
-    }
-  } catch (error) {
-    console.log(`⚠️  spotify verification skipped: ${error.message}`);
-    console.log(
-      `   (this is normal if spotify credentials are not configured)`,
-    );
-  }
-
-  // calculate spotify verification stats (after potential verification)
+  // calculate spotify verification stats (existing data only)
   const spotifyStats = {
     totalArtists: artistsArray.length,
     spotifyVerified: artistsArray.filter((a) => a.spotifyVerified).length,
@@ -828,26 +883,15 @@ async function processDatabases() {
   console.log(
     `processed ${artistsArray.length} artists and ${venuesArray.length} venues`,
   );
-  console.log(`found and merged ${duplicatesFound} duplicates`);
+  console.log(`found and merged ${duplicatesFound} duplicate entries`);
   console.log(
-    `found and corrected ${spellingCorrectionsFound} spelling errors`,
+    `found ${spellingCorrectionsFound} spelling variations (prioritized scraped names)`,
+  );
+  console.log(
+    `enhanced filtering now blocks: meetings, events, movie screenings, and other non-artist entries`,
   );
 
-  if (newArtistVerificationStats) {
-    console.log(`\n🤖 automatic spotify verification:`);
-    console.log(
-      `  🔍 new artists verified: ${newArtistVerificationStats.verified}`,
-    );
-    console.log(`  ✅ found on spotify: ${newArtistVerificationStats.found}`);
-    console.log(
-      `  ❌ not found: ${newArtistVerificationStats.verified - newArtistVerificationStats.found}`,
-    );
-    if (newArtistVerificationStats.errors > 0) {
-      console.log(`  ⚠️  errors: ${newArtistVerificationStats.errors}`);
-    }
-  }
-
-  console.log(`\n🎵 spotify verification summary:`);
+  console.log(`\n🎵 spotify verification summary (existing data):`);
   console.log(`  📊 total artists: ${spotifyStats.totalArtists}`);
   console.log(
     `  ✅ spotify verified: ${spotifyStats.spotifyVerified} (${Math.round((spotifyStats.spotifyVerified / spotifyStats.totalArtists) * 100)}%)`,
@@ -857,6 +901,12 @@ async function processDatabases() {
   console.log(`  ⏳ unverified: ${spotifyStats.unverified}`);
   console.log(
     `\ndata written to src/data/artists.json and src/data/venues.json`,
+  );
+  console.log(
+    `\n💡 to verify new artists on spotify, run: node scripts/spotify-verify.js --new`,
+  );
+  console.log(
+    `\n🧹 comprehensive filtering active: this script now handles all cleanup tasks`,
   );
 }
 

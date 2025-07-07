@@ -41,25 +41,26 @@ jobs:
         run: |
           cp src/data/artists.json src/data/artists.json.backup
 
-      # run spotify recheck for previously unverified artists
+      # run spotify recheck for previously failed artists
       - name: recheck spotify artists
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
         run: |
           if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
-            echo "🏃 running dry run - no changes will be saved..."
+            echo "🏃 running dry run - would recheck failed artists..."
             if [ -n "${{ github.event.inputs.limit }}" ]; then
-              node scripts/verify-spotify-recheck-artists.js --limit ${{ github.event.inputs.limit }} --dry-run
+              echo "would run: node scripts/spotify-verify.js --failed --limit ${{ github.event.inputs.limit }}"
             else
-              node scripts/verify-spotify-recheck-artists.js --dry-run
+              echo "would run: node scripts/spotify-verify.js --failed"
             fi
+            echo "🏃 dry run mode - no actual verification performed"
           else
-            echo "🔄 rechecking previously unverified artists..."
+            echo "🔄 rechecking previously failed artists..."
             if [ -n "${{ github.event.inputs.limit }}" ]; then
-              node scripts/verify-spotify-recheck-artists.js --limit ${{ github.event.inputs.limit }}
+              node scripts/spotify-verify.js --failed --limit ${{ github.event.inputs.limit }}
             else
-              node scripts/verify-spotify-recheck-artists.js
+              node scripts/spotify-verify.js --failed
             fi
           fi
 
@@ -96,20 +97,6 @@ jobs:
               echo "🏃 dry run completed"
             fi
           fi
-
-      # run consolidated cleanup after recheck
-      - name: run consolidated database cleanup
-        if: github.event.inputs.dry_run != 'true'
-        run: |
-          echo "🧹 running consolidated database cleanup..."
-          node scripts/consolidated-cleanup.js
-
-      # verify databases are clean
-      - name: verify database cleanliness
-        if: github.event.inputs.dry_run != 'true'
-        run: |
-          echo "🔍 verifying databases are clean..."
-          node scripts/verify-databases-clean.js
 
       # cleanup backup files
       - name: cleanup
@@ -159,12 +146,13 @@ jobs:
       # summary output
       - name: workflow summary
         run: |
-          echo "## 🔄 monthly recheck summary" >> $GITHUB_STEP_SUMMARY
+          echo "## 🔄 monthly failed artist recheck summary" >> $GITHUB_STEP_SUMMARY
 
           if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
             echo "- **mode**: dry run (no changes saved)" >> $GITHUB_STEP_SUMMARY
           else
-            echo "- **spotify recheck**: completed" >> $GITHUB_STEP_SUMMARY
+            echo "- **spotify recheck**: failed artists rechecked with unified script" >> $GITHUB_STEP_SUMMARY
+            echo "- **name preservation**: scraped names never changed" >> $GITHUB_STEP_SUMMARY
           fi
 
           if [ "${{ steps.analyze.outputs.newly_verified }}" != "" ]; then
@@ -176,3 +164,8 @@ jobs:
           else
             echo "- **deployment**: skipped (no changes)" >> $GITHUB_STEP_SUMMARY
           fi
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📅 automation schedule:" >> $GITHUB_STEP_SUMMARY
+          echo "- **weekly**: new artist verification (unverified artists)" >> $GITHUB_STEP_SUMMARY
+          echo "- **monthly**: failed artist recheck (previously failed artists)" >> $GITHUB_STEP_SUMMARY

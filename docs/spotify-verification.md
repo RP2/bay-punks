@@ -53,14 +53,23 @@ Found incorrect artist data? You can help improve accuracy by:
 3. **Run Verification:**
 
    ```bash
-   # verify unverified artists only (recommended for regular use)
-   node scripts/verify-spotify-artists.js
+   # verify new artists only (recommended for regular use)
+   node scripts/spotify-verify.js --new
 
    # test with a small number of artists first
-   node scripts/verify-spotify-artists.js --limit 10
+   node scripts/spotify-verify.js --new --limit 10
 
-   # verify all artists (force recheck)
-   node scripts/verify-spotify-artists.js --force --all
+   # recheck previously failed artists
+   node scripts/spotify-verify.js --failed --limit 50
+
+   # re-evaluate all previously verified artists with current stricter logic
+   node scripts/spotify-verify.js --partial
+
+   # verify all unverified artists (new + failed)
+   node scripts/spotify-verify.js --all
+
+   # force recheck all artists (use sparingly)
+   node scripts/spotify-verify.js --force
    ```
 
 ## How It Works
@@ -92,39 +101,105 @@ The verification script uses a two-step matching process:
 - If only `searchUrl` exists: Shows "Search" link that opens Spotify search
 - The link text indicates whether it's a verified profile or a search
 
-### Rate Limiting
+### Rate Limiting & Performance
 
-The script includes built-in rate limiting:
+The script includes built-in optimizations:
 
-- 100ms delay between individual requests
-- 1000ms delay between batches
-- Automatic retry logic for rate limit responses
-- Processes artists in batches of 10
+- **Faster processing**: 50ms delay between requests (vs. 100ms previously)
+- **Larger batches**: Processes 20 artists per batch (vs. 10 previously)
+- **Shorter batch delays**: 200ms delay between batches (vs. 500ms previously)
+- **Automatic retry logic**: Handles rate limit responses intelligently
+- **Incremental saves**: Data saved after each batch to prevent loss
+
+### Verification Modes
+
+#### **--new** (Default)
+
+Verifies only artists that have never been checked against Spotify.
+
+#### **--failed**
+
+Rechecks artists that previously failed verification (network errors, API issues).
+
+#### **--partial**
+
+Re-evaluates all previously verified artists using the current matching logic. This is useful when:
+
+- The matching algorithm has been improved
+- You want to upgrade partial matches to exact matches
+- You want to remove false positives with stricter criteria
+
+**Current Status**: As of July 7, 2025, all bad partial matches have been cleaned up and converted to "not found" status. The `--partial` mode is properly implemented but currently has no artists to process. Future partial matches (if any) will use the improved conservative matching logic.
+
+#### **--all**
+
+Combines `--new` and `--failed` modes to verify all unverified artists.
+
+#### **--force**
+
+Forces re-verification of all artists, including those already successfully verified. Use sparingly.
 
 ## Commands
 
 ```bash
-# Basic usage - verify unverified artists
-node scripts/verify-spotify-artists.js
+# Basic usage - verify new artists only (default)
+node scripts/spotify-verify.js --new
 
 # Test with limited artists
-node scripts/verify-spotify-artists.js --limit 10
+node scripts/spotify-verify.js --new --limit 10
 
-# Force recheck all artists
-node scripts/verify-spotify-artists.js --force --all
+# Recheck previously failed artists
+node scripts/spotify-verify.js --failed --limit 50
 
-# Quiet mode (minimal output)
-node scripts/verify-spotify-artists.js --quiet
+# Re-evaluate all previously verified artists with current stricter logic
+node scripts/spotify-verify.js --partial
+
+# Verify all unverified artists (new + failed)
+node scripts/spotify-verify.js --all
+
+# Force recheck all artists (use sparingly)
+node scripts/spotify-verify.js --force
+
+# Run quietly with minimal output
+node scripts/spotify-verify.js --new --quiet
 
 # Help
-node scripts/verify-spotify-artists.js --help
+node scripts/spotify-verify.js --help
 ```
+
+## Data Safety & Backup System
+
+The script includes robust data protection features:
+
+### **Automatic Backup**
+
+- **Single backup**: Creates one backup at the start of each run
+- **Backup filename**: `src/data/artists.backup.YYYY-MM-DD-HH-MM-SS.json`
+- **No backup spam**: Only one backup per script execution
+
+### **Incremental Saving**
+
+- **Progress protection**: Saves data after each batch (every 20 artists)
+- **Crash protection**: Progress is never lost due to interruptions
+- **Final save**: Complete save at the end of successful runs
+
+### **Graceful Shutdown**
+
+- **Ctrl+C handling**: Pressing Ctrl+C triggers an emergency save
+- **Signal handling**: Responds to SIGINT and SIGTERM for clean exits
+- **No data loss**: Even forced shutdowns preserve all progress
+
+### **Data Integrity**
+
+- **Conservative approach**: Script never modifies artist names
+- **Verification only**: Only adds Spotify metadata to existing artists
+- **Original preservation**: `originalScrapedName` field always preserved
 
 ## Data Processing Workflow
 
 1. **Scrape concerts** → `node scripts/scrape-concerts.js`
 2. **Process databases** → `node scripts/process-databases.js`
-3. **Verify Spotify artists** → `node scripts/verify-spotify-artists.js`
+3. **Verify new Spotify artists** → `node scripts/spotify-verify.js --new`
 
 The verification step can be run independently and will only process new/unverified artists by default.
 
@@ -142,16 +217,33 @@ Failed verifications are marked in the data for future retry attempts.
 
 ## Recent Improvements: ✅ COMPLETED (July 2025)
 
-### 🎵 **Spotify Verification Optimization**
+### 🧹 **False Positive Cleanup (July 7, 2025)**
 
-- **Relaxed validation thresholds** for better local artist detection
-- **Popularity threshold**: 10 → 1 (more inclusive for small artists)
-- **Followers threshold**: 500 → 50 (allows emerging artists)
-- **Success rate improved to 85.1%** (2,477/2,909 artists verified)
-- **More local artists"** now properly verified and linked
+- **Bad partial matches removed**: All false positive partial matches converted to "not found"
+- **Partial matching disabled**: Removed partial matching entirely due to false positives
+- **Exact matches only**: Now only creates high-confidence exact matches
+- **Data quality restored**: No more incorrect artist-to-Spotify mappings
+- **Conservative verification**: When in doubt, marks as "not found" rather than false positive
+
+### 🎯 **Exact Matching Only**
+
+- **Improved exact matching**: Handles "The" prefix/suffix variations intelligently
+- **Partial matching disabled**: Removed due to too many false matches ("Tina!!!" → "Bibi und Tina")
+- **Conservative approach**: Only creates matches with high confidence
+- **Future enhancement**: Could implement edit distance or word overlap matching
+- **Quality assurance**: No more wrong Spotify artist links
+
+### 🛡️ **Data Safety Enhancements**
+
+- **Smart backup system**: Creates backup at start, removes on successful completion
+- **Backup retention**: Backup files only remain if script crashes (for debugging)
+- **Incremental saves**: Progress saved after each batch to prevent data loss
+- **Graceful shutdown**: Ctrl+C handling with emergency save functionality
+- **Name preservation**: Script never modifies original scraped artist names
 
 ### 📁 **Scripts Streamlined**
 
-- Moved redundant scripts to `scripts/backup/` folder
-- Only essential automation scripts remain active
-- Full documentation preserved for backup scripts
+- **Unified verification**: Single `spotify-verify.js` script handles all verification modes
+- **Cleaned up partials**: Bad historical matches removed from data
+- **Backup scripts**: Moved redundant scripts to `scripts/backup/` folder
+- **Active automation**: Only essential scripts remain in main workflow

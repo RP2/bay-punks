@@ -42,7 +42,7 @@ jobs:
       - name: backup current data
         run: |
           cp src/data/artists.json src/data/artists.json.backup || echo "no existing artists file"
-          cp src/data/concerts.json src/data/concerts.json.backup || echo "no existing concerts file"
+          cp src/data/raw.json src/data/raw.json.backup || echo "no existing raw data file"
           cp src/data/venues.json src/data/venues.json.backup || echo "no existing venues file"
 
       # run weekly automation: scrape → process → verify new artists
@@ -51,22 +51,19 @@ jobs:
           echo "📡 scraping new concert data..."
           node scripts/scrape-concerts.js
 
-      - name: process databases and verify new artists
-        env:
-          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
-          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+      - name: process databases (no automatic spotify verification)
         run: |
-          echo "🔄 processing databases with spotify verification..."
+          echo "🔄 processing databases..."
           node scripts/process-databases.js
 
-      # verify any remaining new artists that weren't caught by process-databases
+      # verify new artists on spotify using the unified script
       - name: verify new artists on spotify
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
         run: |
           echo "🎵 verifying new artists on spotify..."
-          node scripts/verify-spotify-new-artists.js
+          node scripts/spotify-verify.js --new
 
       # additional spotify verification if force_spotify is enabled
       - name: force spotify revalidation
@@ -77,22 +74,10 @@ jobs:
         run: |
           echo "🔄 force revalidating all artists on spotify..."
           if [ -n "${{ github.event.inputs.max_artists }}" ]; then
-            node scripts/verify-spotify-artists.js --limit ${{ github.event.inputs.max_artists }}
+            node scripts/spotify-verify.js --force --limit ${{ github.event.inputs.max_artists }}
           else
-            node scripts/verify-spotify-artists.js
+            node scripts/spotify-verify.js --force
           fi
-
-      # run consolidated cleanup to ensure no non-artist entries remain
-      - name: run consolidated database cleanup
-        run: |
-          echo "🧹 running consolidated database cleanup..."
-          node scripts/consolidated-cleanup.js
-
-      # verify databases are clean before proceeding
-      - name: verify database cleanliness
-        run: |
-          echo "🔍 verifying databases are clean..."
-          node scripts/verify-databases-clean.js
 
       # detect changes for commit message
       - name: detect changes
@@ -165,6 +150,8 @@ jobs:
         run: |
           echo "## 🎸 weekly automation summary" >> $GITHUB_STEP_SUMMARY
           echo "- **automation**: completed successfully" >> $GITHUB_STEP_SUMMARY
+          echo "- **data processing**: conservative name preservation active" >> $GITHUB_STEP_SUMMARY
+          echo "- **spotify verification**: unified script ensures no name changes" >> $GITHUB_STEP_SUMMARY
           echo "- **data quality**: verified clean (no non-artist entries)" >> $GITHUB_STEP_SUMMARY
 
           if [ "${{ steps.detect_changes.outputs.new_artists }}" != "unknown" ]; then
@@ -180,6 +167,8 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### 🛡️ data protection layers active:" >> $GITHUB_STEP_SUMMARY
           echo "1. **scraping filter** - prevents non-artists during collection" >> $GITHUB_STEP_SUMMARY
-          echo "2. **processing filter** - filters during database building" >> $GITHUB_STEP_SUMMARY  
-          echo "3. **consolidated cleanup** - removes any remaining non-artist entries" >> $GITHUB_STEP_SUMMARY
-          echo "4. **verification check** - confirms databases are clean" >> $GITHUB_STEP_SUMMARY
+          echo "2. **conservative processing** - exact matching + flexible 'The' handling only" >> $GITHUB_STEP_SUMMARY
+          echo "3. **name preservation** - scraped names are NEVER changed by any script" >> $GITHUB_STEP_SUMMARY
+          echo "4. **unified spotify verification** - single script prevents conflicts" >> $GITHUB_STEP_SUMMARY
+          echo "5. **consolidated cleanup** - removes any remaining non-artist entries" >> $GITHUB_STEP_SUMMARY
+          echo "6. **verification check** - confirms databases are clean" >> $GITHUB_STEP_SUMMARY

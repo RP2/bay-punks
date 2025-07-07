@@ -437,11 +437,8 @@ async function verifyArtistsIncremental(options = {}) {
             );
 
             if (spotifyData) {
-              // store the original name before updating
-              const originalName = originalArtist.name;
-
-              // update artist name to the official spotify name
-              originalArtist.name = spotifyData.name;
+              // NEVER update artist name - preserve scraped name as per conservative policy
+              // Only update spotify verification data
               originalArtist.spotifyUrl = spotifyData.spotifyUrl;
               originalArtist.spotifyVerified = true;
               originalArtist.spotifyData = {
@@ -451,7 +448,8 @@ async function verifyArtistsIncremental(options = {}) {
                 genres: spotifyData.genres,
                 matchType: spotifyData.matchType,
                 verifiedAt: new Date().toISOString(),
-                originalScrapedName: originalName, // keep track of original scraped name
+                scrapedName: originalArtist.name, // preserve the scraped name
+                spotifyName: spotifyData.name, // store spotify's name separately
               };
 
               verified++;
