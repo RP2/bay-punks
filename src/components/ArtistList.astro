@@ -56,14 +56,6 @@ function sortArtists(artistList: any[], sortKey: string) {
         return b.name.localeCompare(a.name, undefined, { sensitivity: "base" });
       });
 
-    case "show-count":
-      return artistsCopy.sort((a, b) => {
-        if (a.showCount !== b.showCount) {
-          return b.showCount - a.showCount;
-        }
-        return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
-      });
-
     case "next-show":
       return artistsCopy.sort((a, b) => {
         const nextShowA = getNextShowForArtist(a.name);
@@ -93,7 +85,6 @@ const initialSortedArtists = sortArtists(artists.artists, "next-show");
 const artistDataForClient = initialSortedArtists.map((artist) => ({
   id: artist.id,
   name: artist.name,
-  showCount: artist.showCount,
   lastSeen: artist.lastSeen,
   spotifyUrl: artist.spotifyUrl,
   searchUrl: artist.searchUrl,
@@ -139,10 +130,6 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
                   >
                     {artist.name}
                   </a>
-                  <span class="text-muted-foreground text-xs">
-                    {artist.showCount}{" "}
-                    {artist.showCount === 1 ? "show" : "shows"}
-                  </span>
                 </div>
 
                 {nextShow && (
@@ -243,16 +230,6 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
             });
           });
 
-        case "show-count":
-          return artistsCopy.sort((a, b) => {
-            if (a.showCount !== b.showCount) {
-              return b.showCount - a.showCount;
-            }
-            return a.name.localeCompare(b.name, undefined, {
-              sensitivity: "base",
-            });
-          });
-
         case "next-show":
           return artistsCopy.sort((a, b) => {
             // artists with no upcoming shows go to the end
@@ -286,9 +263,6 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
                   <a href="/artist/${artist.id}/" class="text-primary font-semibold hover:underline">
                     ${artist.name}
                   </a>
-                  <span class="text-muted-foreground text-xs">
-                    ${artist.showCount} ${artist.showCount === 1 ? "show" : "shows"}
-                  </span>
                 </div>
 
                 ${

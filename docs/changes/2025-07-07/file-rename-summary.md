@@ -45,7 +45,7 @@ Updated all references from `concerts.json` to `raw.json` to better reflect that
 
 ## Data Flow After Update
 
-```
+```text
 🕷️  scrape-concerts.js
      ↓
 📄  src/data/raw.json (raw scraped data)

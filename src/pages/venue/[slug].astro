@@ -87,12 +87,6 @@ const pastShows = venueShows
               </dt>
               <dd class="text-lg">{venue.location || "Bay Area"}</dd>
             </div>
-            <div>
-              <dt class="text-muted-foreground text-sm font-medium">
-                Total Shows
-              </dt>
-              <dd class="text-lg">{venue.showCount}</dd>
-            </div>
             {
               venue.searchUrl && (
                 <div>
@@ -190,7 +184,11 @@ const pastShows = venueShows
                 )}
               </div>
             ) : (
-              <p class="text-muted-foreground">No recent shows found.</p>
+              <p class="text-muted-foreground text-sm">
+                While there may be nothing here now, that doesn't mean there
+                won't be in the future. Past shows are cleared weekly when new
+                data is processed.
+              </p>
             )
           }
         </CardContent>

@@ -376,7 +376,7 @@ async function spotifyVerify(options = {}) {
   // Graceful shutdown handler
   const gracefulShutdown = async (signal) => {
     console.log(
-      `\n⚠️  received ${signal}, saving progress and shutting down...`,
+      `\n ⚠️ received ${signal}, saving progress and shutting down...`,
     );
     if (artistsData) {
       console.log(`💾 emergency save...`);

@@ -168,10 +168,6 @@ function findFuzzyMatch(map, normalizedText, type = "artist") {
 
 // helper to merge artist data when combining duplicates
 function mergeArtistData(existing, newData) {
-  // handle case where existing artist has no current shows (from pre-population)
-  const existingShowCount = existing.showCount || 0;
-  const newShowCount = newData.showCount || 0;
-
   // calculate date ranges, handling null values from pre-population
   let firstSeen = newData.firstSeen;
   let lastSeen = newData.lastSeen;
@@ -208,8 +204,6 @@ function mergeArtistData(existing, newData) {
     // update date ranges
     firstSeen: firstSeen,
     lastSeen: lastSeen,
-    // combine counts
-    showCount: existingShowCount + newShowCount,
     // merge venues and aliases
     venues: new Set([...existing.venues, ...newData.venues]),
     aliases: new Set([...existing.aliases, ...newData.aliases]),
@@ -278,10 +272,6 @@ function parseVenueLocation(venueName) {
 
 // helper to merge venue data when combining duplicates
 function mergeVenueData(existing, newData) {
-  // handle case where existing venue has no current shows (from pre-population)
-  const existingShowCount = existing.showCount || 0;
-  const newShowCount = newData.showCount || 0;
-
   // calculate date ranges, handling null values from pre-population
   let firstSeen = newData.firstSeen;
   let lastSeen = newData.lastSeen;
@@ -306,8 +296,6 @@ function mergeVenueData(existing, newData) {
     // update date ranges
     firstSeen: firstSeen,
     lastSeen: lastSeen,
-    // combine counts
-    showCount: existingShowCount + newShowCount,
     // merge location fields (prefer non-null values)
     location: existing.location || newData.location,
     address: existing.address || newData.address,
@@ -567,7 +555,6 @@ async function processDatabases() {
       venues: new Set(artist.venues || []),
       aliases: new Set(artist.aliases || []),
       // reset these to be recalculated from current data
-      showCount: 0,
       firstSeen: null,
       lastSeen: null,
     });
@@ -580,7 +567,6 @@ async function processDatabases() {
       ...venue,
       aliases: new Set(venue.aliases || []),
       // reset these to be recalculated from current data
-      showCount: 0,
       firstSeen: null,
       lastSeen: null,
     });
@@ -623,7 +609,6 @@ async function processDatabases() {
             searchUrl: event.venue.href,
             firstSeen: show.normalizedDate,
             lastSeen: show.normalizedDate,
-            showCount: 1,
             location: locationInfo.address || locationInfo.city,
             address: locationInfo.address,
             city: locationInfo.city,
@@ -683,7 +668,6 @@ async function processDatabases() {
             searchUrl: event.venue.href,
             firstSeen: show.normalizedDate,
             lastSeen: show.normalizedDate,
-            showCount: 1,
             location: locationInfo.address || locationInfo.city,
             address: locationInfo.address,
             city: locationInfo.city,
@@ -738,7 +722,6 @@ async function processDatabases() {
               spotifyData: existingSpotifyData?.spotifyData || null,
               firstSeen: show.normalizedDate,
               lastSeen: show.normalizedDate,
-              showCount: 1,
               venues: new Set([event.venue?.text]),
               aliases: new Set([band.text]),
             };
@@ -809,7 +792,6 @@ async function processDatabases() {
               ...spotifyData,
               firstSeen: show.normalizedDate,
               lastSeen: show.normalizedDate,
-              showCount: 1,
               venues: new Set([event.venue?.text]),
               aliases: aliases,
             });
@@ -832,9 +814,9 @@ async function processDatabases() {
     aliases: Array.from(venue.aliases).filter(Boolean),
   }));
 
-  // sort arrays by show count (most frequent first)
-  artistsArray.sort((a, b) => b.showCount - a.showCount);
-  venuesArray.sort((a, b) => b.showCount - a.showCount);
+  // sort arrays alphabetically by name
+  artistsArray.sort((a, b) => a.name.localeCompare(b.name));
+  venuesArray.sort((a, b) => a.name.localeCompare(b.name));
 
   // preserve existing metadata but remove automatic spotify verification
   // spotify verification is now handled separately by spotify-verify.js

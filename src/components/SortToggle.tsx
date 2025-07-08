@@ -96,11 +96,6 @@ export function VenueSortToggle({ className = "" }: { className?: string }) {
       description: "Reverse alphabetical order",
     },
     {
-      key: "show-count",
-      label: "Most Shows",
-      description: "Venues with most shows first",
-    },
-    {
       key: "next-show",
       label: "Next Show",
       description: "Venues with upcoming shows first",
@@ -137,11 +132,6 @@ export function ArtistSortToggle({ className = "" }: { className?: string }) {
       key: "reverse-alphabetical",
       label: "Z to A",
       description: "Reverse alphabetical order",
-    },
-    {
-      key: "show-count",
-      label: "Most Shows",
-      description: "Artists with most shows first",
     },
     {
       key: "next-show",

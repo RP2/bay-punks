@@ -80,9 +80,6 @@ function sortVenues(venueList: any[], sortKey: string) {
         return nameB.localeCompare(nameA, undefined, { sensitivity: "base" });
       });
 
-    case "show-count":
-      return venuesCopy.sort((a, b) => (b.showCount || 0) - (a.showCount || 0));
-
     case "next-show":
       return venuesCopy.sort((a, b) => {
         const nextShowA = getNextShowForVenue(a.name);
@@ -149,7 +146,6 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
   name: venue.name,
   displayName: getBestVenueName(venue),
   locationInfo: getLocationInfo(venue),
-  showCount: venue.showCount,
   nextShow: getNextShowForVenue(venue.name),
 }));
 ---
@@ -196,11 +192,7 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
                   >
                     {displayName}
                   </a>
-                  <span class="text-muted-foreground text-xs">
-                    {venue.showCount} shows
-                  </span>
                 </div>
-
                 {locationInfo && (
                   <div class="text-muted-foreground text-sm">
                     📍 {locationInfo}
@@ -289,11 +281,6 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
             });
           });
 
-        case "show-count":
-          return venuesCopy.sort(
-            (a, b) => (b.showCount || 0) - (a.showCount || 0),
-          );
-
         case "next-show":
           return venuesCopy.sort((a, b) => {
             // venues with no upcoming shows go to the end
@@ -327,9 +314,6 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
                   <a href="/venue/${venue.id}/" class="text-primary font-semibold hover:underline">
                     ${venue.displayName}
                   </a>
-                  <span class="text-muted-foreground text-xs">
-                    ${venue.showCount} shows
-                  </span>
                 </div>
 
                 ${
