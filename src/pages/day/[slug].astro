@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import concerts from "../../data/raw.json";
+import concerts from "../../data/calendar.json";
 import venues from "../../data/venues.json";
 import artists from "../../data/artists.json";
 
@@ -36,16 +36,30 @@ function normalizeText(text: string): string {
 
 // helper to find venue ID from venue name
 function findVenueId(venueName: string): string | null {
-  const venue = venues.venues.find(
-    (v) => normalizeText(v.name) === normalizeText(venueName),
-  );
+  const normalized = normalizeText(venueName);
+
+  // First try exact match with venue name
+  let venue = venues.venues.find((v) => normalizeText(v.name) === normalized);
+
+  // If no match found, check aliases
+  if (!venue) {
+    venue = venues.venues.find(
+      (v) =>
+        v.aliases &&
+        v.aliases.some((alias) => normalizeText(alias) === normalized),
+    );
+  }
+
   return venue?.id || null;
 }
 
 // helper to find artist ID from artist name
 function findArtistId(artistName: string): string | null {
-  const artist = artists.artists.find(
-    (a) => normalizeText(a.name) === normalizeText(artistName),
+  const normalized = normalizeText(artistName);
+
+  // First try exact match with artist name
+  let artist = artists.artists.find(
+    (a) => normalizeText(a.name) === normalized,
   );
   return artist?.id || null;
 }

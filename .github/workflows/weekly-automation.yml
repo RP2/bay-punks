@@ -79,6 +79,12 @@ jobs:
             node scripts/spotify-verify.js --force
           fi
 
+      # generate calendar.json from processed data
+      - name: generate calendar
+        run: |
+          echo "📅 generating calendar.json from processed data..."
+          node scripts/generate-calendar.js
+
       # detect changes for commit message
       - name: detect changes
         id: detect_changes

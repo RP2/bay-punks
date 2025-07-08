@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import venues from "../../data/venues.json";
-import concerts from "../../data/raw.json";
+import concerts from "../../data/calendar.json";
 
 // generate all venue pages at build time
 export async function getStaticPaths() {
@@ -20,7 +20,9 @@ const { venue } = Astro.props;
 const venueShows = concerts.shows.flatMap((show) =>
   show.events
     .filter(
-      (event) => normalizeText(event.venue.text) === normalizeText(venue.name),
+      (event) =>
+        event.venue.id === venue.id ||
+        normalizeText(event.venue.text) === normalizeText(venue.name),
     )
     .map((event) => ({
       ...event,
@@ -85,7 +87,13 @@ const pastShows = venueShows
               <dt class="text-muted-foreground text-sm font-medium">
                 Location
               </dt>
-              <dd class="text-lg">{venue.location || "Bay Area"}</dd>
+              <dd class="text-lg">
+                {
+                  venue.address && venue.city
+                    ? `${venue.address}, ${venue.city}`
+                    : venue.city || venue.address || "Bay Area"
+                }
+              </dd>
             </div>
             {
               venue.searchUrl && (

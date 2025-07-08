@@ -3,9 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ArtistSortToggle } from "./SortToggle";
 import artists from "../data/artists.json";
-import concerts from "../data/raw.json";
+import concerts from "../data/calendar.json";
 
-function getNextShowForArtist(artistName: string) {
+function getNextShowForArtist(artistName: string, artistId?: string) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -14,7 +14,9 @@ function getNextShowForArtist(artistName: string) {
       show.events
         .filter((event) =>
           event.bands.some(
-            (band) => normalizeText(band.text) === normalizeText(artistName),
+            (band) =>
+              (artistId && band.id === artistId) ||
+              normalizeText(band.text) === normalizeText(artistName),
           ),
         )
         .map((event) => ({
@@ -58,8 +60,8 @@ function sortArtists(artistList: any[], sortKey: string) {
 
     case "next-show":
       return artistsCopy.sort((a, b) => {
-        const nextShowA = getNextShowForArtist(a.name);
-        const nextShowB = getNextShowForArtist(b.name);
+        const nextShowA = getNextShowForArtist(a.name, a.id);
+        const nextShowB = getNextShowForArtist(b.name, b.id);
 
         // artists with no upcoming shows go to the end
         if (!nextShowA && !nextShowB) return 0;
@@ -88,7 +90,7 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
   lastSeen: artist.lastSeen,
   spotifyUrl: artist.spotifyUrl,
   searchUrl: artist.searchUrl,
-  nextShow: getNextShowForArtist(artist.name),
+  nextShow: getNextShowForArtist(artist.name, artist.id),
 }));
 ---
 
@@ -115,7 +117,7 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
   >
     {
       initialSortedArtists.map((artist) => {
-        const nextShow = getNextShowForArtist(artist.name);
+        const nextShow = getNextShowForArtist(artist.name, artist.id);
         return (
           <Card
             className="artist-item h-full"

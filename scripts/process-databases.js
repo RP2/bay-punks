@@ -137,26 +137,89 @@ function findFuzzyMatch(map, normalizedText, type = "artist") {
 
     // no match found for artists (only exact matches allowed)
     return null;
-  }
-
-  // for venues, we can still do some fuzzy matching but with a high threshold
+  } // for venues, we can still do some fuzzy matching but with a high threshold
   if (type === "venue") {
     let bestMatch = null;
     let bestScore = 0;
+    let debugInfo = null;
+
+    // First, try to find an exact match after normalizing venue name to remove age restrictions, cities, etc.
+    const normalizedVenueName = normalizeVenueName(normalizedText);
+
+    // Skip very short normalized names (probably not useful for deduplication)
+    if (normalizedVenueName.length < 4) {
+      // For very short names, require higher similarity
+      bestScore = 0.95;
+    }
 
     for (const [key, value] of map.entries()) {
+      // Use the pre-calculated normalized name if available, otherwise calculate it
+      const normalizedExistingVenue =
+        value.normalizedName || normalizeVenueName(value.name);
+
+      // If we find an exact match after normalization, return it immediately
+      // This is the primary way we detect duplicates with city/age restriction differences
+      if (
+        normalizedExistingVenue === normalizedVenueName &&
+        normalizedVenueName.length >= 4
+      ) {
+        console.log(
+          `Normalized venue match found: "${normalizedText}" matches "${value.name}" (normalized: "${normalizedVenueName}")`,
+        );
+        return { key, isSpellingCorrection: false };
+      }
+
+      // Also check all aliases with normalization
+      if (value.aliases && value.aliases.size > 0) {
+        for (const alias of value.aliases) {
+          const normalizedAlias = normalizeVenueName(alias);
+          if (
+            normalizedAlias === normalizedVenueName &&
+            normalizedVenueName.length >= 4
+          ) {
+            console.log(
+              `Normalized venue alias match found: "${normalizedText}" matches alias "${alias}" of "${value.name}"`,
+            );
+            return { key, isSpellingCorrection: false };
+          }
+        }
+      }
+
+      // Address-based matching for venues with addresses
+      if (
+        value.address &&
+        normalizedText.includes(normalizeText(value.address))
+      ) {
+        const similarity = 0.95; // High confidence for address matches
+        if (similarity > bestScore) {
+          bestScore = similarity;
+          bestMatch = key;
+          debugInfo = `address match: ${value.address}`;
+        }
+      }
+
+      // Fall back to traditional fuzzy matching with Levenshtein distance
       const normalizedKey = normalizeText(value.name);
 
+      // Only do fuzzy matching if the normalized names are different
       if (normalizedKey !== normalizedText) {
         const distance = levenshteinDistance(normalizedKey, normalizedText);
         const maxLength = Math.max(normalizedKey.length, normalizedText.length);
         const similarity = 1 - distance / maxLength;
 
-        if (similarity >= 0.9 && similarity > bestScore) {
+        if (similarity >= 0.85 && similarity > bestScore) {
+          // Lower threshold for better matching
           bestScore = similarity;
           bestMatch = key;
+          debugInfo = `fuzzy match: similarity ${similarity.toFixed(2)}`;
         }
       }
+    }
+
+    if (bestMatch && debugInfo) {
+      console.log(
+        `Fuzzy venue match: "${normalizedText}" -> "${map.get(bestMatch).name}" (${debugInfo})`,
+      );
     }
 
     return bestMatch ? { key: bestMatch, isSpellingCorrection: false } : null;
@@ -212,15 +275,25 @@ function mergeArtistData(existing, newData) {
 
 // helper to extract and format venue location information
 function parseVenueLocation(venueName) {
-  // parse the venue name to extract address and city
-  const parts = venueName.split(",").map((part) => part.trim());
+  // Clean up the venue name by removing age restrictions before parsing
+  let cleanedVenueName = venueName;
+
+  // Remove age restriction patterns (16+, 18+, 21+, 16-, 18-, etc.)
+  const ageRestrictionMatch = cleanedVenueName.match(/(\d+[\+\-])(\s|$)/);
+  if (ageRestrictionMatch) {
+    cleanedVenueName = cleanedVenueName
+      .replace(ageRestrictionMatch[0], "")
+      .trim();
+  }
+
+  // parse the cleaned venue name to extract address and city
+  const parts = cleanedVenueName.split(",").map((part) => part.trim());
 
   if (parts.length >= 3) {
     // format: [Venue Name], [Address], [City]
     return {
       address: parts[1],
-      city: parts[2],
-      displayLocation: `${parts[1]}, ${parts[2]}`,
+      city: expandCityAbbreviations(parts[2]),
     };
   } else if (parts.length === 2) {
     // format: [Venue Name/Address], [City] or [Venue Name], [Address]
@@ -243,22 +316,19 @@ function parseVenueLocation(venueName) {
       // first part is address, second part is city (e.g., "924 Gilman Street, Berkeley")
       return {
         address: firstPart,
-        city: secondPart,
-        displayLocation: `${firstPart}, ${secondPart}`,
+        city: expandCityAbbreviations(secondPart),
       };
     } else if (secondPartIsAddress) {
       // second part is address (e.g., "Venue Name, 123 Main Street")
       return {
         address: secondPart,
         city: null,
-        displayLocation: secondPart,
       };
     } else {
       // neither part looks like an address, assume second part is city
       return {
         address: null,
-        city: secondPart,
-        displayLocation: secondPart,
+        city: expandCityAbbreviations(secondPart),
       };
     }
   }
@@ -266,8 +336,23 @@ function parseVenueLocation(venueName) {
   return {
     address: null,
     city: null,
-    displayLocation: null,
   };
+}
+
+// helper to expand city abbreviations for display
+function expandCityAbbreviations(locationText) {
+  if (!locationText) return locationText;
+
+  return locationText
+    .replace(/S\.F\.?/gi, "San Francisco")
+    .replace(/\bSF\b/gi, "San Francisco")
+    .replace(/\bOakland\b/gi, "Oakland")
+    .replace(/\bBerkeley\b/gi, "Berkeley")
+    .replace(/\bSan Jose\b/gi, "San Jose")
+    .replace(/\bMountain View\b/gi, "Mountain View")
+    .replace(/\bPalo Alto\b/gi, "Palo Alto")
+    .replace(/\bSanta Cruz\b/gi, "Santa Cruz")
+    .replace(/\bSanta Rosa\b/gi, "Santa Rosa");
 }
 
 // helper to merge venue data when combining duplicates
@@ -287,20 +372,24 @@ function mergeVenueData(existing, newData) {
         : newData.lastSeen;
   }
 
+  // Ensure we have a normalized name
+  const normalizedName =
+    existing.normalizedName || normalizeVenueName(existing.name);
+
   return {
     ...existing,
     // keep the most recent name if different
     name: existing.name,
+    // preserve or add normalized name for better matching
+    normalizedName: normalizedName,
     // merge search urls (keep existing if present)
     searchUrl: existing.searchUrl || newData.searchUrl,
     // update date ranges
     firstSeen: firstSeen,
     lastSeen: lastSeen,
-    // merge location fields (prefer non-null values)
-    location: existing.location || newData.location,
-    address: existing.address || newData.address,
-    city: existing.city || newData.city,
-    displayLocation: existing.displayLocation || newData.displayLocation,
+    // merge location fields (prefer non-null values, but allow new data to override null existing data)
+    address: newData.address || existing.address,
+    city: newData.city || existing.city,
     // merge aliases
     aliases: new Set([...existing.aliases, ...newData.aliases]),
   };
@@ -456,6 +545,61 @@ function isVenueAdministrative(artist, venues = null) {
   return false;
 }
 
+// helper to normalize venue names by removing age restrictions and other common suffixes
+function normalizeVenueName(text) {
+  // First do basic text normalization
+  let normalized = normalizeText(text);
+
+  // Handle various abbreviations for street, avenue, etc.
+  normalized = normalized
+    .replace(/\bst\b|\bstreet\b/g, "st")
+    .replace(/\bave\b|\bavenue\b/g, "ave")
+    .replace(/\brd\b|\broad\b/g, "rd")
+    .replace(/\bblvd\b|\bboulevard\b/g, "blvd")
+    .replace(/\bdr\b|\bdrive\b/g, "dr")
+    .replace(/\bln\b|\blane\b/g, "ln");
+
+  // Remove common age restriction patterns (16+, 18+, 21+, 16-, 18-, etc.)
+  normalized = normalized.replace(/\b\d+[\+\-](\s|$)/g, "");
+
+  // Remove 'all ages' indicator
+  normalized = normalized.replace(/\ball ages\b/g, "");
+
+  // Remove other common non-identifying suffixes
+  normalized = normalized.replace(/\bsold out\b/g, "");
+  normalized = normalized.replace(/\bpresents\b/g, "");
+
+  // Remove common city name suffixes (after comma)
+  // This is important for deduplication to work properly
+  normalized = normalized.replace(/\s*,\s*[a-z\s\.]+$/i, "");
+
+  // Remove any trailing commas and whitespace
+  normalized = normalized.replace(/,\s*$/, "");
+
+  return normalized.trim();
+}
+
+// Check for the specific 924 Gilman case - this venue is especially problematic
+function isSpecialCaseVenue(venueName) {
+  // Normalize the name for consistent checking
+  const normalized = normalizeText(venueName);
+
+  // Special case for 924 Gilman
+  if (normalized.includes("924") && normalized.includes("gilman")) {
+    return {
+      name: "924 Gilman Street",
+      id: "924-gilman-street-berkeley",
+      address: "924 Gilman Street",
+      city: "Berkeley",
+    };
+  }
+
+  // Add other special cases here as needed
+
+  return null;
+}
+
+// Process the concert data to extract artists and venues
 async function processDatabases() {
   // load spelling corrections first
   await loadSpellingCorrections();
@@ -563,8 +707,26 @@ async function processDatabases() {
   // pre-populate venues map with existing venues to prevent data loss
   existingVenuesData.venues.forEach((venue) => {
     const venueKey = venue.id || createSlug(venue.name);
+
+    // apply spelling correction to existing venue names for consistency
+    const correctedVenueName = applySpellingCorrection(venue.name, "venue");
+    const finalVenueName =
+      correctedVenueName !== venue.name ? correctedVenueName : venue.name;
+
+    if (correctedVenueName !== venue.name) {
+      console.log(
+        `applying spelling correction to existing venue: "${venue.name}" -> "${finalVenueName}"`,
+      );
+    }
+
+    // Create additional venue lookup with normalized name (no city, no age restrictions)
+    // This helps with more robust deduplication
+    const normalizedVenueName = normalizeVenueName(finalVenueName);
+
     venues.set(venueKey, {
       ...venue,
+      name: finalVenueName,
+      normalizedName: normalizedVenueName, // Store normalized name for better matching
       aliases: new Set(venue.aliases || []),
       // reset these to be recalculated from current data
       firstSeen: null,
@@ -584,6 +746,70 @@ async function processDatabases() {
     show.events.forEach((event) => {
       // process venue
       if (event.venue?.text) {
+        // Check for special case venues that need custom handling
+        const specialCase = isSpecialCaseVenue(event.venue.text);
+
+        if (specialCase) {
+          // Handle special case venue (like 924 Gilman)
+          console.log(
+            `Special case venue detected: "${event.venue.text}" -> "${specialCase.name}"`,
+          );
+
+          let existingVenue = null;
+          // Check if we already have this special case venue
+          for (const [key, venue] of venues.entries()) {
+            if (venue.id === specialCase.id) {
+              existingVenue = { key, venue };
+              break;
+            }
+          }
+
+          if (existingVenue) {
+            // Update the existing venue
+            const merged = mergeVenueData(existingVenue.venue, {
+              name: specialCase.name,
+              searchUrl: event.venue.href,
+              firstSeen: show.normalizedDate,
+              lastSeen: show.normalizedDate,
+              address: specialCase.address,
+              city: specialCase.city,
+              aliases: new Set([event.venue.text]),
+            });
+
+            // Add the current name as an alias if different
+            if (
+              event.venue.text !== specialCase.name &&
+              !merged.aliases.has(event.venue.text)
+            ) {
+              merged.aliases.add(event.venue.text);
+            }
+
+            venues.set(existingVenue.key, merged);
+            console.log(`Updated special case venue: "${specialCase.name}"`);
+            // Skip regular venue processing by returning from this event
+            return;
+          } else {
+            // Create a new special case venue
+            const aliases = new Set([specialCase.name, event.venue.text]);
+
+            venues.set(specialCase.id, {
+              id: specialCase.id,
+              name: specialCase.name,
+              normalizedName: normalizeVenueName(specialCase.name),
+              searchUrl: event.venue.href,
+              firstSeen: show.normalizedDate,
+              lastSeen: show.normalizedDate,
+              address: specialCase.address,
+              city: specialCase.city,
+              aliases: aliases,
+            });
+            console.log(`Created special case venue: "${specialCase.name}"`);
+            // Skip regular venue processing by returning early
+            return;
+          }
+        }
+
+        // Normal venue processing for non-special cases
         const normalizedVenue = normalizeText(event.venue.text);
         const matchResult = findFuzzyMatch(venues, normalizedVenue, "venue");
 
@@ -609,10 +835,8 @@ async function processDatabases() {
             searchUrl: event.venue.href,
             firstSeen: show.normalizedDate,
             lastSeen: show.normalizedDate,
-            location: locationInfo.address || locationInfo.city,
             address: locationInfo.address,
             city: locationInfo.city,
-            displayLocation: locationInfo.displayLocation,
             aliases: new Set([event.venue.text]),
           });
 
@@ -656,22 +880,32 @@ async function processDatabases() {
           const venueSlug = createSlug(finalVenueName);
           const aliases = new Set([finalVenueName]);
           const locationInfo = parseVenueLocation(finalVenueName);
+          const normalizedVenueName = normalizeVenueName(finalVenueName);
 
           // add original misspelling as alias if different
           if (useCorrection && event.venue.text !== finalVenueName) {
             aliases.add(event.venue.text);
           }
 
+          // Add original venue name with suffix as an alias if it's different after normalization
+          if (normalizeText(finalVenueName) !== normalizedVenueName) {
+            console.log(
+              `Adding original venue name as alias: "${finalVenueName}" (normalized: "${normalizedVenueName}")`,
+            );
+            if (!aliases.has(finalVenueName)) {
+              aliases.add(finalVenueName);
+            }
+          }
+
           venues.set(venueSlug, {
             id: venueSlug,
             name: finalVenueName,
+            normalizedName: normalizedVenueName, // Store normalized name for better matching
             searchUrl: event.venue.href,
             firstSeen: show.normalizedDate,
             lastSeen: show.normalizedDate,
-            location: locationInfo.address || locationInfo.city,
             address: locationInfo.address,
             city: locationInfo.city,
-            displayLocation: locationInfo.displayLocation,
             aliases: aliases,
           });
         }
@@ -808,11 +1042,224 @@ async function processDatabases() {
     aliases: Array.from(artist.aliases).filter(Boolean),
   }));
 
+  // Final venue deduplication check using normalized names
+  console.log("Performing final venue deduplication check...");
+  const normalizedVenueMap = new Map();
+  const venuesToRemove = new Set();
+  let finalDeduplicationCount = 0;
+
+  // Create a simple address-based lookup for detecting duplicates based on similar addresses
+  // (This helps catch cases where names differ but addresses match)
+  const addressMap = new Map();
+
+  // First, find any venues with null dates - we'll need to handle these specially
+  const venuesWithNullDates = [];
+  const venuesWithValidDates = [];
+
+  for (const [key, venue] of venues.entries()) {
+    // Add venue to proper category based on dates
+    if (venue.firstSeen === null || venue.lastSeen === null) {
+      venuesWithNullDates.push([key, venue]);
+    } else {
+      venuesWithValidDates.push([key, venue]);
+
+      // Build address-based lookup (only for venues with valid dates)
+      if (venue.address) {
+        const normalizedAddress = normalizeText(venue.address);
+        if (normalizedAddress.length > 5) {
+          // Only use meaningful addresses
+          if (!addressMap.has(normalizedAddress)) {
+            addressMap.set(normalizedAddress, []);
+          }
+          addressMap.get(normalizedAddress).push([key, venue]);
+        }
+      }
+    }
+  }
+
+  console.log(`Found ${venuesWithNullDates.length} venues with null dates`);
+
+  // First pass: process venues with valid dates and build our normalized venue map
+  for (const [key, venue] of venuesWithValidDates) {
+    const normalizedName =
+      venue.normalizedName || normalizeVenueName(venue.name);
+
+    // Skip very short normalized names (probably not useful for deduplication)
+    if (normalizedName.length < 4) {
+      normalizedVenueMap.set(key, venue); // Use key as map key to avoid collisions with short names
+      continue;
+    }
+
+    if (normalizedVenueMap.has(normalizedName)) {
+      // We found a duplicate that wasn't caught earlier
+      const existingVenue = normalizedVenueMap.get(normalizedName);
+      console.log(
+        `Final deduplication: "${venue.name}" duplicates "${existingVenue.name}" (normalized: "${normalizedName}")`,
+      );
+
+      // Merge the aliases
+      venue.aliases.forEach((alias) => existingVenue.aliases.add(alias));
+      if (!existingVenue.aliases.has(venue.name)) {
+        existingVenue.aliases.add(venue.name);
+      }
+
+      // If this venue has a city and the existing one doesn't, use this one's city
+      if (venue.city && !existingVenue.city) {
+        existingVenue.city = venue.city;
+      }
+
+      // If this venue has an address and the existing one doesn't, use this one's address
+      if (venue.address && !existingVenue.address) {
+        existingVenue.address = venue.address;
+      }
+
+      // Update date ranges
+      if (
+        venue.firstSeen &&
+        (!existingVenue.firstSeen || venue.firstSeen < existingVenue.firstSeen)
+      ) {
+        existingVenue.firstSeen = venue.firstSeen;
+      }
+
+      if (
+        venue.lastSeen &&
+        (!existingVenue.lastSeen || venue.lastSeen > existingVenue.lastSeen)
+      ) {
+        existingVenue.lastSeen = venue.lastSeen;
+      }
+
+      // Mark this venue for removal
+      venuesToRemove.add(key);
+      finalDeduplicationCount++;
+    } else {
+      // First time seeing this normalized venue name
+      normalizedVenueMap.set(normalizedName, venue);
+    }
+  }
+
+  // Second pass: Try to match venues with null dates against our normalized map
+  for (const [key, venue] of venuesWithNullDates) {
+    const normalizedName =
+      venue.normalizedName || normalizeVenueName(venue.name);
+    let matched = false;
+
+    // First try exact match with normalized name
+    if (normalizedVenueMap.has(normalizedName) && normalizedName.length >= 4) {
+      const existingVenue = normalizedVenueMap.get(normalizedName);
+      console.log(
+        `Matching null-date venue: "${venue.name}" with "${existingVenue.name}" (normalized: "${normalizedName}")`,
+      );
+
+      // Merge the aliases
+      venue.aliases.forEach((alias) => existingVenue.aliases.add(alias));
+      if (!existingVenue.aliases.has(venue.name)) {
+        existingVenue.aliases.add(venue.name);
+      }
+
+      // If this venue has a city and the existing one doesn't, use this one's city
+      if (venue.city && !existingVenue.city) {
+        existingVenue.city = venue.city;
+      }
+
+      // If this venue has an address and the existing one doesn't, use this one's address
+      if (venue.address && !existingVenue.address) {
+        existingVenue.address = venue.address;
+      }
+
+      // Don't update date ranges - the existing venue has valid dates
+
+      // Mark this venue for removal
+      venuesToRemove.add(key);
+      finalDeduplicationCount++;
+      matched = true;
+    }
+
+    // If not matched by name, try matching by address
+    if (!matched && venue.address) {
+      const normalizedAddress = normalizeText(venue.address);
+      if (normalizedAddress.length > 5 && addressMap.has(normalizedAddress)) {
+        const matchingVenues = addressMap.get(normalizedAddress);
+        if (matchingVenues.length > 0) {
+          const [matchKey, matchVenue] = matchingVenues[0]; // Use the first match
+          console.log(
+            `Address-matched null-date venue: "${venue.name}" with "${matchVenue.name}" (address: "${venue.address}")`,
+          );
+
+          // Merge the aliases
+          venue.aliases.forEach((alias) => matchVenue.aliases.add(alias));
+          if (!matchVenue.aliases.has(venue.name)) {
+            matchVenue.aliases.add(venue.name);
+          }
+
+          // Mark this venue for removal
+          venuesToRemove.add(key);
+          finalDeduplicationCount++;
+          matched = true;
+        }
+      }
+    }
+
+    // If still no match, keep this venue but try to get dates from similar venues
+    if (!matched) {
+      // For now, just keep it as is
+      // We'll fix the dates in the third pass
+    }
+  }
+
+  // Remove duplicates
+  venuesToRemove.forEach((key) => {
+    venues.delete(key);
+  });
+
+  // Final pass: try to fix any remaining null dates using fuzzy matching
+  const remainingNullDateVenues = Array.from(venues.entries()).filter(
+    ([_, venue]) => venue.firstSeen === null || venue.lastSeen === null,
+  );
+
+  if (remainingNullDateVenues.length > 0) {
+    console.log(
+      `Attempting to fix ${remainingNullDateVenues.length} venues with null dates`,
+    );
+
+    // Use a default date range if we can't match
+    const oldestDate = "2025-01-01"; // A reasonable default start date
+    const newestDate = new Date().toISOString().split("T")[0]; // Today's date
+
+    for (const [key, venue] of remainingNullDateVenues) {
+      // Fix null dates with sensible defaults
+      if (venue.firstSeen === null) {
+        venue.firstSeen = oldestDate;
+        console.log(
+          `Fixed null firstSeen for "${venue.name}" with default date ${oldestDate}`,
+        );
+      }
+
+      if (venue.lastSeen === null) {
+        venue.lastSeen = newestDate;
+        console.log(
+          `Fixed null lastSeen for "${venue.name}" with default date ${newestDate}`,
+        );
+      }
+    }
+  }
+
+  if (finalDeduplicationCount > 0) {
+    console.log(
+      `Final deduplication removed ${finalDeduplicationCount} duplicate venues`,
+    );
+  } else {
+    console.log("No additional duplicates found in final check");
+  }
+
   // convert venues Map to array
-  const venuesArray = Array.from(venues.values()).map((venue) => ({
-    ...venue,
-    aliases: Array.from(venue.aliases).filter(Boolean),
-  }));
+  const venuesArray = Array.from(venues.values()).map((venue) => {
+    // Remove normalizedName from final output as it's just for processing
+    const { normalizedName, ...venueWithoutNormalized } = venue;
+    return {
+      ...venueWithoutNormalized,
+      aliases: Array.from(venue.aliases).filter(Boolean),
+    };
+  });
 
   // sort arrays alphabetically by name
   artistsArray.sort((a, b) => a.name.localeCompare(b.name));

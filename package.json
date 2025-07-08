@@ -10,6 +10,7 @@
     "format": "prettier . --write",
     "scrape": "node ./scripts/scrape-concerts.js",
     "process-db": "node ./scripts/process-databases.js",
+    "generate-calendar": "node ./scripts/generate-calendar.js",
     "verify-spotify": "node ./scripts/spotify-verify.js",
     "verify-spotify-new": "node ./scripts/spotify-verify.js --new",
     "verify-spotify-failed": "node ./scripts/spotify-verify.js --failed",

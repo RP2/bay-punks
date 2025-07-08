@@ -1,132 +1,6 @@
 {
   "shows": [
     {
-      "day": "Sun Jul 6",
-      "normalizedDate": "2025-07-06",
-      "events": [
-        {
-          "venue": {
-            "text": "Alameda County Fair, Pleasanton",
-            "href": "https://www.google.com/search?q=Alameda%20County%20Fair%2C%20Pleasanton"
-          },
-          "bands": [
-            {
-              "text": "La Original Banda El Limon",
-              "href": "https://open.spotify.com/search/La%20Original%20Banda%20El%20Limon"
-            }
-          ],
-          "extra": "a/a $27.50 7pm/8pm"
-        }
-      ]
-    },
-    {
-      "day": "Mon Jul 7",
-      "normalizedDate": "2025-07-07",
-      "events": [
-        {
-          "venue": {
-            "text": "Eli's Mile High Club, Oakland",
-            "href": "https://www.google.com/search?q=Eli's%20Mile%20High%20Club%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Margie Turner",
-              "href": "https://open.spotify.com/search/Margie%20Turner"
-            }
-          ],
-          "extra": "21+ free"
-        },
-        {
-          "venue": {
-            "text": "Ivy Room, Albany",
-            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
-          },
-          "bands": [
-            {
-              "text": "Sucker Crush",
-              "href": "https://open.spotify.com/search/Sucker%20Crush"
-            },
-            {
-              "text": "Claire Morales",
-              "href": "https://open.spotify.com/search/Claire%20Morales"
-            },
-            {
-              "text": "Nuxia",
-              "href": "https://open.spotify.com/search/Nuxia"
-            }
-          ],
-          "extra": "21+ $14.21 7pm/7:30pm"
-        },
-        {
-          "venue": {
-            "text": "Kilowatt, S.F.",
-            "href": "https://www.google.com/search?q=Kilowatt%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Dark Chisme",
-              "href": "https://open.spotify.com/search/Dark%20Chisme"
-            },
-            {
-              "text": "Kyd Barrett",
-              "href": "https://open.spotify.com/search/Kyd%20Barrett"
-            },
-            {
-              "text": "Holy Water",
-              "href": "https://open.spotify.com/search/Holy%20Water"
-            },
-            {
-              "text": "56 Castles",
-              "href": "https://open.spotify.com/search/56%20Castles"
-            },
-            {
-              "text": "Post Crucifixion",
-              "href": "https://open.spotify.com/search/Post%20Crucifixion"
-            }
-          ],
-          "extra": "21+ $15.66 7pm"
-        },
-        {
-          "venue": {
-            "text": "Ritz, San Jose",
-            "href": "https://www.google.com/search?q=Ritz%2C%20San%20Jose"
-          },
-          "bands": [
-            {
-              "text": "Low Cut Connie",
-              "href": "https://open.spotify.com/search/Low%20Cut%20Connie"
-            },
-            {
-              "text": "Annabel Lee",
-              "href": "https://open.spotify.com/search/Annabel%20Lee"
-            }
-          ],
-          "extra": "21+ $24/$30 7pm"
-        },
-        {
-          "venue": {
-            "text": "Thee Stork Club, Oakland",
-            "href": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Profanatica",
-              "href": "https://open.spotify.com/search/Profanatica"
-            },
-            {
-              "text": "Knoll",
-              "href": "https://open.spotify.com/search/Knoll"
-            },
-            {
-              "text": "Unidad Trauma",
-              "href": "https://open.spotify.com/search/Unidad%20Trauma"
-            }
-          ],
-          "extra": "21+ $25 7:30pm"
-        }
-      ]
-    },
-    {
       "day": "Tue Jul 8",
       "normalizedDate": "2025-07-08",
       "events": [
@@ -795,8 +669,8 @@
               "href": "https://open.spotify.com/search/State%20Faults"
             },
             {
-              "text": "Duck Duck Goose",
-              "href": "https://open.spotify.com/search/Duck%20Duck%20Goose"
+              "text": "Destroyer Destroyer",
+              "href": "https://open.spotify.com/search/Destroyer%20Destroyer"
             },
             {
               "text": "Nsixhundred",
@@ -805,13 +679,9 @@
             {
               "text": "Rex Kwon Do",
               "href": "https://open.spotify.com/search/Rex%20Kwon%20Do"
-            },
-            {
-              "text": "Name",
-              "href": "https://open.spotify.com/search/Name"
             }
           ],
-          "extra": "a/a $20/$25 7pm"
+          "extra": "a/a $20/$30 7pm"
         },
         {
           "venue": {
@@ -951,8 +821,12 @@
               "href": "https://open.spotify.com/search/Matte%20Blvck"
             },
             {
-              "text": "Holy Water",
-              "href": "https://open.spotify.com/search/Holy%20Water"
+              "text": "Die Sexual",
+              "href": "https://open.spotify.com/search/Die%20Sexual"
+            },
+            {
+              "text": "dj Glen",
+              "href": "https://open.spotify.com/search/dj%20Glen"
             }
           ],
           "extra": "a/a $28.29 8pm/9pm"
@@ -1372,6 +1246,10 @@
               "href": "https://open.spotify.com/search/Steaksauce%20Mustache"
             },
             {
+              "text": "God Awful Truth",
+              "href": "https://open.spotify.com/search/God%20Awful%20Truth"
+            },
+            {
               "text": "Lockslip Rob Ford Explorer",
               "href": "https://open.spotify.com/search/Lockslip%20Rob%20Ford%20Explorer"
             },
@@ -1384,7 +1262,7 @@
               "href": "https://open.spotify.com/search/Carmen%20Sixteen"
             }
           ],
-          "extra": "a/a $20/$25 4:30pm"
+          "extra": "a/a $20/$30 4:30pm"
         },
         {
           "venue": {
@@ -4478,6 +4356,19 @@
             }
           ],
           "extra": "a/a $12 7pm til 10:15pm"
+        },
+        {
+          "venue": {
+            "text": "Bird",
+            "href": "https://www.google.com/search?q=Bird"
+          },
+          "bands": [
+            {
+              "text": "Evangenitals",
+              "href": "https://open.spotify.com/search/Evangenitals"
+            }
+          ],
+          "extra": "& Beckett Books, 653 Chenery Street, S.F. a/a donation 11am"
         },
         {
           "venue": {
@@ -17644,6 +17535,10 @@
               "href": "https://open.spotify.com/search/Ninety%20Pound%20Wuss"
             },
             {
+              "text": "Middle-Aged Queers",
+              "href": "https://open.spotify.com/search/Middle-Aged%20Queers"
+            },
+            {
               "text": "Too Bad Eugene",
               "href": "https://open.spotify.com/search/Too%20Bad%20Eugene"
             },
@@ -27540,6 +27435,56 @@
             }
           ],
           "extra": "a/a $20/$25 8pm"
+        }
+      ]
+    },
+    {
+      "day": "Mon Feb 2",
+      "normalizedDate": "2025-02-02",
+      "events": [
+        {
+          "venue": {
+            "text": "Indepedent, S.F.",
+            "href": "https://www.google.com/search?q=Indepedent%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Ruston Kelly",
+              "href": "https://open.spotify.com/search/Ruston%20Kelly"
+            },
+            {
+              "text": "Verygently",
+              "href": "https://open.spotify.com/search/Verygently"
+            }
+          ],
+          "extra": "21+ 7:30pm/8pm"
+        }
+      ]
+    },
+    {
+      "day": "Sun Feb 8",
+      "normalizedDate": "2025-02-08",
+      "events": [
+        {
+          "venue": {
+            "text": "UC Theater, Berkeley",
+            "href": "https://www.google.com/search?q=UC%20Theater%2C%20Berkeley"
+          },
+          "bands": [
+            {
+              "text": "Lord Of The Lost",
+              "href": "https://open.spotify.com/search/Lord%20Of%20The%20Lost"
+            },
+            {
+              "text": "Birthday Massacre",
+              "href": "https://open.spotify.com/search/Birthday%20Massacre"
+            },
+            {
+              "text": "Wednesday 18",
+              "href": "https://open.spotify.com/search/Wednesday%2018"
+            }
+          ],
+          "extra": "a/a $44.75 6pm/7pm # @"
         }
       ]
     }

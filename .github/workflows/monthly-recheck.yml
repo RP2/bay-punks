@@ -80,23 +80,25 @@ jobs:
               console.log(data.artists.filter(a => a.spotifyVerified).length);
             " 2>/dev/null || echo "0")
             
-            NEWLY_VERIFIED=$((NEW_VERIFIED - OLD_VERIFIED))
-            
             echo "old_verified=$OLD_VERIFIED" >> $GITHUB_OUTPUT
             echo "new_verified=$NEW_VERIFIED" >> $GITHUB_OUTPUT
-            echo "newly_verified=$NEWLY_VERIFIED" >> $GITHUB_OUTPUT
+            echo "newly_verified=$((NEW_VERIFIED - OLD_VERIFIED))" >> $GITHUB_OUTPUT
             
-            if [ $NEWLY_VERIFIED -gt 0 ]; then
-              echo "✨ newly verified $NEWLY_VERIFIED artists"
+            if [ $((NEW_VERIFIED - OLD_VERIFIED)) -gt 0 ]; then
+              echo "✅ verified $((NEW_VERIFIED - OLD_VERIFIED)) additional artists"
             else
-              echo "ℹ️ no new verifications found"
+              echo "ℹ️ no additional artists verified"
             fi
           else
             echo "newly_verified=0" >> $GITHUB_OUTPUT
-            if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
-              echo "🏃 dry run completed"
-            fi
           fi
+
+      # generate calendar.json from processed data
+      - name: generate calendar
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          echo "📅 generating calendar.json from processed data..."
+          node scripts/generate-calendar.js
 
       # cleanup backup files
       - name: cleanup

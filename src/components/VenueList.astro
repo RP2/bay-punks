@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { VenueSortToggle } from "./SortToggle";
 import venues from "../data/venues.json";
-import concerts from "../data/raw.json";
+import concerts from "../data/calendar.json";
 
 // helper to get the best display name for a venue
 function getBestVenueName(venue: any): string {
@@ -36,28 +36,14 @@ function getBestVenueName(venue: any): string {
 
 // helper to extract location info from venue data
 function getLocationInfo(venue: any): string | null {
-  // use the pre-processed displayLocation from the database processing
-  if (venue.displayLocation) {
-    // expand city abbreviations for display
-    return venue.displayLocation
-      .replace(/\bS\.F\.?\b/gi, "San Francisco")
-      .replace(/\bSF\b/gi, "San Francisco")
-      .replace(/\bOakland\b/gi, "Oakland")
-      .replace(/\bBerkeley\b/gi, "Berkeley")
-      .replace(/\bSan Jose\b/gi, "San Jose")
-      .replace(/\bMountain View\b/gi, "Mountain View")
-      .replace(/\bPalo Alto\b/gi, "Palo Alto")
-      .replace(/\bSanta Cruz\b/gi, "Santa Cruz")
-      .replace(/\bSanta Rosa\b/gi, "Santa Rosa");
+  // construct location display from address and city
+  if (venue.address && venue.city) {
+    return `${venue.address}, ${venue.city}`;
+  } else if (venue.city) {
+    return venue.city;
+  } else if (venue.address) {
+    return venue.address;
   }
-
-  // fallback to the old location field if displayLocation is not available
-  if (venue.location) {
-    return venue.location
-      .replace(/\bS\.F\.?\b/gi, "San Francisco")
-      .replace(/\bSF\b/gi, "San Francisco");
-  }
-
   return null;
 }
 
@@ -82,8 +68,8 @@ function sortVenues(venueList: any[], sortKey: string) {
 
     case "next-show":
       return venuesCopy.sort((a, b) => {
-        const nextShowA = getNextShowForVenue(a.name);
-        const nextShowB = getNextShowForVenue(b.name);
+        const nextShowA = getNextShowForVenue(a.name, a.id);
+        const nextShowB = getNextShowForVenue(b.name, b.id);
 
         // venues with no upcoming shows go to the end
         if (!nextShowA && !nextShowB) return 0;
@@ -105,7 +91,7 @@ function sortVenues(venueList: any[], sortKey: string) {
 // default to next-show sort (soonest shows first)
 const initialSortedVenues = sortVenues(venues.venues, "next-show");
 
-function getNextShowForVenue(venueName: string) {
+function getNextShowForVenue(venueName: string, venueId?: string) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -114,6 +100,7 @@ function getNextShowForVenue(venueName: string) {
       show.events
         .filter(
           (event) =>
+            (venueId && event.venue.id === venueId) ||
             normalizeText(event.venue.text) === normalizeText(venueName),
         )
         .map((event) => ({
@@ -146,7 +133,7 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
   name: venue.name,
   displayName: getBestVenueName(venue),
   locationInfo: getLocationInfo(venue),
-  nextShow: getNextShowForVenue(venue.name),
+  nextShow: getNextShowForVenue(venue.name, venue.id),
 }));
 ---
 
@@ -173,7 +160,7 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
   >
     {
       initialSortedVenues.map((venue) => {
-        const nextShow = getNextShowForVenue(venue.name);
+        const nextShow = getNextShowForVenue(venue.name, venue.id);
         const displayName = getBestVenueName(venue);
         const locationInfo = getLocationInfo(venue);
 
