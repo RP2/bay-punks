@@ -16,21 +16,6 @@ export async function getStaticPaths() {
 // get the venue from props
 const { venue } = Astro.props;
 
-// get all shows for this venue
-const venueShows = concerts.shows.flatMap((show) =>
-  show.events
-    .filter(
-      (event) =>
-        event.venue.id === venue.id ||
-        normalizeText(event.venue.text) === normalizeText(venue.name),
-    )
-    .map((event) => ({
-      ...event,
-      date: show.normalizedDate,
-      humanDate: show.day,
-    })),
-);
-
 // helper to normalize text (remove special characters, lowercase)
 function normalizeText(text: string): string {
   return text
@@ -38,6 +23,39 @@ function normalizeText(text: string): string {
     .replace(/[^a-z0-9\s]/g, "")
     .trim();
 }
+
+// get all shows for this venue
+const venueShows = concerts.shows.flatMap((show) =>
+  show.events
+    .filter((event) => {
+      if (!event.venue) return false;
+
+      // match by ID first (most reliable)
+      if (event.venue.id === venue.id) return true;
+
+      // match by normalized name
+      if (
+        event.venue.text &&
+        normalizeText(event.venue.text) === normalizeText(venue.name)
+      )
+        return true;
+
+      // match against venue aliases
+      if (venue.aliases && Array.isArray(venue.aliases)) {
+        return venue.aliases.some(
+          (alias) =>
+            normalizeText(alias) === normalizeText(event.venue.text || ""),
+        );
+      }
+
+      return false;
+    })
+    .map((event) => ({
+      ...event,
+      date: show.normalizedDate,
+      humanDate: show.day,
+    })),
+);
 
 // sort shows by date (upcoming first)
 const today = new Date();
@@ -51,11 +69,6 @@ const todayISOString =
 const upcomingShows = venueShows
   .filter((show) => show.date >= todayISOString)
   .sort((a, b) => a.date.localeCompare(b.date));
-
-const pastShows = venueShows
-  .filter((show) => show.date < todayISOString)
-  .sort((a, b) => b.date.localeCompare(a.date))
-  .slice(0, 10); // limit to last 10 shows
 ---
 
 <Layout
@@ -77,7 +90,7 @@ const pastShows = venueShows
 
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
       <!-- venue info -->
-      <Card>
+      <Card className="lg:col-span-2">
         <CardHeader>
           <CardTitle>Venue Info</CardTitle>
         </CardHeader>
@@ -124,83 +137,6 @@ const pastShows = venueShows
           </dl>
         </CardContent>
       </Card>
-
-      <!-- recent shows -->
-      <Card>
-        <CardHeader>
-          <CardTitle>Recent Shows</CardTitle>
-        </CardHeader>
-        <CardContent>
-          {
-            pastShows.length > 0 ? (
-              <div class="space-y-4">
-                <ul
-                  class="recent-shows-list space-y-4 overflow-hidden transition-all duration-300"
-                  style="max-height: 250px;"
-                >
-                  {pastShows.map((show, index) => (
-                    <li
-                      data-key={index}
-                      class={`border-border border-b pb-4 last:border-b-0 ${index >= 2 ? "overflow-show" : ""}`}
-                    >
-                      <div class="flex flex-col gap-1">
-                        <div class="text-muted-foreground text-sm font-semibold">
-                          <a
-                            href={`/day/${show.date}/`}
-                            class="hover:text-foreground transition-colors hover:underline"
-                          >
-                            {show.humanDate}
-                          </a>
-                        </div>
-                        <div class="flex flex-wrap gap-1">
-                          {show.bands.map((band, i) => (
-                            <span data-key={i} class="inline-flex">
-                              {band.href ? (
-                                <a
-                                  class="text-primary hover:underline"
-                                  href={band.href}
-                                  target="_blank"
-                                  rel="noopener noreferrer nofollow"
-                                >
-                                  {band.text}
-                                </a>
-                              ) : (
-                                <span>{band.text}</span>
-                              )}
-                              {i < show.bands.length - 1 && (
-                                <span class="text-muted-foreground">, </span>
-                              )}
-                            </span>
-                          ))}
-                        </div>
-                        {show.extra && (
-                          <div class="text-muted-foreground text-sm">
-                            {show.extra}
-                          </div>
-                        )}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-                {pastShows.length > 2 && (
-                  <button
-                    class="expand-recent-toggle text-muted-foreground hover:text-foreground text-xs hover:underline"
-                    data-expanded="false"
-                  >
-                    +{pastShows.length - 2} more shows
-                  </button>
-                )}
-              </div>
-            ) : (
-              <p class="text-muted-foreground text-sm">
-                While there may be nothing here now, that doesn't mean there
-                won't be in the future. Past shows are cleared weekly when new
-                data is processed.
-              </p>
-            )
-          }
-        </CardContent>
-      </Card>
     </div>
 
     <!-- upcoming shows section -->
@@ -230,16 +166,18 @@ const pastShows = venueShows
                       <div class="flex flex-wrap gap-1">
                         {show.bands.map((band, i) => (
                           <span data-key={i} class="inline-flex">
-                            {" "}
-                            <a
-                              class="text-primary hover:underline"
-                              href={`/artist/${band.text
-                                .toLowerCase()
-                                .replace(/[^a-z0-9\s]/g, "")
-                                .replace(/\s+/g, "-")}/`}
-                            >
-                              {band.text}
-                            </a>
+                            {band.href ? (
+                              <a
+                                class="text-primary hover:underline"
+                                href={band.href}
+                                target="_blank"
+                                rel="noopener noreferrer nofollow"
+                              >
+                                {band.text}
+                              </a>
+                            ) : (
+                              <span>{band.text}</span>
+                            )}
                             {i < show.bands.length - 1 && (
                               <span class="text-muted-foreground">, </span>
                             )}
@@ -266,36 +204,5 @@ const pastShows = venueShows
 </Layout>
 
 <script>
-  // expand/collapse functionality for recent shows
-  document.addEventListener("DOMContentLoaded", () => {
-    const expandButtons = document.querySelectorAll(".expand-recent-toggle");
-
-    expandButtons.forEach((button) => {
-      button.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        const card = button.closest("div");
-        const showsList = card?.querySelector(".recent-shows-list");
-        const isExpanded = button.getAttribute("data-expanded") === "true";
-
-        if (isExpanded) {
-          // collapse: set max height to show only first 2 shows
-          if (showsList) {
-            (showsList as HTMLElement).style.maxHeight = "250px";
-          }
-          button.setAttribute("data-expanded", "false");
-          const totalShows = card?.querySelectorAll("li").length || 0;
-          button.textContent = `+${totalShows - 2} more shows`;
-        } else {
-          // expand: remove max height to show all shows
-          if (showsList) {
-            (showsList as HTMLElement).style.maxHeight = "none";
-          }
-          button.setAttribute("data-expanded", "true");
-          button.textContent = "Show less";
-        }
-      });
-    });
-  });
+  // removed recent shows expand/collapse functionality since that section was removed
 </script>
