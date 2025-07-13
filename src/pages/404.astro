@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+---
+
+<Layout
+  title="Page Not Found - Bay Punks"
+  description="The page you're looking for could not be found. Return to the Bay Area punk show calendar."
+>
+  <div class="container mx-auto max-w-4xl px-4 py-8">
+    <div class="flex min-h-[60vh] items-center justify-center">
+      <Card className="w-full max-w-md text-center">
+        <CardHeader>
+          <CardTitle className="text-muted-foreground text-6xl font-bold">
+            404
+          </CardTitle>
+          <h1 class="text-2xl font-bold">Page Not Found</h1>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p class="text-muted-foreground">
+            The page you're looking for doesn't exist. This could be because:
+          </p>
+          <ul class="text-muted-foreground space-y-2 text-left text-sm">
+            <li>
+              • The artist or venue page was removed during our weekly data
+              update
+            </li>
+            <li>• The URL was typed incorrectly</li>
+            <li>• The page has been moved or deleted</li>
+          </ul>
+          <div class="pt-4">
+            <a
+              href="/"
+              class="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors"
+            >
+              <svg
+                class="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 3h18v18H3zM9 9h6v6H9z"></path>
+              </svg>
+              Back to Show Calendar
+            </a>
+          </div>
+          <div class="pt-2">
+            <p class="text-muted-foreground text-xs">
+              Looking for a specific artist or venue? Use the search and filter
+              options on the main calendar.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</Layout>
