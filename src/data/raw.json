@@ -1,1204 +1,6 @@
 {
   "shows": [
     {
-      "day": "Tue Jul 8",
-      "normalizedDate": "2025-07-08",
-      "events": [
-        {
-          "venue": {
-            "text": "49's Stadium, Santa Clara",
-            "href": "https://www.google.com/search?q=49's%20Stadium%2C%20Santa%20Clara"
-          },
-          "bands": [
-            {
-              "text": "Weeknd",
-              "href": "https://open.spotify.com/search/Weeknd"
-            },
-            {
-              "text": "Playboi Carti",
-              "href": "https://open.spotify.com/search/Playboi%20Carti"
-            },
-            {
-              "text": "Mike Dean",
-              "href": "https://open.spotify.com/search/Mike%20Dean"
-            }
-          ],
-          "extra": "a/a 7pm #"
-        },
-        {
-          "venue": {
-            "text": "Cafe Du Nord, S.F.",
-            "href": "https://www.google.com/search?q=Cafe%20Du%20Nord%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Lily Seabird",
-              "href": "https://open.spotify.com/search/Lily%20Seabird"
-            },
-            {
-              "text": "Mikaela Davis",
-              "href": "https://open.spotify.com/search/Mikaela%20Davis"
-            }
-          ],
-          "extra": "21+ 8pm"
-        },
-        {
-          "venue": {
-            "text": "Great American Music Hall, S.F.",
-            "href": "https://www.google.com/search?q=Great%20American%20Music%20Hall%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Matmos",
-              "href": "https://open.spotify.com/search/Matmos"
-            },
-            {
-              "text": "Dick Slessig Combo",
-              "href": "https://open.spotify.com/search/Dick%20Slessig%20Combo"
-            }
-          ],
-          "extra": "a/a $30/$35 7pm/8pm (fully seated)"
-        },
-        {
-          "venue": {
-            "text": "Knockout, S.F.",
-            "href": "https://www.google.com/search?q=Knockout%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Teenage Jesus And The Jerks",
-              "href": "https://open.spotify.com/search/Teenage%20Jesus%20And%20The%20Jerks"
-            },
-            {
-              "text": "Brontez Purnell",
-              "href": "https://open.spotify.com/search/Brontez%20Purnell"
-            },
-            {
-              "text": "Qualuudes",
-              "href": "https://open.spotify.com/search/Qualuudes"
-            },
-            {
-              "text": "Street Eaters",
-              "href": "https://open.spotify.com/search/Street%20Eaters"
-            }
-          ],
-          "extra": "21+ $27/$30 8pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Thee Stork Club, Oakland",
-            "href": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Dick Stusso",
-              "href": "https://open.spotify.com/search/Dick%20Stusso"
-            },
-            {
-              "text": "Dolly Creamer",
-              "href": "https://open.spotify.com/search/Dolly%20Creamer"
-            },
-            {
-              "text": "Parallel",
-              "href": "https://open.spotify.com/search/Parallel"
-            }
-          ],
-          "extra": "21+ $10/$12 8pm"
-        }
-      ]
-    },
-    {
-      "day": "Wed Jul 9",
-      "normalizedDate": "2025-07-09",
-      "events": [
-        {
-          "venue": {
-            "text": "49's Stadium, Santa Clara",
-            "href": "https://www.google.com/search?q=49's%20Stadium%2C%20Santa%20Clara"
-          },
-          "bands": [
-            {
-              "text": "Weeknd",
-              "href": "https://open.spotify.com/search/Weeknd"
-            },
-            {
-              "text": "Playboi Carti",
-              "href": "https://open.spotify.com/search/Playboi%20Carti"
-            },
-            {
-              "text": "Mike Dean",
-              "href": "https://open.spotify.com/search/Mike%20Dean"
-            }
-          ],
-          "extra": "a/a 7pm #"
-        },
-        {
-          "venue": {
-            "text": "924 Gilman Street, Berkeley",
-            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "Whispers",
-              "href": "https://open.spotify.com/search/Whispers"
-            },
-            {
-              "text": "Condition One",
-              "href": "https://open.spotify.com/search/Condition%20One"
-            },
-            {
-              "text": "Slime",
-              "href": "https://open.spotify.com/search/Slime"
-            },
-            {
-              "text": "Four Winds Away",
-              "href": "https://open.spotify.com/search/Four%20Winds%20Away"
-            },
-            {
-              "text": "Impurity",
-              "href": "https://open.spotify.com/search/Impurity"
-            }
-          ],
-          "extra": "a/a $20 6pm @"
-        },
-        {
-          "venue": {
-            "text": "Downtown Barbecue, Santa Rosa",
-            "href": "https://www.google.com/search?q=Downtown%20Barbecue%2C%20Santa%20Rosa"
-          },
-          "bands": [
-            {
-              "text": "Smokehouse",
-              "href": "https://open.spotify.com/search/Smokehouse"
-            }
-          ],
-          "extra": "a/a free 4:3pm"
-        },
-        {
-          "venue": {
-            "text": "Hopmonk, Sebastopol",
-            "href": "https://www.google.com/search?q=Hopmonk%2C%20Sebastopol"
-          },
-          "bands": [
-            {
-              "text": "Back Porchestra",
-              "href": "https://open.spotify.com/search/Back%20Porchestra"
-            }
-          ],
-          "extra": "21+ 6pm"
-        },
-        {
-          "venue": {
-            "text": "Jack Kerouac Alley, S.F.",
-            "href": "https://www.google.com/search?q=Jack%20Kerouac%20Alley%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Phantom A.D.",
-              "href": "https://open.spotify.com/search/Phantom%20A.D."
-            },
-            {
-              "text": "Sutros",
-              "href": "https://open.spotify.com/search/Sutros"
-            },
-            {
-              "text": "Miracle Mile",
-              "href": "https://open.spotify.com/search/Miracle%20Mile"
-            }
-          ],
-          "extra": "a/a free 6pm"
-        },
-        {
-          "venue": {
-            "text": "Kilowatt, S.F.",
-            "href": "https://www.google.com/search?q=Kilowatt%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Maggie Gently",
-              "href": "https://open.spotify.com/search/Maggie%20Gently"
-            },
-            {
-              "text": "Mommy Mommy",
-              "href": "https://open.spotify.com/search/Mommy%20Mommy"
-            },
-            {
-              "text": "Dinner Date",
-              "href": "https://open.spotify.com/search/Dinner%20Date"
-            }
-          ],
-          "extra": "21+ $13.39 8pm"
-        },
-        {
-          "venue": {
-            "text": "Knockout, S.F.",
-            "href": "https://www.google.com/search?q=Knockout%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Teenage Jesus And The Jerks",
-              "href": "https://open.spotify.com/search/Teenage%20Jesus%20And%20The%20Jerks"
-            },
-            {
-              "text": "CCR Headcleaner",
-              "href": "https://open.spotify.com/search/CCR%20Headcleaner"
-            },
-            {
-              "text": "Rip Room",
-              "href": "https://open.spotify.com/search/Rip%20Room"
-            },
-            {
-              "text": "Sympathy Flowers",
-              "href": "https://open.spotify.com/search/Sympathy%20Flowers"
-            },
-            {
-              "text": "Solo Organ",
-              "href": "https://open.spotify.com/search/Solo%20Organ"
-            }
-          ],
-          "extra": "21+ $27/$30 8pm/9pm"
-        }
-      ]
-    },
-    {
-      "day": "Thu Jul 10",
-      "normalizedDate": "2025-07-10",
-      "events": [
-        {
-          "venue": {
-            "text": "924 Gilman Street, Berkeley",
-            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "H Is 4 Hector",
-              "href": "https://open.spotify.com/search/H%20Is%204%20Hector"
-            },
-            {
-              "text": "Accidents At Sundown",
-              "href": "https://open.spotify.com/search/Accidents%20At%20Sundown"
-            },
-            {
-              "text": "Jackie Clementine",
-              "href": "https://open.spotify.com/search/Jackie%20Clementine"
-            },
-            {
-              "text": "Atom And The Breaknecks",
-              "href": "https://open.spotify.com/search/Atom%20And%20The%20Breaknecks"
-            }
-          ],
-          "extra": "a/a $10 7pm"
-        },
-        {
-          "venue": {
-            "text": "Arlene Francis Center, Santa Rosa",
-            "href": "https://www.google.com/search?q=Arlene%20Francis%20Center%2C%20Santa%20Rosa"
-          },
-          "bands": [
-            {
-              "text": "Whiskey Dick",
-              "href": "https://open.spotify.com/search/Whiskey%20Dick"
-            },
-            {
-              "text": "Dillon O'Bannon",
-              "href": "https://open.spotify.com/search/Dillon%20O'Bannon"
-            },
-            {
-              "text": "Ripatti Rose Band",
-              "href": "https://open.spotify.com/search/Ripatti%20Rose%20Band"
-            },
-            {
-              "text": "Hajj",
-              "href": "https://open.spotify.com/search/Hajj"
-            }
-          ],
-          "extra": "a/a $15 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Black Cat, S.F.",
-            "href": "https://www.google.com/search?q=Black%20Cat%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Ben Esposito",
-              "href": "https://open.spotify.com/search/Ben%20Esposito"
-            }
-          ],
-          "extra": "a/a $35.50 7pm and 9:15pm shows"
-        },
-        {
-          "venue": {
-            "text": "Blue Note, Napa",
-            "href": "https://www.google.com/search?q=Blue%20Note%2C%20Napa"
-          },
-          "bands": [
-            {
-              "text": "Back Porchestra",
-              "href": "https://open.spotify.com/search/Back%20Porchestra"
-            }
-          ],
-          "extra": "8+ (under 16 with adult) $6.72+ 6:30pm/7:30pm"
-        },
-        {
-          "venue": {
-            "text": "Boardwalk, Santa Cruz",
-            "href": "https://www.google.com/search?q=Boardwalk%2C%20Santa%20Cruz"
-          },
-          "bands": [
-            {
-              "text": "Fire Peach",
-              "href": "https://open.spotify.com/search/Fire%20Peach"
-            }
-          ],
-          "extra": "a/a free 8:30pm"
-        },
-        {
-          "venue": {
-            "text": "Bottom of the Hill, S.F.",
-            "href": "https://www.google.com/search?q=Bottom%20of%20the%20Hill%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Open Mike Eagle",
-              "href": "https://open.spotify.com/search/Open%20Mike%20Eagle"
-            },
-            {
-              "text": "Lealani",
-              "href": "https://open.spotify.com/search/Lealani"
-            },
-            {
-              "text": "Cavalier",
-              "href": "https://open.spotify.com/search/Cavalier"
-            },
-            {
-              "text": "Rhys Langston",
-              "href": "https://open.spotify.com/search/Rhys%20Langston"
-            }
-          ],
-          "extra": "a/a $20/$25 7:30pm/8:15pm"
-        },
-        {
-          "venue": {
-            "text": "Brick and Mortar, S.F.",
-            "href": "https://www.google.com/search?q=Brick%20and%20Mortar%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Chance Rein",
-              "href": "https://open.spotify.com/search/Chance%20Rein"
-            }
-          ],
-          "extra": "a/a $22.89 (under 21 plus $5) 8pm/8:30pm ^"
-        },
-        {
-          "venue": {
-            "text": "Chapel, S.F.",
-            "href": "https://www.google.com/search?q=Chapel%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Legend Zeppelin",
-              "href": "https://open.spotify.com/search/Legend%20Zeppelin"
-            }
-          ],
-          "extra": "a/a $24 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Guild Theater, Memlo Park",
-            "href": "https://www.google.com/search?q=Guild%20Theater%2C%20Memlo%20Park"
-          },
-          "bands": [
-            {
-              "text": "L.A. Guns",
-              "href": "https://open.spotify.com/search/L.A.%20Guns"
-            }
-          ],
-          "extra": "a/a (under 18 with parent) 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Ivy Room, Albany",
-            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
-          },
-          "bands": [
-            {
-              "text": "Sifter",
-              "href": "https://open.spotify.com/search/Sifter"
-            },
-            {
-              "text": "Bristle",
-              "href": "https://open.spotify.com/search/Bristle"
-            },
-            {
-              "text": "Never But Dream The Days",
-              "href": "https://open.spotify.com/search/Never%20But%20Dream%20The%20Days"
-            },
-            {
-              "text": "William Winant",
-              "href": "https://open.spotify.com/search/William%20Winant"
-            }
-          ],
-          "extra": "21+ $20 7pm/7:30pm"
-        },
-        {
-          "venue": {
-            "text": "Kilowatt,",
-            "href": "https://www.google.com/search?q=Kilowatt%2C"
-          },
-          "bands": [
-            {
-              "text": "INCORRECT LISTING:  Frtrss",
-              "href": "https://open.spotify.com/search/INCORRECT%20LISTING%3A%20Frtrss"
-            },
-            {
-              "text": "Richard Haig",
-              "href": "https://open.spotify.com/search/Richard%20Haig"
-            },
-            {
-              "text": "Ex-Heir",
-              "href": "https://open.spotify.com/search/Ex-Heir"
-            }
-          ],
-          "extra": "S.F."
-        },
-        {
-          "venue": {
-            "text": "Knockout, S.F.",
-            "href": "https://www.google.com/search?q=Knockout%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Claimed Choice",
-              "href": "https://open.spotify.com/search/Claimed%20Choice"
-            },
-            {
-              "text": "Powerhouse",
-              "href": "https://open.spotify.com/search/Powerhouse"
-            },
-            {
-              "text": "Bomber",
-              "href": "https://open.spotify.com/search/Bomber"
-            },
-            {
-              "text": "Basilica Ruin",
-              "href": "https://open.spotify.com/search/Basilica%20Ruin"
-            }
-          ],
-          "extra": "21+ $15 8pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Mountain Winery, Saratoga",
-            "href": "https://www.google.com/search?q=Mountain%20Winery%2C%20Saratoga"
-          },
-          "bands": [
-            {
-              "text": "Turtles",
-              "href": "https://open.spotify.com/search/Turtles"
-            },
-            {
-              "text": "Jay And The Americans",
-              "href": "https://open.spotify.com/search/Jay%20And%20The%20Americans"
-            },
-            {
-              "text": "Little Anthony",
-              "href": "https://open.spotify.com/search/Little%20Anthony"
-            },
-            {
-              "text": "Gary Puckett & The Union Gap",
-              "href": "https://open.spotify.com/search/Gary%20Puckett%20%26%20The%20Union%20Gap"
-            },
-            {
-              "text": "Vogues",
-              "href": "https://open.spotify.com/search/Vogues"
-            },
-            {
-              "text": "Cowsills",
-              "href": "https://open.spotify.com/search/Cowsills"
-            }
-          ],
-          "extra": "a/a 7:30pm"
-        },
-        {
-          "venue": {
-            "text": "Neck of the Woods, S.F.",
-            "href": "https://www.google.com/search?q=Neck%20of%20the%20Woods%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Slugfeast",
-              "href": "https://open.spotify.com/search/Slugfeast"
-            },
-            {
-              "text": "Sloome",
-              "href": "https://open.spotify.com/search/Sloome"
-            },
-            {
-              "text": "Cody's Program",
-              "href": "https://open.spotify.com/search/Cody's%20Program"
-            },
-            {
-              "text": "Meadow",
-              "href": "https://open.spotify.com/search/Meadow"
-            }
-          ],
-          "extra": "a/a $14.60 7pm/7:30pm"
-        },
-        {
-          "venue": {
-            "text": "New Parish, Oakland",
-            "href": "https://www.google.com/search?q=New%20Parish%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Samoht",
-              "href": "https://open.spotify.com/search/Samoht"
-            },
-            {
-              "text": "Emi Secrest",
-              "href": "https://open.spotify.com/search/Emi%20Secrest"
-            }
-          ],
-          "extra": "18+ $29/$36 (under 21 plus $5) 7pm/8pm ^"
-        },
-        {
-          "venue": {
-            "text": "Peacock Lounge, S.F.",
-            "href": "https://www.google.com/search?q=Peacock%20Lounge%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Antimatter",
-              "href": "https://open.spotify.com/search/Antimatter"
-            },
-            {
-              "text": "Famous Techno",
-              "href": "https://open.spotify.com/search/Famous%20Techno"
-            },
-            {
-              "text": "Sholey Asgary",
-              "href": "https://open.spotify.com/search/Sholey%20Asgary"
-            },
-            {
-              "text": "Audre",
-              "href": "https://open.spotify.com/search/Audre"
-            }
-          ],
-          "extra": "a/a $5-$15 8pm til 11pm"
-        },
-        {
-          "venue": {
-            "text": "Rickshaw Stop, S.F.",
-            "href": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Van Goat",
-              "href": "https://open.spotify.com/search/Van%20Goat"
-            },
-            {
-              "text": "John Brothers Piano Company",
-              "href": "https://open.spotify.com/search/John%20Brothers%20Piano%20Company"
-            }
-          ],
-          "extra": "a/a $15/$18 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Streetlight Records, Santa Cruz",
-            "href": "https://www.google.com/search?q=Streetlight%20Records%2C%20Santa%20Cruz"
-          },
-          "bands": [
-            {
-              "text": "Baby Grendel",
-              "href": "https://open.spotify.com/search/Baby%20Grendel"
-            }
-          ],
-          "extra": "a/a free 5pm til 6pm"
-        },
-        {
-          "venue": {
-            "text": "Yerba Buena Gardens, S.F.",
-            "href": "https://www.google.com/search?q=Yerba%20Buena%20Gardens%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Shirley Kazuyo Muramoto",
-              "href": "https://open.spotify.com/search/Shirley%20Kazuyo%20Muramoto"
-            }
-          ],
-          "extra": "a/a free 12:30pm"
-        }
-      ]
-    },
-    {
-      "day": "Fri Jul 11",
-      "normalizedDate": "2025-07-11",
-      "events": [
-        {
-          "venue": {
-            "text": "4th Corner Speakeasy, 431 Georgia St., Vallejo",
-            "href": "https://www.google.com/search?q=4th%20Corner%20Speakeasy%2C%20431%20Georgia%20St.%2C%20Vallejo"
-          },
-          "bands": [
-            {
-              "text": "Strange Culprits",
-              "href": "https://open.spotify.com/search/Strange%20Culprits"
-            },
-            {
-              "text": "Kid Venison",
-              "href": "https://open.spotify.com/search/Kid%20Venison"
-            }
-          ],
-          "extra": "21+ $15/$20 7:30pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "924 Gilman Street, Berkeley",
-            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "Heavy Heavy Low Low",
-              "href": "https://open.spotify.com/search/Heavy%20Heavy%20Low%20Low"
-            },
-            {
-              "text": "State Faults",
-              "href": "https://open.spotify.com/search/State%20Faults"
-            },
-            {
-              "text": "Destroyer Destroyer",
-              "href": "https://open.spotify.com/search/Destroyer%20Destroyer"
-            },
-            {
-              "text": "Nsixhundred",
-              "href": "https://open.spotify.com/search/Nsixhundred"
-            },
-            {
-              "text": "Rex Kwon Do",
-              "href": "https://open.spotify.com/search/Rex%20Kwon%20Do"
-            }
-          ],
-          "extra": "a/a $20/$30 7pm"
-        },
-        {
-          "venue": {
-            "text": "Black Cat, S.F.",
-            "href": "https://www.google.com/search?q=Black%20Cat%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Ben Esposito",
-              "href": "https://open.spotify.com/search/Ben%20Esposito"
-            }
-          ],
-          "extra": "a/a $35.50 7pm and 9:30pm shows"
-        },
-        {
-          "venue": {
-            "text": "Blue Note, Napa",
-            "href": "https://www.google.com/search?q=Blue%20Note%2C%20Napa"
-          },
-          "bands": [
-            {
-              "text": "John Pizzarelli",
-              "href": "https://open.spotify.com/search/John%20Pizzarelli"
-            }
-          ],
-          "extra": "8+ (under 16 with adult) 5pm/6:30pm 8:30pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Bottom of the Hill, S.F.",
-            "href": "https://www.google.com/search?q=Bottom%20of%20the%20Hill%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Montgomery Station",
-              "href": "https://open.spotify.com/search/Montgomery%20Station"
-            },
-            {
-              "text": "Westerly",
-              "href": "https://open.spotify.com/search/Westerly"
-            },
-            {
-              "text": "Project Haze",
-              "href": "https://open.spotify.com/search/Project%20Haze"
-            }
-          ],
-          "extra": "21+ $15/$17 8:30pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Caravan Lounge, San Jose",
-            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
-          },
-          "bands": [
-            {
-              "text": "Maidenhead",
-              "href": "https://open.spotify.com/search/Maidenhead"
-            },
-            {
-              "text": "Phantasmal Abyss",
-              "href": "https://open.spotify.com/search/Phantasmal%20Abyss"
-            },
-            {
-              "text": "Braintooth",
-              "href": "https://open.spotify.com/search/Braintooth"
-            }
-          ],
-          "extra": "21+ free 9pm/10pm @"
-        },
-        {
-          "venue": {
-            "text": "Catalyst, Santa Cruz",
-            "href": "https://www.google.com/search?q=Catalyst%2C%20Santa%20Cruz"
-          },
-          "bands": [
-            {
-              "text": "DaBoii",
-              "href": "https://open.spotify.com/search/DaBoii"
-            },
-            {
-              "text": "Kai Bandz",
-              "href": "https://open.spotify.com/search/Kai%20Bandz"
-            },
-            {
-              "text": "Slimmy B",
-              "href": "https://open.spotify.com/search/Slimmy%20B"
-            },
-            {
-              "text": "BigSad1900",
-              "href": "https://open.spotify.com/search/BigSad1900"
-            },
-            {
-              "text": "Younginsosleaze",
-              "href": "https://open.spotify.com/search/Younginsosleaze"
-            }
-          ],
-          "extra": "16+ $49.85-$35.31 ($94.46 vip) 8pm/9pm #"
-        },
-        {
-          "venue": {
-            "text": "Chapel, S.F.",
-            "href": "https://www.google.com/search?q=Chapel%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "This Will Destroy You",
-              "href": "https://open.spotify.com/search/This%20Will%20Destroy%20You"
-            },
-            {
-              "text": "Jesse Beaman",
-              "href": "https://open.spotify.com/search/Jesse%20Beaman"
-            }
-          ],
-          "extra": "a/a $30 8pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Civic Auditorium, S.F.",
-            "href": "https://www.google.com/search?q=Civic%20Auditorium%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Illenium",
-              "href": "https://open.spotify.com/search/Illenium"
-            }
-          ],
-          "extra": "18+ $88 8pm #"
-        },
-        {
-          "venue": {
-            "text": "Cornerstone, Berkeley",
-            "href": "https://www.google.com/search?q=Cornerstone%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "Matte Blvck",
-              "href": "https://open.spotify.com/search/Matte%20Blvck"
-            },
-            {
-              "text": "Die Sexual",
-              "href": "https://open.spotify.com/search/Die%20Sexual"
-            },
-            {
-              "text": "dj Glen",
-              "href": "https://open.spotify.com/search/dj%20Glen"
-            }
-          ],
-          "extra": "a/a $28.29 8pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Decks at the Knockout, S.F.",
-            "href": "https://www.google.com/search?q=Decks%20at%20the%20Knockout%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Mummies",
-              "href": "https://open.spotify.com/search/Mummies"
-            },
-            {
-              "text": "Juicebumps",
-              "href": "https://open.spotify.com/search/Juicebumps"
-            },
-            {
-              "text": "Buzzed Lightbeer",
-              "href": "https://open.spotify.com/search/Buzzed%20Lightbeer"
-            },
-            {
-              "text": "Wife",
-              "href": "https://open.spotify.com/search/Wife"
-            },
-            {
-              "text": "dj Big Nate",
-              "href": "https://open.spotify.com/search/dj%20Big%20Nate"
-            }
-          ],
-          "extra": "21+ $40 8pm/9pm $ @"
-        },
-        {
-          "venue": {
-            "text": "Eli's Mile High Club, Oakland",
-            "href": "https://www.google.com/search?q=Eli's%20Mile%20High%20Club%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Trencher",
-              "href": "https://open.spotify.com/search/Trencher"
-            },
-            {
-              "text": "Cobweb",
-              "href": "https://open.spotify.com/search/Cobweb"
-            },
-            {
-              "text": "Hellenistic",
-              "href": "https://open.spotify.com/search/Hellenistic"
-            },
-            {
-              "text": "Winterwind",
-              "href": "https://open.spotify.com/search/Winterwind"
-            }
-          ],
-          "extra": "21+ $12/$15 7pm/8pm @"
-        },
-        {
-          "venue": {
-            "text": "Great American Music Hall, S.F.",
-            "href": "https://www.google.com/search?q=Great%20American%20Music%20Hall%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Family Crest",
-              "href": "https://open.spotify.com/search/Family%20Crest"
-            },
-            {
-              "text": "Babes In Canyon",
-              "href": "https://open.spotify.com/search/Babes%20In%20Canyon"
-            }
-          ],
-          "extra": "a/a $25/$29 8pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Hersher's Pizza, 206 Broadway, Oakland",
-            "href": "https://www.google.com/search?q=Hersher's%20Pizza%2C%20206%20Broadway%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Sweat",
-              "href": "https://open.spotify.com/search/Sweat"
-            },
-            {
-              "text": "Mutilated Tongue",
-              "href": "https://open.spotify.com/search/Mutilated%20Tongue"
-            },
-            {
-              "text": "Straggler",
-              "href": "https://open.spotify.com/search/Straggler"
-            }
-          ],
-          "extra": "a/a 7pm"
-        },
-        {
-          "venue": {
-            "text": "Hopmonk, Novato",
-            "href": "https://www.google.com/search?q=Hopmonk%2C%20Novato"
-          },
-          "bands": [
-            {
-              "text": "Expendables",
-              "href": "https://open.spotify.com/search/Expendables"
-            },
-            {
-              "text": "Hijinx",
-              "href": "https://open.spotify.com/search/Hijinx"
-            },
-            {
-              "text": "Amp Melo",
-              "href": "https://open.spotify.com/search/Amp%20Melo"
-            }
-          ],
-          "extra": "a/a $39 ($64 includes meal) 4pm/6pm"
-        },
-        {
-          "venue": {
-            "text": "Hopmonk, Sebastopol",
-            "href": "https://www.google.com/search?q=Hopmonk%2C%20Sebastopol"
-          },
-          "bands": [
-            {
-              "text": "Bill Kirchen & Four Lost Planet Airmen With Floyd Domino",
-              "href": "https://open.spotify.com/search/Bill%20Kirchen%20%26%20Four%20Lost%20Planet%20Airmen%20With%20Floyd%20Domino"
-            }
-          ],
-          "extra": "21+ $77-$48 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Independent, S.F.",
-            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Chase Petra",
-              "href": "https://open.spotify.com/search/Chase%20Petra"
-            },
-            {
-              "text": "Small Crush",
-              "href": "https://open.spotify.com/search/Small%20Crush"
-            },
-            {
-              "text": "Polkadot",
-              "href": "https://open.spotify.com/search/Polkadot"
-            }
-          ],
-          "extra": "a/a $30.41 8:30pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Ivy Room, Albany",
-            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
-          },
-          "bands": [
-            {
-              "text": "Magic In The Other",
-              "href": "https://open.spotify.com/search/Magic%20In%20The%20Other"
-            },
-            {
-              "text": "Ginger Molasses",
-              "href": "https://open.spotify.com/search/Ginger%20Molasses"
-            },
-            {
-              "text": "Maya Elise",
-              "href": "https://open.spotify.com/search/Maya%20Elise"
-            }
-          ],
-          "extra": "21+ $20 7:30pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Kilowatt, S.F.",
-            "href": "https://www.google.com/search?q=Kilowatt%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Somebunny Else",
-              "href": "https://open.spotify.com/search/Somebunny%20Else"
-            },
-            {
-              "text": "Supersonic Symbiotic",
-              "href": "https://open.spotify.com/search/Supersonic%20Symbiotic"
-            },
-            {
-              "text": "Wheel House",
-              "href": "https://open.spotify.com/search/Wheel%20House"
-            }
-          ],
-          "extra": "21+ free 2pm"
-        },
-        {
-          "venue": {
-            "text": "Moe's Alley, Santa Cruz",
-            "href": "https://www.google.com/search?q=Moe's%20Alley%2C%20Santa%20Cruz"
-          },
-          "bands": [
-            {
-              "text": "Inciters",
-              "href": "https://open.spotify.com/search/Inciters"
-            },
-            {
-              "text": "Auos",
-              "href": "https://open.spotify.com/search/Auos"
-            },
-            {
-              "text": "Tectonics",
-              "href": "https://open.spotify.com/search/Tectonics"
-            }
-          ],
-          "extra": "21+ 7:30pm"
-        },
-        {
-          "venue": {
-            "text": "Music City, 1355 Bush Street, S.F.",
-            "href": "https://www.google.com/search?q=Music%20City%2C%201355%20Bush%20Street%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Rail Rage",
-              "href": "https://open.spotify.com/search/Rail%20Rage"
-            },
-            {
-              "text": "Vexxum",
-              "href": "https://open.spotify.com/search/Vexxum"
-            },
-            {
-              "text": "Vesseles",
-              "href": "https://open.spotify.com/search/Vesseles"
-            }
-          ],
-          "extra": "a/a $10/$15 7pm"
-        },
-        {
-          "venue": {
-            "text": "Neck of the Woods, S.F.",
-            "href": "https://www.google.com/search?q=Neck%20of%20the%20Woods%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Undying",
-              "href": "https://open.spotify.com/search/Undying"
-            },
-            {
-              "text": "Wolf King",
-              "href": "https://open.spotify.com/search/Wolf%20King"
-            },
-            {
-              "text": "Lost To The Void",
-              "href": "https://open.spotify.com/search/Lost%20To%20The%20Void"
-            },
-            {
-              "text": "Barberous",
-              "href": "https://open.spotify.com/search/Barberous"
-            },
-            {
-              "text": "Crepuscule",
-              "href": "https://open.spotify.com/search/Crepuscule"
-            }
-          ],
-          "extra": "a/a $12/15 6:30pm/7:30pm @"
-        },
-        {
-          "venue": {
-            "text": "O'Reilly's, S.F.",
-            "href": "https://www.google.com/search?q=O'Reilly's%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Dopamine Drive",
-              "href": "https://open.spotify.com/search/Dopamine%20Drive"
-            },
-            {
-              "text": "Fancy Moneys",
-              "href": "https://open.spotify.com/search/Fancy%20Moneys"
-            },
-            {
-              "text": "Tuan",
-              "href": "https://open.spotify.com/search/Tuan"
-            },
-            {
-              "text": "Eternalites",
-              "href": "https://open.spotify.com/search/Eternalites"
-            }
-          ],
-          "extra": "21+ $10/$15 7pm"
-        },
-        {
-          "venue": {
-            "text": "Rickshaw Stop, S.F.",
-            "href": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Youth Brigade",
-              "href": "https://open.spotify.com/search/Youth%20Brigade"
-            },
-            {
-              "text": "Western Addiction",
-              "href": "https://open.spotify.com/search/Western%20Addiction"
-            },
-            {
-              "text": "Bullship Detector",
-              "href": "https://open.spotify.com/search/Bullship%20Detector"
-            },
-            {
-              "text": "Hunting Lions",
-              "href": "https://open.spotify.com/search/Hunting%20Lions"
-            }
-          ],
-          "extra": "a/a $28/$30 8pm/8:30pm @"
-        },
-        {
-          "venue": {
-            "text": "Sweetwater Music Hall, Mill Valley",
-            "href": "https://www.google.com/search?q=Sweetwater%20Music%20Hall%2C%20Mill%20Valley"
-          },
-          "bands": [
-            {
-              "text": "Flamin' Groovies",
-              "href": "https://open.spotify.com/search/Flamin'%20Groovies"
-            },
-            {
-              "text": "Minks",
-              "href": "https://open.spotify.com/search/Minks"
-            }
-          ],
-          "extra": "a/a $35.58 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Thee Stork Club, Oakland",
-            "href": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Night Court",
-              "href": "https://open.spotify.com/search/Night%20Court"
-            },
-            {
-              "text": "Hammerbombs",
-              "href": "https://open.spotify.com/search/Hammerbombs"
-            },
-            {
-              "text": "Sterile Eye",
-              "href": "https://open.spotify.com/search/Sterile%20Eye"
-            }
-          ],
-          "extra": "21+ $12/$15 8pm"
-        },
-        {
-          "venue": {
-            "text": "Washington Avenue at Parkk Place, Point Richmond",
-            "href": "https://www.google.com/search?q=Washington%20Avenue%20at%20Parkk%20Place%2C%20Point%20Richmond"
-          },
-          "bands": [
-            {
-              "text": "Mbira Dzasoko",
-              "href": "https://open.spotify.com/search/Mbira%20Dzasoko"
-            },
-            {
-              "text": "Extra Large",
-              "href": "https://open.spotify.com/search/Extra%20Large"
-            }
-          ],
-          "extra": "a/a free 5:30pm"
-        }
-      ]
-    },
-    {
       "day": "Sat Jul 12",
       "normalizedDate": "2025-07-12",
       "events": [
@@ -1250,8 +52,12 @@
               "href": "https://open.spotify.com/search/God%20Awful%20Truth"
             },
             {
-              "text": "Lockslip Rob Ford Explorer",
-              "href": "https://open.spotify.com/search/Lockslip%20Rob%20Ford%20Explorer"
+              "text": "Lockslip",
+              "href": "https://open.spotify.com/search/Lockslip"
+            },
+            {
+              "text": "Rob Ford Explorer",
+              "href": "https://open.spotify.com/search/Rob%20Ford%20Explorer"
             },
             {
               "text": "Arson Choir",
@@ -1432,8 +238,8 @@
         },
         {
           "venue": {
-            "text": "Danny Murry's Irish Pub, 1680 Washington Avenue, San Leandro",
-            "href": "https://www.google.com/search?q=Danny%20Murry's%20Irish%20Pub%2C%201680%20Washington%20Avenue%2C%20San%20Leandro"
+            "text": "Danny Murry's Irish Pub, 1680 Washington Ave., San Leandro",
+            "href": "https://www.google.com/search?q=Danny%20Murry's%20Irish%20Pub%2C%201680%20Washington%20Ave.%2C%20San%20Leandro"
           },
           "bands": [
             {
@@ -1445,7 +251,7 @@
               "href": "https://open.spotify.com/search/Eye%20Sores"
             }
           ],
-          "extra": "21+ 8pm"
+          "extra": "21+ $5 8pm"
         },
         {
           "venue": {
@@ -1484,6 +290,40 @@
             }
           ],
           "extra": "21+ free 4pm"
+        },
+        {
+          "venue": {
+            "text": "Golden Gate Valley Library, 1801 Green Street, S.F.",
+            "href": "https://www.google.com/search?q=Golden%20Gate%20Valley%20Library%2C%201801%20Green%20Street%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Wobbly",
+              "href": "https://open.spotify.com/search/Wobbly"
+            }
+          ],
+          "extra": "a/a free 3pm"
+        },
+        {
+          "venue": {
+            "text": "Gray Area Grand Theater, S.F.",
+            "href": "https://www.google.com/search?q=Gray%20Area%20Grand%20Theater%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Wu Zhuo Ling",
+              "href": "https://open.spotify.com/search/Wu%20Zhuo%20Ling"
+            },
+            {
+              "text": "Mike Gao",
+              "href": "https://open.spotify.com/search/Mike%20Gao"
+            },
+            {
+              "text": "Le Fou",
+              "href": "https://open.spotify.com/search/Le%20Fou"
+            }
+          ],
+          "extra": "21+ $31.72 8pm"
         },
         {
           "venue": {
@@ -1592,6 +432,52 @@
         },
         {
           "venue": {
+            "text": "Lane Splitter Pizza, 2645 San Pablo Avenue, Emeryville",
+            "href": "https://www.google.com/search?q=Lane%20Splitter%20Pizza%2C%202645%20San%20Pablo%20Avenue%2C%20Emeryville"
+          },
+          "bands": [
+            {
+              "text": "Durango Dogs",
+              "href": "https://open.spotify.com/search/Durango%20Dogs"
+            },
+            {
+              "text": "Injest",
+              "href": "https://open.spotify.com/search/Injest"
+            },
+            {
+              "text": "Wonderland Rejects",
+              "href": "https://open.spotify.com/search/Wonderland%20Rejects"
+            },
+            {
+              "text": "Thrashley",
+              "href": "https://open.spotify.com/search/Thrashley"
+            }
+          ],
+          "extra": "a/a 6pm"
+        },
+        {
+          "venue": {
+            "text": "Makeout Room, S.F.",
+            "href": "https://www.google.com/search?q=Makeout%20Room%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Fantasy",
+              "href": "https://open.spotify.com/search/Fantasy"
+            },
+            {
+              "text": "Zephyr Love",
+              "href": "https://open.spotify.com/search/Zephyr%20Love"
+            },
+            {
+              "text": "Effort Because",
+              "href": "https://open.spotify.com/search/Effort%20Because"
+            }
+          ],
+          "extra": "21+ $15 7pm"
+        },
+        {
+          "venue": {
             "text": "Moe's Alley, Santa Cruz",
             "href": "https://www.google.com/search?q=Moe's%20Alley%2C%20Santa%20Cruz"
           },
@@ -1622,7 +508,7 @@
               "href": "https://open.spotify.com/search/David%20Spade"
             }
           ],
-          "extra": "a/a 8pm"
+          "extra": "a/a $32+ 8pm"
         },
         {
           "venue": {
@@ -1735,6 +621,19 @@
         },
         {
           "venue": {
+            "text": "Rellik Tavern, 726 First Street, Benicia",
+            "href": "https://www.google.com/search?q=Rellik%20Tavern%2C%20726%20First%20Street%2C%20Benicia"
+          },
+          "bands": [
+            {
+              "text": "Tahoes",
+              "href": "https://open.spotify.com/search/Tahoes"
+            }
+          ],
+          "extra": "21+ free"
+        },
+        {
+          "venue": {
             "text": "Stary Plough, Berkeley",
             "href": "https://www.google.com/search?q=Stary%20Plough%2C%20Berkeley"
           },
@@ -1753,6 +652,52 @@
             }
           ],
           "extra": "21+ $15/$20 8pm/9pm"
+        },
+        {
+          "venue": {
+            "text": "Stay Gold Deli, Oakland",
+            "href": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Black White And Red All Over",
+              "href": "https://open.spotify.com/search/Black%20White%20And%20Red%20All%20Over"
+            },
+            {
+              "text": "Lashful",
+              "href": "https://open.spotify.com/search/Lashful"
+            },
+            {
+              "text": "All Bark",
+              "href": "https://open.spotify.com/search/All%20Bark"
+            },
+            {
+              "text": "Green Cat",
+              "href": "https://open.spotify.com/search/Green%20Cat"
+            }
+          ],
+          "extra": "a/a $10 5:30pm/6pm"
+        },
+        {
+          "venue": {
+            "text": "Subrosa, Santa Cruz",
+            "href": "https://www.google.com/search?q=Subrosa%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Sunburnt Bones",
+              "href": "https://open.spotify.com/search/Sunburnt%20Bones"
+            },
+            {
+              "text": "Yamas & Papas",
+              "href": "https://open.spotify.com/search/Yamas%20%26%20Papas"
+            },
+            {
+              "text": "Ember Nugent",
+              "href": "https://open.spotify.com/search/Ember%20Nugent"
+            }
+          ],
+          "extra": "a/a $10/$15 7pm"
         },
         {
           "venue": {
@@ -1801,6 +746,10 @@
             {
               "text": "Davido",
               "href": "https://open.spotify.com/search/Davido"
+            },
+            {
+              "text": "Morravey",
+              "href": "https://open.spotify.com/search/Morravey"
             }
           ],
           "extra": "a/a 7pm/8pm #"
@@ -1817,6 +766,31 @@
             }
           ],
           "extra": "a/a free 2pm"
+        },
+        {
+          "venue": {
+            "text": "a House, American Canyon",
+            "href": "https://www.google.com/search?q=a%20House%2C%20American%20Canyon"
+          },
+          "bands": [
+            {
+              "text": "Sex-Ed",
+              "href": "https://open.spotify.com/search/Sex-Ed"
+            },
+            {
+              "text": "Squish",
+              "href": "https://open.spotify.com/search/Squish"
+            },
+            {
+              "text": "Delve",
+              "href": "https://open.spotify.com/search/Delve"
+            },
+            {
+              "text": "Big Squid",
+              "href": "https://open.spotify.com/search/Big%20Squid"
+            }
+          ],
+          "extra": "a/a $10 6:30pm/7pm (contact bands 4 locatio)"
         }
       ]
     },
@@ -1899,8 +873,8 @@
               "href": "https://open.spotify.com/search/Not.Greenday"
             },
             {
-              "text": "Tess & The Details",
-              "href": "https://open.spotify.com/search/Tess%20%26%20The%20Details"
+              "text": "Tess And The Details",
+              "href": "https://open.spotify.com/search/Tess%20And%20The%20Details"
             },
             {
               "text": "Lost Puppy Forever",
@@ -1916,20 +890,20 @@
           },
           "bands": [
             {
-              "text": "Big Blue Soul Revue",
-              "href": "https://open.spotify.com/search/Big%20Blue%20Soul%20Revue"
-            },
-            {
-              "text": "Liv Belda",
-              "href": "https://open.spotify.com/search/Liv%20Belda"
+              "text": "Big Blue Soul Revue, Liv Belda",
+              "href": "https://open.spotify.com/search/Big%20Blue%20Soul%20Revue%2C%20Liv%20Belda"
             },
             {
               "text": "Prophet Martian",
               "href": "https://open.spotify.com/search/Prophet%20Martian"
             },
             {
-              "text": "Astralogik",
-              "href": "https://open.spotify.com/search/Astralogik"
+              "text": "Electricfiers",
+              "href": "https://open.spotify.com/search/Electricfiers"
+            },
+            {
+              "text": "Maya Elise, Rory Lynch",
+              "href": "https://open.spotify.com/search/Maya%20Elise%2C%20Rory%20Lynch"
             },
             {
               "text": "Dead Nettle",
@@ -1944,19 +918,15 @@
               "href": "https://open.spotify.com/search/Magic%20School%20Busk"
             },
             {
-              "text": "Maya Elise",
-              "href": "https://open.spotify.com/search/Maya%20Elise"
-            },
-            {
-              "text": "Rory Lynch",
-              "href": "https://open.spotify.com/search/Rory%20Lynch"
+              "text": "Astralogik",
+              "href": "https://open.spotify.com/search/Astralogik"
             },
             {
               "text": "Three Flower Jam",
               "href": "https://open.spotify.com/search/Three%20Flower%20Jam"
             }
           ],
-          "extra": "a/a free 11am til 6:30pm (Ferry Fest)"
+          "extra": "a/a free 11am til 6:30pm (Ferry Fest 3 stages)"
         },
         {
           "venue": {
@@ -1998,8 +968,8 @@
         },
         {
           "venue": {
-            "text": "Indepedent, S.F.",
-            "href": "https://www.google.com/search?q=Indepedent%2C%20S.F."
+            "text": "Independent, S.F.",
+            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
           },
           "bands": [
             {
@@ -2007,7 +977,7 @@
               "href": "https://open.spotify.com/search/Luigi%3A%20The%20Musical"
             }
           ],
-          "extra": "21+ $38.13 ($43.28/$54.10 seated) 7pm/8pm"
+          "extra": "21+ $38.13 ($43.28/$54.10 seated) 7pm/8pm (sold out)"
         },
         {
           "venue": {
@@ -2099,6 +1069,44 @@
         },
         {
           "venue": {
+            "text": "Little Hill Lounge, El Cerrito",
+            "href": "https://www.google.com/search?q=Little%20Hill%20Lounge%2C%20El%20Cerrito"
+          },
+          "bands": [
+            {
+              "text": "Zachary James Watkins",
+              "href": "https://open.spotify.com/search/Zachary%20James%20Watkins"
+            },
+            {
+              "text": "Gaseous Corpsewater",
+              "href": "https://open.spotify.com/search/Gaseous%20Corpsewater"
+            },
+            {
+              "text": "Headbleedultraviolet",
+              "href": "https://open.spotify.com/search/Headbleedultraviolet"
+            }
+          ],
+          "extra": "21+ free 8pm"
+        },
+        {
+          "venue": {
+            "text": "Mars Records, 1425 Piedmont Unit 7, Oakland",
+            "href": "https://www.google.com/search?q=Mars%20Records%2C%201425%20Piedmont%20Unit%207%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Savage Resurrection",
+              "href": "https://open.spotify.com/search/Savage%20Resurrection"
+            },
+            {
+              "text": "Boars",
+              "href": "https://open.spotify.com/search/Boars"
+            }
+          ],
+          "extra": "a/a free 5pm"
+        },
+        {
+          "venue": {
             "text": "Meritage Resort, Napa",
             "href": "https://www.google.com/search?q=Meritage%20Resort%2C%20Napa"
           },
@@ -2150,7 +1158,7 @@
               "href": "https://open.spotify.com/search/Braintoothe"
             }
           ],
-          "extra": "a/a $10 3pm/4pm"
+          "extra": "a/a $10 3pm/4pm @"
         },
         {
           "venue": {
@@ -2304,10 +1312,6 @@
           },
           "bands": [
             {
-              "text": "Locs Only",
-              "href": "https://open.spotify.com/search/Locs%20Only"
-            },
-            {
               "text": "Circulators",
               "href": "https://open.spotify.com/search/Circulators"
             },
@@ -2343,6 +1347,31 @@
         },
         {
           "venue": {
+            "text": "Brick and Mortar, S.F.",
+            "href": "https://www.google.com/search?q=Brick%20and%20Mortar%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Bummer Girl",
+              "href": "https://open.spotify.com/search/Bummer%20Girl"
+            },
+            {
+              "text": "Practically People",
+              "href": "https://open.spotify.com/search/Practically%20People"
+            },
+            {
+              "text": "Hazy Portraits",
+              "href": "https://open.spotify.com/search/Hazy%20Portraits"
+            },
+            {
+              "text": "Daisy's Room",
+              "href": "https://open.spotify.com/search/Daisy's%20Room"
+            }
+          ],
+          "extra": "a/a $21.86 (under 21 plus $5) 7:30pm/8pm ^"
+        },
+        {
+          "venue": {
             "text": "Cornerstone, Berkeley",
             "href": "https://www.google.com/search?q=Cornerstone%2C%20Berkeley"
           },
@@ -2366,6 +1395,19 @@
             }
           ],
           "extra": "a/a 8pm"
+        },
+        {
+          "venue": {
+            "text": "Independent, S.F.",
+            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Luigi: The Musical",
+              "href": "https://open.spotify.com/search/Luigi%3A%20The%20Musical"
+            }
+          ],
+          "extra": "21+ $38.13 ($43.28/$54.10 seated) 7pm/8pm (sold out)"
         },
         {
           "venue": {
@@ -2432,6 +1474,31 @@
         },
         {
           "venue": {
+            "text": "Stay Gold Deli, Oakland",
+            "href": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Straggler",
+              "href": "https://open.spotify.com/search/Straggler"
+            },
+            {
+              "text": "Throat Rip",
+              "href": "https://open.spotify.com/search/Throat%20Rip"
+            },
+            {
+              "text": "Kretin",
+              "href": "https://open.spotify.com/search/Kretin"
+            },
+            {
+              "text": "Badfast",
+              "href": "https://open.spotify.com/search/Badfast"
+            }
+          ],
+          "extra": "a/a $8 7pm"
+        },
+        {
+          "venue": {
             "text": "Yoshi's, Oakland",
             "href": "https://www.google.com/search?q=Yoshi's%2C%20Oakland"
           },
@@ -2493,7 +1560,7 @@
               "href": "https://open.spotify.com/search/Iquanna%20Death%20Cult"
             }
           ],
-          "extra": "a/a 7pm/8pm"
+          "extra": "a/a $33.14 7pm/8pm"
         },
         {
           "venue": {
@@ -2504,9 +1571,13 @@
             {
               "text": "Fin.",
               "href": "https://open.spotify.com/search/Fin."
+            },
+            {
+              "text": "Tauwoo",
+              "href": "https://open.spotify.com/search/Tauwoo"
             }
           ],
-          "extra": "a/a"
+          "extra": "a/a $24.69 7pm/8pm"
         },
         {
           "venue": {
@@ -2644,6 +1715,35 @@
         },
         {
           "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "Tektonic",
+              "href": "https://open.spotify.com/search/Tektonic"
+            },
+            {
+              "text": "Lowlife Coach",
+              "href": "https://open.spotify.com/search/Lowlife%20Coach"
+            },
+            {
+              "text": "Elegant Trash",
+              "href": "https://open.spotify.com/search/Elegant%20Trash"
+            },
+            {
+              "text": "Junior Painkillers",
+              "href": "https://open.spotify.com/search/Junior%20Painkillers"
+            },
+            {
+              "text": "Sparkle Plenty",
+              "href": "https://open.spotify.com/search/Sparkle%20Plenty"
+            }
+          ],
+          "extra": "21+ $10 ($20 vip)"
+        },
+        {
+          "venue": {
             "text": "Kilowatt, S.F.",
             "href": "https://www.google.com/search?q=Kilowatt%2C%20S.F."
           },
@@ -2686,6 +1786,27 @@
         },
         {
           "venue": {
+            "text": "Little Hill Lounge, El Cerrito",
+            "href": "https://www.google.com/search?q=Little%20Hill%20Lounge%2C%20El%20Cerrito"
+          },
+          "bands": [
+            {
+              "text": "Human Corporation",
+              "href": "https://open.spotify.com/search/Human%20Corporation"
+            },
+            {
+              "text": "Couldn't Deal",
+              "href": "https://open.spotify.com/search/Couldn't%20Deal"
+            },
+            {
+              "text": "Of Time",
+              "href": "https://open.spotify.com/search/Of%20Time"
+            }
+          ],
+          "extra": "21+ free 8pm"
+        },
+        {
+          "venue": {
             "text": "Mountain Winery, Saratoga",
             "href": "https://www.google.com/search?q=Mountain%20Winery%2C%20Saratoga"
           },
@@ -2700,6 +1821,35 @@
             }
           ],
           "extra": "a/a 5:30pm/7:30pm"
+        },
+        {
+          "venue": {
+            "text": "Oakland Secret, Oakland",
+            "href": "https://www.google.com/search?q=Oakland%20Secret%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Burnout",
+              "href": "https://open.spotify.com/search/Burnout"
+            },
+            {
+              "text": "Friendship Games",
+              "href": "https://open.spotify.com/search/Friendship%20Games"
+            },
+            {
+              "text": "Little Critter",
+              "href": "https://open.spotify.com/search/Little%20Critter"
+            },
+            {
+              "text": "A French Project",
+              "href": "https://open.spotify.com/search/A%20French%20Project"
+            },
+            {
+              "text": "Maintecen",
+              "href": "https://open.spotify.com/search/Maintecen"
+            }
+          ],
+          "extra": "a/a $10 6pm/7pm"
         },
         {
           "venue": {
@@ -2828,6 +1978,27 @@
         },
         {
           "venue": {
+            "text": "Eagle Tavern, S.F.",
+            "href": "https://www.google.com/search?q=Eagle%20Tavern%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Horrhaus",
+              "href": "https://open.spotify.com/search/Horrhaus"
+            },
+            {
+              "text": "Dogs That Bite",
+              "href": "https://open.spotify.com/search/Dogs%20That%20Bite"
+            },
+            {
+              "text": "Rays",
+              "href": "https://open.spotify.com/search/Rays"
+            }
+          ],
+          "extra": "21+ $10-$15 sliding scale 8pm"
+        },
+        {
+          "venue": {
             "text": "Eli's Mile High Club, Oakland",
             "href": "https://www.google.com/search?q=Eli's%20Mile%20High%20Club%2C%20Oakland"
           },
@@ -2856,6 +2027,14 @@
             {
               "text": "Harbour",
               "href": "https://open.spotify.com/search/Harbour"
+            },
+            {
+              "text": "Sam MacPherson",
+              "href": "https://open.spotify.com/search/Sam%20MacPherson"
+            },
+            {
+              "text": "Hate Drugs",
+              "href": "https://open.spotify.com/search/Hate%20Drugs"
             }
           ],
           "extra": "a/a 7:30pm/8pm"
@@ -2926,6 +2105,31 @@
             }
           ],
           "extra": "21+ $17.53 8pm/9pm (Mosswood Meltdown)"
+        },
+        {
+          "venue": {
+            "text": "Long Haul, 3124 Shattuck Ave., Berkeley",
+            "href": "https://www.google.com/search?q=Long%20Haul%2C%203124%20Shattuck%20Ave.%2C%20Berkeley"
+          },
+          "bands": [
+            {
+              "text": "Kangsy McLovin And The ICEbreakers",
+              "href": "https://open.spotify.com/search/Kangsy%20McLovin%20And%20The%20ICEbreakers"
+            },
+            {
+              "text": "Clark Chimp",
+              "href": "https://open.spotify.com/search/Clark%20Chimp"
+            },
+            {
+              "text": "Kissin' cousins",
+              "href": "https://open.spotify.com/search/Kissin'%20cousins"
+            },
+            {
+              "text": "Please Save My Earth",
+              "href": "https://open.spotify.com/search/Please%20Save%20My%20Earth"
+            }
+          ],
+          "extra": "a/a 6pm/6:30pm"
         },
         {
           "venue": {
@@ -3010,6 +2214,56 @@
         },
         {
           "venue": {
+            "text": "Stay Gold Deli, Oakland",
+            "href": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "We're The Currency",
+              "href": "https://open.spotify.com/search/We're%20The%20Currency"
+            },
+            {
+              "text": "Ritornello Form",
+              "href": "https://open.spotify.com/search/Ritornello%20Form"
+            },
+            {
+              "text": "Shortstop",
+              "href": "https://open.spotify.com/search/Shortstop"
+            },
+            {
+              "text": "Exposure Therapy",
+              "href": "https://open.spotify.com/search/Exposure%20Therapy"
+            },
+            {
+              "text": "With Open Arms",
+              "href": "https://open.spotify.com/search/With%20Open%20Arms"
+            },
+            {
+              "text": "Taxi",
+              "href": "https://open.spotify.com/search/Taxi"
+            }
+          ],
+          "extra": "a/a $15 5:30pm/6pm @"
+        },
+        {
+          "venue": {
+            "text": "Sweetwater Music Hall, Mill Valley",
+            "href": "https://www.google.com/search?q=Sweetwater%20Music%20Hall%2C%20Mill%20Valley"
+          },
+          "bands": [
+            {
+              "text": "Meaty Ogres",
+              "href": "https://open.spotify.com/search/Meaty%20Ogres"
+            },
+            {
+              "text": "Quench",
+              "href": "https://open.spotify.com/search/Quench"
+            }
+          ],
+          "extra": "a/a $26.28 7pm/8pm"
+        },
+        {
+          "venue": {
             "text": "UC Theater, Berkeley",
             "href": "https://www.google.com/search?q=UC%20Theater%2C%20Berkeley"
           },
@@ -3059,31 +2313,6 @@
       "events": [
         {
           "venue": {
-            "text": "1035 22nd Avenue, Unit 14, Oakland",
-            "href": "https://www.google.com/search?q=1035%2022nd%20Avenue%2C%20Unit%2014%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Solar Return",
-              "href": "https://open.spotify.com/search/Solar%20Return"
-            },
-            {
-              "text": "Thoabath/Incendia",
-              "href": "https://open.spotify.com/search/Thoabath%2FIncendia"
-            },
-            {
-              "text": "S*Glass",
-              "href": "https://open.spotify.com/search/S*Glass"
-            },
-            {
-              "text": "Mason Joens",
-              "href": "https://open.spotify.com/search/Mason%20Joens"
-            }
-          ],
-          "extra": "a/a $15 8:30pm/9pm"
-        },
-        {
-          "venue": {
             "text": "240 Front Street, S.F.",
             "href": "https://www.google.com/search?q=240%20Front%20Street%2C%20S.F."
           },
@@ -3106,6 +2335,31 @@
             }
           ],
           "extra": "a/a free 4pm til 10pm"
+        },
+        {
+          "venue": {
+            "text": "4 Star Theater, S.F.",
+            "href": "https://www.google.com/search?q=4%20Star%20Theater%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Double Helix Peace Treaty",
+              "href": "https://open.spotify.com/search/Double%20Helix%20Peace%20Treaty"
+            },
+            {
+              "text": "Circus Mondays Clown Troupe",
+              "href": "https://open.spotify.com/search/Circus%20Mondays%20Clown%20Troupe"
+            },
+            {
+              "text": "Reid Devereaux",
+              "href": "https://open.spotify.com/search/Reid%20Devereaux"
+            },
+            {
+              "text": "Nathan Kruse",
+              "href": "https://open.spotify.com/search/Nathan%20Kruse"
+            }
+          ],
+          "extra": "a/a $15 7:30pm"
         },
         {
           "venue": {
@@ -3250,6 +2504,27 @@
             }
           ],
           "extra": "21+ 9pm"
+        },
+        {
+          "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Hellflowers",
+              "href": "https://open.spotify.com/search/Hellflowers"
+            },
+            {
+              "text": "Crimson Riot",
+              "href": "https://open.spotify.com/search/Crimson%20Riot"
+            },
+            {
+              "text": "Hi Jinx",
+              "href": "https://open.spotify.com/search/Hi%20Jinx"
+            }
+          ],
+          "extra": "21+ free 10pm"
         },
         {
           "venue": {
@@ -3408,12 +2683,8 @@
           },
           "bands": [
             {
-              "text": "Rooney",
-              "href": "https://open.spotify.com/search/Rooney"
-            },
-            {
-              "text": "Colin Blunstone",
-              "href": "https://open.spotify.com/search/Colin%20Blunstone"
+              "text": "Colin Blunstone with Rooney",
+              "href": "https://open.spotify.com/search/Colin%20Blunstone%20with%20Rooney"
             },
             {
               "text": "film screening \"Hung Up On A Dream\"",
@@ -3421,6 +2692,27 @@
             }
           ],
           "extra": "a/a $35/$38 6pm/7:15pm (seated)"
+        },
+        {
+          "venue": {
+            "text": "Hotel Utah, S.F.",
+            "href": "https://www.google.com/search?q=Hotel%20Utah%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "CuVa Bimö",
+              "href": "https://open.spotify.com/search/CuVa%20Bim%C3%B6"
+            },
+            {
+              "text": "Lofi Satellites",
+              "href": "https://open.spotify.com/search/Lofi%20Satellites"
+            },
+            {
+              "text": "Lost Objects",
+              "href": "https://open.spotify.com/search/Lost%20Objects"
+            }
+          ],
+          "extra": "21+ $10/$15 8pm"
         },
         {
           "venue": {
@@ -3463,6 +2755,27 @@
             }
           ],
           "extra": "21+ 7:30pm"
+        },
+        {
+          "venue": {
+            "text": "Jury Room, Santa Cruz",
+            "href": "https://www.google.com/search?q=Jury%20Room%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Randy Savages",
+              "href": "https://open.spotify.com/search/Randy%20Savages"
+            },
+            {
+              "text": "Dirty Dog",
+              "href": "https://open.spotify.com/search/Dirty%20Dog"
+            },
+            {
+              "text": "Alex Sandra",
+              "href": "https://open.spotify.com/search/Alex%20Sandra"
+            }
+          ],
+          "extra": "21+ $10 9pm"
         },
         {
           "venue": {
@@ -3559,13 +2872,59 @@
         },
         {
           "venue": {
+            "text": "Oakland Secret Gallery, Oakland",
+            "href": "https://www.google.com/search?q=Oakland%20Secret%20Gallery%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Dusty Slims",
+              "href": "https://open.spotify.com/search/Dusty%20Slims"
+            },
+            {
+              "text": "Big Dog Mastiff",
+              "href": "https://open.spotify.com/search/Big%20Dog%20Mastiff"
+            },
+            {
+              "text": "Sunder",
+              "href": "https://open.spotify.com/search/Sunder"
+            },
+            {
+              "text": "Still Ruins",
+              "href": "https://open.spotify.com/search/Still%20Ruins"
+            },
+            {
+              "text": "Cielo",
+              "href": "https://open.spotify.com/search/Cielo"
+            }
+          ],
+          "extra": "a/a $10 7pm"
+        },
+        {
+          "venue": {
+            "text": "Old Princeton Landing, 460 Capistrano Way, Half Moon Bay",
+            "href": "https://www.google.com/search?q=Old%20Princeton%20Landing%2C%20460%20Capistrano%20Way%2C%20Half%20Moon%20Bay"
+          },
+          "bands": [
+            {
+              "text": "Allah-Las",
+              "href": "https://open.spotify.com/search/Allah-Las"
+            },
+            {
+              "text": "Sepe",
+              "href": "https://open.spotify.com/search/Sepe"
+            }
+          ],
+          "extra": "a/a $66.89 5:30pm/6:30pm (outdoors show)"
+        },
+        {
+          "venue": {
             "text": "Phoenix Theater, Petaluma",
             "href": "https://www.google.com/search?q=Phoenix%20Theater%2C%20Petaluma"
           },
           "bands": [
             {
-              "text": "Gumb's Junk",
-              "href": "https://open.spotify.com/search/Gumb's%20Junk"
+              "text": "Gumby's Junk",
+              "href": "https://open.spotify.com/search/Gumby's%20Junk"
             },
             {
               "text": "Nekron 99",
@@ -3651,6 +3010,48 @@
         },
         {
           "venue": {
+            "text": "Towne Cycles Backyard, 3137 Adeline Street, Berkeley",
+            "href": "https://www.google.com/search?q=Towne%20Cycles%20Backyard%2C%203137%20Adeline%20Street%2C%20Berkeley"
+          },
+          "bands": [
+            {
+              "text": "David Byrd",
+              "href": "https://open.spotify.com/search/David%20Byrd"
+            },
+            {
+              "text": "Quim Font",
+              "href": "https://open.spotify.com/search/Quim%20Font"
+            }
+          ],
+          "extra": "a/a $10 7pm"
+        },
+        {
+          "venue": {
+            "text": "Ugra Deva Loka, 1035 22nd Ave. Unit 14, Oakland",
+            "href": "https://www.google.com/search?q=Ugra%20Deva%20Loka%2C%201035%2022nd%20Ave.%20Unit%2014%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Solar Return",
+              "href": "https://open.spotify.com/search/Solar%20Return"
+            },
+            {
+              "text": "Thoabath/Incendia",
+              "href": "https://open.spotify.com/search/Thoabath%2FIncendia"
+            },
+            {
+              "text": "S*Glass",
+              "href": "https://open.spotify.com/search/S*Glass"
+            },
+            {
+              "text": "Mason Joens",
+              "href": "https://open.spotify.com/search/Mason%20Joens"
+            }
+          ],
+          "extra": "a/a $15 8:30pm/9pm"
+        },
+        {
+          "venue": {
             "text": "Vinnie's Bar, 2045 Mount Diablo Street, Concord",
             "href": "https://www.google.com/search?q=Vinnie's%20Bar%2C%202045%20Mount%20Diablo%20Street%2C%20Concord"
           },
@@ -3677,6 +3078,31 @@
             }
           ],
           "extra": "21+ $34/$41 7pm/8pm @"
+        },
+        {
+          "venue": {
+            "text": "Wardlaw Skatepark, 1805 Ascot Parkway, Vallejo",
+            "href": "https://www.google.com/search?q=Wardlaw%20Skatepark%2C%201805%20Ascot%20Parkway%2C%20Vallejo"
+          },
+          "bands": [
+            {
+              "text": "Snallygaster",
+              "href": "https://open.spotify.com/search/Snallygaster"
+            },
+            {
+              "text": "Straggler",
+              "href": "https://open.spotify.com/search/Straggler"
+            },
+            {
+              "text": "Dissociation",
+              "href": "https://open.spotify.com/search/Dissociation"
+            },
+            {
+              "text": "S.H.E.D.",
+              "href": "https://open.spotify.com/search/S.H.E.D."
+            }
+          ],
+          "extra": "a/a free 6pm @"
         },
         {
           "venue": {
@@ -3809,6 +3235,27 @@
         },
         {
           "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Memo & The Notebooks",
+              "href": "https://open.spotify.com/search/Memo%20%26%20The%20Notebooks"
+            },
+            {
+              "text": "Looking For Adam",
+              "href": "https://open.spotify.com/search/Looking%20For%20Adam"
+            },
+            {
+              "text": "Mayday Mae",
+              "href": "https://open.spotify.com/search/Mayday%20Mae"
+            }
+          ],
+          "extra": "21+ free 10pm"
+        },
+        {
+          "venue": {
             "text": "Chapel, S.F.",
             "href": "https://www.google.com/search?q=Chapel%2C%20S.F."
           },
@@ -3826,7 +3273,7 @@
               "href": "https://open.spotify.com/search/Sour%20Widows"
             }
           ],
-          "extra": "a/a 8pm/9pm"
+          "extra": "a/a $31.91 8pm/9pm"
         },
         {
           "venue": {
@@ -4109,6 +3556,23 @@
         },
         {
           "venue": {
+            "text": "Makeout Room, S.F.",
+            "href": "https://www.google.com/search?q=Makeout%20Room%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Starry Eyed Cadet",
+              "href": "https://open.spotify.com/search/Starry%20Eyed%20Cadet"
+            },
+            {
+              "text": "Dorio",
+              "href": "https://open.spotify.com/search/Dorio"
+            }
+          ],
+          "extra": "21+ $15 7pm"
+        },
+        {
+          "venue": {
             "text": "Mosswood Park Amphitheater, 3612 Webster St, Oakland",
             "href": "https://www.google.com/search?q=Mosswood%20Park%20Amphitheater%2C%203612%20Webster%20St%2C%20Oakland"
           },
@@ -4299,6 +3763,27 @@
             }
           ],
           "extra": "a/a $70.50 ($211 vip) 7pm/8pm #"
+        },
+        {
+          "venue": {
+            "text": "Up the Creek Records, 2042 Mt. Diablo Blvd. Walnut Creek",
+            "href": "https://www.google.com/search?q=Up%20the%20Creek%20Records%2C%202042%20Mt.%20Diablo%20Blvd.%20Walnut%20Creek"
+          },
+          "bands": [
+            {
+              "text": "Concussion",
+              "href": "https://open.spotify.com/search/Concussion"
+            },
+            {
+              "text": "Rosewood",
+              "href": "https://open.spotify.com/search/Rosewood"
+            },
+            {
+              "text": "Velvet Grave",
+              "href": "https://open.spotify.com/search/Velvet%20Grave"
+            }
+          ],
+          "extra": "a/a $15 6pm"
         },
         {
           "venue": {
@@ -4621,6 +4106,31 @@
         },
         {
           "venue": {
+            "text": "Little Hill Lounge, El Cerrito",
+            "href": "https://www.google.com/search?q=Little%20Hill%20Lounge%2C%20El%20Cerrito"
+          },
+          "bands": [
+            {
+              "text": "Sean Forth",
+              "href": "https://open.spotify.com/search/Sean%20Forth"
+            },
+            {
+              "text": "Clementine Darling",
+              "href": "https://open.spotify.com/search/Clementine%20Darling"
+            },
+            {
+              "text": "Sloan Irving",
+              "href": "https://open.spotify.com/search/Sloan%20Irving"
+            },
+            {
+              "text": "Justin Jones",
+              "href": "https://open.spotify.com/search/Justin%20Jones"
+            }
+          ],
+          "extra": "21+ free 8pm"
+        },
+        {
+          "venue": {
             "text": "Meritage Resort, Napa",
             "href": "https://www.google.com/search?q=Meritage%20Resort%2C%20Napa"
           },
@@ -4725,13 +4235,13 @@
         },
         {
           "venue": {
-            "text": "Oakland Secret, Oaland",
-            "href": "https://www.google.com/search?q=Oakland%20Secret%2C%20Oaland"
+            "text": "Oakland Secret Gallery, Oakland",
+            "href": "https://www.google.com/search?q=Oakland%20Secret%20Gallery%2C%20Oakland"
           },
           "bands": [
             {
-              "text": "HKFY",
-              "href": "https://open.spotify.com/search/HKFY"
+              "text": "Hong Kong Fuck You!",
+              "href": "https://open.spotify.com/search/Hong%20Kong%20Fuck%20You!"
             },
             {
               "text": "Mormon Mincers",
@@ -4750,7 +4260,7 @@
               "href": "https://open.spotify.com/search/Realistic"
             }
           ],
-          "extra": "a/a $20 6pm"
+          "extra": "a/a $20 6pm/7pm @"
         },
         {
           "venue": {
@@ -4810,6 +4320,35 @@
             }
           ],
           "extra": "a/a $54.50+ 5pm/6:20pm #"
+        },
+        {
+          "venue": {
+            "text": "Stay Gold Deli, Oakland",
+            "href": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Grave Secrets",
+              "href": "https://open.spotify.com/search/Grave%20Secrets"
+            },
+            {
+              "text": "Tarnish",
+              "href": "https://open.spotify.com/search/Tarnish"
+            },
+            {
+              "text": "Giveaway",
+              "href": "https://open.spotify.com/search/Giveaway"
+            },
+            {
+              "text": "Jellyfish Method",
+              "href": "https://open.spotify.com/search/Jellyfish%20Method"
+            },
+            {
+              "text": "Founders Day",
+              "href": "https://open.spotify.com/search/Founders%20Day"
+            }
+          ],
+          "extra": "a/a $15 6pm @"
         },
         {
           "venue": {
@@ -5176,6 +4715,36 @@
         },
         {
           "venue": {
+            "text": "Independent, S.F.",
+            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Luigi: The Musical",
+              "href": "https://open.spotify.com/search/Luigi%3A%20The%20Musical"
+            }
+          ],
+          "extra": "21+ $38.13 ($43.28/$54.10 seated) 7pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Jury Room, Santa Cruz",
+            "href": "https://www.google.com/search?q=Jury%20Room%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Society Of The Silver Cross",
+              "href": "https://open.spotify.com/search/Society%20Of%20The%20Silver%20Cross"
+            },
+            {
+              "text": "Mountain Holler",
+              "href": "https://open.spotify.com/search/Mountain%20Holler"
+            }
+          ],
+          "extra": "21+ $10 9pm"
+        },
+        {
+          "venue": {
             "text": "Knockout, S.F.",
             "href": "https://www.google.com/search?q=Knockout%2C%20S.F."
           },
@@ -5251,8 +4820,8 @@
           },
           "bands": [
             {
-              "text": "Rico Levitt",
-              "href": "https://open.spotify.com/search/Rico%20Levitt"
+              "text": "Tell Me Tell Me",
+              "href": "https://open.spotify.com/search/Tell%20Me%20Tell%20Me"
             },
             {
               "text": "Old Man Of The Woods",
@@ -5277,6 +4846,19 @@
             }
           ],
           "extra": "a/a $15 7pm"
+        },
+        {
+          "venue": {
+            "text": "Blue Note, Napa",
+            "href": "https://www.google.com/search?q=Blue%20Note%2C%20Napa"
+          },
+          "bands": [
+            {
+              "text": "Back Porchestra",
+              "href": "https://open.spotify.com/search/Back%20Porchestra"
+            }
+          ],
+          "extra": "8+ (under 16 with adult) $6.72+ 6:30pm/7:30pm"
         },
         {
           "venue": {
@@ -5537,6 +5119,40 @@
       "events": [
         {
           "venue": {
+            "text": "15th",
+            "href": "https://www.google.com/search?q=15th"
+          },
+          "bands": [
+            {
+              "text": "Adre Thierry",
+              "href": "https://open.spotify.com/search/Adre%20Thierry"
+            }
+          ],
+          "extra": "& Macdonald Avenue, Richmond a/a free 5pm til 7:30pm"
+        },
+        {
+          "venue": {
+            "text": "4 Star Theater, S.F.",
+            "href": "https://www.google.com/search?q=4%20Star%20Theater%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Grooblen",
+              "href": "https://open.spotify.com/search/Grooblen"
+            },
+            {
+              "text": "Swiss",
+              "href": "https://open.spotify.com/search/Swiss"
+            },
+            {
+              "text": "Rumble Pak",
+              "href": "https://open.spotify.com/search/Rumble%20Pak"
+            }
+          ],
+          "extra": "a/a $14/$17 7pm/8pm"
+        },
+        {
+          "venue": {
             "text": "924 Gilman Street, Berkeley",
             "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
           },
@@ -5566,8 +5182,8 @@
         },
         {
           "venue": {
-            "text": "Amoeba, S.F.",
-            "href": "https://www.google.com/search?q=Amoeba%2C%20S.F."
+            "text": "Amoeba Music, S.F.",
+            "href": "https://www.google.com/search?q=Amoeba%20Music%2C%20S.F."
           },
           "bands": [
             {
@@ -5657,6 +5273,23 @@
             }
           ],
           "extra": "a/a $20 7pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Crybaby, Oakland",
+            "href": "https://www.google.com/search?q=Crybaby%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Quija Macc",
+              "href": "https://open.spotify.com/search/Quija%20Macc"
+            },
+            {
+              "text": "Sinizter",
+              "href": "https://open.spotify.com/search/Sinizter"
+            }
+          ],
+          "extra": "a/a $26.21 6pm/7pm"
         },
         {
           "venue": {
@@ -5980,6 +5613,27 @@
         },
         {
           "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Bezaliel",
+              "href": "https://open.spotify.com/search/Bezaliel"
+            },
+            {
+              "text": "Mortal",
+              "href": "https://open.spotify.com/search/Mortal"
+            },
+            {
+              "text": "Nokken",
+              "href": "https://open.spotify.com/search/Nokken"
+            }
+          ],
+          "extra": "21+ free 10pm"
+        },
+        {
+          "venue": {
             "text": "Catalyst Atrium, Santa Cruz",
             "href": "https://www.google.com/search?q=Catalyst%20Atrium%2C%20Santa%20Cruz"
           },
@@ -6233,6 +5887,31 @@
         },
         {
           "venue": {
+            "text": "Plaza De Cesar Chavez, Downtown San Jose",
+            "href": "https://www.google.com/search?q=Plaza%20De%20Cesar%20Chavez%2C%20Downtown%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Steveie B",
+              "href": "https://open.spotify.com/search/Steveie%20B"
+            },
+            {
+              "text": "Jaya",
+              "href": "https://open.spotify.com/search/Jaya"
+            },
+            {
+              "text": "Shannon",
+              "href": "https://open.spotify.com/search/Shannon"
+            },
+            {
+              "text": "Cutso",
+              "href": "https://open.spotify.com/search/Cutso"
+            }
+          ],
+          "extra": "a/a $43/$49 5pm til 10pm"
+        },
+        {
+          "venue": {
             "text": "Regency Ballroom, S.F.",
             "href": "https://www.google.com/search?q=Regency%20Ballroom%2C%20S.F."
           },
@@ -6243,6 +5922,31 @@
             }
           ],
           "extra": "a/a 7pm/8pm #"
+        },
+        {
+          "venue": {
+            "text": "Revolution Cafe, 1610 7th Street, Oakland",
+            "href": "https://www.google.com/search?q=Revolution%20Cafe%2C%201610%207th%20Street%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Nasty World",
+              "href": "https://open.spotify.com/search/Nasty%20World"
+            },
+            {
+              "text": "Mentor",
+              "href": "https://open.spotify.com/search/Mentor"
+            },
+            {
+              "text": "V.V.M.",
+              "href": "https://open.spotify.com/search/V.V.M."
+            },
+            {
+              "text": "Big Forgive",
+              "href": "https://open.spotify.com/search/Big%20Forgive"
+            }
+          ],
+          "extra": "a/a $5 7pm @"
         },
         {
           "venue": {
@@ -6280,7 +5984,7 @@
               "href": "https://open.spotify.com/search/Corduroy%2C%20Mary%20Jane%20Mafia"
             }
           ],
-          "extra": "a/a $31.42/$37.60 7/8pm"
+          "extra": "a/a $31.42/$37.60 7pm/8pm"
         },
         {
           "venue": {
@@ -6339,6 +6043,19 @@
             }
           ],
           "extra": "a/a $32.50 5pm/6pm # @"
+        },
+        {
+          "venue": {
+            "text": "Vintage Space, 2777 Fourth Street, Santa Rosa",
+            "href": "https://www.google.com/search?q=Vintage%20Space%2C%202777%20Fourth%20Street%2C%20Santa%20Rosa"
+          },
+          "bands": [
+            {
+              "text": "Temptation, Shoplifters United",
+              "href": "https://open.spotify.com/search/Temptation%2C%20Shoplifters%20United"
+            }
+          ],
+          "extra": "21+ $18/$24 8pm"
         }
       ]
     },
@@ -6462,6 +6179,27 @@
             }
           ],
           "extra": "a/a $15/$20 8pm/8:30pm"
+        },
+        {
+          "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Ghost Town Hangmen",
+              "href": "https://open.spotify.com/search/Ghost%20Town%20Hangmen"
+            },
+            {
+              "text": "El Brick",
+              "href": "https://open.spotify.com/search/El%20Brick"
+            },
+            {
+              "text": "Kevin Moan & The Howling",
+              "href": "https://open.spotify.com/search/Kevin%20Moan%20%26%20The%20Howling"
+            }
+          ],
+          "extra": "21+ free 10pm"
         },
         {
           "venue": {
@@ -6824,6 +6562,23 @@
         },
         {
           "venue": {
+            "text": "Little Hill Lounge, El Cerrito",
+            "href": "https://www.google.com/search?q=Little%20Hill%20Lounge%2C%20El%20Cerrito"
+          },
+          "bands": [
+            {
+              "text": "Chris Acker & The Growing Boys",
+              "href": "https://open.spotify.com/search/Chris%20Acker%20%26%20The%20Growing%20Boys"
+            },
+            {
+              "text": "Kassi Valazza",
+              "href": "https://open.spotify.com/search/Kassi%20Valazza"
+            }
+          ],
+          "extra": "21+ free 8pm"
+        },
+        {
+          "venue": {
             "text": "Midway, S.F.",
             "href": "https://www.google.com/search?q=Midway%2C%20S.F."
           },
@@ -6942,6 +6697,23 @@
         },
         {
           "venue": {
+            "text": "Plaza De Cesar Chavez, Downtown San Jose",
+            "href": "https://www.google.com/search?q=Plaza%20De%20Cesar%20Chavez%2C%20Downtown%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Psychedelic Furs",
+              "href": "https://open.spotify.com/search/Psychedelic%20Furs"
+            },
+            {
+              "text": "Rooney",
+              "href": "https://open.spotify.com/search/Rooney"
+            }
+          ],
+          "extra": "a/a $42.50/$50 4pm til 11pm"
+        },
+        {
+          "venue": {
             "text": "Rickshaw Stop, S.F.",
             "href": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F."
           },
@@ -6964,11 +6736,11 @@
           },
           "bands": [
             {
-              "text": "School of Rock",
-              "href": "https://open.spotify.com/search/School%20of%20Rock"
+              "text": "School of Rock All Stars",
+              "href": "https://open.spotify.com/search/School%20of%20Rock%20All%20Stars"
             }
           ],
-          "extra": "21+"
+          "extra": "21+ $15/$20 1pm"
         },
         {
           "venue": {
@@ -7029,9 +6801,21 @@
             {
               "text": "Bloodywood",
               "href": "https://open.spotify.com/search/Bloodywood"
+            },
+            {
+              "text": "Ekoh",
+              "href": "https://open.spotify.com/search/Ekoh"
+            },
+            {
+              "text": "Ladrones",
+              "href": "https://open.spotify.com/search/Ladrones"
+            },
+            {
+              "text": "Lager Henry",
+              "href": "https://open.spotify.com/search/Lager%20Henry"
             }
           ],
-          "extra": "a/a $38.50 6:30pm/7:30pm #"
+          "extra": "a/a $38.50 6:30pm/7:30pm # @"
         },
         {
           "venue": {
@@ -7378,6 +7162,27 @@
         },
         {
           "venue": {
+            "text": "Plaza De Cesar Chavez, Downtown San Jose",
+            "href": "https://www.google.com/search?q=Plaza%20De%20Cesar%20Chavez%2C%20Downtown%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Fia",
+              "href": "https://open.spotify.com/search/Fia"
+            },
+            {
+              "text": "Western Conference",
+              "href": "https://open.spotify.com/search/Western%20Conference"
+            },
+            {
+              "text": "Acari",
+              "href": "https://open.spotify.com/search/Acari"
+            }
+          ],
+          "extra": "a/a $35/$49 4pm til 10pm"
+        },
+        {
+          "venue": {
             "text": "Stern Grove, 19th Avenue",
             "href": "https://www.google.com/search?q=Stern%20Grove%2C%2019th%20Avenue"
           },
@@ -7447,6 +7252,35 @@
             }
           ],
           "extra": "21+ $10/$12 6pm (early show)"
+        },
+        {
+          "venue": {
+            "text": "Thrillhouse Records, S.F.",
+            "href": "https://www.google.com/search?q=Thrillhouse%20Records%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Big",
+              "href": "https://open.spotify.com/search/Big"
+            },
+            {
+              "text": "Malakili",
+              "href": "https://open.spotify.com/search/Malakili"
+            },
+            {
+              "text": "Losers",
+              "href": "https://open.spotify.com/search/Losers"
+            },
+            {
+              "text": "Sympathy Flowers",
+              "href": "https://open.spotify.com/search/Sympathy%20Flowers"
+            },
+            {
+              "text": "Doc And The Parasites",
+              "href": "https://open.spotify.com/search/Doc%20And%20The%20Parasites"
+            }
+          ],
+          "extra": "a/a $10 4pm @"
         }
       ]
     },
@@ -7551,6 +7385,19 @@
         },
         {
           "venue": {
+            "text": "Amoeba Music, S.F.",
+            "href": "https://www.google.com/search?q=Amoeba%20Music%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Ekkstacy",
+              "href": "https://open.spotify.com/search/Ekkstacy"
+            }
+          ],
+          "extra": "a/a free 5pm"
+        },
+        {
+          "venue": {
             "text": "August Hall, S.F.",
             "href": "https://www.google.com/search?q=August%20Hall%2C%20S.F."
           },
@@ -7603,6 +7450,39 @@
             }
           ],
           "extra": "a/a $78.15 7pm # @ $"
+        },
+        {
+          "venue": {
+            "text": "Golden Eye House, Suisun City",
+            "href": "https://www.google.com/search?q=Golden%20Eye%20House%2C%20Suisun%20City"
+          },
+          "bands": [
+            {
+              "text": "Mormon Mincers",
+              "href": "https://open.spotify.com/search/Mormon%20Mincers"
+            },
+            {
+              "text": "RV Bomb",
+              "href": "https://open.spotify.com/search/RV%20Bomb"
+            },
+            {
+              "text": "Throat Rip",
+              "href": "https://open.spotify.com/search/Throat%20Rip"
+            },
+            {
+              "text": "Happy Society",
+              "href": "https://open.spotify.com/search/Happy%20Society"
+            },
+            {
+              "text": "Desest",
+              "href": "https://open.spotify.com/search/Desest"
+            },
+            {
+              "text": "Terminator",
+              "href": "https://open.spotify.com/search/Terminator"
+            }
+          ],
+          "extra": "a/a $10 6:30pm/7pm (message bands for location)"
         },
         {
           "venue": {
@@ -7865,6 +7745,27 @@
         },
         {
           "venue": {
+            "text": "El Rio, S.F.",
+            "href": "https://www.google.com/search?q=El%20Rio%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Miss Hits",
+              "href": "https://open.spotify.com/search/Miss%20Hits"
+            },
+            {
+              "text": "Rockyg",
+              "href": "https://open.spotify.com/search/Rockyg"
+            },
+            {
+              "text": "Ian Santillano",
+              "href": "https://open.spotify.com/search/Ian%20Santillano"
+            }
+          ],
+          "extra": "21+ $10 8pm/9pm"
+        },
+        {
+          "venue": {
             "text": "Fox Theater, Oakland",
             "href": "https://www.google.com/search?q=Fox%20Theater%2C%20Oakland"
           },
@@ -7909,6 +7810,23 @@
             }
           ],
           "extra": "a/a 7:30pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Little Hill Lounge, El Cerrito",
+            "href": "https://www.google.com/search?q=Little%20Hill%20Lounge%2C%20El%20Cerrito"
+          },
+          "bands": [
+            {
+              "text": "Inner Ear Brigade",
+              "href": "https://open.spotify.com/search/Inner%20Ear%20Brigade"
+            },
+            {
+              "text": "Rumble Pack",
+              "href": "https://open.spotify.com/search/Rumble%20Pack"
+            }
+          ],
+          "extra": "21+ free 8pm"
         },
         {
           "venue": {
@@ -7971,7 +7889,7 @@
               "href": "https://open.spotify.com/search/Injest"
             }
           ],
-          "extra": "a/a $10 6pm"
+          "extra": "a/a $10 6pm/7pm @"
         },
         {
           "venue": {
@@ -8088,6 +8006,10 @@
             {
               "text": "Jeremih",
               "href": "https://open.spotify.com/search/Jeremih"
+            },
+            {
+              "text": "Elijah Blake",
+              "href": "https://open.spotify.com/search/Elijah%20Blake"
             }
           ],
           "extra": "a/a 6pm/7pm #"
@@ -8242,6 +8164,64 @@
         },
         {
           "venue": {
+            "text": "Little Hill Lounge, El Cerrito",
+            "href": "https://www.google.com/search?q=Little%20Hill%20Lounge%2C%20El%20Cerrito"
+          },
+          "bands": [
+            {
+              "text": "Phantom Images",
+              "href": "https://open.spotify.com/search/Phantom%20Images"
+            },
+            {
+              "text": "Hits",
+              "href": "https://open.spotify.com/search/Hits"
+            }
+          ],
+          "extra": "21+ free 8pm"
+        },
+        {
+          "venue": {
+            "text": "Oakland Secret Gallery, Oakland",
+            "href": "https://www.google.com/search?q=Oakland%20Secret%20Gallery%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Tocca",
+              "href": "https://open.spotify.com/search/Tocca"
+            },
+            {
+              "text": "Hellcatraz",
+              "href": "https://open.spotify.com/search/Hellcatraz"
+            },
+            {
+              "text": "OMN",
+              "href": "https://open.spotify.com/search/OMN"
+            },
+            {
+              "text": "Big Tractor",
+              "href": "https://open.spotify.com/search/Big%20Tractor"
+            },
+            {
+              "text": "Las Ratas",
+              "href": "https://open.spotify.com/search/Las%20Ratas"
+            },
+            {
+              "text": "Snallygaster",
+              "href": "https://open.spotify.com/search/Snallygaster"
+            },
+            {
+              "text": "Fatale",
+              "href": "https://open.spotify.com/search/Fatale"
+            },
+            {
+              "text": "Dissociation",
+              "href": "https://open.spotify.com/search/Dissociation"
+            }
+          ],
+          "extra": "a/a $10 5pm @"
+        },
+        {
+          "venue": {
             "text": "Rickshaw Stop, S.F.",
             "href": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F."
           },
@@ -8277,6 +8257,31 @@
             }
           ],
           "extra": "a/a $48.84 7pm/8pm #"
+        },
+        {
+          "venue": {
+            "text": "Stay Gold Deli, Oakland",
+            "href": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "St. Sophie",
+              "href": "https://open.spotify.com/search/St.%20Sophie"
+            },
+            {
+              "text": "Junipero",
+              "href": "https://open.spotify.com/search/Junipero"
+            },
+            {
+              "text": "Acantha",
+              "href": "https://open.spotify.com/search/Acantha"
+            },
+            {
+              "text": "eSex",
+              "href": "https://open.spotify.com/search/eSex"
+            }
+          ],
+          "extra": "a/a $10 6:30pm/7pm @"
         },
         {
           "venue": {
@@ -8402,6 +8407,27 @@
             }
           ],
           "extra": "a/a $15/$18 8pm/8:30pm"
+        },
+        {
+          "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Infadel",
+              "href": "https://open.spotify.com/search/Infadel"
+            },
+            {
+              "text": "Critical Response",
+              "href": "https://open.spotify.com/search/Critical%20Response"
+            },
+            {
+              "text": "Suspect Class",
+              "href": "https://open.spotify.com/search/Suspect%20Class"
+            }
+          ],
+          "extra": "21+ free 10pm"
         },
         {
           "venue": {
@@ -8664,6 +8690,27 @@
             }
           ],
           "extra": "a/a $55.50+ 7pm/8pm #"
+        },
+        {
+          "venue": {
+            "text": "Winter's Tavern, Pacifica",
+            "href": "https://www.google.com/search?q=Winter's%20Tavern%2C%20Pacifica"
+          },
+          "bands": [
+            {
+              "text": "Donkey Jaw",
+              "href": "https://open.spotify.com/search/Donkey%20Jaw"
+            },
+            {
+              "text": "Hemmed Up",
+              "href": "https://open.spotify.com/search/Hemmed%20Up"
+            },
+            {
+              "text": "Guns For Sick Children",
+              "href": "https://open.spotify.com/search/Guns%20For%20Sick%20Children"
+            }
+          ],
+          "extra": "21+ free 8pm"
         }
       ]
     },
@@ -8813,6 +8860,27 @@
         },
         {
           "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Guns For Sick Children",
+              "href": "https://open.spotify.com/search/Guns%20For%20Sick%20Children"
+            },
+            {
+              "text": "Step Up",
+              "href": "https://open.spotify.com/search/Step%20Up"
+            },
+            {
+              "text": "NFG",
+              "href": "https://open.spotify.com/search/NFG"
+            }
+          ],
+          "extra": "21+ free 10pm"
+        },
+        {
+          "venue": {
             "text": "Chapel, S.F.",
             "href": "https://www.google.com/search?q=Chapel%2C%20S.F."
           },
@@ -8827,6 +8895,27 @@
             }
           ],
           "extra": "a/a $26 8pm/9pm"
+        },
+        {
+          "venue": {
+            "text": "Edinburgh Castle, S.F.",
+            "href": "https://www.google.com/search?q=Edinburgh%20Castle%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Lxs Cochinxs",
+              "href": "https://open.spotify.com/search/Lxs%20Cochinxs"
+            },
+            {
+              "text": "Doombia",
+              "href": "https://open.spotify.com/search/Doombia"
+            },
+            {
+              "text": "Mala Grena",
+              "href": "https://open.spotify.com/search/Mala%20Grena"
+            }
+          ],
+          "extra": "21+ $15 8pm/9pm"
         },
         {
           "venue": {
@@ -8941,6 +9030,23 @@
         },
         {
           "venue": {
+            "text": "Jury Room, Santa Cruz",
+            "href": "https://www.google.com/search?q=Jury%20Room%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Threat To Self",
+              "href": "https://open.spotify.com/search/Threat%20To%20Self"
+            },
+            {
+              "text": "Rumble Steelskin",
+              "href": "https://open.spotify.com/search/Rumble%20Steelskin"
+            }
+          ],
+          "extra": "21+ $10 9pm"
+        },
+        {
+          "venue": {
             "text": "Knockout, S.F.",
             "href": "https://www.google.com/search?q=Knockout%2C%20S.F."
           },
@@ -8959,6 +9065,27 @@
             }
           ],
           "extra": "21+ 5pm"
+        },
+        {
+          "venue": {
+            "text": "Makeout Room, S.F.",
+            "href": "https://www.google.com/search?q=Makeout%20Room%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Terra Cognita",
+              "href": "https://open.spotify.com/search/Terra%20Cognita"
+            },
+            {
+              "text": "Little Brian",
+              "href": "https://open.spotify.com/search/Little%20Brian"
+            },
+            {
+              "text": "Kelsy Kindall",
+              "href": "https://open.spotify.com/search/Kelsy%20Kindall"
+            }
+          ],
+          "extra": "21+ $15 7pm"
         },
         {
           "venue": {
@@ -9179,6 +9306,43 @@
       "events": [
         {
           "venue": {
+            "text": "924 Gilman Street, Berkeley",
+            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
+          },
+          "bands": [
+            {
+              "text": "Asunder Sweet",
+              "href": "https://open.spotify.com/search/Asunder%20Sweet"
+            },
+            {
+              "text": "CJ Lawrence",
+              "href": "https://open.spotify.com/search/CJ%20Lawrence"
+            },
+            {
+              "text": "Sincerely Yours",
+              "href": "https://open.spotify.com/search/Sincerely%20Yours"
+            },
+            {
+              "text": "Florez Rain",
+              "href": "https://open.spotify.com/search/Florez%20Rain"
+            },
+            {
+              "text": "Ember Nugent",
+              "href": "https://open.spotify.com/search/Ember%20Nugent"
+            },
+            {
+              "text": "Big Tractor",
+              "href": "https://open.spotify.com/search/Big%20Tractor"
+            },
+            {
+              "text": "Sapien Stardust",
+              "href": "https://open.spotify.com/search/Sapien%20Stardust"
+            }
+          ],
+          "extra": "a/a $15 5:30pm"
+        },
+        {
+          "venue": {
             "text": "August Hall, S.F.",
             "href": "https://www.google.com/search?q=August%20Hall%2C%20S.F."
           },
@@ -9286,7 +9450,7 @@
               "href": "https://open.spotify.com/search/Mary%20Lattimore"
             }
           ],
-          "extra": "a/a 6:30pm/7:30pm #"
+          "extra": "a/a $88.45-$62.10 6:30pm/7:30pm #"
         },
         {
           "venue": {
@@ -9451,6 +9615,19 @@
         },
         {
           "venue": {
+            "text": "San Jose Civic Center, San Jose",
+            "href": "https://www.google.com/search?q=San%20Jose%20Civic%20Center%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Yo Gabba Gabba!",
+              "href": "https://open.spotify.com/search/Yo%20Gabba%20Gabba!"
+            }
+          ],
+          "extra": "5+ #"
+        },
+        {
+          "venue": {
             "text": "Stay Gold Deli, Oakland",
             "href": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland"
           },
@@ -9525,7 +9702,7 @@
               "href": "https://open.spotify.com/search/dj%20DiscoMovil%20Salazar"
             }
           ],
-          "extra": "a/a $27.72 7pm/8pm"
+          "extra": "a/a $20/$24 7pm/8pm"
         }
       ]
     },
@@ -10130,6 +10307,19 @@
         },
         {
           "venue": {
+            "text": "4th Corner Speakeasy, 431 Georgia St., Vallejo",
+            "href": "https://www.google.com/search?q=4th%20Corner%20Speakeasy%2C%20431%20Georgia%20St.%2C%20Vallejo"
+          },
+          "bands": [
+            {
+              "text": "Voltones",
+              "href": "https://open.spotify.com/search/Voltones"
+            }
+          ],
+          "extra": "21+ 7:30pm/8pm"
+        },
+        {
+          "venue": {
             "text": "Cornerstone, Berkeley",
             "href": "https://www.google.com/search?q=Cornerstone%2C%20Berkeley"
           },
@@ -10429,6 +10619,31 @@
         },
         {
           "venue": {
+            "text": "Rickshaw Stop, S.F.",
+            "href": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Diabbla",
+              "href": "https://open.spotify.com/search/Diabbla"
+            },
+            {
+              "text": "Delacio",
+              "href": "https://open.spotify.com/search/Delacio"
+            },
+            {
+              "text": "Sin Fronteras Dreams",
+              "href": "https://open.spotify.com/search/Sin%20Fronteras%20Dreams"
+            },
+            {
+              "text": "dj Earth Angel",
+              "href": "https://open.spotify.com/search/dj%20Earth%20Angel"
+            }
+          ],
+          "extra": "$20/$25 8pm/8:45pm"
+        },
+        {
+          "venue": {
             "text": "Ritz, San Jose",
             "href": "https://www.google.com/search?q=Ritz%2C%20San%20Jose"
           },
@@ -10690,6 +10905,43 @@
             }
           ],
           "extra": "21+ $10/$15 7pm"
+        },
+        {
+          "venue": {
+            "text": "Oakland Secret Gallery, Oakland",
+            "href": "https://www.google.com/search?q=Oakland%20Secret%20Gallery%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Barbary",
+              "href": "https://open.spotify.com/search/Barbary"
+            },
+            {
+              "text": "Rule Of Thumb",
+              "href": "https://open.spotify.com/search/Rule%20Of%20Thumb"
+            },
+            {
+              "text": "Concealed Carry",
+              "href": "https://open.spotify.com/search/Concealed%20Carry"
+            },
+            {
+              "text": "Disperser",
+              "href": "https://open.spotify.com/search/Disperser"
+            },
+            {
+              "text": "Entangeled",
+              "href": "https://open.spotify.com/search/Entangeled"
+            },
+            {
+              "text": "Leer",
+              "href": "https://open.spotify.com/search/Leer"
+            },
+            {
+              "text": "No Ambition",
+              "href": "https://open.spotify.com/search/No%20Ambition"
+            }
+          ],
+          "extra": "a/a $15/$20 5:30pm @"
         },
         {
           "venue": {
@@ -11099,6 +11351,27 @@
             }
           ],
           "extra": "21+ $15 2pm/3pm"
+        },
+        {
+          "venue": {
+            "text": "Makeout Room, S.F.",
+            "href": "https://www.google.com/search?q=Makeout%20Room%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Liam Miller Band",
+              "href": "https://open.spotify.com/search/Liam%20Miller%20Band"
+            },
+            {
+              "text": "Pseudo Mystics",
+              "href": "https://open.spotify.com/search/Pseudo%20Mystics"
+            },
+            {
+              "text": "Pay Attension",
+              "href": "https://open.spotify.com/search/Pay%20Attension"
+            }
+          ],
+          "extra": "21+ $10 7pm"
         },
         {
           "venue": {
@@ -11584,6 +11857,31 @@
         },
         {
           "venue": {
+            "text": "Eagle, S.F.",
+            "href": "https://www.google.com/search?q=Eagle%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Uppity Dicks",
+              "href": "https://open.spotify.com/search/Uppity%20Dicks"
+            },
+            {
+              "text": "Cohesion",
+              "href": "https://open.spotify.com/search/Cohesion"
+            },
+            {
+              "text": "Sparkle Plenty",
+              "href": "https://open.spotify.com/search/Sparkle%20Plenty"
+            },
+            {
+              "text": "Bxrbxros",
+              "href": "https://open.spotify.com/search/Bxrbxros"
+            }
+          ],
+          "extra": "21+ $10 8pm/9pm"
+        },
+        {
+          "venue": {
             "text": "Greek Theater, UC Berkeley Campus",
             "href": "https://www.google.com/search?q=Greek%20Theater%2C%20UC%20Berkeley%20Campus"
           },
@@ -11809,6 +12107,27 @@
         },
         {
           "venue": {
+            "text": "Jury Room, Santa Cruz",
+            "href": "https://www.google.com/search?q=Jury%20Room%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Critical Response",
+              "href": "https://open.spotify.com/search/Critical%20Response"
+            },
+            {
+              "text": "Sutros",
+              "href": "https://open.spotify.com/search/Sutros"
+            },
+            {
+              "text": "Lawnmower",
+              "href": "https://open.spotify.com/search/Lawnmower"
+            }
+          ],
+          "extra": "21+ $10 9pm"
+        },
+        {
+          "venue": {
             "text": "Meritage Resort, Napa",
             "href": "https://www.google.com/search?q=Meritage%20Resort%2C%20Napa"
           },
@@ -11961,6 +12280,39 @@
         },
         {
           "venue": {
+            "text": "Secret Gallery, Oakland",
+            "href": "https://www.google.com/search?q=Secret%20Gallery%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Baby On A Rampage",
+              "href": "https://open.spotify.com/search/Baby%20On%20A%20Rampage"
+            },
+            {
+              "text": "Rabid",
+              "href": "https://open.spotify.com/search/Rabid"
+            },
+            {
+              "text": "Hellcatraz",
+              "href": "https://open.spotify.com/search/Hellcatraz"
+            },
+            {
+              "text": "Masked Jestures",
+              "href": "https://open.spotify.com/search/Masked%20Jestures"
+            },
+            {
+              "text": "Red 40",
+              "href": "https://open.spotify.com/search/Red%2040"
+            },
+            {
+              "text": "Id And The Egos",
+              "href": "https://open.spotify.com/search/Id%20And%20The%20Egos"
+            }
+          ],
+          "extra": "a/a $10 5:30pm/6pm @ (wear Animal Print)"
+        },
+        {
+          "venue": {
             "text": "Shark Tank, San Jose",
             "href": "https://www.google.com/search?q=Shark%20Tank%2C%20San%20Jose"
           },
@@ -12020,6 +12372,23 @@
       "day": "Sat Aug 16",
       "normalizedDate": "2025-08-16",
       "events": [
+        {
+          "venue": {
+            "text": "Catalyst Atrium, Santa Cruz",
+            "href": "https://www.google.com/search?q=Catalyst%20Atrium%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Kruel Summer",
+              "href": "https://open.spotify.com/search/Kruel%20Summer"
+            },
+            {
+              "text": "Ribseys Nickel",
+              "href": "https://open.spotify.com/search/Ribseys%20Nickel"
+            }
+          ],
+          "extra": "16+ $22.40 7pm/7:30pm #"
+        },
         {
           "venue": {
             "text": "Catalyst, Santa Cruz",
@@ -12084,6 +12453,10 @@
             {
               "text": "Lucy Dacus",
               "href": "https://open.spotify.com/search/Lucy%20Dacus"
+            },
+            {
+              "text": "Jay Som",
+              "href": "https://open.spotify.com/search/Jay%20Som"
             },
             {
               "text": "Julia Jacklin",
@@ -12332,11 +12705,11 @@
           },
           "bands": [
             {
-              "text": "Mimi & Tony Succar",
-              "href": "https://open.spotify.com/search/Mimi%20%26%20Tony%20Succar"
+              "text": "Mimy & Tony Succar",
+              "href": "https://open.spotify.com/search/Mimy%20%26%20Tony%20Succar"
             }
           ],
-          "extra": "a/a 7pm/8pm #"
+          "extra": "a/a $69.50+ 7pm/8pm #"
         },
         {
           "venue": {
@@ -12370,6 +12743,23 @@
             }
           ],
           "extra": "a/a $20 7pm @"
+        },
+        {
+          "venue": {
+            "text": "Vinnie's Bar, 2045 Mount Diablo Street, Concord",
+            "href": "https://www.google.com/search?q=Vinnie's%20Bar%2C%202045%20Mount%20Diablo%20Street%2C%20Concord"
+          },
+          "bands": [
+            {
+              "text": "AC/DZ, Ryder B",
+              "href": "https://open.spotify.com/search/AC%2FDZ%2C%20Ryder%20B"
+            },
+            {
+              "text": "Ancient Mariner",
+              "href": "https://open.spotify.com/search/Ancient%20Mariner"
+            }
+          ],
+          "extra": "21+ $23.18 8pm"
         },
         {
           "venue": {
@@ -12493,6 +12883,10 @@
             {
               "text": "Strongboi",
               "href": "https://open.spotify.com/search/Strongboi"
+            },
+            {
+              "text": "Strongboi",
+              "href": "https://open.spotify.com/search/Strongboi"
             }
           ],
           "extra": "a/a 5pm/6:30pm #"
@@ -12551,6 +12945,19 @@
             }
           ],
           "extra": "8+ 5:30pm/7pm"
+        },
+        {
+          "venue": {
+            "text": "Mountain Winery, Saratoga",
+            "href": "https://www.google.com/search?q=Mountain%20Winery%2C%20Saratoga"
+          },
+          "bands": [
+            {
+              "text": "Beach Boys",
+              "href": "https://open.spotify.com/search/Beach%20Boys"
+            }
+          ],
+          "extra": "a/a 5:30pm/7:30pm"
         },
         {
           "venue": {
@@ -12844,6 +13251,27 @@
         },
         {
           "venue": {
+            "text": "Ritz, San Jose",
+            "href": "https://www.google.com/search?q=Ritz%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Condition One",
+              "href": "https://open.spotify.com/search/Condition%20One"
+            },
+            {
+              "text": "Impurity",
+              "href": "https://open.spotify.com/search/Impurity"
+            },
+            {
+              "text": "Entice",
+              "href": "https://open.spotify.com/search/Entice"
+            }
+          ],
+          "extra": "21+"
+        },
+        {
+          "venue": {
             "text": "Swedish American Hall, S.F.",
             "href": "https://www.google.com/search?q=Swedish%20American%20Hall%2C%20S.F."
           },
@@ -12889,6 +13317,19 @@
       "events": [
         {
           "venue": {
+            "text": "15th",
+            "href": "https://www.google.com/search?q=15th"
+          },
+          "bands": [
+            {
+              "text": "Sacred Fire Band",
+              "href": "https://open.spotify.com/search/Sacred%20Fire%20Band"
+            }
+          ],
+          "extra": "& Macdonald Avenue, Richmond a/a free 5pm til 7:30pm"
+        },
+        {
+          "venue": {
             "text": "Cafe Du Nord, S.F.",
             "href": "https://www.google.com/search?q=Cafe%20Du%20Nord%2C%20S.F."
           },
@@ -12919,8 +13360,8 @@
         },
         {
           "venue": {
-            "text": "Indepedent, S.F.",
-            "href": "https://www.google.com/search?q=Indepedent%2C%20S.F."
+            "text": "Independent, S.F.",
+            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
           },
           "bands": [
             {
@@ -13048,6 +13489,81 @@
       "events": [
         {
           "venue": {
+            "text": "924 Gilman Street, Berkeley",
+            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
+          },
+          "bands": [
+            {
+              "text": "Bloodhum",
+              "href": "https://open.spotify.com/search/Bloodhum"
+            },
+            {
+              "text": "Theya",
+              "href": "https://open.spotify.com/search/Theya"
+            },
+            {
+              "text": "Deerlord",
+              "href": "https://open.spotify.com/search/Deerlord"
+            },
+            {
+              "text": "Haardvark",
+              "href": "https://open.spotify.com/search/Haardvark"
+            },
+            {
+              "text": "Madrona",
+              "href": "https://open.spotify.com/search/Madrona"
+            }
+          ],
+          "extra": "a/a $15 7pm"
+        },
+        {
+          "venue": {
+            "text": "Bimbo's 365 Club, S.F.",
+            "href": "https://www.google.com/search?q=Bimbo's%20365%20Club%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Peach Pit Cabaret",
+              "href": "https://open.spotify.com/search/Peach%20Pit%20Cabaret"
+            }
+          ],
+          "extra": "21+ $48.93+ 7pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Bindlestiff, 185 6th Street, S.F.",
+            "href": "https://www.google.com/search?q=Bindlestiff%2C%20185%206th%20Street%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "OBCT",
+              "href": "https://open.spotify.com/search/OBCT"
+            },
+            {
+              "text": "Silakbo",
+              "href": "https://open.spotify.com/search/Silakbo"
+            },
+            {
+              "text": "Bathala",
+              "href": "https://open.spotify.com/search/Bathala"
+            },
+            {
+              "text": "Darkheart",
+              "href": "https://open.spotify.com/search/Darkheart"
+            },
+            {
+              "text": "Dust",
+              "href": "https://open.spotify.com/search/Dust"
+            },
+            {
+              "text": "Dissociation",
+              "href": "https://open.spotify.com/search/Dissociation"
+            }
+          ],
+          "extra": "a/a $15 7pm @"
+        },
+        {
+          "venue": {
             "text": "Blue Lagoon, Santa Cruz",
             "href": "https://www.google.com/search?q=Blue%20Lagoon%2C%20Santa%20Cruz"
           },
@@ -13150,6 +13666,19 @@
         },
         {
           "venue": {
+            "text": "Hopmonk, Novato",
+            "href": "https://www.google.com/search?q=Hopmonk%2C%20Novato"
+          },
+          "bands": [
+            {
+              "text": "Heavy Heavy",
+              "href": "https://open.spotify.com/search/Heavy%20Heavy"
+            }
+          ],
+          "extra": "a/a 8pm"
+        },
+        {
+          "venue": {
             "text": "Independent, S.F.",
             "href": "https://www.google.com/search?q=Independent%2C%20S.F."
           },
@@ -13181,6 +13710,19 @@
             }
           ],
           "extra": "21+ $15 7:30pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Meritage Resort, Napa",
+            "href": "https://www.google.com/search?q=Meritage%20Resort%2C%20Napa"
+          },
+          "bands": [
+            {
+              "text": "Beach Boys",
+              "href": "https://open.spotify.com/search/Beach%20Boys"
+            }
+          ],
+          "extra": "8+ $86+ 5:30pm/7pm"
         },
         {
           "venue": {
@@ -13328,6 +13870,89 @@
       "day": "Sat Aug 23",
       "normalizedDate": "2025-08-23",
       "events": [
+        {
+          "venue": {
+            "text": "4 Star Theater, S.F.",
+            "href": "https://www.google.com/search?q=4%20Star%20Theater%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Aluminum",
+              "href": "https://open.spotify.com/search/Aluminum"
+            },
+            {
+              "text": "Welcome Strawberry",
+              "href": "https://open.spotify.com/search/Welcome%20Strawberry"
+            },
+            {
+              "text": "Whitney's Playland",
+              "href": "https://open.spotify.com/search/Whitney's%20Playland"
+            }
+          ],
+          "extra": "a/a $18/$20 7pm"
+        },
+        {
+          "venue": {
+            "text": "924 Gilman Street, Berkeley",
+            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
+          },
+          "bands": [
+            {
+              "text": "Last Ditch Effort",
+              "href": "https://open.spotify.com/search/Last%20Ditch%20Effort"
+            },
+            {
+              "text": "Uncorrupted",
+              "href": "https://open.spotify.com/search/Uncorrupted"
+            },
+            {
+              "text": "Fuzz Attack",
+              "href": "https://open.spotify.com/search/Fuzz%20Attack"
+            },
+            {
+              "text": "Here Comes The Comet",
+              "href": "https://open.spotify.com/search/Here%20Comes%20The%20Comet"
+            }
+          ],
+          "extra": "a/a $12 7pm"
+        },
+        {
+          "venue": {
+            "text": "Bindlestiff, 185 6th Street, S.F.",
+            "href": "https://www.google.com/search?q=Bindlestiff%2C%20185%206th%20Street%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Abi Ooze",
+              "href": "https://open.spotify.com/search/Abi%20Ooze"
+            },
+            {
+              "text": "Namatay Sa Ingay",
+              "href": "https://open.spotify.com/search/Namatay%20Sa%20Ingay"
+            },
+            {
+              "text": "Raw Force",
+              "href": "https://open.spotify.com/search/Raw%20Force"
+            },
+            {
+              "text": "Madapaka",
+              "href": "https://open.spotify.com/search/Madapaka"
+            },
+            {
+              "text": "Product Of Society",
+              "href": "https://open.spotify.com/search/Product%20Of%20Society"
+            },
+            {
+              "text": "Blood Compact",
+              "href": "https://open.spotify.com/search/Blood%20Compact"
+            },
+            {
+              "text": "Mabuhay Gardens",
+              "href": "https://open.spotify.com/search/Mabuhay%20Gardens"
+            }
+          ],
+          "extra": "a/a $15 7pm @"
+        },
         {
           "venue": {
             "text": "Blue Note, Napa",
@@ -13515,7 +14140,7 @@
               "href": "https://open.spotify.com/search/Dave%20Matthews%20Band"
             }
           ],
-          "extra": "a/a $6;7.20 6pm/7:30pm"
+          "extra": "a/a $67.20 6pm/7:30pm"
         },
         {
           "venue": {
@@ -13568,6 +14193,31 @@
       "events": [
         {
           "venue": {
+            "text": "924 Gilman Street, Berkeley",
+            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
+          },
+          "bands": [
+            {
+              "text": "Rosewood",
+              "href": "https://open.spotify.com/search/Rosewood"
+            },
+            {
+              "text": "Amazon Crimes",
+              "href": "https://open.spotify.com/search/Amazon%20Crimes"
+            },
+            {
+              "text": "Monarchy Of Roses",
+              "href": "https://open.spotify.com/search/Monarchy%20Of%20Roses"
+            },
+            {
+              "text": "Chapped Lips",
+              "href": "https://open.spotify.com/search/Chapped%20Lips"
+            }
+          ],
+          "extra": "a/a $10 6:30pm"
+        },
+        {
+          "venue": {
             "text": "Independent, S.F.",
             "href": "https://www.google.com/search?q=Independent%2C%20S.F."
           },
@@ -13586,8 +14236,8 @@
           },
           "bands": [
             {
-              "text": "West Of Texs",
-              "href": "https://open.spotify.com/search/West%20Of%20Texs"
+              "text": "West Of Texas",
+              "href": "https://open.spotify.com/search/West%20Of%20Texas"
             },
             {
               "text": "Emery Villains",
@@ -13842,6 +14492,10 @@
             {
               "text": "Bela Fleck And The Flecktones",
               "href": "https://open.spotify.com/search/Bela%20Fleck%20And%20The%20Flecktones"
+            },
+            {
+              "text": "Freight",
+              "href": "https://open.spotify.com/search/Freight"
             }
           ],
           "extra": "a/a $82 7pm/8pm #"
@@ -14216,6 +14870,35 @@
         },
         {
           "venue": {
+            "text": "Rickshaw Stop, S.F.",
+            "href": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Silverio",
+              "href": "https://open.spotify.com/search/Silverio"
+            },
+            {
+              "text": "Brontez Purnell",
+              "href": "https://open.spotify.com/search/Brontez%20Purnell"
+            },
+            {
+              "text": "Sissyfit",
+              "href": "https://open.spotify.com/search/Sissyfit"
+            },
+            {
+              "text": "Trough",
+              "href": "https://open.spotify.com/search/Trough"
+            },
+            {
+              "text": "Xoce Roman",
+              "href": "https://open.spotify.com/search/Xoce%20Roman"
+            }
+          ],
+          "extra": "$18/$22 7pm/8pm"
+        },
+        {
+          "venue": {
             "text": "Stay Gold Deli, Oakland",
             "href": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland"
           },
@@ -14256,6 +14939,31 @@
       "events": [
         {
           "venue": {
+            "text": "924 Gilman Street, Berkeley",
+            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
+          },
+          "bands": [
+            {
+              "text": "Doom Scroll",
+              "href": "https://open.spotify.com/search/Doom%20Scroll"
+            },
+            {
+              "text": "Dandelion Massacre",
+              "href": "https://open.spotify.com/search/Dandelion%20Massacre"
+            },
+            {
+              "text": "Just Nick",
+              "href": "https://open.spotify.com/search/Just%20Nick"
+            },
+            {
+              "text": "Heartless Folk",
+              "href": "https://open.spotify.com/search/Heartless%20Folk"
+            }
+          ],
+          "extra": "a/a $15 7pm"
+        },
+        {
+          "venue": {
             "text": "Cafe Du Nord, S.F.",
             "href": "https://www.google.com/search?q=Cafe%20Du%20Nord%2C%20S.F."
           },
@@ -14294,6 +15002,19 @@
         },
         {
           "venue": {
+            "text": "Henry J Kaiser Center, 10 Tenth Street, Oakland",
+            "href": "https://www.google.com/search?q=Henry%20J%20Kaiser%20Center%2C%2010%20Tenth%20Street%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Roots",
+              "href": "https://open.spotify.com/search/Roots"
+            }
+          ],
+          "extra": "a/a $98.50+ 7pm/8pm #"
+        },
+        {
+          "venue": {
             "text": "Hopmonk Tavern, Sebastopol",
             "href": "https://www.google.com/search?q=Hopmonk%20Tavern%2C%20Sebastopol"
           },
@@ -14316,7 +15037,7 @@
               "href": "https://open.spotify.com/search/Cardinal%20Black"
             }
           ],
-          "extra": "21+ 8:30pm/9pm"
+          "extra": "21+ $27.32 8:30pm/9pm"
         },
         {
           "venue": {
@@ -14946,6 +15667,25 @@
       ]
     },
     {
+      "day": "Tue Sep 2",
+      "normalizedDate": "2025-09-02",
+      "events": [
+        {
+          "venue": {
+            "text": "Brick and Mortar, S.F.",
+            "href": "https://www.google.com/search?q=Brick%20and%20Mortar%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "SosMula",
+              "href": "https://open.spotify.com/search/SosMula"
+            }
+          ],
+          "extra": "a/a (under 21 plus $5) 7pm/8pm ^"
+        }
+      ]
+    },
+    {
       "day": "Wed Sep 3",
       "normalizedDate": "2025-09-03",
       "events": [
@@ -15155,7 +15895,7 @@
               "href": "https://open.spotify.com/search/JD%20Clayton"
             }
           ],
-          "extra": "21+ 9pm"
+          "extra": "21+ $20 8pm/9pm"
         },
         {
           "venue": {
@@ -15378,6 +16118,19 @@
         },
         {
           "venue": {
+            "text": "Brick and Mortar, S.F.",
+            "href": "https://www.google.com/search?q=Brick%20and%20Mortar%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Lagrimas",
+              "href": "https://open.spotify.com/search/Lagrimas"
+            }
+          ],
+          "extra": "a/a $26.93 (under 21 plus $5) 7pm/8pm ^"
+        },
+        {
+          "venue": {
             "text": "Chapel, S.F.",
             "href": "https://www.google.com/search?q=Chapel%2C%20S.F."
           },
@@ -15452,8 +16205,8 @@
           },
           "bands": [
             {
-              "text": "Jenny Hval",
-              "href": "https://open.spotify.com/search/Jenny%20Hval"
+              "text": "La Misa Negra",
+              "href": "https://open.spotify.com/search/La%20Misa%20Negra"
             }
           ],
           "extra": "21+ 8:30pm/9pm"
@@ -15866,6 +16619,19 @@
         },
         {
           "venue": {
+            "text": "Shark Tank, San Jose",
+            "href": "https://www.google.com/search?q=Shark%20Tank%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Tomorrow X Together",
+              "href": "https://open.spotify.com/search/Tomorrow%20X%20Together"
+            }
+          ],
+          "extra": "a/a #"
+        },
+        {
+          "venue": {
             "text": "Uptown Theater, Napa",
             "href": "https://www.google.com/search?q=Uptown%20Theater%2C%20Napa"
           },
@@ -16083,35 +16849,6 @@
         },
         {
           "venue": {
-            "text": "Eagle, S.F.",
-            "href": "https://www.google.com/search?q=Eagle%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Dead River Rebles",
-              "href": "https://open.spotify.com/search/Dead%20River%20Rebles"
-            },
-            {
-              "text": "Goof",
-              "href": "https://open.spotify.com/search/Goof"
-            },
-            {
-              "text": "Year 001",
-              "href": "https://open.spotify.com/search/Year%20001"
-            },
-            {
-              "text": "That Ship Has Sailed",
-              "href": "https://open.spotify.com/search/That%20Ship%20Has%20Sailed"
-            },
-            {
-              "text": "dj Tanke",
-              "href": "https://open.spotify.com/search/dj%20Tanke"
-            }
-          ],
-          "extra": "21+ $10 8pm/9pm"
-        },
-        {
-          "venue": {
             "text": "Fox Theater, Oakland",
             "href": "https://www.google.com/search?q=Fox%20Theater%2C%20Oakland"
           },
@@ -16326,6 +17063,27 @@
         },
         {
           "venue": {
+            "text": "Independent, S.F.",
+            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Ray And Paul",
+              "href": "https://open.spotify.com/search/Ray%20And%20Paul"
+            },
+            {
+              "text": "Rose Paradise",
+              "href": "https://open.spotify.com/search/Rose%20Paradise"
+            },
+            {
+              "text": "Where's Weat?",
+              "href": "https://open.spotify.com/search/Where's%20Weat%3F"
+            }
+          ],
+          "extra": "a/a 8:30pm/9pm"
+        },
+        {
+          "venue": {
             "text": "Mountain Winery, Saratoga",
             "href": "https://www.google.com/search?q=Mountain%20Winery%2C%20Saratoga"
           },
@@ -16483,6 +17241,19 @@
             }
           ],
           "extra": "a/a 7pm/8pm #"
+        },
+        {
+          "venue": {
+            "text": "Great Northern, S.F.",
+            "href": "https://www.google.com/search?q=Great%20Northern%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Young Franco",
+              "href": "https://open.spotify.com/search/Young%20Franco"
+            }
+          ],
+          "extra": "21+ $20 9:30pm"
         },
         {
           "venue": {
@@ -16699,6 +17470,19 @@
             }
           ],
           "extra": "21+"
+        },
+        {
+          "venue": {
+            "text": "UC Theater, Berkeley",
+            "href": "https://www.google.com/search?q=UC%20Theater%2C%20Berkeley"
+          },
+          "bands": [
+            {
+              "text": "Dareyes de La Sierra",
+              "href": "https://open.spotify.com/search/Dareyes%20de%20La%20Sierra"
+            }
+          ],
+          "extra": "a/a $49.50 7pm/8pm #"
         }
       ]
     },
@@ -16748,6 +17532,27 @@
             }
           ],
           "extra": "a/a 6pm/7:30pm #"
+        },
+        {
+          "venue": {
+            "text": "Fruit Yard Amphitheater, 7948 Yosemite Blvd., Modesto",
+            "href": "https://www.google.com/search?q=Fruit%20Yard%20Amphitheater%2C%207948%20Yosemite%20Blvd.%2C%20Modesto"
+          },
+          "bands": [
+            {
+              "text": "Three Dog Night",
+              "href": "https://open.spotify.com/search/Three%20Dog%20Night"
+            },
+            {
+              "text": "Little River Band",
+              "href": "https://open.spotify.com/search/Little%20River%20Band"
+            },
+            {
+              "text": "Lydia Pense",
+              "href": "https://open.spotify.com/search/Lydia%20Pense"
+            }
+          ],
+          "extra": "a/a $74 6pm #"
         },
         {
           "venue": {
@@ -16982,6 +17787,19 @@
         },
         {
           "venue": {
+            "text": "Palace of Fine Arts, S.F.",
+            "href": "https://www.google.com/search?q=Palace%20of%20Fine%20Arts%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Justin Hayward",
+              "href": "https://open.spotify.com/search/Justin%20Hayward"
+            }
+          ],
+          "extra": "a/a $82.25 7:30pm #"
+        },
+        {
+          "venue": {
             "text": "Regency Ballroom, S.F.",
             "href": "https://www.google.com/search?q=Regency%20Ballroom%2C%20S.F."
           },
@@ -17121,7 +17939,7 @@
               "href": "https://open.spotify.com/search/Molly%20Nillson"
             }
           ],
-          "extra": "a/a $24.09/$22 7pm/7:45pm"
+          "extra": "a/a $18/$22 7pm/7:45pm"
         }
       ]
     },
@@ -17129,6 +17947,23 @@
       "day": "Wed Sep 17",
       "normalizedDate": "2025-09-17",
       "events": [
+        {
+          "venue": {
+            "text": "Great American Music Hall, S.F.",
+            "href": "https://www.google.com/search?q=Great%20American%20Music%20Hall%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Baroness",
+              "href": "https://open.spotify.com/search/Baroness"
+            },
+            {
+              "text": "Weedeater",
+              "href": "https://open.spotify.com/search/Weedeater"
+            }
+          ],
+          "extra": "a/a $32/$37 7pm/8pm"
+        },
         {
           "venue": {
             "text": "Kilowatt, S.F.",
@@ -17282,7 +18117,7 @@
               "href": "https://open.spotify.com/search/dj%20Lizzy%20al%20Toque"
             }
           ],
-          "extra": "$20/$25 8pm/8:45pm"
+          "extra": "a/a $20/$25 8pm/8:45pm"
         },
         {
           "venue": {
@@ -17453,6 +18288,19 @@
             }
           ],
           "extra": "a/a 7:30pm"
+        },
+        {
+          "venue": {
+            "text": "Plaza De Cesar Chavez, Downtown San Jose",
+            "href": "https://www.google.com/search?q=Plaza%20De%20Cesar%20Chavez%2C%20Downtown%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Blue Oyster Cult",
+              "href": "https://open.spotify.com/search/Blue%20Oyster%20Cult"
+            }
+          ],
+          "extra": "a/a $39/$49 5pm til 10pm"
         },
         {
           "venue": {
@@ -17727,6 +18575,31 @@
         },
         {
           "venue": {
+            "text": "Phoenix Theater, Petaluma",
+            "href": "https://www.google.com/search?q=Phoenix%20Theater%2C%20Petaluma"
+          },
+          "bands": [
+            {
+              "text": "Blvkout",
+              "href": "https://open.spotify.com/search/Blvkout"
+            },
+            {
+              "text": "Nevergloom",
+              "href": "https://open.spotify.com/search/Nevergloom"
+            },
+            {
+              "text": "Titvn",
+              "href": "https://open.spotify.com/search/Titvn"
+            },
+            {
+              "text": "Caved In",
+              "href": "https://open.spotify.com/search/Caved%20In"
+            }
+          ],
+          "extra": "a/a $15.47 7:30pm/8pm"
+        },
+        {
+          "venue": {
             "text": "Portola Music Festival, Pier 80, S.F.",
             "href": "https://www.google.com/search?q=Portola%20Music%20Festival%2C%20Pier%2080%2C%20S.F."
           },
@@ -17945,16 +18818,16 @@
           },
           "bands": [
             {
-              "text": "Sidejob",
-              "href": "https://open.spotify.com/search/Sidejob"
+              "text": "C.I.M.P.",
+              "href": "https://open.spotify.com/search/C.I.M.P."
             },
             {
               "text": "Expert Pi",
               "href": "https://open.spotify.com/search/Expert%20Pi"
             },
             {
-              "text": "C.I.M.P.",
-              "href": "https://open.spotify.com/search/C.I.M.P."
+              "text": "Side Job",
+              "href": "https://open.spotify.com/search/Side%20Job"
             }
           ],
           "extra": "a/a $10-$25 sliding scale 6pm til 9pm"
@@ -18079,8 +18952,8 @@
         },
         {
           "venue": {
-            "text": "Indepedent, S.F.",
-            "href": "https://www.google.com/search?q=Indepedent%2C%20S.F."
+            "text": "Independent, S.F.",
+            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
           },
           "bands": [
             {
@@ -18093,6 +18966,19 @@
             }
           ],
           "extra": "a/a 7:30pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Plaza De Cesar Chavez, Downtown San Jose",
+            "href": "https://www.google.com/search?q=Plaza%20De%20Cesar%20Chavez%2C%20Downtown%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Larussell",
+              "href": "https://open.spotify.com/search/Larussell"
+            }
+          ],
+          "extra": "a/a $29/$49 4pm til 11pm"
         },
         {
           "venue": {
@@ -18268,6 +19154,23 @@
             }
           ],
           "extra": "a/a $20/$25 7pm"
+        },
+        {
+          "venue": {
+            "text": "Shoreline Amptheater, Mountain View",
+            "href": "https://www.google.com/search?q=Shoreline%20Amptheater%2C%20Mountain%20View"
+          },
+          "bands": [
+            {
+              "text": "Who",
+              "href": "https://open.spotify.com/search/Who"
+            },
+            {
+              "text": "Candlebox",
+              "href": "https://open.spotify.com/search/Candlebox"
+            }
+          ],
+          "extra": "a/a $89+ 6pm/7:30pm #"
         },
         {
           "venue": {
@@ -18561,6 +19464,14 @@
             {
               "text": "Hotline TNT",
               "href": "https://open.spotify.com/search/Hotline%20TNT"
+            },
+            {
+              "text": "Big Bite",
+              "href": "https://open.spotify.com/search/Big%20Bite"
+            },
+            {
+              "text": "Combat Naps",
+              "href": "https://open.spotify.com/search/Combat%20Naps"
             }
           ],
           "extra": "a/a $20/$25 7pm/8pm"
@@ -18684,6 +19595,27 @@
         },
         {
           "venue": {
+            "text": "Catalyst Atrium, Santa Cruz",
+            "href": "https://www.google.com/search?q=Catalyst%20Atrium%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Mexican Slum Rats",
+              "href": "https://open.spotify.com/search/Mexican%20Slum%20Rats"
+            },
+            {
+              "text": "Clarion",
+              "href": "https://open.spotify.com/search/Clarion"
+            },
+            {
+              "text": "Love Letter",
+              "href": "https://open.spotify.com/search/Love%20Letter"
+            }
+          ],
+          "extra": "16+ $19.26 7:30pm/8pm #"
+        },
+        {
+          "venue": {
             "text": "Catalyst, Santa Cruz",
             "href": "https://www.google.com/search?q=Catalyst%2C%20Santa%20Cruz"
           },
@@ -18780,6 +19712,19 @@
             }
           ],
           "extra": "a/a 7:30pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "Brass Against",
+              "href": "https://open.spotify.com/search/Brass%20Against"
+            }
+          ],
+          "extra": "21+ $43+ 7pm/8pm @"
         },
         {
           "venue": {
@@ -19261,8 +20206,8 @@
         },
         {
           "venue": {
-            "text": "Indepedent, S.F.",
-            "href": "https://www.google.com/search?q=Indepedent%2C%20S.F."
+            "text": "Independent, S.F.",
+            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
           },
           "bands": [
             {
@@ -19436,7 +20381,7 @@
               "href": "https://open.spotify.com/search/Artem%20Pivovarov"
             }
           ],
-          "extra": "a/a 7pm/8pm #"
+          "extra": "a/a $90/$102 7pm/8pm #"
         },
         {
           "venue": {
@@ -20383,6 +21328,19 @@
         },
         {
           "venue": {
+            "text": "Catalyst Atrium, Santa Cruz",
+            "href": "https://www.google.com/search?q=Catalyst%20Atrium%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Ray And Paul",
+              "href": "https://open.spotify.com/search/Ray%20And%20Paul"
+            }
+          ],
+          "extra": "16+ $24.56 9pm #"
+        },
+        {
+          "venue": {
             "text": "Fox Theater, Oakland",
             "href": "https://www.google.com/search?q=Fox%20Theater%2C%20Oakland"
           },
@@ -20809,7 +21767,7 @@
               "href": "https://open.spotify.com/search/Texas%20Is%20The%20Reason"
             }
           ],
-          "extra": "a/a 7pm/8pm #"
+          "extra": "a/a $50.50+ 7pm/8pm #"
         }
       ]
     },
@@ -20972,6 +21930,44 @@
             }
           ],
           "extra": "a/a 7pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Chapel, S.F.",
+            "href": "https://www.google.com/search?q=Chapel%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Damien Jurado",
+              "href": "https://open.spotify.com/search/Damien%20Jurado"
+            },
+            {
+              "text": "St. Yuma",
+              "href": "https://open.spotify.com/search/St.%20Yuma"
+            }
+          ],
+          "extra": "a/a 7pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Eagle, S.F.",
+            "href": "https://www.google.com/search?q=Eagle%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Leather Strip",
+              "href": "https://open.spotify.com/search/Leather%20Strip"
+            },
+            {
+              "text": "Damascus Knives",
+              "href": "https://open.spotify.com/search/Damascus%20Knives"
+            },
+            {
+              "text": "dj Starr Noire",
+              "href": "https://open.spotify.com/search/dj%20Starr%20Noire"
+            }
+          ],
+          "extra": "21+ $25 9pm"
         },
         {
           "venue": {
@@ -21502,6 +22498,19 @@
         },
         {
           "venue": {
+            "text": "Great American Music Hall, S.F.",
+            "href": "https://www.google.com/search?q=Great%20American%20Music%20Hall%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Kingfishr",
+              "href": "https://open.spotify.com/search/Kingfishr"
+            }
+          ],
+          "extra": "a/a $25/$30/$35 7pm/8pm"
+        },
+        {
+          "venue": {
             "text": "Hopmonk Tavern, Novato",
             "href": "https://www.google.com/search?q=Hopmonk%20Tavern%2C%20Novato"
           },
@@ -21693,6 +22702,31 @@
             }
           ],
           "extra": "a/a $64 6pm/7pm #"
+        },
+        {
+          "venue": {
+            "text": "UC Theater, Berkeley",
+            "href": "https://www.google.com/search?q=UC%20Theater%2C%20Berkeley"
+          },
+          "bands": [
+            {
+              "text": "Biohazard",
+              "href": "https://open.spotify.com/search/Biohazard"
+            },
+            {
+              "text": "Onyx",
+              "href": "https://open.spotify.com/search/Onyx"
+            },
+            {
+              "text": "Bayway",
+              "href": "https://open.spotify.com/search/Bayway"
+            },
+            {
+              "text": "Swollen Teeth",
+              "href": "https://open.spotify.com/search/Swollen%20Teeth"
+            }
+          ],
+          "extra": "a/a $44.75 5:30pm/6:30pm # @"
         }
       ]
     },
@@ -21787,8 +22821,8 @@
         },
         {
           "venue": {
-            "text": "Indepedent, S.F.",
-            "href": "https://www.google.com/search?q=Indepedent%2C%20S.F."
+            "text": "Independent, S.F.",
+            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
           },
           "bands": [
             {
@@ -21896,11 +22930,11 @@
           },
           "bands": [
             {
-              "text": "Hard Hats",
-              "href": "https://open.spotify.com/search/Hard%20Hats"
+              "text": "Hand Habits",
+              "href": "https://open.spotify.com/search/Hand%20Habits"
             }
           ],
-          "extra": "a/a $27+ 7pm/8pm"
+          "extra": "a/a $27.22 7pm/8pm"
         },
         {
           "venue": {
@@ -23251,8 +24285,8 @@
         },
         {
           "venue": {
-            "text": "Indepedent, S.F.",
-            "href": "https://www.google.com/search?q=Indepedent%2C%20S.F."
+            "text": "Independent, S.F.",
+            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
           },
           "bands": [
             {
@@ -23566,6 +24600,23 @@
             }
           ],
           "extra": "21+ 1pm til 9pm"
+        },
+        {
+          "venue": {
+            "text": "Great American Music Hall, S.F.",
+            "href": "https://www.google.com/search?q=Great%20American%20Music%20Hall%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Subhumans",
+              "href": "https://open.spotify.com/search/Subhumans"
+            },
+            {
+              "text": "1876",
+              "href": "https://open.spotify.com/search/1876"
+            }
+          ],
+          "extra": "a/a $22/$25 7pm/8pm @"
         },
         {
           "venue": {
@@ -24271,7 +25322,7 @@
               "href": "https://open.spotify.com/search/Rocky%20Horror%20Picture%20Show%20with%20Barely%20Legal%20live%20cast"
             }
           ],
-          "extra": "a/a 7pm/8pm # $"
+          "extra": "a/a $16.50+ 7pm/8pm # $"
         }
       ]
     },
@@ -24353,6 +25404,23 @@
         },
         {
           "venue": {
+            "text": "Henry J Kaiser Center, 10 Tenth Street, Oakland",
+            "href": "https://www.google.com/search?q=Henry%20J%20Kaiser%20Center%2C%2010%20Tenth%20Street%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Whispers",
+              "href": "https://open.spotify.com/search/Whispers"
+            },
+            {
+              "text": "Lenny Willams",
+              "href": "https://open.spotify.com/search/Lenny%20Willams"
+            }
+          ],
+          "extra": "a/a $76+ 7pm/8pm #"
+        },
+        {
+          "venue": {
             "text": "Independent, S.F.",
             "href": "https://www.google.com/search?q=Independent%2C%20S.F."
           },
@@ -24389,6 +25457,27 @@
             }
           ],
           "extra": "16+ $53+ 7pm/8pm #"
+        },
+        {
+          "venue": {
+            "text": "Regency Ballroom, S.F.",
+            "href": "https://www.google.com/search?q=Regency%20Ballroom%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Faint",
+              "href": "https://open.spotify.com/search/Faint"
+            },
+            {
+              "text": "Hercules",
+              "href": "https://open.spotify.com/search/Hercules"
+            },
+            {
+              "text": "Love Affair",
+              "href": "https://open.spotify.com/search/Love%20Affair"
+            }
+          ],
+          "extra": "a/a 7pm/8pm #"
         },
         {
           "venue": {
@@ -24484,6 +25573,29 @@
       ]
     },
     {
+      "day": "Mon Nov 3",
+      "normalizedDate": "2025-11-03",
+      "events": [
+        {
+          "venue": {
+            "text": "Fillmore, S.F.",
+            "href": "https://www.google.com/search?q=Fillmore%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Destin Conrad",
+              "href": "https://open.spotify.com/search/Destin%20Conrad"
+            },
+            {
+              "text": "Mack Keane",
+              "href": "https://open.spotify.com/search/Mack%20Keane"
+            }
+          ],
+          "extra": "a/a $46 7pm/8pm #"
+        }
+      ]
+    },
+    {
       "day": "Tue Nov 4",
       "normalizedDate": "2025-11-04",
       "events": [
@@ -24562,6 +25674,19 @@
       "day": "Wed Nov 5",
       "normalizedDate": "2025-11-05",
       "events": [
+        {
+          "venue": {
+            "text": "Catalyst Atrium, Santa Cruz",
+            "href": "https://www.google.com/search?q=Catalyst%20Atrium%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Conrad",
+              "href": "https://open.spotify.com/search/Conrad"
+            }
+          ],
+          "extra": "16+ $38.02 7pm/8pm #"
+        },
         {
           "venue": {
             "text": "Chapel, S.F.",
@@ -24741,6 +25866,19 @@
       "day": "Fri Nov 7",
       "normalizedDate": "2025-11-07",
       "events": [
+        {
+          "venue": {
+            "text": "Blue Note, Napa",
+            "href": "https://www.google.com/search?q=Blue%20Note%2C%20Napa"
+          },
+          "bands": [
+            {
+              "text": "Eric Darius",
+              "href": "https://open.spotify.com/search/Eric%20Darius"
+            }
+          ],
+          "extra": "8+ (under 16 with adult) 5pm/6:30pm and 8:30pm/9pm"
+        },
         {
           "venue": {
             "text": "Bottom of the Hill, S.F.",
@@ -24923,6 +26061,19 @@
       "events": [
         {
           "venue": {
+            "text": "Blue Note, Napa",
+            "href": "https://www.google.com/search?q=Blue%20Note%2C%20Napa"
+          },
+          "bands": [
+            {
+              "text": "Eric Darius",
+              "href": "https://open.spotify.com/search/Eric%20Darius"
+            }
+          ],
+          "extra": "8+ (under 16 with adult) 5pm/6:30pm and 8:30pm/9pm"
+        },
+        {
+          "venue": {
             "text": "Brick and Mortar, S.F.",
             "href": "https://www.google.com/search?q=Brick%20and%20Mortar%2C%20S.F."
           },
@@ -25055,7 +26206,7 @@
               "href": "https://open.spotify.com/search/Ic3peak"
             }
           ],
-          "extra": "a/a 7pm/8pm #"
+          "extra": "a/a $62.50+ 7pm/8pm #"
         },
         {
           "venue": {
@@ -25737,6 +26888,19 @@
       "events": [
         {
           "venue": {
+            "text": "Civic Auditorium, S.F.",
+            "href": "https://www.google.com/search?q=Civic%20Auditorium%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Chris Lake",
+              "href": "https://open.spotify.com/search/Chris%20Lake"
+            }
+          ],
+          "extra": "18+ 7:30pm #"
+        },
+        {
+          "venue": {
             "text": "Warfield, S.F.",
             "href": "https://www.google.com/search?q=Warfield%2C%20S.F."
           },
@@ -25839,6 +27003,35 @@
             }
           ],
           "extra": "a/a $32.47 7:30pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Kilowatt, S.F.",
+            "href": "https://www.google.com/search?q=Kilowatt%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Fire Drill",
+              "href": "https://open.spotify.com/search/Fire%20Drill"
+            },
+            {
+              "text": "Dead River Rebels",
+              "href": "https://open.spotify.com/search/Dead%20River%20Rebels"
+            },
+            {
+              "text": "Raised By Rats",
+              "href": "https://open.spotify.com/search/Raised%20By%20Rats"
+            },
+            {
+              "text": "Dandy Lions",
+              "href": "https://open.spotify.com/search/Dandy%20Lions"
+            },
+            {
+              "text": "dj Tanke",
+              "href": "https://open.spotify.com/search/dj%20Tanke"
+            }
+          ],
+          "extra": "21+ free 2pm"
         },
         {
           "venue": {
@@ -26398,6 +27591,23 @@
       "events": [
         {
           "venue": {
+            "text": "Brick and Mortar, S.F.",
+            "href": "https://www.google.com/search?q=Brick%20and%20Mortar%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Theartist",
+              "href": "https://open.spotify.com/search/Theartist"
+            },
+            {
+              "text": "Nali",
+              "href": "https://open.spotify.com/search/Nali"
+            }
+          ],
+          "extra": "a/a $29.49 (under 21 plus $5) 7pm/8pm ^"
+        },
+        {
+          "venue": {
             "text": "Cafe Du Nord, S.F.",
             "href": "https://www.google.com/search?q=Cafe%20Du%20Nord%2C%20S.F."
           },
@@ -26424,6 +27634,19 @@
         },
         {
           "venue": {
+            "text": "Chapel, S.F.",
+            "href": "https://www.google.com/search?q=Chapel%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Agriculture",
+              "href": "https://open.spotify.com/search/Agriculture"
+            }
+          ],
+          "extra": "a/a $29.69 8pm/9pm"
+        },
+        {
+          "venue": {
             "text": "First Church of the Buzzard, Oakland",
             "href": "https://www.google.com/search?q=First%20Church%20of%20the%20Buzzard%2C%20Oakland"
           },
@@ -26433,11 +27656,23 @@
               "href": "https://open.spotify.com/search/Apartment%20213"
             },
             {
+              "text": "Level",
+              "href": "https://open.spotify.com/search/Level"
+            },
+            {
               "text": "Choke",
               "href": "https://open.spotify.com/search/Choke"
+            },
+            {
+              "text": "Silakbo",
+              "href": "https://open.spotify.com/search/Silakbo"
+            },
+            {
+              "text": "Straggler",
+              "href": "https://open.spotify.com/search/Straggler"
             }
           ],
-          "extra": "a/a"
+          "extra": "a/a $15 7pm @"
         },
         {
           "venue": {
@@ -26703,6 +27938,25 @@
       ]
     },
     {
+      "day": "Wed Dec 3",
+      "normalizedDate": "2025-12-03",
+      "events": [
+        {
+          "venue": {
+            "text": "Independent, S.F.",
+            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Anna Of The North",
+              "href": "https://open.spotify.com/search/Anna%20Of%20The%20North"
+            }
+          ],
+          "extra": "a/a 7:30pm/8pm"
+        }
+      ]
+    },
+    {
       "day": "Thu Dec 4",
       "normalizedDate": "2025-12-04",
       "events": [
@@ -26812,6 +28066,19 @@
         },
         {
           "venue": {
+            "text": "San Jose Civic Center, San Jose",
+            "href": "https://www.google.com/search?q=San%20Jose%20Civic%20Center%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Flow",
+              "href": "https://open.spotify.com/search/Flow"
+            }
+          ],
+          "extra": "5+ 9pm #"
+        },
+        {
+          "venue": {
             "text": "Warfield, S.F.",
             "href": "https://www.google.com/search?q=Warfield%2C%20S.F."
           },
@@ -26833,6 +28100,40 @@
       "day": "Sat Dec 6",
       "normalizedDate": "2025-12-06",
       "events": [
+        {
+          "venue": {
+            "text": "Civic Auditorium, S.F.",
+            "href": "https://www.google.com/search?q=Civic%20Auditorium%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Katseye",
+              "href": "https://open.spotify.com/search/Katseye"
+            }
+          ],
+          "extra": "?/? 8pm #"
+        },
+        {
+          "venue": {
+            "text": "UC Theater, Berkeley",
+            "href": "https://www.google.com/search?q=UC%20Theater%2C%20Berkeley"
+          },
+          "bands": [
+            {
+              "text": "Floozies",
+              "href": "https://open.spotify.com/search/Floozies"
+            },
+            {
+              "text": "Dirtwire",
+              "href": "https://open.spotify.com/search/Dirtwire"
+            },
+            {
+              "text": "Honeycomb",
+              "href": "https://open.spotify.com/search/Honeycomb"
+            }
+          ],
+          "extra": "a/a $32.50+ 7pm/8pm #"
+        },
         {
           "venue": {
             "text": "Uptown Theater, Napa",
@@ -27159,6 +28460,35 @@
             }
           ],
           "extra": "a/a 8pm"
+        },
+        {
+          "venue": {
+            "text": "Eagle, S.F.",
+            "href": "https://www.google.com/search?q=Eagle%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "Nixed",
+              "href": "https://open.spotify.com/search/Nixed"
+            },
+            {
+              "text": "All To The Grave",
+              "href": "https://open.spotify.com/search/All%20To%20The%20Grave"
+            },
+            {
+              "text": "Dead River Rebels",
+              "href": "https://open.spotify.com/search/Dead%20River%20Rebels"
+            },
+            {
+              "text": "Dandy Lions",
+              "href": "https://open.spotify.com/search/Dandy%20Lions"
+            },
+            {
+              "text": "dj Tanke",
+              "href": "https://open.spotify.com/search/dj%20Tanke"
+            }
+          ],
+          "extra": "21+ $10 9pm"
         }
       ]
     },
@@ -27444,8 +28774,8 @@
       "events": [
         {
           "venue": {
-            "text": "Indepedent, S.F.",
-            "href": "https://www.google.com/search?q=Indepedent%2C%20S.F."
+            "text": "Independent, S.F.",
+            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
           },
           "bands": [
             {
