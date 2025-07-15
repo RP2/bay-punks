@@ -24,24 +24,6 @@
       "aliases": ["&friends"]
     },
     {
-      "id": "000-dreams",
-      "name": "000 Dreams",
-      "searchUrl": "https://open.spotify.com/search/000%20Dreams",
-      "spotifyUrl": "https://open.spotify.com/search/1%2C000%20Dreams",
-      "spotifyVerified": false,
-      "spotifyData": {
-        "notFound": true,
-        "scrapedName": "1,000 Dreams",
-        "searchQuery": "1,000 Dreams",
-        "searchResults": 10,
-        "verifiedAt": "2025-07-15T17:34:24.099Z"
-      },
-      "firstSeen": "2025-08-22",
-      "lastSeen": "2025-08-22",
-      "venues": ["oreillys-sf"],
-      "aliases": ["000 Dreams"]
-    },
-    {
       "id": "1000-dreams",
       "name": "1,000 Dreams",
       "searchUrl": "https://open.spotify.com/search/1%2C000%20Dreams",
@@ -54,8 +36,8 @@
         "searchResults": 10,
         "verifiedAt": "2025-07-15T17:34:24.099Z"
       },
-      "firstSeen": null,
-      "lastSeen": null,
+      "firstSeen": "2025-08-22",
+      "lastSeen": "2025-08-22",
       "venues": ["oreillys-sf"],
       "aliases": ["1,000 Dreams", "000 Dreams"]
     },

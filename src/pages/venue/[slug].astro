@@ -96,18 +96,46 @@ const upcomingShows = venueShows
         </CardHeader>
         <CardContent>
           <dl class="space-y-4">
-            <div>
-              <dt class="text-muted-foreground text-sm font-medium">
-                Location
-              </dt>
-              <dd class="text-lg">
-                {
-                  venue.address && venue.city
-                    ? `${venue.address}, ${venue.city}`
-                    : venue.city || venue.address || "Bay Area"
-                }
-              </dd>
-            </div>
+            {
+              venue.address && (
+                <div>
+                  <dt class="text-muted-foreground text-sm font-medium">
+                    Address
+                  </dt>
+                  <dd class="text-lg">{venue.address}</dd>
+                </div>
+              )
+            }
+            {
+              venue.city && (
+                <div>
+                  <dt class="text-muted-foreground text-sm font-medium">
+                    City
+                  </dt>
+                  <dd class="text-lg">{venue.city}</dd>
+                </div>
+              )
+            }
+            {
+              !venue.address && !venue.city && venue.location && (
+                <div>
+                  <dt class="text-muted-foreground text-sm font-medium">
+                    Location
+                  </dt>
+                  <dd class="text-lg">{venue.location}</dd>
+                </div>
+              )
+            }
+            {
+              !venue.address && !venue.city && !venue.location && (
+                <div>
+                  <dt class="text-muted-foreground text-sm font-medium">
+                    Location
+                  </dt>
+                  <dd class="text-lg">Bay Area</dd>
+                </div>
+              )
+            }
             {
               venue.searchUrl && (
                 <div>
