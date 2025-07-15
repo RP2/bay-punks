@@ -267,8 +267,8 @@ function mergeArtistData(existing, newData) {
     // update date ranges
     firstSeen: firstSeen,
     lastSeen: lastSeen,
-    // merge venues and aliases
-    venues: new Set([...existing.venues, ...newData.venues]),
+    // only use venue IDs - ignore old venue names from existing data
+    venues: new Set([...newData.venues]),
     aliases: new Set([...existing.aliases, ...newData.aliases]),
   };
 }
@@ -741,6 +741,9 @@ async function processDatabases() {
   let duplicatesFound = 0;
   let spellingCorrectionsFound = 0;
 
+  // create a mapping from venue text to venue ID for artist processing
+  const venueTextToId = new Map();
+
   // process each show
   concertsData.shows.forEach((show) => {
     show.events.forEach((event) => {
@@ -785,6 +788,8 @@ async function processDatabases() {
             }
 
             venues.set(existingVenue.key, merged);
+            // map venue text to venue ID for artist processing
+            venueTextToId.set(event.venue.text, existingVenue.key);
             console.log(`Updated special case venue: "${specialCase.name}"`);
             // Skip regular venue processing by returning from this event
             return;
@@ -803,6 +808,8 @@ async function processDatabases() {
               city: specialCase.city,
               aliases: aliases,
             });
+            // map venue text to venue ID for artist processing
+            venueTextToId.set(event.venue.text, specialCase.id);
             console.log(`Created special case venue: "${specialCase.name}"`);
             // Skip regular venue processing by returning early
             return;
@@ -858,6 +865,8 @@ async function processDatabases() {
           }
 
           venues.set(existingVenueKey, merged);
+          // map venue text to venue ID for artist processing
+          venueTextToId.set(event.venue.text, existingVenueKey);
         } else {
           // check if this is a new venue that needs spelling correction
           const correctedVenueName = applySpellingCorrection(
@@ -908,6 +917,8 @@ async function processDatabases() {
             city: locationInfo.city,
             aliases: aliases,
           });
+          // map venue text to venue ID for artist processing
+          venueTextToId.set(event.venue.text, venueSlug);
         }
       }
 
@@ -947,6 +958,9 @@ async function processDatabases() {
               normalizedPreferredName,
             );
 
+            // get the venue ID from the mapping
+            const venueId = venueTextToId.get(event.venue?.text);
+
             const newArtistData = {
               name: preferredName, // use the scraped name (most accurate)
               searchUrl: band.href,
@@ -956,7 +970,7 @@ async function processDatabases() {
               spotifyData: existingSpotifyData?.spotifyData || null,
               firstSeen: show.normalizedDate,
               lastSeen: show.normalizedDate,
-              venues: new Set([event.venue?.text]),
+              venues: new Set([venueId]),
               aliases: new Set([band.text]),
             };
 
@@ -1019,6 +1033,9 @@ async function processDatabases() {
               console.log(`  🔒 preserving spotify data for "${band.text}"`);
             }
 
+            // get the venue ID from the mapping
+            const venueId = venueTextToId.get(event.venue?.text);
+
             artists.set(artistSlug, {
               id: artistSlug,
               name: band.text,
@@ -1026,7 +1043,7 @@ async function processDatabases() {
               ...spotifyData,
               firstSeen: show.normalizedDate,
               lastSeen: show.normalizedDate,
-              venues: new Set([event.venue?.text]),
+              venues: new Set([venueId]),
               aliases: aliases,
             });
           }

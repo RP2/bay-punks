@@ -96,7 +96,7 @@ const artistShows = concerts.shows
               <dt class="text-muted-foreground text-sm font-medium">
                 Total Shows
               </dt>
-              <dd class="text-lg">{artist.showCount}</dd>
+              <dd class="text-lg">{artist.venues.length}</dd>
             </div>
             {
               (artist.spotifyUrl || artist.searchUrl) && (
@@ -127,12 +127,12 @@ const artistShows = concerts.shows
           </dl>
 
           {
-            artist.spotifyData?.originalScrapedName &&
-              artist.spotifyData.originalScrapedName !== artist.name && (
+            artist.spotifyData?.scrapedName &&
+              artist.spotifyData.scrapedName !== artist.name && (
                 <div class="border-muted text-muted-foreground mt-4 border-t pt-4 text-xs">
                   <p>
                     <span class="font-medium">Original source data:</span> "
-                    {artist.spotifyData.originalScrapedName}"
+                    {artist.spotifyData.scrapedName}"
                   </p>
                   <p class="mt-1">
                     Artist information is automatically collected and verified.
@@ -150,19 +150,19 @@ const artistShows = concerts.shows
           <h2 class="mb-4 text-2xl font-semibold">Venues</h2>
           <ul class="space-y-2">
             {
-              artist.venues.map((venue: string) => {
-                const venueId = findVenueId(venue);
+              artist.venues.map((venueId: string) => {
+                const venue = venues.venues.find((v) => v.id === venueId);
                 return (
                   <li class="text-lg">
-                    {venueId ? (
+                    {venue ? (
                       <a
                         href={`/venue/${venueId}/`}
                         class="text-primary hover:underline"
                       >
-                        {venue}
+                        {venue.name}
                       </a>
                     ) : (
-                      venue
+                      venueId
                     )}
                   </li>
                 );
