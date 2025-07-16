@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import venues from "../../data/venues.json";
 import concerts from "../../data/calendar.json";
+import { getArtistId } from "../../lib/data-utils";
+import { normalizeText } from "../../lib/shared-utils.js";
 
 // generate all venue pages at build time
 export async function getStaticPaths() {
@@ -15,14 +17,6 @@ export async function getStaticPaths() {
 
 // get the venue from props
 const { venue } = Astro.props;
-
-// helper to normalize text (remove special characters, lowercase)
-function normalizeText(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, "")
-    .trim();
-}
 
 // get all shows for this venue
 const venueShows = concerts.shows.flatMap((show) =>
@@ -192,25 +186,26 @@ const upcomingShows = venueShows
                         </a>
                       </div>
                       <div class="flex flex-wrap gap-1">
-                        {show.bands.map((band, i) => (
-                          <span data-key={i} class="inline-flex">
-                            {band.href ? (
-                              <a
-                                class="text-primary hover:underline"
-                                href={band.href}
-                                target="_blank"
-                                rel="noopener noreferrer nofollow"
-                              >
-                                {band.text}
-                              </a>
-                            ) : (
-                              <span>{band.text}</span>
-                            )}
-                            {i < show.bands.length - 1 && (
-                              <span class="text-muted-foreground">, </span>
-                            )}
-                          </span>
-                        ))}
+                        {show.bands.map((band, i) => {
+                          const artistId = getArtistId(band);
+                          return (
+                            <span data-key={i} class="inline-flex">
+                              {artistId ? (
+                                <a
+                                  class="text-primary hover:underline"
+                                  href={`/artist/${artistId}/`}
+                                >
+                                  {band.text}
+                                </a>
+                              ) : (
+                                <span>{band.text}</span>
+                              )}
+                              {i < show.bands.length - 1 && (
+                                <span class="text-muted-foreground">, </span>
+                              )}
+                            </span>
+                          );
+                        })}
                       </div>
                       {show.extra && (
                         <div class="text-muted-foreground text-sm">

@@ -64,6 +64,7 @@ const sortedVenues = venues.venues
       ...venue,
       upcomingShows: upcomingShows.slice(0, 2), // show max 2 upcoming shows
       upcomingShowsCount: upcomingShows.length,
+      upcomingShowsText: upcomingShows.length === 1 ? "show" : "shows",
     };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
@@ -109,8 +110,8 @@ const sortedVenues = venues.venues
                 {venue.upcomingShowsCount > 0 ? (
                   <div class="text-muted-foreground text-xs">
                     <div class="mb-1">
-                      {venue.upcomingShowsCount} upcoming show
-                      {venue.upcomingShowsCount !== 1 ? "s" : ""}
+                      {venue.upcomingShowsCount} upcoming{" "}
+                      {venue.upcomingShowsText}
                     </div>
                     {venue.upcomingShows.map((show) => (
                       <div class="truncate">

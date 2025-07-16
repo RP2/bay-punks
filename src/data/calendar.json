@@ -1,104 +1,6 @@
 {
   "shows": [
     {
-      "day": "Mon Jul 14",
-      "normalizedDate": "2025-07-14",
-      "events": [
-        {
-          "venue": {
-            "text": "Davies Symphony Hall, S.F.",
-            "id": "davies-symphony-hall-sf",
-            "href": "https://www.google.com/search?q=Davies%20Symphony%20Hall%2C%20S.F.",
-            "location": null
-          },
-          "bands": [
-            {
-              "text": "Yeah Yeah Yeahs",
-              "id": "yeah-yeah-yeahs",
-              "href": "https://open.spotify.com/artist/3TNt4aUIxgfy9aoaft5Jj2",
-              "spotifyVerified": true
-            }
-          ],
-          "extra": "a/a 8pm"
-        },
-        {
-          "venue": {
-            "text": "Eli's Mile High Club, Oakland",
-            "id": "elis-mile-high-club-oakland",
-            "href": "https://www.google.com/search?q=Eli's%20Mile%20High%20Club%2C%20Oakland",
-            "location": null
-          },
-          "bands": [
-            {
-              "text": "Cole And The Gang",
-              "id": "cole-and-the-gang",
-              "href": "https://open.spotify.com/search/Cole%20And%20The%20Gang",
-              "spotifyVerified": false
-            }
-          ],
-          "extra": "21+ free"
-        },
-        {
-          "venue": {
-            "text": "Kilowatt, S.F.",
-            "id": "kilowatt-sf",
-            "href": "https://www.google.com/search?q=Kilowatt%2C%20S.F.",
-            "location": null
-          },
-          "bands": [
-            {
-              "text": "Supreme Joy",
-              "id": "supreme-joy",
-              "href": "https://open.spotify.com/artist/57cxbOskjOx1lHYBZmZa5n",
-              "spotifyVerified": true
-            },
-            {
-              "text": "Blue Zero",
-              "id": "blue-zero",
-              "href": "https://open.spotify.com/artist/4a0pcrXdUq1o7EWxz7D2To",
-              "spotifyVerified": true
-            },
-            {
-              "text": "Ouch!",
-              "id": "ouch",
-              "href": "https://open.spotify.com/artist/4GoRDaUBTtrFtyqLDqivrD",
-              "spotifyVerified": true
-            }
-          ],
-          "extra": "21+ $10/$15 8pm"
-        },
-        {
-          "venue": {
-            "text": "Rickshaw Stop, S.F.",
-            "id": "rickshaw-stop-sf",
-            "href": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F.",
-            "location": null
-          },
-          "bands": [
-            {
-              "text": "Circulators",
-              "id": "circulators",
-              "href": "https://open.spotify.com/artist/2PPxkBHjWcIVG2B34g3Is9",
-              "spotifyVerified": true
-            },
-            {
-              "text": "Subterranean Fire",
-              "id": "subterranean-fire",
-              "href": "https://open.spotify.com/search/Subterranean%20Fire",
-              "spotifyVerified": false
-            },
-            {
-              "text": "Alphabet",
-              "id": "alphabet",
-              "href": "https://open.spotify.com/artist/6XcO14dMsawxjyAJOcmjM2",
-              "spotifyVerified": true
-            }
-          ],
-          "extra": "$9/$15 7pm/7:45pm"
-        }
-      ]
-    },
-    {
       "day": "Tue Jul 15",
       "normalizedDate": "2025-07-15",
       "events": [
@@ -113,7 +15,7 @@
             {
               "text": "4411",
               "id": "4411",
-              "href": "https://open.spotify.com/artist/5TReTYdYeqZP93DdBAyZsJ",
+              "href": "https://open.spotify.com/artist/7ihRkM2a3CvPVKDkE1ZRnx",
               "spotifyVerified": true
             }
           ],
@@ -165,7 +67,7 @@
             {
               "text": "Coronas",
               "id": "coronas",
-              "href": "https://open.spotify.com/artist/3yhJ8QldXtJjonTm55O59e",
+              "href": "https://open.spotify.com/artist/2tppd6KkhK4ULAd217Ecq1",
               "spotifyVerified": true
             }
           ],
@@ -286,8 +188,8 @@
             {
               "text": "Vale",
               "id": "vale",
-              "href": "https://open.spotify.com/search/Vale",
-              "spotifyVerified": false
+              "href": "https://open.spotify.com/artist/22p8vOZwMABvl5qt2nZHWD",
+              "spotifyVerified": true
             }
           ],
           "extra": "a/a 8pm #"
@@ -366,25 +268,25 @@
             },
             {
               "text": "Ghost Of Marty Robbins",
-              "id": "ghost-of-marty-robbins",
+              "id": null,
               "href": "https://open.spotify.com/search/Ghost%20Of%20Marty%20Robbins",
               "spotifyVerified": false
             },
             {
               "text": "Heroes Mission",
-              "id": "heroes-mission",
+              "id": null,
               "href": "https://open.spotify.com/search/Heroes%20Mission",
               "spotifyVerified": false
             },
             {
               "text": "Rock Shed Rangers",
-              "id": "rock-shed-rangers",
-              "href": "https://open.spotify.com/artist/5iHO13kHbvliJJcxlcCiPZ",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Rock%20Shed%20Rangers",
+              "spotifyVerified": false
             },
             {
               "text": "Manic Sobriety",
-              "id": "manic-sobriety",
+              "id": null,
               "href": "https://open.spotify.com/search/Manic%20Sobriety",
               "spotifyVerified": false
             }
@@ -425,8 +327,8 @@
             {
               "text": "Fin.",
               "id": "fin",
-              "href": "https://open.spotify.com/artist/1lB1PYgXtW8eHbKhR9RV2A",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Fin.",
+              "spotifyVerified": false
             },
             {
               "text": "Tauwoo",
@@ -710,8 +612,8 @@
             {
               "text": "Lo-Fi Legs",
               "id": "lo-fi-legs",
-              "href": "https://open.spotify.com/artist/2D7kfjhkgz3y3LBheDXtFu",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Lo-fi%20Legs",
+              "spotifyVerified": false
             },
             {
               "text": "Crop Top",
@@ -785,7 +687,7 @@
             {
               "text": "Burnout",
               "id": "burnout",
-              "href": "https://open.spotify.com/artist/351t4RxRSscYfQli2aZxKA",
+              "href": "https://open.spotify.com/artist/3zkua6IbTRB4XaLGpc08XL",
               "spotifyVerified": true
             },
             {
@@ -848,27 +750,27 @@
           "bands": [
             {
               "text": "Dance Myth",
-              "id": "dance-myth",
-              "href": "https://open.spotify.com/artist/1h7PA5c25pqpAuY0tCr0tf",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Dance%20Myth",
+              "spotifyVerified": false
             },
             {
               "text": "Derek Zanitti",
-              "id": "derek-zanitti",
+              "id": null,
               "href": "https://open.spotify.com/search/Derek%20Zanitti",
               "spotifyVerified": false
             },
             {
               "text": "Half Cafe",
-              "id": "half-cafe",
+              "id": null,
               "href": "https://open.spotify.com/search/Half%20Cafe",
               "spotifyVerified": false
             },
             {
               "text": "Colonel Macabre",
-              "id": "colonel-macabre",
-              "href": "https://open.spotify.com/artist/2oFI7Md04YmMDCWiQnqfml",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Colonel%20Macabre",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $15 7pm/7:30pm"
@@ -1080,7 +982,7 @@
             {
               "text": "Bloodsugar",
               "id": "bloodsugar",
-              "href": "https://open.spotify.com/artist/40wius24wDQUVfs8S640Cw",
+              "href": "https://open.spotify.com/artist/1tBPhxVUAaYLBXpLFV4wwW",
               "spotifyVerified": true
             },
             {
@@ -1347,7 +1249,7 @@
             {
               "text": "Taxi",
               "id": "taxi",
-              "href": "https://open.spotify.com/artist/1n0F5eyQcVpW8Vcsl0LCot",
+              "href": "https://open.spotify.com/artist/62Fs0FPpjxCIazHJodHxd8",
               "spotifyVerified": true
             }
           ],
@@ -1519,27 +1421,27 @@
           "bands": [
             {
               "text": "Side Eye",
-              "id": "side-eye",
-              "href": "https://open.spotify.com/artist/0kBjPWKYt1Zot8TF1tCNPx",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Side%20Eye",
+              "spotifyVerified": false
             },
             {
               "text": "Smoke",
-              "id": "smoke",
-              "href": "https://open.spotify.com/artist/0m7vWXM1gXpLwVZvSocsiR",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Smoke",
+              "spotifyVerified": false
             },
             {
               "text": "Stoned Gnome",
-              "id": "stoned-gnome",
+              "id": null,
               "href": "https://open.spotify.com/search/Stoned%20Gnome",
               "spotifyVerified": false
             },
             {
               "text": "Pyrograph",
-              "id": "pyrograph",
-              "href": "https://open.spotify.com/artist/1uxPtPszIE6PJDhUzq9bkz",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Pyrograph",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $12 7pm"
@@ -1763,7 +1665,7 @@
             {
               "text": "Heat",
               "id": "heat",
-              "href": "https://open.spotify.com/artist/3rVB0k4kamBQPZ2xZeAZrT",
+              "href": "https://open.spotify.com/artist/2k9nSWlC3aJHH0JEywzbAz",
               "spotifyVerified": true
             },
             {
@@ -2048,7 +1950,7 @@
             {
               "text": "Levi Thomas",
               "id": "levi-thomas",
-              "href": "https://open.spotify.com/artist/5VjZd1D9yISGwPX5f96ymO",
+              "href": "https://open.spotify.com/artist/1QdYYMgWI2BeV4s5DESjac",
               "spotifyVerified": true
             }
           ],
@@ -2245,7 +2147,7 @@
             {
               "text": "Cielo",
               "id": "cielo",
-              "href": "https://open.spotify.com/artist/0xSzeOCtCAD3mYPGrkWMIc",
+              "href": "https://open.spotify.com/artist/3KPgRinnr7LGT0RBEJuwS5",
               "spotifyVerified": true
             }
           ],
@@ -2524,7 +2426,7 @@
             {
               "text": "Dissociation",
               "id": "dissociation",
-              "href": "https://open.spotify.com/artist/0cYtmlDAQNmVKks8FWdp65",
+              "href": "https://open.spotify.com/artist/6fnuNxbFDdsFOb426I7VoU",
               "spotifyVerified": true
             },
             {
@@ -2604,9 +2506,9 @@
             },
             {
               "text": "Party Force",
-              "id": "party-force",
-              "href": "https://open.spotify.com/artist/37FoPYJOGzOpp5zNU5HTeb",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Party%20Force",
+              "spotifyVerified": false
             },
             {
               "text": "Shark In The Water",
@@ -3305,7 +3207,7 @@
             {
               "text": "Blvkout",
               "id": "blvkout",
-              "href": "https://open.spotify.com/artist/1kRJwDfRRfdCPjuuS8P399",
+              "href": "https://open.spotify.com/artist/1WZ3VpetsijiQhKmIjGDy7",
               "spotifyVerified": true
             },
             {
@@ -3386,8 +3288,8 @@
             {
               "text": "dj Waves",
               "id": "dj-waves",
-              "href": "https://open.spotify.com/artist/2GwgJMFzku54bIZIZtcZgc",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/dj%20Waves",
+              "spotifyVerified": false
             }
           ],
           "extra": "21+ $39 9:30pm/10:30pm (sold out - Mosswood Meltdown)"
@@ -3461,8 +3363,8 @@
             {
               "text": "Velvet Grave",
               "id": "velvet-grave",
-              "href": "https://open.spotify.com/artist/3hOzMvPzhp6H3ojaFjejXU",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Velvet%20Grave",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $15 6pm"
@@ -3517,25 +3419,25 @@
           "bands": [
             {
               "text": "Null",
-              "id": "null",
-              "href": "https://open.spotify.com/artist/1BJXNNMcbnrvERcsy0ahoS",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Null",
+              "spotifyVerified": false
             },
             {
               "text": "Baylies Band",
-              "id": "baylies-band",
-              "href": "https://open.spotify.com/artist/4IOB75CDTsBcPJCBROeskV",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Baylies%20Band",
+              "spotifyVerified": false
             },
             {
               "text": "Mechanical Grandma",
-              "id": "mechanical-grandma",
-              "href": "https://open.spotify.com/artist/7EldgPRSk5l3e7KUx0Yag3",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Mechanical%20Grandma",
+              "spotifyVerified": false
             },
             {
               "text": "Seeyouatwork",
-              "id": "seeyouatwork",
+              "id": null,
               "href": "https://open.spotify.com/search/Seeyouatwork",
               "spotifyVerified": false
             }
@@ -3715,7 +3617,7 @@
             {
               "text": "Barry Sless",
               "id": "barry-sless",
-              "href": "https://open.spotify.com/artist/7oS8mcItgRBEk8zlM3os05",
+              "href": "https://open.spotify.com/artist/1iGkCpWqBHoj1xOOfeCFIZ",
               "spotifyVerified": true
             },
             {
@@ -3847,8 +3749,8 @@
             {
               "text": "Bobby Joe Ebola And The Children Macnuggetis",
               "id": "bobby-joe-ebola-and-the-children-macnuggetis",
-              "href": "https://open.spotify.com/artist/38OShjvajzYAkROyGheSaz",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Bobby%20Joe%20Ebola%20And%20The%20Children%20Macnuggetis",
+              "spotifyVerified": false
             },
             {
               "text": "Cam Girl",
@@ -3865,7 +3767,7 @@
             {
               "text": "Neverly Brothers",
               "id": "neverly-brothers",
-              "href": "https://open.spotify.com/artist/1AqQtjjA1SCFjVsuBFgEfz",
+              "href": "https://open.spotify.com/artist/2ZsWrWACtHvjig8kEDld7n",
               "spotifyVerified": true
             }
           ],
@@ -3929,8 +3831,8 @@
             {
               "text": "Justin Jones",
               "id": "justin-jones",
-              "href": "https://open.spotify.com/artist/6VJ9LXFGopiJNmgySNbqDH",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Justin%20Jones",
+              "spotifyVerified": false
             }
           ],
           "extra": "21+ free 8pm"
@@ -4075,7 +3977,7 @@
             {
               "text": "Kurb",
               "id": "kurb",
-              "href": "https://open.spotify.com/artist/1de5g4xHKyhCZKfvsfWGI5",
+              "href": "https://open.spotify.com/artist/5RilpKFQmSS9XHxJKYhacd",
               "spotifyVerified": true
             }
           ],
@@ -4261,7 +4163,7 @@
             {
               "text": "Chromeo",
               "id": "chromeo",
-              "href": "https://open.spotify.com/artist/7lzh7L8TrRoMrXsRNgwkYs",
+              "href": "https://open.spotify.com/artist/2mV8aJphiSHYJf43DxL7Gt",
               "spotifyVerified": true
             },
             {
@@ -4325,8 +4227,8 @@
             {
               "text": "Shannon And The Clams",
               "id": "shannon-and-the-clams",
-              "href": "https://open.spotify.com/artist/6A5Ns1SpGWTt8SzXPwiqVE",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Shannon%20And%20The%20Clams",
+              "spotifyVerified": false
             },
             {
               "text": "Jacuzzi Boys",
@@ -4337,7 +4239,7 @@
             {
               "text": "Snacks",
               "id": "snacks",
-              "href": "https://open.spotify.com/artist/2FybCOkpsTiXYNccjPpiYh",
+              "href": "https://open.spotify.com/artist/3EhNT3tygiNyU4NF15q365",
               "spotifyVerified": true
             },
             {
@@ -4635,25 +4537,25 @@
           "bands": [
             {
               "text": "Midwestlust",
-              "id": "midwestlust",
-              "href": "https://open.spotify.com/artist/0inJaMM1Uh9hERzWUBU43m",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Midwestlust",
+              "spotifyVerified": false
             },
             {
               "text": "Pain Chain",
-              "id": "pain-chain",
-              "href": "https://open.spotify.com/artist/5QABChrxGc6Cju90U7xpTJ",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Pain%20Chain",
+              "spotifyVerified": false
             },
             {
               "text": "Hidden Gateways",
-              "id": "hidden-gateways",
-              "href": "https://open.spotify.com/artist/6EQbqcBzpTjcPSavO4uEyB",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Hidden%20Gateways",
+              "spotifyVerified": false
             },
             {
               "text": "Dagger Wound",
-              "id": "dagger-wound",
+              "id": null,
               "href": "https://open.spotify.com/search/Dagger%20Wound",
               "spotifyVerified": false
             },
@@ -4665,7 +4567,7 @@
             },
             {
               "text": "Dead Fern",
-              "id": "dead-fern",
+              "id": null,
               "href": "https://open.spotify.com/search/Dead%20Fern",
               "spotifyVerified": false
             }
@@ -4883,15 +4785,15 @@
             },
             {
               "text": "Old Man Of The Woods",
-              "id": "old-man-of-the-woods",
-              "href": "https://open.spotify.com/artist/0t34b9Zwp6LKji8CbVG9oB",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Old%20Man%20Of%20The%20Woods",
+              "spotifyVerified": false
             },
             {
               "text": "Indica In Decay",
-              "id": "indica-in-decay",
-              "href": "https://open.spotify.com/artist/5rlBey5kzWZlyTVf9NPWwE",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Indica%20In%20Decay",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $12 7pm til 9:30pm"
@@ -5142,7 +5044,7 @@
             {
               "text": "Waax",
               "id": "waax",
-              "href": "https://open.spotify.com/artist/1KaaogmGXWK1Qi3WR81Tmi",
+              "href": "https://open.spotify.com/artist/5QjsojpLTp1aox04xgZ3ye",
               "spotifyVerified": true
             },
             {
@@ -5331,21 +5233,21 @@
           "bands": [
             {
               "text": "Big Boys",
-              "id": "big-boys",
-              "href": "https://open.spotify.com/artist/5dLLOxuGeaMlFV5OAEsmtL",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Big%20Boys",
+              "spotifyVerified": false
             },
             {
               "text": "Combust",
-              "id": "combust",
-              "href": "https://open.spotify.com/artist/6vzYdcLnvCyXQbFj4FURxM",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Combust",
+              "spotifyVerified": false
             },
             {
               "text": "Start Today",
-              "id": "start-today",
-              "href": "https://open.spotify.com/artist/1jYXlWdVpfD8ueeNP8OI2x",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Start%20Today",
+              "spotifyVerified": false
             },
             {
               "text": "Stand Tall",
@@ -6127,7 +6029,7 @@
             {
               "text": "Emo Night",
               "id": "emo-night",
-              "href": "https://open.spotify.com/search/emo%20night",
+              "href": "https://open.spotify.com/search/Emo%20Night",
               "spotifyVerified": false
             }
           ],
@@ -6573,15 +6475,15 @@
           "bands": [
             {
               "text": "Planet Booty",
-              "id": "planet-booty",
-              "href": "https://open.spotify.com/artist/0muFMgF5rWwcV5Ib8Bx1Av",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Planet%20Booty",
+              "spotifyVerified": false
             },
             {
               "text": "Maraschinos",
-              "id": "maraschinos",
-              "href": "https://open.spotify.com/artist/76ih0Q6Q5UPwTlCTu1FHjh",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Maraschinos",
+              "spotifyVerified": false
             },
             {
               "text": "Stay Out",
@@ -6591,27 +6493,27 @@
             },
             {
               "text": "Mugslug",
-              "id": "mugslug",
-              "href": "https://open.spotify.com/artist/57SUgbNdJnzId6zIIBNOgO",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Mugslug",
+              "spotifyVerified": false
             },
             {
               "text": "Opus",
-              "id": "opus",
-              "href": "https://open.spotify.com/artist/5pf1217gT8zcjOFc7oMi47",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Opus",
+              "spotifyVerified": false
             },
             {
               "text": "East Brothers",
               "id": "east-brothers",
-              "href": "https://open.spotify.com/artist/22MHM5M4H10FXT4i5UArZR",
+              "href": "https://open.spotify.com/artist/5rOQuZwkCA0if2Sjplbt55",
               "spotifyVerified": true
             },
             {
               "text": "Average Royalty",
-              "id": "average-royalty",
-              "href": "https://open.spotify.com/artist/7h1cZvd2NfPz5BA6YMtrBQ",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Average%20Royalty",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $18/$20 6pm (Oomfchella)"
@@ -6889,8 +6791,8 @@
             {
               "text": "food",
               "id": "food",
-              "href": "https://open.spotify.com/artist/5UH0MJYNrZoaqu9P0A3SII",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/food",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $5 (12 and under free) 10am til 6pm @"
@@ -7025,7 +6927,7 @@
             {
               "text": "Modesty",
               "id": "modesty",
-              "href": "https://open.spotify.com/artist/29BJsaLNz8nWL6PGgAroLO",
+              "href": "https://open.spotify.com/artist/1yzvd92lUmR1od6XOrQxQ5",
               "spotifyVerified": true
             }
           ],
@@ -7128,7 +7030,7 @@
             {
               "text": "Bang On",
               "id": "bang-on",
-              "href": "https://open.spotify.com/artist/6Xpa6DXZi8haBz0rcCEair",
+              "href": "https://open.spotify.com/artist/0e85RhXOshUaQbDjU7eopE",
               "spotifyVerified": true
             }
           ],
@@ -7244,7 +7146,7 @@
             {
               "text": "Heat",
               "id": "heat",
-              "href": "https://open.spotify.com/artist/3rVB0k4kamBQPZ2xZeAZrT",
+              "href": "https://open.spotify.com/artist/2k9nSWlC3aJHH0JEywzbAz",
               "spotifyVerified": true
             },
             {
@@ -7521,8 +7423,8 @@
             {
               "text": "Hellcatraz",
               "id": "hellcatraz",
-              "href": "https://open.spotify.com/search/Hellcatraz",
-              "spotifyVerified": false
+              "href": "https://open.spotify.com/artist/6vLo8dgAB8BNRlFXSk5H2Y",
+              "spotifyVerified": true
             },
             {
               "text": "Prima Materia",
@@ -7708,7 +7610,7 @@
             {
               "text": "Nothing Special",
               "id": "nothing-special",
-              "href": "https://open.spotify.com/artist/0DJfvnVoTQbkiHbfNZYAH3",
+              "href": "https://open.spotify.com/artist/05QekBCZkUY5uDcEkgyGtk",
               "spotifyVerified": true
             },
             {
@@ -7744,7 +7646,7 @@
             {
               "text": "Placeholder",
               "id": "placeholder",
-              "href": "https://open.spotify.com/artist/7Dl8cTNOGWBsG3bEJvHb8Y",
+              "href": "https://open.spotify.com/artist/6zdi9sYFdYlynnXrp0iqgi",
               "spotifyVerified": true
             },
             {
@@ -8360,9 +8262,9 @@
           "bands": [
             {
               "text": "Poppyfield",
-              "id": "poppyfield",
-              "href": "https://open.spotify.com/artist/2PWYEISqMuLt3FMHuDT5RM",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Poppyfield",
+              "spotifyVerified": false
             },
             {
               "text": "Jenny Haniver",
@@ -8372,9 +8274,9 @@
             },
             {
               "text": "Wyatt ramos",
-              "id": "wyatt-ramos",
-              "href": "https://open.spotify.com/artist/5VkjBEXc1W999VchzatLWb",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Wyatt%20ramos",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $10 6:30pm"
@@ -8576,7 +8478,7 @@
             {
               "text": "Tunnel",
               "id": "tunnel",
-              "href": "https://open.spotify.com/artist/1Fq1IkixjzuamwgUYjYEtR",
+              "href": "https://open.spotify.com/artist/7csfrxGJ4F7l5xCLD9TP6W",
               "spotifyVerified": true
             }
           ],
@@ -8708,19 +8610,19 @@
           "bands": [
             {
               "text": "Beau Navire",
-              "id": "beau-navire",
-              "href": "https://open.spotify.com/artist/55N2qfXD8lNQCGt2MmPC4b",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Beau%20Navire",
+              "spotifyVerified": false
             },
             {
               "text": "Nuvolascura",
-              "id": "nuvolascura",
-              "href": "https://open.spotify.com/artist/0HzDn36ZNGZBYOGWp96Eeh",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Nuvolascura",
+              "spotifyVerified": false
             },
             {
               "text": "Mau",
-              "id": "mau",
+              "id": null,
               "href": "https://open.spotify.com/search/Mau",
               "spotifyVerified": false
             },
@@ -9176,33 +9078,33 @@
           "bands": [
             {
               "text": "Mugslug",
-              "id": "mugslug",
-              "href": "https://open.spotify.com/artist/57SUgbNdJnzId6zIIBNOgO",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Mugslug",
+              "spotifyVerified": false
             },
             {
               "text": "Slinger",
-              "id": "slinger",
-              "href": "https://open.spotify.com/artist/2uZzhplEA7mHC7v7qahiYo",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Slinger",
+              "spotifyVerified": false
             },
             {
               "text": "Upnow!",
-              "id": "upnow",
-              "href": "https://open.spotify.com/artist/02nZkPJuLbtShLBBTgPyeL",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Upnow!",
+              "spotifyVerified": false
             },
             {
               "text": "Lemon Bread",
-              "id": "lemon-bread",
-              "href": "https://open.spotify.com/artist/49ZeCxgDi1rjWGejIdZYix",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Lemon%20Bread",
+              "spotifyVerified": false
             },
             {
               "text": "Catnip",
-              "id": "catnip",
-              "href": "https://open.spotify.com/artist/4756Ogon06v9ngH7bMEqUE",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Catnip",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $10 7pm til 11pm"
@@ -9356,8 +9258,8 @@
             {
               "text": "Wreckless Stragers",
               "id": "wreckless-stragers",
-              "href": "https://open.spotify.com/artist/3niRRJFTVQEmQAVtrCHMu5",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Wreckless%20Stragers",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a free 6pm til 8pm"
@@ -9414,7 +9316,7 @@
             {
               "text": "Alvilda",
               "id": "alvilda",
-              "href": "https://open.spotify.com/artist/7dUKQAwqu3OZo3Sjt95K31",
+              "href": "https://open.spotify.com/artist/5lJBuK5VPBM8uRttV10bYH",
               "spotifyVerified": true
             },
             {
@@ -9426,7 +9328,7 @@
             {
               "text": "Slugger",
               "id": "slugger",
-              "href": "https://open.spotify.com/artist/1XBvJ36SQR3nOGyvEtgMB4",
+              "href": "https://open.spotify.com/artist/3VMw6ZZq43PHHyBvvZJxH7",
               "spotifyVerified": true
             },
             {
@@ -9478,14 +9380,14 @@
             {
               "text": "Tocca",
               "id": "tocca",
-              "href": "https://open.spotify.com/artist/1F4QLlD8qKBr7vOoOLfGQ2",
+              "href": "https://open.spotify.com/artist/7MmiHCIELQjGYyLHyTzSil",
               "spotifyVerified": true
             },
             {
               "text": "Hellcatraz",
               "id": "hellcatraz",
-              "href": "https://open.spotify.com/search/Hellcatraz",
-              "spotifyVerified": false
+              "href": "https://open.spotify.com/artist/6vLo8dgAB8BNRlFXSk5H2Y",
+              "spotifyVerified": true
             },
             {
               "text": "OMN",
@@ -9514,13 +9416,13 @@
             {
               "text": "Fatale",
               "id": "fatale",
-              "href": "https://open.spotify.com/artist/3ux6SBp12Hmqioq7N75Pf6",
+              "href": "https://open.spotify.com/artist/67ziIz0VtPvZ1rfGpXq1G1",
               "spotifyVerified": true
             },
             {
               "text": "Dissociation",
               "id": "dissociation",
-              "href": "https://open.spotify.com/artist/0cYtmlDAQNmVKks8FWdp65",
+              "href": "https://open.spotify.com/artist/6fnuNxbFDdsFOb426I7VoU",
               "spotifyVerified": true
             }
           ],
@@ -9692,9 +9594,9 @@
           "bands": [
             {
               "text": "Tsunami Bomb",
-              "id": "tsunami-bomb",
-              "href": "https://open.spotify.com/artist/5oNVC8oAZ9Tmhnx5kLihgC",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Tsunami%20Bomb",
+              "spotifyVerified": false
             },
             {
               "text": "Middle-Aged Queers",
@@ -9704,15 +9606,15 @@
             },
             {
               "text": "Build Us Airplanes",
-              "id": "build-us-airplanes",
-              "href": "https://open.spotify.com/artist/0upGYamcttpNmQ6x825liM",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Build%20Us%20Airplanes",
+              "spotifyVerified": false
             },
             {
               "text": "One Armed Joey",
-              "id": "one-armed-joey",
-              "href": "https://open.spotify.com/artist/0Czvek5cBB1gfVw18ekLl1",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/One%20Armed%20Joey",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $20/$25 6:30pm/7pm @ (Sell The Heart Records 15th Anniversary - night 1)"
@@ -9791,7 +9693,7 @@
             {
               "text": "Infadel",
               "id": "infadel",
-              "href": "https://open.spotify.com/artist/6tFQAnr0LijRb8h47BD7Dg",
+              "href": "https://open.spotify.com/artist/68jtck4BWgOHgqkguyCvcY",
               "spotifyVerified": true
             },
             {
@@ -10121,7 +10023,7 @@
             {
               "text": "Whine",
               "id": "whine",
-              "href": "https://open.spotify.com/artist/09RDM0kKNKRdejaBcFtPrE",
+              "href": "https://open.spotify.com/artist/2Jx2yzAO1rKt7hQQWypBuL",
               "spotifyVerified": true
             },
             {
@@ -10241,33 +10143,33 @@
           "bands": [
             {
               "text": "Death By Stereo",
-              "id": "death-by-stereo",
-              "href": "https://open.spotify.com/artist/6ZnqizbzAJTqXgRTje6IcF",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Death%20By%20Stereo",
+              "spotifyVerified": false
             },
             {
               "text": "M Section",
-              "id": "m-section",
-              "href": "https://open.spotify.com/artist/4vTQzuR6D2EOQzjCu4bx6Z",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/M%20Section",
+              "spotifyVerified": false
             },
             {
               "text": "Hotlung",
-              "id": "hotlung",
-              "href": "https://open.spotify.com/artist/67m5IQ0Dcffl4aoTIgXzIC",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Hotlung",
+              "spotifyVerified": false
             },
             {
               "text": "Hauntu",
-              "id": "hauntu",
-              "href": "https://open.spotify.com/artist/5u7VKYMLkxKHz1613ztU9d",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Hauntu",
+              "spotifyVerified": false
             },
             {
               "text": "Datura",
-              "id": "datura",
-              "href": "https://open.spotify.com/artist/0MUH7R6frUBzkFf6cgmARA",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Datura",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $20/$25 6:30pm/7pm (Sell The Heart Records 15th Anniversary - night 1) @"
@@ -10386,7 +10288,7 @@
             {
               "text": "Tom Hamilton",
               "id": "tom-hamilton",
-              "href": "https://open.spotify.com/artist/5Lx3pTsFt9prQGCgrr0fV1",
+              "href": "https://open.spotify.com/artist/0gyuzooRdldRxuPmqoQbGa",
               "spotifyVerified": true
             }
           ],
@@ -10668,8 +10570,8 @@
             {
               "text": "Lo-fi Legs",
               "id": "lo-fi-legs",
-              "href": "https://open.spotify.com/artist/2D7kfjhkgz3y3LBheDXtFu",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Lo-fi%20Legs",
+              "spotifyVerified": false
             }
           ],
           "extra": "21+ 5pm"
@@ -10691,8 +10593,8 @@
             {
               "text": "Little Brian",
               "id": "little-brian",
-              "href": "https://open.spotify.com/artist/5FeDM7liwUpzeOaI5h4Nv6",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Little%20Brian",
+              "spotifyVerified": false
             },
             {
               "text": "Kelsy Kindall",
@@ -10848,8 +10750,8 @@
             {
               "text": "Vale",
               "id": "vale",
-              "href": "https://open.spotify.com/search/Vale",
-              "spotifyVerified": false
+              "href": "https://open.spotify.com/artist/22p8vOZwMABvl5qt2nZHWD",
+              "spotifyVerified": true
             }
           ],
           "extra": "a/a $26/$30 8pm/9pm"
@@ -10865,7 +10767,7 @@
             {
               "text": "Emo Night",
               "id": "emo-night",
-              "href": "https://open.spotify.com/search/emo%20night",
+              "href": "https://open.spotify.com/search/Emo%20Night",
               "spotifyVerified": false
             }
           ],
@@ -11020,9 +10922,9 @@
             },
             {
               "text": "Sincerely Yours",
-              "id": "sincerely-yours",
-              "href": "https://open.spotify.com/artist/5HHDFNiOZsWgvUyByluEjg",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Sincerely%20Yours",
+              "spotifyVerified": false
             },
             {
               "text": "Florez Rain",
@@ -11033,8 +10935,8 @@
             {
               "text": "Ember Nugent",
               "id": "ember-nugent",
-              "href": "https://open.spotify.com/artist/000qPrZbJLXhPAP4KzSfge",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Ember%20Nugent",
+              "spotifyVerified": false
             },
             {
               "text": "Big Tractor",
@@ -11413,7 +11315,7 @@
             {
               "text": "Mononeon",
               "id": "mononeon",
-              "href": "https://open.spotify.com/artist/3IuEuLez19teZSN32Pf70j",
+              "href": "https://open.spotify.com/artist/3EjV32SZLgdIcnKmYJRJc2",
               "spotifyVerified": true
             }
           ],
@@ -11470,7 +11372,7 @@
             {
               "text": "Black London",
               "id": "black-london",
-              "href": "https://open.spotify.com/artist/1TdpOAyvAkVbJC687i3mug",
+              "href": "https://open.spotify.com/artist/4xS2abnFMKB2tOQAUPWMqa",
               "spotifyVerified": true
             },
             {
@@ -11597,7 +11499,7 @@
             {
               "text": "Sadgirl",
               "id": "sadgirl",
-              "href": "https://open.spotify.com/artist/39iRwJEhPG25CU7LYdNkQ2",
+              "href": "https://open.spotify.com/artist/6ASLgKq9sgvqif9Qf9YYBA",
               "spotifyVerified": true
             },
             {
@@ -11823,7 +11725,7 @@
             {
               "text": "Dusk",
               "id": "dusk",
-              "href": "https://open.spotify.com/artist/6xYDWfOLiYd9f3nxQl633k",
+              "href": "https://open.spotify.com/artist/3uMPxhrjI52rSLNNMB6PqO",
               "spotifyVerified": true
             },
             {
@@ -11874,27 +11776,27 @@
           "bands": [
             {
               "text": "Girl Pusher",
-              "id": "girl-pusher",
-              "href": "https://open.spotify.com/artist/0be1lImX0yBJ644Df8kIpd",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Girl%20Pusher",
+              "spotifyVerified": false
             },
             {
               "text": "Puppy Playtime",
-              "id": "puppy-playtime",
-              "href": "https://open.spotify.com/artist/3WcAcxrTAsg3VoYx4IrDvO",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Puppy%20Playtime",
+              "spotifyVerified": false
             },
             {
               "text": "Cel Genesis",
-              "id": "cel-genesis",
-              "href": "https://open.spotify.com/artist/1mVhZVWVHZIUmwNLVcqMSY",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Cel%20Genesis",
+              "spotifyVerified": false
             },
             {
               "text": "I've Never Been Here Before",
-              "id": "ive-never-been-here-before",
-              "href": "https://open.spotify.com/artist/5Kwko4umI45f1zQvLFhVxw",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/I've%20Never%20Been%20Here%20Before",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $15/$20 7pm"
@@ -11910,8 +11812,8 @@
             {
               "text": "Nine Ince Nails",
               "id": "nine-ince-nails",
-              "href": "https://open.spotify.com/artist/0X380XXQSNBYuleKzav5UO",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Nine%20Ince%20Nails",
+              "spotifyVerified": false
             },
             {
               "text": "Boys Noize",
@@ -12031,7 +11933,7 @@
             {
               "text": "Grosero",
               "id": "grosero",
-              "href": "https://open.spotify.com/artist/3IKdq66z4SPGOc4EXHAJnJ",
+              "href": "https://open.spotify.com/artist/1ZrsFscdqkAcxSnjdGPEZ1",
               "spotifyVerified": true
             }
           ],
@@ -12094,7 +11996,7 @@
             {
               "text": "Tsunami",
               "id": "tsunami",
-              "href": "https://open.spotify.com/artist/4nYZwJrT4QukNO5FqaDcW3",
+              "href": "https://open.spotify.com/artist/5zFEKes7UtWPLCPi2Vhx0t",
               "spotifyVerified": true
             }
           ],
@@ -12917,9 +12819,9 @@
             },
             {
               "text": "Cuban Necktie",
-              "id": "cuban-necktie",
-              "href": "https://open.spotify.com/artist/5jYhQKPWOR62Nx0BhS1olV",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Cuban%20Necktie",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $15/$20 7pm"
@@ -13166,7 +13068,7 @@
             {
               "text": "Ghost Heart",
               "id": "ghost-heart",
-              "href": "https://open.spotify.com/artist/3VoRwKwoySUbocj7xhiZqZ",
+              "href": "https://open.spotify.com/artist/5vx7Qakj2De3555lanZLS7",
               "spotifyVerified": true
             },
             {
@@ -13410,8 +13312,8 @@
             {
               "text": "dj Mandy",
               "id": "dj-mandy",
-              "href": "https://open.spotify.com/artist/5LKJ5Jqf1M1VeJ2B9S9Cgx",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/dj%20Mandy",
+              "spotifyVerified": false
             },
             {
               "text": "Almost Monday",
@@ -13692,7 +13594,7 @@
           "bands": [
             {
               "text": "Bone Thistle",
-              "id": "bone-thistle",
+              "id": null,
               "href": "https://open.spotify.com/search/Bone%20Thistle",
               "spotifyVerified": false
             },
@@ -13704,9 +13606,9 @@
             },
             {
               "text": "Vangozeer",
-              "id": "vangozeer",
-              "href": "https://open.spotify.com/artist/44MyG7kncRuWP271NQG3Ma",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Vangozeer",
+              "spotifyVerified": false
             },
             {
               "text": "Snallygaster",
@@ -13717,7 +13619,7 @@
             {
               "text": "Burnout",
               "id": "burnout",
-              "href": "https://open.spotify.com/artist/351t4RxRSscYfQli2aZxKA",
+              "href": "https://open.spotify.com/artist/3zkua6IbTRB4XaLGpc08XL",
               "spotifyVerified": true
             }
           ],
@@ -14070,7 +13972,7 @@
             {
               "text": "Pointer Sisters",
               "id": "pointer-sisters",
-              "href": "https://open.spotify.com/artist/2CnRlJ2VBDeMtq2nXJKpOy",
+              "href": "https://open.spotify.com/artist/2kreKea2n96dXjcyAU9j5N",
               "spotifyVerified": true
             },
             {
@@ -14163,7 +14065,7 @@
             {
               "text": "Lexxe",
               "id": "lexxe",
-              "href": "https://open.spotify.com/artist/0lDo9zbShSX0EXnxLpUZIU",
+              "href": "https://open.spotify.com/artist/5aLiJZdveFWFi1w9HWLVIZ",
               "spotifyVerified": true
             }
           ],
@@ -15056,7 +14958,7 @@
             {
               "text": "Ameega",
               "id": "ameega",
-              "href": "https://open.spotify.com/artist/7fhvpu83d3aiOxeq6RAz8N",
+              "href": "https://open.spotify.com/artist/1ZocVQfXt5KlO7EZzLQaNJ",
               "spotifyVerified": true
             },
             {
@@ -15091,8 +14993,8 @@
             {
               "text": "Hellcatraz",
               "id": "hellcatraz",
-              "href": "https://open.spotify.com/search/Hellcatraz",
-              "spotifyVerified": false
+              "href": "https://open.spotify.com/artist/6vLo8dgAB8BNRlFXSk5H2Y",
+              "spotifyVerified": true
             },
             {
               "text": "Masked Jestures",
@@ -15288,7 +15190,7 @@
             {
               "text": "Cindy",
               "id": "cindy",
-              "href": "https://open.spotify.com/artist/3vUqg3VWCLmEA1es1T4nGn",
+              "href": "https://open.spotify.com/artist/2ZMPUpiuAKAkzPdMj6qEX0",
               "spotifyVerified": true
             }
           ],
@@ -15346,7 +15248,7 @@
             {
               "text": "Infadel",
               "id": "infadel",
-              "href": "https://open.spotify.com/artist/6tFQAnr0LijRb8h47BD7Dg",
+              "href": "https://open.spotify.com/artist/68jtck4BWgOHgqkguyCvcY",
               "spotifyVerified": true
             },
             {
@@ -15358,7 +15260,7 @@
             {
               "text": "Helsing",
               "id": "helsing",
-              "href": "https://open.spotify.com/artist/7x3G87og7TJTarXEkmvrB8",
+              "href": "https://open.spotify.com/artist/0sGayagpLrBy0lbPzbQpbk",
               "spotifyVerified": true
             },
             {
@@ -15692,7 +15594,7 @@
             {
               "text": "Powerhouse",
               "id": "powerhouse",
-              "href": "https://open.spotify.com/artist/2dNDrJyhKi2pH2YkU5PL9H",
+              "href": "https://open.spotify.com/artist/2FbCA5ewgyGeuNV90qpZUS",
               "spotifyVerified": true
             },
             {
@@ -15857,7 +15759,7 @@
           "venue": {
             "text": "Freight",
             "id": "freight",
-            "href": "https://www.google.com/search?q=Freight",
+            "href": "https://www.google.com/search?q=Freight%20Berkeley",
             "location": null
           },
           "bands": [
@@ -16002,8 +15904,8 @@
             {
               "text": "Dianna Ross",
               "id": "dianna-ross",
-              "href": "https://open.spotify.com/artist/3MdG05syQeRYPPcClLaUGl",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Dianna%20Ross",
+              "spotifyVerified": false
             }
           ],
           "extra": "& SLoat Blvd., S.F. a/a free noon/1pm"
@@ -16129,7 +16031,7 @@
             {
               "text": "Blush",
               "id": "blush",
-              "href": "https://open.spotify.com/artist/0uqUzyDhs3Ujb5DWDvwiOW",
+              "href": "https://open.spotify.com/artist/0kM8578RqYDhRJMOHVMt06",
               "spotifyVerified": true
             },
             {
@@ -16792,7 +16694,7 @@
             {
               "text": "Dissociation",
               "id": "dissociation",
-              "href": "https://open.spotify.com/artist/0cYtmlDAQNmVKks8FWdp65",
+              "href": "https://open.spotify.com/artist/6fnuNxbFDdsFOb426I7VoU",
               "spotifyVerified": true
             }
           ],
@@ -16878,13 +16780,13 @@
             {
               "text": "Fray",
               "id": "fray",
-              "href": "https://open.spotify.com/artist/53nOSeLAr8Cl3PaOHyzjcq",
+              "href": "https://open.spotify.com/artist/0zOcE3mg9nS6l3yxt1Y0bK",
               "spotifyVerified": true
             },
             {
               "text": "Strike",
               "id": "strike",
-              "href": "https://open.spotify.com/artist/3Aa7VtaDW1lJWX7NBGask8",
+              "href": "https://open.spotify.com/artist/6VB4TqEl0yfaF88LYHH4wj",
               "spotifyVerified": true
             },
             {
@@ -17066,13 +16968,13 @@
             },
             {
               "text": "1",
-              "id": "1",
+              "id": null,
               "href": "https://open.spotify.com/search/1",
               "spotifyVerified": false
             },
             {
               "text": "000 Dreams",
-              "id": "000-dreams",
+              "id": null,
               "href": "https://open.spotify.com/search/000%20Dreams",
               "spotifyVerified": false
             },
@@ -17120,7 +17022,7 @@
             {
               "text": "Eve",
               "id": "eve",
-              "href": "https://open.spotify.com/artist/4d3yvTptO48nOYTPBcPFZC",
+              "href": "https://open.spotify.com/artist/58oPVy7oihAEXE0Ott6JOf",
               "spotifyVerified": true
             },
             {
@@ -17363,7 +17265,7 @@
             {
               "text": "Megas",
               "id": "megas",
-              "href": "https://open.spotify.com/artist/1e9L6JvckFG915fCtQoif6",
+              "href": "https://open.spotify.com/artist/6XbSklZyAWRIxx7eP0netF",
               "spotifyVerified": true
             }
           ],
@@ -17758,7 +17660,7 @@
             {
               "text": "Dovetail",
               "id": "dovetail",
-              "href": "https://open.spotify.com/artist/6Y2YAdilwMcM0o8WtjZ46e",
+              "href": "https://open.spotify.com/artist/6wkfUp3u5n3gNiK1tl0Fhi",
               "spotifyVerified": true
             },
             {
@@ -18265,7 +18167,7 @@
             {
               "text": "Movement",
               "id": "movement",
-              "href": "https://open.spotify.com/artist/3x7BaW5q1SDNv6bVrbOCmX",
+              "href": "https://open.spotify.com/artist/1qwdTaVUdjYJLLoxtFmsqr",
               "spotifyVerified": true
             },
             {
@@ -18716,7 +18618,7 @@
             {
               "text": "Porkbelly",
               "id": "porkbelly",
-              "href": "https://open.spotify.com/artist/75OKr76pfYpdPN0VnM9cMw",
+              "href": "https://open.spotify.com/artist/5PcMldMKueMpBGzJLQcTt1",
               "spotifyVerified": true
             },
             {
@@ -18808,7 +18710,7 @@
             {
               "text": "East Brothers",
               "id": "east-brothers",
-              "href": "https://open.spotify.com/artist/22MHM5M4H10FXT4i5UArZR",
+              "href": "https://open.spotify.com/artist/5rOQuZwkCA0if2Sjplbt55",
               "spotifyVerified": true
             },
             {
@@ -18969,27 +18871,27 @@
           "bands": [
             {
               "text": "Hellbillys",
-              "id": "hellbillys",
-              "href": "https://open.spotify.com/artist/1WWZBLUb96Xdm5yNP6J5md",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Hellbillys",
+              "spotifyVerified": false
             },
             {
               "text": "Stigma 13",
-              "id": "stigma-13",
+              "id": null,
               "href": "https://open.spotify.com/search/Stigma%2013",
               "spotifyVerified": false
             },
             {
               "text": "Los Pistoleros",
-              "id": "los-pistoleros",
-              "href": "https://open.spotify.com/artist/6wDA0aCux0zzyEefR345OK",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Los%20Pistoleros",
+              "spotifyVerified": false
             },
             {
               "text": "Out Of The Ring",
-              "id": "out-of-the-ring",
-              "href": "https://open.spotify.com/artist/6xB5rzRZZIcTkd9HF2Qvj6",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Out%20Of%20The%20Ring",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $12 7pm/7:30pm"
@@ -19181,7 +19083,7 @@
             {
               "text": "Hunny Bucket",
               "id": "hunny-bucket",
-              "href": "https://open.spotify.com/artist/6JabOtPuWssjL3wfzDZoWW",
+              "href": "https://open.spotify.com/artist/2u9r3hCoXACPSi4eqQfXm3",
               "spotifyVerified": true
             }
           ],
@@ -19210,7 +19112,7 @@
             {
               "text": "Fatale",
               "id": "fatale",
-              "href": "https://open.spotify.com/artist/3ux6SBp12Hmqioq7N75Pf6",
+              "href": "https://open.spotify.com/artist/67ziIz0VtPvZ1rfGpXq1G1",
               "spotifyVerified": true
             },
             {
@@ -19222,13 +19124,13 @@
             {
               "text": "Dissociation",
               "id": "dissociation",
-              "href": "https://open.spotify.com/artist/0cYtmlDAQNmVKks8FWdp65",
+              "href": "https://open.spotify.com/artist/6fnuNxbFDdsFOb426I7VoU",
               "spotifyVerified": true
             },
             {
               "text": "Burnout",
               "id": "burnout",
-              "href": "https://open.spotify.com/artist/351t4RxRSscYfQli2aZxKA",
+              "href": "https://open.spotify.com/artist/3zkua6IbTRB4XaLGpc08XL",
               "spotifyVerified": true
             },
             {
@@ -19292,7 +19194,7 @@
             {
               "text": "Offspring",
               "id": "offspring",
-              "href": "https://open.spotify.com/artist/20XTiqh36a520VLiZX0wRC",
+              "href": "https://open.spotify.com/artist/5LfGQac0EIXyAN8aUwmNAQ",
               "spotifyVerified": true
             },
             {
@@ -19321,7 +19223,7 @@
             {
               "text": "Strangelove",
               "id": "strangelove",
-              "href": "https://open.spotify.com/artist/7BOuqF4YlViXdq5In1SVwJ",
+              "href": "https://open.spotify.com/artist/6arQFFRjYKcJzEsULbKnzD",
               "spotifyVerified": true
             }
           ],
@@ -19402,8 +19304,8 @@
             {
               "text": "Blackwulf",
               "id": "blackwulf",
-              "href": "https://open.spotify.com/artist/1NMCgwjDKYRYtkQA2pjNiL",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Blackwulf",
+              "spotifyVerified": false
             },
             {
               "text": "Kittenhead",
@@ -19438,8 +19340,8 @@
             {
               "text": "artist",
               "id": "artist",
-              "href": "https://open.spotify.com/artist/1LTL2bMTVsdeVgE425j98M",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/artist",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $5 noon til 6pm (punk parade)"
@@ -19559,8 +19461,8 @@
             {
               "text": "Boob",
               "id": "boob",
-              "href": "https://open.spotify.com/artist/2mekQDUzAPIdkr1pZRy0HZ",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Boob",
+              "spotifyVerified": false
             }
           ],
           "extra": "21+"
@@ -19599,7 +19501,7 @@
             {
               "text": "Tremens",
               "id": "tremens",
-              "href": "https://open.spotify.com/artist/2fjXG6hseTOSeoUouFAo9J",
+              "href": "https://open.spotify.com/artist/35oZ2vSVXWPKuDHTqk8o3t",
               "spotifyVerified": true
             },
             {
@@ -19824,7 +19726,7 @@
             {
               "text": "Goo Goo Dolls",
               "id": "goo-goo-dolls",
-              "href": "https://open.spotify.com/artist/24XdPrg2aBHBe4JqDIX9CU",
+              "href": "https://open.spotify.com/artist/2sil8z5kiy4r76CRTXxBCA",
               "spotifyVerified": true
             },
             {
@@ -20323,7 +20225,7 @@
             {
               "text": "W.I.T.C.H.",
               "id": "witch",
-              "href": "https://open.spotify.com/artist/0LMkPoi2xIgpOPUSJMftqM",
+              "href": "https://open.spotify.com/artist/4W8b0N3kJ85bEIyPX1wW8P",
               "spotifyVerified": true
             }
           ],
@@ -20386,8 +20288,8 @@
             {
               "text": "Tess And The Details",
               "id": "tess-and-the-details",
-              "href": "https://open.spotify.com/artist/3WbXOUMrFsCgJnBnypV3Ql",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Tess%20And%20The%20Details",
+              "spotifyVerified": false
             },
             {
               "text": "Enemy Of My Enemy",
@@ -21035,7 +20937,7 @@
             {
               "text": "Striker",
               "id": "striker",
-              "href": "https://open.spotify.com/artist/3Aa7VtaDW1lJWX7NBGask8",
+              "href": "https://open.spotify.com/artist/0lwL1Cu96Wvy1hMwfLqHHC",
               "spotifyVerified": true
             }
           ],
@@ -21178,7 +21080,7 @@
             {
               "text": "Nnamdi",
               "id": "nnamdi",
-              "href": "https://open.spotify.com/artist/3FdXZPE1M0j6amqQ1xq2tq",
+              "href": "https://open.spotify.com/artist/17ekkAV5d4XbJkEd1wr2yo",
               "spotifyVerified": true
             }
           ],
@@ -21863,7 +21765,7 @@
             {
               "text": "dj Test",
               "id": "dj-test",
-              "href": "https://open.spotify.com/artist/41sxLvq1aJ9nHk3qAMRj8L",
+              "href": "https://open.spotify.com/artist/5IDfYJZqdTt1pnOyol6JIJ",
               "spotifyVerified": true
             }
           ],
@@ -21880,7 +21782,7 @@
             {
               "text": "Afflicted",
               "id": "afflicted",
-              "href": "https://open.spotify.com/artist/2FoKEtWNsW0TbstjNSZY86",
+              "href": "https://open.spotify.com/artist/3kCsU59oFSusoEo3DTEWSL",
               "spotifyVerified": true
             },
             {
@@ -22260,7 +22162,7 @@
             {
               "text": "Mind's Eye",
               "id": "minds-eye",
-              "href": "https://open.spotify.com/artist/4o6dCIkmONTJL0ByDDUNYd",
+              "href": "https://open.spotify.com/artist/5GYU521BpiEC7ixhkIPzsH",
               "spotifyVerified": true
             }
           ],
@@ -22283,8 +22185,8 @@
             {
               "text": "Michael Mouse",
               "id": "michael-mouse",
-              "href": "https://open.spotify.com/artist/46uCNim5qgycmvrNcY8Ujr",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Michael%20Mouse",
+              "spotifyVerified": false
             },
             {
               "text": "Marika Christine",
@@ -22725,7 +22627,7 @@
             {
               "text": "Piss",
               "id": "piss",
-              "href": "https://open.spotify.com/artist/1nGBerMI4y0SI6fZk97uYf",
+              "href": "https://open.spotify.com/artist/2SSqdhGl60rwmugIzrKKL4",
               "spotifyVerified": true
             },
             {
@@ -22819,7 +22721,7 @@
         },
         {
           "venue": {
-            "text": "Fox Theater, Oakland",
+            "text": "Fox Theater, Okland",
             "id": "fox-theater-oakland",
             "href": "https://www.google.com/search?q=Fox%20Theater%2C%20Oakland",
             "location": null
@@ -23182,7 +23084,7 @@
             {
               "text": "Armed",
               "id": "armed",
-              "href": "https://open.spotify.com/artist/7kLChqIl8zSFkmLdKRQZc7",
+              "href": "https://open.spotify.com/artist/4V5obzWMr7BHZrjOiQwB4K",
               "spotifyVerified": true
             },
             {
@@ -23256,9 +23158,9 @@
           "bands": [
             {
               "text": "Ninety Pound Wuss",
-              "id": "ninety-pound-wuss",
-              "href": "https://open.spotify.com/artist/0VOvF0kfqCTRe37XzWQdvH",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Ninety%20Pound%20Wuss",
+              "spotifyVerified": false
             },
             {
               "text": "Middle-Aged Queers",
@@ -23268,15 +23170,15 @@
             },
             {
               "text": "Too Bad Eugene",
-              "id": "too-bad-eugene",
-              "href": "https://open.spotify.com/artist/0563j33HJE0PrBBSDEMIgB",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Too%20Bad%20Eugene",
+              "spotifyVerified": false
             },
             {
               "text": "Laguna Screech",
-              "id": "laguna-screech",
-              "href": "https://open.spotify.com/artist/2udcJCYqefqwkl0tI4slwE",
-              "spotifyVerified": true
+              "id": null,
+              "href": "https://open.spotify.com/search/Laguna%20Screech",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $15/$20 7pm"
@@ -23526,7 +23428,7 @@
             {
               "text": "Blvkout",
               "id": "blvkout",
-              "href": "https://open.spotify.com/artist/1kRJwDfRRfdCPjuuS8P399",
+              "href": "https://open.spotify.com/artist/1WZ3VpetsijiQhKmIjGDy7",
               "spotifyVerified": true
             },
             {
@@ -23603,7 +23505,7 @@
             {
               "text": "Dare",
               "id": "dare",
-              "href": "https://open.spotify.com/artist/0WsKaCrAH7xPTAW6B18lvm",
+              "href": "https://open.spotify.com/artist/25d732T6AtiSKkhWonz5VZ",
               "spotifyVerified": true
             },
             {
@@ -23897,7 +23799,7 @@
             {
               "text": "Hives",
               "id": "hives",
-              "href": "https://open.spotify.com/artist/1in4bAzwVsZBPa4CTTGF2v",
+              "href": "https://open.spotify.com/artist/4DToQR3aKrHQSSRzSz8Nzt",
               "spotifyVerified": true
             }
           ],
@@ -23937,7 +23839,7 @@
             {
               "text": "Demxntia",
               "id": "demxntia",
-              "href": "https://open.spotify.com/artist/6trEYfLSuAd9CS8bCy4sOH",
+              "href": "https://open.spotify.com/artist/6xtyvtUo1xzz1PhaX1Vzai",
               "spotifyVerified": true
             }
           ],
@@ -24175,13 +24077,13 @@
             {
               "text": "Rapture",
               "id": "rapture",
-              "href": "https://open.spotify.com/artist/4X9UJxHhQjI7fPUEqG6vY4",
+              "href": "https://open.spotify.com/artist/166Dz1GX3xonSQ3Z6CQW26",
               "spotifyVerified": true
             },
             {
               "text": "Prodigy",
               "id": "prodigy",
-              "href": "https://open.spotify.com/artist/1GwxXgEc6oxCKQ5wykWXFs",
+              "href": "https://open.spotify.com/artist/4k1ELeJKT1ISyDv8JivPpB",
               "spotifyVerified": true
             },
             {
@@ -24193,8 +24095,8 @@
             {
               "text": "Shee",
               "id": "shee",
-              "href": "https://open.spotify.com/artist/1jrRLqDsOOKIagQXYPq2Iv",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Shee",
+              "spotifyVerified": false
             },
             {
               "text": "Haute & Freddy",
@@ -24205,8 +24107,8 @@
             {
               "text": "Underword",
               "id": "underword",
-              "href": "https://open.spotify.com/artist/1LnUDAK6QiemiKqh2OaCgS",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Underword",
+              "spotifyVerified": false
             },
             {
               "text": "Kreayshawn",
@@ -24223,7 +24125,7 @@
             {
               "text": "Nick Leon",
               "id": "nick-leon",
-              "href": "https://open.spotify.com/artist/2jcvrNY7uTEVxAsMqbZjzf",
+              "href": "https://open.spotify.com/artist/4PM7RyOzbFNjhsD4k900LK",
               "spotifyVerified": true
             },
             {
@@ -24513,7 +24415,7 @@
             {
               "text": "Prodigy",
               "id": "prodigy",
-              "href": "https://open.spotify.com/artist/1GwxXgEc6oxCKQ5wykWXFs",
+              "href": "https://open.spotify.com/artist/4k1ELeJKT1ISyDv8JivPpB",
               "spotifyVerified": true
             }
           ],
@@ -24605,8 +24507,8 @@
             {
               "text": "Chapareele",
               "id": "chapareele",
-              "href": "https://open.spotify.com/artist/48c9PKsgH8QMkAN6pg6Xz8",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Chapareele",
+              "spotifyVerified": false
             }
           ],
           "extra": "21+ $25/$30 7pm/8pm"
@@ -25006,7 +24908,7 @@
             {
               "text": "Waterboys",
               "id": "waterboys",
-              "href": "https://open.spotify.com/artist/0qC7cjXVhOBymaDxoGXABr",
+              "href": "https://open.spotify.com/artist/5TnuP42pw475UrjjeabtwZ",
               "spotifyVerified": true
             },
             {
@@ -25069,7 +24971,7 @@
             {
               "text": "Murder Capital",
               "id": "murder-capital",
-              "href": "https://open.spotify.com/artist/26VXsooKoV9DTRXPojkMWt",
+              "href": "https://open.spotify.com/artist/18M7pJRsgFVjEBZ5ufmJAp",
               "spotifyVerified": true
             }
           ],
@@ -25240,7 +25142,7 @@
             {
               "text": "emo night",
               "id": "emo-night",
-              "href": "https://open.spotify.com/search/emo%20night",
+              "href": "https://open.spotify.com/search/Emo%20Night",
               "spotifyVerified": false
             }
           ],
@@ -25428,8 +25330,8 @@
             {
               "text": "LiL MC",
               "id": "lil-mc",
-              "href": "https://open.spotify.com/artist/3AmSnF3gzJoJNnSXfVFmba",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/LiL%20MC",
+              "spotifyVerified": false
             },
             {
               "text": "Gina Madrid",
@@ -25458,7 +25360,7 @@
             {
               "text": "Luna The Blooma",
               "id": "luna-the-blooma",
-              "href": "https://open.spotify.com/artist/6sZXBcA34WMrMkY2qkRFux",
+              "href": "https://open.spotify.com/artist/2gsOEjEVYIni4PufeCP2Ho",
               "spotifyVerified": true
             }
           ],
@@ -25538,7 +25440,7 @@
             {
               "text": "Modern Monsters",
               "id": "modern-monsters",
-              "href": "https://open.spotify.com/artist/3RP5andUbyEJNdpmOZmnRl",
+              "href": "https://open.spotify.com/artist/69GNf4IHZNhstWJViYzXJb",
               "spotifyVerified": true
             },
             {
@@ -25550,8 +25452,8 @@
             {
               "text": "Velvet Grave",
               "id": "velvet-grave",
-              "href": "https://open.spotify.com/artist/3hOzMvPzhp6H3ojaFjejXU",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Velvet%20Grave",
+              "spotifyVerified": false
             }
           ],
           "extra": "21+ $13/$15 8:30pm/9pm"
@@ -26303,7 +26205,7 @@
             {
               "text": "Night School",
               "id": "night-school",
-              "href": "https://open.spotify.com/artist/1PNn72sOTFvZukmj4bFUgw",
+              "href": "https://open.spotify.com/artist/6d6MCmi4IqGXAnE6DSAFkj",
               "spotifyVerified": true
             },
             {
@@ -26429,8 +26331,8 @@
             {
               "text": "James",
               "id": "james",
-              "href": "https://open.spotify.com/artist/0qLNsNKm8bQcMoRFkR8Hmh",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/James",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $56.50 ($162.25 vip) 7pm/8pm #"
@@ -26595,8 +26497,8 @@
             {
               "text": "Bumpin Ugies",
               "id": "bumpin-ugies",
-              "href": "https://open.spotify.com/artist/2q0PlZJNGryR467EUNmWn7",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Bumpin%20Ugies",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $45.27 7pm/8pm"
@@ -26612,13 +26514,13 @@
             {
               "text": "Chameleons",
               "id": "chameleons",
-              "href": "https://open.spotify.com/artist/2MBlAQlgwNUADLJtc7G0a2",
+              "href": "https://open.spotify.com/artist/4HLWX9kzfraiCsTvrxJEXm",
               "spotifyVerified": true
             },
             {
               "text": "Veldt",
               "id": "veldt",
-              "href": "https://open.spotify.com/artist/0SaXzMUxZ1IbjYeacwcEfv",
+              "href": "https://open.spotify.com/artist/3uzekI5FnbqPcVkkIf2iEn",
               "spotifyVerified": true
             }
           ],
@@ -26732,7 +26634,7 @@
             {
               "text": "Reverend Horton Heat",
               "id": "reverend-horton-heat",
-              "href": "https://open.spotify.com/artist/7KBNQ0xkfEucHXdGKWdalg",
+              "href": "https://open.spotify.com/artist/4byZW0sEv5RUoyQBfv7CPw",
               "spotifyVerified": true
             },
             {
@@ -27122,7 +27024,7 @@
             {
               "text": "Ultras",
               "id": "ultras",
-              "href": "https://open.spotify.com/artist/2bhHsqSDcaIvnRzsfVKhIK",
+              "href": "https://open.spotify.com/artist/2RKRRO0YyJ3BONOTUn0wUr",
               "spotifyVerified": true
             },
             {
@@ -27197,7 +27099,7 @@
             {
               "text": "Memorials",
               "id": "memorials",
-              "href": "https://open.spotify.com/artist/1j3MgTGdEPOg24YXGJd9gP",
+              "href": "https://open.spotify.com/artist/4Vs0yJGHEVrQ00kwaH0aW0",
               "spotifyVerified": true
             }
           ],
@@ -27294,8 +27196,8 @@
             {
               "text": "Rumors Of Fleetwood Mac",
               "id": "rumors-of-fleetwood-mac",
-              "href": "https://open.spotify.com/artist/3OwTnaK0ywfpzGAzOt9jdw",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Rumors%20Of%20Fleetwood%20Mac",
+              "spotifyVerified": false
             }
           ],
           "extra": "8+ 5pm/7pm"
@@ -27580,7 +27482,7 @@
             {
               "text": "Macks",
               "id": "macks",
-              "href": "https://open.spotify.com/artist/3VTewdBCJtkpWW6lSFlDOy",
+              "href": "https://open.spotify.com/artist/0egzAfP4bqIeKE9ZyvnVPX",
               "spotifyVerified": true
             }
           ],
@@ -27603,7 +27505,7 @@
             {
               "text": "Macks",
               "id": "macks",
-              "href": "https://open.spotify.com/artist/3VTewdBCJtkpWW6lSFlDOy",
+              "href": "https://open.spotify.com/artist/0egzAfP4bqIeKE9ZyvnVPX",
               "spotifyVerified": true
             }
           ],
@@ -27660,7 +27562,7 @@
             {
               "text": "Boyo",
               "id": "boyo",
-              "href": "https://open.spotify.com/artist/1puLsaxX9EwudKrNBUVFe4",
+              "href": "https://open.spotify.com/artist/06uXzLTh7Hnw1vvpMvFpxF",
               "spotifyVerified": true
             }
           ],
@@ -28592,7 +28494,7 @@
             {
               "text": "Tubs",
               "id": "tubs",
-              "href": "https://open.spotify.com/artist/3MG0606T1SawQRToNXk17B",
+              "href": "https://open.spotify.com/artist/6kdAf6E0EouXKBpBZN1Sx9",
               "spotifyVerified": true
             }
           ],
@@ -29116,7 +29018,7 @@
             {
               "text": "Winter",
               "id": "winter",
-              "href": "https://open.spotify.com/artist/4Eun8YBC7P0psGdIf0GRtl",
+              "href": "https://open.spotify.com/artist/3a2U9evDjNsZUHUvQFY4Fa",
               "spotifyVerified": true
             },
             {
@@ -29260,7 +29162,7 @@
             {
               "text": "Pony",
               "id": "pony",
-              "href": "https://open.spotify.com/artist/31kZNy2FQoUD4V8LUr9exv",
+              "href": "https://open.spotify.com/artist/5YVzHQeLnRkEYK5T5XFQ0q",
               "spotifyVerified": true
             }
           ],
@@ -29754,7 +29656,7 @@
             {
               "text": "Face Up",
               "id": "face-up",
-              "href": "https://open.spotify.com/artist/0otrAfxDZj7KH3Ccjhnizg",
+              "href": "https://open.spotify.com/artist/1iIGoEONHSUhjuczI01SFc",
               "spotifyVerified": true
             },
             {
@@ -29766,7 +29668,7 @@
             {
               "text": "Bomber",
               "id": "bomber",
-              "href": "https://open.spotify.com/artist/1D7TntGjnZMtk4TNzjrZ0y",
+              "href": "https://open.spotify.com/artist/46qqp4FKfMghCxW2wOTiHX",
               "spotifyVerified": true
             },
             {
@@ -29904,7 +29806,7 @@
             {
               "text": "Beta Band",
               "id": "beta-band",
-              "href": "https://open.spotify.com/artist/4JzQn7QVHF2sZOvm9z6sBR",
+              "href": "https://open.spotify.com/artist/2LMR8u7DOMF0FBseDpTsRa",
               "spotifyVerified": true
             }
           ],
@@ -30118,7 +30020,7 @@
             {
               "text": "Brothers Comatose",
               "id": "brothers-comatose",
-              "href": "https://open.spotify.com/artist/262HLVYSM2jPH7O6P5lyIi",
+              "href": "https://open.spotify.com/artist/7oKVYDiVZxglvgEW2zHcAD",
               "spotifyVerified": true
             }
           ],
@@ -30434,7 +30336,7 @@
             {
               "text": "Walters",
               "id": "walters",
-              "href": "https://open.spotify.com/artist/0s8LZHIwz4Gz4AdM0z4TOO",
+              "href": "https://open.spotify.com/artist/027TpXKGwdXP7iwbjUSpV8",
               "spotifyVerified": true
             },
             {
@@ -30548,7 +30450,7 @@
             {
               "text": "Beaches",
               "id": "beaches",
-              "href": "https://open.spotify.com/artist/25zGuAmfVIDItxVb6Hwf3N",
+              "href": "https://open.spotify.com/artist/6ws5XBA70XgeBpnLZhQBoy",
               "spotifyVerified": true
             },
             {
@@ -30611,7 +30513,7 @@
             {
               "text": "Wombats",
               "id": "wombats",
-              "href": "https://open.spotify.com/artist/6KgCIpvWHjm8jFyC0tqTWj",
+              "href": "https://open.spotify.com/artist/0Ya43ZKWHTKkAbkoJJkwIB",
               "spotifyVerified": true
             }
           ],
@@ -30777,13 +30679,13 @@
             {
               "text": "Cab",
               "id": "cab",
-              "href": "https://open.spotify.com/artist/5Dr3ncHaLxygdixsVo4g1m",
+              "href": "https://open.spotify.com/artist/2C2sVVXanbOpymYBMpsi89",
               "spotifyVerified": true
             },
             {
               "text": "Paradox",
               "id": "paradox",
-              "href": "https://open.spotify.com/artist/32bq0Oy4ygWPR5ItUM5J5M",
+              "href": "https://open.spotify.com/artist/6GhcI55xfZf5vqmmNqYzxW",
               "spotifyVerified": true
             }
           ],
@@ -30858,7 +30760,7 @@
             {
               "text": "Main Squeeze",
               "id": "main-squeeze",
-              "href": "https://open.spotify.com/artist/6ZvEL7yp891SP5fKdfATRL",
+              "href": "https://open.spotify.com/artist/5I6ni4YWY0WJUs6rFqufxT",
               "spotifyVerified": true
             }
           ],
@@ -31202,7 +31104,7 @@
             {
               "text": "Starting Line",
               "id": "starting-line",
-              "href": "https://open.spotify.com/artist/06t8gac8xV3AEnl8E63Oaz",
+              "href": "https://open.spotify.com/artist/3E3xrZtBU5ORqcmX78v5YZ",
               "spotifyVerified": true
             },
             {
@@ -31301,7 +31203,7 @@
             {
               "text": "Nayan",
               "id": "nayan",
-              "href": "https://open.spotify.com/artist/2xvPGEq0ndSm9zz8hheJ4D",
+              "href": "https://open.spotify.com/artist/0zvq8btQpelekECKTyxsOQ",
               "spotifyVerified": true
             }
           ],
@@ -31537,7 +31439,7 @@
             {
               "text": "Xerxes",
               "id": "xerxes",
-              "href": "https://open.spotify.com/artist/3fTQcufcRWBCk6vLEufmN2",
+              "href": "https://open.spotify.com/artist/3wjFALl5jVDZp1Bo5eHJre",
               "spotifyVerified": true
             }
           ],
@@ -31743,7 +31645,7 @@
             {
               "text": "Humanist",
               "id": "humanist",
-              "href": "https://open.spotify.com/artist/3XoX12CG5RB64ES9t425jA",
+              "href": "https://open.spotify.com/artist/2xx9MRP1V5BlGvy5vPZA7r",
               "spotifyVerified": true
             }
           ],
@@ -32265,7 +32167,7 @@
             {
               "text": "Evil Dead",
               "id": "evil-dead",
-              "href": "https://open.spotify.com/artist/4DSEw4U7hLzsiuCqmRVWnS",
+              "href": "https://open.spotify.com/artist/2meeQ2k1OVsbqmJTUxp0zl",
               "spotifyVerified": true
             }
           ],
@@ -32651,7 +32553,7 @@
             {
               "text": "Whispers",
               "id": "whispers",
-              "href": "https://open.spotify.com/artist/62tqJaaK7ys8tATtp4334R",
+              "href": "https://open.spotify.com/artist/2XzHxDFTNywDd5ReMhgxkg",
               "spotifyVerified": true
             },
             {
@@ -32725,7 +32627,7 @@
             {
               "text": "Faint",
               "id": "faint",
-              "href": "https://open.spotify.com/artist/4A1yfFuBmBOgzv4Oe3fFHk",
+              "href": "https://open.spotify.com/artist/7sZeTpNw5UsNL8Xip008G8",
               "spotifyVerified": true
             },
             {
@@ -32841,8 +32743,8 @@
             {
               "text": "Skoto",
               "id": "skoto",
-              "href": "https://open.spotify.com/artist/0XceMc1covrH21OtkUAvRR",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Skoto",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $55/$70 ($100 vip) 6pm/7pm"
@@ -33030,8 +32932,8 @@
             {
               "text": "Jens Kutross",
               "id": "jens-kutross",
-              "href": "https://open.spotify.com/artist/0tkBS89wZe0goJeNXZMCK6",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Jens%20Kutross",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $37.11 7pm/8pm"
@@ -33454,7 +33356,7 @@
             {
               "text": "Ultras",
               "id": "ultras",
-              "href": "https://open.spotify.com/artist/2bhHsqSDcaIvnRzsfVKhIK",
+              "href": "https://open.spotify.com/artist/2RKRRO0YyJ3BONOTUn0wUr",
               "spotifyVerified": true
             },
             {
@@ -33547,7 +33449,7 @@
             {
               "text": "Sketch",
               "id": "sketch",
-              "href": "https://open.spotify.com/artist/3tk9Ibm8Xi6hbiOxWExZJo",
+              "href": "https://open.spotify.com/artist/3xnF4jCB0uhRsbeeI4z06U",
               "spotifyVerified": true
             }
           ],
@@ -33605,7 +33507,7 @@
             {
               "text": "Beths",
               "id": "beths",
-              "href": "https://open.spotify.com/artist/1bkgpztfnU5IpAOcetXGrR",
+              "href": "https://open.spotify.com/artist/7DjwIxbe8kpw4pqnzAMoin",
               "spotifyVerified": true
             },
             {
@@ -33765,7 +33667,7 @@
             {
               "text": "Beths",
               "id": "beths",
-              "href": "https://open.spotify.com/artist/1bkgpztfnU5IpAOcetXGrR",
+              "href": "https://open.spotify.com/artist/7DjwIxbe8kpw4pqnzAMoin",
               "spotifyVerified": true
             },
             {
@@ -33857,13 +33759,13 @@
             {
               "text": "Zenith",
               "id": "zenith",
-              "href": "https://open.spotify.com/artist/1k0faAQUb1tfVSydSHCEGh",
+              "href": "https://open.spotify.com/artist/0qThp4WOmRlo27nT3uvfr8",
               "spotifyVerified": true
             },
             {
               "text": "Passage",
               "id": "passage",
-              "href": "https://open.spotify.com/artist/6uzOSeOh07b07QjYHRdF2c",
+              "href": "https://open.spotify.com/artist/4O1m8KAkePVVsJPdh86TqV",
               "spotifyVerified": true
             },
             {
@@ -33898,7 +33800,7 @@
             {
               "text": "Jaywood",
               "id": "jaywood",
-              "href": "https://open.spotify.com/artist/4b9Dr3XFxT65mrPBFY6mqG",
+              "href": "https://open.spotify.com/artist/0FnSVTosZTNnYF5LlsSN8h",
               "spotifyVerified": true
             }
           ],
@@ -34369,8 +34271,8 @@
             {
               "text": "PinkPantheess",
               "id": "pinkpantheess",
-              "href": "https://open.spotify.com/artist/78rUTD7y6Cy67W1RVzYs7t",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/PinkPantheess",
+              "spotifyVerified": false
             }
           ],
           "extra": "a/a $56.25 7pm/8pm #"
@@ -35616,7 +35518,7 @@
             {
               "text": "Level",
               "id": "level",
-              "href": "https://open.spotify.com/artist/0GWxK2xr8Tuj3PSX7IlgUa",
+              "href": "https://open.spotify.com/artist/7x6piCyJR9YpMWhTRyHRvJ",
               "spotifyVerified": true
             },
             {
@@ -36013,7 +35915,7 @@
             {
               "text": "Frights",
               "id": "frights",
-              "href": "https://open.spotify.com/artist/1XVJ1bpaNMDIQQbwAJsSkf",
+              "href": "https://open.spotify.com/artist/2HSEdXKVq1WWtBbsIeNjRX",
               "spotifyVerified": true
             },
             {
@@ -36111,8 +36013,8 @@
             {
               "text": "Will Porter",
               "id": "will-porter",
-              "href": "https://open.spotify.com/artist/0yfmGKDS3uuqG6PuDEKh8W",
-              "spotifyVerified": true
+              "href": "https://open.spotify.com/search/Will%20Porter",
+              "spotifyVerified": false
             },
             {
               "text": "Brett Newski",
@@ -36467,7 +36369,7 @@
             {
               "text": "Frights",
               "id": "frights",
-              "href": "https://open.spotify.com/artist/1XVJ1bpaNMDIQQbwAJsSkf",
+              "href": "https://open.spotify.com/artist/2HSEdXKVq1WWtBbsIeNjRX",
               "spotifyVerified": true
             },
             {
@@ -36645,7 +36547,7 @@
             {
               "text": "Haunt",
               "id": "haunt",
-              "href": "https://open.spotify.com/artist/7Iej5Kqi4cLAuZZ66dGt3H",
+              "href": "https://open.spotify.com/artist/45d8YG3R2DApOMnIZuyK8p",
               "spotifyVerified": true
             }
           ],
@@ -36834,13 +36736,13 @@
     }
   ],
   "metadata": {
-    "totalShows": 156,
-    "totalEvents": 1490,
+    "totalShows": 155,
+    "totalEvents": 1486,
     "dateRange": {
-      "start": "2025-07-14",
+      "start": "2025-07-15",
       "end": "2025-12-27"
     },
-    "lastUpdated": "2025-07-14T07:30:26.978Z",
+    "lastUpdated": "2025-07-15T23:18:34.436Z",
     "generatedFrom": {
       "rawData": "raw.json",
       "processedArtists": "artists.json",

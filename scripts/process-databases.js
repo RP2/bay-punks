@@ -100,6 +100,11 @@ function applySpellingCorrection(text, type = "artist") {
   const corrections =
     type === "artist" ? SPELLING_CORRECTIONS : VENUE_CORRECTIONS;
 
+  // special case for "1,000 Dreams" - handle the "000 Dreams" variant
+  if (type === "artist" && normalized === "000 dreams") {
+    return "1,000 Dreams";
+  }
+
   // only check for exact spelling correction matches (be very conservative)
   if (corrections[normalized]) {
     return corrections[normalized];
@@ -132,6 +137,16 @@ function findFuzzyMatch(map, normalizedText, type = "artist") {
         normalizedKeyForMatching !== normalizedKey
       ) {
         return { key, isSpellingCorrection: false };
+      }
+
+      // check aliases if they exist
+      if (value.aliases && Array.isArray(value.aliases)) {
+        for (const alias of value.aliases) {
+          const normalizedAlias = normalizeText(alias);
+          if (normalizedAlias === normalizedText) {
+            return { key, isSpellingCorrection: false };
+          }
+        }
       }
     }
 
@@ -397,6 +412,9 @@ function mergeVenueData(existing, newData) {
 
 // non-artist filtering - list of entries that are not actual artists
 const NON_ARTIST_FILTERS = [
+  // invalid/fragment entries
+  "1", // fragment from "1,000 Dreams" splitting
+
   // meetings and administrative
   "membership meeting",
   "member meeting",
@@ -933,7 +951,12 @@ async function processDatabases() {
             return; // skip processing this band
           }
 
-          const normalizedBand = normalizeText(band.text);
+          // apply spelling correction to artist names
+          const correctedBandName = applySpellingCorrection(
+            band.text,
+            "artist",
+          );
+          const normalizedBand = normalizeText(correctedBandName);
           const matchResult = findFuzzyMatch(artists, normalizedBand, "artist");
 
           if (matchResult) {
@@ -947,7 +970,7 @@ async function processDatabases() {
 
             // ALWAYS use the scraped name - it's what's actually being promoted
             const preferredName = getPreferredArtistName(
-              band.text,
+              correctedBandName,
               existing.name,
               Array.from(existing.aliases || []),
             );
@@ -1005,12 +1028,12 @@ async function processDatabases() {
 
             artists.set(existingArtistKey, merged);
           } else {
-            // create new artist entry using exactly what was scraped
-            const artistSlug = createSlug(band.text);
+            // create new artist entry using the corrected name
+            const artistSlug = createSlug(correctedBandName);
             const aliases = new Set([band.text]);
 
             // check if this artist exists in our previous data (by name or alias)
-            const normalizedName = normalizeText(band.text);
+            const normalizedName = normalizeText(correctedBandName);
             const existingArtist = existingArtistsByName.get(normalizedName);
 
             // preserve spotify verification data if available
@@ -1030,7 +1053,9 @@ async function processDatabases() {
               existingArtist &&
               (existingArtist.spotifyUrl || existingArtist.spotifyVerified)
             ) {
-              console.log(`  🔒 preserving spotify data for "${band.text}"`);
+              console.log(
+                `  🔒 preserving spotify data for "${correctedBandName}"`,
+              );
             }
 
             // get the venue ID from the mapping
@@ -1038,7 +1063,7 @@ async function processDatabases() {
 
             artists.set(artistSlug, {
               id: artistSlug,
-              name: band.text,
+              name: correctedBandName,
               searchUrl: band.href,
               ...spotifyData,
               firstSeen: show.normalizedDate,

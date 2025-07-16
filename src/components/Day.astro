@@ -1,38 +1,11 @@
 ---
 import { Card, CardContent } from "@/components/ui/card";
-import venues from "../data/venues.json";
+import { getVenueId } from "../lib/data-utils";
 
 interface Props {
   day: { day: string; events: any[]; normalizedDate: string };
 }
 const { day } = Astro.props;
-
-// helper to normalize text (remove special characters, lowercase)
-function normalizeText(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, "")
-    .trim();
-}
-
-// helper to find venue ID from venue name
-function findVenueId(venueName: string): string | null {
-  const normalized = normalizeText(venueName);
-
-  // First try exact match with venue name
-  let venue = venues.venues.find((v) => normalizeText(v.name) === normalized);
-
-  // If no match found, check aliases
-  if (!venue) {
-    venue = venues.venues.find(
-      (v) =>
-        v.aliases &&
-        v.aliases.some((alias) => normalizeText(alias) === normalized),
-    );
-  }
-
-  return venue?.id || null;
-}
 
 // helper to format day string with full month and day names
 function formatDayWithFullMonth(dayString: string): string {
@@ -118,7 +91,7 @@ const formattedDay = formatDayWithFullMonth(day.day);
                 >
                   <div class="venue font-medium">
                     {(() => {
-                      const venueId = findVenueId(event.venue.text as string);
+                      const venueId = getVenueId(event.venue as any);
                       return venueId ? (
                         <a class="hover:underline" href={`/venue/${venueId}/`}>
                           {event.venue.text}

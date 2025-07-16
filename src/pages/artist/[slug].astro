@@ -6,6 +6,8 @@ import { CardContent } from "@/components/ui/card";
 import artists from "../../data/artists.json";
 import concerts from "../../data/calendar.json";
 import venues from "../../data/venues.json";
+import { getVenueId } from "../../lib/data-utils";
+import { normalizeText } from "../../lib/shared-utils.js";
 
 // generate all artist pages at build time
 export async function getStaticPaths() {
@@ -17,33 +19,6 @@ export async function getStaticPaths() {
 
 // get the artist from props
 const { artist } = Astro.props;
-
-// helper to normalize text (remove special characters, lowercase)
-function normalizeText(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, "")
-    .trim();
-}
-
-// helper to find venue ID from venue name
-function findVenueId(venueName: string): string | null {
-  const normalized = normalizeText(venueName);
-
-  // First try exact match with venue name
-  let venue = venues.venues.find((v) => normalizeText(v.name) === normalized);
-
-  // If no match found, check aliases
-  if (!venue) {
-    venue = venues.venues.find(
-      (v) =>
-        v.aliases &&
-        v.aliases.some((alias) => normalizeText(alias) === normalized),
-    );
-  }
-
-  return venue?.id || null;
-}
 
 // get all shows for this artist (upcoming only)
 const today = new Date();
@@ -99,6 +74,37 @@ const artistShows = concerts.shows
               <dd class="text-lg">{artist.venues.length}</dd>
             </div>
             {
+              artist.spotifyData?.genres &&
+                artist.spotifyData.genres.length > 0 && (
+                  <div>
+                    <dt class="text-muted-foreground text-sm font-medium">
+                      Genres
+                    </dt>
+                    <dd class="text-lg">
+                      <div class="flex flex-wrap gap-1">
+                        {artist.spotifyData.genres.map((genre, index) => (
+                          <span class="bg-muted text-muted-foreground rounded-full px-2 py-1 text-xs">
+                            {genre}
+                          </span>
+                        ))}
+                      </div>
+                    </dd>
+                  </div>
+                )
+            }
+            {
+              artist.spotifyData?.followers && (
+                <div>
+                  <dt class="text-muted-foreground text-sm font-medium">
+                    Spotify Followers
+                  </dt>
+                  <dd class="text-lg">
+                    {artist.spotifyData.followers.toLocaleString()}
+                  </dd>
+                </div>
+              )
+            }
+            {
               (artist.spotifyUrl || artist.searchUrl) && (
                 <div>
                   <dt class="text-muted-foreground text-sm font-medium">
@@ -151,7 +157,7 @@ const artistShows = concerts.shows
           <ul class="space-y-2">
             {
               artist.venues.map((venueId: string) => {
-                const venue = venues.venues.find((v) => v.id === venueId);
+                const venue = venues.venues.find((v: any) => v.id === venueId);
                 return (
                   <li class="text-lg">
                     {venue ? (
@@ -181,7 +187,9 @@ const artistShows = concerts.shows
             artistShows.length > 0 ? (
               <ul class="space-y-4">
                 {artistShows.map((show) => {
-                  const venueId = findVenueId(show.venue?.text || "");
+                  const venueId = getVenueId(
+                    show.venue || { text: "", id: null },
+                  );
                   return (
                     <li class="border-b pb-4 last:border-0">
                       <div class="flex items-start justify-between">

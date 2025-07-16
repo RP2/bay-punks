@@ -46,6 +46,18 @@ const sortedArtists = artists.artists.sort((a, b) =>
                   {artist.venues.length} venue
                   {artist.venues.length !== 1 ? "s" : ""}
                 </div>
+                {artist.spotifyData?.genres &&
+                  artist.spotifyData.genres.length > 0 && (
+                    <div class="text-muted-foreground text-xs">
+                      {artist.spotifyData.genres.slice(0, 2).join(", ")}
+                      {artist.spotifyData.genres.length > 2 && " +more"}
+                    </div>
+                  )}
+                {artist.spotifyData?.followers && (
+                  <div class="text-muted-foreground text-xs">
+                    {artist.spotifyData.followers.toLocaleString()} followers
+                  </div>
+                )}
                 {artist.spotifyUrl && (
                   <div class="text-sm">
                     <a
