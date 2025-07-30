@@ -98,19 +98,22 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
 
 <div class="space-y-4">
   <div
-    class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+    class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
   >
     <h2 class="text-2xl font-bold">
       Artists (<span id="artist-count">{initialSortedArtists.length}</span>)
     </h2>
-    <div class="hidden md:block">
-      <div class="flex flex-row items-center gap-2">
-        <GenreCombobox client:load />
-        <ArtistSortToggle client:load />
-      </div>
+    <div class="flex w-full flex-row gap-2 md:mt-0 md:w-auto">
+      <GenreCombobox
+        className="h-12 flex-1 md:w-auto md:flex-initial"
+        client:load
+      />
+      <ArtistSortToggle
+        className="h-12 flex-1 md:w-auto md:flex-initial"
+        client:load
+      />
     </div>
   </div>
-
   <div class="mb-4">
     <Input
       id="artist-search"

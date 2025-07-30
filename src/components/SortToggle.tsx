@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown, ArrowUpDown } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 // global type declaration
 declare global {
@@ -52,7 +53,10 @@ export function SortToggle({
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className={`min-h-[44px] min-w-[140px] touch-manipulation justify-between ${className}`}
+          className={cn(
+            "h-12 min-h-[48px] w-full flex-1 touch-manipulation justify-between truncate md:w-auto",
+            className,
+          )}
         >
           <div className="flex items-center gap-2">
             <ArrowUpDown className="h-4 w-4" />

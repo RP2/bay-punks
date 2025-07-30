@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -78,7 +78,7 @@ export function GenreCombobox({ className }: GenreComboboxProps) {
           role="combobox"
           aria-expanded={open}
           className={cn(
-            "min-h-[44px] w-56 min-w-[140px] justify-between",
+            "h-12 min-h-[48px] w-full justify-between px-4 md:w-auto",
             className,
           )}
         >
