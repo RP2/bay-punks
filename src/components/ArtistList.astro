@@ -1,5 +1,6 @@
 ---
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { GenreCombobox } from "@/components/ui/combobox";
 import { Input } from "@/components/ui/input";
 import { ArtistSortToggle } from "./SortToggle";
 import artists from "../data/artists.json";
@@ -83,7 +84,7 @@ function sortArtists(artistList: any[], sortKey: string) {
 // default to next-show sort (soonest shows first)
 const initialSortedArtists = sortArtists(artists.artists, "next-show");
 
-// prepare artist data for client-side use
+// prepare artist data for client-side use, include genres
 const artistDataForClient = initialSortedArtists.map((artist) => ({
   id: artist.id,
   name: artist.name,
@@ -91,6 +92,7 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
   spotifyUrl: artist.spotifyUrl,
   searchUrl: artist.searchUrl,
   nextShow: getNextShowForArtist(artist.name, artist.id),
+  genres: artist.spotifyData?.genres || [],
 }));
 ---
 
@@ -98,9 +100,14 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
   <div
     class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
   >
-    <h2 class="text-2xl font-bold">Artists ({initialSortedArtists.length})</h2>
+    <h2 class="text-2xl font-bold">
+      Artists (<span id="artist-count">{initialSortedArtists.length}</span>)
+    </h2>
     <div class="hidden md:block">
-      <ArtistSortToggle client:load />
+      <div class="flex flex-row items-center gap-2">
+        <GenreCombobox client:load />
+        <ArtistSortToggle client:load />
+      </div>
     </div>
   </div>
 
@@ -196,11 +203,13 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
 </script>
 
 <script>
-  // artist search and sort functionality
+  // artist search, sort, and genre filter functionality
   declare global {
     interface Window {
       artistsData: any[];
       handleArtistSortChange?: (sortKey: string) => void;
+      handleArtistGenreChange?: (genre: string) => void;
+      selectedGenre?: string;
     }
   }
 
@@ -212,11 +221,29 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
 
     // initialize artist data
     const artistsData = window.artistsData || [];
+    // set up initial sort key tracking
+    (window as any).currentSortKey = "next-show";
+    // set up initial genre tracking
+    window.selectedGenre = "";
+    // keep combobox in sync with selectedGenre
+    function updateGenreCombobox() {
+      const combobox = document.querySelector('[role="combobox"]');
+      if (combobox) {
+        combobox.setAttribute(
+          "data-selected-genre",
+          window.selectedGenre || "",
+        );
+        combobox
+          .querySelector("span")
+          ?.replaceWith(
+            document.createTextNode(window.selectedGenre || "Select genre..."),
+          );
+      }
+    }
 
     // sort artists function
     function sortArtists(artistList: any[], sortKey: string) {
       const artistsCopy = [...artistList];
-
       switch (sortKey) {
         case "alphabetical":
           return artistsCopy.sort((a, b) => {
@@ -224,37 +251,41 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
               sensitivity: "base",
             });
           });
-
         case "reverse-alphabetical":
           return artistsCopy.sort((a, b) => {
             return b.name.localeCompare(a.name, undefined, {
               sensitivity: "base",
             });
           });
-
         case "next-show":
           return artistsCopy.sort((a, b) => {
             // artists with no upcoming shows go to the end
             if (!a.nextShow && !b.nextShow) return 0;
             if (!a.nextShow) return 1;
             if (!b.nextShow) return -1;
-
             // sort by date
             return (
               new Date(a.nextShow.date).getTime() -
               new Date(b.nextShow.date).getTime()
             );
           });
-
         default:
           return artistsCopy;
       }
     }
 
-    // render artists function
-    function renderArtists(artists: any[]) {
-      if (!artistList) return;
+    // filter by genre
+    function filterByGenre(artists: any[], genre: string): any[] {
+      if (!genre) return artists;
+      return artists.filter(
+        (artist) =>
+          Array.isArray(artist.genres) && artist.genres.includes(genre),
+      );
+    }
 
+    // render artists function
+    function renderArtists(artists: any[]): void {
+      if (!artistList) return;
       artistList.innerHTML = artists
         .map(
           (artist) => `
@@ -266,7 +297,6 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
                     ${artist.name}
                   </a>
                 </div>
-
                 ${
                   artist.nextShow
                     ? `
@@ -288,7 +318,6 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
                   </div>
                 `
                 }
-
                 <div class="mt-2 flex items-center justify-end">
                   ${
                     artist.spotifyUrl || artist.searchUrl
@@ -315,36 +344,62 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
       `,
         )
         .join("");
+      // update artist count
+      const countEl = document.getElementById("artist-count");
+      if (countEl) countEl.textContent = String(artists.length);
     }
 
     // handle sort change
     window.handleArtistSortChange = (sortKey: string) => {
-      const sortedArtists = sortArtists(artistsData, sortKey);
+      (window as any).currentSortKey = sortKey;
+      let filtered = filterByGenre(artistsData, window.selectedGenre || "");
+      const sortedArtists = sortArtists(filtered, sortKey);
       renderArtists(sortedArtists);
-
       // reapply search filter if there's a search query
       if (searchInput && searchInput.value) {
         const query = searchInput.value.toLowerCase();
-        const artistItems = document.querySelectorAll(".artist-item");
-
+        const artistItems =
+          document.querySelectorAll<HTMLElement>(".artist-item");
         artistItems.forEach((item) => {
           const artistName = item.getAttribute("data-artist-name") || "";
           const matches = artistName.includes(query);
-          (item as HTMLElement).style.display = matches ? "block" : "none";
+          item.style.display = matches ? "block" : "none";
+        });
+      }
+    };
+
+    // handle genre change
+    window.handleArtistGenreChange = (genre: string) => {
+      window.selectedGenre = genre;
+      updateGenreCombobox();
+      let filtered = filterByGenre(artistsData, genre);
+      // use the current sort key
+      const sortKey = (window as any).currentSortKey || "next-show";
+      const sortedArtists = sortArtists(filtered, sortKey);
+      renderArtists(sortedArtists);
+      // reapply search filter if there's a search query
+      if (searchInput && searchInput.value) {
+        const query = searchInput.value.toLowerCase();
+        const artistItems =
+          document.querySelectorAll<HTMLElement>(".artist-item");
+        artistItems.forEach((item) => {
+          const artistName = item.getAttribute("data-artist-name") || "";
+          const matches = artistName.includes(query);
+          item.style.display = matches ? "block" : "none";
         });
       }
     };
 
     // search functionality
     if (searchInput) {
-      searchInput.addEventListener("input", (e) => {
+      searchInput.addEventListener("input", (e: Event) => {
         const query = (e.target as HTMLInputElement).value.toLowerCase();
-        const artistItems = document.querySelectorAll(".artist-item");
-
+        const artistItems =
+          document.querySelectorAll<HTMLElement>(".artist-item");
         artistItems.forEach((item) => {
           const artistName = item.getAttribute("data-artist-name") || "";
           const matches = artistName.includes(query);
-          (item as HTMLElement).style.display = matches ? "block" : "none";
+          item.style.display = matches ? "block" : "none";
         });
       });
     }
