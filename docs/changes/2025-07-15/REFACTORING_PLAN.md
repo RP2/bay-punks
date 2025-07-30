@@ -86,7 +86,7 @@
 
 ## Example Usage
 
-### Before (in scripts):
+### Before (in scripts)
 
 ```javascript
 function normalizeText(text) {
@@ -102,7 +102,7 @@ function findArtistId(artistName, artists) {
 }
 ```
 
-### After (in scripts):
+### After (in scripts)
 
 ```javascript
 import { normalizeText } from "../src/lib/shared-utils.js";

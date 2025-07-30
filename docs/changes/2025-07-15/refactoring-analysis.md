@@ -18,7 +18,7 @@
 
 ### Functions Duplicated in Scripts (Need to be removed) ❌
 
-#### `scripts/process-databases.js`:
+#### For `scripts/process-databases.js`
 
 - `normalizeText(text)` - DUPLICATE
 - `normalizeForMatching(text)` - DUPLICATE
@@ -30,24 +30,24 @@
 - `parseVenueLocation(venueName)` - DUPLICATE
 - `expandCityAbbreviations(locationText)` - DUPLICATE
 
-#### `scripts/spotify-verify.js`:
+#### For `scripts/spotify-verify.js`
 
 - `isNonArtist(artistName)` - DUPLICATE (simplified version)
 
-#### `scripts/generate-calendar.js`:
+#### For `scripts/generate-calendar.js`
 
 - `normalizeText(text)` - DUPLICATE
 - `findArtistId(artistName, processedArtists)` - LOCAL VERSION
 - `findVenueId(venueName, processedVenues)` - LOCAL VERSION
 
-#### Astro Components:
+#### For Astro Components
 
 - `src/components/ArtistList.astro` - `normalizeText(text)` - DUPLICATE
 - `src/components/VenueList.astro` - `normalizeText(text)` - DUPLICATE
 
 ### Functions Unique to Scripts (Need to be moved/consolidated) 🔄
 
-#### `scripts/process-databases.js`:
+#### The `scripts/process-databases.js`
 
 - `getPreferredArtistName(scrapedName, existingName, aliases)` - UNIQUE
 - `applySpellingCorrection(text, type)` - UNIQUE
@@ -59,13 +59,13 @@
 - `NON_ARTIST_PATTERNS` array - UNIQUE
 - `CANCELLED_PATTERNS` array - UNIQUE
 
-#### `scripts/spotify-verify.js`:
+#### The `scripts/spotify-verify.js`
 
 - `getVerificationStatus(artist)` - UNIQUE
 - `delay(ms)` - UNIQUE
 - `isVenueAdministrative(artist)` - UNIQUE (different implementation)
 
-#### `scripts/generate-calendar.js`:
+#### The `scripts/generate-calendar.js`
 
 - Local `findArtistId` and `findVenueId` implementations
 
@@ -105,7 +105,7 @@
 
 ## Files That Need Changes
 
-### Import Updates:
+### Import Updates
 
 - `scripts/process-databases.js` - add imports, remove duplicates
 - `scripts/spotify-verify.js` - add imports, remove duplicates
@@ -113,7 +113,7 @@
 - `src/components/ArtistList.astro` - add import, remove duplicate
 - `src/components/VenueList.astro` - add import, remove duplicate
 
-### No Changes Needed:
+### No Changes Needed
 
 - `src/lib/data-utils.ts` - already imports from shared-utils
 - `scripts/data-utils.js` - already imports from shared-utils
