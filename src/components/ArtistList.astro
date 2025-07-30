@@ -156,7 +156,12 @@ const artistDataForClient = initialSortedArtists.map((artist) => ({
                       </a>
                     </div>
                     <div class="text-muted-foreground text-xs">
-                      {nextShow.venue.text}
+                      <a
+                        href={`/venue/${nextShow.venue.id}/`}
+                        class="text-muted-foreground hover:underline"
+                      >
+                        {nextShow.venue.text}
+                      </a>
                     </div>
                   </div>
                 )}
