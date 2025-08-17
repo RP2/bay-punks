@@ -18,6 +18,15 @@ export async function getStaticPaths() {
 // get the venue from props
 const { venue } = Astro.props;
 
+// extract search query from google searchUrl
+let duckDuckGoUrl = null;
+if (venue.searchUrl && venue.searchUrl.includes("google.com/search?q=")) {
+  const queryMatch = venue.searchUrl.match(/google\.com\/search\?q=([^&]+)/);
+  if (queryMatch && queryMatch[1]) {
+    duckDuckGoUrl = `https://duckduckgo.com/?q=${queryMatch[1]}`;
+  }
+}
+
 // get all shows for this venue
 const venueShows = concerts.shows.flatMap((show) =>
   show.events
@@ -136,22 +145,27 @@ const upcomingShows = venueShows
                   <dt class="text-muted-foreground text-sm font-medium">
                     Search
                   </dt>
-                  <dd class="text-lg">
+                  <dd class="flex gap-4 text-lg">
                     <a
                       href={venue.searchUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       class="inline-flex items-center gap-2 text-blue-600 transition-colors hover:text-blue-700 hover:underline"
                     >
-                      <svg
-                        class="h-4 w-4"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-                      </svg>
                       Google
                     </a>
+                    {duckDuckGoUrl && (
+                      <span> or </span>
+                      <a
+                        href={duckDuckGoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 text-orange-600 transition-colors hover:text-orange-700 hover:underline"
+                        aria-label="DuckDuckGo search"
+                      >
+                        DuckDuckGo
+                      </a>
+                    )}
                   </dd>
                 </div>
               )
