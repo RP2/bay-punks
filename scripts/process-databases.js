@@ -116,11 +116,11 @@ function applySpellingCorrection(text, type = "artist") {
 
 // helper to find matches for duplicate detection
 function findFuzzyMatch(map, normalizedText, type = "artist") {
-  // for artists: only exact matches with flexible "The" handling
-  // for venues: fuzzy matching with high threshold (0.9)
-
+  // for artists: allow fuzzy matching with high threshold (0.9), plus alias and normalization logic
   if (type === "artist") {
     const normalizedForMatching = normalizeForMatching(normalizedText);
+    let bestMatch = null;
+    let bestScore = 0.0;
 
     for (const [key, value] of map.entries()) {
       const normalizedKey = normalizeText(value.name);
@@ -148,9 +148,42 @@ function findFuzzyMatch(map, normalizedText, type = "artist") {
           }
         }
       }
+
+      // fuzzy match: use Levenshtein distance on normalized names
+      const distance = levenshteinDistance(normalizedKey, normalizedText);
+      const maxLength = Math.max(normalizedKey.length, normalizedText.length);
+      const similarity = maxLength > 0 ? 1 - distance / maxLength : 0;
+      if (similarity >= 0.9 && similarity > bestScore) {
+        bestScore = similarity;
+        bestMatch = key;
+      }
+
+      // also check aliases for fuzzy match
+      if (value.aliases && Array.isArray(value.aliases)) {
+        for (const alias of value.aliases) {
+          const normalizedAlias = normalizeText(alias);
+          const aliasDistance = levenshteinDistance(
+            normalizedAlias,
+            normalizedText,
+          );
+          const aliasMaxLength = Math.max(
+            normalizedAlias.length,
+            normalizedText.length,
+          );
+          const aliasSimilarity =
+            aliasMaxLength > 0 ? 1 - aliasDistance / aliasMaxLength : 0;
+          if (aliasSimilarity >= 0.9 && aliasSimilarity > bestScore) {
+            bestScore = aliasSimilarity;
+            bestMatch = key;
+          }
+        }
+      }
     }
 
-    // no match found for artists (only exact matches allowed)
+    if (bestMatch) {
+      return { key: bestMatch, isSpellingCorrection: false };
+    }
+    // no match found for artists
     return null;
   } // for venues, we can still do some fuzzy matching but with a high threshold
   if (type === "venue") {
@@ -261,12 +294,52 @@ function mergeArtistData(existing, newData) {
         : newData.lastSeen;
   }
 
-  // use preferred name logic that prioritizes scraped names
+  // use preferred name logic that prioritizes Spotify canonical name if verified, then scraped names
   let finalName = getPreferredArtistName(
     newData.name,
     existing.name,
     Array.from(existing.aliases || []),
   );
+
+  // if we have a verified Spotify name, use it as the canonical name
+  // spotifyData.name is the canonical name from Spotify
+  const spotifyName =
+    (newData.spotifyVerified &&
+      newData.spotifyData &&
+      newData.spotifyData.name) ||
+    (existing.spotifyVerified &&
+      existing.spotifyData &&
+      existing.spotifyData.name);
+  if (
+    spotifyName &&
+    typeof spotifyName === "string" &&
+    spotifyName.length > 1
+  ) {
+    // add all previous names as aliases if not already present
+    const allAliases = new Set([
+      ...Array.from(existing.aliases || []),
+      ...Array.from(newData.aliases || []),
+      finalName,
+      existing.name,
+      newData.name,
+    ]);
+    finalName = spotifyName;
+    // remove the canonical name from aliases if present
+    allAliases.delete(spotifyName);
+    return {
+      ...existing,
+      name: finalName,
+      searchUrl: existing.searchUrl || newData.searchUrl,
+      spotifyUrl: existing.spotifyUrl || newData.spotifyUrl || null,
+      spotifyVerified:
+        existing.spotifyVerified || newData.spotifyVerified || false,
+      spotifyData: existing.spotifyData || newData.spotifyData || null,
+      firstSeen: firstSeen,
+      lastSeen: lastSeen,
+      venues: new Set([...newData.venues]),
+      aliases: allAliases,
+    };
+  }
 
   return {
     ...existing,
