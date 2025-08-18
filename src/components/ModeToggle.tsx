@@ -31,7 +31,7 @@ export function ModeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          variant="outline"
+          variant="ghost"
           size="icon"
           className="min-h-[44px] min-w-[44px] touch-manipulation"
         >
