@@ -155,16 +155,18 @@ const upcomingShows = venueShows
                       Google
                     </a>
                     {duckDuckGoUrl && (
-                      <span> or </span>
-                      <a
-                        href={duckDuckGoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-center gap-2 text-orange-600 transition-colors hover:text-orange-700 hover:underline"
-                        aria-label="DuckDuckGo search"
-                      >
-                        DuckDuckGo
-                      </a>
+                      <>
+                        <span> or </span>
+                        <a
+                          href={duckDuckGoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="inline-flex items-center gap-2 text-orange-600 transition-colors hover:text-orange-700 hover:underline"
+                          aria-label="DuckDuckGo search"
+                        >
+                          DuckDuckGo
+                        </a>
+                      </>
                     )}
                   </dd>
                 </div>
