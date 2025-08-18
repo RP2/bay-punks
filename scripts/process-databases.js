@@ -3,16 +3,34 @@ import { readFile, writeFile } from "fs/promises";
 // load spelling corrections from external file
 let SPELLING_CORRECTIONS = {};
 let VENUE_CORRECTIONS = {};
+let CITY_CORRECTIONS = {};
 
 async function loadSpellingCorrections() {
   try {
     const correctionsData = JSON.parse(
       await readFile("./src/data/spelling-corrections.json", "utf-8"),
     );
-    SPELLING_CORRECTIONS = correctionsData.artist_corrections || {};
-    VENUE_CORRECTIONS = correctionsData.venue_corrections || {};
+    // Normalize all correction keys to lowercase for robust, case-insensitive matching
+    SPELLING_CORRECTIONS = {};
+    for (const [k, v] of Object.entries(
+      correctionsData.artist_corrections || {},
+    )) {
+      SPELLING_CORRECTIONS[normalizeText(k)] = v;
+    }
+    VENUE_CORRECTIONS = {};
+    for (const [k, v] of Object.entries(
+      correctionsData.venue_corrections || {},
+    )) {
+      VENUE_CORRECTIONS[normalizeText(k)] = v;
+    }
+    CITY_CORRECTIONS = {};
+    for (const [k, v] of Object.entries(
+      correctionsData.city_corrections || {},
+    )) {
+      CITY_CORRECTIONS[normalizeText(k)] = v;
+    }
     console.log(
-      `loaded ${Object.keys(SPELLING_CORRECTIONS).length} artist corrections and ${Object.keys(VENUE_CORRECTIONS).length} venue corrections`,
+      `loaded ${Object.keys(SPELLING_CORRECTIONS).length} artist corrections, ${Object.keys(VENUE_CORRECTIONS).length} venue corrections, and ${Object.keys(CITY_CORRECTIONS).length} city corrections`,
     );
   } catch (error) {
     console.warn(
@@ -97,21 +115,27 @@ function getPreferredArtistName(scrapedName, existingName, aliases = []) {
 // apply spelling corrections (conservative approach)
 function applySpellingCorrection(text, type = "artist") {
   const normalized = normalizeText(text);
-  const corrections =
-    type === "artist" ? SPELLING_CORRECTIONS : VENUE_CORRECTIONS;
+  let corrections = SPELLING_CORRECTIONS;
+  if (type === "venue") corrections = VENUE_CORRECTIONS;
+  if (type === "city") corrections = CITY_CORRECTIONS;
 
   // special case for "1,000 Dreams" - handle the "000 Dreams" variant
   if (type === "artist" && normalized === "000 dreams") {
     return "1,000 Dreams";
   }
 
-  // only check for exact spelling correction matches (be very conservative)
+  // only check for exact spelling correction matches (case-insensitive)
   if (corrections[normalized]) {
     return corrections[normalized];
   }
 
   // return original text if no exact correction found
   return text;
+}
+
+// helper to apply city corrections
+function applyCityCorrection(city) {
+  return applySpellingCorrection(city, "city");
 }
 
 // helper to find matches for duplicate detection
@@ -381,7 +405,7 @@ function parseVenueLocation(venueName) {
     // format: [Venue Name], [Address], [City]
     return {
       address: parts[1],
-      city: expandCityAbbreviations(parts[2]),
+      city: applyCityCorrection(expandCityAbbreviations(parts[2])),
     };
   } else if (parts.length === 2) {
     // format: [Venue Name/Address], [City] or [Venue Name], [Address]
@@ -404,7 +428,7 @@ function parseVenueLocation(venueName) {
       // first part is address, second part is city (e.g., "924 Gilman Street, Berkeley")
       return {
         address: firstPart,
-        city: expandCityAbbreviations(secondPart),
+        city: applyCityCorrection(expandCityAbbreviations(secondPart)),
       };
     } else if (secondPartIsAddress) {
       // second part is address (e.g., "Venue Name, 123 Main Street")
@@ -416,7 +440,7 @@ function parseVenueLocation(venueName) {
       // neither part looks like an address, assume second part is city
       return {
         address: null,
-        city: expandCityAbbreviations(secondPart),
+        city: applyCityCorrection(expandCityAbbreviations(secondPart)),
       };
     }
   }
@@ -692,6 +716,8 @@ function isSpecialCaseVenue(venueName) {
 
 // Process the concert data to extract artists and venues
 async function processDatabases() {
+  // global artist id lookup for this run
+  let artistIdLookup = new Map();
   // load spelling corrections first
   await loadSpellingCorrections();
 
@@ -1394,6 +1420,359 @@ async function processDatabases() {
       (a) => !a.spotifyVerified && !a.spotifyData?.notFound,
     ).length,
   };
+
+  // Load calendar data before post-processing so it is available
+  let calendarData;
+  try {
+    calendarData = JSON.parse(
+      await readFile("./src/data/calendar.json", "utf-8"),
+    );
+  } catch (e) {
+    console.error("Failed to read calendar.json", e);
+    calendarData = { shows: [] };
+  }
+
+  // --- POST-PROCESS: ENSURE ALL CALENDAR BANDS HAVE VALID ARTIST IDS ---
+  // For any band in the calendar with a null id, try spelling correction, normalization, and fuzzy/alias match before creating a new artist
+  // Rebuild the artistIdLookup for canonical artist id by normalized name and aliases
+  artistIdLookup = new Map();
+  for (const artist of artistsArray) {
+    artistIdLookup.set(normalizeText(artist.name), artist.id);
+    if (artist.aliases) {
+      for (const alias of artist.aliases) {
+        artistIdLookup.set(normalizeText(alias), artist.id);
+      }
+    }
+  }
+
+  // Helper for fuzzy/alias matching
+  function findFuzzyArtistId(name, threshold = 0.85) {
+    let bestId = null;
+    let bestScore = 0;
+    const normalizedName = normalizeText(name);
+    for (const artist of artistsArray) {
+      const normArtistName = normalizeText(artist.name);
+      const distance = levenshteinDistance(normArtistName, normalizedName);
+      const maxLength = Math.max(normArtistName.length, normalizedName.length);
+      const similarity = maxLength > 0 ? 1 - distance / maxLength : 0;
+      if (similarity >= threshold && similarity > bestScore) {
+        bestScore = similarity;
+        bestId = artist.id;
+      }
+      if (artist.aliases) {
+        for (const alias of artist.aliases) {
+          const normAlias = normalizeText(alias);
+          const aliasDistance = levenshteinDistance(normAlias, normalizedName);
+          const aliasMaxLength = Math.max(
+            normAlias.length,
+            normalizedName.length,
+          );
+          const aliasSimilarity =
+            aliasMaxLength > 0 ? 1 - aliasDistance / aliasMaxLength : 0;
+          if (aliasSimilarity >= threshold && aliasSimilarity > bestScore) {
+            bestScore = aliasSimilarity;
+            bestId = artist.id;
+          }
+        }
+      }
+    }
+    return bestId;
+  }
+
+  // For each band in each event, if id is null, try to match or create
+  for (const show of calendarData.shows) {
+    for (const event of show.events) {
+      if (Array.isArray(event.bands)) {
+        for (const band of event.bands) {
+          if (band && band.text && !band.id) {
+            // 1. Apply spelling correction
+            let candidateName = applySpellingCorrection(band.text, "artist");
+            // 2. Normalize
+            let normalized = normalizeText(candidateName);
+            // 3. Try exact/alias match
+            let id = artistIdLookup.get(normalized) || null;
+            // 4. Try fuzzy/alias match if still not found
+            if (!id) {
+              id = findFuzzyArtistId(candidateName, 0.85);
+            }
+            // 5. If found, assign id and add original as alias if needed
+            if (id) {
+              band.id = id;
+              const artist = artistsArray.find((a) => a.id === id);
+              if (artist && !artist.aliases.includes(band.text)) {
+                artist.aliases.push(band.text);
+              }
+            } else {
+              // 6. If still not found, create a new artist entry
+              const newId = createSlug(candidateName);
+              // Prevent non-artist entries from being created
+              if (isNonArtist(candidateName)) continue;
+              if (!artistsArray.some((a) => a.id === newId)) {
+                // Try to merge in spotify data and venues from previous artists data
+                let prevArtist = null;
+                let prevVenues = [];
+                let prevSpotifyUrl = null;
+                let prevSpotifyVerified = false;
+                let prevSpotifyData = null;
+                // Try to find by normalized name or alias
+                for (const oldArtist of existingArtistsData.artists || []) {
+                  if (
+                    normalizeText(oldArtist.name) === normalized ||
+                    (oldArtist.aliases &&
+                      oldArtist.aliases.map(normalizeText).includes(normalized))
+                  ) {
+                    prevArtist = oldArtist;
+                    prevVenues = oldArtist.venues || [];
+                    prevSpotifyUrl = oldArtist.spotifyUrl || null;
+                    prevSpotifyVerified = oldArtist.spotifyVerified || false;
+                    prevSpotifyData = oldArtist.spotifyData || null;
+                    break;
+                  }
+                }
+                // If not found, try to populate venues from this event
+                if (!prevVenues || prevVenues.length === 0) {
+                  prevVenues = [];
+                  if (event.venue && event.venue.text) {
+                    // Try to get venue id from mapping or slug
+                    let venueId = null;
+                    if (event.venue.id) {
+                      venueId = event.venue.id;
+                    } else {
+                      venueId = createSlug(event.venue.text);
+                    }
+                    prevVenues.push(venueId);
+                  }
+                }
+                artistsArray.push({
+                  id: newId,
+                  name: candidateName,
+                  searchUrl: null,
+                  spotifyUrl: prevSpotifyUrl,
+                  spotifyVerified: prevSpotifyVerified,
+                  spotifyData: prevSpotifyData,
+                  firstSeen: show.normalizedDate,
+                  lastSeen: show.normalizedDate,
+                  venues: prevVenues,
+                  aliases: [band.text],
+                });
+                artistIdLookup.set(normalized, newId);
+                band.id = newId;
+              } else {
+                // fallback: assign anyway if id exists
+                band.id = newId;
+              }
+            }
+          }
+        }
+      }
+      // Set event.venue.location from address/city for frontend display
+      if (
+        event.venue &&
+        (event.venue.location === undefined || event.venue.location === null)
+      ) {
+        const venueObj = venues.get(event.venue.id) || null;
+        let address = null;
+        let city = null;
+        if (venueObj) {
+          address = venueObj.address || null;
+          city = venueObj.city || null;
+        } else {
+          // fallback: parse from venue text
+          const locInfo = parseVenueLocation(event.venue.text);
+          address = locInfo.address;
+          city = locInfo.city;
+        }
+        if (address && city) {
+          event.venue.location = `${address}, ${city}`;
+        } else if (city) {
+          event.venue.location = city;
+        } else if (address) {
+          event.venue.location = address;
+        } else {
+          event.venue.location = null;
+        }
+      }
+    }
+  }
+
+  // --- SYNC ARTIST IDS TO CALENDAR ---
+  // calendarData already loaded above
+  // build a lookup for canonical artist id by normalized name and aliases
+  // ...existing code uses artistIdLookup defined at top...
+
+  // helper for fuzzy matching
+  function findFuzzyArtistId(name, threshold = 0.85) {
+    let bestId = null;
+    let bestScore = 0;
+    const normalizedName = normalizeText(name);
+    for (const artist of artistsArray) {
+      const normArtistName = normalizeText(artist.name);
+      const distance = levenshteinDistance(normArtistName, normalizedName);
+      const maxLength = Math.max(normArtistName.length, normalizedName.length);
+      const similarity = maxLength > 0 ? 1 - distance / maxLength : 0;
+      if (similarity >= threshold && similarity > bestScore) {
+        bestScore = similarity;
+        bestId = artist.id;
+      }
+      if (artist.aliases) {
+        for (const alias of artist.aliases) {
+          const normAlias = normalizeText(alias);
+          const aliasDistance = levenshteinDistance(normAlias, normalizedName);
+          const aliasMaxLength = Math.max(
+            normAlias.length,
+            normalizedName.length,
+          );
+          const aliasSimilarity =
+            aliasMaxLength > 0 ? 1 - aliasDistance / aliasMaxLength : 0;
+          if (aliasSimilarity >= threshold && aliasSimilarity > bestScore) {
+            bestScore = aliasSimilarity;
+            bestId = artist.id;
+          }
+        }
+      }
+    }
+    return bestId;
+  }
+
+  // update each band in each event with canonical id, using fuzzy match if needed
+  for (const show of calendarData.shows) {
+    for (const event of show.events) {
+      if (Array.isArray(event.bands)) {
+        for (const band of event.bands) {
+          if (band && band.text) {
+            const normalized = normalizeText(band.text);
+            let id = artistIdLookup.get(normalized) || null;
+            if (!id) {
+              // try fuzzy match
+              id = findFuzzyArtistId(band.text, 0.85);
+              if (id) {
+                // add this misspelling as an alias to the canonical artist
+                const artist = artistsArray.find((a) => a.id === id);
+                if (artist && !artist.aliases.includes(band.text)) {
+                  artist.aliases.push(band.text);
+                }
+              }
+            }
+            band.id = id || null;
+          }
+        }
+      }
+    }
+  }
+
+  // FINAL SYNC: Ensure every band.id in the calendar has a corresponding artist in artistsArray
+  const existingArtistIds = new Set(artistsArray.map((a) => a.id));
+  for (const show of calendarData.shows) {
+    for (const event of show.events) {
+      if (Array.isArray(event.bands)) {
+        for (const band of event.bands) {
+          // Prevent non-artist entries from being created in final sync
+          if (
+            band &&
+            band.id &&
+            !existingArtistIds.has(band.id) &&
+            !isNonArtist(band.text)
+          ) {
+            // Try to merge in spotify data and venues from previous artists data
+            let prevArtist = null;
+            let prevSpotifyUrl = null;
+            let prevSpotifyVerified = false;
+            let prevSpotifyData = null;
+            // Try to find by id, normalized name, or alias
+            for (const oldArtist of existingArtistsData.artists || []) {
+              if (
+                oldArtist.id === band.id ||
+                normalizeText(oldArtist.name) === normalizeText(band.text) ||
+                (oldArtist.aliases &&
+                  oldArtist.aliases
+                    .map(normalizeText)
+                    .includes(normalizeText(band.text)))
+              ) {
+                prevArtist = oldArtist;
+                prevSpotifyUrl = oldArtist.spotifyUrl || null;
+                prevSpotifyVerified = oldArtist.spotifyVerified || false;
+                prevSpotifyData = oldArtist.spotifyData || null;
+                break;
+              }
+            }
+            // Always scan all events for this artist and collect all unique venue IDs
+            const foundVenues = new Set();
+            for (const s of calendarData.shows) {
+              for (const e of s.events) {
+                if (Array.isArray(e.bands)) {
+                  for (const b of e.bands) {
+                    if (b && b.id === band.id) {
+                      if (e.venue && e.venue.text) {
+                        let venueId = e.venue.id || createSlug(e.venue.text);
+                        foundVenues.add(venueId);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            const venuesArr = Array.from(foundVenues);
+            artistsArray.push({
+              id: band.id,
+              name: band.text,
+              searchUrl: null,
+              spotifyUrl: prevSpotifyUrl,
+              spotifyVerified: prevSpotifyVerified,
+              spotifyData: prevSpotifyData,
+              firstSeen: show.normalizedDate,
+              lastSeen: show.normalizedDate,
+              venues: venuesArr,
+              aliases: [band.text],
+            });
+            existingArtistIds.add(band.id);
+          }
+        }
+      }
+    }
+  }
+
+  // FINAL PURGE: Remove any non-artist entries from artistsArray before writing
+  for (let i = artistsArray.length - 1; i >= 0; i--) {
+    if (isNonArtist(artistsArray[i].name)) {
+      artistsArray.splice(i, 1);
+    }
+  }
+
+  // FINAL SWEEP: Ensure all artists have valid firstSeen and lastSeen dates
+  const defaultDate = new Date().toISOString().split("T")[0];
+  for (const artist of artistsArray) {
+    if (!artist.firstSeen || !artist.lastSeen) {
+      let minDate = null;
+      let maxDate = null;
+      const normalized = normalizeText(artist.name);
+      for (const show of calendarData.shows) {
+        for (const event of show.events) {
+          if (Array.isArray(event.bands)) {
+            for (const band of event.bands) {
+              if (
+                band &&
+                normalizeText(band.text) === normalized &&
+                show.normalizedDate
+              ) {
+                if (!minDate || show.normalizedDate < minDate)
+                  minDate = show.normalizedDate;
+                if (!maxDate || show.normalizedDate > maxDate)
+                  maxDate = show.normalizedDate;
+              }
+            }
+          }
+        }
+      }
+      artist.firstSeen = minDate || artist.firstSeen || defaultDate;
+      artist.lastSeen = maxDate || artist.lastSeen || defaultDate;
+    }
+  }
+
+  await writeFile(
+    "./src/data/calendar.json",
+    JSON.stringify(calendarData, null, 2),
+  );
+
   await writeFile(
     "./src/data/artists.json",
     JSON.stringify(

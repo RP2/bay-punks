@@ -49,9 +49,15 @@
     "the cornerstone": "Cornerstone, Berkeley",
     "cornerstone": "Cornerstone, Berkeley"
   },
+  "city_corrections": {
+    "UC Berkeley Campus": "Berkeley",
+    "S.F.": "San Francisco",
+    "SF": "San Francisco",
+    "Oaklnd": "Oakland"
+  },
   "metadata": {
-    "version": "2.0",
-    "lastUpdated": "2025-07-07T00:00:00.000Z",
+    "version": "3.0",
+    "lastUpdated": "2025-08-18",
     "description": "Conservative spelling corrections for artist names and venue names in the Bay Area Punk Shows database",
     "notes": [
       "Artist corrections should ONLY map clear misspellings/typos to the correct spelling",

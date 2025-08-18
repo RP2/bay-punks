@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import venues from "../../data/venues.json";
 import concerts from "../../data/calendar.json";
+import artists from "../../data/artists.json";
 import { getArtistId } from "../../lib/data-utils";
 import { normalizeText } from "../../lib/shared-utils.js";
 
@@ -204,6 +205,13 @@ const upcomingShows = venueShows
                       <div class="flex flex-wrap gap-1">
                         {show.bands.map((band, i) => {
                           const artistId = getArtistId(band);
+                          let canonicalName = band.text;
+                          if (artistId) {
+                            const artist = artists.artists.find(
+                              (a) => a.id === artistId,
+                            );
+                            if (artist) canonicalName = artist.name;
+                          }
                           return (
                             <span data-key={i} class="inline-flex">
                               {artistId ? (
@@ -211,7 +219,7 @@ const upcomingShows = venueShows
                                   class="text-primary hover:underline"
                                   href={`/artist/${artistId}/`}
                                 >
-                                  {band.text}
+                                  {canonicalName}
                                 </a>
                               ) : (
                                 <span>{band.text}</span>
@@ -241,7 +249,3 @@ const upcomingShows = venueShows
     </Card>
   </div>
 </Layout>
-
-<script>
-  // removed recent shows expand/collapse functionality since that section was removed
-</script>

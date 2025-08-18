@@ -34,15 +34,25 @@ function getBestVenueName(venue: any): string {
   return venue.name;
 }
 
-// helper to extract location info from venue data
-function getLocationInfo(venue: any): string | null {
-  // construct location display from address and city
+// for the main venue list, we still use best name logic for display
+// but for location, just use backend fields directly
+function getLocationString(venue: any): string | null {
   if (venue.address && venue.city) {
     return `${venue.address}, ${venue.city}`;
   } else if (venue.city) {
     return venue.city;
   } else if (venue.address) {
     return venue.address;
+  }
+  return null;
+}
+
+// for detail pages, you can just use venue.name, venue.address, venue.city directly
+
+// helper to get location from event.venue.location (calendar.json)
+function getEventLocation(event: any): string | null {
+  if (event && event.venue && event.venue.location) {
+    return event.venue.location;
   }
   return null;
 }
@@ -132,7 +142,7 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
   id: venue.id,
   name: venue.name,
   displayName: getBestVenueName(venue),
-  locationInfo: getLocationInfo(venue),
+  locationInfo: getLocationString(venue),
   nextShow: getNextShowForVenue(venue.name, venue.id),
 }));
 ---
@@ -162,13 +172,17 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
       initialSortedVenues.map((venue) => {
         const nextShow = getNextShowForVenue(venue.name, venue.id);
         const displayName = getBestVenueName(venue);
-        const locationInfo = getLocationInfo(venue);
+        const locationString = getLocationString(venue);
+        // use event.venue.location for next show, fallback to venue location
+        const nextShowLocation = nextShow
+          ? getEventLocation(nextShow)
+          : locationString;
 
         return (
           <Card
             className="venue-item"
             data-venue-name={displayName.toLowerCase()}
-            data-venue-location={locationInfo?.toLowerCase() || ""}
+            data-venue-location={locationString?.toLowerCase() || ""}
           >
             <CardContent className="p-4">
               <div class="flex flex-col gap-2">
@@ -180,14 +194,15 @@ const venueDataForClient = initialSortedVenues.map((venue) => ({
                     {displayName}
                   </a>
                 </div>
-                {locationInfo && (
+
+                {locationString && (
                   <div class="text-muted-foreground text-sm">
-                    📍 {locationInfo}
+                    📍 {locationString}
                   </div>
                 )}
 
                 {nextShow && (
-                  <div class="text-sm">
+                  <div class="mt-2 text-sm">
                     <div class="text-muted-foreground">Next show:</div>
                     <div class="font-medium">
                       <a
