@@ -1,6 +1,7 @@
 ---
 import { Card, CardContent } from "@/components/ui/card";
 import { getVenueId } from "../lib/data-utils";
+import { AddToCalendarButton } from "./AddToCalendarButton";
 
 interface Props {
   day: { day: string; events: any[]; normalizedDate: string };
@@ -74,7 +75,7 @@ const formattedDay = formatDayWithFullMonth(day.day);
           style="max-height: 180px;"
         >
           {
-            day.events.map(
+            day.events.slice(0, 2).map(
               (
                 event: {
                   venue: {
@@ -86,9 +87,7 @@ const formattedDay = formatDayWithFullMonth(day.day);
                 },
                 index: number,
               ) => (
-                <li
-                  class={`event-item text-sm ${index >= 3 ? "overflow-event" : ""}`}
-                >
+                <li class={`event-item text-sm`}>
                   <div class="venue font-medium">
                     {(() => {
                       const venueId = getVenueId(event.venue as any);
@@ -102,74 +101,39 @@ const formattedDay = formatDayWithFullMonth(day.day);
                     })()}
                   </div>
                   <div class="text-muted-foreground artists text-xs">
-                    {index < 3
-                      ? event.bands
-                          .slice(0, 3)
-                          .map((band) => band.text)
-                          .join(", ") +
-                        (event.bands.length > 3
-                          ? ` +${event.bands.length - 3} more`
-                          : "")
-                      : event.bands.map((band) => band.text).join(", ")}
+                    {event.bands
+                      .slice(0, 3)
+                      .map((band) => band.text)
+                      .join(", ")}
                   </div>
                   {event.extra && (
                     <div class="text-muted-foreground event-extra text-xs">
                       {event.extra}
                     </div>
                   )}
+                  <AddToCalendarButton
+                    client:load
+                    title={event.bands.map((band) => band.text).join(", ")}
+                    date={day.normalizedDate}
+                    venue={String(event.venue.text)}
+                    description={event.extra ? String(event.extra) : ""}
+                  />
                 </li>
               ),
             )
           }
         </ul>
-
         {
-          day.events.length > 3 && (
-            <button
+          day.events.length > 2 && (
+            <a
+              href={`/day/${day.normalizedDate}/`}
               class="expand-toggle text-muted-foreground hover:text-foreground text-xs hover:underline"
-              data-expanded="false"
             >
-              +{day.events.length - 3} more events
-            </button>
+              +{day.events.length - 2} more events
+            </a>
           )
         }
       </div>
     </div>
   </CardContent>
 </Card>
-
-<script>
-  // expand/collapse functionality for event cards
-  document.addEventListener("DOMContentLoaded", () => {
-    const expandButtons = document.querySelectorAll(".expand-toggle");
-
-    expandButtons.forEach((button) => {
-      button.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        const card = button.closest(".event-item");
-        const eventsList = card?.querySelector(".events-list");
-        const isExpanded = button.getAttribute("data-expanded") === "true";
-
-        if (isExpanded) {
-          // collapse: set max height to show only first 3 events
-          if (eventsList) {
-            (eventsList as HTMLElement).style.maxHeight = "180px";
-          }
-          button.setAttribute("data-expanded", "false");
-          const totalEvents =
-            card?.querySelectorAll("li.event-item").length || 0;
-          button.textContent = `+${totalEvents - 3} more events`;
-        } else {
-          // expand: remove max height to show all events
-          if (eventsList) {
-            (eventsList as HTMLElement).style.maxHeight = "none";
-          }
-          button.setAttribute("data-expanded", "true");
-          button.textContent = "Show less";
-        }
-      });
-    });
-  });
-</script>

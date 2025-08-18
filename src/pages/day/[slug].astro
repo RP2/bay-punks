@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import concerts from "../../data/calendar.json";
 import artists from "../../data/artists.json";
 import { getVenueId, getArtistId } from "../../lib/data-utils";
+import { AddToCalendarButton } from "../../components/AddToCalendarButton";
 
 // generate all day pages at build time (only for today and future dates)
 export async function getStaticPaths() {
@@ -133,6 +134,15 @@ const year = getYear(day.normalizedDate);
                       <p class="text-muted-foreground text-sm">{event.extra}</p>
                     </div>
                   )}
+                  <div>
+                    <AddToCalendarButton
+                      client:load
+                      title={event.bands.map((band) => band.text).join(", ")}
+                      date={day.normalizedDate}
+                      venue={String(event.venue.text)}
+                      description={event.extra ? String(event.extra) : ""}
+                    />
+                  </div>
                 </div>
               </CardContent>
             </Card>
