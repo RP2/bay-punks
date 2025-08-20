@@ -102,8 +102,14 @@ function sortVenues(venueList: any[], sortKey: string) {
 const initialSortedVenues = sortVenues(venues.venues, "next-show");
 
 function getNextShowForVenue(venueName: string, venueId?: string) {
+  // get today's date in YYYY-MM-DD format (local time)
   const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  const todayString =
+    today.getFullYear() +
+    "-" +
+    String(today.getMonth() + 1).padStart(2, "0") +
+    "-" +
+    String(today.getDate()).padStart(2, "0");
 
   const upcomingShows = concerts.shows
     .flatMap((show) =>
@@ -120,12 +126,10 @@ function getNextShowForVenue(venueName: string, venueId?: string) {
         })),
     )
     .filter((show) => {
-      // create date from YYYY-MM-DD format, ensuring we compare properly
-      const [year, month, day] = show.date.split("-").map(Number);
-      const showDate = new Date(year, month - 1, day); // month is 0-indexed
-      return showDate >= today;
+      // compare normalizedDate string directly to today's string
+      return show.date >= todayString;
     })
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+    .sort((a, b) => a.date.localeCompare(b.date));
 
   return upcomingShows[0] || null;
 }
