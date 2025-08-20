@@ -1885,15 +1885,9 @@
               "spotifyVerified": true
             },
             {
-              "text": "1",
-              "id": null,
-              "href": "https://open.spotify.com/search/1",
-              "spotifyVerified": false
-            },
-            {
-              "text": "000 Dreams",
+              "text": "1000 Dreams",
               "id": "1000-dreams",
-              "href": "https://open.spotify.com/search/000%20Dreams",
+              "href": "https://open.spotify.com/search/1000%20Dreams",
               "spotifyVerified": false
             },
             {
@@ -2493,12 +2487,6 @@
             "location": "2601 Adeline St., Oakland"
           },
           "bands": [
-            {
-              "text": "Discussion",
-              "id": null,
-              "href": "https://open.spotify.com/search/Discussion",
-              "spotifyVerified": false
-            },
             {
               "text": "Smokers",
               "id": "smokers",
@@ -31144,12 +31132,6 @@
               "id": "william-shatner",
               "href": "https://open.spotify.com/artist/2dPqql8xbby3nWuf98mAza",
               "spotifyVerified": true
-            },
-            {
-              "text": "screening of \"Star Trek II: The Wrath of Khan\"",
-              "id": null,
-              "href": "https://open.spotify.com/search/screening%20of%20%22Star%20Trek%20II%3A%20The%20Wrath%20of%20Khan%22",
-              "spotifyVerified": false
             }
           ],
           "extra": "12+ (under 16 with adult) 6:30pm/7:30pm"

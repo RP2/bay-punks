@@ -1,5 +1,5 @@
 // bay-punks D1 migration worker entrypoint
-import type { ExecutionContext } from '@cloudflare/workers-types';
+import type { ExecutionContext } from "@cloudflare/workers-types";
 
 export interface Env {
   DB: D1Database;
