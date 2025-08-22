@@ -24,4 +24,6 @@ pnpm-debug.log*
 .idea/
 
 # worker
+.wrangler/
 worker/wrangler.toml
+.dev.vars
