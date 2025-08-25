@@ -8,9 +8,7 @@
       "lastSeen": "2025-09-19",
       "address": "1015 Folsom St.",
       "city": "San Francisco",
-      "aliases": [
-        "1015 Folsom, S.F."
-      ]
+      "aliases": ["1015 Folsom, S.F."]
     },
     {
       "id": "1035-22nd-avenue-unit-14-oakland",
@@ -30,97 +28,91 @@
       "id": "111-minna-gallery-111-minna-street-sf",
       "name": "111 Minna Gallery, 111 Minna Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=111%20Minna%20Gallery%2C%20111%20Minna%20Street%2C%20S.F.",
-      "firstSeen": "2025-08-21",
-      "lastSeen": "2025-08-21",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": "111 Minna Street",
       "city": "San Francisco",
-      "aliases": [
-        "111 Minna Gallery, 111 Minna Street, S.F."
-      ]
+      "aliases": ["111 Minna Gallery, 111 Minna Street, S.F."]
     },
     {
       "id": "1189-79th-avenue-oakland",
       "name": "1189 79th Avenue, Oakland",
       "searchUrl": "https://www.google.com/search?q=1189%2079th%20Avenue%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "1189 79th Avenue, Oakland"
-      ]
+      "aliases": ["1189 79th Avenue, Oakland"]
     },
     {
       "id": "120-5th-street-santa-rosa",
       "name": "120 5th Street, Santa Rosa",
       "searchUrl": "https://www.google.com/search?q=120%205th%20Street%2C%20Santa%20Rosa",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "120 5th St.",
       "city": "Santa Rosa",
-      "aliases": [
-        "120 5th Street, Santa Rosa"
-      ]
+      "aliases": ["120 5th Street, Santa Rosa"]
     },
     {
       "id": "1201-minnesota-street-sf",
       "name": "1201 Minnesota Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=1201%20Minnesota%20Street%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1201 Minnesota Street",
       "city": "San Francisco",
-      "aliases": [
-        "1201 Minnesota Street, S.F."
-      ]
+      "aliases": ["1201 Minnesota Street, S.F."]
     },
     {
       "id": "15th",
       "name": "15th",
       "searchUrl": "https://www.google.com/search?q=15th",
-      "firstSeen": "2025-08-21",
-      "lastSeen": "2025-08-21",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": null,
-      "aliases": [
-        "15th"
-      ]
+      "aliases": ["15th"]
     },
     {
       "id": "240-front-street-sf",
       "name": "240 Front Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=240%20Front%20Street%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "240 Front Street",
       "city": "San Francisco",
-      "aliases": [
-        "240 Front Street, S.F."
-      ]
+      "aliases": ["240 Front Street, S.F."]
     },
     {
       "id": "2415-prospect-street-berkeley",
       "name": "2415 Prospect Street, Berkeley",
       "searchUrl": "https://www.google.com/search?q=2415%20Prospect%20Street%2C%20Berkeley",
-      "firstSeen": "2025-08-17",
-      "lastSeen": "2025-08-17",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": "2415 Prospect Street",
       "city": "Berkeley",
-      "aliases": [
-        "2415 Prospect Street, Berkeley"
-      ]
+      "aliases": ["2415 Prospect Street, Berkeley"]
     },
     {
       "id": "3030a-16th-street-sf",
       "name": "3030A 16th Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=3030A%2016th%20Street%2C%20S.F.",
-      "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "firstSeen": "2025-08-29",
+      "lastSeen": "2025-08-29",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "3030A 16th Street, S.F."
-      ]
+      "aliases": ["3030A 16th Street, S.F.", "3030 16th Street, S.F."]
+    },
+    {
+      "id": "315-martha-street-san-jose",
+      "name": "315 Martha Street, San Jose",
+      "searchUrl": "https://www.google.com/search?q=315%20Martha%20Street%2C%20San%20Jose",
+      "firstSeen": "2025-08-31",
+      "lastSeen": "2025-08-31",
+      "address": "315 Martha Street",
+      "city": "San Jose",
+      "aliases": ["315 Martha Street, San Jose"]
     },
     {
       "id": "3437-haven-street-west-oakland",
@@ -130,21 +122,17 @@
       "lastSeen": "2025-08-24",
       "address": "3437 Haven Street",
       "city": "West Oakland",
-      "aliases": [
-        "3437 Haven Street, West Oakland"
-      ]
+      "aliases": ["3437 Haven Street, West Oakland"]
     },
     {
       "id": "4-star-theater-sf",
       "name": "4 Star Theater, S.F.",
       "searchUrl": "https://www.google.com/search?q=4%20Star%20Theater%2C%20S.F.",
-      "firstSeen": "2025-08-23",
+      "firstSeen": "2025-09-19",
       "lastSeen": "2025-11-14",
       "address": "2200 Clement St.",
       "city": "San Francisco",
-      "aliases": [
-        "4 Star Theater, S.F."
-      ]
+      "aliases": ["4 Star Theater, S.F."]
     },
     {
       "id": "49s-stadium-santa-clara",
@@ -154,34 +142,37 @@
       "lastSeen": "2025-10-04",
       "address": "4900 Marie P DeBartolo Way",
       "city": "Santa Clara",
-      "aliases": [
-        "49's Stadium, Santa Clara",
-        "49er's Stadium, Santa Clara"
-      ]
+      "aliases": ["49's Stadium, Santa Clara", "49er's Stadium, Santa Clara"]
     },
     {
       "id": "4th-corner-speakeasy-431-georgia-st-vallejo",
       "name": "4th Corner Speakeasy, 431 Georgia St., Vallejo",
       "searchUrl": "https://www.google.com/search?q=4th%20Corner%20Speakeasy%2C%20431%20Georgia%20St.%2C%20Vallejo",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "431 Georgia St.",
       "city": "Vallejo",
-      "aliases": [
-        "4th Corner Speakeasy, 431 Georgia St., Vallejo"
-      ]
+      "aliases": ["4th Corner Speakeasy, 431 Georgia St., Vallejo"]
     },
     {
       "id": "707-parkway-berkeley",
       "name": "707 Parkway, Berkeley",
       "searchUrl": "https://www.google.com/search?q=707%20Parkway%2C%20Berkeley",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Berkeley",
-      "aliases": [
-        "707 Parkway, Berkeley"
-      ]
+      "aliases": ["707 Parkway, Berkeley"]
+    },
+    {
+      "id": "860-nimitz-avenue-mare-island-vallejo",
+      "name": "860 Nimitz Avenue, Mare Island, Vallejo",
+      "searchUrl": "https://www.google.com/search?q=860%20Nimitz%20Avenue%2C%20Mare%20Island%2C%20Vallejo",
+      "firstSeen": "2025-09-06",
+      "lastSeen": "2025-09-06",
+      "address": "Mare Island",
+      "city": "Vallejo",
+      "aliases": ["860 Nimitz Avenue, Mare Island, Vallejo"]
     },
     {
       "id": "888-garage-888-marin-street-sf",
@@ -191,9 +182,7 @@
       "lastSeen": "2025-09-21",
       "address": "888 Marin Street",
       "city": "San Francisco",
-      "aliases": [
-        "888 Garage, 888 Marin Street, S.F."
-      ]
+      "aliases": ["888 Garage, 888 Marin Street, S.F."]
     },
     {
       "id": "924-gilman-street-berkeley",
@@ -214,62 +203,62 @@
       "name": "9th and Folsom, S.F.",
       "searchUrl": "https://www.google.com/search?q=9th%20and%20Folsom%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "9th and Folsom, S.F."
-      ]
+      "aliases": ["9th and Folsom, S.F."]
     },
     {
       "id": "a-house-american-canyon",
       "name": "a House, American Canyon",
       "searchUrl": "https://www.google.com/search?q=a%20House%2C%20American%20Canyon",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "American Canyon",
-      "aliases": [
-        "a House, American Canyon"
-      ]
+      "aliases": ["a House, American Canyon"]
     },
     {
       "id": "aroma-roasters-cafe-95-5th-street-santa-rosa",
       "name": "A'Roma Roasters Cafe, 95 5th Street, Santa Rosa",
       "searchUrl": "https://www.google.com/search?q=A'Roma%20Roasters%20Cafe%2C%2095%205th%20Street%2C%20Santa%20Rosa",
-      "firstSeen": "2025-08-23",
-      "lastSeen": "2025-08-23",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": "95 5th Street",
       "city": "Santa Rosa",
-      "aliases": [
-        "A'Roma Roasters Cafe, 95 5th Street, Santa Rosa"
-      ]
+      "aliases": ["A'Roma Roasters Cafe, 95 5th Street, Santa Rosa"]
+    },
+    {
+      "id": "alameda-brewing-1716-park-street-alamea",
+      "name": "Alameda Brewing, 1716 Park Street, Alamea",
+      "searchUrl": "https://www.google.com/search?q=Alameda%20Brewing%2C%201716%20Park%20Street%2C%20Alamea",
+      "firstSeen": "2025-08-29",
+      "lastSeen": "2025-08-29",
+      "address": "1716 Park Street",
+      "city": "Alamea",
+      "aliases": ["Alameda Brewing, 1716 Park Street, Alamea"]
     },
     {
       "id": "alameda-county-fair-pleasanton",
       "name": "Alameda County Fair, Pleasanton",
       "searchUrl": "https://www.google.com/search?q=Alameda%20County%20Fair%2C%20Pleasanton",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "location": "Pleasanton",
       "address": null,
       "city": "Pleasanton",
       "displayLocation": "Pleasanton",
-      "aliases": [
-        "Alameda County Fair, Pleasanton"
-      ]
+      "aliases": ["Alameda County Fair, Pleasanton"]
     },
     {
       "id": "alameda-skatepark-1177-w-red-line-avenue-alameda",
       "name": "Alameda Skatepark, 1177 W Red Line Avenue, Alameda",
       "searchUrl": "https://www.google.com/search?q=Alameda%20Skatepark%2C%201177%20W%20Red%20Line%20Avenue%2C%20Alameda",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1177 W Red Line Avenue",
       "city": "Alameda",
-      "aliases": [
-        "Alameda Skatepark, 1177 W Red Line Avenue, Alameda"
-      ]
+      "aliases": ["Alameda Skatepark, 1177 W Red Line Avenue, Alameda"]
     },
     {
       "id": "american-legion-post-470-capistrano-road-half-moon-bay",
@@ -279,33 +268,27 @@
       "lastSeen": "2025-08-30",
       "address": "470 Capistrano Road",
       "city": "Half Moon Bay",
-      "aliases": [
-        "American Legion Post, 470 Capistrano Road, Half Moon Bay"
-      ]
+      "aliases": ["American Legion Post, 470 Capistrano Road, Half Moon Bay"]
     },
     {
       "id": "amoeba-music-sf",
       "name": "Amoeba Music, S.F.",
       "searchUrl": "https://www.google.com/search?q=Amoeba%20Music%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Amoeba Music, S.F."
-      ]
+      "aliases": ["Amoeba Music, S.F."]
     },
     {
       "id": "amoeba-sf",
       "name": "Amoeba, S.F.",
       "searchUrl": "https://www.google.com/search?q=Amoeba%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1855 Haight St.",
       "city": "San Francisco",
-      "aliases": [
-        "Amoeba, S.F."
-      ]
+      "aliases": ["Amoeba, S.F."]
     },
     {
       "id": "arena-oakland",
@@ -315,22 +298,27 @@
       "lastSeen": "2025-10-10",
       "address": "7000 Coliseum Way",
       "city": "Oakland",
-      "aliases": [
-        "Arena, Oakland",
-        "Arlene Francis Center, Santa Rosa"
-      ]
+      "aliases": ["Arena, Oakland", "Arlene Francis Center, Santa Rosa"]
     },
     {
       "id": "arlene-francis-center-99-6th-street-santa-rosa",
       "name": "Arlene Francis Center, 99 6th Street, Santa Rosa",
       "searchUrl": "https://www.google.com/search?q=Arlene%20Francis%20Center%2C%2099%206th%20Street%2C%20Santa%20Rosa",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "99 6th Street",
       "city": "Santa Rosa",
-      "aliases": [
-        "Arlene Francis Center, 99 6th Street, Santa Rosa"
-      ]
+      "aliases": ["Arlene Francis Center, 99 6th Street, Santa Rosa"]
+    },
+    {
+      "id": "arts-festival-383-university-avenue-palo-alto",
+      "name": "Arts Festival, 383 University Avenue, Palo Alto",
+      "searchUrl": "https://www.google.com/search?q=Arts%20Festival%2C%20383%20University%20Avenue%2C%20Palo%20Alto",
+      "firstSeen": "2025-08-24",
+      "lastSeen": "2025-08-24",
+      "address": "383 University Avenue",
+      "city": "Palo Alto",
+      "aliases": ["Arts Festival, 383 University Avenue, Palo Alto"]
     },
     {
       "id": "audio-sf",
@@ -340,9 +328,7 @@
       "lastSeen": "2025-09-21",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Audio, S.F."
-      ]
+      "aliases": ["Audio, S.F."]
     },
     {
       "id": "august-hall-sf",
@@ -352,9 +338,7 @@
       "lastSeen": "2025-12-14",
       "address": "420 Mason St.",
       "city": "San Francisco",
-      "aliases": [
-        "August Hall, S.F."
-      ]
+      "aliases": ["August Hall, S.F."]
     },
     {
       "id": "bar-part-time-496-14th-street-sf",
@@ -364,76 +348,64 @@
       "lastSeen": "2025-09-19",
       "address": "496 14th Street",
       "city": "San Francisco",
-      "aliases": [
-        "Bar Part Time, 496 14th Street, S.F."
-      ]
+      "aliases": ["Bar Part Time, 496 14th Street, S.F."]
     },
     {
       "id": "beauty-supply-above-tay-ho-344-12th-street-oakland",
       "name": "Beauty Supply Above Tay Ho, 344 12th Street, Oakland",
       "searchUrl": "https://www.google.com/search?q=Beauty%20Supply%20Above%20Tay%20Ho%2C%20344%2012th%20Street%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "344 12th Street",
       "city": "Oakland",
-      "aliases": [
-        "Beauty Supply Above Tay Ho, 344 12th Street, Oakland"
-      ]
+      "aliases": ["Beauty Supply Above Tay Ho, 344 12th Street, Oakland"]
     },
     {
       "id": "beauty-supply-shop-above-tay-ho-344-12th-st-oakland",
       "name": "Beauty Supply Shop Above Tay Ho, 344 12th St, Oakland",
       "searchUrl": "https://www.google.com/search?q=Beauty%20Supply%20Shop%20Above%20Tay%20Ho%2C%20344%2012th%20St%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "344 12th St",
       "city": "Oakland",
-      "aliases": [
-        "Beauty Supply Shop Above Tay Ho, 344 12th St, Oakland"
-      ]
+      "aliases": ["Beauty Supply Shop Above Tay Ho, 344 12th St, Oakland"]
     },
     {
       "id": "beauty-supply-oakland",
       "name": "Beauty Supply, Oakland",
       "searchUrl": "https://www.google.com/search?q=Beauty%20Supply%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Beauty Supply, Oakland"
-      ]
+      "aliases": ["Beauty Supply, Oakland"]
     },
     {
       "id": "big-easy-128-american-alley-petaluma",
       "name": "Big Easy, 128 American Alley, Petaluma",
       "searchUrl": "https://www.google.com/search?q=Big%20Easy%2C%20128%20American%20Alley%2C%20Petaluma",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "128 American Alley",
       "city": "Petaluma",
-      "aliases": [
-        "Big Easy, 128 American Alley, Petaluma"
-      ]
+      "aliases": ["Big Easy, 128 American Alley, Petaluma"]
     },
     {
       "id": "bimbos-365-club-sf",
       "name": "Bimbo's 365 Club, S.F.",
       "searchUrl": "https://www.google.com/search?q=Bimbo's%20365%20Club%2C%20S.F.",
-      "firstSeen": "2025-08-22",
+      "firstSeen": "2025-02-03",
       "lastSeen": "2025-12-07",
       "address": "1025 Columbus Ave",
       "city": "San Francisco",
-      "aliases": [
-        "Bimbo's 365 Club, S.F."
-      ]
+      "aliases": ["Bimbo's 365 Club, S.F.", "Bimb's 365 Club, S.F."]
     },
     {
       "id": "bindlestiff-185-6th-street-sf",
       "name": "Bindlestiff, 185 6th Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=Bindlestiff%2C%20185%206th%20Street%2C%20S.F.",
-      "firstSeen": "2025-08-22",
-      "lastSeen": "2025-08-23",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": "185 6th Street",
       "city": "San Francisco",
       "aliases": [
@@ -449,45 +421,37 @@
       "lastSeen": "2025-12-10",
       "address": "327 Lasuen Street",
       "city": "Stanford",
-      "aliases": [
-        "Bing Concert Hall, 327 Lasuen Street, Stanford, Palo Alto"
-      ]
+      "aliases": ["Bing Concert Hall, 327 Lasuen Street, Stanford, Palo Alto"]
     },
     {
       "id": "bistro-1001-b-street-at-main-street-hayward",
       "name": "Bistro, 1001 B Street at Main Street, Hayward",
       "searchUrl": "https://www.google.com/search?q=Bistro%2C%201001%20B%20Street%20at%20Main%20Street%2C%20Hayward",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1001 B Street at Main Street",
       "city": "Hayward",
-      "aliases": [
-        "Bistro, 1001 B Street at Main Street, Hayward"
-      ]
+      "aliases": ["Bistro, 1001 B Street at Main Street, Hayward"]
     },
     {
       "id": "black-cat-sf",
       "name": "Black Cat, S.F.",
       "searchUrl": "https://www.google.com/search?q=Black%20Cat%2C%20S.F.",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-08-31",
       "address": "400 Eddy St",
       "city": "San Francisco",
-      "aliases": [
-        "Black Cat, S.F."
-      ]
+      "aliases": ["Black Cat, S.F."]
     },
     {
       "id": "blue-lagoon-santa-cruz",
       "name": "Blue Lagoon, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Blue%20Lagoon%2C%20Santa%20Cruz",
-      "firstSeen": "2025-08-21",
+      "firstSeen": "2025-09-06",
       "lastSeen": "2025-10-11",
       "address": "923 Pacific Ave",
       "city": "Santa Cruz",
-      "aliases": [
-        "Blue Lagoon, Santa Cruz"
-      ]
+      "aliases": ["Blue Lagoon, Santa Cruz"]
     },
     {
       "id": "blue-note-napa",
@@ -497,33 +461,27 @@
       "lastSeen": "2025-12-11",
       "address": "1030 Main St.",
       "city": "Napa",
-      "aliases": [
-        "Blue Note, Napa"
-      ]
+      "aliases": ["Blue Note, Napa"]
     },
     {
       "id": "blush-wine-bar-476-castro-street-sf",
       "name": "Blush Wine Bar, 476 Castro Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=Blush%20Wine%20Bar%2C%20476%20Castro%20Street%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "476 Castro Street",
       "city": "San Francisco",
-      "aliases": [
-        "Blush Wine Bar, 476 Castro Street, S.F."
-      ]
+      "aliases": ["Blush Wine Bar, 476 Castro Street, S.F."]
     },
     {
       "id": "boardwalk-santa-cruz",
       "name": "Boardwalk, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Boardwalk%2C%20Santa%20Cruz",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "400 Beach St.",
       "city": "Santa Cruz",
-      "aliases": [
-        "Boardwalk, Santa Cruz"
-      ]
+      "aliases": ["Boardwalk, Santa Cruz"]
     },
     {
       "id": "bottom-of-the-hill-sf",
@@ -533,58 +491,57 @@
       "lastSeen": "2025-12-07",
       "address": "1233 17th St.",
       "city": "San Francisco",
-      "aliases": [
-        "Bottom of the Hill, S.F."
-      ]
+      "aliases": ["Bottom of the Hill, S.F."]
     },
     {
       "id": "brentwood-emporium-561-1st-street-brentwood",
       "name": "Brentwood Emporium, 561 1st Street, Brentwood",
       "searchUrl": "https://www.google.com/search?q=Brentwood%20Emporium%2C%20561%201st%20Street%2C%20Brentwood",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "561 1st Street",
       "city": "Brentwood",
-      "aliases": [
-        "Brentwood Emporium, 561 1st Street, Brentwood"
-      ]
+      "aliases": ["Brentwood Emporium, 561 1st Street, Brentwood"]
+    },
+    {
+      "id": "bric-a-brack-sf",
+      "name": "Bric-a-brack, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Bric-a-brack%2C%20S.F.",
+      "firstSeen": "2025-09-13",
+      "lastSeen": "2025-09-13",
+      "address": null,
+      "city": "San Francisco",
+      "aliases": ["Bric-a-brack, S.F."]
     },
     {
       "id": "brick-and-mortar-sf",
       "name": "Brick and Mortar, S.F.",
       "searchUrl": "https://www.google.com/search?q=Brick%20and%20Mortar%2C%20S.F.",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-12-04",
       "address": "1710 Mission St",
       "city": "San Francisco",
-      "aliases": [
-        "Brick and Mortar, S.F."
-      ]
+      "aliases": ["Brick and Mortar, S.F.", "Brick and Mortar, S.F. 18_"]
     },
     {
       "id": "brix-brewing-2400-mandela-oakland",
       "name": "Brix Brewing, 2400 Mandela, Oakland",
       "searchUrl": "https://www.google.com/search?q=Brix%20Brewing%2C%202400%20Mandela%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "2400 Mandela",
       "city": "Oakland",
-      "aliases": [
-        "Brix Brewing, 2400 Mandela, Oakland"
-      ]
+      "aliases": ["Brix Brewing, 2400 Mandela, Oakland"]
     },
     {
       "id": "cafe-du-nord-sf",
       "name": "Cafe Du Nord, S.F.",
       "searchUrl": "https://www.google.com/search?q=Cafe%20Du%20Nord%2C%20S.F.",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-08-29",
       "lastSeen": "2025-12-18",
       "address": "2170 Market St",
       "city": "San Francisco",
-      "aliases": [
-        "Cafe Du Nord, S.F.",
-        "Cafe Du NOrd, S.F."
-      ]
+      "aliases": ["Cafe Du Nord, S.F.", "Cafe Du NOrd, S.F."]
     },
     {
       "id": "california-theater-345-s-first-street-san-jose",
@@ -594,39 +551,33 @@
       "lastSeen": "2025-10-29",
       "address": "345 S. First Street",
       "city": "San Jose",
-      "aliases": [
-        "California Theater, 345 S. First Street, San Jose"
-      ]
+      "aliases": ["California Theater, 345 S. First Street, San Jose"]
     },
     {
       "id": "caravan-lounge-san-jose",
       "name": "Caravan Lounge, San Jose",
       "searchUrl": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose",
-      "firstSeen": "2025-08-22",
+      "firstSeen": "2025-08-29",
       "lastSeen": "2025-08-30",
       "address": "98 S Almaden Ave",
       "city": "San Jose",
-      "aliases": [
-        "Caravan Lounge, San Jose"
-      ]
+      "aliases": ["Caravan Lounge, San Jose"]
     },
     {
       "id": "caravan-san-jose",
       "name": "Caravan, San Jose",
       "searchUrl": "https://www.google.com/search?q=Caravan%2C%20San%20Jose",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Jose",
-      "aliases": [
-        "Caravan, San Jose"
-      ]
+      "aliases": ["Caravan, San Jose"]
     },
     {
       "id": "catalyst-atrium-santa-cruz",
       "name": "Catalyst Atrium",
       "searchUrl": "https://www.google.com/search?q=Catalyst%20Atrium%2C%20Santa%20Cruz",
-      "firstSeen": "2025-08-20",
+      "firstSeen": "2025-09-12",
       "lastSeen": "2025-11-24",
       "address": "1011 Pacific Ave",
       "city": "Santa Cruz",
@@ -640,14 +591,11 @@
       "id": "catalyst-santa-cruz",
       "name": "Catalyst, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Catalyst%2C%20Santa%20Cruz",
-      "firstSeen": "2025-08-19",
+      "firstSeen": "2025-08-28",
       "lastSeen": "2025-12-12",
       "address": "1011 Pacific Ave",
       "city": "Santa Cruz",
-      "aliases": [
-        "Catalyst, Santa Cruz",
-        "th Catalyst, Santa Cruz"
-      ]
+      "aliases": ["Catalyst, Santa Cruz", "th Catalyst, Santa Cruz"]
     },
     {
       "id": "ceremony-oakland",
@@ -657,35 +605,27 @@
       "lastSeen": "2025-11-17",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Ceremony, Oakland"
-      ]
+      "aliases": ["Ceremony, Oakland"]
     },
     {
       "id": "chapel-outdoor-stage-sf",
       "name": "Chapel Outdoor Stage, S.F.",
       "searchUrl": "https://www.google.com/search?q=Chapel%20Outdoor%20Stage%2C%20S.F.",
-      "firstSeen": "2025-08-17",
-      "lastSeen": "2025-08-17",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Chapel Outdoor Stage, S.F."
-      ]
+      "aliases": ["Chapel Outdoor Stage, S.F."]
     },
     {
       "id": "chapel",
       "name": "Chapel, San Francisco",
       "searchUrl": "https://www.google.com/search?q=Chapel%2C%20S.F.",
-      "firstSeen": "2025-08-23",
+      "firstSeen": "2025-08-27",
       "lastSeen": "2025-12-09",
       "address": "777 Valencia St",
       "city": "San Francisco",
-      "aliases": [
-        "Chapel",
-        "Chapel, S.F.",
-        "Chapel,"
-      ]
+      "aliases": ["Chapel", "Chapel, S.F.", "Chapel,"]
     },
     {
       "id": "city-view-at-metreon-135-4th-street-sf",
@@ -695,9 +635,7 @@
       "lastSeen": "2025-08-31",
       "address": "135 4th Street",
       "city": "San Francisco",
-      "aliases": [
-        "City View at Metreon, 135 4th Street, S.F."
-      ]
+      "aliases": ["City View at Metreon, 135 4th Street, S.F."]
     },
     {
       "id": "civic-auditorium-sf",
@@ -707,10 +645,7 @@
       "lastSeen": "2025-12-06",
       "address": "99 Grove St.",
       "city": "San Francisco",
-      "aliases": [
-        "Civic Auditorium, S.F.",
-        "Civic Audtorium, S.F."
-      ]
+      "aliases": ["Civic Auditorium, S.F.", "Civic Audtorium, S.F."]
     },
     {
       "id": "civic-center-plaza-sf",
@@ -720,9 +655,7 @@
       "lastSeen": "2025-09-13",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Civic Center Plaza, S.F."
-      ]
+      "aliases": ["Civic Center Plaza, S.F."]
     },
     {
       "id": "club-007-693-whitney-street-san-leandro",
@@ -732,27 +665,23 @@
       "lastSeen": "2025-08-30",
       "address": "693 Whitney Street",
       "city": "San Leandro",
-      "aliases": [
-        "Club 007, 693 Whitney Street, San Leandro"
-      ]
+      "aliases": ["Club 007, 693 Whitney Street, San Leandro"]
     },
     {
       "id": "club-fox-2209-broadway-redwood-city",
       "name": "Club Fox, 2209 Broadway, Redwood City",
       "searchUrl": "https://www.google.com/search?q=Club%20Fox%2C%202209%20Broadway%2C%20Redwood%20City",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "2209 Broadway",
       "city": "Redwood City",
-      "aliases": [
-        "Club Fox, 2209 Broadway, Redwood City"
-      ]
+      "aliases": ["Club Fox, 2209 Broadway, Redwood City"]
     },
     {
       "id": "cornerstone",
       "name": "Cornerstone, Berkeley",
       "searchUrl": "https://www.google.com/search?q=Cornerstone%2C%20Berkeley",
-      "firstSeen": "2025-08-21",
+      "firstSeen": "2025-09-11",
       "lastSeen": "2025-11-07",
       "address": "2367 Shattuck Ave",
       "city": "Berkeley",
@@ -771,9 +700,7 @@
       "lastSeen": "2025-11-08",
       "address": "2600 Geneva Avenue",
       "city": "Daily City",
-      "aliases": [
-        "Cow Palace, Daily City"
-      ]
+      "aliases": ["Cow Palace, Daily City"]
     },
     {
       "id": "creekside-140-montgomery-street-san-jose",
@@ -783,9 +710,7 @@
       "lastSeen": "2025-10-12",
       "address": "140 Montgomery Street",
       "city": "San Jose",
-      "aliases": [
-        "Creekside, 140 Montgomery Street, San Jose"
-      ]
+      "aliases": ["Creekside, 140 Montgomery Street, San Jose"]
     },
     {
       "id": "crepe-place-santa-cruz",
@@ -795,33 +720,27 @@
       "lastSeen": "2025-11-12",
       "address": "1134 Soquel Ave",
       "city": "Santa Cruz",
-      "aliases": [
-        "Crepe Place, Santa Cruz"
-      ]
+      "aliases": ["Crepe Place, Santa Cruz"]
     },
     {
       "id": "crybaby-oakland",
       "name": "Crybaby, Oakland",
       "searchUrl": "https://www.google.com/search?q=Crybaby%2C%20Oakland",
-      "firstSeen": "2025-08-23",
-      "lastSeen": "2025-09-27",
+      "firstSeen": "2025-09-12",
+      "lastSeen": "2025-10-24",
       "address": "1928 Telegraph Ave",
       "city": "Oakland",
-      "aliases": [
-        "Crybaby, Oakland"
-      ]
+      "aliases": ["Crybaby, Oakland"]
     },
     {
       "id": "curio-775-valencia-street-sf",
       "name": "Curio, 775 Valencia Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=Curio%2C%20775%20Valencia%20Street%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "775 Valencia Street",
       "city": "San Francisco",
-      "aliases": [
-        "Curio, 775 Valencia Street, S.F."
-      ]
+      "aliases": ["Curio, 775 Valencia Street, S.F."]
     },
     {
       "id": "curran-theater-445-geary-street-sf",
@@ -831,28 +750,24 @@
       "lastSeen": "2025-09-07",
       "address": "445 Geary Street",
       "city": "San Francisco",
-      "aliases": [
-        "Curran Theater, 445 Geary Street, S.F."
-      ]
+      "aliases": ["Curran Theater, 445 Geary Street, S.F."]
     },
     {
       "id": "dalas-nest-house-371-oconnor-st-menlo-park",
       "name": "Dala's Nest House, 371 Oconnor St., Menlo Park",
       "searchUrl": "https://www.google.com/search?q=Dala's%20Nest%20House%2C%20371%20Oconnor%20St.%2C%20Menlo%20Park",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-09-21",
       "lastSeen": "2025-10-19",
       "address": "371 Oconnor St.",
       "city": "Menlo Park",
-      "aliases": [
-        "Dala's Nest House, 371 Oconnor St., Menlo Park"
-      ]
+      "aliases": ["Dala's Nest House, 371 Oconnor St., Menlo Park"]
     },
     {
       "id": "danny-murrys-irish-pub-1680-washington-avenue-san-leandro",
       "name": "Danny Murry's Irish Pub, 1680 Washington Avenue, San Leandro",
       "searchUrl": "https://www.google.com/search?q=Danny%20Murry's%20Irish%20Pub%2C%201680%20Washington%20Avenue%2C%20San%20Leandro",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1680 Washington Ave.",
       "city": "San Leandro",
       "aliases": [
@@ -864,7 +779,7 @@
       "id": "davies-symphony-hall-sf",
       "name": "Davies Symphony Hall, S.F.",
       "searchUrl": "https://www.google.com/search?q=Davies%20Symphony%20Hall%2C%20S.F.",
-      "firstSeen": "2025-09-13",
+      "firstSeen": "2025-03-17",
       "lastSeen": "2025-11-14",
       "address": "201 Van Ness Ave.",
       "city": "San Francisco",
@@ -881,118 +796,97 @@
       "lastSeen": "2025-10-18",
       "address": "375 11th St",
       "city": "San Francisco",
-      "aliases": [
-        "DNA Lounge, S.F."
-      ]
+      "aliases": ["DNA Lounge, S.F."]
     },
     {
       "id": "downtown-barbecue-santa-rosa",
       "name": "Downtown Barbecue, Santa Rosa",
       "searchUrl": "https://www.google.com/search?q=Downtown%20Barbecue%2C%20Santa%20Rosa",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "610 3rd St",
       "city": "Santa Rosa",
-      "aliases": [
-        "Downtown Barbecue, Santa Rosa"
-      ]
+      "aliases": ["Downtown Barbecue, Santa Rosa"]
     },
     {
       "id": "drakes-barrel-house-1933-davis-st",
       "name": "Drakes Barrel House, 1933 Davis St.",
       "searchUrl": "https://www.google.com/search?q=Drakes%20Barrel%20House%2C%201933%20Davis%20St.",
-      "firstSeen": "2025-08-22",
-      "lastSeen": "2025-08-22",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": "1933 Davis St.",
       "city": "San Leandro",
-      "aliases": [
-        "Drakes Barrel House, 1933 Davis St."
-      ]
+      "aliases": ["Drakes Barrel House, 1933 Davis St."]
     },
     {
       "id": "dust-bowl-brewing-3034-w-jack-london-blvd-livermore",
       "name": "Dust Bowl Brewing, 3034 W. Jack London Blvd., Livermore",
       "searchUrl": "https://www.google.com/search?q=Dust%20Bowl%20Brewing%2C%203034%20W.%20Jack%20London%20Blvd.%2C%20Livermore",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "3034 W. Jack London Blvd.",
       "city": "Livermore",
-      "aliases": [
-        "Dust Bowl Brewing, 3034 W. Jack London Blvd., Livermore"
-      ]
+      "aliases": ["Dust Bowl Brewing, 3034 W. Jack London Blvd., Livermore"]
     },
     {
       "id": "eagle-tavern-sf",
       "name": "Eagle Tavern, S.F.",
       "searchUrl": "https://www.google.com/search?q=Eagle%20Tavern%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Eagle Tavern, S.F."
-      ]
+      "aliases": ["Eagle Tavern, S.F."]
     },
     {
       "id": "edinburgh-castle-sf",
       "name": "Edinburgh Castle, S.F.",
       "searchUrl": "https://www.google.com/search?q=Edinburgh%20Castle%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Edinburgh Castle, S.F."
-      ]
+      "aliases": ["Edinburgh Castle, S.F."]
     },
     {
       "id": "el-rio-sf",
       "name": "El Rio, S.F.",
       "searchUrl": "https://www.google.com/search?q=El%20Rio%2C%20S.F.",
-      "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "firstSeen": "2025-09-07",
+      "lastSeen": "2025-09-07",
       "address": "3158 Mission St",
       "city": "San Francisco",
-      "aliases": [
-        "El Rio, S.F."
-      ]
+      "aliases": ["El Rio, S.F."]
     },
     {
       "id": "el-verano-inn-705-laurel-ave-at-bay-st-sonoma",
       "name": "El Verano Inn, 705 Laurel Ave. at Bay St., Sonoma",
       "searchUrl": "https://www.google.com/search?q=El%20Verano%20Inn%2C%20705%20Laurel%20Ave.%20at%20Bay%20St.%2C%20Sonoma",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "705 Laurel Ave. at Bay St.",
       "city": "Sonoma",
-      "aliases": [
-        "El Verano Inn, 705 Laurel Ave. at Bay St., Sonoma"
-      ]
+      "aliases": ["El Verano Inn, 705 Laurel Ave. at Bay St., Sonoma"]
     },
     {
       "id": "elbo-room-oakland",
       "name": "Elbo Room, Oakland",
       "searchUrl": "https://www.google.com/search?q=Elbo%20Room%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Elbo Room, Oakland"
-      ]
+      "aliases": ["Elbo Room, Oakland"]
     },
     {
       "id": "elis-mile-high-club-oakland",
       "name": "Eli's Mile High Club, Oakland",
       "searchUrl": "https://www.google.com/search?q=Eli's%20Mile%20High%20Club%2C%20Oakland",
-      "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "firstSeen": "2025-08-28",
+      "lastSeen": "2025-09-12",
       "address": "3629 Martin Luther King Jr Way",
       "city": "Oakland",
-      "aliases": [
-        "Eli's Mile High Club, Oakland",
-        "Eli's Mile High Club, S.F."
-      ]
+      "aliases": ["Eli's Mile High Club, Oakland", "Eli's Mile High Club, S.F."]
     },
     {
       "id": "empress-theater-vallejo",
@@ -1002,95 +896,92 @@
       "lastSeen": "2025-09-27",
       "address": "330 Virginia St.",
       "city": "Vallejo",
-      "aliases": [
-        "Empress Theater, Vallejo"
-      ]
+      "aliases": ["Empress Theater, Vallejo"]
     },
     {
       "id": "faction-brewing-alameda",
       "name": "Faction Brewing, Alameda",
       "searchUrl": "https://www.google.com/search?q=Faction%20Brewing%2C%20Alameda",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "2501 Monarch St.",
       "city": "Alameda",
-      "aliases": [
-        "Faction Brewing, Alameda"
-      ]
+      "aliases": ["Faction Brewing, Alameda"]
     },
     {
       "id": "fairgrounds-175-fairgrounds-dr-petaluma",
       "name": "Fairgrounds, 175 Fairgrounds Dr., Petaluma",
       "searchUrl": "https://www.google.com/search?q=Fairgrounds%2C%20175%20Fairgrounds%20Dr.%2C%20Petaluma",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "175 Fairgrounds Dr.",
       "city": "Petaluma",
-      "aliases": [
-        "Fairgrounds, 175 Fairgrounds Dr., Petaluma"
-      ]
+      "aliases": ["Fairgrounds, 175 Fairgrounds Dr., Petaluma"]
     },
     {
       "id": "farmers-market-37th-avenue-at-pacheco-and-ortega-sf",
       "name": "Farmers Market, 37th Avenue at Pacheco and Ortega, S.F.",
       "searchUrl": "https://www.google.com/search?q=Farmers%20Market%2C%2037th%20Avenue%20at%20Pacheco%20and%20Ortega%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "showCount": 0,
       "location": "37th Avenue at Pacheco and Ortega",
       "address": "37th Avenue at Pacheco and Ortega",
       "city": "S.F.",
       "displayLocation": "37th Avenue at Pacheco and Ortega, S.F.",
-      "aliases": [
-        "Farmers Market, 37th Avenue at Pacheco and Ortega, S.F."
-      ]
+      "aliases": ["Farmers Market, 37th Avenue at Pacheco and Ortega, S.F."]
+    },
+    {
+      "id": "felton-music-hall-felton",
+      "name": "Felton Music Hall, Felton",
+      "searchUrl": "https://www.google.com/search?q=Felton%20Music%20Hall%2C%20Felton",
+      "firstSeen": "2025-09-12",
+      "lastSeen": "2025-09-12",
+      "address": null,
+      "city": "Felton",
+      "aliases": ["Felton Music Hall, Felton"]
     },
     {
       "id": "ferry-building-sf",
       "name": "Ferry Building, S.F.",
       "searchUrl": "https://www.google.com/search?q=Ferry%20Building%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1 Ferry Building",
       "city": "San Francisco",
-      "aliases": [
-        "Ferry Building, S.F."
-      ]
+      "aliases": ["Ferry Building, S.F."]
     },
     {
       "id": "fiftys-liquor-27826-mission-blvd-hayward",
       "name": "Fifty's Liquor, 27826 Mission Blvd, Hayward",
       "searchUrl": "https://www.google.com/search?q=Fifty's%20Liquor%2C%2027826%20Mission%20Blvd%2C%20Hayward",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "27826 Mission Blvd",
       "city": "Hayward",
-      "aliases": [
-        "Fifty's Liquor, 27826 Mission Blvd, Hayward"
-      ]
+      "aliases": ["Fifty's Liquor, 27826 Mission Blvd, Hayward"]
     },
     {
       "id": "finnish-hall-1970-chestnut-street-berkeley",
       "name": "Finnish Hall, 1970 Chestnut Street, Berkeley",
       "searchUrl": "https://www.google.com/search?q=Finnish%20Hall%2C%201970%20Chestnut%20Street%2C%20Berkeley",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1970 Chestnut Street",
       "city": "Berkeley",
-      "aliases": [
-        "Finnish Hall, 1970 Chestnut Street, Berkeley"
-      ]
+      "aliases": ["Finnish Hall, 1970 Chestnut Street, Berkeley"]
     },
     {
       "id": "first-church-of-the-buzzard-oakland",
       "name": "First Church of the Buzzard, Oakland",
       "searchUrl": "https://www.google.com/search?q=First%20Church%20of%20the%20Buzzard%2C%20Oakland",
-      "firstSeen": "2025-08-23",
+      "firstSeen": "2025-10-18",
       "lastSeen": "2025-11-22",
       "address": "2601 Adeline St.",
       "city": "Oakland",
       "aliases": [
-        "First Church of the Buzzard, Oakland"
+        "First Church of the Buzzard, Oakland",
+        "First Church of The Buzzard, Oakland"
       ]
     },
     {
@@ -1098,19 +989,17 @@
       "name": "Forest Meadows Amphitheater, 890 Belle Avenue, San Rafael",
       "searchUrl": "https://www.google.com/search?q=Forest%20Meadows%20Amphitheater%2C%20890%20Belle%20Avenue%2C%20San%20Rafael",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "890 Belle Avenue",
       "city": "San Rafael",
-      "aliases": [
-        "Forest Meadows Amphitheater, 890 Belle Avenue, San Rafael"
-      ]
+      "aliases": ["Forest Meadows Amphitheater, 890 Belle Avenue, San Rafael"]
     },
     {
       "id": "fox-theater-oakland",
       "name": "Fox Theater, Oakland",
       "searchUrl": "https://www.google.com/search?q=Fox%20Theater%2C%20Oakland",
-      "firstSeen": "2025-08-22",
-      "lastSeen": "2025-12-19",
+      "firstSeen": "2025-03-11",
+      "lastSeen": "2025-12-31",
       "address": "1807 Telegraph Ave",
       "city": "Oakland",
       "aliases": [
@@ -1125,36 +1014,30 @@
       "name": "Fox Theatre, 2215 Broadway, Redwood City",
       "searchUrl": "https://www.google.com/search?q=Fox%20Theatre%2C%202215%20Broadway%2C%20Redwood%20City",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "2215 Broadway",
       "city": "Redwood City",
-      "aliases": [
-        "Fox Theatre, 2215 Broadway, Redwood City"
-      ]
+      "aliases": ["Fox Theatre, 2215 Broadway, Redwood City"]
     },
     {
       "id": "freight-berkeley",
       "name": "Freight, Berkeley",
       "searchUrl": "https://www.google.com/search?q=Freight%2C%20Berkeley",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Berkeley",
-      "aliases": [
-        "Freight, Berkeley"
-      ]
+      "aliases": ["Freight, Berkeley"]
     },
     {
       "id": "front-street-between-california-and-sacramento-sf",
       "name": "Front Street Between California and Sacramento, S.F.",
       "searchUrl": "https://www.google.com/search?q=Front%20Street%20Between%20California%20and%20Sacramento%2C%20S.F.",
-      "firstSeen": "2025-08-22",
-      "lastSeen": "2025-08-22",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Front Street Between California and Sacramento, S.F."
-      ]
+      "aliases": ["Front Street Between California and Sacramento, S.F."]
     },
     {
       "id": "frost-amphitheater-stanford-campus",
@@ -1164,21 +1047,17 @@
       "lastSeen": "2025-10-02",
       "address": "351 Lasuen St.",
       "city": "Stanford Campus",
-      "aliases": [
-        "Frost Amphitheater, Stanford Campus"
-      ]
+      "aliases": ["Frost Amphitheater, Stanford Campus"]
     },
     {
       "id": "frost-amphitheater-stanford-campus-palo-alto",
       "name": "Frost Amphitheater, Stanford Campus, Palo Alto",
       "searchUrl": "https://www.google.com/search?q=Frost%20Amphitheater%2C%20Stanford%20Campus%2C%20Palo%20Alto",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-10-14",
       "lastSeen": "2025-10-14",
       "address": "Stanford Campus",
       "city": "Palo Alto",
-      "aliases": [
-        "Frost Amphitheater, Stanford Campus, Palo Alto"
-      ]
+      "aliases": ["Frost Amphitheater, Stanford Campus, Palo Alto"]
     },
     {
       "id": "fruit-yard-amphitheater-7948-yosemite-blvd-modesto",
@@ -1188,9 +1067,7 @@
       "lastSeen": "2025-09-14",
       "address": "7948 Yosemite Blvd.",
       "city": "Modesto",
-      "aliases": [
-        "Fruit Yard Amphitheater, 7948 Yosemite Blvd., Modesto"
-      ]
+      "aliases": ["Fruit Yard Amphitheater, 7948 Yosemite Blvd., Modesto"]
     },
     {
       "id": "gga-field-13th-street-at-avenue-h-treasure-island",
@@ -1200,33 +1077,37 @@
       "lastSeen": "2025-10-25",
       "address": "13th Street at Avenue H",
       "city": "Treasure Island",
-      "aliases": [
-        "GGA Field, 13th Street at Avenue H, Treasure Island"
-      ]
+      "aliases": ["GGA Field, 13th Street at Avenue H, Treasure Island"]
     },
     {
       "id": "giants-ballpark-sf",
       "name": "Giants Ballpark, S.F.",
       "searchUrl": "https://www.google.com/search?q=Giants%20Ballpark%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Giants Ballpark, S.F."
-      ]
+      "aliases": ["Giants Ballpark, S.F."]
+    },
+    {
+      "id": "gilman-brewing-912-gilman-street-berkeley",
+      "name": "Gilman Brewing, 912 Gilman Street, Berkeley",
+      "searchUrl": "https://www.google.com/search?q=Gilman%20Brewing%2C%20912%20Gilman%20Street%2C%20Berkeley",
+      "firstSeen": "2025-08-31",
+      "lastSeen": "2025-08-31",
+      "address": "912 Gilman Street",
+      "city": "Berkeley",
+      "aliases": ["Gilman Brewing, 912 Gilman Street, Berkeley"]
     },
     {
       "id": "golden-eye-house-suisun-city",
       "name": "Golden Eye House, Suisun City",
       "searchUrl": "https://www.google.com/search?q=Golden%20Eye%20House%2C%20Suisun%20City",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Suisun City",
-      "aliases": [
-        "Golden Eye House, Suisun City"
-      ]
+      "aliases": ["Golden Eye House, Suisun City"]
     },
     {
       "id": "golden-gate-park-sf",
@@ -1236,9 +1117,7 @@
       "lastSeen": "2025-10-04",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Golden Gate Park, S.F."
-      ]
+      "aliases": ["Golden Gate Park, S.F."]
     },
     {
       "id": "golden-gate-theater-1-taylor-street-sf",
@@ -1248,21 +1127,17 @@
       "lastSeen": "2025-09-27",
       "address": "1 Taylor Street",
       "city": "San Francisco",
-      "aliases": [
-        "Golden Gate Theater, 1 Taylor Street, S.F."
-      ]
+      "aliases": ["Golden Gate Theater, 1 Taylor Street, S.F."]
     },
     {
       "id": "golden-gate-valley-library-1801-green-street-sf",
       "name": "Golden Gate Valley Library, 1801 Green Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=Golden%20Gate%20Valley%20Library%2C%201801%20Green%20Street%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1801 Green Street",
       "city": "San Francisco",
-      "aliases": [
-        "Golden Gate Valley Library, 1801 Green Street, S.F."
-      ]
+      "aliases": ["Golden Gate Valley Library, 1801 Green Street, S.F."]
     },
     {
       "id": "golden-state-theater-417-alvarado-st-monterey",
@@ -1272,21 +1147,17 @@
       "lastSeen": "2025-11-08",
       "address": "417 Alvarado St.",
       "city": "Monterey",
-      "aliases": [
-        "Golden State Theater, 417 Alvarado St., Monterey"
-      ]
+      "aliases": ["Golden State Theater, 417 Alvarado St., Monterey"]
     },
     {
       "id": "graton-resort-288-golf-course-dr-rohnert-park",
       "name": "Graton Resort, 288 Golf Course Dr., Rohnert Park",
       "searchUrl": "https://www.google.com/search?q=Graton%20Resort%2C%20288%20Golf%20Course%20Dr.%2C%20Rohnert%20Park",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "288 Golf Course Dr.",
       "city": "Rohnert Park",
-      "aliases": [
-        "Graton Resort, 288 Golf Course Dr., Rohnert Park"
-      ]
+      "aliases": ["Graton Resort, 288 Golf Course Dr., Rohnert Park"]
     },
     {
       "id": "graton-resort-rohnert-park",
@@ -1306,12 +1177,10 @@
       "name": "Gray Area Grand Theater, S.F.",
       "searchUrl": "https://www.google.com/search?q=Gray%20Area%20Grand%20Theater%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Gray Area Grand Theater, S.F."
-      ]
+      "aliases": ["Gray Area Grand Theater, S.F."]
     },
     {
       "id": "gray-area-sf",
@@ -1321,9 +1190,7 @@
       "lastSeen": "2025-09-20",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Gray Area, S.F."
-      ]
+      "aliases": ["Gray Area, S.F."]
     },
     {
       "id": "great-american-music-hall",
@@ -1347,18 +1214,16 @@
       "name": "Great Northern, S.F.",
       "searchUrl": "https://www.google.com/search?q=Great%20Northern%2C%20S.F.",
       "firstSeen": "2025-09-13",
-      "lastSeen": "2025-09-21",
+      "lastSeen": "2025-10-18",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Great Northern, S.F."
-      ]
+      "aliases": ["Great Northern, S.F."]
     },
     {
       "id": "greek-theater-uc-berkeley",
       "name": "Greek Theater, UC Berkeley",
       "searchUrl": "https://www.google.com/search?q=Greek%20Theater%2C%20UC%20Berkeley",
-      "firstSeen": "2025-08-18",
+      "firstSeen": "2025-08-28",
       "lastSeen": "2025-10-19",
       "address": "UC Campus",
       "city": "Berkeley",
@@ -1372,25 +1237,21 @@
       "id": "green-music-center-1801-e-cotati-avenue-rohnert-park",
       "name": "Green Music Center, 1801 E Cotati Avenue, Rohnert Park",
       "searchUrl": "https://www.google.com/search?q=Green%20Music%20Center%2C%201801%20E%20Cotati%20Avenue%2C%20Rohnert%20Park",
-      "firstSeen": "2025-08-21",
-      "lastSeen": "2025-08-21",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": "1801 E Cotati Avenue",
       "city": "Rohnert Park",
-      "aliases": [
-        "Green Music Center, 1801 E Cotati Avenue, Rohnert Park"
-      ]
+      "aliases": ["Green Music Center, 1801 E Cotati Avenue, Rohnert Park"]
     },
     {
       "id": "guild-theater-memlo-park",
       "name": "Guild Theater, Memlo Park",
       "searchUrl": "https://www.google.com/search?q=Guild%20Theater%2C%20Memlo%20Park",
       "firstSeen": "2025-08-24",
-      "lastSeen": "2025-11-15",
+      "lastSeen": "2025-11-26",
       "address": null,
       "city": "Memlo Park",
-      "aliases": [
-        "Guild Theater, Memlo Park"
-      ]
+      "aliases": ["Guild Theater, Memlo Park"]
     },
     {
       "id": "gundlach-bundschu-winery-sonoma",
@@ -1400,21 +1261,17 @@
       "lastSeen": "2025-11-22",
       "address": null,
       "city": "Sonoma",
-      "aliases": [
-        "Gundlach Bundschu Winery, Sonoma"
-      ]
+      "aliases": ["Gundlach Bundschu Winery, Sonoma"]
     },
     {
       "id": "healing-arts-community-175b-walnut-avenue-santa-cruz",
       "name": "Healing Arts Community, 175B Walnut Avenue, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Healing%20Arts%20Community%2C%20175B%20Walnut%20Avenue%2C%20Santa%20Cruz",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "175B Walnut Avenue",
       "city": "Santa Cruz",
-      "aliases": [
-        "Healing Arts Community, 175B Walnut Avenue, Santa Cruz"
-      ]
+      "aliases": ["Healing Arts Community, 175B Walnut Avenue, Santa Cruz"]
     },
     {
       "id": "henry-j-kaiser-center-10-tenth-street-oakland",
@@ -1424,16 +1281,14 @@
       "lastSeen": "2025-11-01",
       "address": "10 Tenth Street",
       "city": "Oakland",
-      "aliases": [
-        "Henry J Kaiser Center, 10 Tenth Street, Oakland"
-      ]
+      "aliases": ["Henry J Kaiser Center, 10 Tenth Street, Oakland"]
     },
     {
       "id": "hershers-pizza-206-broadway-oakland",
       "name": "Hersher's Pizza, 206 Broadway, Oakland",
       "searchUrl": "https://www.google.com/search?q=Hersher's%20Pizza%2C%20206%20Broadway%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "206 Broadway",
       "city": "Oakland",
       "aliases": [
@@ -1446,25 +1301,30 @@
       "name": "High Voltage, 1824 W. San Carlos Street, San Jose",
       "searchUrl": "https://www.google.com/search?q=High%20Voltage%2C%201824%20W.%20San%20Carlos%20Street%2C%20San%20Jose",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1824 W. San Carlos Street",
       "city": "San Jose",
-      "aliases": [
-        "High Voltage, 1824 W. San Carlos Street, San Jose"
-      ]
+      "aliases": ["High Voltage, 1824 W. San Carlos Street, San Jose"]
+    },
+    {
+      "id": "homestead-bowl-cupertino",
+      "name": "Homestead Bowl, Cupertino",
+      "searchUrl": "https://www.google.com/search?q=Homestead%20Bowl%2C%20Cupertino",
+      "firstSeen": "2025-08-30",
+      "lastSeen": "2025-08-30",
+      "address": null,
+      "city": "Cupertino",
+      "aliases": ["Homestead Bowl, Cupertino"]
     },
     {
       "id": "hopmonk-tavern-novato",
       "name": "Hopmonk Tavern, Novato",
       "searchUrl": "https://www.google.com/search?q=Hopmonk%20Tavern%2C%20Novato",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-08-27",
       "lastSeen": "2025-12-05",
       "address": null,
       "city": "Novato",
-      "aliases": [
-        "Hopmonk Tavern, Novato",
-        "Hopmonk, Novato"
-      ]
+      "aliases": ["Hopmonk Tavern, Novato", "Hopmonk, Novato"]
     },
     {
       "id": "hopmonk-tavern-sebastopol",
@@ -1485,25 +1345,21 @@
       "id": "hotel-utah-sf",
       "name": "Hotel Utah, S.F.",
       "searchUrl": "https://www.google.com/search?q=Hotel%20Utah%2C%20S.F.",
-      "firstSeen": "2025-08-22",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-08-24",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Hotel Utah, S.F."
-      ]
+      "aliases": ["Hotel Utah, S.F."]
     },
     {
       "id": "howard-street-and-2nd-street-sf",
       "name": "Howard Street and 2nd Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=Howard%20Street%20and%202nd%20Street%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Howard Street and 2nd Street, S.F."
-      ]
+      "aliases": ["Howard Street and 2nd Street, S.F."]
     },
     {
       "id": "indepedent-sf",
@@ -1526,24 +1382,20 @@
       "name": "Intergalactic Studios, 5327 Jacuzzi Street 3D, Richmond",
       "searchUrl": "https://www.google.com/search?q=Intergalactic%20Studios%2C%205327%20Jacuzzi%20Street%203D%2C%20Richmond",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "5327 Jacuzzi Street 3D",
       "city": "Richmond",
-      "aliases": [
-        "Intergalactic Studios, 5327 Jacuzzi Street 3D, Richmond"
-      ]
+      "aliases": ["Intergalactic Studios, 5327 Jacuzzi Street 3D, Richmond"]
     },
     {
       "id": "ivy-room-albany",
       "name": "Ivy Room, Albany",
       "searchUrl": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-12-20",
       "address": null,
       "city": "Albany",
-      "aliases": [
-        "Ivy Room, Albany"
-      ]
+      "aliases": ["Ivy Room, Albany"]
     },
     {
       "id": "jack-kerouac-alley-sf",
@@ -1553,84 +1405,87 @@
       "lastSeen": "2025-10-22",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Jack Kerouac Alley, S.F."
-      ]
+      "aliases": ["Jack Kerouac Alley, S.F."]
     },
     {
       "id": "jade-cathay-chinese-resturant-1339-n-1st-street-san-jose",
       "name": "Jade Cathay Chinese Resturant, 1339 N 1st Street, San Jose",
       "searchUrl": "https://www.google.com/search?q=Jade%20Cathay%20Chinese%20Resturant%2C%201339%20N%201st%20Street%2C%20San%20Jose",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1339 N 1st Street",
       "city": "San Jose",
-      "aliases": [
-        "Jade Cathay Chinese Resturant, 1339 N 1st Street, San Jose"
-      ]
+      "aliases": ["Jade Cathay Chinese Resturant, 1339 N 1st Street, San Jose"]
+    },
+    {
+      "id": "jade-cathey-resturant-1339-n-first-st-san-jose",
+      "name": "Jade Cathey Resturant, 1339 N First St., San Jose",
+      "searchUrl": "https://www.google.com/search?q=Jade%20Cathey%20Resturant%2C%201339%20N%20First%20St.%2C%20San%20Jose",
+      "firstSeen": "2025-08-29",
+      "lastSeen": "2025-08-29",
+      "address": "1339 N First St.",
+      "city": "San Jose",
+      "aliases": ["Jade Cathey Resturant, 1339 N First St., San Jose"]
     },
     {
       "id": "jury-room-712-ocean-street-santa-cruz",
       "name": "Jury Room, 712 Ocean Street, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Jury%20Room%2C%20712%20Ocean%20Street%2C%20Santa%20Cruz",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "712 Ocean Street",
       "city": "Santa Cruz",
-      "aliases": [
-        "Jury Room, 712 Ocean Street, Santa Cruz"
-      ]
+      "aliases": ["Jury Room, 712 Ocean Street, Santa Cruz"]
     },
     {
       "id": "jury-room-santa-cruz",
       "name": "Jury Room, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Jury%20Room%2C%20Santa%20Cruz",
-      "firstSeen": "2025-08-23",
+      "firstSeen": "2025-08-31",
       "lastSeen": "2025-09-26",
       "address": null,
       "city": "Santa Cruz",
-      "aliases": [
-        "Jury Room, Santa Cruz"
-      ]
+      "aliases": ["Jury Room, Santa Cruz"]
     },
     {
       "id": "kilowatt-sf",
       "name": "Kilowatt, S.F.",
       "searchUrl": "https://www.google.com/search?q=Kilowatt%2C%20S.F.",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-12-06",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Kilowatt, S.F.",
-        "Kilowatt,",
-        "Kilowatt",
-        "kilowatt"
-      ]
+      "aliases": ["Kilowatt, S.F.", "Kilowatt,", "Kilowatt", "kilowatt"]
     },
     {
       "id": "knockout-sf",
       "name": "Knockout, S.F.",
       "searchUrl": "https://www.google.com/search?q=Knockout%2C%20S.F.",
-      "firstSeen": "2025-08-17",
-      "lastSeen": "2025-09-06",
+      "firstSeen": "2025-08-26",
+      "lastSeen": "2025-09-30",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Knockout, S.F."
-      ]
+      "aliases": ["Knockout, S.F."]
     },
     {
       "id": "krsh-3565-standish-avenue-santa-rosa",
       "name": "KRSH, 3565 Standish Avenue, Santa Rosa",
       "searchUrl": "https://www.google.com/search?q=KRSH%2C%203565%20Standish%20Avenue%2C%20Santa%20Rosa",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "3565 Standish Avenue",
       "city": "Santa Rosa",
-      "aliases": [
-        "KRSH, 3565 Standish Avenue, Santa Rosa"
-      ]
+      "aliases": ["KRSH, 3565 Standish Avenue, Santa Rosa"]
+    },
+    {
+      "id": "lagunitas-brewery-1280-north-mcdowell-boulevard-petaluma",
+      "name": "Lagunitas Brewery, 1280 North McDowell Boulevard, Petaluma",
+      "searchUrl": "https://www.google.com/search?q=Lagunitas%20Brewery%2C%201280%20North%20McDowell%20Boulevard%2C%20Petaluma",
+      "firstSeen": "2025-08-25",
+      "lastSeen": "2025-08-25",
+      "address": "1280 North McDowell Boulevard",
+      "city": "Petaluma",
+      "aliases": ["Lagunitas Brewery, 1280 North McDowell Boulevard, Petaluma"]
     },
     {
       "id": "lake-merced-1-harding-road-sf",
@@ -1640,69 +1495,57 @@
       "lastSeen": "2025-08-30",
       "address": "1 Harding Road",
       "city": "San Francisco",
-      "aliases": [
-        "Lake Merced, 1 Harding Road, S.F."
-      ]
+      "aliases": ["Lake Merced, 1 Harding Road, S.F."]
     },
     {
       "id": "lane-splitter-pizza-2645-san-pablo-avenue-emeryville",
       "name": "Lane Splitter Pizza, 2645 San Pablo Avenue, Emeryville",
       "searchUrl": "https://www.google.com/search?q=Lane%20Splitter%20Pizza%2C%202645%20San%20Pablo%20Avenue%2C%20Emeryville",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "2645 San Pablo Avenue",
       "city": "Emeryville",
-      "aliases": [
-        "Lane Splitter Pizza, 2645 San Pablo Avenue, Emeryville"
-      ]
+      "aliases": ["Lane Splitter Pizza, 2645 San Pablo Avenue, Emeryville"]
     },
     {
       "id": "lanesplitter-pizza-3645-san-pablo-emeryville",
       "name": "Lanesplitter Pizza, 3645 San Pablo, Emeryville",
       "searchUrl": "https://www.google.com/search?q=Lanesplitter%20Pizza%2C%203645%20San%20Pablo%2C%20Emeryville",
-      "firstSeen": "2025-08-22",
-      "lastSeen": "2025-08-22",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": "3645 San Pablo",
       "city": "Emeryville",
-      "aliases": [
-        "Lanesplitter Pizza, 3645 San Pablo, Emeryville"
-      ]
+      "aliases": ["Lanesplitter Pizza, 3645 San Pablo, Emeryville"]
     },
     {
       "id": "line-51-brewery-303-castro-street-oakland",
       "name": "Line 51 Brewery, 303 Castro Street, Oakland",
       "searchUrl": "https://www.google.com/search?q=Line%2051%20Brewery%2C%20303%20Castro%20Street%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "303 Castro Street",
       "city": "Oakland",
-      "aliases": [
-        "Line 51 Brewery, 303 Castro Street, Oakland"
-      ]
+      "aliases": ["Line 51 Brewery, 303 Castro Street, Oakland"]
     },
     {
       "id": "little-hill-lounge-el-cerrito",
       "name": "Little Hill Lounge, El Cerrito",
       "searchUrl": "https://www.google.com/search?q=Little%20Hill%20Lounge%2C%20El%20Cerrito",
-      "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "firstSeen": "2025-09-19",
+      "lastSeen": "2025-09-19",
       "address": null,
       "city": "El Cerrito",
-      "aliases": [
-        "Little Hill Lounge, El Cerrito"
-      ]
+      "aliases": ["Little Hill Lounge, El Cerrito"]
     },
     {
       "id": "long-haul-3124-shattuck-ave-berkeley",
       "name": "Long Haul, 3124 Shattuck Ave., Berkeley",
       "searchUrl": "https://www.google.com/search?q=Long%20Haul%2C%203124%20Shattuck%20Ave.%2C%20Berkeley",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "3124 Shattuck Ave.",
       "city": "Berkeley",
-      "aliases": [
-        "Long Haul, 3124 Shattuck Ave., Berkeley"
-      ]
+      "aliases": ["Long Haul, 3124 Shattuck Ave., Berkeley"]
     },
     {
       "id": "lot-at-creekside-135-s-montgomery-san-jose",
@@ -1712,16 +1555,14 @@
       "lastSeen": "2025-11-02",
       "address": "135 S. Montgomery",
       "city": "San Jose",
-      "aliases": [
-        "Lot at Creekside, 135 S. Montgomery, San Jose"
-      ]
+      "aliases": ["Lot at Creekside, 135 S. Montgomery, San Jose"]
     },
     {
       "id": "luther-burbank-theater-50-mark-west-springs-road-santa-rosa",
       "name": "Luther Burbank Theater, 50 Mark West Springs Road, Santa Rosa",
       "searchUrl": "https://www.google.com/search?q=Luther%20Burbank%20Theater%2C%2050%20Mark%20West%20Springs%20Road%2C%20Santa%20Rosa",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "50 Mark West Springs Road",
       "city": "Santa Rosa",
       "aliases": [
@@ -1736,45 +1577,37 @@
       "lastSeen": "2025-09-20",
       "address": null,
       "city": "Richmond",
-      "aliases": [
-        "MacDonald Avenue at Harbour Way, Richmond"
-      ]
+      "aliases": ["MacDonald Avenue at Harbour Way, Richmond"]
     },
     {
       "id": "makeout-room-sf",
       "name": "Makeout Room, S.F.",
       "searchUrl": "https://www.google.com/search?q=Makeout%20Room%2C%20S.F.",
-      "firstSeen": "2025-08-18",
+      "firstSeen": "2025-08-25",
       "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Makeout Room, S.F."
-      ]
+      "aliases": ["Makeout Room, S.F."]
     },
     {
       "id": "marin-art-and-garden-center-30-sir-francis-drake-ross",
       "name": "Marin Art and Garden Center, 30 Sir Francis Drake, Ross",
       "searchUrl": "https://www.google.com/search?q=Marin%20Art%20and%20Garden%20Center%2C%2030%20Sir%20Francis%20Drake%2C%20Ross",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "30 Sir Francis Drake",
       "city": "Ross",
-      "aliases": [
-        "Marin Art and Garden Center, 30 Sir Francis Drake, Ross"
-      ]
+      "aliases": ["Marin Art and Garden Center, 30 Sir Francis Drake, Ross"]
     },
     {
       "id": "mars-records-1425-piedmont-unit-7-oakland",
       "name": "Mars Records, 1425 Piedmont Unit 7, Oakland",
       "searchUrl": "https://www.google.com/search?q=Mars%20Records%2C%201425%20Piedmont%20Unit%207%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1425 Piedmont Unit 7",
       "city": "Oakland",
-      "aliases": [
-        "Mars Records, 1425 Piedmont Unit 7, Oakland"
-      ]
+      "aliases": ["Mars Records, 1425 Piedmont Unit 7, Oakland"]
     },
     {
       "id": "masonic-sf",
@@ -1784,33 +1617,37 @@
       "lastSeen": "2025-12-06",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Masonic, S.F."
-      ]
+      "aliases": ["Masonic, S.F."]
+    },
+    {
+      "id": "memorial-park-24176-mission-blvd-hayward",
+      "name": "Memorial Park, 24176 Mission Blvd., Hayward",
+      "searchUrl": "https://www.google.com/search?q=Memorial%20Park%2C%2024176%20Mission%20Blvd.%2C%20Hayward",
+      "firstSeen": "2025-09-06",
+      "lastSeen": "2025-09-06",
+      "address": "24176 Mission Blvd.",
+      "city": "Hayward",
+      "aliases": ["Memorial Park, 24176 Mission Blvd., Hayward"]
     },
     {
       "id": "merchants-saloon-401-2nd-street-oakland",
       "name": "Merchants Saloon, 401 2nd Street, Oakland",
       "searchUrl": "https://www.google.com/search?q=Merchants%20Saloon%2C%20401%202nd%20Street%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "401 2nd Street",
       "city": "Oakland",
-      "aliases": [
-        "Merchants Saloon, 401 2nd Street, Oakland"
-      ]
+      "aliases": ["Merchants Saloon, 401 2nd Street, Oakland"]
     },
     {
       "id": "meritage-resort-napa",
       "name": "Meritage Resort, Napa",
       "searchUrl": "https://www.google.com/search?q=Meritage%20Resort%2C%20Napa",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-10-29",
       "address": null,
       "city": "Napa",
-      "aliases": [
-        "Meritage Resort, Napa"
-      ]
+      "aliases": ["Meritage Resort, Napa"]
     },
     {
       "id": "midway-sf",
@@ -1820,22 +1657,17 @@
       "lastSeen": "2025-10-24",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Midway, S.F."
-      ]
+      "aliases": ["Midway, S.F."]
     },
     {
       "id": "moes-alley-santa-cruz",
       "name": "Moe's Alley, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Moe's%20Alley%2C%20Santa%20Cruz",
-      "firstSeen": "2025-08-21",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-12-13",
       "address": null,
       "city": "Santa Cruz",
-      "aliases": [
-        "Moe's Alley, Santa Cruz",
-        "Moe's Ally, Santa Cruz"
-      ]
+      "aliases": ["Moe's Alley, Santa Cruz", "Moe's Ally, Santa Cruz"]
     },
     {
       "id": "monarch-sf",
@@ -1845,9 +1677,7 @@
       "lastSeen": "2025-09-21",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Monarch, S.F."
-      ]
+      "aliases": ["Monarch, S.F."]
     },
     {
       "id": "monument-140-9th-street-sf",
@@ -1857,9 +1687,7 @@
       "lastSeen": "2025-09-20",
       "address": "140 9th Street",
       "city": "San Francisco",
-      "aliases": [
-        "Monument, 140 9th Street, S.F."
-      ]
+      "aliases": ["Monument, 140 9th Street, S.F."]
     },
     {
       "id": "moscone-center-sf",
@@ -1869,16 +1697,14 @@
       "lastSeen": "2025-12-20",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Moscone Center, S.F."
-      ]
+      "aliases": ["Moscone Center, S.F."]
     },
     {
       "id": "mosswood-park-amphitheater-3612-webster-st-oakland",
       "name": "Mosswood Park Amphitheater, 3612 Webster St, Oakland",
       "searchUrl": "https://www.google.com/search?q=Mosswood%20Park%20Amphitheater%2C%203612%20Webster%20St%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "3612 Webster",
       "city": "Oakland",
       "aliases": [
@@ -1890,13 +1716,11 @@
       "id": "mountain-winery-saratoga",
       "name": "Mountain Winery, Saratoga",
       "searchUrl": "https://www.google.com/search?q=Mountain%20Winery%2C%20Saratoga",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-10-30",
       "address": null,
       "city": "Saratoga",
-      "aliases": [
-        "Mountain Winery, Saratoga"
-      ]
+      "aliases": ["Mountain Winery, Saratoga"]
     },
     {
       "id": "mountain-winery-saratoga-8pm",
@@ -1906,51 +1730,43 @@
       "lastSeen": "2025-10-10",
       "address": null,
       "city": "Saratoga 8pm",
-      "aliases": [
-        "Mountain Winery, Saratoga 8pm"
-      ]
+      "aliases": ["Mountain Winery, Saratoga 8pm"]
     },
     {
       "id": "murphys-irish-pub-468-1st-street-east-sonoma",
       "name": "Murphy's Irish Pub, 468 1st Street East, Sonoma",
       "searchUrl": "https://www.google.com/search?q=Murphy's%20Irish%20Pub%2C%20468%201st%20Street%20East%2C%20Sonoma",
-      "firstSeen": "2025-08-23",
-      "lastSeen": "2025-08-23",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": "468 1st Street East",
       "city": "Sonoma",
-      "aliases": [
-        "Murphy's Irish Pub, 468 1st Street East, Sonoma"
-      ]
+      "aliases": ["Murphy's Irish Pub, 468 1st Street East, Sonoma"]
     },
     {
       "id": "music-city-1355-bush-street-sf",
       "name": "Music City, 1355 Bush Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=Music%20City%2C%201355%20Bush%20Street%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1355 Bush Street",
       "city": "San Francisco",
-      "aliases": [
-        "Music City, 1355 Bush Street, S.F."
-      ]
+      "aliases": ["Music City, 1355 Bush Street, S.F."]
     },
     {
       "id": "music-city-sf",
       "name": "Music City, S.F.",
       "searchUrl": "https://www.google.com/search?q=Music%20City%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Music City, S.F."
-      ]
+      "aliases": ["Music City, S.F."]
     },
     {
       "id": "mystic-theater-petaluma",
       "name": "Mystic Theater, Petaluma",
       "searchUrl": "https://www.google.com/search?q=Mystic%20Theater%2C%20Petaluma",
-      "firstSeen": "2025-08-22",
+      "firstSeen": "2025-08-29",
       "lastSeen": "2025-11-22",
       "address": "23 Petaluma Blvd N",
       "city": "Petaluma",
@@ -1960,6 +1776,16 @@
       ]
     },
     {
+      "id": "near-lake-merced-sf",
+      "name": "Near Lake Merced, S.F.",
+      "searchUrl": "https://www.google.com/search?q=Near%20Lake%20Merced%2C%20S.F.",
+      "firstSeen": "2025-08-30",
+      "lastSeen": "2025-08-30",
+      "address": null,
+      "city": "San Francisco",
+      "aliases": ["Near Lake Merced, S.F."]
+    },
+    {
       "id": "neck-of-the-woods-sf",
       "name": "Neck of the Woods, S.F.",
       "searchUrl": "https://www.google.com/search?q=Neck%20of%20the%20Woods%2C%20S.F.",
@@ -1967,22 +1793,17 @@
       "lastSeen": "2025-11-09",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Neck of the Woods, S.F.",
-        "Neck of the Woods,"
-      ]
+      "aliases": ["Neck of the Woods, S.F.", "Neck of the Woods,"]
     },
     {
       "id": "new-farm-10-cargo-way-sf",
       "name": "New Farm, 10 Cargo Way, S.F.",
       "searchUrl": "https://www.google.com/search?q=New%20Farm%2C%2010%20Cargo%20Way%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "10 Cargo Way",
       "city": "San Francisco",
-      "aliases": [
-        "New Farm, 10 Cargo Way, S.F."
-      ]
+      "aliases": ["New Farm, 10 Cargo Way, S.F."]
     },
     {
       "id": "new-parish-oakland",
@@ -1992,21 +1813,17 @@
       "lastSeen": "2025-11-07",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "New Parish, Oakland"
-      ]
+      "aliases": ["New Parish, Oakland"]
     },
     {
       "id": "nielsen-arts-gallery-1545-solano-avenue-berkeley",
       "name": "Nielsen Arts Gallery, 1545 Solano Avenue, Berkeley",
       "searchUrl": "https://www.google.com/search?q=Nielsen%20Arts%20Gallery%2C%201545%20Solano%20Avenue%2C%20Berkeley",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1545 Solano Avenue",
       "city": "Berkeley",
-      "aliases": [
-        "Nielsen Arts Gallery, 1545 Solano Avenue, Berkeley"
-      ]
+      "aliases": ["Nielsen Arts Gallery, 1545 Solano Avenue, Berkeley"]
     },
     {
       "id": "north-beach-sf",
@@ -2016,46 +1833,47 @@
       "lastSeen": "2025-10-12",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "North Beach, S.F."
-      ]
+      "aliases": ["North Beach, S.F."]
     },
     {
       "id": "oreillys-sf",
       "name": "O'Reilly's, S.F.",
       "searchUrl": "https://www.google.com/search?q=O'Reilly's%2C%20S.F.",
-      "firstSeen": "2025-08-22",
+      "firstSeen": "2025-08-29",
       "lastSeen": "2025-09-27",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "O'Reilly's, S.F."
-      ]
+      "aliases": ["O'Reilly's, S.F."]
+    },
+    {
+      "id": "oakland-pride-frank-h-ogawa-plaza-oakland",
+      "name": "Oakland Pride, Frank H. Ogawa Plaza, Oakland",
+      "searchUrl": "https://www.google.com/search?q=Oakland%20Pride%2C%20Frank%20H.%20Ogawa%20Plaza%2C%20Oakland",
+      "firstSeen": "2025-09-07",
+      "lastSeen": "2025-09-07",
+      "address": "Frank H. Ogawa Plaza",
+      "city": "Oakland",
+      "aliases": ["Oakland Pride, Frank H. Ogawa Plaza, Oakland"]
     },
     {
       "id": "oakland-secret-gallery-oakland",
       "name": "Oakland Secret Gallery, Oakland",
       "searchUrl": "https://www.google.com/search?q=Oakland%20Secret%20Gallery%2C%20Oakland",
-      "firstSeen": "2025-08-30",
-      "lastSeen": "2025-08-30",
+      "firstSeen": "2025-08-29",
+      "lastSeen": "2025-08-31",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Oakland Secret Gallery, Oakland",
-        "Oakland Secret, Oaland"
-      ]
+      "aliases": ["Oakland Secret Gallery, Oakland", "Oakland Secret, Oaland"]
     },
     {
       "id": "oakland-secret-oakland",
       "name": "Oakland Secret, Oakland",
       "searchUrl": "https://www.google.com/search?q=Oakland%20Secret%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Oakland Secret, Oakland"
-      ]
+      "aliases": ["Oakland Secret, Oakland"]
     },
     {
       "id": "old-princeton-landing-460-capistrano-way-half-moon-bay",
@@ -2065,21 +1883,17 @@
       "lastSeen": "2025-09-13",
       "address": "460 Capistrano Way",
       "city": "Half Moon Bay",
-      "aliases": [
-        "Old Princeton Landing, 460 Capistrano Way, Half Moon Bay"
-      ]
+      "aliases": ["Old Princeton Landing, 460 Capistrano Way, Half Moon Bay"]
     },
     {
       "id": "open-gallery-38-s-2nd-street-san-jose",
       "name": "Open Gallery, 38 S. 2nd Street, San Jose",
       "searchUrl": "https://www.google.com/search?q=Open%20Gallery%2C%2038%20S.%202nd%20Street%2C%20San%20Jose",
-      "firstSeen": "2025-08-22",
-      "lastSeen": "2025-08-22",
+      "firstSeen": "2025-08-26",
+      "lastSeen": "2025-08-26",
       "address": "38 S. 2nd Street",
       "city": "San Jose",
-      "aliases": [
-        "Open Gallery, 38 S. 2nd Street, San Jose"
-      ]
+      "aliases": ["Open Gallery, 38 S. 2nd Street, San Jose"]
     },
     {
       "id": "orpheum-theater-1192-market-street-sf",
@@ -2089,9 +1903,7 @@
       "lastSeen": "2025-11-17",
       "address": "1192 Market Street",
       "city": "San Francisco",
-      "aliases": [
-        "Orpheum Theater, 1192 Market Street, S.F."
-      ]
+      "aliases": ["Orpheum Theater, 1192 Market Street, S.F."]
     },
     {
       "id": "outside-lands-golden-gate-park-sf",
@@ -2114,13 +1926,11 @@
       "id": "palace-of-fine-arts-sf",
       "name": "Palace of Fine Arts, S.F.",
       "searchUrl": "https://www.google.com/search?q=Palace%20of%20Fine%20Arts%2C%20S.F.",
-      "firstSeen": "2025-08-23",
+      "firstSeen": "2025-08-31",
       "lastSeen": "2025-11-29",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Palace of Fine Arts, S.F."
-      ]
+      "aliases": ["Palace of Fine Arts, S.F."]
     },
     {
       "id": "paramount-theater-oakland",
@@ -2130,34 +1940,31 @@
       "lastSeen": "2025-11-08",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Paramount Theater, Oakland"
-      ]
+      "aliases": ["Paramount Theater, Oakland"]
     },
     {
       "id": "pavilion-concord",
       "name": "Pavilion, Concord",
       "searchUrl": "https://www.google.com/search?q=Pavilion%2C%20Concord",
-      "firstSeen": "2025-08-22",
+      "firstSeen": "2025-08-25",
       "lastSeen": "2025-09-05",
-      "address": "Concord",
+      "address": "2045 Mount Diablo St",
       "city": "Concord",
       "aliases": [
         "Pavilion, Concord",
-        "Pavilion, Concord, S.F."
+        "Pavilion, Concord, S.F.",
+        "Vinnies Bar and Grill, 2045 Mount Diablo St, Concord"
       ]
     },
     {
       "id": "peacock-lounge-sf",
       "name": "Peacock Lounge, S.F.",
       "searchUrl": "https://www.google.com/search?q=Peacock%20Lounge%2C%20S.F.",
-      "firstSeen": "2025-09-11",
+      "firstSeen": "2025-09-04",
       "lastSeen": "2025-09-11",
       "address": "552 Haight St",
       "city": "San Francisco",
-      "aliases": [
-        "Peacock Lounge, S.F."
-      ]
+      "aliases": ["Peacock Lounge, S.F."]
     },
     {
       "id": "phoenix-hotel-601-eddy-street-sf",
@@ -2167,33 +1974,37 @@
       "lastSeen": "2025-10-18",
       "address": "601 Eddy Street",
       "city": "San Francisco",
-      "aliases": [
-        "Phoenix Hotel, 601 Eddy Street, S.F."
-      ]
+      "aliases": ["Phoenix Hotel, 601 Eddy Street, S.F."]
     },
     {
       "id": "phoenix-theater-petaluma",
       "name": "Phoenix Theater, Petaluma",
       "searchUrl": "https://www.google.com/search?q=Phoenix%20Theater%2C%20Petaluma",
-      "firstSeen": "2025-08-22",
+      "firstSeen": "2025-08-29",
       "lastSeen": "2025-10-25",
       "address": "201 Washington Street",
       "city": "Petaluma",
-      "aliases": [
-        "Phoenix Theater, Petaluma"
-      ]
+      "aliases": ["Phoenix Theater, Petaluma"]
+    },
+    {
+      "id": "piner-skatepark-1701-fulton-road-santa-rosa",
+      "name": "Piner Skatepark, 1701 Fulton Road, Santa Rosa",
+      "searchUrl": "https://www.google.com/search?q=Piner%20Skatepark%2C%201701%20Fulton%20Road%2C%20Santa%20Rosa",
+      "firstSeen": "2025-08-31",
+      "lastSeen": "2025-08-31",
+      "address": "1701 Fulton Road",
+      "city": "Santa Rosa",
+      "aliases": ["Piner Skatepark, 1701 Fulton Road, Santa Rosa"]
     },
     {
       "id": "pitts-pub-4207-judah-street-sf",
       "name": "Pitt's Pub, 4207 Judah Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=Pitt's%20Pub%2C%204207%20Judah%20Street%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "4207 Judah Street",
       "city": "San Francisco",
-      "aliases": [
-        "Pitt's Pub, 4207 Judah Street, S.F."
-      ]
+      "aliases": ["Pitt's Pub, 4207 Judah Street, S.F."]
     },
     {
       "id": "plaza-de-cesar-chavez-downtown-san-jose",
@@ -2203,9 +2014,7 @@
       "lastSeen": "2025-09-21",
       "address": null,
       "city": "Downtown San Jose",
-      "aliases": [
-        "Plaza De Cesar Chavez, Downtown San Jose"
-      ]
+      "aliases": ["Plaza De Cesar Chavez, Downtown San Jose"]
     },
     {
       "id": "portola-music-festival-pier-80-sf",
@@ -2215,21 +2024,17 @@
       "lastSeen": "2025-09-21",
       "address": "Pier 80",
       "city": "San Francisco",
-      "aliases": [
-        "Portola Music Festival, Pier 80, S.F."
-      ]
+      "aliases": ["Portola Music Festival, Pier 80, S.F."]
     },
     {
       "id": "pt-san-pablo-harbor-1900-stenmark-dr-richmond",
       "name": "Pt. San Pablo Harbor, 1900 Stenmark Dr., Richmond",
       "searchUrl": "https://www.google.com/search?q=Pt.%20San%20Pablo%20Harbor%2C%201900%20Stenmark%20Dr.%2C%20Richmond",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1900 Stenmark Dr.",
       "city": "Richmond",
-      "aliases": [
-        "Pt. San Pablo Harbor, 1900 Stenmark Dr., Richmond"
-      ]
+      "aliases": ["Pt. San Pablo Harbor, 1900 Stenmark Dr., Richmond"]
     },
     {
       "id": "public-works-sf",
@@ -2239,33 +2044,27 @@
       "lastSeen": "2025-09-21",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Public Works, S.F."
-      ]
+      "aliases": ["Public Works, S.F."]
     },
     {
       "id": "pussy-palace-oakland",
       "name": "Pussy Palace, Oakland",
       "searchUrl": "https://www.google.com/search?q=Pussy%20Palace%2C%20Oakland",
-      "firstSeen": "2025-08-17",
-      "lastSeen": "2025-08-17",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Pussy Palace, Oakland"
-      ]
+      "aliases": ["Pussy Palace, Oakland"]
     },
     {
       "id": "quarry-amphitheater-1156-high-street-santa-cruz",
       "name": "Quarry Amphitheater, 1156 High Street, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Quarry%20Amphitheater%2C%201156%20High%20Street%2C%20Santa%20Cruz",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1156 High Street",
       "city": "Santa Cruz",
-      "aliases": [
-        "Quarry Amphitheater, 1156 High Street, Santa Cruz"
-      ]
+      "aliases": ["Quarry Amphitheater, 1156 High Street, Santa Cruz"]
     },
     {
       "id": "railroad-square-523-4th-street-santa-rosa",
@@ -2275,9 +2074,17 @@
       "lastSeen": "2025-09-28",
       "address": "523 4th Street",
       "city": "Santa Rosa",
-      "aliases": [
-        "Railroad Square, 523 4th Street, Santa Rosa"
-      ]
+      "aliases": ["Railroad Square, 523 4th Street, Santa Rosa"]
+    },
+    {
+      "id": "raimond-park-1689-20th-street-oakland",
+      "name": "Raimond Park 1689 20th Street, Oakland",
+      "searchUrl": "https://www.google.com/search?q=Raimond%20Park%201689%2020th%20Street%2C%20Oakland",
+      "firstSeen": "2025-09-03",
+      "lastSeen": "2025-09-03",
+      "address": null,
+      "city": "Oakland",
+      "aliases": ["Raimond Park 1689 20th Street, Oakland"]
     },
     {
       "id": "rayko-sf",
@@ -2287,33 +2094,27 @@
       "lastSeen": "2025-08-29",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Rayko, S.F."
-      ]
+      "aliases": ["Rayko, S.F."]
     },
     {
       "id": "redwood-cafe-8240-old-redwodd-hwy-cotati",
       "name": "Redwood Cafe, 8240 Old Redwodd Hwy, Cotati",
       "searchUrl": "https://www.google.com/search?q=Redwood%20Cafe%2C%208240%20Old%20Redwodd%20Hwy%2C%20Cotati",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "8240 Old Redwodd Hwy",
       "city": "Cotati",
-      "aliases": [
-        "Redwood Cafe, 8240 Old Redwodd Hwy, Cotati"
-      ]
+      "aliases": ["Redwood Cafe, 8240 Old Redwodd Hwy, Cotati"]
     },
     {
       "id": "regency-ballroom",
       "name": "Regency Ballroom,",
       "searchUrl": "https://www.google.com/search?q=Regency%20Ballroom%2C",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "",
-      "aliases": [
-        "Regency Ballroom,"
-      ]
+      "aliases": ["Regency Ballroom,"]
     },
     {
       "id": "regency-ballroom-sf",
@@ -2323,21 +2124,17 @@
       "lastSeen": "2025-11-30",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Regency Ballroom, S.F."
-      ]
+      "aliases": ["Regency Ballroom, S.F."]
     },
     {
       "id": "rellik-tavern-726-first-street-benicia",
       "name": "Rellik Tavern, 726 First Street, Benicia",
       "searchUrl": "https://www.google.com/search?q=Rellik%20Tavern%2C%20726%20First%20Street%2C%20Benicia",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "726 First Street",
       "city": "Benicia",
-      "aliases": [
-        "Rellik Tavern, 726 First Street, Benicia"
-      ]
+      "aliases": ["Rellik Tavern, 726 First Street, Benicia"]
     },
     {
       "id": "revolution-cafe-1610-7th-street-west-oakland",
@@ -2360,9 +2157,7 @@
       "lastSeen": "2025-08-30",
       "address": null,
       "city": "West Oakland",
-      "aliases": [
-        "Revolution Cafe, West Oakland"
-      ]
+      "aliases": ["Revolution Cafe, West Oakland"]
     },
     {
       "id": "rickshaw-stop-sf",
@@ -2372,9 +2167,7 @@
       "lastSeen": "2025-12-19",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Rickshaw Stop, S.F."
-      ]
+      "aliases": ["Rickshaw Stop, S.F."]
     },
     {
       "id": "riggers-loft-wine-company-1325-canal-blvd-richmond",
@@ -2384,33 +2177,47 @@
       "lastSeen": "2025-08-24",
       "address": "1325 Canal Blvd.",
       "city": "Richmond",
-      "aliases": [
-        "Riggers Loft Wine Company, 1325 Canal Blvd., Richmond"
-      ]
+      "aliases": ["Riggers Loft Wine Company, 1325 Canal Blvd., Richmond"]
     },
     {
       "id": "rio-theater-santa-cruz",
       "name": "Rio Theater, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Rio%20Theater%2C%20Santa%20Cruz",
-      "firstSeen": "2025-08-17",
-      "lastSeen": "2025-11-21",
+      "firstSeen": "2025-09-13",
+      "lastSeen": "2025-12-31",
       "address": null,
       "city": "Santa Cruz",
-      "aliases": [
-        "Rio Theater, Santa Cruz"
-      ]
+      "aliases": ["Rio Theater, Santa Cruz"]
+    },
+    {
+      "id": "ritz-san",
+      "name": "Ritz, San",
+      "searchUrl": "https://www.google.com/search?q=Ritz%2C%20San",
+      "firstSeen": "2025-08-25",
+      "lastSeen": "2025-08-25",
+      "address": null,
+      "city": "San",
+      "aliases": ["Ritz, San"]
     },
     {
       "id": "ritz-san-jose",
       "name": "Ritz, San Jose",
       "searchUrl": "https://www.google.com/search?q=Ritz%2C%20San%20Jose",
-      "firstSeen": "2025-08-20",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-12-12",
       "address": null,
       "city": "San Jose",
-      "aliases": [
-        "Ritz, San Jose"
-      ]
+      "aliases": ["Ritz, San Jose"]
+    },
+    {
+      "id": "ritz-san-jose-7pm",
+      "name": "Ritz, San Jose 7pm",
+      "searchUrl": "https://www.google.com/search?q=Ritz%2C%20San%20Jose%207pm",
+      "firstSeen": "2025-11-12",
+      "lastSeen": "2025-11-15",
+      "address": null,
+      "city": "San Jose 7pm",
+      "aliases": ["Ritz, San Jose 7pm"]
     },
     {
       "id": "san-francisco-musum-of-modern-art-floor-5-sf",
@@ -2420,16 +2227,14 @@
       "lastSeen": "2025-09-18",
       "address": "Floor 5",
       "city": "San Francisco",
-      "aliases": [
-        "San Francisco Musum of Modern Art, Floor 5, S.F."
-      ]
+      "aliases": ["San Francisco Musum of Modern Art, Floor 5, S.F."]
     },
     {
       "id": "san-jose-civic",
       "name": "San Jose Civic",
       "searchUrl": "https://www.google.com/search?q=San%20Jose%20Civic%2C%20135%20San%20Carlos%20St.%2C%20San%20Jose",
       "firstSeen": "2025-09-11",
-      "lastSeen": "2025-12-05",
+      "lastSeen": "2025-12-13",
       "location": "San Jose, CA",
       "address": "135 San Carlos St.",
       "city": "San Jose",
@@ -2444,38 +2249,30 @@
       "name": "Secret Gallery, Oakland",
       "searchUrl": "https://www.google.com/search?q=Secret%20Gallery%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Secret Gallery, Oakland"
-      ]
+      "aliases": ["Secret Gallery, Oakland"]
     },
     {
       "id": "civic-center-sf",
       "name": "SF Civic Center",
       "searchUrl": "https://www.google.com/search?q=Civic%20Center%2C%20S.F.",
-      "firstSeen": "2025-10-03",
+      "firstSeen": "2025-10-05",
       "lastSeen": "2025-10-05",
       "address": "200 Larkin St",
       "city": "San Francisco",
-      "aliases": [
-        "Civic Center, S.F.",
-        "SF Civic Center"
-      ]
+      "aliases": ["Civic Center, S.F.", "SF Civic Center"]
     },
     {
       "id": "eagle-sf",
       "name": "SF Eagle",
       "searchUrl": "https://www.google.com/search?q=sf-eagle",
-      "firstSeen": "2025-10-09",
+      "firstSeen": "2025-09-11",
       "lastSeen": "2025-12-18",
       "address": "398-12th Street",
       "city": "San Francisco",
-      "aliases": [
-        "Eagle, S.F.",
-        "SF Eagle"
-      ]
+      "aliases": ["Eagle, S.F.", "SF Eagle"]
     },
     {
       "id": "shark-tank-san-jose",
@@ -2485,9 +2282,7 @@
       "lastSeen": "2025-11-19",
       "address": null,
       "city": "San Jose",
-      "aliases": [
-        "Shark Tank, San Jose"
-      ]
+      "aliases": ["Shark Tank, San Jose"]
     },
     {
       "id": "shop-someplace-santa-rosa",
@@ -2497,16 +2292,13 @@
       "lastSeen": "2025-08-31",
       "address": "Someplace",
       "city": "Oakland",
-      "aliases": [
-        "Shop, Someplace, Santa Rosa",
-        "Someplace, Oakland"
-      ]
+      "aliases": ["Shop, Someplace, Santa Rosa", "Someplace, Oakland"]
     },
     {
       "id": "shoreline-amphitheater-mountain-view",
       "name": "Shoreline Amphitheater, Mountain View",
       "searchUrl": "https://www.google.com/search?q=Shoreline%20Amphitheater%2C%20Mountain%20View",
-      "firstSeen": "2025-08-22",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-10-19",
       "address": null,
       "city": "Mountain View",
@@ -2526,82 +2318,77 @@
       "lastSeen": "2025-09-27",
       "address": "946 B Street",
       "city": "Hayward",
-      "aliases": [
-        "Ska Dog Records, 946 B Street, Hayward"
-      ]
+      "aliases": ["Ska Dog Records, 946 B Street, Hayward"]
+    },
+    {
+      "id": "slang-church-hq-5821-lawton-ave-oakland",
+      "name": "Slang Church HQ, 5821 Lawton Ave, Oakland",
+      "searchUrl": "https://www.google.com/search?q=Slang%20Church%20HQ%2C%205821%20Lawton%20Ave%2C%20Oakland",
+      "firstSeen": "2025-09-07",
+      "lastSeen": "2025-09-07",
+      "address": "5821 Lawton Ave",
+      "city": "Oakland",
+      "aliases": ["Slang Church HQ, 5821 Lawton Ave, Oakland"]
     },
     {
       "id": "sofi-battle-of-the-bands-2nd-and-franklin-napa",
       "name": "SoFi Battle of the Bands, 2nd and Franklin, Napa",
       "searchUrl": "https://www.google.com/search?q=SoFi%20Battle%20of%20the%20Bands%2C%202nd%20and%20Franklin%2C%20Napa",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "2nd and Franklin",
       "city": "Napa",
-      "aliases": [
-        "SoFi Battle of the Bands, 2nd and Franklin, Napa"
-      ]
+      "aliases": ["SoFi Battle of the Bands, 2nd and Franklin, Napa"]
     },
     {
       "id": "somewhere-oakland",
       "name": "Somewhere, Oakland",
       "searchUrl": "https://www.google.com/search?q=Somewhere%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Somewhere, Oakland"
-      ]
+      "aliases": ["Somewhere, Oakland"]
     },
     {
       "id": "stary-plough-berkeley",
       "name": "Stary Plough, Berkeley",
       "searchUrl": "https://www.google.com/search?q=Stary%20Plough%2C%20Berkeley",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Berkeley",
-      "aliases": [
-        "Stary Plough, Berkeley"
-      ]
+      "aliases": ["Stary Plough, Berkeley"]
     },
     {
       "id": "stay-gold-deli-oakland",
       "name": "Stay Gold Deli, Oakland",
       "searchUrl": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-11-01",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Stay Gold Deli, Oakland",
-        "Stay Gold Deli, Oaklad"
-      ]
+      "aliases": ["Stay Gold Deli, Oakland", "Stay Gold Deli, Oaklad"]
     },
     {
       "id": "stern-grove-19th-avenue",
       "name": "Stern Grove, 19th Avenue",
       "searchUrl": "https://www.google.com/search?q=Stern%20Grove%2C%2019th%20Avenue",
-      "firstSeen": "2025-08-17",
-      "lastSeen": "2025-08-17",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "19th Avenue",
-      "aliases": [
-        "Stern Grove, 19th Avenue"
-      ]
+      "aliases": ["Stern Grove, 19th Avenue"]
     },
     {
       "id": "stork-club-oakland",
       "name": "Stork Club, Oakland",
       "searchUrl": "https://www.google.com/search?q=Stork%20Club%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Stork Club, Oakland"
-      ]
+      "aliases": ["Stork Club, Oakland"]
     },
     {
       "id": "streetlight-records-santa-cruz",
@@ -2611,45 +2398,37 @@
       "lastSeen": "2025-10-05",
       "address": null,
       "city": "Santa Cruz",
-      "aliases": [
-        "Streetlight Records, Santa Cruz"
-      ]
+      "aliases": ["Streetlight Records, Santa Cruz"]
     },
     {
       "id": "subrosa-community-space-santa-cruz",
       "name": "Subrosa Community Space, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Subrosa%20Community%20Space%2C%20Santa%20Cruz",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Santa Cruz",
-      "aliases": [
-        "Subrosa Community Space, Santa Cruz"
-      ]
+      "aliases": ["Subrosa Community Space, Santa Cruz"]
     },
     {
       "id": "subrosa-santa-cruz",
       "name": "Subrosa, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Subrosa%2C%20Santa%20Cruz",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-08-30",
       "lastSeen": "2025-08-30",
       "address": null,
       "city": "Santa Cruz",
-      "aliases": [
-        "Subrosa, Santa Cruz"
-      ]
+      "aliases": ["Subrosa, Santa Cruz"]
     },
     {
       "id": "swedish-american-hall-sf",
       "name": "Swedish American Hall, S.F.",
       "searchUrl": "https://www.google.com/search?q=Swedish%20American%20Hall%2C%20S.F.",
-      "firstSeen": "2025-08-20",
+      "firstSeen": "2025-09-25",
       "lastSeen": "2025-10-07",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Swedish American Hall, S.F."
-      ]
+      "aliases": ["Swedish American Hall, S.F."]
     },
     {
       "id": "sweetwater-music-hall-mill-valley",
@@ -2672,9 +2451,7 @@
       "lastSeen": "2025-09-27",
       "address": "5911 Mowry Avenue",
       "city": "Newark",
-      "aliases": [
-        "Swiss Park, 5911 Mowry Avenue, Newark"
-      ]
+      "aliases": ["Swiss Park, 5911 Mowry Avenue, Newark"]
     },
     {
       "id": "tamarack-oakland",
@@ -2684,21 +2461,17 @@
       "lastSeen": "2025-08-30",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Tamarack, Oakland"
-      ]
+      "aliases": ["Tamarack, Oakland"]
     },
     {
       "id": "taraval-castle-outer-sunset-sf",
       "name": "Taraval Castle, Outer Sunset, S.F.",
       "searchUrl": "https://www.google.com/search?q=Taraval%20Castle%2C%20Outer%20Sunset%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "Outer Sunset",
       "city": "San Francisco",
-      "aliases": [
-        "Taraval Castle, Outer Sunset, S.F."
-      ]
+      "aliases": ["Taraval Castle, Outer Sunset, S.F."]
     },
     {
       "id": "tequila-mockingbird-86-2nd-street-sf",
@@ -2708,22 +2481,27 @@
       "lastSeen": "2025-09-03",
       "address": "86 2nd Street",
       "city": "San Francisco",
-      "aliases": [
-        "Tequila Mockingbird, 86 2nd Street, S.F."
-      ]
+      "aliases": ["Tequila Mockingbird, 86 2nd Street, S.F."]
+    },
+    {
+      "id": "tessoras-wine-bar-234-e-campbell-ave-campbell",
+      "name": "Tessora's Wine Bar, 234 E Campbell Ave., Campbell",
+      "searchUrl": "https://www.google.com/search?q=Tessora's%20Wine%20Bar%2C%20234%20E%20Campbell%20Ave.%2C%20Campbell",
+      "firstSeen": "2025-08-28",
+      "lastSeen": "2025-08-28",
+      "address": "234 E Campbell Ave.",
+      "city": "Campbell",
+      "aliases": ["Tessora's Wine Bar, 234 E Campbell Ave., Campbell"]
     },
     {
       "id": "bird",
       "name": "The Bird",
       "searchUrl": "https://www.google.com/search?q=Bird",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "4776 Sonoma Hwy",
       "city": "Santa Rosa",
-      "aliases": [
-        "Bird",
-        "The Bird"
-      ]
+      "aliases": ["Bird", "The Bird"]
     },
     {
       "id": "fillmore",
@@ -2733,49 +2511,37 @@
       "lastSeen": "2025-12-21",
       "address": "1805 Geary Boulevard",
       "city": "San Francisco",
-      "aliases": [
-        "Fillmore",
-        "Fillmore, S.F."
-      ]
+      "aliases": ["Fillmore", "Fillmore, S.F."]
     },
     {
       "id": "freight",
       "name": "The Freight",
       "searchUrl": "https://www.google.com/search?q=Freight%20Berkeley",
-      "firstSeen": "2025-08-17",
-      "lastSeen": "2025-08-17",
+      "firstSeen": "2025-01-01",
+      "lastSeen": "2025-08-25",
       "address": "2020 Addison St.",
       "city": "Berkeley",
-      "aliases": [
-        "Freight",
-        "The Freight"
-      ]
+      "aliases": ["Freight", "The Freight"]
     },
     {
       "id": "decks-at-the-knockout-sf",
       "name": "The Knockout",
       "searchUrl": "https://www.google.com/search?q=The%20Knockout%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "3223 Mission St",
       "city": "San Francisco",
-      "aliases": [
-        "Decks at the Knockout, S.F.",
-        "The Knockout"
-      ]
+      "aliases": ["Decks at the Knockout, S.F.", "The Knockout"]
     },
     {
       "id": "warfield",
       "name": "The Warfield, San Francisco",
       "searchUrl": "https://www.google.com/search?q=Warfield%2C%20S.F.",
-      "firstSeen": "2025-08-20",
-      "lastSeen": "2025-12-05",
+      "firstSeen": "2025-08-25",
+      "lastSeen": "2025-12-12",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Warfield",
-        "Warfield, S.F."
-      ]
+      "aliases": ["Warfield", "Warfield, S.F."]
     },
     {
       "id": "thee-parkside-sf",
@@ -2785,33 +2551,27 @@
       "lastSeen": "2025-09-21",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Thee Parkside, S.F."
-      ]
+      "aliases": ["Thee Parkside, S.F."]
     },
     {
       "id": "thee-stork-club-albany",
       "name": "Thee Stork Club, Albany",
       "searchUrl": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Albany",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": null,
       "city": "Albany",
-      "aliases": [
-        "Thee Stork Club, Albany"
-      ]
+      "aliases": ["Thee Stork Club, Albany"]
     },
     {
       "id": "thee-stork-club-oakland",
       "name": "Thee Stork Club, Oakland",
       "searchUrl": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-12-20",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Thee Stork Club, Oakland"
-      ]
+      "aliases": ["Thee Stork Club, Oakland"]
     },
     {
       "id": "thee-stork-club-sf",
@@ -2821,72 +2581,57 @@
       "lastSeen": "2025-08-27",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Thee Stork Club, S.F."
-      ]
+      "aliases": ["Thee Stork Club, S.F."]
     },
     {
       "id": "thrillhouse-records-sf",
       "name": "Thrillhouse Records, S.F.",
       "searchUrl": "https://www.google.com/search?q=Thrillhouse%20Records%2C%20S.F.",
-      "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "firstSeen": "2025-08-24",
+      "lastSeen": "2025-09-20",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Thrillhouse Records, S.F."
-      ]
+      "aliases": ["Thrillhouse Records, S.F."]
     },
     {
       "id": "toots-tavern-crockett",
       "name": "Toot's Tavern, Crockett",
       "searchUrl": "https://www.google.com/search?q=Toot's%20Tavern%2C%20Crockett",
-      "firstSeen": "2025-08-22",
+      "firstSeen": "2025-08-24",
       "lastSeen": "2025-09-13",
       "address": null,
       "city": "Crockett",
-      "aliases": [
-        "Toot's Tavern, Crockett",
-        "Toots Tavern, Crockett"
-      ]
+      "aliases": ["Toot's Tavern, Crockett", "Toots Tavern, Crockett"]
     },
     {
       "id": "towne-cycles-backyard-3137-adeline-street-berkeley",
       "name": "Towne Cycles Backyard, 3137 Adeline Street, Berkeley",
       "searchUrl": "https://www.google.com/search?q=Towne%20Cycles%20Backyard%2C%203137%20Adeline%20Street%2C%20Berkeley",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "3137 Adeline Street",
       "city": "Berkeley",
-      "aliases": [
-        "Towne Cycles Backyard, 3137 Adeline Street, Berkeley"
-      ]
+      "aliases": ["Towne Cycles Backyard, 3137 Adeline Street, Berkeley"]
     },
     {
       "id": "transit-center-rooftop-park-425-mission-street-sf",
       "name": "Transit Center Rooftop Park, 425 Mission Street, S.F.",
       "searchUrl": "https://www.google.com/search?q=Transit%20Center%20Rooftop%20Park%2C%20425%20Mission%20Street%2C%20S.F.",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "425 Mission Street",
       "city": "San Francisco",
-      "aliases": [
-        "Transit Center Rooftop Park, 425 Mission Street, S.F."
-      ]
+      "aliases": ["Transit Center Rooftop Park, 425 Mission Street, S.F."]
     },
     {
       "id": "uc-theater",
       "name": "UC Theater, Berkeley",
       "searchUrl": "https://www.google.com/search?q=UC%20Theater%2C%20Berkeley",
       "firstSeen": "2025-02-08",
-      "lastSeen": "2025-12-12",
+      "lastSeen": "2025-12-13",
       "address": null,
       "city": "Berkeley",
-      "aliases": [
-        "UC Theater",
-        "UC Theater, Berkeley",
-        "UC Theater, Brkeley"
-      ]
+      "aliases": ["UC Theater", "UC Theater, Berkeley", "UC Theater, Brkeley"]
     },
     {
       "id": "union-square-sf",
@@ -2896,9 +2641,7 @@
       "lastSeen": "2025-09-07",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Union Square, S.F."
-      ]
+      "aliases": ["Union Square, S.F."]
     },
     {
       "id": "up-the-creek-records-2042-mt-diablo-blvd-walnut-creek",
@@ -2908,9 +2651,7 @@
       "lastSeen": "2025-09-20",
       "address": null,
       "city": "2042 Mt. Diablo Blvd. Walnut Creek",
-      "aliases": [
-        "Up the Creek Records, 2042 Mt. Diablo Blvd. Walnut Creek"
-      ]
+      "aliases": ["Up the Creek Records, 2042 Mt. Diablo Blvd. Walnut Creek"]
     },
     {
       "id": "uptown-theater-napa",
@@ -2920,28 +2661,24 @@
       "lastSeen": "2025-12-19",
       "address": null,
       "city": "Napa",
-      "aliases": [
-        "Uptown Theater, Napa"
-      ]
+      "aliases": ["Uptown Theater, Napa"]
     },
     {
       "id": "vets-hall-santa-cruz",
       "name": "Vets Hall, Santa Cruz",
       "searchUrl": "https://www.google.com/search?q=Vets%20Hall%2C%20Santa%20Cruz",
-      "firstSeen": "2025-08-23",
+      "firstSeen": "2025-09-26",
       "lastSeen": "2025-10-25",
       "address": null,
       "city": "Santa Cruz",
-      "aliases": [
-        "Vets Hall, Santa Cruz"
-      ]
+      "aliases": ["Vets Hall, Santa Cruz"]
     },
     {
       "id": "victory-stables-2328-san-pablo-avenue-oakland",
       "name": "Victory Stables, 2328 San Pablo Avenue, Oakland",
       "searchUrl": "https://www.google.com/search?q=Victory%20Stables%2C%202328%20San%20Pablo%20Avenue%2C%20Oakland",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "2328 San Pablo Avenue",
       "city": "Oakland",
       "aliases": [
@@ -2953,49 +2690,41 @@
       "id": "victory-stables-oakland",
       "name": "Victory Stables, Oakland",
       "searchUrl": "https://www.google.com/search?q=Victory%20Stables%2C%20Oakland",
-      "firstSeen": "2025-08-17",
+      "firstSeen": "2025-09-13",
       "lastSeen": "2025-09-13",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Victory Stables, Oakland"
-      ]
+      "aliases": ["Victory Stables, Oakland"]
     },
     {
       "id": "vinnies-bar-2045-mount-diablo-street-concord",
       "name": "Vinnie's Bar, 2045 Mount Diablo Street, Concord",
       "searchUrl": "https://www.google.com/search?q=Vinnie's%20Bar%2C%202045%20Mount%20Diablo%20Street%2C%20Concord",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "2045 Mount Diablo Street",
       "city": "Concord",
-      "aliases": [
-        "Vinnie's Bar, 2045 Mount Diablo Street, Concord"
-      ]
+      "aliases": ["Vinnie's Bar, 2045 Mount Diablo Street, Concord"]
     },
     {
       "id": "vintage-space-2777-fourth-street-santa-rosa",
       "name": "Vintage Space, 2777 Fourth Street, Santa Rosa",
       "searchUrl": "https://www.google.com/search?q=Vintage%20Space%2C%202777%20Fourth%20Street%2C%20Santa%20Rosa",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "2777 Fourth Street",
       "city": "Santa Rosa",
-      "aliases": [
-        "Vintage Space, 2777 Fourth Street, Santa Rosa"
-      ]
+      "aliases": ["Vintage Space, 2777 Fourth Street, Santa Rosa"]
     },
     {
       "id": "wardlaw-skatepark-1805-ascot-parkway-vallejo",
       "name": "Wardlaw Skatepark, 1805 Ascot Parkway, Vallejo",
       "searchUrl": "https://www.google.com/search?q=Wardlaw%20Skatepark%2C%201805%20Ascot%20Parkway%2C%20Vallejo",
       "firstSeen": "2025-01-01",
-      "lastSeen": "2025-08-18",
+      "lastSeen": "2025-08-25",
       "address": "1805 Ascot Parkway",
       "city": "Vallejo",
-      "aliases": [
-        "Wardlaw Skatepark, 1805 Ascot Parkway, Vallejo"
-      ]
+      "aliases": ["Wardlaw Skatepark, 1805 Ascot Parkway, Vallejo"]
     },
     {
       "id": "warriors-arena-sf",
@@ -3005,16 +2734,14 @@
       "lastSeen": "2025-12-05",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Warrior's Arena, S.F."
-      ]
+      "aliases": ["Warrior's Arena, S.F."]
     },
     {
       "id": "warriors-stadium-sf",
       "name": "Warriors Stadium, S.F.",
       "searchUrl": "https://www.google.com/search?q=Warriors%20Stadium%2C%20S.F.",
       "firstSeen": "2025-02-20",
-      "lastSeen": "2025-10-18",
+      "lastSeen": "2025-11-07",
       "address": null,
       "city": "San Francisco",
       "aliases": [
@@ -3031,9 +2758,7 @@
       "lastSeen": "2025-09-12",
       "address": null,
       "city": "Point Richmond",
-      "aliases": [
-        "Washington Avenue at Parkk Place, Point Richmond"
-      ]
+      "aliases": ["Washington Avenue at Parkk Place, Point Richmond"]
     },
     {
       "id": "weill-hall",
@@ -3043,9 +2768,7 @@
       "lastSeen": "2025-08-27",
       "address": "Frank Schlessinger Way",
       "city": "Berkeley",
-      "aliases": [
-        "Weill Hall"
-      ]
+      "aliases": ["Weill Hall"]
     },
     {
       "id": "winters-tavern-pacifica",
@@ -3055,22 +2778,27 @@
       "lastSeen": "2025-10-11",
       "address": null,
       "city": "Pacifica",
-      "aliases": [
-        "Winters Tavern, Pacifica",
-        "Winter's Tavern, Pacifica"
-      ]
+      "aliases": ["Winters Tavern, Pacifica", "Winter's Tavern, Pacifica"]
     },
     {
       "id": "yerba-buena-gardens-sf",
       "name": "Yerba Buena Gardens, S.F.",
       "searchUrl": "https://www.google.com/search?q=Yerba%20Buena%20Gardens%2C%20S.F.",
-      "firstSeen": "2025-08-21",
+      "firstSeen": "2025-08-28",
       "lastSeen": "2025-10-02",
       "address": null,
       "city": "San Francisco",
-      "aliases": [
-        "Yerba Buena Gardens, S.F."
-      ]
+      "aliases": ["Yerba Buena Gardens, S.F."]
+    },
+    {
+      "id": "ying-ming-alameda",
+      "name": "Ying Ming, Alameda",
+      "searchUrl": "https://www.google.com/search?q=Ying%20Ming%2C%20Alameda",
+      "firstSeen": "2025-08-24",
+      "lastSeen": "2025-08-24",
+      "address": null,
+      "city": "Alameda",
+      "aliases": ["Ying Ming, Alameda"]
     },
     {
       "id": "yoshis-oakland",
@@ -3080,16 +2808,13 @@
       "lastSeen": "2025-11-26",
       "address": null,
       "city": "Oakland",
-      "aliases": [
-        "Yoshi's Oakland",
-        "Yoshi's, Oakland"
-      ]
+      "aliases": ["Yoshi's Oakland", "Yoshi's, Oakland"]
     },
     {
       "id": "zoo-slat-blvd-at-the-great-highway-sf",
       "name": "Zoo, Slat Blvd. at The Great Highway, S.F.",
       "searchUrl": "https://www.google.com/search?q=Zoo%2C%20Slat%20Blvd.%20at%20The%20Great%20Highway%2C%20S.F.",
-      "firstSeen": "2025-08-22",
+      "firstSeen": "2025-08-29",
       "lastSeen": "2025-08-29",
       "address": "Sloat Blvd. at the Great Highway",
       "city": "San Francisco",
@@ -3099,6 +2824,6 @@
       ]
     }
   ],
-  "total": 251,
-  "lastUpdated": "2025-08-18T17:40:01.222Z"
+  "total": 271,
+  "lastUpdated": "2025-08-25T07:25:22.587Z"
 }
