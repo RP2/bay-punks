@@ -51,7 +51,7 @@ const formattedDay = formatDayWithFullMonth(day.day);
 ---
 
 <Card
-  className="event-item invisible"
+  className="event-item card h-full"
   data-day={day.day}
   data-iso={day.normalizedDate}
 >
@@ -72,8 +72,8 @@ const formattedDay = formatDayWithFullMonth(day.day);
       <div class="space-y-3">
         <ul
           class="events-list space-y-2 overflow-hidden transition-all duration-300"
-          style="max-height: 180px;"
         >
+          {/* Initial events (always visible) */}
           {
             day.events.slice(0, 2).map(
               (
@@ -122,18 +122,155 @@ const formattedDay = formatDayWithFullMonth(day.day);
               ),
             )
           }
+
+          {/* Additional events (hidden by default) */}
+          {
+            day.events.length > 2 && (
+              <div class="additional-events hidden">
+                {day.events.slice(2).map(
+                  (
+                    event: {
+                      venue: {
+                        href: string | URL | null | undefined;
+                        text: unknown;
+                      };
+                      bands: any[];
+                      extra: unknown;
+                    },
+                    index: number,
+                  ) => (
+                    <li class={`event-item mt-2 text-sm`}>
+                      <div class="venue font-medium">
+                        {(() => {
+                          const venueId = getVenueId(event.venue as any);
+                          return venueId ? (
+                            <a
+                              class="hover:underline"
+                              href={`/venue/${venueId}/`}
+                            >
+                              {event.venue.text}
+                            </a>
+                          ) : (
+                            event.venue.text
+                          );
+                        })()}
+                      </div>
+                      <div class="text-muted-foreground artists text-xs">
+                        {event.bands
+                          .slice(0, 3)
+                          .map((band) => band.text)
+                          .join(", ")}
+                      </div>
+                      {event.extra && (
+                        <div class="text-muted-foreground event-extra text-xs">
+                          {event.extra}
+                        </div>
+                      )}
+                      <AddToCalendarButton
+                        client:load
+                        title={event.bands.map((band) => band.text).join(", ")}
+                        date={day.normalizedDate}
+                        venue={String(event.venue.text)}
+                        description={event.extra ? String(event.extra) : ""}
+                      />
+                    </li>
+                  ),
+                )}
+              </div>
+            )
+          }
         </ul>
         {
           day.events.length > 2 && (
-            <a
-              href={`/day/${day.normalizedDate}/`}
-              class="expand-toggle text-muted-foreground hover:text-foreground text-xs hover:underline"
+            <button
+              type="button"
+              class="expand-toggle text-muted-foreground hover:text-foreground inline-block cursor-pointer gap-1 text-xs hover:underline"
+              aria-expanded="false"
             >
-              +{day.events.length - 2} more events
-            </a>
+              <span class="toggle-icon">+</span>
+              <span class="toggle-text">
+                {day.events.length - 2} more events
+              </span>
+            </button>
           )
         }
       </div>
     </div>
   </CardContent>
 </Card>
+
+<script>
+  // Function to set up expand/collapse functionality for a specific button
+  function setupToggleButton(button: Element) {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Find the parent card
+      const card =
+        (button as HTMLElement).closest(".card") ||
+        (button as HTMLElement).closest(".event-item");
+      if (!card) return;
+
+      // Find the additional events container
+      const additionalEvents = card.querySelector(".additional-events");
+      if (!additionalEvents) return;
+
+      // Toggle visibility
+      additionalEvents.classList.toggle("hidden");
+
+      // Update button text and icon
+      const toggleIcon = button.querySelector(".toggle-icon");
+      const toggleText = button.querySelector(".toggle-text");
+
+      if (additionalEvents.classList.contains("hidden")) {
+        // Collapsed state
+        if (toggleIcon) toggleIcon.textContent = "+";
+        if (toggleText) {
+          // Get the stored count, fallback to the original count
+          const count = toggleText.getAttribute("data-original-count");
+          if (count && !isNaN(parseInt(count))) {
+            toggleText.textContent = `${count} more events`;
+          }
+        }
+        button.setAttribute("aria-expanded", "false");
+      } else {
+        // Expanded state
+        if (toggleIcon) toggleIcon.textContent = "-";
+        if (toggleText) {
+          // Store the original count if not already stored
+          if (
+            !toggleText.hasAttribute("data-original-count") &&
+            toggleText.textContent
+          ) {
+            const countText = toggleText.textContent.trim();
+            const originalCount = countText.split(" ")[0];
+            if (originalCount && !isNaN(parseInt(originalCount))) {
+              toggleText.setAttribute("data-original-count", originalCount);
+            }
+          }
+          toggleText.textContent = "Collapse";
+        }
+        button.setAttribute("aria-expanded", "true");
+      }
+    });
+  }
+
+  // Initialize expand/collapse functionality for events
+  function initializeToggleButtons() {
+    // Get all expand toggle buttons
+    const toggleButtons = document.querySelectorAll(".expand-toggle");
+
+    // Add click handler to each button
+    toggleButtons.forEach((button) => {
+      setupToggleButton(button);
+    });
+  }
+
+  // Run on initial load
+  document.addEventListener("DOMContentLoaded", initializeToggleButtons);
+
+  // Expose the function globally so it can be called after DOM manipulation
+  if (typeof window !== "undefined") {
+    (window as any).initDayCardToggles = initializeToggleButtons;
+  }
+</script>

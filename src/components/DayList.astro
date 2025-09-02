@@ -1,0 +1,109 @@
+---
+import { Input } from "@/components/ui/input";
+import { DaySortToggle } from "./DaySortToggle";
+import concertsData from "../data/calendar.json";
+import { getTodayISOString } from "../lib/client-date-utils";
+import { sortDays } from "@/lib/shows-utils";
+import Day from "./Day.astro";
+
+// Get today's date in YYYY-MM-DD format for filtering
+const todayISOString = getTodayISOString();
+
+// Filter out past days
+const days = concertsData.shows.filter(
+  (day) => day.normalizedDate >= todayISOString,
+);
+
+// Sort days chronologically by default
+const filteredDays = sortDays(days, "chronological");
+---
+
+<div class="space-y-4">
+  <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+    <h2 class="text-2xl font-bold">
+      Days (<span id="day-count">{filteredDays.length}</span>)
+    </h2>
+    <div class="flex w-full flex-row gap-2 md:mt-0 md:w-auto">
+      <DaySortToggle client:load className="h-12 flex-1 md:w-auto md:flex-initial" />
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <Input
+      id="day-search"
+      placeholder="Search for shows, artists, venues..."
+      className="w-full"
+      client:load
+    />
+  </div>
+
+  <div
+    id="concert-list"
+    class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+  >
+    {
+      filteredDays.map((day) => (
+        <div
+          id={`day-card-${day.normalizedDate}`}
+          class="day-placeholder h-full"
+          data-day-id={day.normalizedDate}
+        >
+          <Day day={day} />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  import { getTodayISOString } from "../lib/client-date-utils";
+  import { filterDOMElementsByText, sortDayElements, parseJSONFromElement } from "../lib/dom-utils";
+
+  // Set up client-side search and sorting
+  document.addEventListener("DOMContentLoaded", () => {
+    // Get references to elements
+    const dayCards = document.querySelectorAll(".day-placeholder");
+    const searchInput = document.getElementById("day-search") as HTMLInputElement;
+    const countElement = document.getElementById("day-count");
+    const concertList = document.getElementById("concert-list");
+    
+    // Initialize counters
+    if (countElement) {
+      countElement.textContent = dayCards.length.toString();
+    }
+    
+    // Handle search input changes
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        const query = (e.target as HTMLInputElement).value;
+        filterDOMElementsByText(dayCards, query, countElement);
+      });
+    }
+    
+    // Make the sort function available globally
+    if (typeof window !== "undefined") {
+      // Handle day sort change from the DaySortToggle component
+      window.handleDaySortChange = function(sortType) {
+        if (!concertList) return;
+        
+        // Get calendar data from our hidden element
+        const calendarDataElem = document.getElementById("calendar-data");
+        if (!calendarDataElem) return;
+        
+        const calendarData = parseJSONFromElement(calendarDataElem, { shows: [] });
+        
+        // Sort the day elements using our utility function
+        sortDayElements(
+          Array.from(dayCards),
+          calendarData,
+          sortType,
+          concertList,
+          getTodayISOString()
+        );
+      };
+    }
+  });
+</script>
+
+<!-- Hidden element to store calendar data for client-side operations -->
+<script id="calendar-data" type="application/json">{JSON.stringify(concertsData)}</script>

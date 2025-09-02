@@ -14,6 +14,7 @@ declare global {
   interface Window {
     handleVenueSortChange?: (sortKey: string) => void;
     handleArtistSortChange?: (sortKey: string) => void;
+    handleDaySortChange?: (sortKey: string) => void;
   }
 }
 
@@ -157,6 +158,39 @@ export function ArtistSortToggle({ className = "" }: { className?: string }) {
       defaultSortKey="next-show"
       onSortChange={handleSortChange}
       label="Sort artists by"
+      className={className}
+    />
+  );
+}
+
+// day-specific component
+export function DaySortToggle({ className = "" }: { className?: string }) {
+  const DAY_SORT_OPTIONS: SortOption[] = [
+    {
+      key: "chronological",
+      label: "First to Last",
+      description: "Earliest dates first",
+    },
+    {
+      key: "reverse-chronological",
+      label: "Last to First",
+      description: "Final dates first",
+    },
+  ];
+
+  const handleSortChange = (sortKey: string) => {
+    // call global function if available
+    if (typeof window !== "undefined" && window.handleDaySortChange) {
+      window.handleDaySortChange(sortKey);
+    }
+  };
+
+  return (
+    <SortToggle
+      options={DAY_SORT_OPTIONS}
+      defaultSortKey="chronological"
+      onSortChange={handleSortChange}
+      label="Sort calendar by"
       className={className}
     />
   );

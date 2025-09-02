@@ -1,12 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Concerts from "../data/calendar.json";
-import Card from "../components/Day.astro";
 import Key from "../components/Key.astro";
-import ArtistList from "../components/ArtistList.astro";
-import VenueList from "../components/VenueList.astro";
+import ArtistList from "../components/ArtistList";
+import VenueList from "../components/VenueList";
+import DayList from "../components/DayList.astro";
 import { TabsWrapper } from "../components/TabsWrapper";
-import { Input } from "@/components/ui/input";
 ---
 
 <Layout
@@ -53,51 +51,32 @@ import { Input } from "@/components/ui/input";
 
       <!-- days content (hidden by default, shown when days tab is active) -->
       <div id="days-content" class="tab-content" data-tab="days">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <h2 class="text-2xl font-bold">
-              Days ({Object.values(Concerts).flat().length})
-            </h2>
-          </div>
-
-          <div class="mb-4">
-            <Input
-              id="search"
-              placeholder="Search for shows, artists, venues..."
-              className="w-full"
-            />
-          </div>
-
-          <div
-            id="concert-list"
-            class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
-          >
-            {
-              Object.entries(Concerts).flatMap(([, days]) =>
-                Array.isArray(days)
-                  ? days.map((day) => <Card day={day} />)
-                  : [],
-              )
-            }
-          </div>
-        </div>
+        <!-- Astro component for static pre-rendering -->
+        <DayList />
       </div>
 
       <!-- artists content (hidden by default, shown when artists tab is active) -->
       <div id="artists-content" class="tab-content hidden" data-tab="artists">
-        <ArtistList />
+        <ArtistList client:load />
       </div>
 
       <!-- venues content (hidden by default, shown when venues tab is active) -->
       <div id="venues-content" class="tab-content hidden" data-tab="venues">
-        <VenueList />
+        <VenueList client:load />
       </div>
     </div>
   </section>
 </Layout>
 
 <script>
-  // remove past days from the dom and setup search functionality
+  // Add TypeScript declaration for our global function
+  declare global {
+    interface Window {
+      initDayCardToggles?: () => void;
+    }
+  }
+
+  // Setup search functionality and handle tab changes
   document.addEventListener("DOMContentLoaded", () => {
     // get today's date in local timezone, normalized to start of day
     const today = new Date();
@@ -107,6 +86,18 @@ import { Input } from "@/components/ui/input";
       String(today.getMonth() + 1).padStart(2, "0") +
       "-" +
       String(today.getDate()).padStart(2, "0");
+
+    // Re-connect when tab changes (card connection is now handled directly in the DayList component)
+    const tabsTriggers = document.querySelectorAll('[role="tab"]');
+    tabsTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        // Dispatch custom event to trigger card connection in DayList
+        setTimeout(() => {
+          const event = new CustomEvent("tabChanged");
+          window.dispatchEvent(event);
+        }, 50);
+      });
+    });
 
     // function to highlight matched text
     function highlightText(element: Element, query: string) {
