@@ -62,43 +62,63 @@ const filteredDays = sortDays(days, "chronological");
   // Set up client-side search and sorting
   document.addEventListener("DOMContentLoaded", () => {
     // Get references to elements
-    const dayCards = document.querySelectorAll(".day-placeholder");
     const searchInput = document.getElementById("day-search") as HTMLInputElement;
     const countElement = document.getElementById("day-count");
     const concertList = document.getElementById("concert-list");
     
-    // Initialize counters
+    // Get today's date for filtering
+    const todayString = getTodayISOString();
+    
+    // Get calendar data from our hidden element for operations
+    const calendarDataElem = document.getElementById("calendar-data");
+    if (!calendarDataElem || !concertList) return;
+    
+    const calendarData = parseJSONFromElement(calendarDataElem, { shows: [] });
+    
+    // Step 1: Get all day cards
+    const dayCards = document.querySelectorAll(".day-placeholder");
+    
+    // Step 2: Use the sortDayElements utility which already handles filtering by date
+    // This will automatically remove past dates and sort them chronologically
+    sortDayElements(
+      Array.from(dayCards),
+      calendarData,
+      "chronological", // Default sort
+      concertList,
+      todayString
+    );
+    
+    // Step 3: After DOM manipulation, update the count
+    const remainingCards = document.querySelectorAll(".day-placeholder");
     if (countElement) {
-      countElement.textContent = dayCards.length.toString();
+      countElement.textContent = remainingCards.length.toString();
     }
     
     // Handle search input changes
     if (searchInput) {
       searchInput.addEventListener("input", (e) => {
         const query = (e.target as HTMLInputElement).value;
-        filterDOMElementsByText(dayCards, query, countElement);
+        // Use updated set of cards after filtering
+        filterDOMElementsByText(
+          document.querySelectorAll(".day-placeholder"), 
+          query, 
+          countElement ?? undefined
+        );
       });
     }
     
     // Make the sort function available globally
     if (typeof window !== "undefined") {
-      // Handle day sort change from the DaySortToggle component
       window.handleDaySortChange = function(sortType) {
         if (!concertList) return;
         
-        // Get calendar data from our hidden element
-        const calendarDataElem = document.getElementById("calendar-data");
-        if (!calendarDataElem) return;
-        
-        const calendarData = parseJSONFromElement(calendarDataElem, { shows: [] });
-        
-        // Sort the day elements using our utility function
+        // The sortDayElements utility already handles filtering by date
         sortDayElements(
-          Array.from(dayCards),
+          Array.from(document.querySelectorAll(".day-placeholder")),
           calendarData,
           sortType,
           concertList,
-          getTodayISOString()
+          getTodayISOString() // Always use the current date
         );
       };
     }
