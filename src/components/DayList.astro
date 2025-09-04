@@ -78,20 +78,28 @@ const filteredDays = sortDays(days, "chronological");
     // Step 1: Get all day cards
     const dayCards = document.querySelectorAll(".day-placeholder");
     
-    // Step 2: Use the sortDayElements utility which already handles filtering by date
-    // This will automatically remove past dates and sort them chronologically
+    // Step 2: Directly remove past days first - this is the key fix
+    dayCards.forEach((card) => {
+      const dayId = card.getAttribute("data-day-id");
+      if (dayId && dayId < todayString) {
+        card.remove();
+      }
+    });
+    
+    // Step 3: Use sortDayElements on the remaining cards
+    const remainingDayCards = document.querySelectorAll(".day-placeholder");
     sortDayElements(
-      Array.from(dayCards),
+      Array.from(remainingDayCards),
       calendarData,
       "chronological", // Default sort
       concertList,
       todayString
     );
     
-    // Step 3: After DOM manipulation, update the count
-    const remainingCards = document.querySelectorAll(".day-placeholder");
+    // Step 4: After DOM manipulation, update the count
+    const finalCards = document.querySelectorAll(".day-placeholder");
     if (countElement) {
-      countElement.textContent = remainingCards.length.toString();
+      countElement.textContent = finalCards.length.toString();
     }
     
     // Handle search input changes
@@ -112,14 +120,33 @@ const filteredDays = sortDays(days, "chronological");
       window.handleDaySortChange = function(sortType) {
         if (!concertList) return;
         
-        // The sortDayElements utility already handles filtering by date
+        // Always make sure to remove past days first before sorting
+        const currentTodayString = getTodayISOString(); // Get fresh date in case days passed
+        const allDayCards = document.querySelectorAll(".day-placeholder");
+        
+        // Remove any past days first
+        allDayCards.forEach((card) => {
+          const dayId = card.getAttribute("data-day-id");
+          if (dayId && dayId < currentTodayString) {
+            card.remove();
+          }
+        });
+        
+        // Then sort the remaining cards
         sortDayElements(
           Array.from(document.querySelectorAll(".day-placeholder")),
           calendarData,
           sortType,
           concertList,
-          getTodayISOString() // Always use the current date
+          currentTodayString
         );
+        
+        // Update count after sorting
+        const finalCards = document.querySelectorAll(".day-placeholder");
+        const countElem = document.getElementById("day-count");
+        if (countElem) {
+          countElem.textContent = finalCards.length.toString();
+        }
       };
     }
   });
