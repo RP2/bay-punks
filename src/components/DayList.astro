@@ -19,12 +19,17 @@ const filteredDays = sortDays(days, "chronological");
 ---
 
 <div class="space-y-4">
-  <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+  <div
+    class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
+  >
     <h2 class="text-2xl font-bold">
       Days (<span id="day-count">{filteredDays.length}</span>)
     </h2>
     <div class="flex w-full flex-row gap-2 md:mt-0 md:w-auto">
-      <DaySortToggle client:load className="h-12 flex-1 md:w-auto md:flex-initial" />
+      <DaySortToggle
+        client:load
+        className="h-12 flex-1 md:w-auto md:flex-initial"
+      />
     </div>
   </div>
 
@@ -57,27 +62,33 @@ const filteredDays = sortDays(days, "chronological");
 
 <script>
   import { getTodayISOString } from "../lib/client-date-utils";
-  import { filterDOMElementsByText, sortDayElements, parseJSONFromElement } from "../lib/dom-utils";
+  import {
+    filterDOMElementsByText,
+    sortDayElements,
+    parseJSONFromElement,
+  } from "../lib/dom-utils";
 
   // Set up client-side search and sorting
   document.addEventListener("DOMContentLoaded", () => {
     // Get references to elements
-    const searchInput = document.getElementById("day-search") as HTMLInputElement;
+    const searchInput = document.getElementById(
+      "day-search",
+    ) as HTMLInputElement;
     const countElement = document.getElementById("day-count");
     const concertList = document.getElementById("concert-list");
-    
+
     // Get today's date for filtering
     const todayString = getTodayISOString();
-    
+
     // Get calendar data from our hidden element for operations
     const calendarDataElem = document.getElementById("calendar-data");
     if (!calendarDataElem || !concertList) return;
-    
+
     const calendarData = parseJSONFromElement(calendarDataElem, { shows: [] });
-    
+
     // Step 1: Get all day cards
     const dayCards = document.querySelectorAll(".day-placeholder");
-    
+
     // Step 2: Directly remove past days first - this is the key fix
     dayCards.forEach((card) => {
       const dayId = card.getAttribute("data-day-id");
@@ -85,7 +96,7 @@ const filteredDays = sortDays(days, "chronological");
         card.remove();
       }
     });
-    
+
     // Step 3: Use sortDayElements on the remaining cards
     const remainingDayCards = document.querySelectorAll(".day-placeholder");
     sortDayElements(
@@ -93,37 +104,37 @@ const filteredDays = sortDays(days, "chronological");
       calendarData,
       "chronological", // Default sort
       concertList,
-      todayString
+      todayString,
     );
-    
+
     // Step 4: After DOM manipulation, update the count
     const finalCards = document.querySelectorAll(".day-placeholder");
     if (countElement) {
       countElement.textContent = finalCards.length.toString();
     }
-    
+
     // Handle search input changes
     if (searchInput) {
       searchInput.addEventListener("input", (e) => {
         const query = (e.target as HTMLInputElement).value;
         // Use updated set of cards after filtering
         filterDOMElementsByText(
-          document.querySelectorAll(".day-placeholder"), 
-          query, 
-          countElement ?? undefined
+          document.querySelectorAll(".day-placeholder"),
+          query,
+          countElement ?? undefined,
         );
       });
     }
-    
+
     // Make the sort function available globally
     if (typeof window !== "undefined") {
-      window.handleDaySortChange = function(sortType) {
+      window.handleDaySortChange = function (sortType) {
         if (!concertList) return;
-        
+
         // Always make sure to remove past days first before sorting
         const currentTodayString = getTodayISOString(); // Get fresh date in case days passed
         const allDayCards = document.querySelectorAll(".day-placeholder");
-        
+
         // Remove any past days first
         allDayCards.forEach((card) => {
           const dayId = card.getAttribute("data-day-id");
@@ -131,16 +142,16 @@ const filteredDays = sortDays(days, "chronological");
             card.remove();
           }
         });
-        
+
         // Then sort the remaining cards
         sortDayElements(
           Array.from(document.querySelectorAll(".day-placeholder")),
           calendarData,
           sortType,
           concertList,
-          currentTodayString
+          currentTodayString,
         );
-        
+
         // Update count after sorting
         const finalCards = document.querySelectorAll(".day-placeholder");
         const countElem = document.getElementById("day-count");
@@ -153,4 +164,8 @@ const filteredDays = sortDays(days, "chronological");
 </script>
 
 <!-- Hidden element to store calendar data for client-side operations -->
-<script id="calendar-data" type="application/json">{JSON.stringify(concertsData)}</script>
+<script
+  id="calendar-data"
+  type="application/json"
+  set:html={JSON.stringify(concertsData)}
+/>

@@ -38,7 +38,6 @@ Found incorrect artist data? You can help improve accuracy by:
 ## Setup
 
 1. **Create a Spotify App:**
-
    - Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
    - Create a new app
    - Note down your `Client ID` and `Client Secret`

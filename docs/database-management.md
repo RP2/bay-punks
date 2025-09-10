@@ -135,24 +135,20 @@ The system uses a sophisticated multi-stage approach to deduplicate venues:
 ### Multi-Stage Deduplication Process
 
 1. **Initial Pass**: Basic venue processing with normalized name matching
-
    - Creates venue objects with aliases, addresses, and date ranges
    - Applies manual venue corrections from spelling-corrections.json
 
 2. **Special Case Detection**: Identifies known problematic venues
-
    - Uses `isSpecialCaseVenue()` to detect and handle venues like 924 Gilman
    - Ensures consistent naming and complete address information
    - Preserves all alternate names as aliases
 
 3. **Normalized Name Matching**: Groups venues by normalized name
-
    - Applies `normalizeVenueName()` for consistent comparison
    - Handles abbreviations, restrictions, and city information
    - Merges aliases, addresses, and date information
 
 4. **Address-Based Matching**: Consolidates venues by location
-
    - Matches venues with different names but identical addresses
    - Creates comprehensive venue records with all known aliases
    - Preserves the earliest firstSeen and latest lastSeen dates
@@ -191,17 +187,14 @@ node scripts/spotify-verify.js --force
 The venue deduplication process happens in four distinct stages:
 
 1. **Initial Venue Processing**
-
    - Creates venue objects with normalized names and aliases
    - Applies manual venue corrections from spelling-corrections.json
 
 2. **Special Case Detection**
-
    - Uses `isSpecialCaseVenue()` to detect and handle problematic venues
    - Ensures consistent venue data regardless of source formatting
 
 3. **Final Deduplication Pass**
-
    - Groups venues by normalized name
    - Merges venues with same normalized name or address
    - Combines aliases, preserves address information, and updates date ranges

@@ -9,13 +9,11 @@ Completed comprehensive cleanup of project documentation to reflect the current 
 ### Main Documentation Files
 
 1. **`docs/database-management.md`** ✅ Already current
-
    - Correctly reflects unified processing with `process-databases.js`
    - Accurate script usage examples
    - Updated "removed scripts" section
 
 2. **`docs/non-artist-protection.md`** ✅ Updated
-
    - Removed references to old `consolidated-cleanup.js` and `verify-databases-clean.js`
    - Updated to reflect unified filtering in `process-databases.js`
    - Streamlined GitHub Actions workflow descriptions
@@ -23,24 +21,20 @@ Completed comprehensive cleanup of project documentation to reflect the current 
    - Fixed markdown formatting issues
 
 3. **`docs/spotify-verification.md`** ✅ Updated
-
    - Updated all command examples to use `spotify-verify.js`
    - Replaced old script references with current unified script
    - Added new `--new`, `--failed`, `--force` mode examples
 
 4. **`docs/conservative-name-policy.md`** ✅ Updated
-
    - Removed references to multiple old Spotify scripts
    - Updated to reflect single unified `spotify-verify.js` script
    - Maintained core policy principles
 
 5. **`docs/automated-maintenance.md`** ✅ Updated
-
    - Fixed reference to old script in debug section
    - Updated to use current `spotify-verify.js --new` syntax
 
 6. **`README.md`** (project root) ✅ Updated
-
    - Added links to all relevant documentation files
    - Updated Spotify integration description to reflect name preservation policy
    - Clarified data pipeline steps to emphasize comprehensive filtering
