@@ -1,9 +1,9 @@
-# weekly automation: scrape concerts, process data, and verify new artists
-name: weekly automation
+# monthly automation: scrape concerts, process data, and verify new artists
+name: monthly automation
 
 on:
   schedule:
-    - cron: "0 7 * * 1" # every monday at 12am pacific (8am utc)
+    - cron: "0 7 1 * *" # first monday of each month at 12am pacific (7am utc)
   workflow_dispatch:
     inputs:
       force_spotify:
@@ -18,7 +18,7 @@ on:
         type: string
 
 jobs:
-  weekly_automation:
+  monthly_automation:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -141,7 +141,7 @@ jobs:
           git config --local user.name "${{ github.actor }}"
 
           # create detailed commit message
-          COMMIT_MSG="auto: weekly update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          COMMIT_MSG="auto: monthly update $(date -u '+%Y-%m-%d %H:%M UTC')"
 
           if [ "${{ steps.detect_changes.outputs.new_artists }}" != "unknown" ] && [ "${{ steps.detect_changes.outputs.new_artists }}" -gt 0 ]; then
             COMMIT_MSG="$COMMIT_MSG - added ${{ steps.detect_changes.outputs.new_artists }} new artists"
@@ -154,7 +154,7 @@ jobs:
       # summary output
       - name: workflow summary
         run: |
-          echo "## 🎸 weekly automation summary" >> $GITHUB_STEP_SUMMARY
+          echo "## 🎸 monthly automation summary" >> $GITHUB_STEP_SUMMARY
           echo "- **automation**: completed successfully" >> $GITHUB_STEP_SUMMARY
           echo "- **data processing**: conservative name preservation active" >> $GITHUB_STEP_SUMMARY
           echo "- **spotify verification**: unified script ensures no name changes" >> $GITHUB_STEP_SUMMARY
@@ -171,10 +171,7 @@ jobs:
           fi
 
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### 🛡️ data protection layers active:" >> $GITHUB_STEP_SUMMARY
-          echo "1. **scraping filter** - prevents non-artists during collection" >> $GITHUB_STEP_SUMMARY
-          echo "2. **conservative processing** - exact matching + flexible 'The' handling only" >> $GITHUB_STEP_SUMMARY
-          echo "3. **name preservation** - scraped names are NEVER changed by any script" >> $GITHUB_STEP_SUMMARY
-          echo "4. **unified spotify verification** - single script prevents conflicts" >> $GITHUB_STEP_SUMMARY
-          echo "5. **consolidated cleanup** - removes any remaining non-artist entries" >> $GITHUB_STEP_SUMMARY
-          echo "6. **verification check** - confirms databases are clean" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📅 automation schedule:" >> $GITHUB_STEP_SUMMARY
+          echo "- **monthly**: new artist verification and data updates" >> $GITHUB_STEP_SUMMARY
+          echo "- **quarterly**: failed artist recheck (previously failed artists)" >> $GITHUB_STEP_SUMMARY

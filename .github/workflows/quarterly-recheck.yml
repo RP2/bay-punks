@@ -1,9 +1,9 @@
-# monthly spotify recheck workflow - rechecks previously unverified artists
-name: monthly spotify recheck
+# quarterly spotify recheck workflow - rechecks previously unverified artists
+name: quarterly spotify recheck
 
 on:
   schedule:
-    - cron: "0 9 1 * *" # first day of each month at 2am pacific (9am utc)
+    - cron: "0 9 1 */3 *" # first day of every 3 months at 2am pacific (9am utc)
   workflow_dispatch:
     inputs:
       limit:
@@ -135,7 +135,7 @@ jobs:
           git config --local user.name "${{ github.actor }}"
 
           # create detailed commit message
-          COMMIT_MSG="auto: monthly spotify recheck $(date -u '+%Y-%m-%d %H:%M UTC')"
+          COMMIT_MSG="auto: quarterly spotify recheck $(date -u '+%Y-%m-%d %H:%M UTC')"
 
           if [ "${{ steps.analyze.outputs.newly_verified }}" -gt 0 ]; then
             COMMIT_MSG="$COMMIT_MSG - verified ${{ steps.analyze.outputs.newly_verified }} additional artists"
@@ -148,7 +148,7 @@ jobs:
       # summary output
       - name: workflow summary
         run: |
-          echo "## 🔄 monthly failed artist recheck summary" >> $GITHUB_STEP_SUMMARY
+          echo "## 🔄 quarterly failed artist recheck summary" >> $GITHUB_STEP_SUMMARY
 
           if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
             echo "- **mode**: dry run (no changes saved)" >> $GITHUB_STEP_SUMMARY
@@ -169,5 +169,5 @@ jobs:
 
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### 📅 automation schedule:" >> $GITHUB_STEP_SUMMARY
-          echo "- **weekly**: new artist verification (unverified artists)" >> $GITHUB_STEP_SUMMARY
-          echo "- **monthly**: failed artist recheck (previously failed artists)" >> $GITHUB_STEP_SUMMARY
+          echo "- **monthly**: new artist verification and data updates" >> $GITHUB_STEP_SUMMARY
+          echo "- **quarterly**: failed artist recheck (previously failed artists)" >> $GITHUB_STEP_SUMMARY
