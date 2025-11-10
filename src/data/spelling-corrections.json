@@ -47,7 +47,14 @@
     "uc theater": "UC Theater, Berkeley",
     "cornerstone berkeley": "Cornerstone, Berkeley",
     "the cornerstone": "Cornerstone, Berkeley",
-    "cornerstone": "Cornerstone, Berkeley"
+    "cornerstone": "Cornerstone, Berkeley",
+    "amoeba music sf": "Amoeba, S.F.",
+    "amoeba music san francisco": "Amoeba, S.F.",
+    "amoeba records sf": "Amoeba, S.F.",
+    "amoeba records san francisco": "Amoeba, S.F.",
+    "amoeba sf": "Amoeba, S.F.",
+    "amoeba san francisco": "Amoeba, S.F.",
+    "amoeba records berkeley": "Amoeba Records, Berkeley"
   },
   "city_corrections": {
     "UC Berkeley Campus": "Berkeley",

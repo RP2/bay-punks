@@ -2,6 +2,7 @@
 import fetch from "node-fetch";
 import { load } from "cheerio";
 import { writeFile } from "fs/promises";
+import { isNonArtist } from "../src/lib/shared-utils.js";
 
 // helper to encode for url
 function encodeQuery(str) {
@@ -15,86 +16,26 @@ function cleanArtistName(name) {
     .trim();
 }
 
-// helper to check if an artist should be excluded
-function shouldExcludeArtist(name) {
-  // exclude comedians
-  if (/\(comedian\)/i.test(name)) {
-    return true;
-  }
-
-  // exclude venue administrative entries
-  const normalized = name.toLowerCase().trim();
-  const nonArtistTerms = [
-    "membership meeting",
-    "member meeting",
-    "members meeting",
-    "private event",
-    "private party",
-    "birthday party",
-    "birthday bash",
-    "birthday celebration",
-    "closed",
-    "doors",
-    "soundcheck",
-    "cleanup",
-    "setup",
-    "teardown",
-    "break",
-    "intermission",
-    "tbd",
-    "tba",
-    "to be announced",
-    "to be determined",
-    "venue meeting",
-    "staff meeting",
-    "volunteer meeting",
-    "board meeting",
-  ];
-
-  // check exact matches for non-artist terms
-  if (nonArtistTerms.includes(normalized)) {
-    return true;
-  }
-
-  // check for cancelled/postponed patterns at the beginning
-  const cancelledPatterns = [
-    /^cancelled:/i,
-    /^canceled:/i,
-    /^probably cancelled:/i,
-    /^postponed:/i,
-    /^moved:/i,
-    /^rescheduled:/i,
-  ];
-
-  if (cancelledPatterns.some((pattern) => pattern.test(name))) {
-    return true;
-  }
-
-  // check for birthday celebration patterns
-  const birthdayPatterns = [
-    /birthday bash/i,
-    /birthday celebration/i,
-    /birthday party/i,
-    /'s.*birthday/i, // matches "Someone's 60th Birthday", "Carmela's Birthday", etc.
-    /\d+(?:st|nd|rd|th)\s+birthday/i, // matches "60th Birthday", "21st Birthday", etc.
-  ];
-
-  if (birthdayPatterns.some((pattern) => pattern.test(name))) {
-    return true;
-  }
-
-  return false;
-}
+// now using shared isNonArtist function from shared-utils.js
 
 // helper to fetch and parse a single page
 async function fetchPage(url) {
-  const res = await fetch(url);
-  const html = await res.text();
-  return load(html);
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      console.log(`page not found: ${url} (status ${res.status})`);
+      return null;
+    }
+    const html = await res.text();
+    return load(html);
+  } catch (error) {
+    console.log(`error fetching ${url}: ${error.message}`);
+    return null;
+  }
 }
 
-// helper to normalize date to ISO format
-function normalizeDate(day) {
+// helper to normalize date to ISO format with proper year tracking
+function normalizeDate(day, seenMonths = new Set()) {
   const months = {
     jan: "01",
     feb: "02",
@@ -113,32 +54,50 @@ function normalizeDate(day) {
   const parts = day.toLowerCase().split(" ");
   const [_, monthAbbr, dayNumber] = parts;
   const month = months[monthAbbr];
-  const year = new Date().getFullYear();
 
-  // handle year rollover for december to january
-  const currentMonth = new Date().getMonth() + 1; // months are 0-indexed
-  if (month === "01" && currentMonth === 12) {
-    return `${year + 1}-${month}-${dayNumber.padStart(2, "0")}`;
+  // start with current year (dynamic)
+  const currentYear = new Date().getFullYear();
+  let year = currentYear;
+
+  // if we've seen december and now see any month from january to june, it's likely next year
+  // this covers the rollover from dec current-year to early months of next-year
+  if (
+    seenMonths.has("12") &&
+    (month === "01" ||
+      month === "02" ||
+      month === "03" ||
+      month === "04" ||
+      month === "05" ||
+      month === "06")
+  ) {
+    year = currentYear + 1;
   }
+
+  // track months we've seen
+  seenMonths.add(month);
 
   return `${year}-${month}-${dayNumber.padStart(2, "0")}`;
 }
 
-// fetch all pages from by-date.0.html to by-date.30.html
+// fetch all pages from by-date.1.html to by-date.30.html
 console.log("starting to fetch pages...");
 const baseUrl = "http://www.foopee.com/punk/the-list/by-date.";
-const pagePromises = Array.from({ length: 31 }, (_, i) => {
-  const url = `${baseUrl}${i}.html`;
-  console.log(`fetching page ${i}: ${url}`);
+const pagePromises = Array.from({ length: 30 }, (_, i) => {
+  const url = `${baseUrl}${i + 1}.html`;
+  console.log(`fetching page ${i + 1}: ${url}`);
   return fetchPage(url);
 });
-const pages = await Promise.all(pagePromises);
-console.log(`successfully fetched ${pages.length} pages`);
+const pageResults = await Promise.all(pagePromises);
+const pages = pageResults.filter((page) => page !== null);
+console.log(
+  `successfully fetched ${pages.length} pages out of ${pageResults.length} attempted`,
+);
 
 // collect events for each day
 const shows = [];
 let totalEvents = 0;
 let excludedComedians = 0;
+const seenMonths = new Set(); // track months across all pages for year rollover
 
 console.log("processing pages and extracting events...");
 
@@ -174,7 +133,7 @@ pages.forEach(($, pageIndex) => {
           const rawBandText = $(bandEl).text().trim();
 
           // skip comedians entirely
-          if (shouldExcludeArtist(rawBandText)) {
+          if (isNonArtist(rawBandText)) {
             excludedComedians++;
             console.log(`excluded comedian: ${rawBandText}`);
             return null;
@@ -222,7 +181,7 @@ pages.forEach(($, pageIndex) => {
     });
 
     if (dayText && events.length) {
-      const normalizedDate = normalizeDate(dayText); // normalize the dayText here
+      const normalizedDate = normalizeDate(dayText, seenMonths); // normalize the dayText here
       shows.push({ day: dayText, normalizedDate, events });
     }
   });

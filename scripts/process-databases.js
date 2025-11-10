@@ -1,4 +1,13 @@
 import { readFile, writeFile } from "fs/promises";
+import {
+  normalizeText,
+  normalizeForMatching,
+  createSlug,
+  levenshteinDistance,
+  NON_ARTIST_FILTERS,
+  NON_ARTIST_PATTERNS,
+  CANCELLED_PATTERNS,
+} from "../src/lib/shared-utils.js";
 
 // load spelling corrections from external file
 let SPELLING_CORRECTIONS = {};
@@ -42,60 +51,7 @@ async function loadSpellingCorrections() {
   }
 }
 
-// helper to normalize text (remove special characters, lowercase)
-function normalizeText(text) {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, "")
-    .trim();
-}
-
-// helper to normalize text with flexible "the" handling for artist matching
-function normalizeForMatching(text) {
-  let normalized = normalizeText(text);
-
-  // remove "the" prefix for flexible matching (both "The Band" and "Band" match)
-  if (normalized.startsWith("the ")) {
-    normalized = normalized.substring(4);
-  }
-
-  return normalized;
-}
-
-// helper to create a unique slug
-function createSlug(text) {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-")
-    .trim();
-}
-
-// helper to calculate levenshtein distance for fuzzy matching
-function levenshteinDistance(str1, str2) {
-  const matrix = [];
-  for (let i = 0; i <= str2.length; i++) {
-    matrix[i] = [i];
-  }
-  for (let j = 0; j <= str1.length; j++) {
-    matrix[0][j] = j;
-  }
-  for (let i = 1; i <= str2.length; i++) {
-    for (let j = 1; j <= str1.length; j++) {
-      if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
-        matrix[i][j] = matrix[i - 1][j - 1];
-      } else {
-        matrix[i][j] = Math.min(
-          matrix[i - 1][j - 1] + 1,
-          matrix[i][j - 1] + 1,
-          matrix[i - 1][j] + 1,
-        );
-      }
-    }
-  }
-  return matrix[str2.length][str1.length];
-}
+// removed duplicate utility functions - now imported from shared-utils.js
 
 // helper to restore proper artist names from scraped data
 // this helps fix any existing data where names were previously changed incorrectly
@@ -507,114 +463,6 @@ function mergeVenueData(existing, newData) {
   };
 }
 
-// non-artist filtering - list of entries that are not actual artists
-const NON_ARTIST_FILTERS = [
-  // invalid/fragment entries
-  "1", // fragment from "1,000 Dreams" splitting
-
-  // meetings and administrative
-  "membership meeting",
-  "member meeting",
-  "members meeting",
-  "venue meeting",
-  "staff meeting",
-  "volunteer meeting",
-  "board meeting",
-
-  // private events
-  "private event",
-  "private party",
-  "closed",
-
-  // venue operations
-  "doors",
-  "soundcheck",
-  "cleanup",
-  "setup",
-  "teardown",
-  "break",
-  "intermission",
-
-  // placeholder entries
-  "tbd",
-  "tba",
-  "to be announced",
-  "to be determined",
-
-  // movie screenings and film events
-  "screening",
-  "film screening",
-  "movie screening",
-  "documentary screening",
-  "film",
-  "movie",
-  "documentary",
-  "cinema",
-
-  // other events and activities
-  "workshop",
-  "talk",
-  "lecture",
-  "discussion",
-  "fundraiser",
-  "benefit",
-  "memorial",
-  "tribute",
-  "open mic",
-  "karaoke",
-  "trivia",
-  "trivia night",
-  "comedy",
-  "comedy show",
-  "stand-up",
-  "standup",
-  "poetry",
-  "poetry reading",
-  "book reading",
-  "art opening",
-  "art show",
-  "gallery opening",
-  "exhibition",
-  "book launch",
-  "author reading",
-  "panel discussion",
-  "q&a",
-  "meet and greet",
-  "signing",
-  "dj set", // might be borderline, but often not a band name
-];
-
-// patterns for non-artist entries (more flexible matching)
-const NON_ARTIST_PATTERNS = [
-  /^screening\s+of\s+/i, // "screening of [movie]"
-  /\s+screening$/i, // "[movie] screening"
-  /^film\s+screening/i, // "film screening [title]"
-  /^movie\s+screening/i, // "movie screening [title]"
-  /^film:\s+/i, // "film: [title]"
-  /^movie:\s+/i, // "movie: [title]"
-  /^documentary:\s+/i, // "documentary: [title]"
-  /\s+presents\s+/i, // "[venue] presents [event]"
-  /\s+featuring\s+/i, // might be event description
-  /^benefit\s+for\s+/i, // "benefit for [cause]"
-  /^memorial\s+for\s+/i, // "memorial for [person]"
-  /^tribute\s+to\s+/i, // "tribute to [person]"
-  /^fundraiser\s+for\s+/i, // "fundraiser for [cause]"
-  /open\s+mic(\s+night)?$/i, // "open mic" or "open mic night"
-  /comedy\s+(show|night)$/i, // "comedy show" or "comedy night"
-  /trivia\s+night$/i, // "trivia night"
-  /^dj\s+night$/i, // "dj night"
-  /^karaoke$/i, // "karaoke" as standalone
-];
-
-const CANCELLED_PATTERNS = [
-  /^cancelled:/i,
-  /^canceled:/i,
-  /^probably cancelled:/i,
-  /^postponed:/i,
-  /^moved:/i,
-  /^rescheduled:/i,
-];
-
 // check if an artist name matches non-artist filters
 function isNonArtist(artistName) {
   const normalized = artistName.toLowerCase().trim();
@@ -690,6 +538,52 @@ function normalizeVenueName(text) {
 
   // Remove any trailing commas and whitespace
   normalized = normalized.replace(/,\s*$/, "");
+
+  // Remove common business type suffixes to extract core venue name
+  // This helps deduplicate venues like "Amoeba Music" vs "Amoeba Records" vs "Amoeba"
+  const businessSuffixes = [
+    "records?",
+    "music",
+    "theater",
+    "theatre",
+    "club",
+    "bar",
+    "pub",
+    "tavern",
+    "cafe",
+    "coffee",
+    "restaurant",
+    "grill",
+    "house",
+    "hall",
+    "center",
+    "gallery",
+    "studio",
+    "space",
+    "room",
+    "lounge",
+    "saloon",
+    "brewery",
+    "brewing",
+    "company",
+    "co",
+    "inc",
+    "llc",
+    "store",
+    "shop",
+    "emporium",
+  ];
+
+  const suffixPattern = new RegExp(
+    `\\b(${businessSuffixes.join("|")})\\b$`,
+    "gi",
+  );
+  normalized = normalized.replace(suffixPattern, "").trim();
+
+  // Remove common venue prefixes that aren't part of the core identity
+  const prefixesToRemove = ["the\\s+", "a\\s+", "an\\s+"];
+  const prefixPattern = new RegExp(`^(${prefixesToRemove.join("|")})`, "gi");
+  normalized = normalized.replace(prefixPattern, "").trim();
 
   return normalized.trim();
 }
@@ -803,6 +697,27 @@ async function processDatabases() {
       });
     }
   });
+
+  // create venue ID resolution map - maps old/missing venue IDs to current venue IDs
+  const venueIdResolutionMap = new Map();
+  existingVenuesData.venues.forEach((venue) => {
+    // map venue's own ID to itself
+    venueIdResolutionMap.set(venue.id, venue.id);
+
+    // map potential old IDs (based on aliases) to this venue's ID
+    if (venue.aliases) {
+      venue.aliases.forEach((alias) => {
+        // create potential old venue ID from alias
+        const potentialOldId = createSlug(alias);
+        venueIdResolutionMap.set(potentialOldId, venue.id);
+      });
+    }
+  });
+
+  // function to resolve a venue ID to the current correct ID
+  function resolveVenueId(venueId) {
+    return venueIdResolutionMap.get(venueId) || venueId;
+  }
 
   // initialize our databases with existing data
   const artists = new Map();
@@ -1536,9 +1451,9 @@ async function processDatabases() {
                     // Try to get venue id from mapping or slug
                     let venueId = null;
                     if (event.venue.id) {
-                      venueId = event.venue.id;
+                      venueId = resolveVenueId(event.venue.id);
                     } else {
-                      venueId = createSlug(event.venue.text);
+                      venueId = resolveVenueId(createSlug(event.venue.text));
                     }
                     prevVenues.push(venueId);
                   }
@@ -1570,7 +1485,8 @@ async function processDatabases() {
         event.venue &&
         (event.venue.location === undefined || event.venue.location === null)
       ) {
-        const venueObj = venues.get(event.venue.id) || null;
+        const resolvedVenueId = resolveVenueId(event.venue.id);
+        const venueObj = venues.get(resolvedVenueId) || null;
         let address = null;
         let city = null;
         if (venueObj) {
@@ -1704,7 +1620,7 @@ async function processDatabases() {
                     if (b && b.id === band.id) {
                       if (e.venue && e.venue.text) {
                         let venueId = e.venue.id || createSlug(e.venue.text);
-                        foundVenues.add(venueId);
+                        foundVenues.add(resolveVenueId(venueId));
                       }
                     }
                   }
@@ -1767,6 +1683,25 @@ async function processDatabases() {
       artist.lastSeen = maxDate || artist.lastSeen || defaultDate;
     }
   }
+
+  // --- RESOLVE VENUE IDS IN CALENDAR EVENTS ---
+  // Update all venue IDs in calendar events to use resolved venue IDs
+  let venueResolveCount = 0;
+  for (const show of calendarData.shows || []) {
+    for (const event of show.events || []) {
+      if (event.venue && event.venue.id) {
+        const originalId = event.venue.id;
+        const resolvedId = resolveVenueId(originalId);
+        if (originalId !== resolvedId) {
+          event.venue.id = resolvedId;
+          venueResolveCount++;
+        }
+      }
+    }
+  }
+  console.log(
+    `resolved ${venueResolveCount} venue ID references in calendar events`,
+  );
 
   await writeFile(
     "./src/data/calendar.json",

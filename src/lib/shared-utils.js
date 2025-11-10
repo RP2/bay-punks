@@ -78,6 +78,9 @@ export const NON_ARTIST_FILTERS = [
   // private events
   "private event",
   "private party",
+  "birthday party",
+  "birthday bash",
+  "birthday celebration",
   "closed",
 
   // venue operations
@@ -169,9 +172,22 @@ export const CANCELLED_PATTERNS = [
   /^rescheduled:/i,
 ];
 
+export const BIRTHDAY_PATTERNS = [
+  /birthday bash/i,
+  /birthday celebration/i,
+  /birthday party/i,
+  /'s.*birthday/i, // matches "Someone's 60th Birthday", "Carmela's Birthday", etc.
+  /\d+(?:st|nd|rd|th)\s+birthday/i, // matches "60th Birthday", "21st Birthday", etc.
+];
+
 // helper to check if a name is a non-artist (enhanced version)
 export function isNonArtist(artistName) {
   const normalized = artistName.toLowerCase().trim();
+
+  // exclude comedians
+  if (/\(comedian\)/i.test(artistName)) {
+    return true;
+  }
 
   // check exact matches for non-artist terms
   if (NON_ARTIST_FILTERS.includes(normalized)) {
@@ -185,6 +201,11 @@ export function isNonArtist(artistName) {
 
   // check for non-artist patterns (movie screenings, events, etc.)
   if (NON_ARTIST_PATTERNS.some((pattern) => pattern.test(artistName))) {
+    return true;
+  }
+
+  // check for birthday celebration patterns
+  if (BIRTHDAY_PATTERNS.some((pattern) => pattern.test(artistName))) {
     return true;
   }
 

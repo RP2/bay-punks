@@ -1,12 +1,5 @@
 import { readFile, writeFile } from "fs/promises";
-
-// helper to normalize text for matching
-function normalizeText(text) {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, "")
-    .trim();
-}
+import { normalizeText } from "../src/lib/shared-utils.js";
 
 // helper to find artist ID from processed artists data
 function findArtistId(artistName, processedArtists) {

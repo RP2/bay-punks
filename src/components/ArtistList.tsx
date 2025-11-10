@@ -52,12 +52,6 @@ const ArtistCard = ({ artist }: { artist: any }) => {
             </div>
           )}
 
-          {!artist.nextShow && (
-            <div className="text-muted-foreground text-sm">
-              No upcoming shows
-            </div>
-          )}
-
           <div className="mt-2 flex items-center justify-end gap-2">
             {(artist.spotifyUrl || artist.searchUrl) && (
               <>
@@ -94,17 +88,20 @@ const ArtistCard = ({ artist }: { artist: any }) => {
 
 // Main ArtistList component
 const ArtistList = () => {
-  // Prepare artist data with up-to-date next show info
+  // Prepare artist data with up-to-date next show info, filter to only artists with upcoming shows
   const artistData = useMemo(() => {
-    return artistsData.artists.map((artist) => ({
-      id: artist.id,
-      name: artist.name,
-      lastSeen: artist.lastSeen,
-      spotifyUrl: artist.spotifyUrl,
-      searchUrl: artist.searchUrl,
-      nextShow: getNextShowForArtist(artist.name, artist.id),
-      genres: artist.spotifyData?.genres || [],
-    }));
+    const data = artistsData as any;
+    return data.artists
+      .map((artist: any) => ({
+        id: artist.id,
+        name: artist.name,
+        lastSeen: artist.lastSeen,
+        spotifyUrl: artist.spotifyUrl,
+        searchUrl: artist.searchUrl,
+        nextShow: getNextShowForArtist(artist.name, artist.id),
+        genres: artist.spotifyData?.genres || [],
+      }))
+      .filter((artist: any) => artist.nextShow !== null); // only show artists with upcoming shows
   }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -124,7 +121,7 @@ const ArtistList = () => {
     // Then filter by search query if present
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
-      filtered = filtered.filter((artist) =>
+      filtered = filtered.filter((artist: any) =>
         artist.name.toLowerCase().includes(query),
       );
     }

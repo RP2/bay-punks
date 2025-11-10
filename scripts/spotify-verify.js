@@ -1,5 +1,4 @@
 import { readFile, writeFile, copyFile, unlink } from "fs/promises";
-import https from "https";
 import { resolve } from "path";
 
 // load environment variables from .env file
@@ -39,75 +38,44 @@ const MAX_RETRIES = 3;
 
 // helper to make spotify api requests with retry logic
 async function spotifyRequest(endpoint, token, retries = 0) {
-  return new Promise((resolve, reject) => {
-    const options = {
-      hostname: "api.spotify.com",
-      port: 443,
-      path: endpoint,
-      method: "GET",
+  try {
+    const response = await fetch(`https://api.spotify.com${endpoint}`, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
-    };
-
-    const req = https.request(options, (res) => {
-      let data = "";
-      res.on("data", (chunk) => {
-        data += chunk;
-      });
-      res.on("end", () => {
-        try {
-          const parsed = JSON.parse(data);
-
-          // handle rate limiting
-          if (res.statusCode === 429) {
-            const retryAfter =
-              parseInt(res.headers["retry-after"] || "1", 10) * 1000;
-            setTimeout(() => {
-              if (retries < MAX_RETRIES) {
-                spotifyRequest(endpoint, token, retries + 1)
-                  .then(resolve)
-                  .catch(reject);
-              } else {
-                reject(new Error(`rate limited after ${MAX_RETRIES} retries`));
-              }
-            }, retryAfter);
-            return;
-          }
-
-          if (res.statusCode >= 400) {
-            reject(
-              new Error(
-                `http ${res.statusCode}: ${parsed.error?.message || "unknown error"}`,
-              ),
-            );
-            return;
-          }
-
-          resolve(parsed);
-        } catch (error) {
-          reject(error);
-        }
-      });
     });
 
-    req.on("error", (error) => {
+    // handle rate limiting
+    if (response.status === 429) {
+      const retryAfter =
+        parseInt(response.headers.get("retry-after") || "1", 10) * 1000;
       if (retries < MAX_RETRIES) {
-        setTimeout(
-          () => {
-            spotifyRequest(endpoint, token, retries + 1)
-              .then(resolve)
-              .catch(reject);
-          },
-          1000 * (retries + 1),
-        );
+        await new Promise((resolve) => setTimeout(resolve, retryAfter));
+        return spotifyRequest(endpoint, token, retries + 1);
       } else {
-        reject(error);
+        throw new Error(`rate limited after ${MAX_RETRIES} retries`);
       }
-    });
-    req.end();
-  });
+    }
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(
+        `http ${response.status}: ${errorData.error?.message || "unknown error"}`,
+      );
+    }
+
+    return await response.json();
+  } catch (error) {
+    if (
+      retries < MAX_RETRIES &&
+      (error.code === "ECONNRESET" || error.name === "FetchError")
+    ) {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      return spotifyRequest(endpoint, token, retries + 1);
+    }
+    throw error;
+  }
 }
 
 // get spotify access token
@@ -116,44 +84,22 @@ async function getSpotifyToken() {
     "base64",
   );
 
-  return new Promise((resolve, reject) => {
-    const data = "grant_type=client_credentials";
-
-    const options = {
-      hostname: "accounts.spotify.com",
-      port: 443,
-      path: "/api/token",
-      method: "POST",
-      headers: {
-        Authorization: `Basic ${credentials}`,
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Content-Length": data.length,
-      },
-    };
-
-    const req = https.request(options, (res) => {
-      let responseData = "";
-      res.on("data", (chunk) => {
-        responseData += chunk;
-      });
-      res.on("end", () => {
-        try {
-          const parsed = JSON.parse(responseData);
-          if (res.statusCode === 200) {
-            resolve(parsed.access_token);
-          } else {
-            reject(new Error(`token request failed: ${responseData}`));
-          }
-        } catch (error) {
-          reject(error);
-        }
-      });
-    });
-
-    req.on("error", reject);
-    req.write(data);
-    req.end();
+  const response = await fetch("https://accounts.spotify.com/api/token", {
+    method: "POST",
+    headers: {
+      Authorization: `Basic ${credentials}`,
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: "grant_type=client_credentials",
   });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`token request failed: ${errorText}`);
+  }
+
+  const data = await response.json();
+  return data.access_token;
 }
 
 // verify a single artist on spotify - CONSERVATIVE VERSION

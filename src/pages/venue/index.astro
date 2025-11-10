@@ -22,7 +22,7 @@ const todayISOString =
   "-" +
   String(today.getDate()).padStart(2, "0");
 
-// sort venues alphabetically and add upcoming shows count
+// sort venues alphabetically and add upcoming shows count, filter to only venues with upcoming shows
 const sortedVenues = venues.venues
   .map((venue) => {
     const upcomingShows = concerts.shows
@@ -67,12 +67,13 @@ const sortedVenues = venues.venues
       upcomingShowsText: upcomingShows.length === 1 ? "show" : "shows",
     };
   })
+  .filter((venue) => venue.upcomingShowsCount > 0) // only show venues with upcoming shows
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <Layout
-  title="All Venues"
-  description="Browse all venues hosting shows in the Bay Area"
+  title="Venues with Upcoming Shows"
+  description="Browse venues with upcoming shows in the Bay Area"
 >
   <div class="container mx-auto px-4 py-8">
     <div class="mb-8">
@@ -82,9 +83,9 @@ const sortedVenues = venues.venues
       >
         ← Back to calendar
       </a>
-      <h1 class="text-4xl font-bold">All Venues</h1>
+      <h1 class="text-4xl font-bold">Venues with Upcoming Shows</h1>
       <p class="text-muted-foreground mt-2">
-        Browse {sortedVenues.length} venues hosting shows in the Bay Area
+        Browse {sortedVenues.length} venues with upcoming shows in the Bay Area
       </p>
     </div>
 

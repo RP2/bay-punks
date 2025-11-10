@@ -1,621 +1,6 @@
 {
   "shows": [
     {
-      "day": "Sun Nov 9",
-      "normalizedDate": "2025-11-09",
-      "events": [
-        {
-          "venue": {
-            "text": "924 Gilman Street, Berkeley",
-            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "TRSH",
-              "href": "https://open.spotify.com/search/TRSH"
-            },
-            {
-              "text": "Sports",
-              "href": "https://open.spotify.com/search/Sports"
-            },
-            {
-              "text": "Thoughts On Bowling",
-              "href": "https://open.spotify.com/search/Thoughts%20On%20Bowling"
-            },
-            {
-              "text": "Kerosene Heights",
-              "href": "https://open.spotify.com/search/Kerosene%20Heights"
-            }
-          ],
-          "extra": "a/a $18/$22 6:30pm/7pm @"
-        },
-        {
-          "venue": {
-            "text": "Alibi Bookshop, 624 Marin Street, Vallejo",
-            "href": "https://www.google.com/search?q=Alibi%20Bookshop%2C%20624%20Marin%20Street%2C%20Vallejo"
-          },
-          "bands": [
-            {
-              "text": "Photography of Murray Bowles slideshow and discussion with Editor Anna Brown and designer Paul Curran",
-              "href": "https://open.spotify.com/search/Photography%20of%20Murray%20Bowles%20slideshow%20and%20discussion%20with%20Editor%20Anna%20Brown%20and%20designer%20Paul%20Curran"
-            }
-          ],
-          "extra": "a/a free 3pm"
-        },
-        {
-          "venue": {
-            "text": "Black Cat, S.F.",
-            "href": "https://www.google.com/search?q=Black%20Cat%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Wilfie Williams",
-              "href": "https://open.spotify.com/search/Wilfie%20Williams"
-            }
-          ],
-          "extra": "21+ $30 7pm and 9:15pm"
-        },
-        {
-          "venue": {
-            "text": "Blue Note, Napa",
-            "href": "https://www.google.com/search?q=Blue%20Note%2C%20Napa"
-          },
-          "bands": [
-            {
-              "text": "Mac Ayres",
-              "href": "https://open.spotify.com/search/Mac%20Ayres"
-            }
-          ],
-          "extra": "8+ (under 16 with adult) 2pm/3pm and 5pm/6:30pm $"
-        },
-        {
-          "venue": {
-            "text": "Bottom of the Hill, S.F.",
-            "href": "https://www.google.com/search?q=Bottom%20of%20the%20Hill%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Triathalon",
-              "href": "https://open.spotify.com/search/Triathalon"
-            },
-            {
-              "text": "60 Juno",
-              "href": "https://open.spotify.com/search/60%20Juno"
-            },
-            {
-              "text": "Moon Wave",
-              "href": "https://open.spotify.com/search/Moon%20Wave"
-            }
-          ],
-          "extra": "a/a $20/$23 8pm/8:30pm"
-        },
-        {
-          "venue": {
-            "text": "Brick and Mortar, S.F.",
-            "href": "https://www.google.com/search?q=Brick%20and%20Mortar%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Black Polish",
-              "href": "https://open.spotify.com/search/Black%20Polish"
-            }
-          ],
-          "extra": "a/a $23.97 (under 21 plus $5) 7pm/8pm ^"
-        },
-        {
-          "venue": {
-            "text": "Cafe Du Nord, S.F.",
-            "href": "https://www.google.com/search?q=Cafe%20Du%20Nord%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Mark Vickness Interconnected",
-              "href": "https://open.spotify.com/search/Mark%20Vickness%20Interconnected"
-            }
-          ],
-          "extra": "21+ $43.75 6:30pm/7:30pm"
-        },
-        {
-          "venue": {
-            "text": "Chapel, S.F.",
-            "href": "https://www.google.com/search?q=Chapel%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Lady Wray",
-              "href": "https://open.spotify.com/search/Lady%20Wray"
-            },
-            {
-              "text": "Sextones",
-              "href": "https://open.spotify.com/search/Sextones"
-            },
-            {
-              "text": "dj Tylawave",
-              "href": "https://open.spotify.com/search/dj%20Tylawave"
-            }
-          ],
-          "extra": "a/a $37.11 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "China Basin Par, S.F.",
-            "href": "https://www.google.com/search?q=China%20Basin%20Par%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Jungle Fire",
-              "href": "https://open.spotify.com/search/Jungle%20Fire"
-            },
-            {
-              "text": "Sweet Lew",
-              "href": "https://open.spotify.com/search/Sweet%20Lew"
-            },
-            {
-              "text": "Bululu Latin Salsa dj Hey Love",
-              "href": "https://open.spotify.com/search/Bululu%20Latin%20Salsa%20dj%20Hey%20Love"
-            }
-          ],
-          "extra": "a/a $14.19 ($22.84 2 day)"
-        },
-        {
-          "venue": {
-            "text": "Civic Auditorium, S.F.",
-            "href": "https://www.google.com/search?q=Civic%20Auditorium%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Riize",
-              "href": "https://open.spotify.com/search/Riize"
-            }
-          ],
-          "extra": "a/a 6:30pm/7:30pm #"
-        },
-        {
-          "venue": {
-            "text": "Cornerstone, Berkeley",
-            "href": "https://www.google.com/search?q=Cornerstone%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "Jakobs Catle",
-              "href": "https://open.spotify.com/search/Jakobs%20Catle"
-            },
-            {
-              "text": "Strawberry Fuzz",
-              "href": "https://open.spotify.com/search/Strawberry%20Fuzz"
-            },
-            {
-              "text": "Strange Case",
-              "href": "https://open.spotify.com/search/Strange%20Case"
-            },
-            {
-              "text": "Happys",
-              "href": "https://open.spotify.com/search/Happys"
-            }
-          ],
-          "extra": "a/a 7pm/7:30pm"
-        },
-        {
-          "venue": {
-            "text": "DNA Lounge, S.F.",
-            "href": "https://www.google.com/search?q=DNA%20Lounge%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Silent Mass",
-              "href": "https://open.spotify.com/search/Silent%20Mass"
-            },
-            {
-              "text": "Tunnel",
-              "href": "https://open.spotify.com/search/Tunnel"
-            }
-          ],
-          "extra": "a/a $17/$24 7PM"
-        },
-        {
-          "venue": {
-            "text": "DNA Lounge, S.F.",
-            "href": "https://www.google.com/search?q=DNA%20Lounge%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Silent Mass",
-              "href": "https://open.spotify.com/search/Silent%20Mass"
-            },
-            {
-              "text": "Tunnel",
-              "href": "https://open.spotify.com/search/Tunnel"
-            },
-            {
-              "text": "Oraison",
-              "href": "https://open.spotify.com/search/Oraison"
-            },
-            {
-              "text": "Echo Death",
-              "href": "https://open.spotify.com/search/Echo%20Death"
-            }
-          ],
-          "extra": "a/a $17/$24 7pm"
-        },
-        {
-          "venue": {
-            "text": "Fillmore, S.F.",
-            "href": "https://www.google.com/search?q=Fillmore%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Beths",
-              "href": "https://open.spotify.com/search/Beths"
-            },
-            {
-              "text": "Phoebe Rings",
-              "href": "https://open.spotify.com/search/Phoebe%20Rings"
-            }
-          ],
-          "extra": "a/a $49.50 7pm/8pm #"
-        },
-        {
-          "venue": {
-            "text": "Fox Theater, Oakland",
-            "href": "https://www.google.com/search?q=Fox%20Theater%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Mora",
-              "href": "https://open.spotify.com/search/Mora"
-            }
-          ],
-          "extra": "a/a 8pm #"
-        },
-        {
-          "venue": {
-            "text": "Gray Area, S.F.",
-            "href": "https://www.google.com/search?q=Gray%20Area%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Dadabots",
-              "href": "https://open.spotify.com/search/Dadabots"
-            },
-            {
-              "text": "Lauren Sarah Hayes",
-              "href": "https://open.spotify.com/search/Lauren%20Sarah%20Hayes"
-            },
-            {
-              "text": "S'heels Gate",
-              "href": "https://open.spotify.com/search/S'heels%20Gate"
-            }
-          ],
-          "extra": "?/? $30-$20 ($50 pass) 7:30pm/8pm (electronic music)"
-        },
-        {
-          "venue": {
-            "text": "Guild Theater, Memlo Park",
-            "href": "https://www.google.com/search?q=Guild%20Theater%2C%20Memlo%20Park"
-          },
-          "bands": [
-            {
-              "text": "ZZ Top",
-              "href": "https://open.spotify.com/search/ZZ%20Top"
-            }
-          ],
-          "extra": "a/a (under 18 with parent) $266 ($338 mezzanine) 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Hopmonk Tavern, Novato",
-            "href": "https://www.google.com/search?q=Hopmonk%20Tavern%2C%20Novato"
-          },
-          "bands": [
-            {
-              "text": "Grant-Lee Phillips",
-              "href": "https://open.spotify.com/search/Grant-Lee%20Phillips"
-            },
-            {
-              "text": "Natalie Gelman",
-              "href": "https://open.spotify.com/search/Natalie%20Gelman"
-            }
-          ],
-          "extra": "a/a $48-$36 6pm/7pm"
-        },
-        {
-          "venue": {
-            "text": "Hopmonk Tavern, Sebastopol",
-            "href": "https://www.google.com/search?q=Hopmonk%20Tavern%2C%20Sebastopol"
-          },
-          "bands": [
-            {
-              "text": "Jonatha Brooke",
-              "href": "https://open.spotify.com/search/Jonatha%20Brooke"
-            }
-          ],
-          "extra": "21+ $65.39-$47.98 6pm/7pm"
-        },
-        {
-          "venue": {
-            "text": "Independent, S.F.",
-            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Pete Yorn",
-              "href": "https://open.spotify.com/search/Pete%20Yorn"
-            }
-          ],
-          "extra": "a/a 7:30pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Ivy Room, Albany",
-            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
-          },
-          "bands": [
-            {
-              "text": "Jeffrey Foucault",
-              "href": "https://open.spotify.com/search/Jeffrey%20Foucault"
-            },
-            {
-              "text": "Erik Koskinen",
-              "href": "https://open.spotify.com/search/Erik%20Koskinen"
-            },
-            {
-              "text": "Marco Baroz",
-              "href": "https://open.spotify.com/search/Marco%20Baroz"
-            }
-          ],
-          "extra": "21+ $25.28+ 6pm/7pm"
-        },
-        {
-          "venue": {
-            "text": "Kilowatt, S.F.",
-            "href": "https://www.google.com/search?q=Kilowatt%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Morrison Graves",
-              "href": "https://open.spotify.com/search/Morrison%20Graves"
-            }
-          ],
-          "extra": "21+"
-        },
-        {
-          "venue": {
-            "text": "Knockout, S.F.",
-            "href": "https://www.google.com/search?q=Knockout%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Billy King & The Bad Bad Bad",
-              "href": "https://open.spotify.com/search/Billy%20King%20%26%20The%20Bad%20Bad%20Bad"
-            },
-            {
-              "text": "Spectre",
-              "href": "https://open.spotify.com/search/Spectre"
-            },
-            {
-              "text": "37 Houses",
-              "href": "https://open.spotify.com/search/37%20Houses"
-            }
-          ],
-          "extra": "21+ $10/$15 5pm/6pm"
-        },
-        {
-          "venue": {
-            "text": "Neck of the Woods, S.F.",
-            "href": "https://www.google.com/search?q=Neck%20of%20the%20Woods%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Entheos",
-              "href": "https://open.spotify.com/search/Entheos"
-            },
-            {
-              "text": "Fallujah",
-              "href": "https://open.spotify.com/search/Fallujah"
-            },
-            {
-              "text": "Zenith Passage",
-              "href": "https://open.spotify.com/search/Zenith%20Passage"
-            },
-            {
-              "text": "Tracheotomy",
-              "href": "https://open.spotify.com/search/Tracheotomy"
-            }
-          ],
-          "extra": "a/a $25/$30 6pm/7pm @"
-        },
-        {
-          "venue": {
-            "text": "Oakland Secret Gallery, Oakland",
-            "href": "https://www.google.com/search?q=Oakland%20Secret%20Gallery%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Godot",
-              "href": "https://open.spotify.com/search/Godot"
-            },
-            {
-              "text": "Vanished",
-              "href": "https://open.spotify.com/search/Vanished"
-            },
-            {
-              "text": "Baby On A Rampage",
-              "href": "https://open.spotify.com/search/Baby%20On%20A%20Rampage"
-            },
-            {
-              "text": "Ick",
-              "href": "https://open.spotify.com/search/Ick"
-            }
-          ],
-          "extra": "a/a $10-$15 Sliding Scale 7pm"
-        },
-        {
-          "venue": {
-            "text": "Rickshaw Stop, S.F.",
-            "href": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Orlas",
-              "href": "https://open.spotify.com/search/Orlas"
-            },
-            {
-              "text": "Loco Tranquilo",
-              "href": "https://open.spotify.com/search/Loco%20Tranquilo"
-            }
-          ],
-          "extra": "a/a $17/$20 7pm/7:45pm"
-        },
-        {
-          "venue": {
-            "text": "Streetlight Records, Santa Cruz",
-            "href": "https://www.google.com/search?q=Streetlight%20Records%2C%20Santa%20Cruz"
-          },
-          "bands": [
-            {
-              "text": "Apricot Court",
-              "href": "https://open.spotify.com/search/Apricot%20Court"
-            }
-          ],
-          "extra": "a/a free 3pm til 4pm"
-        },
-        {
-          "venue": {
-            "text": "Subrosa Community Space, Santa Cruz",
-            "href": "https://www.google.com/search?q=Subrosa%20Community%20Space%2C%20Santa%20Cruz"
-          },
-          "bands": [
-            {
-              "text": "Lovefield",
-              "href": "https://open.spotify.com/search/Lovefield"
-            },
-            {
-              "text": "Little Critter",
-              "href": "https://open.spotify.com/search/Little%20Critter"
-            },
-            {
-              "text": "Kilroy Rogers",
-              "href": "https://open.spotify.com/search/Kilroy%20Rogers"
-            }
-          ],
-          "extra": "a/a $10 7pm"
-        },
-        {
-          "venue": {
-            "text": "Thee Stork Club, Oakland",
-            "href": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Badvril",
-              "href": "https://open.spotify.com/search/Badvril"
-            },
-            {
-              "text": "Blair Gun",
-              "href": "https://open.spotify.com/search/Blair%20Gun"
-            },
-            {
-              "text": "Junebug",
-              "href": "https://open.spotify.com/search/Junebug"
-            }
-          ],
-          "extra": "21+ $10/$12 8pm"
-        },
-        {
-          "venue": {
-            "text": "Thrillhouse Records, S.F.",
-            "href": "https://www.google.com/search?q=Thrillhouse%20Records%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Croissant",
-              "href": "https://open.spotify.com/search/Croissant"
-            },
-            {
-              "text": "Fan Club",
-              "href": "https://open.spotify.com/search/Fan%20Club"
-            },
-            {
-              "text": "Warning",
-              "href": "https://open.spotify.com/search/Warning"
-            },
-            {
-              "text": "Total Dysfunction",
-              "href": "https://open.spotify.com/search/Total%20Dysfunction"
-            }
-          ],
-          "extra": "a/a $10 3pm"
-        },
-        {
-          "venue": {
-            "text": "Uptown Theater, Napa",
-            "href": "https://www.google.com/search?q=Uptown%20Theater%2C%20Napa"
-          },
-          "bands": [
-            {
-              "text": "Lukas Nelson",
-              "href": "https://open.spotify.com/search/Lukas%20Nelson"
-            }
-          ],
-          "extra": "12+ (under 16 with adult) 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Warfield, S.F.",
-            "href": "https://www.google.com/search?q=Warfield%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Freddie Gibbs & The Alchemist",
-              "href": "https://open.spotify.com/search/Freddie%20Gibbs%20%26%20The%20Alchemist"
-            },
-            {
-              "text": "Mavi",
-              "href": "https://open.spotify.com/search/Mavi"
-            },
-            {
-              "text": "Sven Wunder",
-              "href": "https://open.spotify.com/search/Sven%20Wunder"
-            }
-          ],
-          "extra": "a/a 7pm/8pm #"
-        },
-        {
-          "venue": {
-            "text": "Winters Tavern, Pacifica",
-            "href": "https://www.google.com/search?q=Winters%20Tavern%2C%20Pacifica"
-          },
-          "bands": [
-            {
-              "text": "Above The Embers",
-              "href": "https://open.spotify.com/search/Above%20The%20Embers"
-            },
-            {
-              "text": "Travis Geyer",
-              "href": "https://open.spotify.com/search/Travis%20Geyer"
-            },
-            {
-              "text": "Outlaws In The Golden State",
-              "href": "https://open.spotify.com/search/Outlaws%20In%20The%20Golden%20State"
-            },
-            {
-              "text": "Zuma Drive All Stars",
-              "href": "https://open.spotify.com/search/Zuma%20Drive%20All%20Stars"
-            },
-            {
-              "text": "Great Disappointment",
-              "href": "https://open.spotify.com/search/Great%20Disappointment"
-            },
-            {
-              "text": "BanjerDan",
-              "href": "https://open.spotify.com/search/BanjerDan"
-            }
-          ],
-          "extra": "21+ 1pm"
-        }
-      ]
-    },
-    {
       "day": "Mon Nov 10",
       "normalizedDate": "2025-11-10",
       "events": [
@@ -2628,10 +2013,6 @@
           },
           "bands": [
             {
-              "text": "Present",
-              "href": "https://open.spotify.com/search/Present"
-            },
-            {
               "text": "Giveaway",
               "href": "https://open.spotify.com/search/Giveaway"
             },
@@ -3272,19 +2653,6 @@
             }
           ],
           "extra": "a/a $14 8pm/8:30pm"
-        },
-        {
-          "venue": {
-            "text": "Next Record Store, 1899 Mendocino Avenue, Santa Rosa",
-            "href": "https://www.google.com/search?q=Next%20Record%20Store%2C%201899%20Mendocino%20Avenue%2C%20Santa%20Rosa"
-          },
-          "bands": [
-            {
-              "text": "film screening \"Your Friend Logan\"",
-              "href": "https://open.spotify.com/search/film%20screening%20%22Your%20Friend%20Logan%22"
-            }
-          ],
-          "extra": "a/a $12 8pm"
         },
         {
           "venue": {
@@ -3980,10 +3348,6 @@
             {
               "text": "William Shatner",
               "href": "https://open.spotify.com/search/William%20Shatner"
-            },
-            {
-              "text": "screening of \"Star Trek II: The Wrath of Khan\"",
-              "href": "https://open.spotify.com/search/screening%20of%20%22Star%20Trek%20II%3A%20The%20Wrath%20of%20Khan%22"
             }
           ],
           "extra": "12+ (under 16 with adult) 6:30pm/7:30pm"
@@ -4911,19 +4275,6 @@
             }
           ],
           "extra": "21+ $12/$15 7pm/7:30pm"
-        },
-        {
-          "venue": {
-            "text": "Phoenix Theater, Petaluma",
-            "href": "https://www.google.com/search?q=Phoenix%20Theater%2C%20Petaluma"
-          },
-          "bands": [
-            {
-              "text": "film screening \"Learning to be Naked\"",
-              "href": "https://open.spotify.com/search/film%20screening%20%22Learning%20to%20be%20Naked%22"
-            }
-          ],
-          "extra": "a/a $15.47 7pm/7:30pm"
         },
         {
           "venue": {
@@ -6231,19 +5582,6 @@
       "day": "Sun Nov 23",
       "normalizedDate": "2025-11-23",
       "events": [
-        {
-          "venue": {
-            "text": "924 Gilman Street, Berkeley",
-            "href": "https://www.google.com/search?q=924%20Gilman%20Street%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "Karaoke",
-              "href": "https://open.spotify.com/search/Karaoke"
-            }
-          ],
-          "extra": "a/a $5 7pm"
-        },
         {
           "venue": {
             "text": "August Hall, S.F.",
@@ -11636,7 +10974,7 @@
     },
     {
       "day": "Fri Jan 2",
-      "normalizedDate": "2025-01-02",
+      "normalizedDate": "2026-01-02",
       "events": [
         {
           "venue": {
@@ -11667,7 +11005,7 @@
     },
     {
       "day": "Sat Jan 3",
-      "normalizedDate": "2025-01-03",
+      "normalizedDate": "2026-01-03",
       "events": [
         {
           "venue": {
@@ -11737,7 +11075,7 @@
     },
     {
       "day": "Mon Jan 5",
-      "normalizedDate": "2025-01-05",
+      "normalizedDate": "2026-01-05",
       "events": [
         {
           "venue": {
@@ -11756,7 +11094,7 @@
     },
     {
       "day": "Tue Jan 6",
-      "normalizedDate": "2025-01-06",
+      "normalizedDate": "2026-01-06",
       "events": [
         {
           "venue": {
@@ -11788,7 +11126,7 @@
     },
     {
       "day": "Wed Jan 7",
-      "normalizedDate": "2025-01-07",
+      "normalizedDate": "2026-01-07",
       "events": [
         {
           "venue": {
@@ -11807,7 +11145,7 @@
     },
     {
       "day": "Thu Jan 8",
-      "normalizedDate": "2025-01-08",
+      "normalizedDate": "2026-01-08",
       "events": [
         {
           "venue": {
@@ -11843,7 +11181,7 @@
     },
     {
       "day": "Fri Jan 9",
-      "normalizedDate": "2025-01-09",
+      "normalizedDate": "2026-01-09",
       "events": [
         {
           "venue": {
@@ -11914,7 +11252,7 @@
     },
     {
       "day": "Sat Jan 10",
-      "normalizedDate": "2025-01-10",
+      "normalizedDate": "2026-01-10",
       "events": [
         {
           "venue": {
@@ -12072,7 +11410,7 @@
     },
     {
       "day": "Mon Jan 12",
-      "normalizedDate": "2025-01-12",
+      "normalizedDate": "2026-01-12",
       "events": [
         {
           "venue": {
@@ -12099,7 +11437,7 @@
     },
     {
       "day": "Wed Jan 14",
-      "normalizedDate": "2025-01-14",
+      "normalizedDate": "2026-01-14",
       "events": [
         {
           "venue": {
@@ -12131,7 +11469,7 @@
     },
     {
       "day": "Thu Jan 15",
-      "normalizedDate": "2025-01-15",
+      "normalizedDate": "2026-01-15",
       "events": [
         {
           "venue": {
@@ -12150,7 +11488,7 @@
     },
     {
       "day": "Fri Jan 16",
-      "normalizedDate": "2025-01-16",
+      "normalizedDate": "2026-01-16",
       "events": [
         {
           "venue": {
@@ -12229,7 +11567,7 @@
     },
     {
       "day": "Sat Jan 17",
-      "normalizedDate": "2025-01-17",
+      "normalizedDate": "2026-01-17",
       "events": [
         {
           "venue": {
@@ -12329,7 +11667,7 @@
     },
     {
       "day": "Sun Jan 18",
-      "normalizedDate": "2025-01-18",
+      "normalizedDate": "2026-01-18",
       "events": [
         {
           "venue": {
@@ -12441,7 +11779,7 @@
     },
     {
       "day": "Tue Jan 20",
-      "normalizedDate": "2025-01-20",
+      "normalizedDate": "2026-01-20",
       "events": [
         {
           "venue": {
@@ -12473,7 +11811,7 @@
     },
     {
       "day": "Wed Jan 21",
-      "normalizedDate": "2025-01-21",
+      "normalizedDate": "2026-01-21",
       "events": [
         {
           "venue": {
@@ -12509,7 +11847,7 @@
     },
     {
       "day": "Fri Jan 23",
-      "normalizedDate": "2025-01-23",
+      "normalizedDate": "2026-01-23",
       "events": [
         {
           "venue": {
@@ -12614,7 +11952,7 @@
     },
     {
       "day": "Sat Jan 24",
-      "normalizedDate": "2025-01-24",
+      "normalizedDate": "2026-01-24",
       "events": [
         {
           "venue": {
@@ -12833,7 +12171,7 @@
     },
     {
       "day": "Sun Jan 25",
-      "normalizedDate": "2025-01-25",
+      "normalizedDate": "2026-01-25",
       "events": [
         {
           "venue": {
@@ -12882,7 +12220,7 @@
     },
     {
       "day": "Mon Jan 26",
-      "normalizedDate": "2025-01-26",
+      "normalizedDate": "2026-01-26",
       "events": [
         {
           "venue": {
@@ -12901,7 +12239,7 @@
     },
     {
       "day": "Tue Jan 27",
-      "normalizedDate": "2025-01-27",
+      "normalizedDate": "2026-01-27",
       "events": [
         {
           "venue": {
@@ -12958,7 +12296,7 @@
     },
     {
       "day": "Wed Jan 28",
-      "normalizedDate": "2025-01-28",
+      "normalizedDate": "2026-01-28",
       "events": [
         {
           "venue": {
@@ -13045,7 +12383,7 @@
     },
     {
       "day": "Thu Jan 29",
-      "normalizedDate": "2025-01-29",
+      "normalizedDate": "2026-01-29",
       "events": [
         {
           "venue": {
@@ -13077,7 +12415,7 @@
     },
     {
       "day": "Fri Jan 30",
-      "normalizedDate": "2025-01-30",
+      "normalizedDate": "2026-01-30",
       "events": [
         {
           "venue": {
@@ -13152,7 +12490,7 @@
     },
     {
       "day": "Sat Jan 31",
-      "normalizedDate": "2025-01-31",
+      "normalizedDate": "2026-01-31",
       "events": [
         {
           "venue": {
@@ -13230,7 +12568,7 @@
     },
     {
       "day": "Sun Feb 1",
-      "normalizedDate": "2025-02-01",
+      "normalizedDate": "2026-02-01",
       "events": [
         {
           "venue": {
@@ -13262,7 +12600,7 @@
     },
     {
       "day": "Mon Feb 2",
-      "normalizedDate": "2025-02-02",
+      "normalizedDate": "2026-02-02",
       "events": [
         {
           "venue": {
@@ -13302,7 +12640,7 @@
     },
     {
       "day": "Tue Feb 3",
-      "normalizedDate": "2025-02-03",
+      "normalizedDate": "2026-02-03",
       "events": [
         {
           "venue": {
@@ -13364,7 +12702,7 @@
     },
     {
       "day": "Wed Feb 4",
-      "normalizedDate": "2025-02-04",
+      "normalizedDate": "2026-02-04",
       "events": [
         {
           "venue": {
@@ -13413,7 +12751,7 @@
     },
     {
       "day": "Thu Feb 5",
-      "normalizedDate": "2025-02-05",
+      "normalizedDate": "2026-02-05",
       "events": [
         {
           "venue": {
@@ -13466,7 +12804,7 @@
     },
     {
       "day": "Fri Feb 6",
-      "normalizedDate": "2025-02-06",
+      "normalizedDate": "2026-02-06",
       "events": [
         {
           "venue": {
@@ -13485,7 +12823,7 @@
     },
     {
       "day": "Sat Feb 7",
-      "normalizedDate": "2025-02-07",
+      "normalizedDate": "2026-02-07",
       "events": [
         {
           "venue": {
@@ -13563,7 +12901,7 @@
     },
     {
       "day": "Sun Feb 8",
-      "normalizedDate": "2025-02-08",
+      "normalizedDate": "2026-02-08",
       "events": [
         {
           "venue": {
@@ -13586,7 +12924,7 @@
     },
     {
       "day": "Mon Feb 9",
-      "normalizedDate": "2025-02-09",
+      "normalizedDate": "2026-02-09",
       "events": [
         {
           "venue": {
@@ -13635,7 +12973,7 @@
     },
     {
       "day": "Tue Feb 10",
-      "normalizedDate": "2025-02-10",
+      "normalizedDate": "2026-02-10",
       "events": [
         {
           "venue": {
@@ -13680,7 +13018,7 @@
     },
     {
       "day": "Wed Feb 11",
-      "normalizedDate": "2025-02-11",
+      "normalizedDate": "2026-02-11",
       "events": [
         {
           "venue": {
@@ -13733,7 +13071,7 @@
     },
     {
       "day": "Fri Feb 13",
-      "normalizedDate": "2025-02-13",
+      "normalizedDate": "2026-02-13",
       "events": [
         {
           "venue": {
@@ -13868,7 +13206,7 @@
     },
     {
       "day": "Sat Feb 14",
-      "normalizedDate": "2025-02-14",
+      "normalizedDate": "2026-02-14",
       "events": [
         {
           "venue": {
@@ -14013,7 +13351,7 @@
     },
     {
       "day": "Sun Feb 15",
-      "normalizedDate": "2025-02-15",
+      "normalizedDate": "2026-02-15",
       "events": [
         {
           "venue": {
@@ -14078,7 +13416,7 @@
     },
     {
       "day": "Tue Feb 17",
-      "normalizedDate": "2025-02-17",
+      "normalizedDate": "2026-02-17",
       "events": [
         {
           "venue": {
@@ -14188,7 +13526,7 @@
     },
     {
       "day": "Wed Feb 18",
-      "normalizedDate": "2025-02-18",
+      "normalizedDate": "2026-02-18",
       "events": [
         {
           "venue": {
@@ -14263,7 +13601,7 @@
     },
     {
       "day": "Thu Feb 19",
-      "normalizedDate": "2025-02-19",
+      "normalizedDate": "2026-02-19",
       "events": [
         {
           "venue": {
@@ -14351,7 +13689,7 @@
     },
     {
       "day": "Fri Feb 20",
-      "normalizedDate": "2025-02-20",
+      "normalizedDate": "2026-02-20",
       "events": [
         {
           "venue": {
@@ -14495,7 +13833,7 @@
     },
     {
       "day": "Sat Feb 21",
-      "normalizedDate": "2025-02-21",
+      "normalizedDate": "2026-02-21",
       "events": [
         {
           "venue": {
@@ -14659,7 +13997,7 @@
     },
     {
       "day": "Sun Feb 22",
-      "normalizedDate": "2025-02-22",
+      "normalizedDate": "2026-02-22",
       "events": [
         {
           "venue": {
@@ -14717,7 +14055,7 @@
     },
     {
       "day": "Mon Feb 23",
-      "normalizedDate": "2025-02-23",
+      "normalizedDate": "2026-02-23",
       "events": [
         {
           "venue": {
@@ -14744,7 +14082,7 @@
     },
     {
       "day": "Tue Feb 24",
-      "normalizedDate": "2025-02-24",
+      "normalizedDate": "2026-02-24",
       "events": [
         {
           "venue": {
@@ -14836,7 +14174,7 @@
     },
     {
       "day": "Wed Feb 25",
-      "normalizedDate": "2025-02-25",
+      "normalizedDate": "2026-02-25",
       "events": [
         {
           "venue": {
@@ -14894,7 +14232,7 @@
     },
     {
       "day": "Thu Feb 26",
-      "normalizedDate": "2025-02-26",
+      "normalizedDate": "2026-02-26",
       "events": [
         {
           "venue": {
@@ -15033,7 +14371,7 @@
     },
     {
       "day": "Fri Feb 27",
-      "normalizedDate": "2025-02-27",
+      "normalizedDate": "2026-02-27",
       "events": [
         {
           "venue": {
@@ -15245,7 +14583,7 @@
     },
     {
       "day": "Sat Feb 28",
-      "normalizedDate": "2025-02-28",
+      "normalizedDate": "2026-02-28",
       "events": [
         {
           "venue": {
@@ -15384,7 +14722,7 @@
     },
     {
       "day": "Sun Mar 1",
-      "normalizedDate": "2025-03-01",
+      "normalizedDate": "2026-03-01",
       "events": [
         {
           "venue": {
@@ -15429,7 +14767,7 @@
     },
     {
       "day": "Mon Mar 2",
-      "normalizedDate": "2025-03-02",
+      "normalizedDate": "2026-03-02",
       "events": [
         {
           "venue": {
@@ -15448,7 +14786,7 @@
     },
     {
       "day": "Tue Mar 3",
-      "normalizedDate": "2025-03-03",
+      "normalizedDate": "2026-03-03",
       "events": [
         {
           "venue": {
@@ -15553,7 +14891,7 @@
     },
     {
       "day": "Wed Mar 4",
-      "normalizedDate": "2025-03-04",
+      "normalizedDate": "2026-03-04",
       "events": [
         {
           "venue": {
@@ -15606,7 +14944,7 @@
     },
     {
       "day": "Thu Mar 5",
-      "normalizedDate": "2025-03-05",
+      "normalizedDate": "2026-03-05",
       "events": [
         {
           "venue": {
@@ -15668,7 +15006,7 @@
     },
     {
       "day": "Fri Mar 6",
-      "normalizedDate": "2025-03-06",
+      "normalizedDate": "2026-03-06",
       "events": [
         {
           "venue": {
@@ -15807,7 +15145,7 @@
     },
     {
       "day": "Sat Mar 7",
-      "normalizedDate": "2025-03-07",
+      "normalizedDate": "2026-03-07",
       "events": [
         {
           "venue": {
@@ -15925,7 +15263,7 @@
     },
     {
       "day": "Sun Mar 8",
-      "normalizedDate": "2025-03-08",
+      "normalizedDate": "2026-03-08",
       "events": [
         {
           "venue": {
@@ -15944,7 +15282,7 @@
     },
     {
       "day": "Mon Mar 9",
-      "normalizedDate": "2025-03-09",
+      "normalizedDate": "2026-03-09",
       "events": [
         {
           "venue": {
@@ -15963,7 +15301,7 @@
     },
     {
       "day": "Tue Mar 10",
-      "normalizedDate": "2025-03-10",
+      "normalizedDate": "2026-03-10",
       "events": [
         {
           "venue": {
@@ -16012,7 +15350,7 @@
     },
     {
       "day": "Wed Mar 11",
-      "normalizedDate": "2025-03-11",
+      "normalizedDate": "2026-03-11",
       "events": [
         {
           "venue": {
@@ -16070,7 +15408,7 @@
     },
     {
       "day": "Thu Mar 12",
-      "normalizedDate": "2025-03-12",
+      "normalizedDate": "2026-03-12",
       "events": [
         {
           "venue": {
@@ -16132,7 +15470,7 @@
     },
     {
       "day": "Fri Mar 13",
-      "normalizedDate": "2025-03-13",
+      "normalizedDate": "2026-03-13",
       "events": [
         {
           "venue": {
@@ -16177,7 +15515,7 @@
     },
     {
       "day": "Sat Mar 14",
-      "normalizedDate": "2025-03-14",
+      "normalizedDate": "2026-03-14",
       "events": [
         {
           "venue": {
@@ -16235,7 +15573,7 @@
     },
     {
       "day": "Sun Mar 15",
-      "normalizedDate": "2025-03-15",
+      "normalizedDate": "2026-03-15",
       "events": [
         {
           "venue": {
@@ -16288,7 +15626,7 @@
     },
     {
       "day": "Tue Mar 17",
-      "normalizedDate": "2025-03-17",
+      "normalizedDate": "2026-03-17",
       "events": [
         {
           "venue": {
@@ -16320,7 +15658,7 @@
     },
     {
       "day": "Wed Mar 18",
-      "normalizedDate": "2025-03-18",
+      "normalizedDate": "2026-03-18",
       "events": [
         {
           "venue": {
@@ -16382,7 +15720,7 @@
     },
     {
       "day": "Thu Mar 19",
-      "normalizedDate": "2025-03-19",
+      "normalizedDate": "2026-03-19",
       "events": [
         {
           "venue": {
@@ -16427,7 +15765,7 @@
     },
     {
       "day": "Fri Mar 20",
-      "normalizedDate": "2025-03-20",
+      "normalizedDate": "2026-03-20",
       "events": [
         {
           "venue": {
@@ -16502,7 +15840,7 @@
     },
     {
       "day": "Sat Mar 21",
-      "normalizedDate": "2025-03-21",
+      "normalizedDate": "2026-03-21",
       "events": [
         {
           "venue": {
@@ -16637,7 +15975,7 @@
     },
     {
       "day": "Sun Mar 22",
-      "normalizedDate": "2025-03-22",
+      "normalizedDate": "2026-03-22",
       "events": [
         {
           "venue": {
@@ -16690,7 +16028,7 @@
     },
     {
       "day": "Mon Mar 23",
-      "normalizedDate": "2025-03-23",
+      "normalizedDate": "2026-03-23",
       "events": [
         {
           "venue": {
@@ -16735,7 +16073,7 @@
     },
     {
       "day": "Tue Mar 24",
-      "normalizedDate": "2025-03-24",
+      "normalizedDate": "2026-03-24",
       "events": [
         {
           "venue": {
@@ -16801,7 +16139,7 @@
     },
     {
       "day": "Wed Mar 25",
-      "normalizedDate": "2025-03-25",
+      "normalizedDate": "2026-03-25",
       "events": [
         {
           "venue": {
@@ -16867,7 +16205,7 @@
     },
     {
       "day": "Thu Mar 26",
-      "normalizedDate": "2025-03-26",
+      "normalizedDate": "2026-03-26",
       "events": [
         {
           "venue": {
@@ -16912,7 +16250,7 @@
     },
     {
       "day": "Fri Mar 27",
-      "normalizedDate": "2025-03-27",
+      "normalizedDate": "2026-03-27",
       "events": [
         {
           "venue": {
@@ -17029,7 +16367,7 @@
     },
     {
       "day": "Sat Mar 28",
-      "normalizedDate": "2025-03-28",
+      "normalizedDate": "2026-03-28",
       "events": [
         {
           "venue": {
@@ -17048,7 +16386,7 @@
     },
     {
       "day": "Sun Mar 29",
-      "normalizedDate": "2025-03-29",
+      "normalizedDate": "2026-03-29",
       "events": [
         {
           "venue": {
@@ -17093,7 +16431,7 @@
     },
     {
       "day": "Mon Mar 30",
-      "normalizedDate": "2025-03-30",
+      "normalizedDate": "2026-03-30",
       "events": [
         {
           "venue": {
@@ -17116,7 +16454,7 @@
     },
     {
       "day": "Tue Mar 31",
-      "normalizedDate": "2025-03-31",
+      "normalizedDate": "2026-03-31",
       "events": [
         {
           "venue": {
@@ -17156,7 +16494,7 @@
     },
     {
       "day": "Wed Apr 1",
-      "normalizedDate": "2025-04-01",
+      "normalizedDate": "2026-04-01",
       "events": [
         {
           "venue": {
@@ -17209,7 +16547,7 @@
     },
     {
       "day": "Thu Apr 2",
-      "normalizedDate": "2025-04-02",
+      "normalizedDate": "2026-04-02",
       "events": [
         {
           "venue": {
@@ -17228,7 +16566,7 @@
     },
     {
       "day": "Fri Apr 3",
-      "normalizedDate": "2025-04-03",
+      "normalizedDate": "2026-04-03",
       "events": [
         {
           "venue": {
@@ -17320,7 +16658,7 @@
     },
     {
       "day": "Sat Apr 4",
-      "normalizedDate": "2025-04-04",
+      "normalizedDate": "2026-04-04",
       "events": [
         {
           "venue": {
@@ -17377,7 +16715,7 @@
     },
     {
       "day": "Mon Apr 6",
-      "normalizedDate": "2025-04-06",
+      "normalizedDate": "2026-04-06",
       "events": [
         {
           "venue": {
@@ -17426,7 +16764,7 @@
     },
     {
       "day": "Tue Apr 7",
-      "normalizedDate": "2025-04-07",
+      "normalizedDate": "2026-04-07",
       "events": [
         {
           "venue": {
@@ -17479,7 +16817,7 @@
     },
     {
       "day": "Wed Apr 8",
-      "normalizedDate": "2025-04-08",
+      "normalizedDate": "2026-04-08",
       "events": [
         {
           "venue": {
@@ -17498,7 +16836,7 @@
     },
     {
       "day": "Thu Apr 9",
-      "normalizedDate": "2025-04-09",
+      "normalizedDate": "2026-04-09",
       "events": [
         {
           "venue": {
@@ -17534,7 +16872,7 @@
     },
     {
       "day": "Sat Apr 11",
-      "normalizedDate": "2025-04-11",
+      "normalizedDate": "2026-04-11",
       "events": [
         {
           "venue": {
@@ -17566,7 +16904,7 @@
     },
     {
       "day": "Sun Apr 12",
-      "normalizedDate": "2025-04-12",
+      "normalizedDate": "2026-04-12",
       "events": [
         {
           "venue": {
@@ -17585,7 +16923,7 @@
     },
     {
       "day": "Tue Apr 14",
-      "normalizedDate": "2025-04-14",
+      "normalizedDate": "2026-04-14",
       "events": [
         {
           "venue": {
@@ -17604,7 +16942,7 @@
     },
     {
       "day": "Wed Apr 15",
-      "normalizedDate": "2025-04-15",
+      "normalizedDate": "2026-04-15",
       "events": [
         {
           "venue": {
@@ -17627,7 +16965,7 @@
     },
     {
       "day": "Thu Apr 16",
-      "normalizedDate": "2025-04-16",
+      "normalizedDate": "2026-04-16",
       "events": [
         {
           "venue": {
@@ -17654,7 +16992,7 @@
     },
     {
       "day": "Fri Apr 17",
-      "normalizedDate": "2025-04-17",
+      "normalizedDate": "2026-04-17",
       "events": [
         {
           "venue": {
@@ -17707,7 +17045,7 @@
     },
     {
       "day": "Sat Apr 18",
-      "normalizedDate": "2025-04-18",
+      "normalizedDate": "2026-04-18",
       "events": [
         {
           "venue": {
@@ -17752,7 +17090,7 @@
     },
     {
       "day": "Sun Apr 19",
-      "normalizedDate": "2025-04-19",
+      "normalizedDate": "2026-04-19",
       "events": [
         {
           "venue": {
@@ -17771,7 +17109,7 @@
     },
     {
       "day": "Wed Apr 22",
-      "normalizedDate": "2025-04-22",
+      "normalizedDate": "2026-04-22",
       "events": [
         {
           "venue": {
@@ -17811,7 +17149,7 @@
     },
     {
       "day": "Fri Apr 24",
-      "normalizedDate": "2025-04-24",
+      "normalizedDate": "2026-04-24",
       "events": [
         {
           "venue": {
@@ -17834,7 +17172,7 @@
     },
     {
       "day": "Sat Apr 25",
-      "normalizedDate": "2025-04-25",
+      "normalizedDate": "2026-04-25",
       "events": [
         {
           "venue": {
@@ -17870,7 +17208,7 @@
     },
     {
       "day": "Sun Apr 26",
-      "normalizedDate": "2025-04-26",
+      "normalizedDate": "2026-04-26",
       "events": [
         {
           "venue": {
@@ -17902,7 +17240,7 @@
     },
     {
       "day": "Tue Apr 28",
-      "normalizedDate": "2025-04-28",
+      "normalizedDate": "2026-04-28",
       "events": [
         {
           "venue": {
@@ -17921,7 +17259,7 @@
     },
     {
       "day": "Wed Apr 29",
-      "normalizedDate": "2025-04-29",
+      "normalizedDate": "2026-04-29",
       "events": [
         {
           "venue": {
@@ -17970,7 +17308,7 @@
     },
     {
       "day": "Thu Apr 30",
-      "normalizedDate": "2025-04-30",
+      "normalizedDate": "2026-04-30",
       "events": [
         {
           "venue": {
@@ -18023,7 +17361,7 @@
     },
     {
       "day": "Fri May 1",
-      "normalizedDate": "2025-05-01",
+      "normalizedDate": "2026-05-01",
       "events": [
         {
           "venue": {
@@ -18042,7 +17380,7 @@
     },
     {
       "day": "Sun May 3",
-      "normalizedDate": "2025-05-03",
+      "normalizedDate": "2026-05-03",
       "events": [
         {
           "venue": {
@@ -18091,7 +17429,7 @@
     },
     {
       "day": "Mon May 4",
-      "normalizedDate": "2025-05-04",
+      "normalizedDate": "2026-05-04",
       "events": [
         {
           "venue": {
@@ -18110,7 +17448,7 @@
     },
     {
       "day": "Tue May 5",
-      "normalizedDate": "2025-05-05",
+      "normalizedDate": "2026-05-05",
       "events": [
         {
           "venue": {
@@ -18129,7 +17467,7 @@
     },
     {
       "day": "Sat May 9",
-      "normalizedDate": "2025-05-09",
+      "normalizedDate": "2026-05-09",
       "events": [
         {
           "venue": {
@@ -18148,7 +17486,7 @@
     },
     {
       "day": "Sun May 10",
-      "normalizedDate": "2025-05-10",
+      "normalizedDate": "2026-05-10",
       "events": [
         {
           "venue": {
@@ -18175,7 +17513,7 @@
     },
     {
       "day": "Mon May 11",
-      "normalizedDate": "2025-05-11",
+      "normalizedDate": "2026-05-11",
       "events": [
         {
           "venue": {
@@ -18215,7 +17553,7 @@
     },
     {
       "day": "Wed May 13",
-      "normalizedDate": "2025-05-13",
+      "normalizedDate": "2026-05-13",
       "events": [
         {
           "venue": {
@@ -18242,7 +17580,7 @@
     },
     {
       "day": "Thu May 14",
-      "normalizedDate": "2025-05-14",
+      "normalizedDate": "2026-05-14",
       "events": [
         {
           "venue": {
@@ -18261,7 +17599,7 @@
     },
     {
       "day": "Fri May 15",
-      "normalizedDate": "2025-05-15",
+      "normalizedDate": "2026-05-15",
       "events": [
         {
           "venue": {
@@ -18352,7 +17690,7 @@
     },
     {
       "day": "Sat May 16",
-      "normalizedDate": "2025-05-16",
+      "normalizedDate": "2026-05-16",
       "events": [
         {
           "venue": {
@@ -18371,7 +17709,7 @@
     },
     {
       "day": "Mon May 18",
-      "normalizedDate": "2025-05-18",
+      "normalizedDate": "2026-05-18",
       "events": [
         {
           "venue": {
@@ -18390,7 +17728,7 @@
     },
     {
       "day": "Tue May 19",
-      "normalizedDate": "2025-05-19",
+      "normalizedDate": "2026-05-19",
       "events": [
         {
           "venue": {
@@ -18409,7 +17747,7 @@
     },
     {
       "day": "Wed May 20",
-      "normalizedDate": "2025-05-20",
+      "normalizedDate": "2026-05-20",
       "events": [
         {
           "venue": {
@@ -18428,7 +17766,7 @@
     },
     {
       "day": "Fri May 22",
-      "normalizedDate": "2025-05-22",
+      "normalizedDate": "2026-05-22",
       "events": [
         {
           "venue": {
@@ -18447,7 +17785,7 @@
     },
     {
       "day": "Wed May 27",
-      "normalizedDate": "2025-05-27",
+      "normalizedDate": "2026-05-27",
       "events": [
         {
           "venue": {
@@ -18470,7 +17808,7 @@
     },
     {
       "day": "Sat Jun 6",
-      "normalizedDate": "2025-06-06",
+      "normalizedDate": "2026-06-06",
       "events": [
         {
           "venue": {

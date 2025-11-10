@@ -3,16 +3,60 @@ import Layout from "../../layouts/Layout.astro";
 import { Card } from "../../components/ui/card";
 import { CardContent } from "../../components/ui/card";
 import artists from "../../data/artists.json";
+import concerts from "../../data/calendar.json";
 
-// sort artists alphabetically
-const sortedArtists = artists.artists.sort((a, b) =>
-  a.name.localeCompare(b.name),
-);
+// helper to normalize text (remove special characters, lowercase)
+function normalizeText(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .trim();
+}
+
+// get upcoming shows only
+const today = new Date();
+const todayISOString =
+  today.getFullYear() +
+  "-" +
+  String(today.getMonth() + 1).padStart(2, "0") +
+  "-" +
+  String(today.getDate()).padStart(2, "0");
+
+// sort artists alphabetically and add upcoming shows info, filter to only artists with upcoming shows
+const sortedArtists = artists.artists
+  .map((artist) => {
+    const nextShow =
+      concerts.shows
+        .filter((show) => show.normalizedDate >= todayISOString)
+        .flatMap((show) =>
+          show.events
+            .filter((event) =>
+              event.bands.some(
+                (band) =>
+                  band.id === artist.id ||
+                  normalizeText(band.text) === normalizeText(artist.name),
+              ),
+            )
+            .map((event) => ({
+              ...event,
+              date: show.normalizedDate,
+              humanDate: show.day,
+            })),
+        )
+        .sort((a, b) => a.date.localeCompare(b.date))[0] || null;
+
+    return {
+      ...artist,
+      nextShow,
+    };
+  })
+  .filter((artist) => artist.nextShow !== null) // only show artists with upcoming shows
+  .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <Layout
-  title="All Artists"
-  description="Browse all artists performing in the Bay Area"
+  title="Artists with Upcoming Shows"
+  description="Browse artists with upcoming shows in the Bay Area"
 >
   <div class="container mx-auto px-4 py-8">
     <div class="mb-8">
@@ -22,9 +66,9 @@ const sortedArtists = artists.artists.sort((a, b) =>
       >
         ← Back to calendar
       </a>
-      <h1 class="text-4xl font-bold">All Artists</h1>
+      <h1 class="text-4xl font-bold">Artists with Upcoming Shows</h1>
       <p class="text-muted-foreground mt-2">
-        Browse {sortedArtists.length} artists performing in the Bay Area
+        Browse {sortedArtists.length} artists with upcoming shows in the Bay Area
       </p>
     </div>
 
@@ -42,6 +86,27 @@ const sortedArtists = artists.artists.sort((a, b) =>
                     {artist.name}
                   </a>
                 </h3>
+                {artist.nextShow && (
+                  <div class="text-sm">
+                    <div class="text-muted-foreground">Next show:</div>
+                    <div class="font-medium">
+                      <a
+                        href={`/day/${artist.nextShow.date}/`}
+                        class="text-primary hover:underline"
+                      >
+                        {artist.nextShow.humanDate}
+                      </a>
+                    </div>
+                    <div class="text-muted-foreground text-xs">
+                      <a
+                        href={`/venue/${artist.nextShow.venue.id}/`}
+                        class="text-muted-foreground hover:underline"
+                      >
+                        {artist.nextShow.venue.text}
+                      </a>
+                    </div>
+                  </div>
+                )}
                 <div class="text-muted-foreground text-sm">
                   {artist.venues.length} venue
                   {artist.venues.length !== 1 ? "s" : ""}

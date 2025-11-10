@@ -81,15 +81,17 @@ const VenueCard = ({ venue }: { venue: any }) => {
 
 // Main VenueList component
 const VenueList = () => {
-  // Prepare venue data with up-to-date next show info
+  // Prepare venue data with up-to-date next show info, filter to only venues with upcoming shows
   const venueData = useMemo(() => {
-    return venuesData.venues.map((venue) => ({
-      id: venue.id,
-      name: venue.name,
-      displayName: getBestVenueName(venue),
-      locationInfo: getLocationString(venue),
-      nextShow: getNextShowForVenue(venue.name, venue.id),
-    }));
+    return venuesData.venues
+      .map((venue) => ({
+        id: venue.id,
+        name: venue.name,
+        displayName: getBestVenueName(venue),
+        locationInfo: getLocationString(venue),
+        nextShow: getNextShowForVenue(venue.name, venue.id),
+      }))
+      .filter((venue) => venue.nextShow !== null); // only show venues with upcoming shows
   }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
