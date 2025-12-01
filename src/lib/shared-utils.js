@@ -65,6 +65,7 @@ export function levenshteinDistance(str1, str2) {
 export const NON_ARTIST_FILTERS = [
   // invalid/fragment entries
   "1", // fragment from "1,000 Dreams" splitting
+  "))", // invalid/noise entry
 
   // meetings and administrative
   "membership meeting",
