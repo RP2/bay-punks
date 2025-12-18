@@ -4,9 +4,21 @@ import { normalizeText } from "../src/lib/shared-utils.js";
 // helper to find artist ID from processed artists data
 function findArtistId(artistName, processedArtists) {
   const normalized = normalizeText(artistName);
-  const artist = processedArtists.find(
+
+  // first try exact match with artist name
+  let artist = processedArtists.find(
     (a) => normalizeText(a.name) === normalized,
   );
+
+  // if no match found, check aliases
+  if (!artist) {
+    artist = processedArtists.find(
+      (a) =>
+        a.aliases &&
+        a.aliases.some((alias) => normalizeText(alias) === normalized),
+    );
+  }
+
   return artist?.id || null;
 }
 

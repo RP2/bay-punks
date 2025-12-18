@@ -115,32 +115,60 @@ const ArtistDetail: React.FC<ArtistDetailProps> = ({ artist }) => {
           </CardContent>
         </Card>
 
-        <Card>
-          <CardContent className="p-6">
-            <h2 className="mb-4 text-2xl font-semibold">Venues</h2>
-            <ul className="space-y-2">
-              {artist.venues.map((venueId: string) => {
-                const venue = venuesData.venues.find(
-                  (v: any) => v.id === venueId,
-                );
-                return (
-                  <li key={venueId} className="text-lg">
-                    {venue ? (
-                      <a
-                        href={`/venue/${venueId}/`}
-                        className="text-primary hover:underline"
-                      >
-                        {venue.name}
-                      </a>
-                    ) : (
-                      venueId
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-          </CardContent>
-        </Card>
+        {artist.spotifyData?.id ? (
+          <Card>
+            <CardContent className="p-6">
+              <h2 className="mb-4 text-2xl font-semibold">
+                Top Tracks on Spotify
+              </h2>
+              <div className="rounded-lg">
+                <iframe
+                  src={`https://open.spotify.com/embed/artist/${artist.spotifyData.id}?utm_source=generator`}
+                  width="100%"
+                  height="352"
+                  frameBorder="0"
+                  allowFullScreen
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  className="rounded-lg"
+                />
+              </div>
+              <div className="text-muted-foreground mt-4 text-xs">
+                <p>
+                  <strong>Note:</strong> Spotify embed shows artist information
+                  and top tracks. Click to play on Spotify.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        ) : (
+          <Card>
+            <CardContent className="p-6">
+              <h2 className="mb-4 text-2xl font-semibold">Venues</h2>
+              <ul className="space-y-2">
+                {artist.venues.map((venueId: string) => {
+                  const venue = venuesData.venues.find(
+                    (v: any) => v.id === venueId,
+                  );
+                  return (
+                    <li key={venueId} className="text-lg">
+                      {venue ? (
+                        <a
+                          href={`/venue/${venueId}/`}
+                          className="text-primary hover:underline"
+                        >
+                          {venue.name}
+                        </a>
+                      ) : (
+                        venueId
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </CardContent>
+          </Card>
+        )}
       </div>
 
       <Card className="mt-8">
