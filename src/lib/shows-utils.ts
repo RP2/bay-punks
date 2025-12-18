@@ -1,8 +1,7 @@
 "use client";
 
 import concertsData from "@/data/calendar.json";
-import { normalizeText } from "@/lib/shared-utils.js";
-import { getTodayISOString } from "@/lib/client-date-utils";
+import { normalizeText, getPacificDateISO } from "@/lib/shared-utils.js";
 
 /**
  * Get the next show for a venue with current date awareness
@@ -11,7 +10,7 @@ import { getTodayISOString } from "@/lib/client-date-utils";
  * @returns The next show for the venue or null if no upcoming shows
  */
 export function getNextShowForVenue(venueName: string, venueId?: string) {
-  const todayString = getTodayISOString();
+  const todayString = getPacificDateISO();
 
   const upcomingShows = concertsData.shows
     .flatMap((show) =>
@@ -39,7 +38,7 @@ export function getNextShowForVenue(venueName: string, venueId?: string) {
  * @returns An array of upcoming shows for the venue
  */
 export function getUpcomingShowsForVenue(venue: any) {
-  const todayISOString = getTodayISOString();
+  const todayISOString = getPacificDateISO();
 
   return concertsData.shows
     .flatMap((show) =>
@@ -84,7 +83,7 @@ export function getUpcomingShowsForVenue(venue: any) {
  * @returns The next show for the artist or null if no upcoming shows
  */
 export function getNextShowForArtist(artistName: string, artistId?: string) {
-  const todayString = getTodayISOString();
+  const todayString = getPacificDateISO();
 
   const upcomingShows = concertsData.shows
     .flatMap((show) =>
@@ -114,7 +113,7 @@ export function getNextShowForArtist(artistName: string, artistId?: string) {
  * @returns An array of upcoming shows for the artist
  */
 export function getUpcomingShowsForArtist(artist: any) {
-  const todayISOString = getTodayISOString();
+  const todayISOString = getPacificDateISO();
 
   return concertsData.shows
     .flatMap((show) =>

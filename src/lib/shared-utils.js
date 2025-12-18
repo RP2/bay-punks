@@ -1,5 +1,23 @@
 // comprehensive utilities that can be shared between frontend and scripts
 
+// ===== DATE UTILITIES =====
+
+// helper to get today's date in YYYY-MM-DD format using Pacific timezone
+// ensures all date comparisons use Bay Area timezone regardless of server/client location
+export function getPacificDateISO() {
+  const today = new Date();
+  const pacificDate = new Date(
+    today.toLocaleString("en-US", { timeZone: "America/Los_Angeles" }),
+  );
+  return (
+    pacificDate.getFullYear() +
+    "-" +
+    String(pacificDate.getMonth() + 1).padStart(2, "0") +
+    "-" +
+    String(pacificDate.getDate()).padStart(2, "0")
+  );
+}
+
 // ===== TEXT NORMALIZATION =====
 
 // helper to normalize text (remove special characters, lowercase)

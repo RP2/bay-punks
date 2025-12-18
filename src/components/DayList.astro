@@ -2,12 +2,12 @@
 import { Input } from "@/components/ui/input";
 import { DaySortToggle } from "./DaySortToggle";
 import concertsData from "../data/calendar.json";
-import { getTodayISOString } from "../lib/client-date-utils";
+import { getPacificDateISO } from "../lib/shared-utils.js";
 import { sortDays } from "@/lib/shows-utils";
 import Day from "./Day.astro";
 
 // Get today's date in YYYY-MM-DD format for filtering
-const todayISOString = getTodayISOString();
+const todayISOString = getPacificDateISO();
 
 // Filter out past days
 const days = concertsData.shows.filter(
@@ -61,7 +61,7 @@ const filteredDays = sortDays(days, "chronological");
 </div>
 
 <script>
-  import { getTodayISOString } from "../lib/client-date-utils";
+  import { getPacificDateISO } from "../lib/shared-utils.js";
   import {
     filterDOMElementsByText,
     sortDayElements,
@@ -78,7 +78,7 @@ const filteredDays = sortDays(days, "chronological");
     const concertList = document.getElementById("concert-list");
 
     // Get today's date for filtering
-    const todayString = getTodayISOString();
+    const todayString = getPacificDateISO();
 
     // Get calendar data from our hidden element for operations
     const calendarDataElem = document.getElementById("calendar-data");
@@ -132,7 +132,7 @@ const filteredDays = sortDays(days, "chronological");
         if (!concertList) return;
 
         // Always make sure to remove past days first before sorting
-        const currentTodayString = getTodayISOString(); // Get fresh date in case days passed
+        const currentTodayString = getPacificDateISO(); // Get fresh date in case days passed
         const allDayCards = document.querySelectorAll(".day-placeholder");
 
         // Remove any past days first

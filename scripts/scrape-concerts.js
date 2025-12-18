@@ -79,12 +79,12 @@ function normalizeDate(day, seenMonths = new Set()) {
   return `${year}-${month}-${dayNumber.padStart(2, "0")}`;
 }
 
-// fetch all pages from by-date.1.html to by-date.30.html
+// fetch all pages from by-date.0.html to by-date.30.html
 console.log("starting to fetch pages...");
 const baseUrl = "http://www.foopee.com/punk/the-list/by-date.";
-const pagePromises = Array.from({ length: 30 }, (_, i) => {
-  const url = `${baseUrl}${i + 1}.html`;
-  console.log(`fetching page ${i + 1}: ${url}`);
+const pagePromises = Array.from({ length: 31 }, (_, i) => {
+  const url = `${baseUrl}${i}.html`;
+  console.log(`fetching page ${i}: ${url}`);
   return fetchPage(url);
 });
 const pageResults = await Promise.all(pagePromises);

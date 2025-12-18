@@ -4,17 +4,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import concerts from "../../data/calendar.json";
 import artists from "../../data/artists.json";
 import { getVenueId, getArtistId } from "../../lib/data-utils";
+import { getPacificDateISO } from "../../lib/shared-utils.js";
 import { AddToCalendarButton } from "../../components/AddToCalendarButton";
 
 // generate all day pages at build time (only for today and future dates)
 export async function getStaticPaths() {
-  const today = new Date();
-  const todayISOString =
-    today.getFullYear() +
-    "-" +
-    String(today.getMonth() + 1).padStart(2, "0") +
-    "-" +
-    String(today.getDate()).padStart(2, "0");
+  const todayISOString = getPacificDateISO();
 
   return concerts.shows
     .filter((show) => show.normalizedDate >= todayISOString)

@@ -1,5 +1,5 @@
 import { readFile, writeFile } from "fs/promises";
-import { normalizeText } from "../src/lib/shared-utils.js";
+import { normalizeText, getPacificDateISO } from "../src/lib/shared-utils.js";
 
 // helper to find artist ID from processed artists data
 function findArtistId(artistName, processedArtists) {
@@ -98,13 +98,7 @@ async function generateCalendar() {
   });
 
   // filter out future shows only (same logic as current usage)
-  const today = new Date();
-  const todayISOString =
-    today.getFullYear() +
-    "-" +
-    String(today.getMonth() + 1).padStart(2, "0") +
-    "-" +
-    String(today.getDate()).padStart(2, "0");
+  const todayISOString = getPacificDateISO();
 
   const upcomingShows = processedShows.filter(
     (show) => show.normalizedDate >= todayISOString,
