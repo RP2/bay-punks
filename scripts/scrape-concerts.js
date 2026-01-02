@@ -35,7 +35,7 @@ async function fetchPage(url) {
 }
 
 // helper to normalize date to ISO format with proper year tracking
-function normalizeDate(day, seenMonths = new Set()) {
+function normalizeDate(day, context = { lastDate: null, seenDecember: false }) {
   const months = {
     jan: "01",
     feb: "02",
@@ -55,28 +55,46 @@ function normalizeDate(day, seenMonths = new Set()) {
   const [_, monthAbbr, dayNumber] = parts;
   const month = months[monthAbbr];
 
-  // start with current year (dynamic)
-  const currentYear = new Date().getFullYear();
+  // start with current year and current month (dynamic)
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = String(now.getMonth() + 1).padStart(2, "0");
   let year = currentYear;
 
-  // if we've seen december and now see any month from january to june, it's likely next year
-  // this covers the rollover from dec current-year to early months of next-year
+  // if we're in the first half of the year (jan-jun) and see months from second half (jul-dec)
+  // they're likely from the previous year (unless we've already rolled over)
   if (
-    seenMonths.has("12") &&
-    (month === "01" ||
-      month === "02" ||
-      month === "03" ||
-      month === "04" ||
-      month === "05" ||
-      month === "06")
+    currentMonth <= "06" &&
+    month >= "07" &&
+    !context.seenDecember
   ) {
+    year = currentYear - 1;
+  }
+
+  // track if we've seen december
+  if (month === "12") {
+    context.seenDecember = true;
+  }
+
+  // if we've seen december and now see early months, it's the next year
+  if (context.seenDecember && month <= "06") {
     year = currentYear + 1;
   }
 
-  // track months we've seen
-  seenMonths.add(month);
+  // detect backwards date progression (month going backward indicates year rollover)
+  if (context.lastDate && month < context.lastDate.month) {
+    // only if we haven't already accounted for this with the december logic
+    if (!context.seenDecember || month > "06") {
+      year = context.lastDate.year + 1;
+    }
+  }
 
-  return `${year}-${month}-${dayNumber.padStart(2, "0")}`;
+  const fullDate = `${year}-${month}-${dayNumber.padStart(2, "0")}`;
+
+  // update context for next call
+  context.lastDate = { year, month, fullDate };
+
+  return fullDate;
 }
 
 // fetch all pages from by-date.0.html to by-date.30.html
@@ -97,7 +115,7 @@ console.log(
 const shows = [];
 let totalEvents = 0;
 let excludedComedians = 0;
-const seenMonths = new Set(); // track months across all pages for year rollover
+const dateContext = { lastDate: null, seenDecember: false }; // track date context for year rollover
 
 console.log("processing pages and extracting events...");
 
@@ -181,7 +199,7 @@ pages.forEach(($, pageIndex) => {
     });
 
     if (dayText && events.length) {
-      const normalizedDate = normalizeDate(dayText, seenMonths); // normalize the dayText here
+      const normalizedDate = normalizeDate(dayText, dateContext); // normalize the dayText here
       shows.push({ day: dayText, normalizedDate, events });
     }
   });

@@ -1,678 +1,8 @@
 {
   "shows": [
     {
-      "day": "Tue Dec 30",
-      "normalizedDate": "2026-12-30",
-      "events": [
-        {
-          "venue": {
-            "text": "Blue Note, Napa",
-            "href": "https://www.google.com/search?q=Blue%20Note%2C%20Napa"
-          },
-          "bands": [
-            {
-              "text": "Brian Culbertson",
-              "href": "https://open.spotify.com/search/Brian%20Culbertson"
-            }
-          ],
-          "extra": "8+ (under 16 with adult) 5:30pm/7pm and 9pm/9:30pm"
-        },
-        {
-          "venue": {
-            "text": "Chapel, S.F.",
-            "href": "https://www.google.com/search?q=Chapel%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Mystery Lights",
-              "href": "https://open.spotify.com/search/Mystery%20Lights"
-            },
-            {
-              "text": "Levitation Room",
-              "href": "https://open.spotify.com/search/Levitation%20Room"
-            },
-            {
-              "text": "James Wavey",
-              "href": "https://open.spotify.com/search/James%20Wavey"
-            },
-            {
-              "text": "Ether Wave Light Show",
-              "href": "https://open.spotify.com/search/Ether%20Wave%20Light%20Show"
-            }
-          ],
-          "extra": "a/a 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Fox Theater, Oakland",
-            "href": "https://www.google.com/search?q=Fox%20Theater%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "PRIMUS",
-              "href": "https://open.spotify.com/search/PRIMUS"
-            }
-          ],
-          "extra": "a/a $78.15 7pm/8pm #"
-        },
-        {
-          "venue": {
-            "text": "Great American Music Hall, S.F.",
-            "href": "https://www.google.com/search?q=Great%20American%20Music%20Hall%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "High On Fire",
-              "href": "https://open.spotify.com/search/High%20On%20Fire"
-            },
-            {
-              "text": "Secret Chiefs 3",
-              "href": "https://open.spotify.com/search/Secret%20Chiefs%203"
-            },
-            {
-              "text": "Necrot",
-              "href": "https://open.spotify.com/search/Necrot"
-            },
-            {
-              "text": "Olum",
-              "href": "https://open.spotify.com/search/Olum"
-            }
-          ],
-          "extra": "a/a $35/$40 6pm/7pm"
-        },
-        {
-          "venue": {
-            "text": "Independent, S.F.",
-            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Paul Cauthen",
-              "href": "https://open.spotify.com/search/Paul%20Cauthen"
-            },
-            {
-              "text": "Liam St. John",
-              "href": "https://open.spotify.com/search/Liam%20St.%20John"
-            }
-          ],
-          "extra": "21+ $59.50 7:30m/8pm"
-        },
-        {
-          "venue": {
-            "text": "Moe's Alley, Santa Cruz",
-            "href": "https://www.google.com/search?q=Moe's%20Alley%2C%20Santa%20Cruz"
-          },
-          "bands": [
-            {
-              "text": "Monophonics",
-              "href": "https://open.spotify.com/search/Monophonics"
-            },
-            {
-              "text": "Mae Powell",
-              "href": "https://open.spotify.com/search/Mae%20Powell"
-            },
-            {
-              "text": "dj Archive 65",
-              "href": "https://open.spotify.com/search/dj%20Archive%2065"
-            }
-          ],
-          "extra": "21+ $35.46 7pm"
-        },
-        {
-          "venue": {
-            "text": "Pier 80 Warehouse, 401 Cesar Chavez Street, S.F.",
-            "href": "https://www.google.com/search?q=Pier%2080%20Warehouse%2C%20401%20Cesar%20Chavez%20Street%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Skrillex",
-              "href": "https://open.spotify.com/search/Skrillex"
-            },
-            {
-              "text": "Four Tet",
-              "href": "https://open.spotify.com/search/Four%20Tet"
-            }
-          ],
-          "extra": "21+ #"
-        },
-        {
-          "venue": {
-            "text": "Plough and Stars, S.F.",
-            "href": "https://www.google.com/search?q=Plough%20and%20Stars%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Caltucky",
-              "href": "https://open.spotify.com/search/Caltucky"
-            }
-          ],
-          "extra": "21+ $20-$15 8:30pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Thee Stork Club, Oakland",
-            "href": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Frankie And The Witch Fingers",
-              "href": "https://open.spotify.com/search/Frankie%20And%20The%20Witch%20Fingers"
-            },
-            {
-              "text": "Spacemoth",
-              "href": "https://open.spotify.com/search/Spacemoth"
-            },
-            {
-              "text": "dj Paul Costuros",
-              "href": "https://open.spotify.com/search/dj%20Paul%20Costuros"
-            }
-          ],
-          "extra": "21+ $18/$20 8pm"
-        },
-        {
-          "venue": {
-            "text": "Yoshi's, Oakland",
-            "href": "https://www.google.com/search?q=Yoshi's%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Boney James",
-              "href": "https://open.spotify.com/search/Boney%20James"
-            }
-          ],
-          "extra": "21+ $108+ 7pm/7:30pm and 9:15pm/9:30pm"
-        }
-      ]
-    },
-    {
-      "day": "Wed Dec 31",
-      "normalizedDate": "2026-12-31",
-      "events": [
-        {
-          "venue": {
-            "text": "Bimbo's 365 Club, S.F.",
-            "href": "https://www.google.com/search?q=Bimbo's%20365%20Club%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Tainted Love",
-              "href": "https://open.spotify.com/search/Tainted%20Love"
-            },
-            {
-              "text": "Big Sandy & His Flyrite Boys",
-              "href": "https://open.spotify.com/search/Big%20Sandy%20%26%20His%20Flyrite%20Boys"
-            },
-            {
-              "text": "dj Omar",
-              "href": "https://open.spotify.com/search/dj%20Omar"
-            }
-          ],
-          "extra": "21+ $90 8pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Black Cat, S.F.",
-            "href": "https://www.google.com/search?q=Black%20Cat%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Benny Benack III Quartet",
-              "href": "https://open.spotify.com/search/Benny%20Benack%20III%20Quartet"
-            }
-          ],
-          "extra": "21+ $111.50 7pm and 9:30pm"
-        },
-        {
-          "venue": {
-            "text": "Blue Note, Napa",
-            "href": "https://www.google.com/search?q=Blue%20Note%2C%20Napa"
-          },
-          "bands": [
-            {
-              "text": "Brian Culbertson",
-              "href": "https://open.spotify.com/search/Brian%20Culbertson"
-            }
-          ],
-          "extra": "8+ (under 16 with adult) 5:30pm/7pm & 9:30pm/10:30pm (sold out) (last show at the Blue Note)"
-        },
-        {
-          "venue": {
-            "text": "Caravan Lounge, San Jose",
-            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
-          },
-          "bands": [
-            {
-              "text": "Skalofrios",
-              "href": "https://open.spotify.com/search/Skalofrios"
-            }
-          ],
-          "extra": "21+ 9pm"
-        },
-        {
-          "venue": {
-            "text": "Catalyst Atrium, Santa Cruz",
-            "href": "https://www.google.com/search?q=Catalyst%20Atrium%2C%20Santa%20Cruz"
-          },
-          "bands": [
-            {
-              "text": "Jesse Daniel",
-              "href": "https://open.spotify.com/search/Jesse%20Daniel"
-            },
-            {
-              "text": "Two Runner",
-              "href": "https://open.spotify.com/search/Two%20Runner"
-            }
-          ],
-          "extra": "16+ $49/$62 ($73.83 balcony) 9pm/10pm #"
-        },
-        {
-          "venue": {
-            "text": "Chapel, S.F.",
-            "href": "https://www.google.com/search?q=Chapel%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Fantastic Negrito",
-              "href": "https://open.spotify.com/search/Fantastic%20Negrito"
-            },
-            {
-              "text": "Mild Universe",
-              "href": "https://open.spotify.com/search/Mild%20Universe"
-            },
-            {
-              "text": "Joel Robinow",
-              "href": "https://open.spotify.com/search/Joel%20Robinow"
-            },
-            {
-              "text": "dj Walkin' Love",
-              "href": "https://open.spotify.com/search/dj%20Walkin'%20Love"
-            },
-            {
-              "text": "Zachary Rodell",
-              "href": "https://open.spotify.com/search/Zachary%20Rodell"
-            }
-          ],
-          "extra": "a/a $70.51 7:30pm/8:30pm (Babe Rainbow cancelled)"
-        },
-        {
-          "venue": {
-            "text": "Cornerstone, Berkeley",
-            "href": "https://www.google.com/search?q=Cornerstone%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "Mustache Harbor",
-              "href": "https://open.spotify.com/search/Mustache%20Harbor"
-            }
-          ],
-          "extra": "a/a 9pm/10pm"
-        },
-        {
-          "venue": {
-            "text": "Felton Music Hall, Felton",
-            "href": "https://www.google.com/search?q=Felton%20Music%20Hall%2C%20Felton"
-          },
-          "bands": [
-            {
-              "text": "Tommy Castro And The Painkillers",
-              "href": "https://open.spotify.com/search/Tommy%20Castro%20And%20The%20Painkillers"
-            }
-          ],
-          "extra": "21+"
-        },
-        {
-          "venue": {
-            "text": "Fillmore, S.F.",
-            "href": "https://www.google.com/search?q=Fillmore%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Yo La Tengo",
-              "href": "https://open.spotify.com/search/Yo%20La%20Tengo"
-            },
-            {
-              "text": "Luna",
-              "href": "https://open.spotify.com/search/Luna"
-            }
-          ],
-          "extra": "a/a 8pm/9pm #"
-        },
-        {
-          "venue": {
-            "text": "Fox Theater, Oakland",
-            "href": "https://www.google.com/search?q=Fox%20Theater%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "PRIMUS",
-              "href": "https://open.spotify.com/search/PRIMUS"
-            },
-            {
-              "text": "Puddles Pitty Party",
-              "href": "https://open.spotify.com/search/Puddles%20Pitty%20Party"
-            }
-          ],
-          "extra": "a/a $110.50 8pm/9pm #"
-        },
-        {
-          "venue": {
-            "text": "Great American Music Hall, S.F.",
-            "href": "https://www.google.com/search?q=Great%20American%20Music%20Hall%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "High On Fire",
-              "href": "https://open.spotify.com/search/High%20On%20Fire"
-            },
-            {
-              "text": "Secret Chiefs 3",
-              "href": "https://open.spotify.com/search/Secret%20Chiefs%203"
-            },
-            {
-              "text": "Necrot",
-              "href": "https://open.spotify.com/search/Necrot"
-            },
-            {
-              "text": "Olum",
-              "href": "https://open.spotify.com/search/Olum"
-            }
-          ],
-          "extra": "a/a $35/$40 7:30pm/8:30pm"
-        },
-        {
-          "venue": {
-            "text": "Guild Theater, Memlo Park",
-            "href": "https://www.google.com/search?q=Guild%20Theater%2C%20Memlo%20Park"
-          },
-          "bands": [
-            {
-              "text": "Molly Tuttle",
-              "href": "https://open.spotify.com/search/Molly%20Tuttle"
-            }
-          ],
-          "extra": "a/a (under 18 with parent) $118+ 8:30pm"
-        },
-        {
-          "venue": {
-            "text": "Independent, S.F.",
-            "href": "https://www.google.com/search?q=Independent%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Paul Cauthen",
-              "href": "https://open.spotify.com/search/Paul%20Cauthen"
-            },
-            {
-              "text": "Liam St. John",
-              "href": "https://open.spotify.com/search/Liam%20St.%20John"
-            }
-          ],
-          "extra": "21+ $145 8:30pm/9pm (open bar)"
-        },
-        {
-          "venue": {
-            "text": "Ivy Room, Albany",
-            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
-          },
-          "bands": [
-            {
-              "text": "Fleetwood Macrame",
-              "href": "https://open.spotify.com/search/Fleetwood%20Macrame"
-            }
-          ],
-          "extra": "21+ $50 8pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Jury Room, Santa Cruz",
-            "href": "https://www.google.com/search?q=Jury%20Room%2C%20Santa%20Cruz"
-          },
-          "bands": [
-            {
-              "text": "Fux",
-              "href": "https://open.spotify.com/search/Fux"
-            },
-            {
-              "text": "Schlep",
-              "href": "https://open.spotify.com/search/Schlep"
-            },
-            {
-              "text": "Randy Savages",
-              "href": "https://open.spotify.com/search/Randy%20Savages"
-            },
-            {
-              "text": "Stumpgrinder",
-              "href": "https://open.spotify.com/search/Stumpgrinder"
-            },
-            {
-              "text": "Sequitur",
-              "href": "https://open.spotify.com/search/Sequitur"
-            }
-          ],
-          "extra": "21+ $10 2pm"
-        },
-        {
-          "venue": {
-            "text": "Kilowatt, S.F.",
-            "href": "https://www.google.com/search?q=Kilowatt%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Global P",
-              "href": "https://open.spotify.com/search/Global%20P"
-            }
-          ],
-          "extra": "21+ $24.72 9pm"
-        },
-        {
-          "venue": {
-            "text": "Knockout, S.F.",
-            "href": "https://www.google.com/search?q=Knockout%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Avengers",
-              "href": "https://open.spotify.com/search/Avengers"
-            },
-            {
-              "text": "VKTMS",
-              "href": "https://open.spotify.com/search/VKTMS"
-            },
-            {
-              "text": "Wife",
-              "href": "https://open.spotify.com/search/Wife"
-            },
-            {
-              "text": "Warp",
-              "href": "https://open.spotify.com/search/Warp"
-            }
-          ],
-          "extra": "21+ $30 8pm/9pm @"
-        },
-        {
-          "venue": {
-            "text": "Little Hill Lounge, El Cerrito",
-            "href": "https://www.google.com/search?q=Little%20Hill%20Lounge%2C%20El%20Cerrito"
-          },
-          "bands": [
-            {
-              "text": "Greasy Gills",
-              "href": "https://open.spotify.com/search/Greasy%20Gills"
-            },
-            {
-              "text": "dj Shama Lama",
-              "href": "https://open.spotify.com/search/dj%20Shama%20Lama"
-            }
-          ],
-          "extra": "21+ 8pm"
-        },
-        {
-          "venue": {
-            "text": "Mystic Theater, Petaluma",
-            "href": "https://www.google.com/search?q=Mystic%20Theater%2C%20Petaluma"
-          },
-          "bands": [
-            {
-              "text": "Petty Theft",
-              "href": "https://open.spotify.com/search/Petty%20Theft"
-            },
-            {
-              "text": "Susan Z And The Winding Road",
-              "href": "https://open.spotify.com/search/Susan%20Z%20And%20The%20Winding%20Road"
-            }
-          ],
-          "extra": "21+ $61.34 8pm/9pm"
-        },
-        {
-          "venue": {
-            "text": "Pier 80 Warehouse, 401 Cesar Chavez Street, S.F.",
-            "href": "https://www.google.com/search?q=Pier%2080%20Warehouse%2C%20401%20Cesar%20Chavez%20Street%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Swedish House Mafia",
-              "href": "https://open.spotify.com/search/Swedish%20House%20Mafia"
-            }
-          ],
-          "extra": "21+ 7pm/8pm #"
-        },
-        {
-          "venue": {
-            "text": "Plough and Stars, S.F.",
-            "href": "https://www.google.com/search?q=Plough%20and%20Stars%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "Caltucky",
-              "href": "https://open.spotify.com/search/Caltucky"
-            }
-          ],
-          "extra": "21+ $20-$15 9:30pm/10pm"
-        },
-        {
-          "venue": {
-            "text": "Rickshaw Stop, S.F.",
-            "href": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F."
-          },
-          "bands": [
-            {
-              "text": "dj Vantage",
-              "href": "https://open.spotify.com/search/dj%20Vantage"
-            },
-            {
-              "text": "dj Meikee Magnetic",
-              "href": "https://open.spotify.com/search/dj%20Meikee%20Magnetic"
-            }
-          ],
-          "extra": "21+ $23.18 8pm (Yoi Toki)"
-        },
-        {
-          "venue": {
-            "text": "Rio Theater, Santa Cruz",
-            "href": "https://www.google.com/search?q=Rio%20Theater%2C%20Santa%20Cruz"
-          },
-          "bands": [
-            {
-              "text": "Los Lobos",
-              "href": "https://open.spotify.com/search/Los%20Lobos"
-            },
-            {
-              "text": "Rasquache Liberation Front",
-              "href": "https://open.spotify.com/search/Rasquache%20Liberation%20Front"
-            },
-            {
-              "text": "Qiensave?",
-              "href": "https://open.spotify.com/search/Qiensave%3F"
-            }
-          ],
-          "extra": "a/a $115.44 8pm/8:30pm"
-        },
-        {
-          "venue": {
-            "text": "Ritz, San Jose",
-            "href": "https://www.google.com/search?q=Ritz%2C%20San%20Jose"
-          },
-          "bands": [
-            {
-              "text": "Emo Night Tour",
-              "href": "https://open.spotify.com/search/Emo%20Night%20Tour"
-            }
-          ],
-          "extra": "21+ $20/$30 8pm"
-        },
-        {
-          "venue": {
-            "text": "Sebastiani Theater, 476 1st Street E, Sonoma",
-            "href": "https://www.google.com/search?q=Sebastiani%20Theater%2C%20476%201st%20Street%20E%2C%20Sonoma"
-          },
-          "bands": [
-            {
-              "text": "Marty O'Reilly",
-              "href": "https://open.spotify.com/search/Marty%20O'Reilly"
-            },
-            {
-              "text": "Maya Elise And The Good Dream",
-              "href": "https://open.spotify.com/search/Maya%20Elise%20And%20The%20Good%20Dream"
-            }
-          ],
-          "extra": "a/a $55 8:30pm/9:30pm"
-        },
-        {
-          "venue": {
-            "text": "Thee Stork Club, Oakland",
-            "href": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Frankie And The Witch Fingers",
-              "href": "https://open.spotify.com/search/Frankie%20And%20The%20Witch%20Fingers"
-            },
-            {
-              "text": "Pink Stiletto",
-              "href": "https://open.spotify.com/search/Pink%20Stiletto"
-            },
-            {
-              "text": "Pons",
-              "href": "https://open.spotify.com/search/Pons"
-            },
-            {
-              "text": "dj Miles Ake",
-              "href": "https://open.spotify.com/search/dj%20Miles%20Ake"
-            }
-          ],
-          "extra": "21+ $35/$40 8pm"
-        },
-        {
-          "venue": {
-            "text": "UC Theater, Berkeley",
-            "href": "https://www.google.com/search?q=UC%20Theater%2C%20Berkeley"
-          },
-          "bands": [
-            {
-              "text": "Dillon Francis",
-              "href": "https://open.spotify.com/search/Dillon%20Francis"
-            }
-          ],
-          "extra": "18+ $97.55-$140.19 8pm/9pm #"
-        },
-        {
-          "venue": {
-            "text": "Yoshi's, Oakland",
-            "href": "https://www.google.com/search?q=Yoshi's%2C%20Oakland"
-          },
-          "bands": [
-            {
-              "text": "Boney James",
-              "href": "https://open.spotify.com/search/Boney%20James"
-            }
-          ],
-          "extra": "21+ $108+ 7pm/8pm and 10:45pm/11pm"
-        }
-      ]
-    },
-    {
       "day": "Thu Jan 1",
-      "normalizedDate": "2027-01-01",
+      "normalizedDate": "2026-01-01",
       "events": [
         {
           "venue": {
@@ -811,7 +141,7 @@
     },
     {
       "day": "Fri Jan 2",
-      "normalizedDate": "2027-01-02",
+      "normalizedDate": "2026-01-02",
       "events": [
         {
           "venue": {
@@ -879,6 +209,23 @@
             }
           ],
           "extra": "a/a $74.44 ($275-$140 vip) 6pm/7pm"
+        },
+        {
+          "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Facekicker",
+              "href": "https://open.spotify.com/search/Facekicker"
+            },
+            {
+              "text": "Enemy Of My Enemy",
+              "href": "https://open.spotify.com/search/Enemy%20Of%20My%20Enemy"
+            }
+          ],
+          "extra": "21+ free 9:30pm"
         },
         {
           "venue": {
@@ -996,12 +343,41 @@
             }
           ],
           "extra": "a/a $15.49 7pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Stay Gold Deli, Oakland",
+            "href": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Durango Dogs",
+              "href": "https://open.spotify.com/search/Durango%20Dogs"
+            },
+            {
+              "text": "Blunt Force",
+              "href": "https://open.spotify.com/search/Blunt%20Force"
+            },
+            {
+              "text": "Da Pupz",
+              "href": "https://open.spotify.com/search/Da%20Pupz"
+            },
+            {
+              "text": "Plan Bee",
+              "href": "https://open.spotify.com/search/Plan%20Bee"
+            },
+            {
+              "text": "Casino Kid",
+              "href": "https://open.spotify.com/search/Casino%20Kid"
+            }
+          ],
+          "extra": "a/a 6pm (Tony Calzone's Birthday)"
         }
       ]
     },
     {
       "day": "Sat Jan 3",
-      "normalizedDate": "2027-01-03",
+      "normalizedDate": "2026-01-03",
       "events": [
         {
           "venue": {
@@ -1040,6 +416,27 @@
             }
           ],
           "extra": "a/a $17/$20 8:30pm/9pm"
+        },
+        {
+          "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Hero's Mission",
+              "href": "https://open.spotify.com/search/Hero's%20Mission"
+            },
+            {
+              "text": "Sonus",
+              "href": "https://open.spotify.com/search/Sonus"
+            },
+            {
+              "text": "Surf Monster",
+              "href": "https://open.spotify.com/search/Surf%20Monster"
+            }
+          ],
+          "extra": "21+ free 9:30pm"
         },
         {
           "venue": {
@@ -1252,7 +649,7 @@
     },
     {
       "day": "Sun Jan 4",
-      "normalizedDate": "2027-01-04",
+      "normalizedDate": "2026-01-04",
       "events": [
         {
           "venue": {
@@ -1312,12 +709,37 @@
             }
           ],
           "extra": "a/a $10 7pm"
+        },
+        {
+          "venue": {
+            "text": "Subrosa, Santa Cruz",
+            "href": "https://www.google.com/search?q=Subrosa%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Norma Dream",
+              "href": "https://open.spotify.com/search/Norma%20Dream"
+            },
+            {
+              "text": "Hop",
+              "href": "https://open.spotify.com/search/Hop"
+            },
+            {
+              "text": "Eleanora",
+              "href": "https://open.spotify.com/search/Eleanora"
+            },
+            {
+              "text": "Gusty",
+              "href": "https://open.spotify.com/search/Gusty"
+            }
+          ],
+          "extra": "a/a $10/$20 7pm"
         }
       ]
     },
     {
       "day": "Mon Jan 5",
-      "normalizedDate": "2027-01-05",
+      "normalizedDate": "2026-01-05",
       "events": [
         {
           "venue": {
@@ -1331,12 +753,46 @@
             }
           ],
           "extra": "a/a 7:30pm # (sold out)"
+        },
+        {
+          "venue": {
+            "text": "Stay Gold Deli, Oakland",
+            "href": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Fortress",
+              "href": "https://open.spotify.com/search/Fortress"
+            },
+            {
+              "text": "Quinkahr",
+              "href": "https://open.spotify.com/search/Quinkahr"
+            },
+            {
+              "text": "Brother M",
+              "href": "https://open.spotify.com/search/Brother%20M"
+            }
+          ],
+          "extra": "a/a $10 7pm"
+        },
+        {
+          "venue": {
+            "text": "Winters Tavern, Pacifica",
+            "href": "https://www.google.com/search?q=Winters%20Tavern%2C%20Pacifica"
+          },
+          "bands": [
+            {
+              "text": "Todd Bugbe's Dead Roses",
+              "href": "https://open.spotify.com/search/Todd%20Bugbe's%20Dead%20Roses"
+            }
+          ],
+          "extra": "21+ 6pm"
         }
       ]
     },
     {
       "day": "Tue Jan 6",
-      "normalizedDate": "2027-01-06",
+      "normalizedDate": "2026-01-06",
       "events": [
         {
           "venue": {
@@ -1397,7 +853,7 @@
     },
     {
       "day": "Wed Jan 7",
-      "normalizedDate": "2027-01-07",
+      "normalizedDate": "2026-01-07",
       "events": [
         {
           "venue": {
@@ -1472,6 +928,19 @@
         },
         {
           "venue": {
+            "text": "Hopmonk, Sebastopol",
+            "href": "https://www.google.com/search?q=Hopmonk%2C%20Sebastopol"
+          },
+          "bands": [
+            {
+              "text": "Back Porchestra",
+              "href": "https://open.spotify.com/search/Back%20Porchestra"
+            }
+          ],
+          "extra": "a/a free 6pm til 8:30pm"
+        },
+        {
+          "venue": {
             "text": "Ivy Room, Albany",
             "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
           },
@@ -1515,8 +984,29 @@
     },
     {
       "day": "Thu Jan 8",
-      "normalizedDate": "2027-01-08",
+      "normalizedDate": "2026-01-08",
       "events": [
+        {
+          "venue": {
+            "text": "Blue Lagoon, Santa Cruz",
+            "href": "https://www.google.com/search?q=Blue%20Lagoon%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Pinfall",
+              "href": "https://open.spotify.com/search/Pinfall"
+            },
+            {
+              "text": "Randy Savages",
+              "href": "https://open.spotify.com/search/Randy%20Savages"
+            },
+            {
+              "text": "SC Riot",
+              "href": "https://open.spotify.com/search/SC%20Riot"
+            }
+          ],
+          "extra": "21+ $10 9pm @"
+        },
         {
           "venue": {
             "text": "Chapel, S.F.",
@@ -1533,6 +1023,27 @@
             }
           ],
           "extra": "a/a $33.40 ($45.77 seated) 7pm/8pm (sold out)"
+        },
+        {
+          "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "Arcade 9",
+              "href": "https://open.spotify.com/search/Arcade%209"
+            },
+            {
+              "text": "Casino Kid",
+              "href": "https://open.spotify.com/search/Casino%20Kid"
+            },
+            {
+              "text": "Lost Puppy Forever",
+              "href": "https://open.spotify.com/search/Lost%20Puppy%20Forever"
+            }
+          ],
+          "extra": "21+ $12.67/$14 7pm/7:30pm"
         },
         {
           "venue": {
@@ -1588,7 +1099,7 @@
     },
     {
       "day": "Fri Jan 9",
-      "normalizedDate": "2027-01-09",
+      "normalizedDate": "2026-01-09",
       "events": [
         {
           "venue": {
@@ -1618,6 +1129,39 @@
             }
           ],
           "extra": "a/a $15 6:30pm/7pm til 10:30pm @"
+        },
+        {
+          "venue": {
+            "text": "Barajas Tire Shop, 600 Broadway, Vallejo",
+            "href": "https://www.google.com/search?q=Barajas%20Tire%20Shop%2C%20600%20Broadway%2C%20Vallejo"
+          },
+          "bands": [
+            {
+              "text": "Cutthroats",
+              "href": "https://open.spotify.com/search/Cutthroats"
+            },
+            {
+              "text": "Straggler",
+              "href": "https://open.spotify.com/search/Straggler"
+            },
+            {
+              "text": "Discourage",
+              "href": "https://open.spotify.com/search/Discourage"
+            },
+            {
+              "text": "Usurper",
+              "href": "https://open.spotify.com/search/Usurper"
+            },
+            {
+              "text": "Chisme",
+              "href": "https://open.spotify.com/search/Chisme"
+            },
+            {
+              "text": "Obct",
+              "href": "https://open.spotify.com/search/Obct"
+            }
+          ],
+          "extra": "a/a 6:30pm/7m"
         },
         {
           "venue": {
@@ -1819,6 +1363,27 @@
         },
         {
           "venue": {
+            "text": "Subrosa, Santa Cruz",
+            "href": "https://www.google.com/search?q=Subrosa%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Julie The Rulies",
+              "href": "https://open.spotify.com/search/Julie%20The%20Rulies"
+            },
+            {
+              "text": "Groceries",
+              "href": "https://open.spotify.com/search/Groceries"
+            },
+            {
+              "text": "Half Calf",
+              "href": "https://open.spotify.com/search/Half%20Calf"
+            }
+          ],
+          "extra": "a/a $10 7pm"
+        },
+        {
+          "venue": {
             "text": "Up the Creek, Walnut Creek",
             "href": "https://www.google.com/search?q=Up%20the%20Creek%2C%20Walnut%20Creek"
           },
@@ -1855,7 +1420,7 @@
     },
     {
       "day": "Sat Jan 10",
-      "normalizedDate": "2027-01-10",
+      "normalizedDate": "2026-01-10",
       "events": [
         {
           "venue": {
@@ -1932,12 +1497,12 @@
           },
           "bands": [
             {
-              "text": "Frolic",
-              "href": "https://open.spotify.com/search/Frolic"
-            },
-            {
               "text": "Cartlage",
               "href": "https://open.spotify.com/search/Cartlage"
+            },
+            {
+              "text": "Frolic",
+              "href": "https://open.spotify.com/search/Frolic"
             },
             {
               "text": "Beheader",
@@ -1948,7 +1513,7 @@
               "href": "https://open.spotify.com/search/Vestige"
             }
           ],
-          "extra": "a/a 7pm/8pm @"
+          "extra": "a/a $16/$18 7pm/8pm @"
         },
         {
           "venue": {
@@ -1970,6 +1535,19 @@
             }
           ],
           "extra": "21+ free 8pm"
+        },
+        {
+          "venue": {
+            "text": "Down Home Music, 10341 San Pablo Avenue, El Cerrito",
+            "href": "https://www.google.com/search?q=Down%20Home%20Music%2C%2010341%20San%20Pablo%20Avenue%2C%20El%20Cerrito"
+          },
+          "bands": [
+            {
+              "text": "Boars",
+              "href": "https://open.spotify.com/search/Boars"
+            }
+          ],
+          "extra": "a/a free 2pm"
         },
         {
           "venue": {
@@ -2233,6 +1811,60 @@
         },
         {
           "venue": {
+            "text": "Subrosa, Santa Cruz",
+            "href": "https://www.google.com/search?q=Subrosa%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Rule Of Thumb",
+              "href": "https://open.spotify.com/search/Rule%20Of%20Thumb"
+            },
+            {
+              "text": "Far Away",
+              "href": "https://open.spotify.com/search/Far%20Away"
+            },
+            {
+              "text": "Resurrection",
+              "href": "https://open.spotify.com/search/Resurrection"
+            },
+            {
+              "text": "Final Fate",
+              "href": "https://open.spotify.com/search/Final%20Fate"
+            }
+          ],
+          "extra": "a/a $15 7pm @"
+        },
+        {
+          "venue": {
+            "text": "Tamarack, Oakland",
+            "href": "https://www.google.com/search?q=Tamarack%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Discourage",
+              "href": "https://open.spotify.com/search/Discourage"
+            },
+            {
+              "text": "Straggler",
+              "href": "https://open.spotify.com/search/Straggler"
+            },
+            {
+              "text": "Ingrata",
+              "href": "https://open.spotify.com/search/Ingrata"
+            },
+            {
+              "text": "Here At The End",
+              "href": "https://open.spotify.com/search/Here%20At%20The%20End"
+            },
+            {
+              "text": "Obct",
+              "href": "https://open.spotify.com/search/Obct"
+            }
+          ],
+          "extra": "a/a 6:30pm/7pm @"
+        },
+        {
+          "venue": {
             "text": "Thee Stork Club, Oakland",
             "href": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland"
           },
@@ -2281,7 +1913,7 @@
     },
     {
       "day": "Sun Jan 11",
-      "normalizedDate": "2027-01-11",
+      "normalizedDate": "2026-01-11",
       "events": [
         {
           "venue": {
@@ -2383,12 +2015,50 @@
             }
           ],
           "extra": "a/a $20/$25 6pm @"
+        },
+        {
+          "venue": {
+            "text": "Streetlight Records, Santa Cruz",
+            "href": "https://www.google.com/search?q=Streetlight%20Records%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Dead Engine",
+              "href": "https://open.spotify.com/search/Dead%20Engine"
+            }
+          ],
+          "extra": "a/a free 2pm til 3pm"
+        },
+        {
+          "venue": {
+            "text": "Subrosa, Santa Cruz",
+            "href": "https://www.google.com/search?q=Subrosa%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Grad Nite",
+              "href": "https://open.spotify.com/search/Grad%20Nite"
+            },
+            {
+              "text": "My Veronica",
+              "href": "https://open.spotify.com/search/My%20Veronica"
+            },
+            {
+              "text": "Meat Cube",
+              "href": "https://open.spotify.com/search/Meat%20Cube"
+            },
+            {
+              "text": "Slowblink",
+              "href": "https://open.spotify.com/search/Slowblink"
+            }
+          ],
+          "extra": "a/a $10/$15 7pm"
         }
       ]
     },
     {
       "day": "Mon Jan 12",
-      "normalizedDate": "2027-01-12",
+      "normalizedDate": "2026-01-12",
       "events": [
         {
           "venue": {
@@ -2410,12 +2080,25 @@
             }
           ],
           "extra": "a/a $23/$25 7:30pm/8pm @"
+        },
+        {
+          "venue": {
+            "text": "Winters Tavern, Pacifica",
+            "href": "https://www.google.com/search?q=Winters%20Tavern%2C%20Pacifica"
+          },
+          "bands": [
+            {
+              "text": "Nugz",
+              "href": "https://open.spotify.com/search/Nugz"
+            }
+          ],
+          "extra": "21+ 6pm"
         }
       ]
     },
     {
       "day": "Tue Jan 13",
-      "normalizedDate": "2027-01-13",
+      "normalizedDate": "2026-01-13",
       "events": [
         {
           "venue": {
@@ -2484,8 +2167,25 @@
     },
     {
       "day": "Wed Jan 14",
-      "normalizedDate": "2027-01-14",
+      "normalizedDate": "2026-01-14",
       "events": [
+        {
+          "venue": {
+            "text": "Bistro, Hayward",
+            "href": "https://www.google.com/search?q=Bistro%2C%20Hayward"
+          },
+          "bands": [
+            {
+              "text": "Them Creatures",
+              "href": "https://open.spotify.com/search/Them%20Creatures"
+            },
+            {
+              "text": "Dig Your Own Grave",
+              "href": "https://open.spotify.com/search/Dig%20Your%20Own%20Grave"
+            }
+          ],
+          "extra": "21+ 7pm"
+        },
         {
           "venue": {
             "text": "Fillmore, S.F.",
@@ -2624,7 +2324,7 @@
     },
     {
       "day": "Thu Jan 15",
-      "normalizedDate": "2027-01-15",
+      "normalizedDate": "2026-01-15",
       "events": [
         {
           "venue": {
@@ -2713,6 +2413,27 @@
         },
         {
           "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "Giulia",
+              "href": "https://open.spotify.com/search/Giulia"
+            },
+            {
+              "text": "Asha Wells",
+              "href": "https://open.spotify.com/search/Asha%20Wells"
+            },
+            {
+              "text": "Nightjars",
+              "href": "https://open.spotify.com/search/Nightjars"
+            }
+          ],
+          "extra": "21+ $15 7pm/8pm"
+        },
+        {
+          "venue": {
             "text": "Luther Burbank Center, 50 Mark West Springs, Santa Rosa",
             "href": "https://www.google.com/search?q=Luther%20Burbank%20Center%2C%2050%20Mark%20West%20Springs%2C%20Santa%20Rosa"
           },
@@ -2791,7 +2512,7 @@
     },
     {
       "day": "Fri Jan 16",
-      "normalizedDate": "2027-01-16",
+      "normalizedDate": "2026-01-16",
       "events": [
         {
           "venue": {
@@ -2805,6 +2526,27 @@
             }
           ],
           "extra": "a/a $35.72 (under 21 plus $5) 8pm/9pm ^"
+        },
+        {
+          "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Family Obligation",
+              "href": "https://open.spotify.com/search/Family%20Obligation"
+            },
+            {
+              "text": "Band Cope",
+              "href": "https://open.spotify.com/search/Band%20Cope"
+            },
+            {
+              "text": "Christian Francisco",
+              "href": "https://open.spotify.com/search/Christian%20Francisco"
+            }
+          ],
+          "extra": "21+ free 9:30pm"
         },
         {
           "venue": {
@@ -2989,7 +2731,7 @@
     },
     {
       "day": "Sat Jan 17",
-      "normalizedDate": "2027-01-17",
+      "normalizedDate": "2026-01-17",
       "events": [
         {
           "venue": {
@@ -3044,8 +2786,8 @@
         },
         {
           "venue": {
-            "text": "Caravan, 98 South Almaden Ave., San Jose",
-            "href": "https://www.google.com/search?q=Caravan%2C%2098%20South%20Almaden%20Ave.%2C%20San%20Jose"
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
           },
           "bands": [
             {
@@ -3306,6 +3048,19 @@
         },
         {
           "venue": {
+            "text": "Sailing Goat, 1900 Stenmark Drive, Richmond",
+            "href": "https://www.google.com/search?q=Sailing%20Goat%2C%201900%20Stenmark%20Drive%2C%20Richmond"
+          },
+          "bands": [
+            {
+              "text": "Adrian West Band",
+              "href": "https://open.spotify.com/search/Adrian%20West%20Band"
+            }
+          ],
+          "extra": "a/a free 1pm"
+        },
+        {
+          "venue": {
             "text": "Up the Creek, Walnut Creek",
             "href": "https://www.google.com/search?q=Up%20the%20Creek%2C%20Walnut%20Creek"
           },
@@ -3342,7 +3097,7 @@
     },
     {
       "day": "Sun Jan 18",
-      "normalizedDate": "2027-01-18",
+      "normalizedDate": "2026-01-18",
       "events": [
         {
           "venue": {
@@ -3440,6 +3195,23 @@
         },
         {
           "venue": {
+            "text": "Faction Brewing, Alameda",
+            "href": "https://www.google.com/search?q=Faction%20Brewing%2C%20Alameda"
+          },
+          "bands": [
+            {
+              "text": "Alameda Record Swap",
+              "href": "https://open.spotify.com/search/Alameda%20Record%20Swap"
+            },
+            {
+              "text": "djs",
+              "href": "https://open.spotify.com/search/djs"
+            }
+          ],
+          "extra": "a/a free noon til 6pm"
+        },
+        {
+          "venue": {
             "text": "Great American Music Hall, S.F.",
             "href": "https://www.google.com/search?q=Great%20American%20Music%20Hall%2C%20S.F."
           },
@@ -3450,6 +3222,27 @@
             }
           ],
           "extra": "a/a $55 ($125 vip) 7pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "Liquid Sky",
+              "href": "https://open.spotify.com/search/Liquid%20Sky"
+            },
+            {
+              "text": "Uncle Neil",
+              "href": "https://open.spotify.com/search/Uncle%20Neil"
+            },
+            {
+              "text": "Tumbling Dice",
+              "href": "https://open.spotify.com/search/Tumbling%20Dice"
+            }
+          ],
+          "extra": "21+ $15 5pm/6pm (all tribute bands)"
         },
         {
           "venue": {
@@ -3534,7 +3327,7 @@
     },
     {
       "day": "Mon Jan 19",
-      "normalizedDate": "2027-01-19",
+      "normalizedDate": "2026-01-19",
       "events": [
         {
           "venue": {
@@ -3552,12 +3345,41 @@
             }
           ],
           "extra": "a/a $43.75 ($116.88/$60.23 vip) 7pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Winters Tavern, Pacifica",
+            "href": "https://www.google.com/search?q=Winters%20Tavern%2C%20Pacifica"
+          },
+          "bands": [
+            {
+              "text": "Garrett Deloian",
+              "href": "https://open.spotify.com/search/Garrett%20Deloian"
+            },
+            {
+              "text": "Scott Guberman",
+              "href": "https://open.spotify.com/search/Scott%20Guberman"
+            },
+            {
+              "text": "Anna Elva",
+              "href": "https://open.spotify.com/search/Anna%20Elva"
+            },
+            {
+              "text": "Stephanie Hartwell",
+              "href": "https://open.spotify.com/search/Stephanie%20Hartwell"
+            },
+            {
+              "text": "Roger Sideman",
+              "href": "https://open.spotify.com/search/Roger%20Sideman"
+            }
+          ],
+          "extra": "21+ 6pm"
         }
       ]
     },
     {
       "day": "Tue Jan 20",
-      "normalizedDate": "2027-01-20",
+      "normalizedDate": "2026-01-20",
       "events": [
         {
           "venue": {
@@ -3639,7 +3461,7 @@
     },
     {
       "day": "Wed Jan 21",
-      "normalizedDate": "2027-01-21",
+      "normalizedDate": "2026-01-21",
       "events": [
         {
           "venue": {
@@ -3839,7 +3661,7 @@
     },
     {
       "day": "Thu Jan 22",
-      "normalizedDate": "2027-01-22",
+      "normalizedDate": "2026-01-22",
       "events": [
         {
           "venue": {
@@ -3879,6 +3701,51 @@
             }
           ],
           "extra": "a/a (under 18 with parent) $57+ 8pm"
+        },
+        {
+          "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "Black Dream",
+              "href": "https://open.spotify.com/search/Black%20Dream"
+            },
+            {
+              "text": "Semi-Reactive",
+              "href": "https://open.spotify.com/search/Semi-Reactive"
+            },
+            {
+              "text": "Cherisha",
+              "href": "https://open.spotify.com/search/Cherisha"
+            },
+            {
+              "text": "Elegant Trash",
+              "href": "https://open.spotify.com/search/Elegant%20Trash"
+            },
+            {
+              "text": "Eclipsing Eden",
+              "href": "https://open.spotify.com/search/Eclipsing%20Eden"
+            },
+            {
+              "text": "Greyhound Playboys",
+              "href": "https://open.spotify.com/search/Greyhound%20Playboys"
+            },
+            {
+              "text": "C Breezy Quartet",
+              "href": "https://open.spotify.com/search/C%20Breezy%20Quartet"
+            },
+            {
+              "text": "Tizon",
+              "href": "https://open.spotify.com/search/Tizon"
+            },
+            {
+              "text": "mc Patty",
+              "href": "https://open.spotify.com/search/mc%20Patty"
+            }
+          ],
+          "extra": "21+ $15 ($25 vip) 6pm/6:30pm"
         },
         {
           "venue": {
@@ -3964,7 +3831,7 @@
     },
     {
       "day": "Fri Jan 23",
-      "normalizedDate": "2027-01-23",
+      "normalizedDate": "2026-01-23",
       "events": [
         {
           "venue": {
@@ -4278,8 +4145,29 @@
     },
     {
       "day": "Sat Jan 24",
-      "normalizedDate": "2027-01-24",
+      "normalizedDate": "2026-01-24",
       "events": [
+        {
+          "venue": {
+            "text": "1035 Texas Street, Fairfield",
+            "href": "https://www.google.com/search?q=1035%20Texas%20Street%2C%20Fairfield"
+          },
+          "bands": [
+            {
+              "text": "Corduro",
+              "href": "https://open.spotify.com/search/Corduro"
+            },
+            {
+              "text": "Rock Steady",
+              "href": "https://open.spotify.com/search/Rock%20Steady"
+            },
+            {
+              "text": "Coversations Kill",
+              "href": "https://open.spotify.com/search/Coversations%20Kill"
+            }
+          ],
+          "extra": "a/a $25/$30/$35 6pm (all tribute bands)"
+        },
         {
           "venue": {
             "text": "924 Gilman Street, Berkeley",
@@ -4368,6 +4256,27 @@
             }
           ],
           "extra": "?/? free 6pm"
+        },
+        {
+          "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Ratigan",
+              "href": "https://open.spotify.com/search/Ratigan"
+            },
+            {
+              "text": "Haskaluv",
+              "href": "https://open.spotify.com/search/Haskaluv"
+            },
+            {
+              "text": "Akhd",
+              "href": "https://open.spotify.com/search/Akhd"
+            }
+          ],
+          "extra": "21+ free 10pm"
         },
         {
           "venue": {
@@ -4487,6 +4396,10 @@
           },
           "bands": [
             {
+              "text": "Avengers",
+              "href": "https://open.spotify.com/search/Avengers"
+            },
+            {
               "text": "Inciters",
               "href": "https://open.spotify.com/search/Inciters"
             },
@@ -4511,7 +4424,7 @@
               "href": "https://open.spotify.com/search/Beneath%20You"
             }
           ],
-          "extra": "21+ $20 6pm"
+          "extra": "21+ $20 6pm @"
         },
         {
           "venue": {
@@ -4612,6 +4525,31 @@
         },
         {
           "venue": {
+            "text": "Subrosa, Santa Cruz",
+            "href": "https://www.google.com/search?q=Subrosa%2C%20Santa%20Cruz"
+          },
+          "bands": [
+            {
+              "text": "Average Jill",
+              "href": "https://open.spotify.com/search/Average%20Jill"
+            },
+            {
+              "text": "Semi Reactive",
+              "href": "https://open.spotify.com/search/Semi%20Reactive"
+            },
+            {
+              "text": "Pighati",
+              "href": "https://open.spotify.com/search/Pighati"
+            },
+            {
+              "text": "Peat",
+              "href": "https://open.spotify.com/search/Peat"
+            }
+          ],
+          "extra": "a/a $10 7pm"
+        },
+        {
+          "venue": {
             "text": "Thee Stork Club, Oakland",
             "href": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland"
           },
@@ -4665,7 +4603,7 @@
     },
     {
       "day": "Sun Jan 25",
-      "normalizedDate": "2027-01-25",
+      "normalizedDate": "2026-01-25",
       "events": [
         {
           "venue": {
@@ -4810,7 +4748,7 @@
     },
     {
       "day": "Mon Jan 26",
-      "normalizedDate": "2027-01-26",
+      "normalizedDate": "2026-01-26",
       "events": [
         {
           "venue": {
@@ -4867,7 +4805,7 @@
     },
     {
       "day": "Tue Jan 27",
-      "normalizedDate": "2027-01-27",
+      "normalizedDate": "2026-01-27",
       "events": [
         {
           "venue": {
@@ -4939,6 +4877,19 @@
         },
         {
           "venue": {
+            "text": "Ritz, San Jose",
+            "href": "https://www.google.com/search?q=Ritz%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Mad Caddies",
+              "href": "https://open.spotify.com/search/Mad%20Caddies"
+            }
+          ],
+          "extra": "a/a $32.37 7pm @"
+        },
+        {
+          "venue": {
             "text": "Thee Stork Club, Oakland",
             "href": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland"
           },
@@ -4958,7 +4909,7 @@
     },
     {
       "day": "Wed Jan 28",
-      "normalizedDate": "2027-01-28",
+      "normalizedDate": "2026-01-28",
       "events": [
         {
           "venue": {
@@ -5066,7 +5017,7 @@
     },
     {
       "day": "Thu Jan 29",
-      "normalizedDate": "2027-01-29",
+      "normalizedDate": "2026-01-29",
       "events": [
         {
           "venue": {
@@ -5186,6 +5137,27 @@
         },
         {
           "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "Felsen",
+              "href": "https://open.spotify.com/search/Felsen"
+            },
+            {
+              "text": "3 Star General",
+              "href": "https://open.spotify.com/search/3%20Star%20General"
+            },
+            {
+              "text": "Kyra Gordon",
+              "href": "https://open.spotify.com/search/Kyra%20Gordon"
+            }
+          ],
+          "extra": "21+ $15 7pm/7:30pm"
+        },
+        {
+          "venue": {
             "text": "Rickshaw Stop, S.F.",
             "href": "https://www.google.com/search?q=Rickshaw%20Stop%2C%20S.F."
           },
@@ -5226,7 +5198,7 @@
     },
     {
       "day": "Fri Jan 30",
-      "normalizedDate": "2027-01-30",
+      "normalizedDate": "2026-01-30",
       "events": [
         {
           "venue": {
@@ -5252,6 +5224,27 @@
             }
           ],
           "extra": "a/a $15 7pm/7:30pm"
+        },
+        {
+          "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Ranchero",
+              "href": "https://open.spotify.com/search/Ranchero"
+            },
+            {
+              "text": "Ding Mao",
+              "href": "https://open.spotify.com/search/Ding%20Mao"
+            },
+            {
+              "text": "Tidefalls",
+              "href": "https://open.spotify.com/search/Tidefalls"
+            }
+          ],
+          "extra": "21+ free 10pm"
         },
         {
           "venue": {
@@ -5522,7 +5515,7 @@
     },
     {
       "day": "Sat Jan 31",
-      "normalizedDate": "2027-01-31",
+      "normalizedDate": "2026-01-31",
       "events": [
         {
           "venue": {
@@ -5556,6 +5549,23 @@
             }
           ],
           "extra": "5+ $55.20 6pm/7pm"
+        },
+        {
+          "venue": {
+            "text": "Caravan Lounge, San Jose",
+            "href": "https://www.google.com/search?q=Caravan%20Lounge%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Culo A Boca",
+              "href": "https://open.spotify.com/search/Culo%20A%20Boca"
+            },
+            {
+              "text": "Has Beens",
+              "href": "https://open.spotify.com/search/Has%20Beens"
+            }
+          ],
+          "extra": "21+ free 10pm"
         },
         {
           "venue": {
@@ -5632,6 +5642,27 @@
         },
         {
           "venue": {
+            "text": "Stay Gold Deli, Oakland",
+            "href": "https://www.google.com/search?q=Stay%20Gold%20Deli%2C%20Oakland"
+          },
+          "bands": [
+            {
+              "text": "Mama & His Boys",
+              "href": "https://open.spotify.com/search/Mama%20%26%20His%20Boys"
+            },
+            {
+              "text": "Some Gifts",
+              "href": "https://open.spotify.com/search/Some%20Gifts"
+            },
+            {
+              "text": "Wealthy Women",
+              "href": "https://open.spotify.com/search/Wealthy%20Women"
+            }
+          ],
+          "extra": "a/a"
+        },
+        {
+          "venue": {
             "text": "Sweetwater Music Hall, Mill Valley",
             "href": "https://www.google.com/search?q=Sweetwater%20Music%20Hall%2C%20Mill%20Valley"
           },
@@ -5681,7 +5712,7 @@
     },
     {
       "day": "Sun Feb 1",
-      "normalizedDate": "2027-02-01",
+      "normalizedDate": "2026-02-01",
       "events": [
         {
           "venue": {
@@ -5793,7 +5824,7 @@
     },
     {
       "day": "Mon Feb 2",
-      "normalizedDate": "2027-02-02",
+      "normalizedDate": "2026-02-02",
       "events": [
         {
           "venue": {
@@ -5833,7 +5864,7 @@
     },
     {
       "day": "Tue Feb 3",
-      "normalizedDate": "2027-02-03",
+      "normalizedDate": "2026-02-03",
       "events": [
         {
           "venue": {
@@ -5895,7 +5926,7 @@
     },
     {
       "day": "Wed Feb 4",
-      "normalizedDate": "2027-02-04",
+      "normalizedDate": "2026-02-04",
       "events": [
         {
           "venue": {
@@ -5961,7 +5992,7 @@
     },
     {
       "day": "Thu Feb 5",
-      "normalizedDate": "2027-02-05",
+      "normalizedDate": "2026-02-05",
       "events": [
         {
           "venue": {
@@ -6017,6 +6048,10 @@
               "href": "https://open.spotify.com/search/She%20Past%20Away"
             },
             {
+              "text": "Soft Vein",
+              "href": "https://open.spotify.com/search/Soft%20Vein"
+            },
+            {
               "text": "dj Basura",
               "href": "https://open.spotify.com/search/dj%20Basura"
             }
@@ -6044,7 +6079,7 @@
     },
     {
       "day": "Fri Feb 6",
-      "normalizedDate": "2027-02-06",
+      "normalizedDate": "2026-02-06",
       "events": [
         {
           "venue": {
@@ -6168,7 +6203,7 @@
     },
     {
       "day": "Sat Feb 7",
-      "normalizedDate": "2027-02-07",
+      "normalizedDate": "2026-02-07",
       "events": [
         {
           "venue": {
@@ -6330,7 +6365,7 @@
     },
     {
       "day": "Sun Feb 8",
-      "normalizedDate": "2027-02-08",
+      "normalizedDate": "2026-02-08",
       "events": [
         {
           "venue": {
@@ -6424,7 +6459,7 @@
     },
     {
       "day": "Mon Feb 9",
-      "normalizedDate": "2027-02-09",
+      "normalizedDate": "2026-02-09",
       "events": [
         {
           "venue": {
@@ -6507,7 +6542,7 @@
     },
     {
       "day": "Tue Feb 10",
-      "normalizedDate": "2027-02-10",
+      "normalizedDate": "2026-02-10",
       "events": [
         {
           "venue": {
@@ -6569,7 +6604,7 @@
     },
     {
       "day": "Wed Feb 11",
-      "normalizedDate": "2027-02-11",
+      "normalizedDate": "2026-02-11",
       "events": [
         {
           "venue": {
@@ -6650,13 +6685,13 @@
               "href": "https://open.spotify.com/search/Daniel%20Donato's%20Cosmic%20Country"
             }
           ],
-          "extra": "a/a 7:30pm/8pm"
+          "extra": "a/a $32.47 7:30pm/8pm"
         }
       ]
     },
     {
       "day": "Thu Feb 12",
-      "normalizedDate": "2027-02-12",
+      "normalizedDate": "2026-02-12",
       "events": [
         {
           "venue": {
@@ -6733,7 +6768,7 @@
               "href": "https://open.spotify.com/search/Daniel%20Donato's%20Cosmic%20Country"
             }
           ],
-          "extra": "a/a 7:30pm/8pm"
+          "extra": "a/a $32.47 7:30pm/8pm"
         },
         {
           "venue": {
@@ -6769,7 +6804,7 @@
     },
     {
       "day": "Fri Feb 13",
-      "normalizedDate": "2027-02-13",
+      "normalizedDate": "2026-02-13",
       "events": [
         {
           "venue": {
@@ -7032,7 +7067,7 @@
     },
     {
       "day": "Sat Feb 14",
-      "normalizedDate": "2027-02-14",
+      "normalizedDate": "2026-02-14",
       "events": [
         {
           "venue": {
@@ -7279,7 +7314,7 @@
     },
     {
       "day": "Sun Feb 15",
-      "normalizedDate": "2027-02-15",
+      "normalizedDate": "2026-02-15",
       "events": [
         {
           "venue": {
@@ -7408,7 +7443,7 @@
     },
     {
       "day": "Mon Feb 16",
-      "normalizedDate": "2027-02-16",
+      "normalizedDate": "2026-02-16",
       "events": [
         {
           "venue": {
@@ -7440,7 +7475,7 @@
     },
     {
       "day": "Tue Feb 17",
-      "normalizedDate": "2027-02-17",
+      "normalizedDate": "2026-02-17",
       "events": [
         {
           "venue": {
@@ -7531,7 +7566,7 @@
               "href": "https://open.spotify.com/search/Queers"
             }
           ],
-          "extra": "16+ $20 7pm @"
+          "extra": "16+ $25.68 7pm @"
         },
         {
           "venue": {
@@ -7550,7 +7585,7 @@
     },
     {
       "day": "Wed Feb 18",
-      "normalizedDate": "2027-02-18",
+      "normalizedDate": "2026-02-18",
       "events": [
         {
           "venue": {
@@ -7638,7 +7673,7 @@
     },
     {
       "day": "Thu Feb 19",
-      "normalizedDate": "2027-02-19",
+      "normalizedDate": "2026-02-19",
       "events": [
         {
           "venue": {
@@ -7723,6 +7758,27 @@
         },
         {
           "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "Buzzed Lightbeer",
+              "href": "https://open.spotify.com/search/Buzzed%20Lightbeer"
+            },
+            {
+              "text": "Marble",
+              "href": "https://open.spotify.com/search/Marble"
+            },
+            {
+              "text": "Moon Wave",
+              "href": "https://open.spotify.com/search/Moon%20Wave"
+            }
+          ],
+          "extra": "21+ $15 7:30pm/8pm"
+        },
+        {
+          "venue": {
             "text": "Moe's Alley, Santa Cruz",
             "href": "https://www.google.com/search?q=Moe's%20Alley%2C%20Santa%20Cruz"
           },
@@ -7764,7 +7820,7 @@
     },
     {
       "day": "Fri Feb 20",
-      "normalizedDate": "2027-02-20",
+      "normalizedDate": "2026-02-20",
       "events": [
         {
           "venue": {
@@ -7980,7 +8036,7 @@
     },
     {
       "day": "Sat Feb 21",
-      "normalizedDate": "2027-02-21",
+      "normalizedDate": "2026-02-21",
       "events": [
         {
           "venue": {
@@ -8287,7 +8343,7 @@
     },
     {
       "day": "Sun Feb 22",
-      "normalizedDate": "2027-02-22",
+      "normalizedDate": "2026-02-22",
       "events": [
         {
           "venue": {
@@ -8392,7 +8448,7 @@
     },
     {
       "day": "Mon Feb 23",
-      "normalizedDate": "2027-02-23",
+      "normalizedDate": "2026-02-23",
       "events": [
         {
           "venue": {
@@ -8483,7 +8539,7 @@
     },
     {
       "day": "Tue Feb 24",
-      "normalizedDate": "2027-02-24",
+      "normalizedDate": "2026-02-24",
       "events": [
         {
           "venue": {
@@ -8592,7 +8648,7 @@
     },
     {
       "day": "Wed Feb 25",
-      "normalizedDate": "2027-02-25",
+      "normalizedDate": "2026-02-25",
       "events": [
         {
           "venue": {
@@ -8667,7 +8723,7 @@
     },
     {
       "day": "Thu Feb 26",
-      "normalizedDate": "2027-02-26",
+      "normalizedDate": "2026-02-26",
       "events": [
         {
           "venue": {
@@ -8830,6 +8886,19 @@
         },
         {
           "venue": {
+            "text": "Ritz, San Jose",
+            "href": "https://www.google.com/search?q=Ritz%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Ignite",
+              "href": "https://open.spotify.com/search/Ignite"
+            }
+          ],
+          "extra": "a/a $22.09 7pm @"
+        },
+        {
+          "venue": {
             "text": "SF Jazz Center, S.F.",
             "href": "https://www.google.com/search?q=SF%20Jazz%20Center%2C%20S.F."
           },
@@ -8887,7 +8956,7 @@
     },
     {
       "day": "Fri Feb 27",
-      "normalizedDate": "2027-02-27",
+      "normalizedDate": "2026-02-27",
       "events": [
         {
           "venue": {
@@ -9058,6 +9127,23 @@
         },
         {
           "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "Good The Bad & The Fugly (Josh Zee, Eric McFadden",
+              "href": "https://open.spotify.com/search/Good%20The%20Bad%20%26%20The%20Fugly%20(Josh%20Zee%2C%20Eric%20McFadden"
+            },
+            {
+              "text": "Bryan Kehoe)",
+              "href": "https://open.spotify.com/search/Bryan%20Kehoe)"
+            }
+          ],
+          "extra": "21+ $20 7:30pm/8:30pm"
+        },
+        {
+          "venue": {
             "text": "SF Jazz Center, S.F.",
             "href": "https://www.google.com/search?q=SF%20Jazz%20Center%2C%20S.F."
           },
@@ -9116,7 +9202,7 @@
     },
     {
       "day": "Sat Feb 28",
-      "normalizedDate": "2027-02-28",
+      "normalizedDate": "2026-02-28",
       "events": [
         {
           "venue": {
@@ -9300,6 +9386,27 @@
         },
         {
           "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "Angelo Tomandl & Omigato!",
+              "href": "https://open.spotify.com/search/Angelo%20Tomandl%20%26%20Omigato!"
+            },
+            {
+              "text": "Recyclists",
+              "href": "https://open.spotify.com/search/Recyclists"
+            },
+            {
+              "text": "Von Doodle Daddies",
+              "href": "https://open.spotify.com/search/Von%20Doodle%20Daddies"
+            }
+          ],
+          "extra": "21+ $20 7:30pm/8pm"
+        },
+        {
+          "venue": {
             "text": "Kilowatt, S.F.",
             "href": "https://www.google.com/search?q=Kilowatt%2C%20S.F."
           },
@@ -9405,8 +9512,21 @@
     },
     {
       "day": "Sun Mar 1",
-      "normalizedDate": "2027-03-01",
+      "normalizedDate": "2026-03-01",
       "events": [
+        {
+          "venue": {
+            "text": "Bottom of the Hill, S.F.",
+            "href": "https://www.google.com/search?q=Bottom%20of%20the%20Hill%2C%20S.F."
+          },
+          "bands": [
+            {
+              "text": "P.E.E.",
+              "href": "https://open.spotify.com/search/P.E.E."
+            }
+          ],
+          "extra": "21+ $25/$30 6pm/7pm"
+        },
         {
           "venue": {
             "text": "Chapel, S.F.",
@@ -9550,12 +9670,25 @@
             }
           ],
           "extra": "21+ $48.39 4:30pm/5:15pm and 8pm/8:45pm"
+        },
+        {
+          "venue": {
+            "text": "Winters Tavern, Pacifica",
+            "href": "https://www.google.com/search?q=Winters%20Tavern%2C%20Pacifica"
+          },
+          "bands": [
+            {
+              "text": "Temblors",
+              "href": "https://open.spotify.com/search/Temblors"
+            }
+          ],
+          "extra": "21+ 1pm"
         }
       ]
     },
     {
       "day": "Mon Mar 2",
-      "normalizedDate": "2027-03-02",
+      "normalizedDate": "2026-03-02",
       "events": [
         {
           "venue": {
@@ -9587,7 +9720,7 @@
     },
     {
       "day": "Tue Mar 3",
-      "normalizedDate": "2027-03-03",
+      "normalizedDate": "2026-03-03",
       "events": [
         {
           "venue": {
@@ -9700,7 +9833,7 @@
     },
     {
       "day": "Wed Mar 4",
-      "normalizedDate": "2027-03-04",
+      "normalizedDate": "2026-03-04",
       "events": [
         {
           "venue": {
@@ -9792,7 +9925,7 @@
     },
     {
       "day": "Thu Mar 5",
-      "normalizedDate": "2027-03-05",
+      "normalizedDate": "2026-03-05",
       "events": [
         {
           "venue": {
@@ -9906,7 +10039,7 @@
     },
     {
       "day": "Fri Mar 6",
-      "normalizedDate": "2027-03-06",
+      "normalizedDate": "2026-03-06",
       "events": [
         {
           "venue": {
@@ -10065,6 +10198,23 @@
         },
         {
           "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "John Brothers Piano Company",
+              "href": "https://open.spotify.com/search/John%20Brothers%20Piano%20Company"
+            },
+            {
+              "text": "Fairies",
+              "href": "https://open.spotify.com/search/Fairies"
+            }
+          ],
+          "extra": "21+ $25 7pm/8pm"
+        },
+        {
+          "venue": {
             "text": "Phoenix Theater, Petaluma",
             "href": "https://www.google.com/search?q=Phoenix%20Theater%2C%20Petaluma"
           },
@@ -10160,7 +10310,7 @@
     },
     {
       "day": "Sat Mar 7",
-      "normalizedDate": "2027-03-07",
+      "normalizedDate": "2026-03-07",
       "events": [
         {
           "venue": {
@@ -10465,7 +10615,7 @@
     },
     {
       "day": "Sun Mar 8",
-      "normalizedDate": "2027-03-08",
+      "normalizedDate": "2026-03-08",
       "events": [
         {
           "venue": {
@@ -10479,6 +10629,23 @@
             }
           ],
           "extra": "a/a $35.04 7:30pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Ivy Room, Albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany"
+          },
+          "bands": [
+            {
+              "text": "Lemonhammer",
+              "href": "https://open.spotify.com/search/Lemonhammer"
+            },
+            {
+              "text": "Tamsen Fynn And Her Handsome Bad",
+              "href": "https://open.spotify.com/search/Tamsen%20Fynn%20And%20Her%20Handsome%20Bad"
+            }
+          ],
+          "extra": "21+ $15 2pm/3pm"
         },
         {
           "venue": {
@@ -10497,7 +10664,7 @@
     },
     {
       "day": "Mon Mar 9",
-      "normalizedDate": "2027-03-09",
+      "normalizedDate": "2026-03-09",
       "events": [
         {
           "venue": {
@@ -10516,7 +10683,7 @@
     },
     {
       "day": "Tue Mar 10",
-      "normalizedDate": "2027-03-10",
+      "normalizedDate": "2026-03-10",
       "events": [
         {
           "venue": {
@@ -10595,7 +10762,7 @@
     },
     {
       "day": "Wed Mar 11",
-      "normalizedDate": "2027-03-11",
+      "normalizedDate": "2026-03-11",
       "events": [
         {
           "venue": {
@@ -10657,7 +10824,7 @@
     },
     {
       "day": "Thu Mar 12",
-      "normalizedDate": "2027-03-12",
+      "normalizedDate": "2026-03-12",
       "events": [
         {
           "venue": {
@@ -10782,7 +10949,7 @@
     },
     {
       "day": "Fri Mar 13",
-      "normalizedDate": "2027-03-13",
+      "normalizedDate": "2026-03-13",
       "events": [
         {
           "venue": {
@@ -10879,7 +11046,7 @@
     },
     {
       "day": "Sat Mar 14",
-      "normalizedDate": "2027-03-14",
+      "normalizedDate": "2026-03-14",
       "events": [
         {
           "venue": {
@@ -11053,7 +11220,7 @@
     },
     {
       "day": "Sun Mar 15",
-      "normalizedDate": "2027-03-15",
+      "normalizedDate": "2026-03-15",
       "events": [
         {
           "venue": {
@@ -11100,6 +11267,27 @@
         },
         {
           "venue": {
+            "text": "Ritz, San Jose",
+            "href": "https://www.google.com/search?q=Ritz%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Slow Crush",
+              "href": "https://open.spotify.com/search/Slow%20Crush"
+            },
+            {
+              "text": "She's Green",
+              "href": "https://open.spotify.com/search/She's%20Green"
+            },
+            {
+              "text": "Spite House",
+              "href": "https://open.spotify.com/search/Spite%20House"
+            }
+          ],
+          "extra": "a/a $27.74 7pm"
+        },
+        {
+          "venue": {
             "text": "Warriors Stadium, S.F.",
             "href": "https://www.google.com/search?q=Warriors%20Stadium%2C%20S.F."
           },
@@ -11119,7 +11307,7 @@
     },
     {
       "day": "Mon Mar 16",
-      "normalizedDate": "2027-03-16",
+      "normalizedDate": "2026-03-16",
       "events": [
         {
           "venue": {
@@ -11149,13 +11337,13 @@
               "href": "https://open.spotify.com/search/Ghostwoman"
             }
           ],
-          "extra": "?/?"
+          "extra": "a/a $33.92 7pm"
         }
       ]
     },
     {
       "day": "Tue Mar 17",
-      "normalizedDate": "2027-03-17",
+      "normalizedDate": "2026-03-17",
       "events": [
         {
           "venue": {
@@ -11204,7 +11392,7 @@
     },
     {
       "day": "Wed Mar 18",
-      "normalizedDate": "2027-03-18",
+      "normalizedDate": "2026-03-18",
       "events": [
         {
           "venue": {
@@ -11330,7 +11518,7 @@
     },
     {
       "day": "Thu Mar 19",
-      "normalizedDate": "2027-03-19",
+      "normalizedDate": "2026-03-19",
       "events": [
         {
           "venue": {
@@ -11426,7 +11614,7 @@
     },
     {
       "day": "Fri Mar 20",
-      "normalizedDate": "2027-03-20",
+      "normalizedDate": "2026-03-20",
       "events": [
         {
           "venue": {
@@ -11554,7 +11742,7 @@
               "href": "https://open.spotify.com/search/Angry%20Aztecs"
             }
           ],
-          "extra": "21+ $17 8pm @"
+          "extra": "21+ $17 8pm/8:30pm @"
         },
         {
           "venue": {
@@ -11620,7 +11808,7 @@
     },
     {
       "day": "Sat Mar 21",
-      "normalizedDate": "2027-03-21",
+      "normalizedDate": "2026-03-21",
       "events": [
         {
           "venue": {
@@ -11925,7 +12113,7 @@
     },
     {
       "day": "Sun Mar 22",
-      "normalizedDate": "2027-03-22",
+      "normalizedDate": "2026-03-22",
       "events": [
         {
           "venue": {
@@ -12067,7 +12255,7 @@
     },
     {
       "day": "Mon Mar 23",
-      "normalizedDate": "2027-03-23",
+      "normalizedDate": "2026-03-23",
       "events": [
         {
           "venue": {
@@ -12155,7 +12343,7 @@
     },
     {
       "day": "Tue Mar 24",
-      "normalizedDate": "2027-03-24",
+      "normalizedDate": "2026-03-24",
       "events": [
         {
           "venue": {
@@ -12268,7 +12456,7 @@
     },
     {
       "day": "Wed Mar 25",
-      "normalizedDate": "2027-03-25",
+      "normalizedDate": "2026-03-25",
       "events": [
         {
           "venue": {
@@ -12397,7 +12585,7 @@
     },
     {
       "day": "Thu Mar 26",
-      "normalizedDate": "2027-03-26",
+      "normalizedDate": "2026-03-26",
       "events": [
         {
           "venue": {
@@ -12485,7 +12673,7 @@
     },
     {
       "day": "Fri Mar 27",
-      "normalizedDate": "2027-03-27",
+      "normalizedDate": "2026-03-27",
       "events": [
         {
           "venue": {
@@ -12665,7 +12853,7 @@
     },
     {
       "day": "Sat Mar 28",
-      "normalizedDate": "2027-03-28",
+      "normalizedDate": "2026-03-28",
       "events": [
         {
           "venue": {
@@ -12836,7 +13024,7 @@
     },
     {
       "day": "Sun Mar 29",
-      "normalizedDate": "2027-03-29",
+      "normalizedDate": "2026-03-29",
       "events": [
         {
           "venue": {
@@ -12947,7 +13135,7 @@
     },
     {
       "day": "Mon Mar 30",
-      "normalizedDate": "2027-03-30",
+      "normalizedDate": "2026-03-30",
       "events": [
         {
           "venue": {
@@ -13038,7 +13226,7 @@
     },
     {
       "day": "Tue Mar 31",
-      "normalizedDate": "2027-03-31",
+      "normalizedDate": "2026-03-31",
       "events": [
         {
           "venue": {
@@ -13167,7 +13355,7 @@
     },
     {
       "day": "Wed Apr 1",
-      "normalizedDate": "2027-04-01",
+      "normalizedDate": "2026-04-01",
       "events": [
         {
           "venue": {
@@ -13335,7 +13523,7 @@
     },
     {
       "day": "Thu Apr 2",
-      "normalizedDate": "2027-04-02",
+      "normalizedDate": "2026-04-02",
       "events": [
         {
           "venue": {
@@ -13427,7 +13615,7 @@
     },
     {
       "day": "Fri Apr 3",
-      "normalizedDate": "2027-04-03",
+      "normalizedDate": "2026-04-03",
       "events": [
         {
           "venue": {
@@ -13659,7 +13847,7 @@
     },
     {
       "day": "Sat Apr 4",
-      "normalizedDate": "2027-04-04",
+      "normalizedDate": "2026-04-04",
       "events": [
         {
           "venue": {
@@ -13767,7 +13955,7 @@
     },
     {
       "day": "Sun Apr 5",
-      "normalizedDate": "2027-04-05",
+      "normalizedDate": "2026-04-05",
       "events": [
         {
           "venue": {
@@ -13806,12 +13994,25 @@
             }
           ],
           "extra": "a/a 7pm/8pm #"
+        },
+        {
+          "venue": {
+            "text": "Winters Tavern, Pacifica",
+            "href": "https://www.google.com/search?q=Winters%20Tavern%2C%20Pacifica"
+          },
+          "bands": [
+            {
+              "text": "Catherine DeNuverang",
+              "href": "https://open.spotify.com/search/Catherine%20DeNuverang"
+            }
+          ],
+          "extra": "21+ 1pm"
         }
       ]
     },
     {
       "day": "Mon Apr 6",
-      "normalizedDate": "2027-04-06",
+      "normalizedDate": "2026-04-06",
       "events": [
         {
           "venue": {
@@ -13877,7 +14078,7 @@
     },
     {
       "day": "Tue Apr 7",
-      "normalizedDate": "2027-04-07",
+      "normalizedDate": "2026-04-07",
       "events": [
         {
           "venue": {
@@ -13981,7 +14182,7 @@
     },
     {
       "day": "Wed Apr 8",
-      "normalizedDate": "2027-04-08",
+      "normalizedDate": "2026-04-08",
       "events": [
         {
           "venue": {
@@ -14039,7 +14240,7 @@
     },
     {
       "day": "Thu Apr 9",
-      "normalizedDate": "2027-04-09",
+      "normalizedDate": "2026-04-09",
       "events": [
         {
           "venue": {
@@ -14101,7 +14302,7 @@
     },
     {
       "day": "Fri Apr 10",
-      "normalizedDate": "2027-04-10",
+      "normalizedDate": "2026-04-10",
       "events": [
         {
           "venue": {
@@ -14201,7 +14402,7 @@
     },
     {
       "day": "Sat Apr 11",
-      "normalizedDate": "2027-04-11",
+      "normalizedDate": "2026-04-11",
       "events": [
         {
           "venue": {
@@ -14289,7 +14490,7 @@
     },
     {
       "day": "Sun Apr 12",
-      "normalizedDate": "2027-04-12",
+      "normalizedDate": "2026-04-12",
       "events": [
         {
           "venue": {
@@ -14362,7 +14563,7 @@
     },
     {
       "day": "Mon Apr 13",
-      "normalizedDate": "2027-04-13",
+      "normalizedDate": "2026-04-13",
       "events": [
         {
           "venue": {
@@ -14394,7 +14595,7 @@
     },
     {
       "day": "Tue Apr 14",
-      "normalizedDate": "2027-04-14",
+      "normalizedDate": "2026-04-14",
       "events": [
         {
           "venue": {
@@ -14426,7 +14627,7 @@
     },
     {
       "day": "Wed Apr 15",
-      "normalizedDate": "2027-04-15",
+      "normalizedDate": "2026-04-15",
       "events": [
         {
           "venue": {
@@ -14491,7 +14692,7 @@
     },
     {
       "day": "Thu Apr 16",
-      "normalizedDate": "2027-04-16",
+      "normalizedDate": "2026-04-16",
       "events": [
         {
           "venue": {
@@ -14557,7 +14758,7 @@
     },
     {
       "day": "Fri Apr 17",
-      "normalizedDate": "2027-04-17",
+      "normalizedDate": "2026-04-17",
       "events": [
         {
           "venue": {
@@ -14610,7 +14811,7 @@
     },
     {
       "day": "Sat Apr 18",
-      "normalizedDate": "2027-04-18",
+      "normalizedDate": "2026-04-18",
       "events": [
         {
           "venue": {
@@ -14694,7 +14895,7 @@
     },
     {
       "day": "Sun Apr 19",
-      "normalizedDate": "2027-04-19",
+      "normalizedDate": "2026-04-19",
       "events": [
         {
           "venue": {
@@ -14726,7 +14927,7 @@
     },
     {
       "day": "Mon Apr 20",
-      "normalizedDate": "2027-04-20",
+      "normalizedDate": "2026-04-20",
       "events": [
         {
           "venue": {
@@ -14757,7 +14958,7 @@
     },
     {
       "day": "Tue Apr 21",
-      "normalizedDate": "2027-04-21",
+      "normalizedDate": "2026-04-21",
       "events": [
         {
           "venue": {
@@ -14806,7 +15007,7 @@
     },
     {
       "day": "Wed Apr 22",
-      "normalizedDate": "2027-04-22",
+      "normalizedDate": "2026-04-22",
       "events": [
         {
           "venue": {
@@ -14872,7 +15073,7 @@
     },
     {
       "day": "Thu Apr 23",
-      "normalizedDate": "2027-04-23",
+      "normalizedDate": "2026-04-23",
       "events": [
         {
           "venue": {
@@ -14895,7 +15096,7 @@
     },
     {
       "day": "Fri Apr 24",
-      "normalizedDate": "2027-04-24",
+      "normalizedDate": "2026-04-24",
       "events": [
         {
           "venue": {
@@ -14982,7 +15183,7 @@
     },
     {
       "day": "Sat Apr 25",
-      "normalizedDate": "2027-04-25",
+      "normalizedDate": "2026-04-25",
       "events": [
         {
           "venue": {
@@ -15048,7 +15249,7 @@
     },
     {
       "day": "Sun Apr 26",
-      "normalizedDate": "2027-04-26",
+      "normalizedDate": "2026-04-26",
       "events": [
         {
           "venue": {
@@ -15136,7 +15337,7 @@
     },
     {
       "day": "Tue Apr 28",
-      "normalizedDate": "2027-04-28",
+      "normalizedDate": "2026-04-28",
       "events": [
         {
           "venue": {
@@ -15155,7 +15356,7 @@
     },
     {
       "day": "Wed Apr 29",
-      "normalizedDate": "2027-04-29",
+      "normalizedDate": "2026-04-29",
       "events": [
         {
           "venue": {
@@ -15217,7 +15418,7 @@
     },
     {
       "day": "Thu Apr 30",
-      "normalizedDate": "2027-04-30",
+      "normalizedDate": "2026-04-30",
       "events": [
         {
           "venue": {
@@ -15300,7 +15501,7 @@
     },
     {
       "day": "Fri May 1",
-      "normalizedDate": "2027-05-01",
+      "normalizedDate": "2026-05-01",
       "events": [
         {
           "venue": {
@@ -15345,7 +15546,7 @@
     },
     {
       "day": "Sat May 2",
-      "normalizedDate": "2027-05-02",
+      "normalizedDate": "2026-05-02",
       "events": [
         {
           "venue": {
@@ -15377,7 +15578,7 @@
     },
     {
       "day": "Sun May 3",
-      "normalizedDate": "2027-05-03",
+      "normalizedDate": "2026-05-03",
       "events": [
         {
           "venue": {
@@ -15426,7 +15627,7 @@
     },
     {
       "day": "Mon May 4",
-      "normalizedDate": "2027-05-04",
+      "normalizedDate": "2026-05-04",
       "events": [
         {
           "venue": {
@@ -15445,7 +15646,7 @@
     },
     {
       "day": "Tue May 5",
-      "normalizedDate": "2027-05-05",
+      "normalizedDate": "2026-05-05",
       "events": [
         {
           "venue": {
@@ -15485,7 +15686,7 @@
     },
     {
       "day": "Wed May 6",
-      "normalizedDate": "2027-05-06",
+      "normalizedDate": "2026-05-06",
       "events": [
         {
           "venue": {
@@ -15508,7 +15709,7 @@
     },
     {
       "day": "Thu May 7",
-      "normalizedDate": "2027-05-07",
+      "normalizedDate": "2026-05-07",
       "events": [
         {
           "venue": {
@@ -15570,7 +15771,7 @@
     },
     {
       "day": "Fri May 8",
-      "normalizedDate": "2027-05-08",
+      "normalizedDate": "2026-05-08",
       "events": [
         {
           "venue": {
@@ -15666,7 +15867,7 @@
     },
     {
       "day": "Sat May 9",
-      "normalizedDate": "2027-05-09",
+      "normalizedDate": "2026-05-09",
       "events": [
         {
           "venue": {
@@ -15732,7 +15933,7 @@
     },
     {
       "day": "Sun May 10",
-      "normalizedDate": "2027-05-10",
+      "normalizedDate": "2026-05-10",
       "events": [
         {
           "venue": {
@@ -15776,7 +15977,7 @@
     },
     {
       "day": "Mon May 11",
-      "normalizedDate": "2027-05-11",
+      "normalizedDate": "2026-05-11",
       "events": [
         {
           "venue": {
@@ -15833,7 +16034,7 @@
     },
     {
       "day": "Wed May 13",
-      "normalizedDate": "2027-05-13",
+      "normalizedDate": "2026-05-13",
       "events": [
         {
           "venue": {
@@ -15886,7 +16087,7 @@
     },
     {
       "day": "Thu May 14",
-      "normalizedDate": "2027-05-14",
+      "normalizedDate": "2026-05-14",
       "events": [
         {
           "venue": {
@@ -15960,7 +16161,7 @@
     },
     {
       "day": "Fri May 15",
-      "normalizedDate": "2027-05-15",
+      "normalizedDate": "2026-05-15",
       "events": [
         {
           "venue": {
@@ -16090,7 +16291,7 @@
     },
     {
       "day": "Sat May 16",
-      "normalizedDate": "2027-05-16",
+      "normalizedDate": "2026-05-16",
       "events": [
         {
           "venue": {
@@ -16139,7 +16340,7 @@
     },
     {
       "day": "Sun May 17",
-      "normalizedDate": "2027-05-17",
+      "normalizedDate": "2026-05-17",
       "events": [
         {
           "venue": {
@@ -16171,7 +16372,7 @@
     },
     {
       "day": "Mon May 18",
-      "normalizedDate": "2027-05-18",
+      "normalizedDate": "2026-05-18",
       "events": [
         {
           "venue": {
@@ -16203,7 +16404,7 @@
     },
     {
       "day": "Tue May 19",
-      "normalizedDate": "2027-05-19",
+      "normalizedDate": "2026-05-19",
       "events": [
         {
           "venue": {
@@ -16235,7 +16436,7 @@
     },
     {
       "day": "Wed May 20",
-      "normalizedDate": "2027-05-20",
+      "normalizedDate": "2026-05-20",
       "events": [
         {
           "venue": {
@@ -16267,7 +16468,7 @@
     },
     {
       "day": "Fri May 22",
-      "normalizedDate": "2027-05-22",
+      "normalizedDate": "2026-05-22",
       "events": [
         {
           "venue": {
@@ -16307,7 +16508,7 @@
     },
     {
       "day": "Sun May 24",
-      "normalizedDate": "2027-05-24",
+      "normalizedDate": "2026-05-24",
       "events": [
         {
           "venue": {
@@ -16326,7 +16527,7 @@
     },
     {
       "day": "Tue May 26",
-      "normalizedDate": "2027-05-26",
+      "normalizedDate": "2026-05-26",
       "events": [
         {
           "venue": {
@@ -16349,7 +16550,7 @@
     },
     {
       "day": "Wed May 27",
-      "normalizedDate": "2027-05-27",
+      "normalizedDate": "2026-05-27",
       "events": [
         {
           "venue": {
@@ -16393,7 +16594,7 @@
     },
     {
       "day": "Thu May 28",
-      "normalizedDate": "2027-05-28",
+      "normalizedDate": "2026-05-28",
       "events": [
         {
           "venue": {
@@ -16412,7 +16613,7 @@
     },
     {
       "day": "Fri May 29",
-      "normalizedDate": "2027-05-29",
+      "normalizedDate": "2026-05-29",
       "events": [
         {
           "venue": {
@@ -16497,7 +16698,7 @@
     },
     {
       "day": "Sat May 30",
-      "normalizedDate": "2027-05-30",
+      "normalizedDate": "2026-05-30",
       "events": [
         {
           "venue": {
@@ -16557,8 +16758,27 @@
       ]
     },
     {
+      "day": "Tue Jun 2",
+      "normalizedDate": "2026-06-02",
+      "events": [
+        {
+          "venue": {
+            "text": "Ritz, San Jose",
+            "href": "https://www.google.com/search?q=Ritz%2C%20San%20Jose"
+          },
+          "bands": [
+            {
+              "text": "Infected Rain",
+              "href": "https://open.spotify.com/search/Infected%20Rain"
+            }
+          ],
+          "extra": "a/a $31.34 7pm"
+        }
+      ]
+    },
+    {
       "day": "Sat Jun 6",
-      "normalizedDate": "2027-06-06",
+      "normalizedDate": "2026-06-06",
       "events": [
         {
           "venue": {
@@ -16603,7 +16823,7 @@
     },
     {
       "day": "Tue Jun 9",
-      "normalizedDate": "2027-06-09",
+      "normalizedDate": "2026-06-09",
       "events": [
         {
           "venue": {
@@ -16635,7 +16855,7 @@
     },
     {
       "day": "Wed Jun 10",
-      "normalizedDate": "2027-06-10",
+      "normalizedDate": "2026-06-10",
       "events": [
         {
           "venue": {
@@ -16654,7 +16874,7 @@
     },
     {
       "day": "Thu Jun 11",
-      "normalizedDate": "2027-06-11",
+      "normalizedDate": "2026-06-11",
       "events": [
         {
           "venue": {
@@ -16702,7 +16922,7 @@
     },
     {
       "day": "Sat Jun 13",
-      "normalizedDate": "2027-06-13",
+      "normalizedDate": "2026-06-13",
       "events": [
         {
           "venue": {
@@ -16725,7 +16945,7 @@
     },
     {
       "day": "Tue Jun 16",
-      "normalizedDate": "2027-06-16",
+      "normalizedDate": "2026-06-16",
       "events": [
         {
           "venue": {
@@ -16744,7 +16964,7 @@
     },
     {
       "day": "Sat Jun 20",
-      "normalizedDate": "2027-06-20",
+      "normalizedDate": "2026-06-20",
       "events": [
         {
           "venue": {
@@ -16763,7 +16983,7 @@
     },
     {
       "day": "Sun Jun 21",
-      "normalizedDate": "2027-06-21",
+      "normalizedDate": "2026-06-21",
       "events": [
         {
           "venue": {
@@ -16782,7 +17002,7 @@
     },
     {
       "day": "Tue Jun 23",
-      "normalizedDate": "2027-06-23",
+      "normalizedDate": "2026-06-23",
       "events": [
         {
           "venue": {
@@ -16805,7 +17025,7 @@
     },
     {
       "day": "Fri Jun 26",
-      "normalizedDate": "2027-06-26",
+      "normalizedDate": "2026-06-26",
       "events": [
         {
           "venue": {
@@ -16828,7 +17048,7 @@
     },
     {
       "day": "Wed Jul 1",
-      "normalizedDate": "2026-07-01",
+      "normalizedDate": "2025-07-01",
       "events": [
         {
           "venue": {
@@ -16847,7 +17067,7 @@
     },
     {
       "day": "Mon Jul 6",
-      "normalizedDate": "2026-07-06",
+      "normalizedDate": "2025-07-06",
       "events": [
         {
           "venue": {
@@ -16866,7 +17086,7 @@
     },
     {
       "day": "Wed Jul 8",
-      "normalizedDate": "2026-07-08",
+      "normalizedDate": "2025-07-08",
       "events": [
         {
           "venue": {
@@ -16898,7 +17118,7 @@
     },
     {
       "day": "Fri Jul 10",
-      "normalizedDate": "2026-07-10",
+      "normalizedDate": "2025-07-10",
       "events": [
         {
           "venue": {
@@ -16930,7 +17150,7 @@
     },
     {
       "day": "Sat Jul 11",
-      "normalizedDate": "2026-07-11",
+      "normalizedDate": "2025-07-11",
       "events": [
         {
           "venue": {
@@ -16949,7 +17169,7 @@
     },
     {
       "day": "Tue Jul 14",
-      "normalizedDate": "2026-07-14",
+      "normalizedDate": "2025-07-14",
       "events": [
         {
           "venue": {
@@ -16980,7 +17200,7 @@
     },
     {
       "day": "Fri Jul 17",
-      "normalizedDate": "2026-07-17",
+      "normalizedDate": "2025-07-17",
       "events": [
         {
           "venue": {
@@ -17020,7 +17240,7 @@
     },
     {
       "day": "Sat Jul 18",
-      "normalizedDate": "2026-07-18",
+      "normalizedDate": "2025-07-18",
       "events": [
         {
           "venue": {
@@ -17056,7 +17276,7 @@
     },
     {
       "day": "Sun Jul 19",
-      "normalizedDate": "2026-07-19",
+      "normalizedDate": "2025-07-19",
       "events": [
         {
           "venue": {
@@ -17075,7 +17295,7 @@
     },
     {
       "day": "Mon Jul 20",
-      "normalizedDate": "2026-07-20",
+      "normalizedDate": "2025-07-20",
       "events": [
         {
           "venue": {
@@ -17102,7 +17322,7 @@
     },
     {
       "day": "Sat Jul 25",
-      "normalizedDate": "2026-07-25",
+      "normalizedDate": "2025-07-25",
       "events": [
         {
           "venue": {
@@ -17121,7 +17341,7 @@
     },
     {
       "day": "Mon Jul 20",
-      "normalizedDate": "2026-07-20",
+      "normalizedDate": "2025-07-20",
       "events": [
         {
           "venue": {
@@ -17148,7 +17368,7 @@
     },
     {
       "day": "Sat Jul 25",
-      "normalizedDate": "2026-07-25",
+      "normalizedDate": "2025-07-25",
       "events": [
         {
           "venue": {
