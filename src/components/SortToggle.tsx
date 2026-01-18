@@ -55,7 +55,7 @@ export function SortToggle({
         <Button
           variant="outline"
           className={cn(
-            "h-12 min-h-[48px] w-full flex-1 touch-manipulation justify-between truncate md:w-auto",
+            "h-12 min-h-12 w-full flex-1 touch-manipulation justify-between truncate md:w-auto",
             className,
           )}
         >
