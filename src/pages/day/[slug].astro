@@ -134,6 +134,7 @@ const year = getYear(day.normalizedDate);
                       client:load
                       title={event.bands.map((band) => band.text).join(", ")}
                       date={day.normalizedDate}
+                      time={event.extra ? String(event.extra) : undefined}
                       venue={String(event.venue.text)}
                       description={event.extra ? String(event.extra) : ""}
                     />
