@@ -17,19 +17,10 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-import artistsData from "@/data/artists.json";
+import genresData from "@/data/genres.json";
 
-// extract unique genres from artist data
 function getUniqueGenres(): string[] {
-  const genreSet = new Set<string>();
-  for (const artist of artistsData.artists) {
-    if (artist.spotifyData && Array.isArray(artist.spotifyData.genres)) {
-      for (const genre of artist.spotifyData.genres) {
-        genreSet.add(genre);
-      }
-    }
-  }
-  return Array.from(genreSet).sort((a, b) => a.localeCompare(b));
+  return genresData.genres || [];
 }
 
 interface GenreComboboxProps {

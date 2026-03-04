@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, {
+  useState,
+  useEffect,
+  useMemo,
+  useRef,
+  useCallback,
+} from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { VenueSortToggle } from "./SortToggle";
@@ -99,24 +105,54 @@ const VenueList = () => {
   const [filteredVenues, setFilteredVenues] = useState(
     sortVenues(venueData, "next-show"),
   );
+  const [visibleCount, setVisibleCount] = useState(25);
+  const ITEMS_PER_PAGE = 25;
 
   // Handle search query changes
   useEffect(() => {
     if (!searchQuery) {
       setFilteredVenues(sortVenues(venueData, sortKey));
-      return;
+    } else {
+      const query = searchQuery.toLowerCase();
+      const filtered = venueData.filter(
+        (venue) =>
+          venue.displayName.toLowerCase().includes(query) ||
+          (venue.locationInfo &&
+            venue.locationInfo.toLowerCase().includes(query)),
+      );
+      setFilteredVenues(sortVenues(filtered, sortKey));
     }
+    // Reset visible count when filters change
+    setVisibleCount(ITEMS_PER_PAGE);
+  }, [searchQuery, sortKey, venueData]);
 
-    const query = searchQuery.toLowerCase();
-    const filtered = venueData.filter(
-      (venue) =>
-        venue.displayName.toLowerCase().includes(query) ||
-        (venue.locationInfo &&
-          venue.locationInfo.toLowerCase().includes(query)),
+  // Get visible venues based on pagination
+  const visibleVenues = filteredVenues.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredVenues.length;
+
+  const loadMoreRef = useRef<HTMLDivElement>(null);
+
+  const handleLoadMore = useCallback(() => {
+    setVisibleCount((prev) => prev + ITEMS_PER_PAGE);
+  }, []);
+
+  // Infinite scroll with Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMore) {
+          handleLoadMore();
+        }
+      },
+      { rootMargin: "100px" },
     );
 
-    setFilteredVenues(sortVenues(filtered, sortKey));
-  }, [searchQuery, sortKey, venueData]);
+    if (loadMoreRef.current) {
+      observer.observe(loadMoreRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasMore, handleLoadMore]);
 
   // Handle sort changes
   const handleSortChange = (newSortKey: string) => {
@@ -144,10 +180,12 @@ const VenueList = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {filteredVenues.map((venue) => (
+        {visibleVenues.map((venue) => (
           <VenueCard key={venue.id} venue={venue} />
         ))}
       </div>
+
+      {hasMore && <div ref={loadMoreRef} className="h-4" />}
     </div>
   );
 };

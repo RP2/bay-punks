@@ -79,7 +79,7 @@ jobs:
             node scripts/spotify-verify.js --force
           fi
 
-      # generate calendar.json from processed data
+      # generate calendar.json from processed data (also prunes artists/venues)
       - name: generate calendar
         run: |
           echo "📅 generating calendar.json from processed data..."

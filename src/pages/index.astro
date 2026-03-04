@@ -57,12 +57,12 @@ import { TabsWrapper } from "../components/TabsWrapper";
 
       <!-- artists content (hidden by default, shown when artists tab is active) -->
       <div id="artists-content" class="tab-content hidden" data-tab="artists">
-        <ArtistList client:load />
+        <ArtistList client:visible />
       </div>
 
       <!-- venues content (hidden by default, shown when venues tab is active) -->
       <div id="venues-content" class="tab-content hidden" data-tab="venues">
-        <VenueList client:load />
+        <VenueList client:visible />
       </div>
     </div>
   </section>

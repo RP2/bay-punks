@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, {
+  useState,
+  useEffect,
+  useMemo,
+  useRef,
+  useCallback,
+} from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ArtistSortToggle } from "./SortToggle";
@@ -110,6 +116,8 @@ const ArtistList = () => {
   const [filteredArtists, setFilteredArtists] = useState(
     sortArtists(artistData, "next-show"),
   );
+  const [visibleCount, setVisibleCount] = useState(25);
+  const ITEMS_PER_PAGE = 25;
 
   // Update filtering when search, sort, or genre changes
   useEffect(() => {
@@ -128,7 +136,37 @@ const ArtistList = () => {
 
     // Finally sort the filtered results
     setFilteredArtists(sortArtists(filtered, sortKey));
+    // Reset visible count when filters change
+    setVisibleCount(ITEMS_PER_PAGE);
   }, [searchQuery, sortKey, selectedGenre, artistData]);
+
+  // Get visible artists based on pagination
+  const visibleArtists = filteredArtists.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredArtists.length;
+
+  const loadMoreRef = useRef<HTMLDivElement>(null);
+
+  const handleLoadMore = useCallback(() => {
+    setVisibleCount((prev) => prev + ITEMS_PER_PAGE);
+  }, []);
+
+  // Infinite scroll with Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMore) {
+          handleLoadMore();
+        }
+      },
+      { rootMargin: "100px" },
+    );
+
+    if (loadMoreRef.current) {
+      observer.observe(loadMoreRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasMore, handleLoadMore]);
 
   // Handle genre change
   const handleGenreChange = (genre: string) => {
@@ -180,10 +218,12 @@ const ArtistList = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {filteredArtists.map((artist) => (
+        {visibleArtists.map((artist) => (
           <ArtistCard key={artist.id} artist={artist} />
         ))}
       </div>
+
+      {hasMore && <div ref={loadMoreRef} className="h-4" />}
     </div>
   );
 };

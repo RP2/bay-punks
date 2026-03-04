@@ -163,6 +163,68 @@ async function generateCalendar() {
   console.log(
     `✅ ${spotifyVerifiedEvents} spotify verified bands (${Math.round((spotifyVerifiedEvents / totalBands) * 100)}%)`,
   );
+
+  // Prune artists.json to only include artists with upcoming shows
+  console.log("\n🧹 pruning data to only include active artists and venues...");
+
+  const activeArtistIds = new Set();
+  const activeVenueIds = new Set();
+
+  upcomingShows.forEach((show) => {
+    show.events.forEach((event) => {
+      if (event.venue?.id) {
+        activeVenueIds.add(event.venue.id);
+      }
+      event.bands.forEach((band) => {
+        if (band.id) {
+          activeArtistIds.add(band.id);
+        }
+      });
+    });
+  });
+
+  const originalArtistCount = artistsData.artists.length;
+  const originalVenueCount = venuesData.venues.length;
+
+  artistsData.artists = artistsData.artists.filter((artist) =>
+    activeArtistIds.has(artist.id),
+  );
+  venuesData.venues = venuesData.venues.filter((venue) =>
+    activeVenueIds.has(venue.id),
+  );
+
+  // Extract unique genres from pruned artists
+  const activeGenres = new Set();
+  artistsData.artists.forEach((artist) => {
+    if (artist.spotifyData?.genres) {
+      artist.spotifyData.genres.forEach((genre) => activeGenres.add(genre));
+    }
+  });
+  const genresArray = Array.from(activeGenres).sort((a, b) =>
+    a.localeCompare(b),
+  );
+
+  // Write pruned data back to original files
+  await writeFile(
+    "./src/data/artists.json",
+    JSON.stringify(artistsData, null, 2),
+  );
+  await writeFile(
+    "./src/data/venues.json",
+    JSON.stringify(venuesData, null, 2),
+  );
+  await writeFile(
+    "./src/data/genres.json",
+    JSON.stringify({ genres: genresArray }, null, 2),
+  );
+
+  console.log(
+    `✅ pruned artists.json: ${artistsData.artists.length} (was ${originalArtistCount})`,
+  );
+  console.log(
+    `✅ pruned venues.json: ${venuesData.venues.length} (was ${originalVenueCount})`,
+  );
+  console.log(`✅ generated genres.json: ${genresArray.length} genres`);
 }
 
 generateCalendar().catch(console.error);
