@@ -823,8 +823,7 @@ async function processDatabases() {
             // map venue text to venue ID for artist processing
             venueTextToId.set(event.venue.text, existingVenue.key);
             console.log(`Updated special case venue: "${specialCase.name}"`);
-            // Skip regular venue processing by returning from this event
-            return;
+            // Continue to artist processing (don't return here - that skips artist processing!)
           } else {
             // Create a new special case venue
             const aliases = new Set([specialCase.name, event.venue.text]);
@@ -843,8 +842,7 @@ async function processDatabases() {
             // map venue text to venue ID for artist processing
             venueTextToId.set(event.venue.text, specialCase.id);
             console.log(`Created special case venue: "${specialCase.name}"`);
-            // Skip regular venue processing by returning early
-            return;
+            // Continue to artist processing (don't return here - that skips artist processing!)
           }
         }
 
