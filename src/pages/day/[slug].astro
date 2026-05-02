@@ -3,7 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import concerts from "../../data/calendar.json";
 import artists from "../../data/artists.json";
-import { getVenueId, getArtistId } from "../../lib/data-utils";
 import { getPacificDateISO } from "../../lib/shared-utils.js";
 import { AddToCalendarButton } from "../../components/AddToCalendarButton";
 
@@ -77,19 +76,16 @@ const year = getYear(day.normalizedDate);
                 <div class="space-y-4">
                   <div class="flex items-start justify-between">
                     <h3 class="text-primary text-xl font-semibold">
-                      {(() => {
-                        const venueId = getVenueId(event.venue);
-                        return venueId ? (
-                          <a
-                            class="hover:underline"
-                            href={`/venue/${venueId}/`}
-                          >
-                            {event.venue.text}
-                          </a>
-                        ) : (
-                          event.venue.text
-                        );
-                      })()}
+                      {event.venue.id ? (
+                        <a
+                          class="hover:underline"
+                          href={`/venue/${event.venue.id}/`}
+                        >
+                          {event.venue.text}
+                        </a>
+                      ) : (
+                        event.venue.text
+                      )}
                     </h3>
                   </div>
 
@@ -97,7 +93,7 @@ const year = getYear(day.normalizedDate);
                     <h4 class="mb-2 font-medium">Artists</h4>
                     <div class="flex flex-wrap gap-2">
                       {event.bands.map((band, index) => {
-                        const artistId = getArtistId(band);
+                        const artistId = band.id;
                         let canonicalName = band.text;
                         if (artistId) {
                           const artist = artists.artists.find(

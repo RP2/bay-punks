@@ -1,5 +1,5 @@
 import { readFile } from "fs/promises";
-import { resolve } from "path";
+import { resolve as resolvePath } from "path";
 import type {
   NonArtistFiltersConfig,
   VenueRulesConfig,
@@ -11,8 +11,8 @@ import {
   SpellingCorrectionsConfigSchema,
 } from "./schemas.js";
 
-const CONFIG_DIR = resolve(import.meta.dirname, "..", "config");
-const DATA_DIR = resolve(import.meta.dirname, "..", "..", "src", "data");
+const CONFIG_DIR = resolvePath(import.meta.dirname, "..", "config");
+const DATA_DIR = resolvePath(import.meta.dirname, "..", "..", "src", "data");
 
 export interface PipelineConfig {
   nonArtistFilters: NonArtistFiltersConfig;
@@ -22,9 +22,9 @@ export interface PipelineConfig {
 
 export async function loadConfig(): Promise<PipelineConfig> {
   const [filtersRaw, venueRulesRaw, spellingRaw] = await Promise.all([
-    readFile(resolve(CONFIG_DIR, "non-artist-filters.json"), "utf-8"),
-    readFile(resolve(CONFIG_DIR, "venue-rules.json"), "utf-8"),
-    readFile(resolve(DATA_DIR, "spelling-corrections.json"), "utf-8"),
+    readFile(resolvePath(CONFIG_DIR, "non-artist-filters.json"), "utf-8"),
+    readFile(resolvePath(CONFIG_DIR, "venue-rules.json"), "utf-8"),
+    readFile(resolvePath(DATA_DIR, "spelling-corrections.json"), "utf-8"),
   ]);
 
   const nonArtistFilters = NonArtistFiltersConfigSchema.parse(
@@ -39,9 +39,9 @@ export async function loadConfig(): Promise<PipelineConfig> {
 }
 
 export function resolveDataPath(filename: string): string {
-  return resolve(DATA_DIR, filename);
+  return resolvePath(DATA_DIR, filename);
 }
 
 export function resolveProjectPath(...segments: string[]): string {
-  return resolve(import.meta.dirname, "..", "..", ...segments);
+  return resolvePath(import.meta.dirname, "..", "..", ...segments);
 }

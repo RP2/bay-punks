@@ -2,7 +2,7 @@
 // Replaces scrape-concerts.js, process-databases.js, generate-calendar.js
 
 import { readFile, writeFile } from "fs/promises";
-import { resolve } from "path";
+import { resolve as resolvePath } from "path";
 
 import { loadConfig, resolveDataPath } from "./lib/config.js";
 import {

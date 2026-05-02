@@ -4,7 +4,6 @@ import React, { useMemo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import venuesData from "@/data/venues.json";
-import { getVenueId } from "@/lib/data-utils";
 import { getUpcomingShowsForArtist } from "@/lib/shows-utils";
 
 interface ArtistDetailProps {
@@ -178,9 +177,7 @@ const ArtistDetail: React.FC<ArtistDetailProps> = ({ artist }) => {
             {artistShows.length > 0 ? (
               <ul className="space-y-4">
                 {artistShows.map((show, index) => {
-                  const venueId = getVenueId(
-                    show.venue || { text: "", id: null },
-                  );
+                  const venueId = show.venue?.id;
                   return (
                     <li
                       key={`${show.date}-${index}`}

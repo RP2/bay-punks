@@ -4,7 +4,8 @@
 import { load } from "cheerio";
 import { writeFile } from "fs/promises";
 import { resolve } from "path";
-import { normalizeDate, cleanArtistName, isNonArtist, DateContext } from "./normalizers.js";
+import { normalizeDate, cleanArtistName, isNonArtist } from "./normalizers.js";
+import type { DateContext } from "./normalizers.js";
 import { RawDataSchema } from "./schemas.js";
 import type { RawData, RawShow, RawEvent } from "./schemas.js";
 import { loadConfig, resolveDataPath } from "./config.js";

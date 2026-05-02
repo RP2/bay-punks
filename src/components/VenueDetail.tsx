@@ -4,7 +4,6 @@ import React, { useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import artistsData from "@/data/artists.json";
-import { getArtistId } from "@/lib/data-utils";
 import { getUpcomingShowsForVenue } from "@/lib/shows-utils";
 
 interface VenueDetailProps {
@@ -133,7 +132,7 @@ const VenueDetail: React.FC<VenueDetailProps> = ({ venue }) => {
                       </div>
                       <div className="flex flex-wrap gap-1">
                         {show.bands.map((band: any, i: number) => {
-                          const artistId = getArtistId(band);
+                          const artistId = band.id;
                           let canonicalName = band.text;
                           if (artistId) {
                             const artist = artistsData.artists.find(

@@ -11,23 +11,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { VenueSortToggle } from "./SortToggle";
 import venuesData from "../data/venues.json";
-import {
-  getNextShowForVenue,
-  sortVenues,
-  getBestVenueName,
-  getLocationString,
-  getEventLocation,
-} from "@/lib/shows-utils";
+import { sortVenues } from "@/lib/shows-utils";
 
 // Venue card component
 const VenueCard = ({ venue }: { venue: any }) => {
-  // Get the next show with the current date
-  const nextShow = useMemo(() => {
-    return venue.nextShow;
-  }, [venue]);
-
+  const nextShow = venue.nextShow;
   const displayName = venue.displayName;
-  const locationString = venue.locationInfo;
+  const locationString = venue.locationString;
 
   return (
     <Card
@@ -48,7 +38,7 @@ const VenueCard = ({ venue }: { venue: any }) => {
 
           {locationString && (
             <div className="text-muted-foreground text-sm">
-              📍 {locationString}
+              {locationString}
             </div>
           )}
 
@@ -65,10 +55,10 @@ const VenueCard = ({ venue }: { venue: any }) => {
               </div>
               <div className="text-muted-foreground text-xs">
                 {nextShow.bands
-                  .slice(0, 2)
+                  ?.slice(0, 2)
                   .map((band: any) => band.text)
                   .join(", ")}
-                {nextShow.bands.length > 2 &&
+                {nextShow.bands?.length > 2 &&
                   ` +${nextShow.bands.length - 2} more`}
               </div>
             </div>
@@ -87,17 +77,9 @@ const VenueCard = ({ venue }: { venue: any }) => {
 
 // Main VenueList component
 const VenueList = () => {
-  // Prepare venue data with up-to-date next show info, filter to only venues with upcoming shows
+  // Venue data now comes with pre-computed nextShow, displayName, locationString
   const venueData = useMemo(() => {
-    return venuesData.venues
-      .map((venue) => ({
-        id: venue.id,
-        name: venue.name,
-        displayName: getBestVenueName(venue),
-        locationInfo: getLocationString(venue),
-        nextShow: getNextShowForVenue(venue.name, venue.id),
-      }))
-      .filter((venue) => venue.nextShow !== null); // only show venues with upcoming shows
+    return venuesData.venues.filter((venue: any) => venue.nextShow !== null);
   }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -115,18 +97,16 @@ const VenueList = () => {
     } else {
       const query = searchQuery.toLowerCase();
       const filtered = venueData.filter(
-        (venue) =>
+        (venue: any) =>
           venue.displayName.toLowerCase().includes(query) ||
-          (venue.locationInfo &&
-            venue.locationInfo.toLowerCase().includes(query)),
+          (venue.locationString &&
+            venue.locationString.toLowerCase().includes(query)),
       );
       setFilteredVenues(sortVenues(filtered, sortKey));
     }
-    // Reset visible count when filters change
     setVisibleCount(ITEMS_PER_PAGE);
   }, [searchQuery, sortKey, venueData]);
 
-  // Get visible venues based on pagination
   const visibleVenues = filteredVenues.slice(0, visibleCount);
   const hasMore = visibleCount < filteredVenues.length;
 
@@ -154,7 +134,6 @@ const VenueList = () => {
     return () => observer.disconnect();
   }, [hasMore, handleLoadMore]);
 
-  // Handle sort changes
   const handleSortChange = (newSortKey: string) => {
     setSortKey(newSortKey);
     setFilteredVenues(sortVenues(venueData, newSortKey));

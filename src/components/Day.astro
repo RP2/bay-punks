@@ -1,6 +1,5 @@
 ---
 import { Card, CardContent } from "@/components/ui/card";
-import { getVenueId } from "../lib/data-utils";
 import { AddToCalendarButton } from "./AddToCalendarButton";
 
 interface Props {
@@ -89,16 +88,13 @@ const formattedDay = formatDayWithFullMonth(day.day);
               ) => (
                 <li class={`event-item text-sm`}>
                   <div class="venue font-medium">
-                    {(() => {
-                      const venueId = getVenueId(event.venue as any);
-                      return venueId ? (
-                        <a class="hover:underline" href={`/venue/${venueId}/`}>
-                          {event.venue.text}
-                        </a>
-                      ) : (
-                        event.venue.text
-                      );
-                    })()}
+                    {event.venue.id ? (
+                      <a class="hover:underline" href={`/venue/${event.venue.id}/`}>
+                        {event.venue.text}
+                      </a>
+                    ) : (
+                      event.venue.text
+                    )}
                   </div>
                   <div class="text-muted-foreground artists text-xs">
                     {event.bands
@@ -142,19 +138,16 @@ const formattedDay = formatDayWithFullMonth(day.day);
                   ) => (
                     <li class={`event-item mt-2 text-sm`}>
                       <div class="venue font-medium">
-                        {(() => {
-                          const venueId = getVenueId(event.venue as any);
-                          return venueId ? (
-                            <a
-                              class="hover:underline"
-                              href={`/venue/${venueId}/`}
-                            >
-                              {event.venue.text}
-                            </a>
-                          ) : (
-                            event.venue.text
-                          );
-                        })()}
+                        {event.venue.id ? (
+                          <a
+                            class="hover:underline"
+                            href={`/venue/${event.venue.id}/`}
+                          >
+                            {event.venue.text}
+                          </a>
+                        ) : (
+                          event.venue.text
+                        )}
                       </div>
                       <div class="text-muted-foreground artists text-xs">
                         {event.bands

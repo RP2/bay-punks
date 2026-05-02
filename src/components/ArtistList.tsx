@@ -12,11 +12,7 @@ import { Input } from "@/components/ui/input";
 import { ArtistSortToggle } from "./SortToggle";
 import { GenreCombobox } from "@/components/ui/combobox";
 import artistsData from "../data/artists.json";
-import {
-  getNextShowForArtist,
-  sortArtists,
-  filterByGenre,
-} from "@/lib/shows-utils";
+import { sortArtists, filterByGenre } from "@/lib/shows-utils";
 
 // Artist card component
 const ArtistCard = ({ artist }: { artist: any }) => {
@@ -94,20 +90,10 @@ const ArtistCard = ({ artist }: { artist: any }) => {
 
 // Main ArtistList component
 const ArtistList = () => {
-  // Prepare artist data with up-to-date next show info, filter to only artists with upcoming shows
+  // Artist data now comes with pre-computed nextShow from the build step
   const artistData = useMemo(() => {
     const data = artistsData as any;
-    return data.artists
-      .map((artist: any) => ({
-        id: artist.id,
-        name: artist.name,
-        lastSeen: artist.lastSeen,
-        spotifyUrl: artist.spotifyUrl,
-        searchUrl: artist.searchUrl,
-        nextShow: getNextShowForArtist(artist.name, artist.id),
-        genres: artist.spotifyData?.genres || [],
-      }))
-      .filter((artist: any) => artist.nextShow !== null); // only show artists with upcoming shows
+    return data.artists.filter((artist: any) => artist.nextShow !== null);
   }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -121,12 +107,10 @@ const ArtistList = () => {
 
   // Update filtering when search, sort, or genre changes
   useEffect(() => {
-    // First filter by genre if selected
     let filtered = selectedGenre
       ? filterByGenre(artistData, selectedGenre)
       : artistData;
 
-    // Then filter by search query if present
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter((artist: any) =>
@@ -134,13 +118,10 @@ const ArtistList = () => {
       );
     }
 
-    // Finally sort the filtered results
     setFilteredArtists(sortArtists(filtered, sortKey));
-    // Reset visible count when filters change
     setVisibleCount(ITEMS_PER_PAGE);
   }, [searchQuery, sortKey, selectedGenre, artistData]);
 
-  // Get visible artists based on pagination
   const visibleArtists = filteredArtists.slice(0, visibleCount);
   const hasMore = visibleCount < filteredArtists.length;
 
@@ -168,13 +149,10 @@ const ArtistList = () => {
     return () => observer.disconnect();
   }, [hasMore, handleLoadMore]);
 
-  // Handle genre change
   const handleGenreChange = (genre: string) => {
     setSelectedGenre(genre);
   };
 
-  // Make the handleGenreChange function available globally
-  // This is needed for compatibility with the existing GenreCombobox component
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.handleArtistGenreChange = handleGenreChange;
@@ -182,13 +160,10 @@ const ArtistList = () => {
     }
   }, [selectedGenre]);
 
-  // Handle sort changes
   const handleSortChange = (newSortKey: string) => {
     setSortKey(newSortKey);
   };
 
-  // Make the handleSortChange function available globally
-  // This is needed for compatibility with the existing SortToggle component
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.handleArtistSortChange = handleSortChange;
