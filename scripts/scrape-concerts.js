@@ -35,7 +35,9 @@ async function fetchPage(url) {
 }
 
 // helper to normalize date to ISO format with proper year tracking
-function normalizeDate(day, context = { lastDate: null, seenDecember: false }) {
+// uses sequential date tracking: the first date is assigned the year closest to today,
+// and subsequent dates track year rollovers by detecting when the month goes backwards
+function normalizeDate(day, context = { lastDate: null }) {
   const months = {
     jan: "01",
     feb: "02",
@@ -54,37 +56,43 @@ function normalizeDate(day, context = { lastDate: null, seenDecember: false }) {
   const parts = day.toLowerCase().split(" ");
   const [_, monthAbbr, dayNumber] = parts;
   const month = months[monthAbbr];
+  const monthNum = parseInt(month, 10);
+  const dayNum = parseInt(dayNumber, 10);
 
-  // start with current year and current month (dynamic)
   const now = new Date();
   const currentYear = now.getFullYear();
-  const currentMonth = String(now.getMonth() + 1).padStart(2, "0");
-  let year = currentYear;
+  const currentMonth = now.getMonth() + 1; // 1-12
+  const currentDay = now.getDate();
 
-  // if we're in the first half of the year (jan-jun) and see months from second half (jul-dec)
-  // they're likely from the previous year (unless we've already rolled over)
-  if (
-    currentMonth <= "06" &&
-    month >= "07" &&
-    !context.seenDecember
-  ) {
-    year = currentYear - 1;
-  }
+  let year;
 
-  // track if we've seen december
-  if (month === "12") {
-    context.seenDecember = true;
-  }
+  if (!context.lastDate) {
+    // For the first date, find the year that places the date closest to today.
+    // The website lists shows starting from around the current date, so the
+    // first date should be near today. Try current year, previous year, and
+    // next year, and pick whichever produces a date closest to now.
+    const candidates = [currentYear - 1, currentYear, currentYear + 1];
+    let bestYear = currentYear;
+    let bestDistance = Infinity;
 
-  // if we've seen december and now see early months, it's the next year
-  if (context.seenDecember && month <= "06") {
-    year = currentYear + 1;
-  }
+    for (const candidateYear of candidates) {
+      const candidateDate = new Date(candidateYear, monthNum - 1, dayNum);
+      const today = new Date(currentYear, currentMonth - 1, currentDay);
+      const distance = Math.abs(candidateDate - today);
+      if (distance < bestDistance) {
+        bestDistance = distance;
+        bestYear = candidateYear;
+      }
+    }
 
-  // detect backwards date progression (month going backward indicates year rollover)
-  if (context.lastDate && month < context.lastDate.month) {
-    // only if we haven't already accounted for this with the december logic
-    if (!context.seenDecember || month > "06") {
+    year = bestYear;
+  } else {
+    // For subsequent dates, track the year based on month progression.
+    // Since the website lists shows in chronological order, when the month
+    // goes backwards (e.g., Dec -> Jan), we've crossed a year boundary.
+    year = context.lastDate.year;
+
+    if (monthNum < context.lastDate.monthNum) {
       year = context.lastDate.year + 1;
     }
   }
@@ -92,7 +100,7 @@ function normalizeDate(day, context = { lastDate: null, seenDecember: false }) {
   const fullDate = `${year}-${month}-${dayNumber.padStart(2, "0")}`;
 
   // update context for next call
-  context.lastDate = { year, month, fullDate };
+  context.lastDate = { year, monthNum, fullDate };
 
   return fullDate;
 }
@@ -115,7 +123,7 @@ console.log(
 const shows = [];
 let totalEvents = 0;
 let excludedComedians = 0;
-const dateContext = { lastDate: null, seenDecember: false }; // track date context for year rollover
+const dateContext = { lastDate: null }; // track date context for year rollover
 
 console.log("processing pages and extracting events...");
 
