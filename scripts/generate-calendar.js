@@ -97,10 +97,43 @@ async function generateCalendar() {
     };
   });
 
+  // deduplicate shows by normalizedDate (overlapping scrape pages can produce duplicates)
+  const deduplicatedShows = [];
+  const showMap = new Map();
+  for (const show of processedShows) {
+    if (showMap.has(show.normalizedDate)) {
+      // merge events into existing entry, avoiding duplicate events
+      const existing = showMap.get(show.normalizedDate);
+      for (const event of show.events) {
+        const isDuplicate = existing.events.some(
+          (e) =>
+            e.venue.text === event.venue.text &&
+            e.bands.length === event.bands.length &&
+            e.bands.every((b, i) => b.text === event.bands[i].text),
+        );
+        if (!isDuplicate) {
+          existing.events.push(event);
+        }
+      }
+    } else {
+      const entry = { ...show, events: [...show.events] };
+      showMap.set(show.normalizedDate, entry);
+      deduplicatedShows.push(entry);
+    }
+  }
+
+  const duplicatesRemoved =
+    processedShows.length - deduplicatedShows.length;
+  if (duplicatesRemoved > 0) {
+    console.log(
+      `removed ${duplicatesRemoved} duplicate date(s) from calendar data`,
+    );
+  }
+
   // filter out future shows only (same logic as current usage)
   const todayISOString = getPacificDateISO();
 
-  const upcomingShows = processedShows.filter(
+  const upcomingShows = deduplicatedShows.filter(
     (show) => show.normalizedDate >= todayISOString,
   );
 

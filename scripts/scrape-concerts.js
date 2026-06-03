@@ -214,12 +214,46 @@ pages.forEach(($, pageIndex) => {
   console.log(`page ${pageIndex} processed: ${pageEvents} events found`);
 });
 
+// deduplicate shows by normalizedDate (overlapping pages can produce duplicates)
+const deduplicatedShows = [];
+const showMap = new Map();
+for (const show of shows) {
+  if (showMap.has(show.normalizedDate)) {
+    // merge events into existing entry
+    const existing = showMap.get(show.normalizedDate);
+    // avoid duplicating events that already exist
+    for (const event of show.events) {
+      const isDuplicate = existing.events.some(
+        (e) =>
+          e.venue.text === event.venue.text &&
+          e.bands.length === event.bands.length &&
+          e.bands.every((b, i) => b.text === event.bands[i].text),
+      );
+      if (!isDuplicate) {
+        existing.events.push(event);
+      }
+    }
+  } else {
+    const entry = { ...show, events: [...show.events] };
+    showMap.set(show.normalizedDate, entry);
+    deduplicatedShows.push(entry);
+  }
+}
+
+const duplicatesRemoved = shows.length - deduplicatedShows.length;
+if (duplicatesRemoved > 0) {
+  console.log(`removed ${duplicatesRemoved} duplicate date(s) from scraped data`);
+}
+
 // write to json file
 console.log(`\nprocessing complete:`);
 console.log(`- total events found: ${totalEvents}`);
 console.log(`- comedians excluded: ${excludedComedians}`);
-console.log(`- days with events: ${shows.length}`);
+console.log(`- days with events: ${deduplicatedShows.length}`);
 console.log("writing to raw.json...");
 
-await writeFile("./src/data/raw.json", JSON.stringify({ shows }, null, 2));
+await writeFile(
+  "./src/data/raw.json",
+  JSON.stringify({ shows: deduplicatedShows }, null, 2),
+);
 console.log("all concerts scraped and saved successfully!");

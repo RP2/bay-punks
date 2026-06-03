@@ -1,104 +1,6 @@
 {
   "shows": [
     {
-      "day": "Mon Jun 1",
-      "normalizedDate": "2026-06-01",
-      "events": [
-        {
-          "venue": {
-            "text": "4 Star Theater, S.F.",
-            "id": "4-star-theater-sf",
-            "href": "https://www.google.com/search?q=4%20Star%20Theater%2C%20S.F.",
-            "location": null
-          },
-          "bands": [
-            {
-              "text": "Woods",
-              "id": "woods",
-              "href": "https://open.spotify.com/artist/2sBPVEeMBXKNsZtYaJixnJ",
-              "spotifyVerified": true
-            },
-            {
-              "text": "Dougle Poole",
-              "id": "dougie-poole",
-              "href": "https://open.spotify.com/artist/2GubanPI94YiSAy9uVC51y",
-              "spotifyVerified": true
-            }
-          ],
-          "extra": "a/a 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Chapel, S.F.",
-            "id": "chapel",
-            "href": "https://www.google.com/search?q=Chapel%2C%20S.F.",
-            "location": null
-          },
-          "bands": [
-            {
-              "text": "Aja Monet",
-              "id": "aja-monet",
-              "href": "https://open.spotify.com/artist/6dclGxWbiv1ScMQwT5INQF",
-              "spotifyVerified": true
-            },
-            {
-              "text": "Pher",
-              "id": "pher",
-              "href": "https://open.spotify.com/artist/0nSqvdQSOrHHliAxtRrz7N",
-              "spotifyVerified": true
-            }
-          ],
-          "extra": "a/a $39.59 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Cornerstone, Berkeley",
-            "id": "cornerstone",
-            "href": "https://www.google.com/search?q=Cornerstone%2C%20Berkeley",
-            "location": null
-          },
-          "bands": [
-            {
-              "text": "Kenny Mason",
-              "id": "kenny-mason",
-              "href": "https://open.spotify.com/artist/4mwdnO2jZrMmMVrjcHsZBv",
-              "spotifyVerified": true
-            }
-          ],
-          "extra": "a/a 7pm/8pm"
-        },
-        {
-          "venue": {
-            "text": "Spats, Berkeley",
-            "id": "spats-berkeley",
-            "href": "https://www.google.com/search?q=Spats%2C%20Berkeley",
-            "location": null
-          },
-          "bands": [
-            {
-              "text": "Daytripper",
-              "id": "daytripper",
-              "href": "https://open.spotify.com/artist/04pprw2SjjaUGbFJlUlz87",
-              "spotifyVerified": true
-            },
-            {
-              "text": "Deer Lord",
-              "id": "deer-lord",
-              "href": "https://open.spotify.com/artist/7x0HUSX6z1zG9lOB7d1WQt",
-              "spotifyVerified": true
-            },
-            {
-              "text": "Demonsmoke",
-              "id": "demonsmoke",
-              "href": "https://open.spotify.com/artist/0ccduEugvh65GtrPBd5UU9",
-              "spotifyVerified": true
-            }
-          ],
-          "extra": "21+ $10/$15 7pm"
-        }
-      ]
-    },
-    {
       "day": "Tue Jun 2",
       "normalizedDate": "2026-06-02",
       "events": [
@@ -822,6 +724,35 @@
             }
           ],
           "extra": "a/a 5:30pm/7pm #"
+        },
+        {
+          "venue": {
+            "text": "Ivy Room, Albany",
+            "id": "ivy-room-albany",
+            "href": "https://www.google.com/search?q=Ivy%20Room%2C%20Albany",
+            "location": null
+          },
+          "bands": [
+            {
+              "text": "Sharps Removed",
+              "id": "sharps-removed",
+              "href": "https://open.spotify.com/search/Sharps%20Removed",
+              "spotifyVerified": false
+            },
+            {
+              "text": "Normal Weirds",
+              "id": "normal-weirds",
+              "href": "https://open.spotify.com/artist/7iDHcIRuoE2pwvVu3DuYNi",
+              "spotifyVerified": true
+            },
+            {
+              "text": "Sharps Removed",
+              "id": "sharps-removed",
+              "href": "https://open.spotify.com/search/Sharps%20Removed",
+              "spotifyVerified": false
+            }
+          ],
+          "extra": "21+ $12.92 6:30pm/7pm"
         },
         {
           "venue": {
@@ -1877,9 +1808,21 @@
               "id": "chuckleberries",
               "href": "https://open.spotify.com/search/Chuckleberries",
               "spotifyVerified": false
+            },
+            {
+              "text": "dj Andy Cabic",
+              "id": "dj-andy-cabic",
+              "href": "https://open.spotify.com/search/dj%20Andy%20Cabic",
+              "spotifyVerified": false
+            },
+            {
+              "text": "Andre Thierry & The Sons Of The Soul Revivers",
+              "id": "andre-thierry-the-sons-of-the-soul-revivers",
+              "href": "https://open.spotify.com/search/Andre%20Thierry%20%26%20The%20Sons%20Of%20The%20Soul%20Revivers",
+              "spotifyVerified": false
             }
           ],
-          "extra": "a/a 2pm"
+          "extra": "a/a free 2pm til 9pm"
         },
         {
           "venue": {
@@ -2243,6 +2186,35 @@
         },
         {
           "venue": {
+            "text": "Sub Zero Festival, Downtown San Jose",
+            "id": "sub-zero-festival-downtown-san-jose",
+            "href": "https://www.google.com/search?q=Sub%20Zero%20Festival%2C%20Downtown%20San%20Jose",
+            "location": null
+          },
+          "bands": [
+            {
+              "text": "Dvic",
+              "id": "dvic",
+              "href": "https://open.spotify.com/search/Dvic",
+              "spotifyVerified": false
+            },
+            {
+              "text": "Hyperdrive Kittens",
+              "id": "hyperdrive-kittens",
+              "href": "https://open.spotify.com/artist/7sS7h8cFAVKvk5VSewapeU",
+              "spotifyVerified": true
+            },
+            {
+              "text": "O'Craven",
+              "id": "ocraven",
+              "href": "https://open.spotify.com/search/O'Craven",
+              "spotifyVerified": false
+            }
+          ],
+          "extra": "a/a 4pm til 7pm"
+        },
+        {
+          "venue": {
             "text": "Thee Stork Club, Oakland",
             "id": "thee-stork-club-oakland",
             "href": "https://www.google.com/search?q=Thee%20Stork%20Club%2C%20Oakland",
@@ -2263,6 +2235,23 @@
             }
           ],
           "extra": "21+ $28/$30 8pm (sold out)"
+        },
+        {
+          "venue": {
+            "text": "Union Square, S.F.",
+            "id": "union-square-sf",
+            "href": "https://www.google.com/search?q=Union%20Square%2C%20S.F.",
+            "location": null
+          },
+          "bands": [
+            {
+              "text": "Adam X & Frankie Bones",
+              "id": "adam-x-frankie-bones",
+              "href": "https://open.spotify.com/search/Adam%20X%20%26%20Frankie%20Bones",
+              "spotifyVerified": false
+            }
+          ],
+          "extra": "a/a free 4pm til 8pm"
         },
         {
           "venue": {
@@ -2615,6 +2604,23 @@
             }
           ],
           "extra": "a/a $49/$54 ($69/$74 premium) 7pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Gouth Street Stage, Union Street Festival, S.F.",
+            "id": "gouth-street-stage-union-street-festival-sf",
+            "href": "https://www.google.com/search?q=Gouth%20Street%20Stage%2C%20Union%20Street%20Festival%2C%20S.F.",
+            "location": null
+          },
+          "bands": [
+            {
+              "text": "Hyperdrive Kittens",
+              "id": "hyperdrive-kittens",
+              "href": "https://open.spotify.com/artist/7sS7h8cFAVKvk5VSewapeU",
+              "spotifyVerified": true
+            }
+          ],
+          "extra": "a/a free 2pm"
         },
         {
           "venue": {
@@ -3401,6 +3407,12 @@
               "spotifyVerified": true
             },
             {
+              "text": "Minor Sun",
+              "id": "minor-sun",
+              "href": "https://open.spotify.com/search/Minor%20Sun",
+              "spotifyVerified": false
+            },
+            {
               "text": "Elegant Trash",
               "id": "elegant-trash",
               "href": "https://open.spotify.com/artist/6uxX96EX2aF4Vt3FsXH2Ss",
@@ -3416,6 +3428,12 @@
               "text": "Torpedo Wharf",
               "id": "torpedo-warf",
               "href": "https://open.spotify.com/search/Torpedo%20Warf",
+              "spotifyVerified": false
+            },
+            {
+              "text": "mc Patty",
+              "id": "mc-patty",
+              "href": "https://open.spotify.com/search/mc%20Patty",
               "spotifyVerified": false
             }
           ],
@@ -4658,6 +4676,35 @@
         },
         {
           "venue": {
+            "text": "Bay Area Maker Farm, 2700 Barbers Point Road, Alameda",
+            "id": "bay-area-maker-farm-2700-barbers-point-road-alameda",
+            "href": "https://www.google.com/search?q=Bay%20Area%20Maker%20Farm%2C%202700%20Barbers%20Point%20Road%2C%20Alameda",
+            "location": null
+          },
+          "bands": [
+            {
+              "text": "Eee Vee EE",
+              "id": "eee-vee-ee",
+              "href": "https://open.spotify.com/search/Eee%20Vee%20EE",
+              "spotifyVerified": false
+            },
+            {
+              "text": "Hobogoblins",
+              "id": "hobogoblins",
+              "href": "https://open.spotify.com/search/Hobogoblins",
+              "spotifyVerified": false
+            },
+            {
+              "text": "Big Tractor",
+              "id": "big-tractor",
+              "href": "https://open.spotify.com/search/Big%20Tractor",
+              "spotifyVerified": false
+            }
+          ],
+          "extra": "a/a $7-$20 6pm ( Benefit Community Bike Projects)"
+        },
+        {
+          "venue": {
             "text": "Bimbo's 365 Club, S.F.",
             "id": "bimbos-365-club-sf",
             "href": "https://www.google.com/search?q=Bimbo's%20365%20Club%2C%20S.F.",
@@ -5252,7 +5299,7 @@
               "spotifyVerified": true
             },
             {
-              "text": "B. hamilton",
+              "text": "B. Hamilton",
               "id": "b-hamilton",
               "href": "https://open.spotify.com/artist/3woJ14T9D8p8gwQhpcq38F",
               "spotifyVerified": true
@@ -5508,6 +5555,41 @@
             }
           ],
           "extra": "a/a"
+        },
+        {
+          "venue": {
+            "text": "DNA Lounge, S.F.",
+            "id": "dna-lounge-sf",
+            "href": "https://www.google.com/search?q=DNA%20Lounge%2C%20S.F.",
+            "location": null
+          },
+          "bands": [
+            {
+              "text": "Gurschach",
+              "id": "gurschach",
+              "href": "https://open.spotify.com/search/Gurschach",
+              "spotifyVerified": false
+            },
+            {
+              "text": "Nox Sinister",
+              "id": "nox-sinister",
+              "href": "https://open.spotify.com/search/Nox%20Sinister",
+              "spotifyVerified": false
+            },
+            {
+              "text": "Barbarous",
+              "id": "barbarous",
+              "href": "https://open.spotify.com/search/Barbarous",
+              "spotifyVerified": false
+            },
+            {
+              "text": "Crepuscle",
+              "id": "crepuscle",
+              "href": "https://open.spotify.com/search/Crepuscle",
+              "spotifyVerified": false
+            }
+          ],
+          "extra": "a/a $15/$22 6pm/6:30pm @"
         },
         {
           "venue": {
@@ -7626,6 +7708,41 @@
             }
           ],
           "extra": "21+ 7pm/8pm"
+        },
+        {
+          "venue": {
+            "text": "Hotel Utah, S.F.",
+            "id": "hotel-utah-sf",
+            "href": "https://www.google.com/search?q=Hotel%20Utah%2C%20S.F.",
+            "location": null
+          },
+          "bands": [
+            {
+              "text": "Ajar",
+              "id": "ajar",
+              "href": "https://open.spotify.com/search/Ajar",
+              "spotifyVerified": false
+            },
+            {
+              "text": "LoFi Satellites",
+              "id": "lofi-satellites",
+              "href": "https://open.spotify.com/search/LoFi%20Satellites",
+              "spotifyVerified": false
+            },
+            {
+              "text": "Hyperdrive Kittens",
+              "id": "hyperdrive-kittens",
+              "href": "https://open.spotify.com/artist/7sS7h8cFAVKvk5VSewapeU",
+              "spotifyVerified": true
+            },
+            {
+              "text": "Circle Of Ruin",
+              "id": "circle-of-ruin",
+              "href": "https://open.spotify.com/search/Circle%20Of%20Ruin",
+              "spotifyVerified": false
+            }
+          ],
+          "extra": "$12/$15 8pm/8:30pm"
         },
         {
           "venue": {
@@ -9774,6 +9891,23 @@
         },
         {
           "venue": {
+            "text": "Veterans Memorial, Hayward",
+            "id": "veterans-memorial-hayward",
+            "href": "https://www.google.com/search?q=Veterans%20Memorial%2C%20Hayward",
+            "location": null
+          },
+          "bands": [
+            {
+              "text": "Hyoerdrive Kittens",
+              "id": "hyperdrive-kittens",
+              "href": "https://open.spotify.com/artist/7sS7h8cFAVKvk5VSewapeU",
+              "spotifyVerified": true
+            }
+          ],
+          "extra": "7pm"
+        },
+        {
+          "venue": {
             "text": "Warfield, S.F.",
             "id": "warfield",
             "href": "https://www.google.com/search?q=Warfield%2C%20S.F.",
@@ -11171,12 +11305,18 @@
         },
         {
           "venue": {
-            "text": "Napa Music Hall, 1030 Main St, Napa",
+            "text": "Music Hall, 1030 Main St,, Napa",
             "id": "napa-music-hall-1030-main-st-napa",
             "href": "https://www.google.com/search?q=Napa%20Music%20Hall%2C%201030%20Main%20St%2C%20Napa",
             "location": null
           },
           "bands": [
+            {
+              "text": "dj Stefan Aronsen",
+              "id": "dj-stefan-aronsen",
+              "href": "https://open.spotify.com/search/dj%20Stefan%20Aronsen",
+              "spotifyVerified": false
+            },
             {
               "text": "Weekend Youth",
               "id": "weekend-youth",
@@ -11190,19 +11330,19 @@
               "spotifyVerified": true
             },
             {
-              "text": "DVX",
-              "id": "dvx",
-              "href": "https://open.spotify.com/artist/6IYGYORMvwzisV7lL9tN01",
-              "spotifyVerified": true
+              "text": "Mami Miam & DVX",
+              "id": "mami-miam-dvx",
+              "href": "https://open.spotify.com/search/Mami%20Miam%20%26%20DVX",
+              "spotifyVerified": false
             },
             {
-              "text": "dj Stefan",
-              "id": "dj-stefan",
-              "href": "https://open.spotify.com/artist/0JWvPvOL3qyEaOBmOjjwR0",
-              "spotifyVerified": true
+              "text": "dj Stefan Aronsen",
+              "id": "dj-stefan-aronsen",
+              "href": "https://open.spotify.com/search/dj%20Stefan%20Aronsen",
+              "spotifyVerified": false
             }
           ],
-          "extra": "6+ (under 16 w/ adult) $17.85 8pm"
+          "extra": "6+ $15/$20 7:30pm/8pm"
         }
       ]
     },
@@ -13469,7 +13609,7 @@
           "bands": [
             {
               "text": "Memberhip Meeting",
-              "id": null,
+              "id": "memberhip-meeting",
               "href": "https://open.spotify.com/search/Memberhip%20Meeting",
               "spotifyVerified": false
             }
@@ -23819,15 +23959,21 @@
               "spotifyVerified": false
             },
             {
-              "text": "Middle-Aged Queers",
-              "id": "middle-aged-queers",
-              "href": "https://open.spotify.com/artist/4bXqTVV44kO06WxWJBGoZT",
-              "spotifyVerified": true
-            },
-            {
               "text": "Kochina Rude",
               "id": "kochina-rude",
               "href": "https://open.spotify.com/artist/4KLuNRLMkwwny2EtUhOuoo",
+              "spotifyVerified": true
+            },
+            {
+              "text": "Papi Churro",
+              "id": "papi-churro",
+              "href": "https://open.spotify.com/search/Papi%20Churro",
+              "spotifyVerified": false
+            },
+            {
+              "text": "Middle-Aged Queers",
+              "id": "middle-aged-queers",
+              "href": "https://open.spotify.com/artist/4bXqTVV44kO06WxWJBGoZT",
               "spotifyVerified": true
             },
             {
@@ -23837,9 +23983,9 @@
               "spotifyVerified": true
             },
             {
-              "text": "Rebel Kings Of Oakland",
-              "id": "rebel-kings-of-oakland",
-              "href": "https://open.spotify.com/search/Rebel%20Kings%20Of%20Oakland",
+              "text": "Heartless Folk",
+              "id": "heartless-folk",
+              "href": "https://open.spotify.com/search/Heartless%20Folk",
               "spotifyVerified": false
             },
             {
@@ -31103,74 +31249,16 @@
           "extra": "21+ $46.36 7pm/8pm"
         }
       ]
-    },
-    {
-      "day": "Tue Dec 15",
-      "normalizedDate": "2026-12-15",
-      "events": [
-        {
-          "venue": {
-            "text": "Hopmonk Tavern, Sebastopol",
-            "id": "hopmonk-tavern-sebastopol",
-            "href": "https://www.google.com/search?q=Hopmonk%20Tavern%2C%20Sebastopol",
-            "location": null
-          },
-          "bands": [
-            {
-              "text": "Pokey LaFarge",
-              "id": "pokey-lafarge",
-              "href": "https://open.spotify.com/artist/6hAUCkzZpoYGObd8qFW5TT",
-              "spotifyVerified": true
-            },
-            {
-              "text": "Cicada Rhythm",
-              "id": "cicada-rhythm",
-              "href": "https://open.spotify.com/artist/3Ks6VJR2RbM1Yhlux5xh76",
-              "spotifyVerified": true
-            }
-          ],
-          "extra": "21+ $53.37 7pm/8pm"
-        }
-      ]
-    },
-    {
-      "day": "Wed Dec 16",
-      "normalizedDate": "2026-12-16",
-      "events": [
-        {
-          "venue": {
-            "text": "Bimbo's 365 Club, S.F.",
-            "id": "bimbos-365-club-sf",
-            "href": "https://www.google.com/search?q=Bimbo's%20365%20Club%2C%20S.F.",
-            "location": null
-          },
-          "bands": [
-            {
-              "text": "Pokey LaFarge",
-              "id": "pokey-lafarge",
-              "href": "https://open.spotify.com/artist/6hAUCkzZpoYGObd8qFW5TT",
-              "spotifyVerified": true
-            },
-            {
-              "text": "Cicada Rhythm",
-              "id": "cicada-rhythm",
-              "href": "https://open.spotify.com/artist/3Ks6VJR2RbM1Yhlux5xh76",
-              "spotifyVerified": true
-            }
-          ],
-          "extra": "21+ $46.36 7pm/8pm"
-        }
-      ]
     }
   ],
   "metadata": {
-    "totalShows": 187,
-    "totalEvents": 1238,
+    "totalShows": 184,
+    "totalEvents": 1240,
     "dateRange": {
-      "start": "2026-06-01",
+      "start": "2026-06-02",
       "end": "2026-12-16"
     },
-    "lastUpdated": "2026-06-01T09:04:25.315Z",
+    "lastUpdated": "2026-06-03T02:55:42.337Z",
     "generatedFrom": {
       "rawData": "raw.json",
       "processedArtists": "artists.json",
